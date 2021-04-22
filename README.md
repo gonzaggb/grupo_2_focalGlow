@@ -10,6 +10,17 @@ Por un lado a la persona que quiere un elemento de diseño exclusivo en su hogar
 El nombre:
 Focal Glow es un término utilizado en iluminación arquitectural que indica la dirección del espacio. Te orienta, es la luz que te ayuda a focalizarte. Focal Glow llama la atención, une las partes divergentes, vende mercadería, separa lo importante de lo no importante.
 
+Webs de referencia:
+Argentinas
+https://iluminacionaguero.com/
+https://www.ideailuminacion.com.ar/
+https://www.luzbuenosaires.com/
+
+Internacionales:
+https://www.puravidabracelets.com/
+https://flos.com/es/
+https://www.louispoulsen.com/
+
 
 Integrantes:
 Pablo Daniel Armando
