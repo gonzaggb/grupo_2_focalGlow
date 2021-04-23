@@ -3,18 +3,33 @@ Trabajo integrador Digital House
 
 Nombre del e-commerce: Focal Glow
 Productos: luminarias arquitecturales y decorativas.
-Target: Clase media / media alta. Cierta masividad.
-Apunta a quien quiere mejorar la iluminación de su casa con una lámpara decorativa, a los arquitect@s que quieren un buen producto a un precio acorde para sus obras.
+Target: Poder adquisitivo media alto. Exclusividad
+Dos tipos de clientes bien distintos:
+Por un lado a la persona que quiere un elemento de diseño exclusivo en su hogar y por otro a los arqutiectos, decoradores y diseñadores que buscan un buen producto arquitectural para sus proyectos.
 
 El nombre:
 Focal Glow es un término utilizado en iluminación arquitectural que indica la dirección del espacio. Te orienta, es la luz que te ayuda a focalizarte. Focal Glow llama la atención, une las partes divergentes, vende mercadería, separa lo importante de lo no importante.
 
+Webs de referencia:
+Argentinas
+https://iluminacionaguero.com/
+https://www.ideailuminacion.com.ar/
+https://www.luzbuenosaires.com/
+
+Internacionales:
+https://www.puravidabracelets.com/
+https://flos.com/es/
+https://www.louispoulsen.com/
+
 
 Integrantes:
 Pablo Daniel Armando 
+Desde que tengo uso de razón que me apasiona el mundo de la programación, desde hace mucho tiempo que trabajo en un ambiente totalmente alejado de lo que realmente me gusta, y por eso con ayuda de este curso voy a  cambiar esa realidad, ya sea ingresando a una empresa, trabajando freelance o porque no, incursionar en el mundo de la enseñanza.  
+
 
 
 Gonzalo Baigorra
+Actualmente trabajo en un empresa de tecnología, pero en un area orientada a lo comercial. Espero a través de este curso poder sumar otro valor para la compañia, además de encarar otros desafíos a nivel profesional, ya que la programación es una asignatura pendiente en mi vida.
 
 Martiniano Leguizamón (Mars)
 Soy un apasionado de la Luz. Tomo el principio “less is more” de Mies Van der Rohe como mi filosofía personal en iluminación. He recorrido el mundo y profundizado mi conocimiento no sólo en el aspecto técnico sino en el concepto de proveer soluciones en vez de luminarias y quiero hacer lo mismo con la programación.
