@@ -1,6 +1,8 @@
 
 # grupo_2_ecommerce
-                       ![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142020-ca647180-a6af-11eb-9be1-c204b51b688c.png)
+![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)
+
+                       
 Trabajo integrador Digital House
 
 Nombre del e-commerce: Focal Glow
