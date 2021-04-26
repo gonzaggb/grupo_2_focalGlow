@@ -41,6 +41,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     color:white;
     position: sticky; /*para hacer el menu pegajoso*/
     top: 0;/*para que quede pegado a la parte superior*/
+    bottom: 150px;
 }
 
 .header a{
@@ -184,6 +185,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 }
 
 .titulo_mas_vendidos{
+    
     height: 40px;
     border-radius: 3px;
     background-color: rgba(182, 186, 190, 0.5);
@@ -195,7 +197,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 .mas_vendidos h2{
         text-align: center;
         margin: 100px;
-       background-color: ;
+      
 
 }
 
@@ -231,7 +233,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     color: black;
     transform: scale(0);
     transition: .5s ease;
-    border: 5px solid;
+    border: 2px solid;
     
 }
 .box:hover .capa{
@@ -242,6 +244,60 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     font-size: 30px;
     font-weight: bold;
 }
+
+/*footer*/
+
+.footer{
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    margin-top: 150px;
+    padding: 0;
+    border: 0;
+}
+
+.footer_container{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+  
+}
+.links ul li{
+    flex-direction: row;
+}
+
+.links ul li a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.footer_container{
+    align-content: space-around;
+}
+
+
+.footer_container a{
+    text-decoration: none;
+    color: white;
+}
+
+
+.footer_container h3{
+    color: white;
+    text-align: center;
+}
+
+.social{
+    margin-right: 35px;
+     
+}
+
+
+
 
     
     
