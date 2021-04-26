@@ -5,6 +5,8 @@
                        
 Trabajo integrador Digital House
 
+Trello: https://trello.com/b/CuQYclp3/focal-glow
+
 Nombre del e-commerce: Focal Glow
 
 Productos: luminarias arquitecturales y decorativas.
