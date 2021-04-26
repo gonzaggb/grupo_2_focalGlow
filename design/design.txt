@@ -1,5 +1,0 @@
-Puse este archivo porque sino git no me subia la carpeta
-En esta carpeta deberia ir:
-Logo
-Colores
-Tipografia
