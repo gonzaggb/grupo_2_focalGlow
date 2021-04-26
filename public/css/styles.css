@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 /*Define las caracteristicas del body
 fuente / tamaño / interlineado y margenes*/
@@ -175,8 +176,57 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     transform: scale(1.1);
 }
     
-  
+/*Mas vendidos*/
+.mas_vendidos{
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.mas_vendidos h2{
+        text-align: center;
+        margin: 100px;
+}
+
+.elementos{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+
+}
+.mas_vendidos img{
+    width: 300px;
+    height: 300px;
+
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    position: relative;
     
+    
+}
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(160, 167, 167, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transform: scale(0);
+    transition: .5s ease;
+}
+.box:hover .capa{
+    transform: scale(1);
+}
+
+
+
     
     
 
