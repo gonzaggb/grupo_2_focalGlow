@@ -28,7 +28,7 @@ Internacionales:
 
 https://www.puravidabracelets.com/
 
-https://flos.com/es/
+
 
 https://www.louispoulsen.com/
 
@@ -44,3 +44,6 @@ Actualmente trabajo en un empresa de tecnología, pero en un area orientada a lo
 
 Martiniano Leguizamón (Mars)
 Soy un apasionado de la Luz. Tomo el principio “less is more” de Mies Van der Rohe como mi filosofía personal en iluminación. He recorrido el mundo y profundizado mi conocimiento no sólo en el aspecto técnico sino en el concepto de proveer soluciones en vez de luminarias y quiero hacer lo mismo con la programación.
+
+https://flos.com/es/
+![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142020-ca647180-a6af-11eb-9be1-c204b51b688c.png)
