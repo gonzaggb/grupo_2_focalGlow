@@ -181,7 +181,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     transition: transform .05s;
 }
 .zoom:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
     
 /*Mas vendidos*/
