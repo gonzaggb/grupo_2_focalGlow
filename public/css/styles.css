@@ -461,7 +461,7 @@ p{
 
 
 .slider-mini{
-    height: 50%;
+    height: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -479,9 +479,9 @@ p{
     display: flex;
     margin: 0;
     padding: 0;
-    width: 200%;
-    animation: cambio-mini 10s infinite;
-
+    width: 300%;
+    animation: cambio-mini 15s infinite alternate;
+    animation-timing-function: ease-in;
 }
 .slider-mini li {
     list-style: none;
@@ -501,11 +501,11 @@ p{
     0%{margin-left: 0;}
     30%{margin-left: 0;}
 
-    35%{margin-left: -0%;}
-    65%{margin-left: -70%;}
+    35%{margin-left: -100%;}
+    65%{margin-left: -100%;}
 
-    70%{margin-left: -0%;}
-    100%{margin-left: -0%;}
+    70%{margin-left: -200%;}
+    100%{margin-left: -200%;}
 }
 
 /*FIN CSS CHECKOUT*/
