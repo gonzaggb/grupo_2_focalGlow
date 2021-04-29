@@ -22,3 +22,8 @@ app.get('/login', (req, res) => {
 
     res.sendFile(path.resolve(__dirname, './views/login.html'))
 })
+app.get('/checkout', (req, res) => {
+
+    res.sendFile(path.resolve(__dirname, './views/checkout.html'))
+})
+
