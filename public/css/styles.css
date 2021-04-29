@@ -44,8 +44,8 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 .header{
     background-color: black;
     color:white;
-    /*position: sticky; /*para hacer el menu pegajoso*/
-    /*top: 0;/*para que quede pegado a la parte superior*/
+    position: sticky; /*para hacer el menu pegajoso*/
+    top: 0; /*para que quede pegado a la parte superior*/
 
     bottom: 150px;
 }
@@ -119,7 +119,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     margin: 0;
     padding: 0;
     width: 400%;
-    animation: cambio 15s infinite  alternate;
+    animation: cambio 10s infinite  alternate;
 
 }
 .slider li {
@@ -141,16 +141,17 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     0%{margin-left: 0;}
     30%{margin-left: 0;}
 
-    35%{margin-left: -0%;}
-    65%{margin-left: -0%;}
+    35%{margin-left: -150%;}
+    65%{margin-left: -150%;}
 
-    70%{margin-left: -0%;}
-    100%{margin-left: -0%;}
+    70%{margin-left: -300%;}
+    100%{margin-left: -300%;}
 }
 /*Aca empieza la seccion de Categoria*/
 
 .main{
     margin-top :20%;
+    margin-bottom: 30%;
     padding: 0;
     border: 0;
     width: 100%;
@@ -167,6 +168,10 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     align-self: center;
 }
 
+#categorias{
+    
+    margin-top: 15%;
+}
 
 #categorias div img{
     width: 20%;
@@ -259,53 +264,19 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 }
 /*footer*/
 
-.footer{
-    background-color: black;
+footer{
+    display: flex;
     width: 100%;
-    height: 120px;
-    margin-top: 150px;
-    padding: 0;
-    border: 0;
+    background-color: black;
+    flex-direction: row;
 }
-
-.footer_container{
-    display: flex;
-    justify-content: space-between;
-    align-content: space-between;
-}
-.links{
-    display: flex;
-    justify-content: space-between;
-  
-}
-.links ul li{
+.wrapper div{
     flex-direction: row;
 }
 
-.links ul li a{
-    list-style: none;
-    text-decoration: none;
+.row{
     color: white;
-}
-.footer_container{
-    align-content: space-around;
-}
-
-
-.footer_container a{
-    text-decoration: none;
-    color: white;
-}
-
-
-.footer_container h3{
-    color: white;
-    text-align: center;
-}
-
-.social{
-    margin-right: 35px;
-     
+    flex-direction: row;
 }
 
 
@@ -471,6 +442,7 @@ p{
 }
 .main_slider-mini{
     border: blueviolet solid 1px;
+    border-radius: 3px;
     margin:10px;
     width: 90%;
 }
@@ -509,9 +481,15 @@ p{
 }
 
 /*FIN CSS CHECKOUT*/
+@media (max-width: 952px){
+    #categorias div img{
+    width: 30vh;
+    height: 30vh;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    align-self: center;
+}
 
-
-    
-    
-
+}
 
