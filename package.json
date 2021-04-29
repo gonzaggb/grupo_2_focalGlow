@@ -1,0 +1,23 @@
+{
+  "name": "grupo_2_focalglow",
+  "version": "1.0.0",
+  "description": "![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gonzaggb/grupo_2_focalGlow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gonzaggb/grupo_2_focalGlow/issues"
+  },
+  "homepage": "https://github.com/gonzaggb/grupo_2_focalGlow#readme"
+}
