@@ -485,11 +485,16 @@ p{
     #categorias div img{
     width: 30vh;
     height: 30vh;
-    padding: 0;
+    padding-left: 1vh;
+    ;
     border: 0;
     margin: 0;
     align-self: center;
 }
+    .logo{
+    width: 25vh;
+    padding: 0px;
 
 }
 
+}
