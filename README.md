@@ -1,5 +1,11 @@
+
 # grupo_2_ecommerce
+   ![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)
+
+                       
 Trabajo integrador Digital House
+
+Trello: https://trello.com/b/CuQYclp3/focal-glow
 
 Nombre del e-commerce: Focal Glow
 
@@ -44,3 +50,6 @@ Actualmente trabajo en un empresa de tecnología, pero en un area orientada a lo
 
 Martiniano Leguizamón (Mars)
 Soy un apasionado de la Luz. Tomo el principio “less is more” de Mies Van der Rohe como mi filosofía personal en iluminación. He recorrido el mundo y profundizado mi conocimiento no sólo en el aspecto técnico sino en el concepto de proveer soluciones en vez de luminarias y quiero hacer lo mismo con la programación.
+
+
+
