@@ -35,6 +35,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
    /* max-width: 850px;*/
     margin: 0 ;
     padding: 0;
+    z-index: 3;
 }
 
 .logo{
@@ -223,26 +224,29 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 }
 
-.elementos{
+ .elementos{
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    gap: 0.5em; /*agregue separacion entre las imagenes*/
+    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
+ }
 
-}
+
 #mas_vendidos img{
     width: 100%;
     height: 100%;
 
 }
 
-.box{
+ .box{
     width: 100%;
     height: 100%;
     position: relative;
     
     
-}
+} 
+
+
 .capa{
     position: absolute;
     top: 0;
@@ -493,6 +497,9 @@ p{
 
 /*FIN CSS CHECKOUT*/
 @media (max-width: 952px){
+    .header{
+        z-index: 3;
+    }
     #categorias div img{
     width: 30vh;
     height: 30vh;
@@ -501,11 +508,59 @@ p{
     border: 0;
     margin: 0;
     align-self: center;
-}
+    }
     .logo{
     width: 25vh;
     padding: 0px;
 
+    }
+    #mas_vendidos{
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+    z-index: 2;
 }
+
+.titulo_mas_vendidos{
+    
+    height: 15%;
+    border-radius: 3px;
+    background-color: rgba(182, 186, 190, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mas_vendidos h2{
+        text-align: center;
+        margin: 10%;
+      
+
+}
+
+ .elementos{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: space-between;
+    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
+ }
+
+
+#mas_vendidos img{
+    width: 100%;
+    height: 100%;
+    z-index: inherit;
+
+}
+
+ .box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    
+} 
+
 
 }
