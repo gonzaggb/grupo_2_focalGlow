@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel ="stylesheet" href = "/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/styles-login.css">
 </head>
 
-<header class="header">
-    <div class="container logo-nav-container">
-        <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
-        <nav class="navigation">
-            <ul class='inner_nav'>
-                <li><a href="#">Ofertas</a>
-                </li>
-                <li><a href="#">Categorias</a>
-                    <ul class='desplegable'>
-                        <li><a href="">Plafón</a></li>
-                        <li><a href="">Apliques</a></li>
-                        <li><a href="">Pie</a></li>
-                        <li><a href="">Colgantes</a></li>
-                        <li><a href="">Spots</a></li>
-                        <li><a href="">Accesorios</a></li>
-                        <li><a href="">Mesa</a></li>
-                        <li><a href="">Exterior</a></li>
-                    </ul>
-                </li>
-                <li><a href="/us">Nosotros</a></li>
-                <li><a href="#">Usuario</a>
-                    <ul class='desplegable'>
-                        <li><a href="/login">Iniciar Sesión</a></li>
-                        <li><a href="">Registrate</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Carrito</a></li>
-            </ul>
-        </nav>
+<body>
+
+    <div class="container">
+     
+        <section class="login-form">
+
+            <div class="form-container">
+                <span>Email</span>
+                <br>
+                <input class="input-login" type="text" name="email">
+                <br>
+                <span>Contraseña</span>
+                <br>
+                <input class="input-login" type="text" name="password">
+
+            </div>
+            <div class="button-container">
+                <button class="login-button">Ingresar</button>
+                <br>
+                <button class="login-button">Crear Cuenta</button>
+                <br>
+            </div>
+            <span>Olvide mi usuario</span>
+            <span>Olvide mi contraseña</span>
+
+        </section>
     </div>
-</header>
 </body>
+
 </html>
