@@ -15,18 +15,16 @@
 
 .main #payment_method{
     border: 2px solid;
-    
     margin-bottom: 10%;
+    
 }
 
+.main #payment_method img{
+    width: 100%;
+}
 
 .main h3{
     text-align: center;
     background-color: rgba(182, 186, 190, 0.5);
 }
 
-.icons  {
-   width: 100%;
-    
-    
-}
