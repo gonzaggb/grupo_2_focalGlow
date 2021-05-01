@@ -227,9 +227,10 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     margin-top: 10%;
     margin-left: 15%;
     margin-right: 15%;
+    margin-bottom: 15%;
 }
 
-.titulo_mas_vendidos{
+#titulo_mas_vendidos{
     
     height: 10%;
     border-radius: 3px;
@@ -238,10 +239,13 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     justify-content: center;
     align-items: center;
 }
+#mas_vendidos{
+    margin-bottom: 15%;
+}
 
 #mas_vendidos h2{
         text-align: center;
-        margin: 10%;
+        
       
 
 }
@@ -251,6 +255,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     justify-content: center;
     justify-content: space-between;
     gap: 0.5em; /*agregue separacion entre las imagenes*/ 
+    margin-top: 10%;
  }
 
 
@@ -299,22 +304,8 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     text-align: justify;
     align-content: center;
 }
-/*footer*/
 
-footer{
-    display: flex;
-    width: 100%;
-    background-color: black;
-    flex-direction: row;
-}
-.wrapper div{
-    flex-direction: row;
-}
 
-.row{
-    color: white;
-    flex-direction: row;
-}
 
 
 
@@ -518,8 +509,10 @@ p{
 }
 
 /*FIN CSS CHECKOUT*/
+/*css de html de categorias*/
 .diferent_categories{
     width: 100%;
+    
 }
 
 .diferent_categories article{
@@ -532,6 +525,7 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
     
 }   
 .item_list img{
@@ -543,6 +537,78 @@ p{
 article h2{
     margin-top: 15%;
 }
+/*comienza el footer*/
+.footer_wrappler{
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+.footer_wrappler  article h4{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.footer_wrappler article{
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+.links ul{
+    padding: 0;
+}
+.links ul li{
+    list-style: none;
+}    
+.links ul li a{
+    text-decoration: none;
+    color: white;
+}  
+
+
+.social_media ul{
+    
+    padding: 0;
+    justify-content: space-between;
+    
+}
+.social_media ul li a {
+    text-decoration: none;
+    color: white;
+}
+.contact{
+    text-align: center;
+}
+.contact ul{
+    
+    padding: 0;
+}
+.contact ul li {
+    justify-content: space-between;
+}
+.contact ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.fa-envelope:before {
+    content: "\f0e0";
+    margin: 7px;}
+.fa-whatsapp:before {
+    content: "\f232";
+    margin: 7px;
+}
+.fa-facebook-square:before {
+    content: "\f082";
+    margin: 7px;
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+    margin: 7px;
+}    
 
 
 /*media queri de home*/
@@ -572,51 +638,50 @@ article h2{
     margin-left: 15%;
     margin-right: 15%;
     z-index: 2;
-}
+    }
 
-#titulo_mas_vendidos{
+    #titulo_mas_vendidos{
     margin-bottom: -30%;
     height: 15%;
     border-radius: 3px;
     background-color: rgba(182, 186, 190, 0.5);
     
-}
+    }
 
-#mas_vendidos h2{
+    #mas_vendidos h2{
         text-align: center;
         margin: 10%;
-      
+     } 
 
-}
+    
 
- .elementos{
+    .elementos{
     display: flex;
     flex-direction: column;
     margin-top: -15%;
     justify-content: space-between;
     gap: 0.5em; /*agregue separacion entre las imagenes*/ 
- }
+    }
 
 
-#mas_vendidos img{
+    #mas_vendidos img{
     width: 100%;
     height: 100%;
     z-index: inherit;
 
-}
+    }
 
 
-#first_box{
+    #first_box{
     margin-top: 60%;
-}
- .box{
-    
+    }
+    .box{
     width: 100%;
     height: 100%;
     position: relative;
+    }
     
-    
-} 
+}    
+     
 
 
-}

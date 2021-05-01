@@ -535,17 +535,82 @@ p{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 15%;
+    margin-top: 10%;
+    margin-right: 15%;
+    margin-left: 15%;
+    padding: 0;
+    
     
 }   
 .item_list img{
-
+    margin-top: 5%;
+    margin-bottom: 10%;
     width: 30vh;
     height: 30vh;
     
 }  
 
+/*comienza el footer*/
+.footer_wrappler{
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+}
+.footer_wrappler  article h4{
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.footer_wrappler article{
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+.social_media ul{
+    
+    padding: 0;
+    justify-content: space-between;
+    
+}
+.social_media ul li a {
+    text-decoration: none;
+    color: white;
+}
+.contact{
+    text-align: center;
+}
+.contact ul{
+    
+    padding: 0;
+}
+.contact ul li {
+    justify-content: space-between;
+}
+.contact ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.fa-envelope:before {
+    content: "\f0e0";
+    margin: 7px;}
+.fa-whatsapp:before {
+    content: "\f232";
+    margin: 7px;
+}
+.fa-facebook-square:before {
+    content: "\f082";
+    margin: 7px;
+}
 
+.fa-instagram:before {
+    content: "\f16d";
+    margin: 7px;
+}    
   
 
 
