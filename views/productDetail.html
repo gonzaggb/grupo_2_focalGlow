@@ -7,6 +7,8 @@
   <title>Product Detail</title>
   <script src="https://kit.fontawesome.com/3f6f16c204.js" crossorigin="anonymous"></script>
   <link rel = "icon" href = "/icon/logo.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel = "stylesheet" href = "/css/normalize.css">
   <link rel = "stylesheet" href = "/css/styles.css">
   <link rel = "stylesheet" href = "/css/styleProductDetail.css">
@@ -19,25 +21,28 @@
     </div>
   </header>
 
-
-  <main class = "product_Detail">
-    <h2>Nombre del Producto</h2>
-    <img src = "img/productDetails/tolomeo_tavolo_image4753388-960x960.jpg" alt = "luminaria">
-    
-    <div class = "slider">
+  <h2>Nombre del Producto</h2>
+  <main>
+    <div class ="product_Detail">
+      <img src = "img/productDetails/tolomeo_tavolo_image4753388-960x960.jpg" alt = "luminaria">
+      <div class = "slider">
       <ul>
-        <li><img src = "img/productDetails/tolomeo_tavolo_gallery4872596-1920x1080.jpg" alt = "luminaria"></li>
-        <li><img src = "img/productDetails/tolomeo_tavolo_gallery4751037-1920x1080.jpg" alt = "luminaria"></li>
-        <li><img src = "img/productDetails/tolomeo_tavolo_gallery4872598-1920x1080.jpg" alt = "luminaria"></li>
-        <li><img src = "img/productDetails/tolomeo_tavolo_gallery4872599-1920x1080.jpg" alt = "luminaria"></li>
-      </ul>
+          <li><img src = "img/productDetails/tolomeo_tavolo_gallery4872596-1920x1080.jpg" alt = "luminaria"></li>
+          <li><img src = "img/productDetails/tolomeo_tavolo_gallery4751037-1920x1080.jpg" alt = "luminaria"></li>
+          <li><img src = "img/productDetails/tolomeo_tavolo_gallery4872598-1920x1080.jpg" alt = "luminaria"></li>
+          <li><img src = "img/productDetails/tolomeo_tavolo_gallery4872599-1920x1080.jpg" alt = "luminaria"></li>
+        </ul>
+      </div>
     </div>
   </main>
   
   <aside class = "technical_info">
-    <button>Potencia</button>
-    <p>CCT</p>
-    <p>Dim</p>
+    <div class="options">  
+      <button>Potencia</button>
+      <button>CCT</button>
+      <button>Dim</button> 
+    </div>
+
     <article class = "technical_data">
       <h3>Características</h3>
       <ul>
@@ -50,27 +55,30 @@
       </ul>
     </article>
     
-    <h3>Precio: $4.500</h3>
-    <button>AÑADIR</button>
+    <h3 id="price">Precio: $4.500</h3>
+    <button id="add">AÑADIR</button>
+    
+    
     
     <div>
       <p><i class="far fa-file-pdf"></i>  Hoja Técnica</p>
       <p><i class="far fa-file-pdf"></i>  Descargar Manual de Instalación</p>
     </div>
 
+    <section class = "similar_products">
+      <h3>Productos Similares</h3>
+      <div class = "slider">
+        <ul>
+          <li><img src = "img/productDetails/tolomeo_tavolo_1851150-480x480.jpg" alt = "luminaria"></li>
+          <li><img src = "img/productDetails/tolomeo_tavolo_1851169-480x480.jpg" alt = "luminaria"></li>
+          <li><img src = "img/productDetails/tolomeo_tavolo_4854964-480x480.jpg" alt = "luminaria"></li>
+        </ul>
+      </div>
+    </section>
     
   </aside>
   
-  <section class = "similar_products">
-    <h3>Productos Similares</h3>
-    <div class = "slider">
-      <ul>
-        <li><img src = "img/productDetails/tolomeo_tavolo_1851150-480x480.jpg" alt = "luminaria"></li>
-        <li><img src = "img/productDetails/tolomeo_tavolo_1851169-480x480.jpg" alt = "luminaria"></li>
-        <li><img src = "img/productDetails/tolomeo_tavolo_4854964-480x480.jpg" alt = "luminaria"></li>
-      </ul>
-    </div>
-  </section>
+
 
 
 </body>

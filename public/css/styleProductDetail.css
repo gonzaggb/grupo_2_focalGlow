@@ -1,14 +1,46 @@
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+header {
+    display: none;
+}
+
+main, aside {
+    width: 40%;
+    float: left;
+    margin: 20px;
+}
+
+.options button {
+    text-align: center;
+    font-size: 1.2rem;
+    width: 30%;
+    background-color: white;
+}
 .product_Detail {
-    background-color: aqua;
-    max-width: 50%;
-    display: flexbox;
-    
+   
 }
 
 .technical_info {
     width: 50%;
-    background-color: salmon;
-    display: flexbox;
+    padding: 0 5%;
+}
+
+#price {
+    text-align: right;
+}
+
+#add {
+    background-color: #ffde59;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    width: 40%;
+    padding: 10px;
+    float: right;
 }
 
 img {
@@ -17,9 +49,15 @@ img {
 }
 
 .similar_products {
-    max-width: 50%;
+    width: 60%;
+    max-height: 30%;
+    margin: auto;
+    text-align: center;
 }
 
 .technical_data {
     background-color: white;
+    border-radius: 40px;
+    padding: 10px 20px;
+    margin-top: 20px;
 }
