@@ -1,0 +1,25 @@
+.product_Detail {
+    background-color: aqua;
+    max-width: 50%;
+    display: flexbox;
+    
+}
+
+.technical_info {
+    width: 50%;
+    background-color: salmon;
+    display: flexbox;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.similar_products {
+    max-width: 50%;
+}
+
+.technical_data {
+    background-color: white;
+}
