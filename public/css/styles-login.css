@@ -20,6 +20,7 @@ body{
     background-attachment: fixed;
     background-size: contain;
     background-position: center;
+    color:white;
 }
 .login-container{
 
@@ -33,7 +34,7 @@ body{
     transform: translate(-50%, -50%);
 }
 .login-form{
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.2);
     position: absolute;
     top: 10px;
     left: 10px;
@@ -50,8 +51,9 @@ body{
 }
 .input-login{
     width: 90%;
-    border: black 2px solid;
+    border: black 1px solid;
     margin: 5px;
+    background-color: rgba(255,255,255,0.2);
 }
 .login-button{
     background-color: black;
@@ -64,7 +66,15 @@ body{
     text-align: center;
 }
 
-
+.forgotten-button{
+    font-size: 10px;
+    color: white;
+    
+}
+.forgotten-button a{
+    color: white;  
+    text-decoration: none;  
+}
 
     
 /*Define caracteristicas del h1
@@ -535,7 +545,6 @@ p{
     
 }
 
-
 @keyframes cambio-mini{
     0%{margin-left: 0;}
     30%{margin-left: 0;}
@@ -553,7 +562,6 @@ p{
     width: 30vh;
     height: 30vh;
     padding-left: 1vh;
-    ;
     border: 0;
     margin: 0;
     align-self: center;
@@ -565,6 +573,12 @@ p{
 }
 body{
     background-image: url(/img/portada-gogo-1024x768.jpg);
+    color:black;
 }
 
+.forgotten-button{
+    font-size: 10px;
+    color: white;
+    text-decoration: none ;
+}
 }
