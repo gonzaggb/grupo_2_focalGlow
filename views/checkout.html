@@ -2,47 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device=width, initial-scale=1.0">
-  <!---Al estar declarado en app.js el path.resolve(__dirname,'./public'), solo se indica lo que sigue a la ruta-->
-  <title>Focal Glow</title>
-  <link rel="icon" href="/icon/logo.ico">
-  <link rel ="stylesheet" href = "/css/normalize.css">
-  <link rel="stylesheet" href="/css/styles.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device=width, initial-scale=1.0">
+    <!---Al estar declarado en app.js el path.resolve(__dirname,'./public'), solo se indica lo que sigue a la ruta-->
+    <title>Focal Glow</title>
+    <link rel="icon" href="/icon/logo.ico">
+    <link rel="stylesheet" href="/css/normalize">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/style_categories.css">
 
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/641c03bd1a.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-  
-  <header class="header">
-    <div class="container logo-nav-container">
-      <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
-      <nav class="navigation">
-        <ul class='inner_nav'>
-          <li><a href="#mas_vendidos">Ofertas</a></li>
-          <li><a href="#categorias">Categorias</a>
-            <ul class='desplegable'>
-              <li><a href="">Plafón</a></li>
-              <li><a href="">Apliques</a></li>
-              <li><a href="">Pie</a></li>
-              <li><a href="">Colgantes</a></li>
-              <li><a href="">Spots</a></li>
-              <li><a href="">Accesorios</a></li>
-              <li><a href="">Mesa</a></li>
-              <li><a href="">Exterior</a></li>
-            </ul> 
-          </li>
-          <li><a href="/us">Nosotros</a></li>
-          <li><a href="#">Usuario</a>
-            <ul class='desplegable'>
-              <li><a href="/login">Iniciar Sesión</a></li>
-              <li><a href="">Registrate</a></li>
-            </ul>
-          </li>
-          <li><a href="/checkout">Carrito</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header class="header">
+        <div class="container logo-nav-container">
+            <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
+            <nav class="navigation">
+                <ul class='inner_nav'>
+                    <li><a href="/#mas_vendidos">Ofertas</a>
+                    </li>
+                    <li><a href="#">Categorias</a>
+                        <ul class='desplegable'>
+                            <li><a href="/categories#plafon">Plafón</a></li>
+                            <li><a href="/categories#aplique">Apliques</a></li>
+                            <li><a href="/categories#pie">Pie</a></li>
+                            <li><a href="/categories#colgante">Colgantes</a></li>
+                            <li><a href="/categories#embutido">Spots</a></li>
+                            <li><a href="/categories#sistema">Accesorios</a></li>
+                            <li><a href="/categories#mesa">Mesa</a></li>
+                            <li><a href="/categories#exterior">Exterior</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/us">Nosotros</a></li>
+                    <li><a href="#">Usuario</a>
+                        <ul class='desplegable'>
+                            <li><a href="/login">Iniciar Sesión</a></li>
+                            <li><a href="">Registrate</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
     <div class="principal">
         <div class="contenedor-producto-all">
@@ -144,5 +150,32 @@
 </div>
 </div>
 </div>
-    
+    <footer class="footer">
+        <section class="footer_wrappler">
+            <article class="links">
+                <h4>Preguntas frecuentes</h4>
+                <ul>
+                    <li><a href="/us#us">Nosotros</a></li>
+                    <li><a href="/us#payment_method">Metodos de Pago</a></li>
+                    <li><a href="/us#delivery">Envios</a></li>
+                </ul>
+            </article>
+            <article class="social_media">
+                <h4>Social Media</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/focal.glow/" target="_blank"><i
+                                class="fab fa-facebook-square"></i>Facebook</a></li>
+                    <li><a href="https://www.instagram.com/focal_glow_baires/" target="_blank"><i
+                                class="fab fa-instagram"></i>Instagram</a></li>
+                </ul>
+            </article>
+            <article class="contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href=""><i class="far fa-envelope"></i>E-mail</a></li>
+                    <li><a href=""><i class="fab fa-whatsapp"></i>Whatsapp</a></li>
+                </ul>
+            </article>
+        </section>
+    </footer>
 </body>
