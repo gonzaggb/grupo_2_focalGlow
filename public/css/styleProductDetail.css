@@ -9,6 +9,17 @@ header {
     
 }
 
+.logo {
+    max-height: 100px;
+    width: auto;
+}
+
+
+.product_name {
+    display: flex;
+    justify-content: space-between;
+}
+
 h2 {
     margin-left: 20px;
 }
@@ -32,12 +43,25 @@ main, aside {
 .product_application {
     max-width: 100%;
 }
-
+.options {
+    display: flex;
+    justify-content: space-evenly;
+}
 .options button {
     text-align: center;
     font-size: 1.2rem;
-    width: 32%;
+    width: 33%;
     background-color: white;
+}
+
+.price_documents {
+    display: flex;
+    flex-direction: column;
+}
+
+.documents {
+    display: flex;
+    flex-direction: column;
 }
 
 

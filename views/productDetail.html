@@ -17,13 +17,16 @@
 <body>
   <header class="header">
     <div class="container logo-nav-container">
-        <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
+        <a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a>
     </div>
   </header>
 
   <div class ="global">
-    <h2>Nombre del Producto</h2>
-    <i id ="x" class="fas fa-times"></i>
+    <div class="product_name">
+      <h2>Nombre del Producto</h2>
+      <i id ="x" class="fas fa-times"></i>
+    </div>
+    
     <div>
       <main>
         <div class ="product_detail">
@@ -59,16 +62,22 @@
             <li>Dim: Push</li>
           </ul>
         </article>
-        
-        <h3 id="price">Precio: $4.500</h3>
-        <button id="add">AÑADIR</button>
-        
-        
-        
-        <div>
-          <p><i class="far fa-file-pdf"></i>  Hoja Técnica</p>
-          <p><i class="far fa-file-pdf"></i>  Descargar Manual de Instalación</p>
+
+        <div class = price_documents>
+          <section class="price">
+            <h3 id="price">Precio: $4.500</h3>
+            <button id="add">AÑADIR</button>
+          </section>
+  
+          <section class = "documents">
+            <span><i class="far fa-file-pdf"></i>  Hoja Técnica</span>
+            <span><i class="far fa-file-pdf"></i>  Descargar Manual de Instalación</span>
+          </section>
         </div>
+
+        
+        
+
     
         <section class = "similar_products">
           <h3>Productos Similares</h3>
