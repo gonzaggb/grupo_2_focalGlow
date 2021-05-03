@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Define las caracteristicas del body
+fuente / tamaño / interlineado y margenes*/
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6em;
+    background-color: black;
+   /* background-image: url(/img/portada-uro-1024x768.jpg);*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    color:white;
+}
+.main-container{
+
+    background-image: url(/img/portada-uro-1024x768.jpg);
+    background-size: cover;
+}
+.registry-container{
+    padding: 0 10px;
+    text-align: left;
+}
+
+.registry-form span{
+    margin-left: 0px;
+}
+
+.registry-form{
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2%;
+    position: fixed;
+}
+.input-login{
+    width: 90%;
+    border: black 1px solid;
+    margin: 5px;
+    background-color: rgba(255,255,255,0.2);
+
+}
+.login-button{
+    background-color: black;
+    opacity: 100%;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+
+@media (min-width: 952px){
+    #categorias div img{
+    width: 30vh;
+    height: 30vh;
+    padding-left: 1vh;
+    border: 0;
+    margin: 0;
+    align-self: center;
+}
+    .logo{
+    width: 25vh;
+    padding: 0px;
+
+}
+body{
+/* background-image: url(/img/portada-uro-1024x768.jpg);*/
+    color:black;
+    background-position: right;
+}
+
+.registry-form{
+    background-color:black;
+    border:white 1px solid;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    border-radius: 0%;
+    position: fixed;
+    color:white;
+    
+}
+.right{
+    z-index:1;
+}
+.left{
+    z-index: 0;
+
+}
+.input-login{
+    width: 90%;
+    border: white 1px solid;
+    margin: 5px;
+    background-color: black;
+
+}
+.login-button{
+    background-color: white;
+    opacity: 100%;
+    color: black;
+    text-align: center;
+    border: white 1px solid;
+    margin: 5px;
+    font-size: 20px;
+    padding: 10px;
+}
+.main-container{
+
+    background-image: url(/img/portada-uro-1024x768.jpg);
+    background-size: cover;
+}
+}
