@@ -4,25 +4,60 @@ html {
 
 
 header {
-    display: none;
+    opacity: 0.5;
+    height: 100px
+    
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+.global {
+    width:90%;
+    margin: auto;
+}
+
+#x {
+    float: right;
+    font-size: 2rem;
 }
 
 main, aside {
     width: 40%;
     float: left;
-    margin: 20px;
+    margin: 0px 20px;
+}
+
+.product_application {
+    max-width: 100%;
 }
 
 .options button {
     text-align: center;
     font-size: 1.2rem;
-    width: 30%;
+    width: 32%;
     background-color: white;
 }
-.product_Detail {
-   
+
+
+.sliderProducts {
+    height: 45%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
+.technical_data h3 {
+    padding: 0 20px;
+    margin: 0;
+}
+
+.technical_data ul {
+    padding: 10px 20px;
+    margin: 0;
+}
 .technical_info {
     width: 50%;
     padding: 0 5%;
@@ -49,7 +84,7 @@ img {
 }
 
 .similar_products {
-    width: 60%;
+    width: 64%;
     max-height: 30%;
     margin: auto;
     text-align: center;
@@ -58,6 +93,6 @@ img {
 .technical_data {
     background-color: white;
     border-radius: 40px;
-    padding: 10px 20px;
+    padding: 0px 20px;
     margin-top: 20px;
 }
