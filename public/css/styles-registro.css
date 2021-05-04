@@ -14,14 +14,17 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     line-height: 1.6em;
-    background-color: black;
-   /* background-image: url(/img/portada-uro-1024x768.jpg);*/
+    /*background-color: black;*/
+    background-image: url(/img/portada-uro-1024x768.jpg);
     background-size: cover;
     background-attachment: fixed;
-    background-position: center;
+    background-position: right;
     position: relative;
     color:white;
 }
+
+
+/*
 .main-container{
 
     background-image: url(/img/portada-uro-1024x768.jpg);
@@ -60,55 +63,47 @@ body{
     color: white;
     text-align: center;
     margin: 5px;
-}
+}*/
 
-@media (min-width: 952px){
-    #categorias div img{
-    width: 30vh;
-    height: 30vh;
-    padding-left: 1vh;
-    border: 0;
-    margin: 0;
-    align-self: center;
-}
-    .logo{
-    width: 25vh;
-    padding: 0px;
+.main-container2{
+    text-align: center;
+    width:100%;
+    position:fixed;
+    display:flex; /*agregado recien*/
+    left: 30%;
+    top: 30%;
 
 }
-body{
-/* background-image: url(/img/portada-uro-1024x768.jpg);*/
-    color:black;
-    background-position: right;
-}
-
-.registry-form{
-    background-color:black;
-    border:white 1px solid;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    border-radius: 0%;
-    position: fixed;
+.registry-form2{
     color:white;
+    width: 50%;
+    text-align: center;
+    border: solid white 1px;
+    background-color: rgba(0,0,0,0.4);
+
     
+
 }
-.right{
-    z-index:1;
-}
-.left{
-    z-index: 0;
+.registry-container2 p{
+    display: block;
+    text-align: left;
+    width: 82%;
+    margin: auto 18px;
+    font-size: 15px;
 
 }
 .input-login{
     width: 90%;
     border: white 1px solid;
     margin: 5px;
-    background-color: black;
-
+    background-color: rgba(0,0,0,0); /*agregado recien*/
+    color:white;
+    font-size: 15px;
+    border-radius: 0%;
+    
+}
+.inner_nav{
+    display: none;
 }
 .login-button{
     background-color: white;
@@ -117,12 +112,57 @@ body{
     text-align: center;
     border: white 1px solid;
     margin: 5px;
-    font-size: 20px;
-    padding: 10px;
+    font-size: 15px;
+    width: 90%;
+    border-radius: 0%;
 }
-.main-container{
+.logo-nav-container p{
+    margin-inline-start: auto;
+    margin-right: 152px;
+}
 
-    background-image: url(/img/portada-uro-1024x768.jpg);
-    background-size: cover;
+
+
+@media (min-width: 952px){
+
+    .logo{
+    width: 25vh;
+    padding: 0px;
+
+}
+body{
+/* background-image: url(/img/portada-uro-1024x768.jpg);*/
+    color:black;
+}
+.inner_nav{
+    display: none;
+}
+
+
+.registry-form2{
+    color:white;
+    width: 30%;
+
+}
+.right{
+    z-index:1;
+}
+.left{
+    z-index: 0;
+
+}
+.button-container{
+    margin-bottom: 10px;
+    width: 100%;
+
+
+}
+
+
+.main-container2{
+        text-align: center;
+        width:80%;
+        position:fixed;
+    
 }
 }

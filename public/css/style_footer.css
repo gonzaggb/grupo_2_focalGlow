@@ -1,10 +1,17 @@
+.footer{
+    background-color: rgba(0,0,0,0);
+    border-top: white solid 1px;
+    margin-top: 108%;
+    position:fixed;
+    width: 100%;
+}
 .footer_wrappler{
-    background-color: black;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
-    
+    font-size: 0.8em;
+    line-height: 20px; 
 }
 .footer_wrappler  article h4{
     color: white;
@@ -12,8 +19,9 @@
     padding: 0;
 }
 .footer_wrappler article{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 2%;
+    margin-right: 2%;
+    justify-content: space-between;
     
 }
 .links ul{
@@ -68,4 +76,22 @@
 .fa-instagram:before {
     content: "\f16d";
     margin: 7px;
-}    
+}
+
+@media (min-width: 952px){
+    .footer{
+        background-color: rgba(0,0,0,0);
+        border-top: white solid 1px;
+        margin-top: 400px;
+        position:absolute;
+        width: 100%;
+    }
+    .footer_wrappler{
+    
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        font-size: 0.8em;
+        line-height: 20px; 
+    }
+}

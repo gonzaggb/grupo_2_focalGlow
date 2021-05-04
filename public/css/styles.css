@@ -43,11 +43,11 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     padding: 0px;
 }
 .header{
-    background-color: black;
+    background-color: rgba(0,0,0,0);
     color:white;
     position: sticky; /*para hacer el menu pegajoso*/
     top: 0; /*para que quede pegado a la parte superior*/
-
+    border-bottom: white 1px solid;
     bottom: 150px;
     z-index: 3;
 }
@@ -550,79 +550,6 @@ p{
 article h2{
     margin-top: 15%;
 }
-/*comienza el footer*/
-.footer_wrappler{
-    background-color: black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-    
-}
-.footer_wrappler  article h4{
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-.footer_wrappler article{
-    margin-left: 10%;
-    margin-right: 10%;
-    
-}
-.links ul{
-    padding: 0;
-}
-.links ul li{
-    list-style: none;
-}    
-.links ul li a{
-    text-decoration: none;
-    color: white;
-}  
-
-
-.social_media ul{
-    
-    padding: 0;
-    justify-content: space-between;
-    
-}
-.social_media ul li a {
-    text-decoration: none;
-    color: white;
-}
-.contact{
-    text-align: center;
-}
-.contact ul{
-    
-    padding: 0;
-}
-.contact ul li {
-    justify-content: space-between;
-}
-.contact ul li a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-}
-.fa-envelope:before {
-    content: "\f0e0";
-    margin: 7px;}
-.fa-whatsapp:before {
-    content: "\f232";
-    margin: 7px;
-}
-.fa-facebook-square:before {
-    content: "\f082";
-    margin: 7px;
-}
-
-.fa-instagram:before {
-    content: "\f16d";
-    margin: 7px;
-}    
-
 
 /*media queri de home*/
 @media (max-width: 952px){
