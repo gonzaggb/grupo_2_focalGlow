@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+}
+.checkout{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+}
+
+.checkout-product{
+    display: flex;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    border: solid black 1px;
+    margin-bottom: 10px;
+}
+.product-image{
+    width: 40%;
+}
+.product-image img{
+    width: 80%;
+    margin-left: 7px;
+    margin-top: 7px;
+}
+.product-detail{
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    line-height: 15px;
+    font-size: 0.8em;
+    justify-content: space-around;
+    align-items: center;
+}
+.detail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width:100%;
+}
+.detail .item{
+    margin-left: 10px;
+}
+.name-category{
+    align-self: flex-start;
+    text-align: center;
+    margin:auto;
+
+}
+.name-category h2{
+    margin-top:10px;
+    margin-bottom: 0px;
+}
+.name-category h4{
+    margin-top:2px;
+    margin-bottom: 2spx;
+}
+#item-eliminar{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.separador{
+    border-bottom:black solid 1px;
+    width: 90%;
+    text-align: center;
+    margin: 10px;
+}
+.total-checkout{
+    width: 80%;
+    text-align: center;
+    margin:10px auto;
+}
+.total-checkout-border{
+    border:solid black 1px;
+}
+.total-checkout h1{
+    margin-bottom: 0px;
+
+}
+.total-checkout p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: 5px;
+    margin-left: 5px;
+
+}
+.total-checkout .separador{
+    margin: auto;
+}
+.total-checkout span{
+text-align: left;
+}
+.final-button{
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.main_slider-mini{
+    border: blueviolet solid 1px;
+    border-radius: 3px;
+    margin:auto;
+    width: 90%;
+}
+.slider-mini ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 300%;
+    animation: cambio-mini 15s infinite alternate;
+    animation-timing-function: ease-in;
+}
+.slider-mini li {
+    list-style: none;
+    width: 100%;
+    
+   
+}
+
+.slider-mini img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+@media (min-width: 952px){
+    .checkout-articles{
+        width: 60%;
+    }
+
+    .total-checkout {
+        width: 30%;
+        text-align: center;
+        margin: 10px auto;
+    }
+    .total-checkout-border{
+        border:solid black 1px;
+    }
+
+}

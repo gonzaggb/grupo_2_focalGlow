@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: sans-serif;
 }
 
 html{
@@ -10,7 +10,7 @@ html{
 /*Define las caracteristicas del body
 fuente / tamaño / interlineado y margenes*/
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1rem;
     line-height:1.6em;
     margin: 0;
@@ -35,7 +35,6 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
    /* max-width: 850px;*/
     margin: 0 ;
     padding: 0;
-    z-index: 3;
 }
 
 .logo{
@@ -43,13 +42,12 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     padding: 0px;
 }
 .header{
-    background-color: rgba(0,0,0,0);
+    background-color: black;
     color:white;
     position: sticky; /*para hacer el menu pegajoso*/
     top: 0; /*para que quede pegado a la parte superior*/
-    border-bottom: white 1px solid;
+
     bottom: 150px;
-    z-index: 3;
 }
 
 .header a{
@@ -90,6 +88,9 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     float: left;
     
 }
+.inner_nav{
+    display:none;
+}
 .inner_nav li ul{
     display:none ;
     position: absolute;
@@ -107,7 +108,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 
 .slider{
-    height: 45%;
+    height: 50%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -133,9 +134,8 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 .slider img{
     width: 100%;
-    height: 75vh;
+    height: 800px;
     object-fit: cover;
-    
     
     
 }
@@ -150,82 +150,39 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     70%{margin-left: -300%;}
     100%{margin-left: -300%;}
 }
-
-/*aca empieza el marquee*/
-.marquee{
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 0;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-}
 /*Aca empieza la seccion de Categoria*/
 
 .main{
-    margin-top :10%;
-    margin-bottom: 10%;
-    margin-left: 10%;
-    
+    margin-top :20%;
+    margin-bottom: 30%;
     padding: 0;
     border: 0;
-    width: 80%;
-    z-index: 2;
-    
-    
-   
-
-       
-}
-#categorias{
-    display: flex;
-    object-fit: cover;
     width: 100%;
-    
-    
-    
-    
-}
 
+    display: flex;
+    justify-content: center;    
+    align-self: center;        
+}
 
 #categorias div{
     padding: 0;
     border: 0;
-    /*margin-left: 15%; elimino este margen porque voy a centrar el category-box GB*/
+    margin-left: 15%;
+    align-self: center;
+}
+
+#categorias{
+    
     margin-top: 15%;
-     /*agregado centrado del flex GB*/
-    gap: 0.5em; /*agregado separacion entre imagenes GB*/
-
-}
-.category-box{
-    margin-top: 5%;
-    text-align: center;
-    align-content: space-around;
-    
-    
 }
 
-.category-box a{
-    width: 50%;
-}
-    
-    
-    
-
-#categorias div a img{
-    width: 30vh;
-    
-    
-    
-}
-.category-box{ /*Agregue caja para englobar las imagenes de las categorias y asi aplicar flex GB*/
-    width: 90%; /*agrando espacio que ocupa la caja de categorias en pantalla GB*/
-    
-    gap: 10px;
-    margin: 0px auto; /*centro la caja de categorias GB*/
-    
+#categorias div img{
+    width: 20%;
+    height: 20%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    align-self: center;
 }
 /*hover zoom*/
 .zoom{
@@ -237,13 +194,12 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     
 /*Mas vendidos*/
 #mas_vendidos{
-    margin-top: 10%;
+    margin-top: 15%;
     margin-left: 15%;
     margin-right: 15%;
-    margin-bottom: 15%;
 }
 
-#titulo_mas_vendidos{
+.titulo_mas_vendidos{
     
     height: 10%;
     border-radius: 3px;
@@ -252,41 +208,33 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     justify-content: center;
     align-items: center;
 }
-#mas_vendidos{
-    margin-bottom: 15%;
-}
 
 #mas_vendidos h2{
         text-align: center;
-        
+        margin: 10%;
       
 
 }
 
- .elementos{
+.elementos{
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
-    margin-top: 10%;
- }
 
-
+}
 #mas_vendidos img{
     width: 100%;
     height: 100%;
 
 }
 
- .box{
+.box{
     width: 100%;
     height: 100%;
     position: relative;
     
     
-} 
-
-
+}
 .capa{
     position: absolute;
     top: 0;
@@ -323,152 +271,6 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 
 
-/*INICIO CSS CHECKOUT*/
-.principal{
-    display:flex;
-    justify-content: space-around;
-    width:80%;
-    margin: 0 auto;
-}
-.contenedor-productos-all{
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
-    margin: 10px;
-}
-.contenedor-producto{
-    display: flex;
-    align-items: left;
-    align-items: center;
-    justify-content: left;
-    border: solid black 1px;
-    margin-top: 10px;
-}
-.nombreproducto{
-    font-weight: bold;
-    font-size: 0.9rem;
-}
-.categoria{
-    font-size: 0.7rem;
-}
-.imagen-producto{
-    width: 15%;
-    margin-right: 10px;
-    padding:10px;   
-}
-.imagen-producto img{
-    width: 100%;
-    border: solid black 1px;
-}
-.contenedor-checkout{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    border: solid black 1px;
-    margin:10px;
-}
-
-.checkout{
-    font-weight: bold;
-    width: 100%;
-
-}
-.total{
-    border-top: black solid 1px;
-    text-align: left;
-    border-bottom: black solid 1px;
-    padding-top: 10px;
-}
-.total-productos{
-    font-size: 0.8rem;
-    font-weight: normal;
-}
-.total-compra{
-    font-size: 0.9rem;
-    font-weight: bold;
-}
-.advertencia{
-    font-weight: normal;
-    text-align: center;
-    font-size: 0.7rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    line-height:1.6em;
-
-    
-
-}
-.continuar{
-    margin: 10px;
-    font-size: 1rem;
-    background-color: black;
-    color:white;
-
-}
-.columna-derecha{
-    display: flex;
-    width: 40%;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-.puede-interesar{
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    border: solid black 1px;
-    margin:20px;
-}
-.puede-interesar img{
-    width: 100%;
-}
-
-
-p{
-  /*  border: solid black 1px;*/
-    height: fit-content;   
-
-}
-.item{
-    width: 50%;
-    font-size: 0.8rem;
-    margin-left: 2%;
-    line-height: 15px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-.eliminar-producto{
-    display:flex;
-    width: fit-content;
-   /* border: solid black 1px;*/
-    justify-content: flex-end;
-    align-items: center;
-    margin-right: 5px;
-    
-}
-.eliminar-producto img{
-    width: 5%;
-    
-}
-
-.detalle-producto{
-    display: flex;
-    border-top: black dotted 1px;
-    border-bottom: black dotted 1px;
-    margin-right: 5%;
-
-
-}
-.probando-alineado{
-    display: flex;
-    flex-direction: column;
-}
-
-.producto-categoria{
-    display:flex;
-    flex-direction: column;
-    line-height: 14px;
-}
-
 /*aca empieza el MINI slider*/
 
 
@@ -481,34 +283,13 @@ p{
     
     
 }
-.main_slider-mini{
-    border: blueviolet solid 1px;
-    border-radius: 3px;
-    margin:10px;
-    width: 90%;
-}
 
-.slider-mini ul{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    width: 300%;
-    animation: cambio-mini 15s infinite alternate;
-    animation-timing-function: ease-in;
-}
-.slider-mini li {
-    list-style: none;
-    width: 100%;
-    
-   
-}
 
-.slider-mini img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
-    
+
+
+.item i{
+  color:red;
+  text-align: left;
 }
 @keyframes cambio-mini{
     0%{margin-left: 0;}
@@ -522,107 +303,25 @@ p{
 }
 
 /*FIN CSS CHECKOUT*/
-/*css de html de categorias*/
-.diferent_categories{
-    width: 100%;
-    
-}
-
-.diferent_categories article{
-    text-align: center;
-    width: 100%;
-    
-}
-.item_list{
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-
-    
-}   
-.item_list img{
-    width: 30vh;
-    height: 30vh;
-    
-}     
-    
-article h2{
-    margin-top: 15%;
-}
-
-/*media queri de home*/
-@media (max-width: 952px){
-    .header{
-        z-index: 3;
-    }
-    .category-box{
-        margin-top: 50%;
-    }
+@media (min-width: 952px){
     #categorias div img{
     width: 30vh;
     height: 30vh;
-    padding-left: 1vh;
-    ;
+    padding: 0;
     border: 0;
     margin: 0;
     align-self: center;
-    }
-    .logo{
-    width: 25vh;
-    padding: 0px;
-
-    }
-    #mas_vendidos{
-    margin-top: 15%;
-    margin-left: 15%;
-    margin-right: 15%;
-    z-index: 2;
-    }
-
-    #titulo_mas_vendidos{
-    margin-bottom: -30%;
-    height: 15%;
-    border-radius: 3px;
-    background-color: rgba(182, 186, 190, 0.5);
-    
-    }
-
-    #mas_vendidos h2{
-        text-align: center;
-        margin: 10%;
-     } 
-
-    
-
-    .elementos{
+}
+.contenedor-checkout{
+    /*border: solid black 1px;*/
     display: flex;
     flex-direction: column;
-    margin-top: -15%;
-    justify-content: space-between;
-    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
-    }
 
+}
+.inner_nav{
+    display:flex;
+}
 
-    #mas_vendidos img{
-    width: 100%;
-    height: 100%;
-    z-index: inherit;
-
-    }
-
-
-    #first_box{
-    margin-top: 60%;
-    }
-    .box{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    }
-    
-    
-}    
-     
+}
 
 
