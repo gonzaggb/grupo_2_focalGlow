@@ -29,7 +29,7 @@ app.get('/checkout', (req, res) => {
 })
 
 app.get('/product', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productDetail.html'))
+    res.sendFile(path.resolve(__dirname, './views/product_detail.html'))
 })
 
 app.get('/categories', (req, res) => {
