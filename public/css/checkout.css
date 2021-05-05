@@ -46,6 +46,11 @@
 .detail .item{
     margin-left: 10px;
 }
+.input-quantity{
+    width: 20px;
+    display: inline-block;
+}
+
 .name-category{
     align-self: flex-start;
     text-align: center;
@@ -140,6 +145,23 @@ text-align: left;
     }
     .total-checkout-border{
         border:solid black 1px;
+    }
+    .detail{
+        flex-direction: row;
+        width: 90%;
+
+    }
+    .detail item{
+        width: 50%;
+    }
+    .item#marca{
+        align-self: center;
+    }
+    .main_slider-mini{
+        border: blueviolet solid 1px;
+        border-radius: 3px;
+        margin:auto;
+        width: 60%;
     }
 
 }
