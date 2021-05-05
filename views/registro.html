@@ -47,23 +47,23 @@
 
 
     <main class="main-container2">
-        <section class="registry-form2">
+        <form class="registry-form2">
 
             <div class="registry-container2">
-                <p>Nombre</p>
-                <input class="input-login" type="text" name="nombre">
-                <p>Apellido</p>
-                <input class="input-login" type="text" name="apeliido">
-                <p>Email</p>
-                <input class="input-login" type="text" name="email">
-                <p>Contraseña</p>
-                <input class="input-login" type="text" name="password">
-                <p>Confirmar contraseña</p>
-                <input class="input-login" type="text" name="re-password">
+                <label for="nombre">Nombre</label>
+                <input class="input-login" type="text" name="nombre" id="nombre" required>
+                <label for="apellido">Apellido</label>
+                <input class="input-login" type="text" name="apeliido" id="apellido" required>
+                <label for="email">Email</label>
+                <input class="input-login" type="email" name="email" id="email" required>
+                <label for="password">Contraseña</label>
+                <input class="input-login" type="password" name="password" id="password" required>
+                <label for="re-password">Confirmar contraseña</label>
+                <input class="input-login" type="text" name="re-password" id="re-password" required>
 
             </div>
             <div class="button-container">
-                <button class="login-button">Continuar</button>
+                <button type="submit" class="login-button">Continuar</button>
 
             </div>
 

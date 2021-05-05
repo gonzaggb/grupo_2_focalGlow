@@ -92,6 +92,11 @@ body{
     font-size: 15px;
 
 }
+.registry-container2 label{
+    display: block;
+    text-align: left;
+    margin-left: 15px;
+}
 .input-login{
     width: 90%;
     border: white 1px solid;
