@@ -39,6 +39,10 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     height: 13vh;
 }
 
+#burguer{
+    display: none;
+}
+
 .logo{
     width: 50%;
     padding: 0px;
@@ -458,8 +462,16 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     .links ul li{
     list-style: none;
     text-align: center;
+    } 
+    .inner_nav{
+        display: none;
+    }   
+    #burguer{
+    display: inline-block;
+    color: white;
+    width: 50px;
     
-} 
+}
     
 }    
      
