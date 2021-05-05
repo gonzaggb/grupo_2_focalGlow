@@ -36,6 +36,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     margin: 0 ;
     padding: 0;
     z-index: 3;
+    height: 13vh;
 }
 
 .logo{
@@ -45,7 +46,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 .header{
     background-color: black;
     color:white;
-    position: sticky; /*para hacer el menu pegajoso*/
+    /*position: sticky; para hacer el menu pegajoso*/
     top: 0; /*para que quede pegado a la parte superior*/
 
     bottom: 150px;
@@ -151,17 +152,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     100%{margin-left: -300%;}
 }
 
-/*aca empieza el marquee*/
-.marquee{
-    background-color: black;
-    color: white;
-    margin: 0;
-    padding: 0;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    gap: 50px;
-}
+
 /*Aca empieza la seccion de Categoria*/
 
 .main{
@@ -194,7 +185,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     padding: 0;
     border: 0;
     /*margin-left: 15%; elimino este margen porque voy a centrar el category-box GB*/
-    margin-top: 15%;
+    margin-top: 1%;
      /*agregado centrado del flex GB*/
     gap: 0.5em; /*agregado separacion entre imagenes GB*/
 
@@ -333,9 +324,12 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 }
 .links ul{
     padding: 0;
+    
 }
 .links ul li{
     list-style: none;
+    
+    
 }    
 .links ul li a{
     text-decoration: none;
@@ -404,8 +398,9 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     align-self: center;
     }
     .logo{
-    width: 25vh;
+    width: 15vh;
     padding: 0px;
+    
 
     }
     #mas_vendidos{
@@ -455,7 +450,16 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     height: 100%;
     position: relative;
     }
+    .footer_wrappler{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .links ul li{
+    list-style: none;
+    text-align: center;
     
+} 
     
 }    
      
