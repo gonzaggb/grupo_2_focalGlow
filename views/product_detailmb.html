@@ -10,7 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel = "stylesheet" href = "/css/normalize.css">
-  <link rel = "stylesheet" href = "/css/styles.css">
   <link rel = "stylesheet" href = "/css/style_product_detailmb.css">
 </head>
 
@@ -25,7 +24,7 @@
   <main>
     <div class="product_name">
       <h2>Nombre del Producto</h2>
-      <i id ="x" class="fas fa-times"></i>
+      <a href="/"><i id ="x" class="fas fa-times"></i></a>
     </div>
    
       
@@ -33,6 +32,7 @@
       <img src = "img/tolomeo_tavolo_image4753388-960x960.jpg" alt = "luminaria">
       <img src = "img/tolomeo_tavolo_gallery4872596-1920x1080.jpg" alt = "luminaria">
     </div>
+
     <section class = "technical_info">
       <div class="options">  
         <button>Potencia</button>
@@ -55,7 +55,11 @@
 
     <section class = "price">
       <h3 id="price">Precio: $4.500</h3>
-      <button id="add">AÑADIR</button>
+      <div class="qtyadd">
+        <input type="number">
+        <button id="add">AÑADIR</button>
+      </div>
+
     </section>
 
     <section class = "documents">
