@@ -12,29 +12,26 @@
 </head>
 
 <body>
-
+    
 
     <main class="container">
 
-        <section class="login-form">
+        <form class="login-form">
 
             <div class="form-container">
-                <span>Email</span>
+                <label for="email">Email</span>
                 <br>
-                <input class="input-login" type="text" name="email">
+                <input class="input-login" type="email" name="email" id="email">
                 <br>
-                <span>Contraseña</span>
+                <label for="password">Contraseña</span>
                 <br>
-                <input class="input-login" type="text" name="password">
-                <br>
-                <div class="remember">
-                    <input type="checkbox">Recordar mi usuario y contraseña
-                </div>
+                <input class="input-login" type="password" name="password" id=password>
+
             </div>
             <div class="button-container">
-                <button class="login-button">Ingresar</button>
+                <button type="submit" class="login-button">Ingresar</button>
                 <br>
-                <button class="login-button">Crear Cuenta</button>
+                <button type="submit" class="login-button">Crear Cuenta</button>
                 <br>
             </div>
             <div class="forgotten-button">
@@ -42,11 +39,8 @@
                 <span><a href="#">Olvide mi contraseña</a></span>
             </div>
 
-        </section>
-        <div class="error-data">
-            <p>El mail o la contraseña son incorrectos</p>
-        </div>
-        </div>
+        </form>
+    </div>
 </body>
 
 </html>
