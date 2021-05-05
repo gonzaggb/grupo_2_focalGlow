@@ -75,6 +75,16 @@ body{
     color: white;  
     text-decoration: none;  
 }
+.error-data{
+    margin-top: 15vh;
+    color:red;
+    font-size: 15px;
+    display: inline-block;
+}
+.remember{
+    font-size: 12px;
+}
+
 
     
 /*Define caracteristicas del h1
@@ -580,5 +590,8 @@ body{
     font-size: 10px;
     color: white;
     text-decoration: none ;
+}
+.error-data{
+    margin-top: 65vh;
 }
 }
