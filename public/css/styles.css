@@ -42,7 +42,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     width: 50%;
     padding: 0px;
 }
-.header{
+header{
     background-color: black;
     color:white;
     position: sticky; /*para hacer el menu pegajoso*/
@@ -52,7 +52,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     z-index: 3;
 }
 
-.header a{
+header a{
     color:white;
     text-decoration:none;
 }
@@ -626,7 +626,7 @@ article h2{
 
 /*media queri de home*/
 @media (max-width: 952px){
-    .header{
+    header{
         z-index: 3;
     }
     .category-box{

@@ -1,8 +1,52 @@
 header {
-    height: 10vh;
+    width: 100%;
+    height: 100px;
 }
 
-.logo {
-    height: 10vh;
-    width: auto;
+header img {
+    width: 20%;
+    height: auto;
+}
+
+img {
+    width: 300px;
+}
+
+main {
+    text-align: center;
+    margin: 0 auto
+
+}
+
+.product_name {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.technical_data {
+    background-color: white;
+    border-radius: 40px;
+}
+
+.price {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+#add {
+    background-color: #ffde59;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    width: 40%;
+    padding: 10px;
+}
+
+.documents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
