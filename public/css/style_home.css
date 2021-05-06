@@ -138,7 +138,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 .slider img{
     width: 100%;
-    height: 75vh;
+    height:79vh;
     object-fit: cover;
     
     
@@ -160,7 +160,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 /*Aca empieza la seccion de Categoria*/
 
 .main{
-    margin-top :10%;
+    margin-top :11%;
     margin-bottom: 10%;
     margin-left: 10%;
     
@@ -189,7 +189,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     padding: 0;
     border: 0;
     /*margin-left: 15%; elimino este margen porque voy a centrar el category-box GB*/
-    margin-top: 1%;
+    /* margin-top: 10%; */
      /*agregado centrado del flex GB*/
     gap: 0.5em; /*agregado separacion entre imagenes GB*/
 
@@ -232,10 +232,11 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     
 /*Mas vendidos*/
 #mas_vendidos{
-    margin-top: 10%;
+    
     margin-left: 15%;
     margin-right: 15%;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
+    
 }
 
 #titulo_mas_vendidos{
@@ -246,9 +247,6 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     display: flex;
     justify-content: center;
     align-items: center;
-}
-#mas_vendidos{
-    margin-bottom: 15%;
 }
 
 #mas_vendidos h2{
@@ -307,12 +305,16 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     font-weight: bold;
 }
 
-
-.footer_wrappler{
+.footer_{
+    display: flex;
     background-color: black;
+}
+.footer_wrappler{
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
     
     
 }
@@ -454,15 +456,12 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     height: 100%;
     position: relative;
     }
-    .footer_wrappler{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    
     .links ul li{
     list-style: none;
-    text-align: center;
+    
     } 
+   
     .inner_nav{
         display: none;
     }   
@@ -470,8 +469,22 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     display: inline-block;
     color: white;
     width: 50px;
+    }
+    .footer_wrappler{
     
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding-top: 3%;
+    }
+    .links{
+        display: none;
+    }
+   
+    
+
+    
     
 }    
      

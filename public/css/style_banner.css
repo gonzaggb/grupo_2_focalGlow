@@ -17,8 +17,9 @@
     text-decoration: none;
 }
 
-div a p{
+div  p{
     text-decoration: none;
+    margin: 1vh 0;
 }
 
 @media (max-width: 952px){
