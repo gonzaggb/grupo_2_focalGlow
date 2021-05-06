@@ -146,7 +146,8 @@ body{
 
 .registry-form2{
     color:white;
-    width: 30%;
+    width: 25%;
+    margin-top:5%;
 
 }
 .right{
@@ -162,6 +163,11 @@ body{
 
 
 }
+.logo-nav-container p{
+    margin-inline-start: auto;
+    margin-right: 250px;
+}
+
 
 
 .main-container2{
