@@ -59,13 +59,6 @@ main {
 
 
 
-#slider_image_2:target~ .image_container {
-    left: -100%;
-}
-#slider_image_3:target~ .image_container {
-    left: -100%;
-}*/
-
 
 .options {
     margin-top: 1.5rem;
@@ -141,4 +134,17 @@ input {
 
 .documents span {
     margin-bottom: 0.5em;
+}
+
+@media (min-width:460px) {
+    main {
+        display: flex;
+        flex-direction: row;
+    }
+    .product_detail {
+        width: 50%;
+    }
+    .prodcut_info {
+        width: 50%;
+    }
 }
