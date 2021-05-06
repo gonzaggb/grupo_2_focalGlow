@@ -35,12 +35,13 @@ main {
 
 .product_name {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 10px;
 }
 
 .options {
-    margin-top: 10px;
+    margin-top: 1.5rem;
     display: flex;
     justify-content: space-evenly;
 }
@@ -48,6 +49,10 @@ main {
 .options button {
     background-color: black;
     color: white;
+    font-size: 1.25rem;
+    border: none;
+    padding: 5px 20px;
+    
 }
 
 .technical_info {
@@ -68,23 +73,35 @@ main {
 
 .price {
     display: flex;
-    justify-content: flex-end;
+    justify-content: right;
     flex-direction: column;
 }
 
-#add {
-    background-color: #ffde59;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    border: none;
-    width: 40%;
-    padding: 10px;
-}
 .qtyadd {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 10px;
+    
 }
+
+input {
+    width: 15%;
+    border:none;
+}
+
+#add {
+    width: 40%;
+    background-color: #ffde59;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    font-family: 'Roboto';
+}
+
+
 #price {
     text-align: right;
     margin-right: 10px;
@@ -94,4 +111,10 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    text-align: left;
+    margin: 1em;
+}
+
+.documents span {
+    margin-bottom: 0.5em;
 }
