@@ -175,7 +175,10 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     
     
 }
-
+section article{
+    border-bottom: solid 3px black;
+    /* box-shadow: 0 8px 8px 0 black; */
+}
 article h2{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     text-align: center;
@@ -192,13 +195,15 @@ article h2{
     padding: 0;
     
     
+    
 }   
 .item_list img{
     margin-top: 5%;
     margin-bottom: 10%;
     width: 30vh;
     height: 30vh;
-    border: solid 3px grey;
+    border: solid 5px rgb(160, 160, 160);
+    
     
     
 }  
@@ -212,12 +217,16 @@ article h2{
 }
 
 /*comienza el footer*/
-.footer_wrappler{
-    width: 100%;
+.footer_{
+    display: flex;
     background-color: black;
+}
+.footer_wrappler{
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%;
     
     
 }
@@ -231,6 +240,21 @@ article h2{
     margin-right: 10%;
     
 }
+.links ul{
+    padding: 0;
+    
+}
+.links ul li{
+    list-style: none;
+    
+    
+}    
+.links ul li a{
+    text-decoration: none;
+    color: white;
+}  
+
+
 .social_media ul{
     
     padding: 0;
@@ -250,7 +274,6 @@ article h2{
 }
 .contact ul li {
     justify-content: space-between;
-    
 }
 .contact ul li a {
     text-decoration: none;
@@ -272,8 +295,7 @@ article h2{
 .fa-instagram:before {
     content: "\f16d";
     margin: 7px;
-}    
-  
+}  
 
 
 
