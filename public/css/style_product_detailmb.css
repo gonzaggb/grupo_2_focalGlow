@@ -21,7 +21,8 @@ header img {
 }
 
 img {
-    max-width: 340px;
+    max-width: 100%;
+    height: auto;
 }
 
 main {
@@ -29,16 +30,78 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    
-
+    padding: 0 10px;
 }
 
 .product_name {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 10px;
 }
+
+.slider {
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+}
+
+
+/* PRODUCT APPLICATION SLIDER*/
+/*
+.slide_container {
+    width: 100%;
+    height: auto;
+    
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+
+.image_container {
+    width: 300%;
+    height: auto;
+    
+    position: relative;
+    transition: left 2s;
+    -webkit-transition: left 2s;
+}
+
+.slider_image {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+}
+
+.button_container {
+    top: -20px;
+    position: relative;
+}
+
+.slider_button {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#slider_image_1:target~ .image_container {
+    left: 0px;
+}
+#slider_image_2:target~ .image_container {
+    left: -100%;
+}
+#slider_image_3:target~ .image_container {
+    left: -100%;
+}*/
+
 
 .options {
     margin-top: 1.5rem;
@@ -55,9 +118,7 @@ main {
     
 }
 
-.technical_info {
-    margin: 0 10px;
-}
+
 .technical_data {
     background-color: white;
     border-radius: 40px;
@@ -67,7 +128,7 @@ main {
 }
 
 .technical_data h3 {
-    margin-left: 30px;
+    margin-left: 25px;
     padding-top: 10px;
 }
 
@@ -81,8 +142,6 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-right: 10px;
-    
 }
 
 input {
@@ -104,7 +163,6 @@ input {
 
 #price {
     text-align: right;
-    margin-right: 10px;
 }
 
 .documents {
@@ -112,7 +170,7 @@ input {
     flex-direction: column;
     justify-content: flex-start;
     text-align: left;
-    margin: 1em;
+    margin-top: 20px;
 }
 
 .documents span {
