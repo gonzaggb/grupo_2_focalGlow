@@ -160,7 +160,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 
 
-
+/*categorias*/
 
 
 .diferent_categories{
@@ -198,8 +198,18 @@ article h2{
     margin-bottom: 10%;
     width: 30vh;
     height: 30vh;
+    border: solid 3px grey;
+    
     
 }  
+
+/*hover zoom*/
+.zoom{
+    transition: transform .05s;
+}
+.zoom:hover{
+    transform: scale(1.1);
+}
 
 /*comienza el footer*/
 .footer_wrappler{
@@ -240,6 +250,7 @@ article h2{
 }
 .contact ul li {
     justify-content: space-between;
+    
 }
 .contact ul li a {
     text-decoration: none;
@@ -290,13 +301,6 @@ article h2{
 
     }
     
-
-    
-
-     
-
-    
-
     .elementos{
     display: flex;
     flex-direction: column;
@@ -349,6 +353,13 @@ article h2{
     }
    
 }    
+
+    
+
+     
+
+    
+
 
     
     
