@@ -354,7 +354,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     color: white;
 }
 .contact{
-    text-align: center;
+    text-align: justify;
 }
 .contact ul{
     
