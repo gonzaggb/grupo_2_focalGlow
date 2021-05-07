@@ -3,6 +3,7 @@
     font-family: 'Roboto', Arial, Helvetica, sans-serif;
     text-decoration: none;
     color: black;
+   
 }
 
 body {
@@ -40,19 +41,26 @@ main {
     padding: 0 10px;
 }
 
-.product_detail {
-    max-height: 900px;
-}
 /* SLIDER */
 
-.slider {
+.slider1 {
+    width: 100%;
+    
+    margin-top: 10px;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+.slider2 {
     width: 100%;
     margin-top: 10px;
     height: auto;
     display: flex;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory
+    scroll-snap-type: x mandatory;
 }
 
 .slide {
@@ -63,6 +71,8 @@ main {
 }
 
 .product_info {
+    display: flex;
+    flex-direction: column;
     margin-top: 20px;
     max-height: 900px;
 }
@@ -71,17 +81,28 @@ main {
 .options {
     display: flex;
     justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    background-color: black;
 }
 
-.options button {
-    background-color: black;
+.options li {
     color: white;
     font-size: 1rem;
     text-align: center;
     border: solid white 1px;
     padding: 5px 20px;
     width: 33.333%;
+    list-style:none;
+    transition: all 0.5s linear
 }
+.options li:hover {
+    background-color: #ffde59;
+    opacity: 0.9;
+    color: black;
+}
+
+
 
 
 .technical_data {
@@ -120,7 +141,7 @@ input {
     width: 40%;
     background-color: #ffde59;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
     border: none;
     padding: 10px;
@@ -145,7 +166,7 @@ input {
 }
 
 .similar_products {
-   
+    align-content: flex-end;
 }
 
 /*media query Tablet*/
@@ -162,16 +183,15 @@ input {
     }
     .product_detail {
         width: 50%;
-        margin-right: 5px
+        margin-right: 5px;
+        position: sticky;
     }
     .product_info {
         width: 50%;
         margin-left: 5px;
         margin-top: 0px;
     }
-    .options button {
-        font-size:0.75rem;
-    }
+
     .similar_products {
         width: 66.66%;
         margin: 0 auto;
@@ -181,14 +201,16 @@ input {
 /*Media Query Laptop*/
 @media (min-width:769px) {
     .product_name, main {
-        padding: 0 100px;
+        padding: 0 80px;
     }
+
     input {
-        width: 12.5%;
+        width: 11.11%;
     }
     #add {
-        width: 40%;
-    }    
+        width: 33.33%;
+    }
+
 
 }
 

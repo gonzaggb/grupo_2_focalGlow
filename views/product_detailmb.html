@@ -29,9 +29,12 @@
 
   <main> 
     <div class ="product_detail">
-      <img src = "img/tolomeo_tavolo_image4753388-960x960.jpg" alt = "luminaria">
+      <div class = "main_img">
+        <img src = "img/tolomeo_tavolo_image4753388-960x960.jpg" alt = "luminaria">
+      </div>
+      
 
-      <div class = "slider">
+      <div class = "slider1">
         <div class ="slide" id="slide_1">
           <img src ="img/tolomeo_tavolo_gallery4872596-1920x1080.jpg">
         </div>
@@ -46,11 +49,16 @@
 
     <div class ="product_info">
       <section class = "technical_info">
-        <div class="options">  
-          <button>W</button>
-          <button>CCT</button>
-          <button>Dim</button> 
-        </div>
+        <ul class="options">  
+          <li>W</li>
+            <ul class ="wattage_options">
+              <li>10W</li>
+              <li>12W</li>
+              <li>15W</li>
+            </ul>
+          <li>CCT</li>
+          <li>Dim</li> 
+        </ul>
     
         <article class = "technical_data">
           <h3>Características</h3>
@@ -81,7 +89,7 @@
   
       <section class = "similar_products">
         <h3>Productos Similares</h3>
-        <div class = "slider">
+        <div class = "slider2">
           <div class ="slide" id="slide_1">
               <img src ="img/tolomeo_tavolo_1851150-480x480.jpg">
           </div>
