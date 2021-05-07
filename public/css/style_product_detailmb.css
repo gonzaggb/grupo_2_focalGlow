@@ -37,12 +37,17 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 }
 
+.product_detail {
+    max-height: 900px;
+}
 /* SLIDER */
 
 .slider {
     width: 100%;
+    margin-top: 10px;
     height: auto;
     display: flex;
     overflow-x: auto;
@@ -57,11 +62,13 @@ main {
     scroll-snap-align: start;
 }
 
-
+.product_info {
+    margin-top: 20px;
+    max-height: 900px;
+}
 
 
 .options {
-    margin-top: 1.5rem;
     display: flex;
     justify-content: space-evenly;
 }
@@ -69,10 +76,11 @@ main {
 .options button {
     background-color: black;
     color: white;
-    font-size: 1.25rem;
-    border: none;
+    font-size: 1rem;
+    text-align: center;
+    border: solid white 1px;
     padding: 5px 20px;
-    
+    width: 33.333%;
 }
 
 
@@ -136,15 +144,60 @@ input {
     margin-bottom: 0.5em;
 }
 
-@media (min-width:460px) {
+.similar_products {
+   
+}
+
+/*media query Tablet*/
+
+@media (min-width:480px) {
     main {
         display: flex;
         flex-direction: row;
+        padding: 0 20px;
+    }
+    .product_name {
+        padding: 0 20px;
+        
     }
     .product_detail {
         width: 50%;
+        margin-right: 5px
     }
-    .prodcut_info {
+    .product_info {
         width: 50%;
+        margin-left: 5px;
+        margin-top: 0px;
     }
+    .options button {
+        font-size:0.75rem;
+    }
+    .similar_products {
+        width: 66.66%;
+        margin: 0 auto;
+    }
+}
+
+/*Media Query Laptop*/
+@media (min-width:769px) {
+    .product_name, main {
+        padding: 0 100px;
+    }
+    input {
+        width: 12.5%;
+    }
+    #add {
+        width: 40%;
+    }    
+
+}
+
+/*Media Query Desktop*/
+@media (min-width: 1279px) {
+
+    .product_name, main {
+        padding: 0 150px;
+    }
+
+
 }
