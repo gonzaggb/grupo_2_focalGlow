@@ -14,7 +14,7 @@ body{
     font-size: 1rem;
     line-height:1.6em;
     margin: 0;
-    background-color: #E5E5E5;
+    background-image: url(/img/fondo.jpg);
 }
 /*Define caracteristicas del h1
 tamaño de fuente e interlineado, el tipo de fuente lo hereda del body*/
@@ -160,15 +160,13 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 /*Aca empieza la seccion de Categoria*/
 
 .main{
-    margin-top :5%;
-    margin-bottom: 10%;
+    margin-top: 5%;
+    margin-bottom: 6%;
     margin-left: 10%;
-    
     padding: 0;
     border: 0;
     width: 80%;
     z-index: 2;
-    
     
    
 
@@ -194,13 +192,6 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     gap: 0.5em; /*agregado separacion entre imagenes GB*/
 
 }
-.category-box{
-    margin-top: 5%;
-    text-align: center;
-    align-content: space-around;
-    
-    
-}
 
 .category-box a{
     width: 50%;
@@ -220,7 +211,9 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     
     gap: 10px;
     margin: 0px auto; /*centro la caja de categorias GB*/
-    
+    margin-top: 5%;
+    text-align: center;
+    align-content: space-around;
 }
 /*hover zoom*/
 .zoom{
@@ -248,7 +241,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     justify-content: left;
     align-items: center;
     font-size: 3em;
-    
+    color: white;
 }
 
 #mas_vendidos h2{
@@ -491,10 +484,12 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
         display: none;
     }
    
-    
+}    
+
+
+        
 
     
     
-}    
-     
+ 
 
