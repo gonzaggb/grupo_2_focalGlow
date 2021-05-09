@@ -169,7 +169,7 @@ footer {
 
 /*media query Tablet*/
 
-@media (min-width:570px) {
+@media (min-width:576px) {
     main {
         display: flex;
         flex-direction: row;
@@ -225,16 +225,16 @@ footer {
 }
 
 /*Media Query Laptop*/
-@media (min-width:769px) {
+@media (min-width:768px) {
     .product_name, main, footer {
-        width: 70%;
+        width: 80%;
     }
 
     input {
-        width: 11.11%;
+        width: 15%;
     }
     #add {
-        width: 33.33%;
+        width: 50%;
     }
 
 
@@ -243,7 +243,7 @@ footer {
 }
 
 /*Media Query Desktop*/
-@media (min-width: 1279px) {
+@media (min-width: 1200px) {
 
     .product_name, main, footer {
         width: 70%;
