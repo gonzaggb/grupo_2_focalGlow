@@ -91,7 +91,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     display:inline-block;
 }
 
-.desplegagle li {
+.desplegable li {
     float: left;
     
 }
@@ -211,7 +211,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 #categorias div a img{
     width: 30vh;
-    
+    border-radius: 6px;
     
     
 }
@@ -243,10 +243,12 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     
     height: 10%;
     border-radius: 3px;
-    background-color: rgba(182, 186, 190, 0.5);
+    margin-left: 7%;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    font-size: 3em;
+    
 }
 
 #mas_vendidos h2{
@@ -315,13 +317,19 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    padding-top: 1%;
     
     
+}
+
+.fa-facebook-square:before {
+    content: "\f082";
+    margin-left: 0px;
 }
 .footer_wrappler  article h4{
     color: white;
     margin: 0;
-    padding: 0;
+    padding: 4px;
 }
 .footer_wrappler article{
     margin-left: 10%;
@@ -468,7 +476,8 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     #burguer{
     display: inline-block;
     color: white;
-    width: 50px;
+    width: 80px;
+    font-size: 200%
     }
     .footer_wrappler{
     

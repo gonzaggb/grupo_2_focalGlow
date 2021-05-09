@@ -5,7 +5,7 @@
     border-top: solid 2px black;
     border-bottom:solid 2px black ;
     flex-grow: inherit;
-    background-color: rgba(182, 186, 190, 0.3);
+    background:linear-gradient(to right,grey,white);
     
 }
 
