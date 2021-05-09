@@ -31,19 +31,21 @@ main {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 0 10px;
+    width: 90%
 }
 
 .product_name {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10px;
+    margin: 0 auto;
+    width: 90%;
 }
 
 /* SLIDER */
 
-.slider1 {
+.slider1,
+.slider2 {
     width: 100%;
     
     margin-top: 10px;
@@ -53,17 +55,10 @@ main {
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
 }
-.slider2 {
-    width: 100%;
-    margin-top: 10px;
-    height: auto;
-    display: flex;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-}
 
-.slide {
+
+.slide,
+.slide2 {
     width: 100%;
     flex-shrink: 0;
     height: 100%;
@@ -157,12 +152,15 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    gap:5px;
     text-align: left;
     margin-top: 20px;
 }
 
-.documents span {
-    margin-bottom: 0.5em;
+footer {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
 }
 
 .similar_products {
@@ -171,14 +169,14 @@ input {
 
 /*media query Tablet*/
 
-@media (min-width:480px) {
+@media (min-width:570px) {
     main {
         display: flex;
         flex-direction: row;
-        padding: 0 20px;
+        width: 85%;
     }
     .product_name {
-        padding: 0 20px;
+        width: 85%;
         
     }
     .product_detail {
@@ -190,18 +188,46 @@ input {
         width: 50%;
         margin-left: 5px;
         margin-top: 0px;
+        position: relative;
+    }
+
+    .documents {
+        position: absolute;
+        bottom: 0;
     }
 
     .similar_products {
-        width: 66.66%;
+        width: 100%;
         margin: 0 auto;
     }
+
+    .slider2 {
+        width: 100%;
+        margin-top: 10px;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        -webkit-overflow-scrolling: auto;
+        scroll-snap-type: none;
+    }
+
+    .slide2 {
+        width: 30%;
+        flex-shrink: 0;
+        height: 100%;
+        scroll-snap-align: none;
+    }
+    footer {
+            margin: 30px auto;
+        }
 }
 
 /*Media Query Laptop*/
 @media (min-width:769px) {
-    .product_name, main {
-        padding: 0 80px;
+    .product_name, main, footer {
+        width: 70%;
     }
 
     input {
@@ -212,14 +238,21 @@ input {
     }
 
 
+
+
 }
 
 /*Media Query Desktop*/
 @media (min-width: 1279px) {
 
-    .product_name, main {
-        padding: 0 150px;
+    .product_name, main, footer {
+        width: 70%;
+        max-width: 1500px;
+        max-height: 1500px;
     }
-
+    header {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
 
 }
