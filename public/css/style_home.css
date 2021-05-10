@@ -15,6 +15,7 @@ body{
     line-height:1.6em;
     margin: 0;
     background-image: url(/img/fondo.jpg);
+    
 }
 /*Define caracteristicas del h1
 tamaño de fuente e interlineado, el tipo de fuente lo hereda del body*/
@@ -193,6 +194,10 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 }
 
+.category-box{
+    display: flex;
+    
+}
 .category-box a{
     width: 50%;
 }
@@ -388,7 +393,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 
 /*media queri de home*/
-@media (max-width: 952px){
+@media (max-width: 798px){
     .header{
         z-index: 3;
     }
@@ -421,7 +426,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     margin-bottom: -30%;
     height: 15%;
     border-radius: 3px;
-    background-color: rgba(182, 186, 190, 0.5);
+    
     
     }
 
@@ -476,7 +481,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     width: 100%;
     padding-top: 3%;
     }
@@ -485,7 +490,26 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     }
    
 }    
-
+@media (max-width: 576px){
+    .slider img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .banner {
+    display: flex;
+    flex-direction: column;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    text-align: center;
+    display: none;
+    }
+    #titulo_mas_vendidos {
+    margin-bottom: -30%;
+    height: 15%;
+    border-radius: 3px;
+    }
+}
 
         
 

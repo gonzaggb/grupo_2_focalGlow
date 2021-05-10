@@ -1,6 +1,4 @@
 *{
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
 }
@@ -16,7 +14,9 @@ body{
     font-size: 1rem;
     line-height:1.6em;
     margin: 0;
-    background-color: #E5E5E5;
+    /* background-image: url(/img/fondo.jpg); */
+    background-color: grey;
+    
 }
 /*Define caracteristicas del h1
 tamaño de fuente e interlineado, el tipo de fuente lo hereda del body*/
@@ -93,7 +93,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     display:inline-block;
 }
 
-.desplegagle li {
+.desplegable li {
     float: left;
     
 }
@@ -108,64 +108,8 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     flex-direction: column;
     
 }
-
-
-/*aca empieza el slider*/
-
-
-.slider{
-    height: 45%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    
-    
-}
-
-.slider ul{
-    display: flex;
-    margin: 0;
-    padding: 0;
-    width: 400%;
-    animation: cambio 10s infinite  alternate;
-
-}
-.slider li {
-    list-style: none;
-    width: 100%;
-    
-   
-}
-
-.slider img{
-    width: 100%;
-    height:79vh;
-    object-fit: cover;
-    
-    
-    
-}
-
-@keyframes cambio{
-    0%{margin-left: 0;}
-    30%{margin-left: 0;}
-
-    35%{margin-left: -150%;}
-    65%{margin-left: -150%;}
-
-    70%{margin-left: -300%;}
-    100%{margin-left: -300%;}
-}
-
-
-
-
-
-/*categorias*/
-
-
-.diferent_categories{
+/* /*aca empiezan losproductos*/
+/* .diferent_categories{
     width: 100%;
 }
 
@@ -177,59 +121,79 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     
     
 }
-section article{
-    border-bottom: solid 3px black;
-    /* box-shadow: 0 8px 8px 0 black; */
-}
+
+} */ 
+
 article h2{
-    
+    color: white;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin-bottom: 0;
     text-align: center;
-    font-size: 2em;
-    background:linear-gradient(to right,grey,white);
-    padding: 1%;
+}
+.item_list d {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0;
+    padding: 0;
+    border: 0;
+    border: solid 2px black
+}
+
+.item_list  p {
     margin: 0;
-    
-    
+    border: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1em;
 }
 
-.diferent_categories ul li  img{
+/* .diferent_categories ul li  img{
     box-shadow: 20px 20px 10px grey;
+} */
+
+.nombre_precio{
+    margin: 0;
+    padding: 0;
 }
 
-.item_list{
+.item_list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 5%;
-    margin-right: 15%;
-    margin-left: 15%;
+    margin-top: 1%;
+    margin-right: 10%;
+    margin-left: 10%;
     margin-bottom: 10%;
     padding: 0;
+    justify-content: center;
+    gap: 2px;
+}
+.producto {
+    width: 21%;
+    background-color: white;
+    border: 2px solid black;
+    margin: 2px;
+}
     
     
-    
-}   
+
 .item_list img{
-    margin-top: 5%;
-    margin-bottom: 10%;
-    width: 30vh;
-    height: 30vh;
-    border: solid 2px black
+    
+    width: 100%;
+    border-bottom: solid 2px black
+    
     
     
     
 }  
 
 /*hover zoom*/
-.zoom{
+/* .zoom{
     transition: transform .05s;
 }
 .zoom:hover{
     transform: scale(1.1);
 }
-
+ */
 /*comienza el footer*/
 .footer_{
     display: flex;
@@ -310,97 +274,82 @@ article h2{
 .fa-instagram:before {
     content: "\f16d";
     margin: 7px;
+}
+.bottom p{
+    text-align: center;
+    color: white;
+    margin: 0;
 }  
 
-
-
-/*media queri de home*/
-@media (max-width: 952px){
-    .header{
-        z-index: 3;
-    }
-    .category-box{
-        margin-top: 50%;
-    }
-    #categorias div img{
-    width: 30vh;
-    height: 30vh;
-    padding-left: 1vh;
-    ;
-    border: 0;
-    margin: 0;
-    align-self: center;
-    }
-    .logo{
-    width: 15vh;
-    padding: 0px;
-    
-
-    }
-    
-    .elementos{
+@media (max-width: 576px){
+   .item_list {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    margin-top: -15%;
-    justify-content: space-between;
-    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
-    }
-
-
-    #mas_vendidos img{
-    width: 100%;
-    height: 100%;
-    z-index: inherit;
-
-    }
-
-
-    #first_box{
-    margin-top: 60%;
-    }
-    .box{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    }
-    
-    .links ul li{
-    list-style: none;
-    
-    } 
+    flex-wrap: wrap;
+    margin-top: 5%;
+     margin-right: 0; 
+    margin-left: 0; 
+    margin-bottom: 10%;
+    padding: 0;
+    justify-content: center;
+    gap: 2px;
+}
    
+   
+   
+    .producto {
+    width: 100%;
+    /* background-color: transparent;
+    border: 0; */
+    }
+    /* .item_list p{
+        display: none;
+    } */
+    .item_list img{
+    
+    width: 100%;
+    
+    }  
+    .links{
+        display: none;
+    } 
     .inner_nav{
         display: none;
     }   
     #burguer{
     display: inline-block;
     color: white;
-    width: 50px;
-    }
+    width: 80px;
+    font-size: 200%;
+    
+
+    }  
     .footer_wrappler{
-    
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+        flex-direction: column;
+        align-content: center;
+        
+    }
+}
+
+@media (max-width: 798px){
+        .producto {
     width: 100%;
-    padding-top: 3%;
+    margin: 0;
     }
-    .links{
-        display: none;
+    .producto p{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1em;
     }
-   
 }    
-
-    
-
-     
-
-    
-
-
+        
     
     
+
+
+
    
-   
-   
-
+    
+    
+  
+    
