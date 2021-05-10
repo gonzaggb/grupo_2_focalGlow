@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+   
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+header img {
+    width: 100px;
+    /*height: auto;*/
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%
+}
+
+.product_name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* SLIDER */
+
+.slider1,
+.slider2 {
+    width: 100%;
+    
+    margin-top: 10px;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+
+.slide,
+.slide2 {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.product_info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    max-height: 900px;
+}
+
+
+.options {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+
+.options li {
+    color: white;
+    font-size: 1rem;
+    text-align: center;
+    border: solid white 1px;
+    padding: 5px 20px;
+    width: 33.333%;
+    list-style:none;
+    transition: all 0.5s linear
+}
+.options li:hover {
+    background-color: #ffde59;
+    opacity: 0.9;
+    color: black;
+}
+
+
+
+
+.technical_data {
+    background-color: white;
+    border-radius: 40px;
+    text-align: left;
+    padding-bottom: 10px;
+    
+}
+
+.technical_data h3 {
+    margin-left: 25px;
+    padding-top: 10px;
+}
+
+.price {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+}
+
+.qtyadd {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+input {
+    width: 15%;
+    border:none;
+    text-align: center;
+    font-weight: bold;
+}
+
+#add {
+    width: 40%;
+    background-color: #ffde59;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    font-family: 'Roboto';
+}
+
+
+#price {
+    text-align: right;
+}
+
+.documents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:5px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+    width: 75%;
+}
+
+.similar_products {
+    align-content: flex-end;
+}
+
+/*media query Tablet*/
+
+@media (min-width:576px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+    }
+    .product_name {
+        width: 85%;
+        justify-content: flex-end;
+        gap: 20px;
+        
+    }
+    .product_detail {
+        width: 50%;
+        margin-right: 5px;
+        position: sticky;
+    }
+    .product_info {
+        width: 50%;
+        margin-left: 5px;
+        margin-top: 0px;
+        position: relative;
+    }
+
+    .documents {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .similar_products {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slider2 {
+        width: 100%;
+        margin-top: 10px;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        -webkit-overflow-scrolling: auto;
+        scroll-snap-type: none;
+    }
+
+    .slide2 {
+        width: 30%;
+        flex-shrink: 0;
+        height: 100%;
+        scroll-snap-align: none;
+    }
+    footer {
+            margin: 30px auto;
+        }
+}
+
+/*Media Query Laptop*/
+@media (min-width:768px) {
+    .product_name, main, footer {
+        width: 80%;
+    }
+
+    .product_name h2 {
+       font-size: 28px; 
+    }
+
+    input {
+        width: 15%;
+    }
+    #add {
+        width: 50%;
+    }
+
+
+
+
+}
+
+/*Media Query Desktop*/
+@media (min-width: 1200px) {
+
+    .product_name, main, footer {
+        width: 70%;
+        max-width: 1500px;
+        max-height: 1500px;
+    }
+    header {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+
+}
