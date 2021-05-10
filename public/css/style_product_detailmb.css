@@ -177,6 +177,8 @@ footer {
     }
     .product_name {
         width: 85%;
+        justify-content: flex-end;
+        gap: 20px;
         
     }
     .product_detail {
@@ -228,6 +230,10 @@ footer {
 @media (min-width:768px) {
     .product_name, main, footer {
         width: 80%;
+    }
+
+    .product_name h2 {
+       font-size: 28px; 
     }
 
     input {
