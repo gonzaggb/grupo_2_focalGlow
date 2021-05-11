@@ -96,13 +96,13 @@ header a{
     float: left;
     
 }
-.inner_nav li ul{
+.inner-nav li ul{
     display:none ;
     position: absolute;
     min-width: 140px;
     background-color: black;
 }
-.inner_nav li:hover > ul {
+.inner-nav li:hover > ul {
     display: flex;
     flex-direction: column;
     
@@ -229,7 +229,7 @@ header a{
 }
     
 /*Mas vendidos*/
-#mas_vendidos{
+#mas-vendidos{
     
     margin-left: 15%;
     margin-right: 15%;
@@ -237,7 +237,7 @@ header a{
     
 }
 
-#titulo_mas_vendidos{
+#titulo-mas-vendidos{
     
     height: 10%;
     border-radius: 3px;
@@ -249,7 +249,7 @@ header a{
     color: white;
 }
 
-#mas_vendidos h2{
+#mas-vendidos h2{
         text-align: center;
         
       
@@ -265,7 +265,7 @@ header a{
  }
 
 
-#mas_vendidos img{
+#mas-vendidos img{
     width: 100%;
     height: 100%;
 
@@ -306,11 +306,11 @@ header a{
 }
 /*footer*/
 
-.footer_{
+.footer-{
     display: flex;
     background-color: black;
 }
-.footer_wrappler{
+.footer-wrappler{
     
     display: flex;
     flex-wrap: wrap;
@@ -325,12 +325,12 @@ header a{
     content: "\f082";
     margin-left: 0px;
 }
-.footer_wrappler  article h4{
+.footer-wrappler  article h4{
     color: white;
     margin: 0;
     
 }
-.footer_wrappler article{
+.footer-wrappler article{
     margin-left: 10%;
     margin-right: 10%;
     
@@ -350,13 +350,13 @@ header a{
 }  
 
 
-.social_media ul{
+.social-media ul{
     
     padding: 0;
     justify-content: space-between;
     
 }
-.social_media ul li a {
+.social-media ul li a {
     text-decoration: none;
     color: white;
 }
@@ -416,14 +416,14 @@ header a{
     
 
     }
-    #mas_vendidos{
+    #mas-vendidos{
     margin-top: 15%;
     margin-left: 15%;
     margin-right: 15%;
     z-index: 2;
     }
 
-    #titulo_mas_vendidos{
+    #titulo-mas-vendidos{
     margin-bottom: -30%;
     height: 15%;
     border-radius: 3px;
@@ -431,7 +431,7 @@ header a{
     
     }
 
-    #mas_vendidos h2{
+    #mas-vendidos h2{
         text-align: center;
         margin: 10%;
      } 
@@ -447,7 +447,7 @@ header a{
     }
 
 
-    #mas_vendidos img{
+    #mas-vendidos img{
     width: 100%;
     height: 100%;
     z-index: inherit;
@@ -455,7 +455,7 @@ header a{
     }
 
 
-    #first_box{
+    #first-box{
     margin-top: 60%;
     }
     .box{
@@ -469,7 +469,7 @@ header a{
     
     } 
    
-    .inner_nav{
+    .inner-nav{
         display: none;
     }   
     #burguer{
@@ -478,7 +478,7 @@ header a{
     width: 80px;
     font-size: 200%
     }
-    .footer_wrappler{
+    .footer-wrappler{
     
     display: flex;
     flex-wrap: wrap;
@@ -505,7 +505,7 @@ header a{
     text-align: center;
     display: none;
     }
-    #titulo_mas_vendidos {
+    #titulo-mas-vendidos {
     margin-bottom: -30%;
     height: 15%;
     border-radius: 3px;
