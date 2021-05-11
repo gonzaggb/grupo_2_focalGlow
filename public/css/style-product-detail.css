@@ -81,20 +81,27 @@ main {
     background-color: black;
 }
 
-.options li {
+.options-control {
     color: white;
+    background-color: black;
     font-size: 1rem;
     text-align: center;
+    text-align-last:center;
     border: solid white 1px;
-    padding: 5px 20px;
+    padding: 5px 10px;
     width: 33.333%;
-    list-style:none;
-    transition: all 0.5s linear
+    transition: all 0.5s linear;
+    
 }
-.options li:hover {
+.options-control:hover {
     background-color: #ffde59;
     opacity: 0.9;
     color: black;
+}
+
+#bt-icon,
+#off-icon {
+    font-family: 'FontAwesome', 'Roboto';
 }
 
 
@@ -243,8 +250,9 @@ footer {
         width: 50%;
     }
 
-
-
+    .documents {
+        font-size: 16px;
+    }
 
 }
 

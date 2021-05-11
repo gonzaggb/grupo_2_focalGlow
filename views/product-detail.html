@@ -49,17 +49,25 @@
 
     <div class ="product_info">
       <section class = "technical_info">
-        <ul class="options">  
-          <li>W</li>
-          <!--   <ul class ="wattage_options">
-              <li>10W</li>
-              <li>12W</li>
-              <li>15W</li>
-            </ul>
-          -->
-          <li>CCT</li>
-          <li>Dim</li> 
-        </ul>
+        <div class="options">  
+          <select name = "power" class ="options-control">
+            <option value="10W">10W</option>
+            <option value="20W">20W</option>
+            <option value="30W">30W</option>
+          </select>
+
+          <select name = "cct" class ="options-control">
+            <option value="3000K">3000K</option>
+            <option value="4000K">4000K</option>
+          </select>
+          <select name = "dim" class ="options-control">
+            <option value="switch" id="off-icon">&#xf011; Switch</option>
+            <option value="dim">Dimeable</option>
+            <option value="dali">DALI</option>
+            <option value="bt" id="bt-icon">&#xf293; Bluetooth</option>
+          </select>
+          
+        </div>
     
         <article class = "technical_data">
           <h3>Características</h3>
