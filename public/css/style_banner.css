@@ -33,3 +33,13 @@ div  p{
     
     
 }
+@media (max-width: 576px){
+    .banner-box{
+        width: 30%;
+    }
+    .banner{
+    flex-direction: row;
+    line-height: 12px;
+    font-size: 9px;
+    }
+}

@@ -496,13 +496,13 @@ header a{
              height: 30vh;
             object-fit: cover;
     }
-    .banner {
-    /* display: flex;
-    flex-direction: column;
-    border-top: solid 2px black;
-    border-bottom: solid 2px black;
-    text-align: center; */
-    display: none;
+    .banner-box{
+        width: 30%;
+    }
+    .banner{
+    flex-direction: row;
+    line-height: 12px;
+    font-size: 9px;
     }
     #titulo-mas-vendidos {
     margin-bottom: -30%;
