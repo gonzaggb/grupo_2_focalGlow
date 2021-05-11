@@ -52,7 +52,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width:100%;
+    width:60%;
     font-size: 0.9rem;
 }
 .detail .item{
@@ -73,12 +73,11 @@ margin-top: 5px;
 }
 .item-left{
     display:flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 .item-right{
     display: flex;
-    justify-content: space-around;
-    gap: 20px;
+    justify-content: flex-start;
 
 
 }
@@ -88,7 +87,7 @@ margin-top: 5px;
 .left-side{
     text-align: left;
 }
-.right-side input{
+.left-side input{
     width: 30px;
     font-size: 11px;
 }
