@@ -119,6 +119,9 @@ main {
     margin-left: 25px;
     padding-top: 10px;
 }
+.technical_data li em {
+    color:darkgrey
+}
 
 .price {
     display: flex;
@@ -133,14 +136,14 @@ main {
 }
 
 input {
-    width: 15%;
+    width: 16.66%;
     border:none;
     text-align: center;
     font-weight: bold;
 }
 
 #add {
-    width: 40%;
+    width: 50%;
     background-color: #ffde59;
     text-align: center;
     font-size: 1.25rem;
@@ -235,7 +238,7 @@ footer {
 
 /*Media Query Laptop*/
 @media (min-width:768px) {
-    .product_name, main, footer {
+    .product_name, main {
         width: 80%;
     }
 
@@ -246,10 +249,6 @@ footer {
     input {
         width: 15%;
     }
-    #add {
-        width: 50%;
-    }
-
     .documents {
         font-size: 16px;
     }
@@ -259,7 +258,7 @@ footer {
 /*Media Query Desktop*/
 @media (min-width: 1200px) {
 
-    .product_name, main, footer {
+    .product_name, main {
         width: 70%;
         max-width: 1500px;
         max-height: 1500px;
