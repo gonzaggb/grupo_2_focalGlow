@@ -91,6 +91,7 @@ main {
     padding: 5px 10px;
     width: 33.333%;
     transition: all 0.5s linear;
+    font-family: 'FontAwesome', 'Roboto';
     
 }
 .options-control:hover {
@@ -103,9 +104,6 @@ main {
 #off-icon {
     font-family: 'FontAwesome', 'Roboto';
 }
-
-
-
 
 .technical_data {
     background-color: white;
@@ -170,7 +168,7 @@ input {
 footer {
     margin: 0 auto;
     text-align: center;
-    width: 75%;
+    width: 66.66%;
 }
 
 .similar_products {
@@ -231,9 +229,7 @@ footer {
         height: 100%;
         scroll-snap-align: none;
     }
-    footer {
-            margin: 30px auto;
-        }
+    
 }
 
 /*Media Query Laptop*/
