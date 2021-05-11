@@ -14,7 +14,7 @@ body{
     font-size: 1rem;
     line-height:1.6em;
     margin: 0;
-    background-image: url(/img/fondo.jpg);
+    background-image: url(/img/fondo2.jpg);
     
 }
 /*Define caracteristicas del h1
@@ -304,6 +304,7 @@ header a{
     font-size: 1em;
     font-weight: bold;
 }
+/*footer*/
 
 .footer_{
     display: flex;
@@ -327,7 +328,7 @@ header a{
 .footer_wrappler  article h4{
     color: white;
     margin: 0;
-    padding: 4px;
+    
 }
 .footer_wrappler article{
     margin-left: 10%;
@@ -376,30 +377,25 @@ header a{
 }
 .fa-envelope:before {
     content: "\f0e0";
-    margin: 7px;}
+    margin-right: 7px;}
 .fa-whatsapp:before {
     content: "\f232";
-    margin: 7px;
+    margin-right:7px;
 }
 .fa-facebook-square:before {
     content: "\f082";
-    margin: 7px;
+    margin-right:7px;
 }
 
 .fa-instagram:before {
     content: "\f16d";
-    margin: 7px;
+    margin-right: 7px;
 }    
 
 
 /*media queri de home*/
-<<<<<<< HEAD
-@media (max-width: 798px){
-    .header{
-=======
 @media (max-width: 952px){
     header{
->>>>>>> product_detail
         z-index: 3;
     }
     .category-box{

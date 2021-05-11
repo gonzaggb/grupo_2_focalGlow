@@ -14,8 +14,8 @@ body{
     font-size: 1rem;
     line-height:1.6em;
     margin: 0;
-    /* background-image: url(/img/fondo.jpg); */
-    background-color: grey;
+    background-image: url(/img/fondo2.jpg);
+   /*  background-color: #E5E5E5; */
     
 }
 /*Define caracteristicas del h1
@@ -125,25 +125,25 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 } */ 
 
 article h2{
-    color: white;
+    color: black;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin-bottom: 0;
     text-align: center;
 }
-.item_list d {
+/* .item_list  {
     background-color: rgba(255, 255, 255, 0.5);
     border: 0;
     padding: 0;
     border: 0;
     border: solid 2px black
-}
+} */
 
 .item_list  p {
     margin: 0;
     border: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 /* .diferent_categories ul li  img{
@@ -151,8 +151,10 @@ article h2{
 } */
 
 .nombre_precio{
-    margin: 0;
+    
     padding: 0;
+    margin-left: 7px;
+    margin-bottom: 8px;
 }
 
 .item_list {
@@ -165,13 +167,15 @@ article h2{
     margin-bottom: 10%;
     padding: 0;
     justify-content: center;
-    gap: 2px;
+    gap: 16px;
 }
 .producto {
     width: 21%;
-    background-color: white;
+    background-color: rgba(255,255, 255, 0.9);
     border: 2px solid black;
     margin: 2px;
+    border-radius: 4px ;
+    box-shadow: 8px 8px 13px grey;
 }
     
     
@@ -187,13 +191,13 @@ article h2{
 }  
 
 /*hover zoom*/
-/* .zoom{
+/* .producto{
     transition: transform .05s;
 }
-.zoom:hover{
+.producto:hover{
     transform: scale(1.1);
-}
- */
+} */
+
 /*comienza el footer*/
 .footer_{
     display: flex;
@@ -205,13 +209,19 @@ article h2{
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    padding-top: 1%;
     
     
+}
+
+.fa-facebook-square:before {
+    content: "\f082";
+    margin-left: 0px;
 }
 .footer_wrappler  article h4{
     color: white;
     margin: 0;
-    padding: 0;
+    
 }
 .footer_wrappler article{
     margin-left: 10%;
@@ -245,7 +255,6 @@ article h2{
 }
 .contact{
     text-align: justify;
-
 }
 .contact ul{
     
@@ -261,20 +270,20 @@ article h2{
 }
 .fa-envelope:before {
     content: "\f0e0";
-    margin: 7px;}
+    margin-right: 7px;}
 .fa-whatsapp:before {
     content: "\f232";
-    margin: 7px;
+    margin-right:7px;
 }
 .fa-facebook-square:before {
     content: "\f082";
-    margin: 7px;
+    margin-right:7px;
 }
 
 .fa-instagram:before {
     content: "\f16d";
-    margin: 7px;
-}
+    margin-right: 7px;
+}    
 .bottom p{
     text-align: center;
     color: white;
@@ -294,7 +303,13 @@ article h2{
     padding: 0;
     justify-content: center;
     gap: 2px;
-}
+    }
+    /* .producto{
+    transition: transform .05s;
+    }
+    .producto:hover{
+    transform: scale(1.1);
+    } */
    
    
    
@@ -330,6 +345,7 @@ article h2{
         align-content: center;
         
     }
+
 }
 
 @media (max-width: 798px){
@@ -341,6 +357,9 @@ article h2{
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 1em;
     }
+    
+   
+
 }    
         
     
