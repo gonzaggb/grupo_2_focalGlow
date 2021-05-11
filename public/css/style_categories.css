@@ -97,13 +97,13 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     float: left;
     
 }
-.inner_nav li ul{
+.inner-nav li ul{
     display:none ;
     position: absolute;
     min-width: 140px;
     background-color: black;
 }
-.inner_nav li:hover > ul {
+.inner-nav li:hover > ul {
     display: flex;
     flex-direction: column;
     
@@ -165,11 +165,11 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 /*categorias*/
 
 
-.diferent_categories{
+.diferent-categories{
     width: 100%;
 }
 
-.diferent_categories article{
+.diferent-categories article{
     text-align: center;
     width: 100%;
 
@@ -193,11 +193,11 @@ article h2{
     
 }
 
-.diferent_categories ul li  img{
+.diferent-categories ul li  img{
     box-shadow: 20px 20px 10px grey;
 }
 
-.item_list{
+.item-list{
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -211,7 +211,7 @@ article h2{
     
     
 }   
-.item_list img{
+.item-list img{
     margin-top: 5%;
     margin-bottom: 10%;
     width: 30vh;
@@ -231,11 +231,11 @@ article h2{
 }
 
 /*comienza el footer*/
-.footer_{
+.footer-{
     display: flex;
     background-color: black;
 }
-.footer_wrappler{
+.footer-wrappler{
     
     display: flex;
     flex-wrap: wrap;
@@ -244,12 +244,12 @@ article h2{
     
     
 }
-.footer_wrappler  article h4{
+.footer-wrappler  article h4{
     color: white;
     margin: 0;
     padding: 0;
 }
-.footer_wrappler article{
+.footer-wrappler article{
     margin-left: 10%;
     margin-right: 10%;
     
@@ -269,13 +269,13 @@ article h2{
 }  
 
 
-.social_media ul{
+.social-media ul{
     
     padding: 0;
     justify-content: space-between;
     
 }
-.social_media ul li a {
+.social-media ul li a {
     text-decoration: none;
     color: white;
 }
@@ -369,7 +369,7 @@ article h2{
     
     } 
    
-    .inner_nav{
+    .inner-nav{
         display: none;
     }   
     #burguer{
@@ -377,7 +377,7 @@ article h2{
     color: white;
     width: 50px;
     }
-    .footer_wrappler{
+    .footer-wrappler{
     
     display: flex;
     flex-wrap: wrap;
