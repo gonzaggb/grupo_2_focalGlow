@@ -88,7 +88,7 @@ margin-top: 5px;
     text-align: left;
 }
 .left-side input{
-    width: 30px;
+    width: 20px;
     font-size: 11px;
 }
 #item-eliminar{
@@ -204,9 +204,10 @@ text-align: left;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        width: 70%;
-        
-
+        width: 70%;  
+    }
+    .left-side{
+        width: 100%;
     }
     .item{
         width: 50%;
@@ -224,10 +225,10 @@ text-align: left;
         flex-direction: row;
         }
     .item-right div{
-        width: 40%;
+        width: 100%;
     }
     .item-right input{
-        width: 40%;
+        width: 20px;
     }
     .item-right .right-side{
         text-align: right;
