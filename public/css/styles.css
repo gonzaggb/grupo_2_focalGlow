@@ -88,9 +88,6 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     float: left;
     
 }
-.inner_nav{
-    display:none;
-}
 .inner_nav li ul{
     display:none ;
     position: absolute;
@@ -265,7 +262,22 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     text-align: justify;
     align-content: center;
 }
+/*footer*/
 
+footer{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    flex-direction: row;
+}
+.wrapper div{
+    flex-direction: row;
+}
+
+.row{
+    color: white;
+    flex-direction: row;
+}
 
 
 
@@ -303,7 +315,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 }
 
 /*FIN CSS CHECKOUT*/
-@media (min-width: 952px){
+@media (max-width: 952px){
     #categorias div img{
     width: 30vh;
     height: 30vh;
@@ -318,8 +330,15 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     flex-direction: column;
 
 }
-.inner_nav{
-    display:flex;
+.right-column{
+   /* border: gold solid 1px;*/
+    width: 90%;
+    margin: 0 auto;
+}
+.left-column{
+  /*  border: blue solid 1px;*/
+    width: 200px;
+    margin: 0 auto;
 }
 
 }
