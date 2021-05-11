@@ -97,23 +97,23 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     float: left;
     
 }
-.inner_nav li ul{
+.inner-nav li ul{
     display:none ;
     position: absolute;
     min-width: 140px;
     background-color: black;
 }
-.inner_nav li:hover > ul {
+.inner-nav li:hover > ul {
     display: flex;
     flex-direction: column;
     
 }
 /* /*aca empiezan losproductos*/
-/* .diferent_categories{
+/* .diferent-categories{
     width: 100%;
 }
 
-.diferent_categories article{
+.diferent-categories article{
     text-align: center;
     width: 100%;
 
@@ -130,7 +130,7 @@ article h2{
     margin-bottom: 0;
     text-align: center;
 }
-/* .item_list  {
+/* .item-list  {
     background-color: rgba(255, 255, 255, 0.5);
     border: 0;
     padding: 0;
@@ -138,7 +138,7 @@ article h2{
     border: solid 2px black
 } */
 
-.item_list  p {
+.item-list  p {
     margin: 0;
     border: 0;
     padding: 0;
@@ -146,18 +146,18 @@ article h2{
     font-size: 1.2em;
 }
 
-/* .diferent_categories ul li  img{
+/* .diferent-categories ul li  img{
     box-shadow: 20px 20px 10px grey;
 } */
 
-.nombre_precio{
+.nombre-precio{
     
     padding: 0;
     margin-left: 7px;
     margin-bottom: 8px;
 }
 
-.item_list {
+.item-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -180,7 +180,7 @@ article h2{
     
     
 
-.item_list img{
+.item-list img{
     
     width: 100%;
     border-bottom: solid 2px black
@@ -199,11 +199,11 @@ article h2{
 } */
 
 /*comienza el footer*/
-.footer_{
+.footer-{
     display: flex;
     background-color: black;
 }
-.footer_wrappler{
+.footer-wrappler{
     
     display: flex;
     flex-wrap: wrap;
@@ -218,12 +218,12 @@ article h2{
     content: "\f082";
     margin-left: 0px;
 }
-.footer_wrappler  article h4{
+.footer-wrappler  article h4{
     color: white;
     margin: 0;
     
 }
-.footer_wrappler article{
+.footer-wrappler article{
     margin-left: 10%;
     margin-right: 10%;
     
@@ -243,13 +243,13 @@ article h2{
 }  
 
 
-.social_media ul{
+.social-media ul{
     
     padding: 0;
     justify-content: space-between;
     
 }
-.social_media ul li a {
+.social-media ul li a {
     text-decoration: none;
     color: white;
 }
@@ -291,7 +291,7 @@ article h2{
 }  
 
 @media (max-width: 576px){
-   .item_list {
+   .item-list {
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -318,10 +318,10 @@ article h2{
     /* background-color: transparent;
     border: 0; */
     }
-    /* .item_list p{
+    /* .item-list p{
         display: none;
     } */
-    .item_list img{
+    .item-list img{
     
     width: 100%;
     
@@ -329,7 +329,7 @@ article h2{
     .links{
         display: none;
     } 
-    .inner_nav{
+    .inner-nav{
         display: none;
     }   
     #burguer{
@@ -340,7 +340,7 @@ article h2{
     
 
     }  
-    .footer_wrappler{
+    .footer-wrappler{
         flex-direction: column;
         align-content: center;
         
