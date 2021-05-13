@@ -23,20 +23,20 @@
   </header>
 
   
-    <div class="product_name">
+    <div class="product-name">
       <h2>Nombre del Producto</h2>
       <a href="/"><i id ="x" class="fas fa-times"></i></a>      
     </div>
 
   <main> 
-    <div class ="product_detail">
-      <div class = "main_img">
+    <div class ="product-detail">
+      <div class = "main-img">
         <img src = "img/tolomeo_tavolo_image4753388-960x960.jpg" alt = "luminaria">
       </div>
       
 
       <div class = "slider1">
-        <div class ="slide" id="slide_1">
+        <div class ="slide" id="slide-1">
           <img src ="img/tolomeo_tavolo_gallery4872596-1920x1080.jpg">
         </div>
         <div class ="slide" id="slide_2">
@@ -48,29 +48,34 @@
       </div>
     </div>
 
-    <div class ="product_info">
-      <section class = "technical_info">
-        <div class="options">  
-          <select name = "power" class ="options-control">
-            <option value="10W">10W</option>
-            <option value="20W">20W</option>
-            <option value="30W">30W</option>
-          </select>
+    <div class ="product-info">
+      <section class = "technical-info">
+        <div class="options">
+          <div class="options-power-cct">
+            <select name = "power" class ="options-control">
+              <option value="10W">10W</option>
+              <option value="20W">20W</option>
+              <option value="30W">30W</option>
+            </select>
+            <select name = "cct" class ="options-control">
+              <option value="3000K">3000K</option>
+              <option value="4000K">4000K</option>
+            </select>    
+          </div>  
 
-          <select name = "cct" class ="options-control">
-            <option value="3000K">3000K</option>
-            <option value="4000K">4000K</option>
-          </select>
-          <select name = "dim" class ="options-control">
-            <option value="switch" id="off-icon">&#xf011; Switch</option>
-            <option value="dim">Dimeable</option>
-            <option value="dali">DALI</option>
-            <option value="bt" id="bt-icon">&#xf293; Bluetooth</option>
-          </select>
+          <div class="options-dim">
+            <select name = "dim" class ="options-control">
+              <option value="switch" id="off-icon">&#xf011; Switch</option>
+              <option value="dim">Dimeable</option>
+              <option value="dali">DALI</option>
+              <option value="bt" id="bt-icon">&#xf293; Bluetooth</option>
+            </select>
+          </div>
+          
           
         </div>
     
-        <article class = "technical_data">
+        <article class = "technical-data">
           <h3>Características</h3>
           <ul>
             <li>Fuente: LED</li>
@@ -100,16 +105,16 @@
   </main>
 
   <footer>
-    <section class = "similar_products">
+    <section class = "similar-products">
       <h3>Productos Similares</h3>
       <div class = "slider2">
-        <div class ="slide2" id="slide_1">
+        <div class ="slide2" id="slide-1">
             <img src ="img/tolomeo_tavolo_1851150-480x480.jpg">
         </div>
-        <div class ="slide2" id="slide_2">
+        <div class ="slide2" id="slide-2">
             <img src ="img/tolomeo_tavolo_1851169-480x480.jpg">
         </div>
-        <div class ="slide2" id="slide_3">
+        <div class ="slide2" id="slide-3">
             <img src ="img/tolomeo_tavolo_4854964-480x480.jpg">
         </div>
       </div>
