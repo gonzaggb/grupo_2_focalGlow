@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: black;
+
+   
+}
+
+body {
+    background-color: #E5E5E5;
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    opacity: 0.5;
+}
+
+header img {
+    width: 100px;
+    /*height: auto;*/
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+main {
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 90%
+}
+
+.product-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+/* SLIDER */
+
+.slider1,
+.slider2 {
+    width: 100%;
+    
+    margin-top: 10px;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+}
+
+
+.slide,
+.slide2 {
+    width: 100%;
+    flex-shrink: 0;
+    height: 100%;
+    scroll-snap-align: start;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    max-height: 900px;
+}
+
+
+.options {
+    display: flex;
+    flex-direction: column;
+}
+
+.options-control {
+    color: white;
+    background-color: black;
+    font-size: 1rem;
+    text-align: center;
+    text-align-last:center;
+    border: solid white 1px;
+    padding: 5px 10px;
+    width: 100%;
+    transition: all 0.5s linear;
+    font-family: 'FontAwesome', 'Roboto';
+}
+.options-dim {
+    width: 100%
+}
+
+.options-control:hover{
+    background-color: #ffde59;
+    opacity: 0.9;
+    color: black;
+}
+
+.options-power-cct {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+#bt-icon,
+#off-icon {
+    font-family: 'FontAwesome', 'Roboto';
+}
+
+.technical-data {
+    background-color: white;
+    border-radius: 40px;
+    text-align: left;
+    padding-bottom: 10px
+}
+
+.technical-data h3 {
+    margin: 9px 25px;
+    padding-top: 10px;
+}
+.technical-data ul {
+    margin: 0 auto
+}
+.technical-data li em {
+    color:darkgrey
+}
+
+.price {
+    display: flex;
+    justify-content: right;
+    flex-direction: column;
+}
+
+.qtyadd {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+input {
+    width: 16.66%;
+    border:none;
+    text-align: center;
+    font-weight: bold;
+}
+
+#add {
+    width: 50%;
+    background-color: #ffde59;
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    font-family: 'Roboto';
+}
+
+
+#price {
+    text-align: right;
+}
+
+.documents {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:5px;
+    text-align: left;
+    margin-top: 20px;
+}
+
+footer {
+    margin: 0 auto;
+    text-align: center;
+    width: 66.66%;
+}
+
+.similar-products {
+    align-content: flex-end;
+}
+
+/*media query Tablet*/
+
+@media (min-width:576px) {
+    main {
+        display: flex;
+        flex-direction: row;
+        width: 85%;
+    }
+    .product-name {
+        width: 85%;
+        justify-content: flex-end;
+        gap: 20px;
+        
+    }
+    .product-detail {
+        width: 50%;
+        margin-right: 5px;
+        position: sticky;
+    }
+
+    .options {
+        flex-direction:row;
+        justify-content: space-evenly;
+        padding: 0;
+        margin: 0;
+    }
+    .options-power-cct,
+    .options-dim {
+        width: 50%;
+    }
+    .options-dim {
+        height: 100%;
+    }
+
+    .product-info {
+        width: 50%;
+        margin-left: 5px;
+        margin-top: 0px;
+        position: relative;
+    }
+
+    .documents {
+        position: absolute;
+        bottom: 0;
+    }
+
+    .similar-products {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .slider2 {
+        width: 100%;
+        margin-top: 10px;
+        height: auto;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        overflow-x: visible;
+        -webkit-overflow-scrolling: auto;
+        scroll-snap-type: none;
+    }
+
+    .slide2 {
+        width: 30%;
+        flex-shrink: 0;
+        height: 100%;
+        scroll-snap-align: none;
+    }
+    
+}
+
+/*Media Query Laptop*/
+@media (min-width:768px) {
+    .product-name, main {
+        width: 80%;
+    }
+
+    .product-name h2 {
+       font-size: 28px; 
+    }
+
+    input {
+        width: 15%;
+    }
+    .documents {
+        font-size: 16px;
+    }
+
+    .options-power-cct {
+        flex-direction: column;
+        width: 50%;
+    }
+    .options-dim {
+        width: 50%;
+        
+    }
+
+
+}
+
+/*Media Query Desktop*/
+@media (min-width: 1200px) {
+
+    .product-name, main {
+        width: 70%;
+        max-width: 1500px;
+        max-height: 1500px;
+    }
+    header {
+        max-width: 1500px;
+        margin: 0 auto;
+    }
+    .options-power-cct {
+         width: 66.66%;
+         flex-direction: row;
+    }
+    .options-dim {
+        width: 33.33%;
+        
+    }
+
+}
