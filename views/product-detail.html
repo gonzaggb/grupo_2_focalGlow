@@ -35,45 +35,32 @@
         <img src = "img/tolomeo_tavolo_image4753388-960x960.jpg" alt = "luminaria">
       </div>
       
-      <!--
-      <div class = "slider1">
-        <div class ="slide" id="slide-1">
-          <img src ="img/tolomeo_tavolo_gallery4872596-1920x1080.jpg">
-        </div>
-        <div class ="slide" id="slide_2">
-          <img src ="img/tolomeo_tavolo_gallery4872598-1920x1080.jpg">
-        </div>
-        <div class ="slide" id="slide_3">
-          <img src ="img/tolomeo_tavolo_gallery4872599-1920x1080.jpg">
-        </div>
-      </div>
-      -->   
+
       <!-- Slideshow container -->
-      <div class="slideshow-container">
+      <div class="slider-container">
 
-       <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
-          <img src="img/tolomeo_tavolo_gallery4872596-1920x1080.jpg" style="width:100%">
-        </div>
 
-        <div class="mySlides fade">
-          <img src="img/tolomeo_tavolo_gallery4872598-1920x1080.jpg" style="width:100%">
-        </div>
-
-        <div class="mySlides fade">
-          <img src="img/tolomeo_tavolo_gallery4872599-1920x1080.jpg" style="width:100%">
-        </div>
-
-        <!-- Next and previous buttons -->
+        <!-- Next and previous buttons  -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+       
 
-        <!-- The dots/circles -->
-        <div class = "dots">
-          <span class="dot" onclick="currentSlide(1)"></span>
-          <span class="dot" onclick="currentSlide(2)"></span>
-          <span class="dot" onclick="currentSlide(3)"></span>
+        <span id="slider-image-1"></span>
+        <span id="slider-image-2"></span>
+        <span id="slider-image-3"></span>
+        <div class="image-container">
+            <img src="img/tolomeo_tavolo_gallery4872596-1920x1080.jpg" class="slider-image" />
+            <img src="img/tolomeo_tavolo_gallery4872598-1920x1080.jpg" class="slider-image" />
+            <img src="img/tolomeo_tavolo_gallery4872599-1920x1080.jpg" class="slider-image" />
         </div>
+        <div class="dots-container">
+            <a href="#slider-image-1" class="dot"></a>
+            <a href="#slider-image-2" class="dot"></a>
+            <a href="#slider-image-3" class="dot"></a>
+        </div>
+
+
+
 
       </div>
 
