@@ -17,7 +17,6 @@
 
 <body>
 
-  <!--<script src="/js/slider.js"></script>-->
   <header>
     
    <a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a>
@@ -98,14 +97,14 @@
             </select>    
           </div>  
 
-          <div class="options-dim">
-            <select name = "dim" class ="options-control">
+          <!--<div class="options-dim">-->
+            <select name = "dim" class ="options-control-dim">
               <option value="switch" id="off-icon">&#xf011; Switch</option>
               <option value="dim">Dimeable</option>
               <option value="dali">DALI</option>
               <option value="bt" id="bt-icon">&#xf293; Bluetooth</option>
             </select>
-          </div>
+          <!--</div>-->
           
           
         </div>
@@ -126,8 +125,8 @@
       <section class = "price">
         <h3 id="price">$14.500</h3>
         <div class="qtyadd">
-          <input type="number" placeholder="1">
-          <button id="add">AÑADIR</button>
+          <input type="number" placeholder="1" min="0">
+          <button id="add" >AÑADIR</button>
         </div>
   
       </section>

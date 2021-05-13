@@ -43,6 +43,10 @@ main {
     width: 90%;
 }
 
+.main-img {
+    margin-bottom: 10px;
+}
+
 /*new slider*/
 .slideshow-container {
     width: 100%;
@@ -149,23 +153,22 @@ main {
     flex-direction: column;
 }
 
-.options-control {
+.options-control,
+.options-control-dim {
     color: white;
     background-color: black;
     font-size: 1rem;
     text-align: center;
     text-align-last:center;
     border: solid white 1px;
-    padding: 5px 10px;
+    padding: 5px 0px;
     width: 100%;
     transition: all 0.5s linear;
     font-family: 'FontAwesome', 'Roboto';
 }
-.options-dim {
-    width: 100%
-}
 
-.options-control:hover{
+.options-control:hover,
+.options-control-dim:hover {
     background-color: #ffde59;
     opacity: 0.9;
     color: black;
@@ -280,12 +283,11 @@ footer {
         padding: 0;
         margin: 0;
     }
-    .options-power-cct,
-    .options-dim {
+    .options-power-cct {
         width: 50%;
     }
-    .options-dim {
-        height: 100%;
+    .options-control-dim {
+        width: 50%
     }
 
     .product-info {
@@ -343,20 +345,13 @@ footer {
         font-size: 16px;
     }
 
-    .options-power-cct {
-        flex-direction: column;
-        width: 50%;
-    }
-    .options-dim {
-        width: 50%;
-        
-    }
+   
 
 
 }
 
 /*Media Query Desktop*/
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
 
     .product-name, main {
         width: 70%;
@@ -371,7 +366,7 @@ footer {
          width: 66.66%;
          flex-direction: row;
     }
-    .options-dim {
+    .options-control-dim {
         width: 33.33%;
         
     }
