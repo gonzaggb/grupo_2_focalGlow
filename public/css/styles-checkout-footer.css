@@ -1,0 +1,16 @@
+/*footer*/
+
+footer{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    flex-direction: row;
+}
+.wrapper div{
+    flex-direction: row;
+}
+
+.row{
+    color: white;
+    flex-direction: row;
+}
