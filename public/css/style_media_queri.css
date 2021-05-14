@@ -1,0 +1,117 @@
+@media (max-width: 798px){
+    .header{
+        z-index: 3;
+    }
+    .category-box{
+        margin-top: 50%;
+    }
+    #categorias div img{
+    width: 30vh;
+    height: 30vh;
+    padding-left: 1vh;
+    ;
+    border: 0;
+    margin: 0;
+    align-self: center;
+    }
+    .logo{
+    width: 15vh;
+    padding: 0px;
+    
+
+    }
+    #mas_vendidos{
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+    z-index: 2;
+    }
+
+    #titulo_mas_vendidos{
+    margin-bottom: -30%;
+    height: 15%;
+    border-radius: 3px;
+    
+    
+    }
+
+    #mas_vendidos h2{
+        text-align: center;
+        margin: 10%;
+     } 
+
+    
+
+    .elementos{
+    display: flex;
+    flex-direction: column;
+    margin-top: -15%;
+    justify-content: space-between;
+    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
+    }
+
+
+    #mas_vendidos img{
+    width: 100%;
+    height: 100%;
+    z-index: inherit;
+
+    }
+
+
+    #first_box{
+    margin-top: 60%;
+    }
+    .box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+    
+    .links ul li{
+    list-style: none;
+    
+    } 
+   
+    .inner_nav{
+        display: none;
+    }   
+    #burguer{
+    display: inline-block;
+    color: white;
+    width: 80px;
+    font-size: 200%
+    }
+    .footer_wrappler{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 3%;
+    }
+    .links{
+        display: none;
+    }
+   
+}    
+@media (max-width: 576px){
+    .slider img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .banner {
+    display: flex;
+    flex-direction: column;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    text-align: center;
+    display: none;
+    }
+    #titulo_mas_vendidos {
+    margin-bottom: -30%;
+    height: 15%;
+    border-radius: 3px;
+    }
+}

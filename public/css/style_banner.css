@@ -1,0 +1,35 @@
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: solid 2px black;
+    border-bottom:solid 2px black ;
+    flex-grow: inherit;
+    background-color: #E5E5E5;
+    
+}
+
+.banner-box{
+    margin: 0 2vw;
+}  
+
+.banner-box a{
+    text-decoration: none;
+}
+
+div  p{
+    text-decoration: none;
+    margin: 1vh 0;
+}
+
+@media (max-width: 952px){
+    .banner{
+    display: flex;
+    flex-direction: column;
+    border-top: solid 2px black;
+    border-bottom:solid 2px black ;
+    text-align: center;
+    }
+    
+    
+}
