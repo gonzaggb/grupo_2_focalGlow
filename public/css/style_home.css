@@ -523,7 +523,13 @@ header a{
     border: 0;
     margin: 0;
     align-self: center;
-}
+    }
+    #burguer{
+    display: inline-block;
+    color: white;
+    width: 80px;
+    font-size: 200%
+    }
 }
 
         
