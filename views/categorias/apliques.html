@@ -8,10 +8,11 @@
     <title>Focal Glow</title>
     <link rel="icon" href="/icon/logo.ico">
     <link rel="stylesheet" href="/css/normalize">
-    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
-<!--     <link rel="stylesheet" href="/css/style_categories.css">
-    <link rel="stylesheet" href="/css/style_banner.css"> -->
+ <!--    <!-- <link rel="stylesheet" href="/css/styles.css"> -->
+<!--     <link rel="stylesheet" href="/css/style_categories.css"> -->
+    <link rel="stylesheet" href="/css/style_home.css"> 
     <link rel="stylesheet" href="/css/style_categoriesv1.css">
+    <link rel="stylesheet" href="/css/style_menu_responsive.css">
     <script src="https://kit.fontawesome.com/641c03bd1a.js" crossorigin="anonymous"></script>
 
 
@@ -22,36 +23,55 @@
 </head>
 
 <body>
-    <header class="header">
+    <header>
         <div class="container logo-nav-container">
             <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
             <nav class="navigation">
-                <div class="">
-                    <i id="burguer" class="fas fa-bars"></i>
+                <div id="burguer">
+                    <div class="dropdown">
+                        <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#mas-vendidos">Sale</a>
+                            <a href="#main-categori">Shop</a>
+                            <a href="/us">Nosotros</a>
+                            <!-- <a href="#">Usuario</a> -->
+                            <a href="/login">Iniciar Sesión</a>
+                            <a href="/registro">Registrate</a>
+    
+                            <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <ul class='inner-nav'>
-                    <li><a href="/#mas_vendidos">Ofertas</a>
+                    <li><a href="#mas-vendidos">Sale</a>
                     </li>
-                    <li><a href="#">Categorias</a>
-                        <ul class='desplegable'>
-                            <li><a href="/categorias/plafon">Plafón</a></li>
-                            <li><a href="/categorias/apliques">Apliques</a></li>
-                            <li><a href="/categorias/pie">Pie</a></li>
-                            <li><a href="/categorias/colgante">Colgantes</a></li>
-                            <li><a href="/categorias/spot">Spots</a></li>
-                            <li><a href="/categorias/sistema">Accesorios</a></li>
-                            <li><a href="/categorias/mesa">Mesa</a></li>
-                            <li><a href="/categorias/exterior">Exterior</a></li>
-                        </ul>
+                    <li><a href="#main-categori">Shop</a>
+                         <ul class='desplegable'>
+                                <li><a href="">Plafón</a></li>
+                                <li><a href="">Apliques</a></li>
+                                <li><a href="">Pie</a></li>
+                                <li><a href="">Colgantes</a></li>
+                                <li><a href="">Spots</a></li>
+                                <li><a href="">Accesorios</a></li>
+                                <li><a href="">Mesa</a></li>
+                                <li><a href="">Exterior</a></li>
+                            </ul>
                     </li>
                     <li><a href="/us">Nosotros</a></li>
                     <li><a href="#">Usuario</a>
                         <ul class='desplegable'>
                             <li><a href="/login">Iniciar Sesión</a></li>
-                            <li><a href="">Registrate</a></li>
+                            <li><a href="/registro">Registrate</a></li>
                         </ul>
                     </li>
-                    <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+                        <ul class='inner-nav'>
+                            <li></li>
+                            <li><button type="button"></button></li>
+                            <li></li>
+    
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </div>
