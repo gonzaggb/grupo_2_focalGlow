@@ -123,7 +123,13 @@ body{
     border-radius: 2px;
 }
 
-
+.error-message{
+    color:red;
+    font-size: 10px;
+    text-align: left;
+    display: block;
+    margin-left: 20px;
+}
 
 
 @media (min-width: 768px){
