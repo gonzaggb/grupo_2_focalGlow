@@ -69,15 +69,16 @@ body{
     text-align: center;
     width:100%;
     position:fixed;
-    display:flex; /*agregado recien*/
-    left: 30%;
+    left: 15%;
     top: 30%;
 
 }
 .registry-form2{
+    display: flex;
+    flex-direction: column;
     color:white;
-    width: 50%;
     text-align: center;
+    width: 200px;
     border: solid white 1px;
     background-color: rgba(0,0,0,0.4);
 
@@ -119,13 +120,13 @@ body{
     margin: 5px;
     font-size: 15px;
     width: 90%;
-    border-radius: 0%;
+    border-radius: 2px;
 }
 
 
 
 
-@media (min-width: 952px){
+@media (min-width: 768px){
 
     .logo{
     width: 25vh;
@@ -143,9 +144,8 @@ body{
 
 .registry-form2{
     color:white;
-    width: 25%;
-    margin-top:5%;
-
+/*     margin-top:5%;
+ */
 }
 .right{
     z-index:1;
@@ -155,8 +155,8 @@ body{
 
 }
 .button-container{
-    margin-bottom: 10px;
-    width: 100%;
+/*     margin-bottom: 10px;
+ */    width: 100%;
 
 
 }
@@ -170,4 +170,18 @@ body{
         position:fixed;
     
 }
+}
+
+@media (min-width: 992px){
+    .registry-form2{
+        justify-content: space-evenly;
+        height: 400px;
+        width: 300px;
+
+        
+    }
+    .login-button{
+        height: 40px;
+    }
+    
 }
