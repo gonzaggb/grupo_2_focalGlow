@@ -1,16 +1,16 @@
 @media (max-width: 798px){
     .dropbtn {
-  background-color: black;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+    background-color: black;
+    color: white;
+    padding: 41px;
+    font-size: 16px;
+    border: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
-  display: block;
+  display: inline;
   float: right;
 }
 
@@ -20,7 +20,7 @@
   position: absolute;
   float: right;
   background-color: black;
-  /* min-width: 160px; */
+  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -30,34 +30,34 @@
   color: white;
   padding: 12px 16px;
   text-decoration: none;
-  display: inline-block;
+  display: block;
   font-size: 16px;
   
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color:yellow;}
+.dropdown-content a:hover {background-color:#ffde59;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: black;}
+.dropdown:hover .dropbtn {background-color: #ffde59;}
 }
 
 @media (max-width: 576px){
 .dropbtn {
-  background-color: black;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+    background-color: black;
+    color: white;
+    padding: 41px;
+    font-size: 16px;
+    border: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   position: relative;
-  display: block;
+  display: inline;
   float: right;
 }
 
@@ -67,7 +67,7 @@
   position: absolute;
   float: right;
   background-color: black;
-  /* min-width: 160px; */
+  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -77,7 +77,7 @@
   color: white;
   padding: 12px 16px;
   text-decoration: none;
-  display: inline-block;
+  display: block    ;
   font-size: 16px;
   
 }
