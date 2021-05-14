@@ -15,17 +15,13 @@ body{
     font-size: 1rem;
     line-height: 1.6em;
     background-color: black;
+    background-image: url(/img/portada-gogo-mobile.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     color:white;
 }
-.container{
-    text-align: center;
-    background-image: url(/img/portada-gogo-mobile.jpg);
-}
-
 
 .login-form{
     background-color: rgba(255, 255, 255, 0.2);
