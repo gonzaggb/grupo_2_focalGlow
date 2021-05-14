@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="/css/style_banner.css">
   <link rel="stylesheet" href="/css/style_home.css">
+  <link rel="stylesheet" href="/css/style_menu_responsive.css">
   
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
@@ -22,8 +23,20 @@
     <div class="container logo-nav-container">
       <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
       <nav class="navigation">
-        <div class="">
-        <i  id="burguer" class="fas fa-bars"></i>
+        <div id="burguer" >
+        <div class="dropdown">
+          <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
+          <div class="dropdown-content">
+            <a href="#mas-vendidos">Sale</a>
+            <a href="#main-categori">Shop</a>
+            <a href="/us">Nosotros</a>
+            <a href="#">Usuario</a>
+            <a href="/login">Iniciar Sesión</a>
+            <a href="">Registrate</a>
+            
+            <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
         </div>
         <ul class='inner-nav'>
           <li><a href="#mas-vendidos">Sale</a>
