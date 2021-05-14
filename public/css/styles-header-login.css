@@ -3,7 +3,6 @@
     font-family: 'Roboto', sans-serif;
 }
 
-
 html{
     scroll-behavior: smooth;
 }
@@ -13,78 +12,10 @@ fuente / tamaño / interlineado y margenes*/
 body{
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
-    line-height: 1.6em;
-    background-color: black;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    color:white;
+    line-height:1.6em;
+    margin: 0;
+    background-color: #E5E5E5;
 }
-.container{
-    text-align: center;
-    background-image: url(/img/portada-gogo-mobile.jpg);
-}
-
-
-.login-form{
-    background-color: rgba(255, 255, 255, 0.2);
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 2%;
-    position: fixed;
-    height: 250px;
-    width: 200px;
-}
-.form-container{
-
-    text-align: left;
-    margin-left: 5px;
-}
-.input-login{
-    width: 90%;
-    border: black 1px solid;
-    margin: 5px;
-    background-color: rgba(255,255,255,0.2);
-}
-.login-button{
-    background-color: black;
-    opacity: 100%;
-    color: white;
-    text-align: center;
-    margin: 5px;
-}
-.button-container{
-    text-align: center;
-}
-
-.forgotten-button{
-    font-size: 10px;
-    color: white;
-    line-height: 20px;
-    
-}
-.forgotten-button a{
-    color: white;  
-    text-decoration: none;  
-    line-height: 15px;
-}
-.error-data{
-    color:red;
-    font-size: 10px;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-.remember{
-    font-size: 12px;
-}
-
-
-    
 /*Define caracteristicas del h1
 tamaño de fuente e interlineado, el tipo de fuente lo hereda del body*/
 h1{
@@ -99,26 +30,17 @@ p{
 }
 /*Define caracteristicas de los container
 ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado*/
-.container{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-}
-.container img{
-    width: 100%;
-}
+
 
 .logo{
     width: 50%;
     padding: 0px;
 }
 .header{
-    background-color: black;
+    background-color: rgba(0,0,0,0);
     color:white;
     position: sticky; /*para hacer el menu pegajoso*/
     top: 0; /*para que quede pegado a la parte superior*/
-
     bottom: 150px;
 }
 
@@ -129,7 +51,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 .logo-nav-container{
     display:flex;
     justify-content: space-between;
-    align-items:center;
+    align-items:left;
 }
 .navigation ul{
  margin: 0;
@@ -177,7 +99,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 
 .slider{
-    height: 50%;
+    height: 45%;
     width: 100%;
     margin: 0;
     padding: 0;
@@ -203,8 +125,9 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 
 .slider img{
     width: 100%;
-    height: 800px;
+    height: 75vh;
     object-fit: cover;
+    
     
     
 }
@@ -219,49 +142,82 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     70%{margin-left: -300%;}
     100%{margin-left: -300%;}
 }
+
+/*aca empieza el marquee*/
+.marquee{
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
 /*Aca empieza la seccion de Categoria*/
 
 .main{
-    margin-top :20%;
-    margin-bottom: 30%;
+    margin-top :10%;
+    margin-bottom: 10%;
+    margin-left: 10%;
+    
     padding: 0;
     border: 0;
-    width: 100%;
+    width: 80%;
+    z-index: 2;
+    
+    
+   
 
-    display: flex;
-    justify-content: center;    
-    align-self: center;        
+       
 }
+#categorias{
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    
+    
+    
+    
+}
+
 
 #categorias div{
     padding: 0;
     border: 0;
     /*margin-left: 15%; elimino este margen porque voy a centrar el category-box GB*/
-    align-self: center;
-    justify-content: center; /*agregado centrado del flex GB*/
+    margin-top: 15%;
+     /*agregado centrado del flex GB*/
     gap: 0.5em; /*agregado separacion entre imagenes GB*/
 
 }
-
-#categorias{
+.category-box{
+    margin-top: 5%;
+    text-align: center;
+    align-content: space-around;
     
-    margin-top: 15%;
+    
 }
 
-#categorias div img{
-    width: 20%;
-    height: 20%;
-    padding: 0;
-    border: 0;
-    margin: 0;
-    align-self: center;
+.category-box a{
+    width: 50%;
+}
+    
+    
+    
+
+#categorias div a img{
+    width: 30vh;
+    
+    
+    
 }
 .category-box{ /*Agregue caja para englobar las imagenes de las categorias y asi aplicar flex GB*/
     width: 90%; /*agrando espacio que ocupa la caja de categorias en pantalla GB*/
-    display: flex;
-    flex-wrap: wrap;
+    
+    gap: 10px;
     margin: 0px auto; /*centro la caja de categorias GB*/
-
+    
 }
 /*hover zoom*/
 .zoom{
@@ -273,12 +229,13 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     
 /*Mas vendidos*/
 #mas_vendidos{
-    margin-top: 15%;
+    margin-top: 10%;
     margin-left: 15%;
     margin-right: 15%;
+    margin-bottom: 15%;
 }
 
-.titulo_mas_vendidos{
+#titulo_mas_vendidos{
     
     height: 10%;
     border-radius: 3px;
@@ -287,34 +244,41 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     justify-content: center;
     align-items: center;
 }
+#mas_vendidos{
+    margin-bottom: 15%;
+}
 
 #mas_vendidos h2{
         text-align: center;
-        margin: 10%;
+        
       
 
 }
 
-.elementos{
+ .elementos{
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    gap: 0.5em; /*agregue separacion entre las imagenes*/
+    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
+    margin-top: 10%;
+ }
 
-}
+
 #mas_vendidos img{
     width: 100%;
     height: 100%;
 
 }
 
-.box{
+ .box{
     width: 100%;
     height: 100%;
     position: relative;
     
     
-}
+} 
+
+
 .capa{
     position: absolute;
     top: 0;
@@ -345,22 +309,8 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     text-align: justify;
     align-content: center;
 }
-/*footer*/
 
-footer{
-    display: flex;
-    width: 100%;
-    background-color: black;
-    flex-direction: row;
-}
-.wrapper div{
-    flex-direction: row;
-}
 
-.row{
-    color: white;
-    flex-direction: row;
-}
 
 
 
@@ -552,7 +502,6 @@ p{
     
     
 }
-
 @keyframes cambio-mini{
     0%{margin-left: 0;}
     30%{margin-left: 0;}
@@ -565,41 +514,107 @@ p{
 }
 
 /*FIN CSS CHECKOUT*/
-@media (min-width: 952px){
+/*css de html de categorias*/
+.diferent_categories{
+    width: 100%;
+    
+}
+
+.diferent_categories article{
+    text-align: center;
+    width: 100%;
+    
+}
+.item_list{
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    
+}   
+.item_list img{
+    width: 30vh;
+    height: 30vh;
+    
+}     
+    
+article h2{
+    margin-top: 15%;
+}
+
+/*media queri de home*/
+@media (max-width: 952px){
+    .header{
+        z-index: 3;
+    }
+    .category-box{
+        margin-top: 50%;
+    }
     #categorias div img{
     width: 30vh;
     height: 30vh;
     padding-left: 1vh;
+    ;
     border: 0;
     margin: 0;
     align-self: center;
-}
+    }
     .logo{
     width: 25vh;
     padding: 0px;
 
-}
-body{
-    background-image: url(/img/portada-gogo-1024x768.jpg);
-    color:black;
-}
-.login-form{
-background-color: rgba(255, 255, 255, 0.1);
-position: absolute;
-top: 10px;
-left: 10px;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-border-radius: 2%;
-position: fixed;
-width: 250px;
+    }
+    #mas_vendidos{
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+    z-index: 2;
+    }
 
-}
+    #titulo_mas_vendidos{
+    margin-bottom: -30%;
+    height: 15%;
+    border-radius: 3px;
+    background-color: rgba(182, 186, 190, 0.5);
+    
+    }
 
-.forgotten-button a{
-    font-size: 10px;
-    text-decoration: none ;
-}
+    #mas_vendidos h2{
+        text-align: center;
+        margin: 10%;
+     } 
 
-}
+    
+
+    .elementos{
+    display: flex;
+    flex-direction: column;
+    margin-top: -15%;
+    justify-content: space-between;
+    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
+    }
+
+
+    #mas_vendidos img{
+    width: 100%;
+    height: 100%;
+    z-index: inherit;
+
+    }
+
+
+    #first_box{
+    margin-top: 60%;
+    }
+    .box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+    
+    
+}    
+     
+
+
