@@ -7,14 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/style_footer.css">
     <link rel="stylesheet" href="/css/styles-registro.css">
+    <link rel="stylesheet" href="/css/style-header-registro.css">
 </head>
 
 <body>
     <header class="header">
-        <div class="container logo-nav-container">
+        <div class="logo-nav-container">
             <p><a href="/"><img class="logo" src="/img/logo_sinfondo.png"></a></p>
             <nav class="navigation">
                 <ul class='inner_nav'>
@@ -47,30 +46,30 @@
 
 
     <main class="main-container2">
-        <section class="registry-form2">
+        <form class="registry-form2">
 
             <div class="registry-container2">
-                <p>Nombre</p>
-                <input class="input-login" type="text" name="nombre">
-                <p>Apellido</p>
-                <input class="input-login" type="text" name="apeliido">
-                <p>Email</p>
-                <input class="input-login" type="text" name="email">
-                <p>Contraseña</p>
-                <input class="input-login" type="text" name="password">
-                <p>Confirmar contraseña</p>
-                <input class="input-login" type="text" name="re-password">
+                <label for="nombre">Nombre</label>
+                <input class="input-login" type="text" name="nombre" id="nombre" required>
+                <label for="apellido">Apellido</label>
+                <input class="input-login" type="text" name="apeliido" id="apellido" required>
+                <label for="email">Email</label>
+                <input class="input-login" type="email" name="email" id="email" required>
+                <label for="password">Contraseña</label>
+                <input class="input-login" type="password" name="password" id="password" required>
+                <label for="re-password">Confirmar contraseña</label>
+                <input class="input-login" type="text" name="re-password" id="re-password" required>
 
             </div>
             <div class="button-container">
-                <button class="login-button">Continuar</button>
+                <button type="submit" class="login-button">Continuar</button>
 
             </div>
 
-        </section>
+            </section>
 
     </main>
-    <footer class="footer">
+    <!--  <footer class="footer">
         <section class="footer_wrappler">
             <article class="links">
                 <h4>Preguntas frecuentes</h4>
@@ -97,7 +96,7 @@
                 </ul>
             </article>
         </section>
-    </footer>
+    </footer> -->
 </body>
 
 </html>
