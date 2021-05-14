@@ -67,3 +67,7 @@ app.get('/categorias/colgante', (req, res) => {
 app.get('/categorias/apliques', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categorias/apliques.html'))
 })
+
+app.get('/registro', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/registro.html'))
+})

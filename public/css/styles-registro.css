@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Define las caracteristicas del body
+fuente / tamaño / interlineado y margenes*/
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6em;
+    /*background-color: black;*/
+    background-image: url(/img/portada-uro-1024x768.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right;
+    position: relative;
+    color:white;
+}
+
+
+/*
+.main-container{
+
+    background-image: url(/img/portada-uro-1024x768.jpg);
+    background-size: cover;
+}
+.registry-container{
+    padding: 0 10px;
+    text-align: left;
+}
+
+.registry-form span{
+    margin-left: 0px;
+}
+
+.registry-form{
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2%;
+    position: fixed;
+}
+.input-login{
+    width: 90%;
+    border: black 1px solid;
+    margin: 5px;
+    background-color: rgba(255,255,255,0.2);
+
+}
+.login-button{
+    background-color: black;
+    opacity: 100%;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}*/
+
+.main-container2{
+    text-align: center;
+    width:100%;
+    position:fixed;
+    display:flex; /*agregado recien*/
+    left: 30%;
+    top: 30%;
+
+}
+.registry-form2{
+    color:white;
+    width: 50%;
+    text-align: center;
+    border: solid white 1px;
+    background-color: rgba(0,0,0,0.4);
+
+    
+
+}
+.registry-container2 p{
+    display: block;
+    text-align: left;
+    width: 82%;
+    margin: auto 18px;
+    font-size: 15px;
+
+}
+.input-login{
+    width: 90%;
+    border: white 1px solid;
+    margin: 5px;
+    background-color: rgba(0,0,0,0); /*agregado recien*/
+    color:white;
+    font-size: 15px;
+    border-radius: 0%;
+    
+}
+.inner_nav{
+    display: none;
+}
+.login-button{
+    background-color: white;
+    opacity: 100%;
+    color: black;
+    text-align: center;
+    border: white 1px solid;
+    margin: 5px;
+    font-size: 15px;
+    width: 90%;
+    border-radius: 0%;
+}
+.logo-nav-container p{
+    margin-inline-start: auto;
+    margin-right: 152px;
+}
+
+
+
+@media (min-width: 952px){
+
+    .logo{
+    width: 25vh;
+    padding: 0px;
+
+}
+body{
+/* background-image: url(/img/portada-uro-1024x768.jpg);*/
+    color:black;
+}
+.inner_nav{
+    display: none;
+}
+
+
+.registry-form2{
+    color:white;
+    width: 30%;
+
+}
+.right{
+    z-index:1;
+}
+.left{
+    z-index: 0;
+
+}
+.button-container{
+    margin-bottom: 10px;
+    width: 100%;
+
+
+}
+
+
+.main-container2{
+        text-align: center;
+        width:80%;
+        position:fixed;
+    
+}
+}

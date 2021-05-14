@@ -1,0 +1,587 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Define las caracteristicas del body
+fuente / tamaño / interlineado y margenes*/
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6em;
+    background-color: black;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    color:white;
+}
+.container{
+    text-align: center;
+    background-image: url(/img/portada-gogo-mobile.jpg);
+}
+.login-container{
+
+    text-align: center;
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login-form{
+    background-color: rgba(255, 255, 255, 0.2);
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2%;
+    position: fixed;
+}
+.form-container{
+
+    text-align: left;
+    margin-left: 5px;
+}
+.input-login{
+    width: 90%;
+    border: black 1px solid;
+    margin: 5px;
+    background-color: rgba(255,255,255,0.2);
+}
+.login-button{
+    background-color: black;
+    opacity: 100%;
+    color: white;
+    text-align: center;
+    margin: 5px;
+}
+.button-container{
+    text-align: center;
+}
+
+.forgotten-button{
+    font-size: 10px;
+    color: white;
+    
+}
+.forgotten-button a{
+    color: white;  
+    text-decoration: none;  
+}
+
+    
+/*Define caracteristicas del h1
+tamaño de fuente e interlineado, el tipo de fuente lo hereda del body*/
+h1{
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+/*Define caracteristicas de p
+margen de abajo*/
+p{
+    margin-bottom: 1.6em;
+}
+/*Define caracteristicas de los container
+ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado*/
+.container{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+.container img{
+    width: 100%;
+}
+
+.logo{
+    width: 50%;
+    padding: 0px;
+}
+.header{
+    background-color: black;
+    color:white;
+    position: sticky; /*para hacer el menu pegajoso*/
+    top: 0; /*para que quede pegado a la parte superior*/
+
+    bottom: 150px;
+}
+
+.header a{
+    color:white;
+    text-decoration:none;
+}
+.logo-nav-container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.navigation ul{
+ margin: 0;
+ padding: 0;
+ list-style:none;
+}
+.navigation ul li{
+    display:inline-block;
+}
+.navigation ul li a{
+    display:block;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s linear;
+    border-radius: 1.5px
+}
+.navigation ul li a:hover{
+    background: #ffde59;
+    opacity: 0.9;
+    color:black;
+}
+.buscar{
+    border: solid red;
+    width: 80%;
+    display:inline-block;
+}
+
+.desplegagle li {
+    float: left;
+    
+}
+.inner_nav li ul{
+    display:none ;
+    position: absolute;
+    min-width: 140px;
+    background-color: black;
+}
+.inner_nav li:hover > ul {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+/*aca empieza el slider*/
+
+
+.slider{
+    height: 50%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+}
+
+.slider ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 400%;
+    animation: cambio 10s infinite  alternate;
+
+}
+.slider li {
+    list-style: none;
+    width: 100%;
+    
+   
+}
+
+.slider img{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    
+    
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    30%{margin-left: 0;}
+
+    35%{margin-left: -150%;}
+    65%{margin-left: -150%;}
+
+    70%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+/*Aca empieza la seccion de Categoria*/
+
+.main{
+    margin-top :20%;
+    margin-bottom: 30%;
+    padding: 0;
+    border: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;    
+    align-self: center;        
+}
+
+#categorias div{
+    padding: 0;
+    border: 0;
+    /*margin-left: 15%; elimino este margen porque voy a centrar el category-box GB*/
+    align-self: center;
+    justify-content: center; /*agregado centrado del flex GB*/
+    gap: 0.5em; /*agregado separacion entre imagenes GB*/
+
+}
+
+#categorias{
+    
+    margin-top: 15%;
+}
+
+#categorias div img{
+    width: 20%;
+    height: 20%;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    align-self: center;
+}
+.category-box{ /*Agregue caja para englobar las imagenes de las categorias y asi aplicar flex GB*/
+    width: 90%; /*agrando espacio que ocupa la caja de categorias en pantalla GB*/
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px auto; /*centro la caja de categorias GB*/
+
+}
+/*hover zoom*/
+.zoom{
+    transition: transform .05s;
+}
+.zoom:hover{
+    transform: scale(1.1);
+}
+    
+/*Mas vendidos*/
+#mas_vendidos{
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.titulo_mas_vendidos{
+    
+    height: 10%;
+    border-radius: 3px;
+    background-color: rgba(182, 186, 190, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#mas_vendidos h2{
+        text-align: center;
+        margin: 10%;
+      
+
+}
+
+.elementos{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 0.5em; /*agregue separacion entre las imagenes*/
+
+}
+#mas_vendidos img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    
+}
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(256, 256,256, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transform: scale(0);
+    transition: .5s ease;
+    border: 2px solid;
+    
+}
+.box:hover .capa{
+    transform: scale(1);
+}
+
+.capa h2{
+    font-size: 1em;
+    font-weight: bold;
+}
+/*us*/
+.us_description{
+    display: flex;
+    text-align: justify;
+    align-content: center;
+}
+/*footer*/
+
+footer{
+    display: flex;
+    width: 100%;
+    background-color: black;
+    flex-direction: row;
+}
+.wrapper div{
+    flex-direction: row;
+}
+
+.row{
+    color: white;
+    flex-direction: row;
+}
+
+
+
+
+/*INICIO CSS CHECKOUT*/
+.principal{
+    display:flex;
+    justify-content: space-around;
+    width:80%;
+    margin: 0 auto;
+}
+.contenedor-productos-all{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    margin: 10px;
+}
+.contenedor-producto{
+    display: flex;
+    align-items: left;
+    align-items: center;
+    justify-content: left;
+    border: solid black 1px;
+    margin-top: 10px;
+}
+.nombreproducto{
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.categoria{
+    font-size: 0.7rem;
+}
+.imagen-producto{
+    width: 15%;
+    margin-right: 10px;
+    padding:10px;   
+}
+.imagen-producto img{
+    width: 100%;
+    border: solid black 1px;
+}
+.contenedor-checkout{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border: solid black 1px;
+    margin:10px;
+}
+
+.checkout{
+    font-weight: bold;
+    width: 100%;
+
+}
+.total{
+    border-top: black solid 1px;
+    text-align: left;
+    border-bottom: black solid 1px;
+    padding-top: 10px;
+}
+.total-productos{
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+.total-compra{
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+.advertencia{
+    font-weight: normal;
+    text-align: center;
+    font-size: 0.7rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height:1.6em;
+
+    
+
+}
+.continuar{
+    margin: 10px;
+    font-size: 1rem;
+    background-color: black;
+    color:white;
+
+}
+.columna-derecha{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.puede-interesar{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    border: solid black 1px;
+    margin:20px;
+}
+.puede-interesar img{
+    width: 100%;
+}
+
+
+p{
+  /*  border: solid black 1px;*/
+    height: fit-content;   
+
+}
+.item{
+    width: 50%;
+    font-size: 0.8rem;
+    margin-left: 2%;
+    line-height: 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.eliminar-producto{
+    display:flex;
+    width: fit-content;
+   /* border: solid black 1px;*/
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 5px;
+    
+}
+.eliminar-producto img{
+    width: 5%;
+    
+}
+
+.detalle-producto{
+    display: flex;
+    border-top: black dotted 1px;
+    border-bottom: black dotted 1px;
+    margin-right: 5%;
+
+
+}
+.probando-alineado{
+    display: flex;
+    flex-direction: column;
+}
+
+.producto-categoria{
+    display:flex;
+    flex-direction: column;
+    line-height: 14px;
+}
+
+/*aca empieza el MINI slider*/
+
+
+.slider-mini{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+}
+.main_slider-mini{
+    border: blueviolet solid 1px;
+    border-radius: 3px;
+    margin:10px;
+    width: 90%;
+}
+
+.slider-mini ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 300%;
+    animation: cambio-mini 15s infinite alternate;
+    animation-timing-function: ease-in;
+}
+.slider-mini li {
+    list-style: none;
+    width: 100%;
+    
+   
+}
+
+.slider-mini img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+}
+
+@keyframes cambio-mini{
+    0%{margin-left: 0;}
+    30%{margin-left: 0;}
+
+    35%{margin-left: -100%;}
+    65%{margin-left: -100%;}
+
+    70%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+
+/*FIN CSS CHECKOUT*/
+@media (min-width: 952px){
+    #categorias div img{
+    width: 30vh;
+    height: 30vh;
+    padding-left: 1vh;
+    border: 0;
+    margin: 0;
+    align-self: center;
+}
+    .logo{
+    width: 25vh;
+    padding: 0px;
+
+}
+body{
+    background-image: url(/img/portada-gogo-1024x768.jpg);
+    color:black;
+}
+
+.forgotten-button{
+    font-size: 10px;
+    color: white;
+    text-decoration: none ;
+}
+}
