@@ -68,7 +68,6 @@
     </div>      
      
 
-
     <div class ="product-info">
       <section class = "technical-info">
         <div class="options">
@@ -84,15 +83,12 @@
             </select>    
           </div>  
 
-           <select name = "dim" class ="options-control-dim">
+          <select name = "dim" class ="options-control-dim">
               <option value="switch" id="off-icon">&#xf011; Switch</option>
               <option value="dim">Dimeable</option>
               <option value="dali">DALI</option>
               <option value="bt" id="bt-icon">&#xf293; Bluetooth</option>
-            </select>
-
-          
-          
+          </select> 
         </div>
     
         <article class = "technical-data">
@@ -109,10 +105,10 @@
       </section>
   
       <section class = "price">
-        <h3 id="price">$14.500</h3>
+        <h3 class="price-title">$14.500</h3>
         <div class="qtyadd">
           <input type="number" placeholder="1" min="0">
-          <button id="add" >AÑADIR</button>
+          <button class="add">AÑADIR</button>
         </div>
   
       </section>
@@ -127,6 +123,43 @@
   <footer>
     <section class = "similar-products">
       <h3>Productos Similares</h3>
+      <div class="slider-container-2">
+        <div class="slides-2">
+          <input type="radio" name="r" id="r1-2" checked>
+          <input type="radio" name="r" id="r2-2">
+          <input type="radio" name="r" id="r3-2">
+          <input type="radio" name="r" id="rp-2">
+          <input type="radio" name="r" id="rn-2">
+ 
+          <div class="slide s2">
+            <img src="img/similar_products_1.jpg" alt="">
+          </div>
+          <div class="slide-2">
+            <img src="img/similar_products_2.jpg" alt="">
+          </div>
+          <div class="slide-2">
+            <img src="img/similar_products_3.jpg" alt="">
+          </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <div class = prev-next-buttons-2>
+          <label for="rp-2" class="prev">&#10094;</label>
+          <label for="rn-2" class="next">&#10095;</label>
+        </div>
+        
+
+        <!-- Slider buttons -->
+        <div class="dots-container-2">
+          <label for="r1-2" class="dot"></label>
+          <label for="r2-2" class="dot"></label>
+          <label for="r3-2" class="dot"></label>
+        </div>
+      </div>
+
+
+
+      <!--
       <div class = "slider2">
         <div class ="slide2" id="slide-1">
             <img src ="img/similar_products_1.jpg">
@@ -138,6 +171,7 @@
             <img src ="img/similar_products_3.jpg">
         </div>
       </div>
+      -->
     </section>
   </footer>
 

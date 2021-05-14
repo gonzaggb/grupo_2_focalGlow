@@ -76,12 +76,15 @@ main {
     border-radius: 3px 0 0 3px;
   }
   /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev:hover,
+.next:hover,
+.dot:hover {
     background-color: #ffde59;
     opacity: 0.8;
   }
   /* The dots/bullets/indicators */
-.dots-container {
+.dots-container,
+.dots-container-2 {
     position: absolute;
     bottom: 5%;
     left: 50%;
@@ -99,12 +102,11 @@ main {
     transition: background-color 0.6s ease;
   }
   
-  .active, .dot:hover {
-    background-color: #ffde59;
-  }
+
 
 /*SLIDER without JS*/
-.slider-container {
+.slider-container,
+.slider-container-2 {
             width: 100%;
             position: relative;
             height:auto;
@@ -120,30 +122,37 @@ main {
             visibility: hidden;
         }
         
-        .slides{
+        .slides,
+        .slides-2 {
           width: 300%;
           display: flex;
           
         }
         
-        .slide{
+        .slide,
+        .slide-2 {
           width: 33.33%;
           transition: 1s;
         }
         
-        #r1:checked ~ .s1{
+        #r1:checked ~ .s1,
+        #r1-2:checked ~ .s2{
           margin-left: 0;
         }
-        #r2:checked ~ .s1{
+        #r2:checked ~ .s1,
+        #r2-2:checked ~ .s2{
           margin-left: -33.33%;
         }
-        #r3:checked ~ .s1{
+        #r3:checked ~ .s1,
+        #r3-2:checked ~ .s2{
           margin-left: -66.66%;
         }
-        #rp:checked ~ .s1{
+        #rp:checked ~ .s1,
+        #rp-2:checked ~ .s2{
             margin-left: 0;
         }
-        #rn:checked ~ .s1{
+        #rn:checked ~ .s1,
+        #rn-2:checked ~ .s2{
             margin-left: -33.33%;
         }
        
@@ -253,19 +262,28 @@ input {
     font-weight: bold;
 }
 
-#add {
+.add {
     width: 50%;
-    background-color: #ffde59;
+    background-color: black;
+    color: white;
     text-align: center;
     font-size: 1.25rem;
     font-weight: bold;
     border: none;
     padding: 10px;
     font-family: 'Roboto';
+    transition: all 0.5s linear
+
+}
+
+.add:hover {
+    background-color: #ffde59;
+    opacity: 0.9;
+    color: black;
 }
 
 
-#price {
+.price-title {
     text-align: right;
 }
 
@@ -338,7 +356,7 @@ footer {
         margin: 0 auto;
     }
 
-    .slider2 {
+    .slider-container-2 {
         width: 100%;
         margin-top: 10px;
         height: auto;
@@ -350,7 +368,18 @@ footer {
         scroll-snap-type: none;
     }
 
-    .slide2 {
+    .dots-container-2,
+    .prev-next-buttons-2 {
+        display: none;
+    }
+
+    .slides-2 {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .slide-2,
+    .s2 {
         width: 30%;
         flex-shrink: 0;
         height: 100%;
