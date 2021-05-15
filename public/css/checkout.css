@@ -3,6 +3,9 @@
     padding:0px;
     margin:0px;
 }
+body{
+    background-image: url(/img/fondo2.jpg)
+}
 .checkout{
     display: flex;
     flex-direction: row;
@@ -17,7 +20,7 @@
     padding: 5px
 }
 
-.checkout-product{
+.checkout-product {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -25,8 +28,11 @@
     margin: 0 auto;
     margin-top: 5px;
     align-items: center;
-    border: solid black 1px;
+    border: solid grey 1px;
+    border-radius: 5px;
     margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 20px grey;
 }
 .img-detail{
     display: flex;
@@ -112,8 +118,11 @@ margin-top: 5px;
     text-align: center;
     margin:10px auto;
 }
-.total-checkout-border{
-    border:solid black 1px;
+.total-checkout-border {
+    border: solid grey 1px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 10px 10px 20px grey;
 }
 .total-checkout h1{
     margin-bottom: 0px;
@@ -132,10 +141,21 @@ margin-top: 5px;
 .total-checkout span{
 text-align: left;
 }
-.final-button{
-    padding: 5px;
+.final-button {
+    padding: 9px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 0;
+    width: 50%;
+    transition: 1s;
+}
+
+.final-button:hover{
+    background-color: rgb(15, 173, 15);
+    color: white;
 }
 .similar-interests{
     margin-top: 10px;
