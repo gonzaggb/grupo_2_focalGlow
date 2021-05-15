@@ -1,16 +1,96 @@
-/*footer*/
+    /*footer*/
 
-footer{
-    display: flex;
-    width: 100%;
-    background-color: black;
-    flex-direction: row;
-}
-.wrapper div{
-    flex-direction: row;
-}
+    .footer-{
+        display: flex;
+        background-color: black;
+    }
+    .footer-wrappler{
+        
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding-top: 1%;
+        
+        
+    }
 
-.row{
-    color: white;
-    flex-direction: row;
-}
+    .fa-facebook-square:before {
+        content: "\f082";
+        margin-left: 0px;
+    }
+    .footer-wrappler  article h4{
+        color: white;
+        margin: 0;
+        
+    }
+    .footer-wrappler article{
+        margin-left: 10%;
+        margin-right: 10%;
+        
+    }
+    .links ul{
+        padding: 0;
+        
+    }
+    .links ul li{
+        list-style: none;
+        
+        
+    }    
+    .links ul li a{
+        text-decoration: none;
+        color: white;
+    }  
+
+
+    .social-media ul{
+        
+        padding: 0;
+        justify-content: space-between;
+        
+    }
+    .social-media ul li a {
+        text-decoration: none;
+        color: white;
+    }
+    .contact{
+        text-align: justify;
+    }
+    .contact ul{
+        
+        padding: 0;
+    }
+    .contact ul li {
+        justify-content: space-between;
+    }
+    .contact ul li a {
+        text-decoration: none;
+        color: white;
+        text-align: center;
+    }
+    .fa-envelope:before {
+        content: "\f0e0";
+        margin-right: 7px;}
+    .fa-whatsapp:before {
+        content: "\f232";
+        margin-right:7px;
+    }
+    .fa-facebook-square:before {
+        content: "\f082";
+        margin-right:7px;
+    }
+
+    .fa-instagram:before {
+        content: "\f16d";
+        margin-right: 7px;
+    } 
+
+    .links{
+            display: none;
+        }
+@media (min-width: 798px){
+    .links{
+        display: initial;
+    }
+}    
