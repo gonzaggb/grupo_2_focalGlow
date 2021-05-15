@@ -17,14 +17,29 @@
 </head>
 
 <body>
-    <header class="header">
+    <header>
         <div class="container logo-nav-container">
             <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
             <nav class="navigation">
-                <ul class='inner_nav'>
-                    <li><a href="#sale">Sale</a>
+                <div id="burguer">
+                    <div class="dropdown">
+                        <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#mas-vendidos">Sale</a>
+                            <a href="#main-categori">Shop</a>
+                            <a href="/us">Nosotros</a>
+                            <!-- <a href="#">Usuario</a> -->
+                            <a href="/login">Iniciar Sesión</a>
+                            <a href="/registro">Registrate</a>
+    
+                            <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <ul class='inner-nav'>
+                    <li><a href="#mas-vendidos">Sale</a>
                     </li>
-                    <li><a href="#main_categori">Categorias</a>
+                    <li><a href="#main-categori">Shop</a>
                         <!--  <ul class='desplegable'>
                                 <li><a href="">Plafón</a></li>
                                 <li><a href="">Apliques</a></li>
@@ -43,7 +58,8 @@
                             <li><a href="">Registrate</a></li>
                         </ul>
                     </li>
-                    <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a></li>
+                    <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
                 </ul>
             </nav>
         </div>
