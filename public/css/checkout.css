@@ -146,6 +146,7 @@ margin-top: 5px;
 .total-checkout h1{
     margin-bottom: 0px;
     border-bottom: 1px solid;
+    background-color: rgba(255, 222, 89, 0.6); 
 
 }
 .total-checkout p{
