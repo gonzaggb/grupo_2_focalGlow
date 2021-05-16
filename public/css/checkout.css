@@ -17,7 +17,9 @@ body{
     width: 100%;
     font-size: 25px;
     text-align: center;
-    padding: 5px
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .checkout-product {
@@ -26,7 +28,6 @@ body{
     flex-direction: column;
     width: 90%;
     margin: 0 auto;
-    margin-top: 5px;
     align-items: center;
     border: solid grey 1px;
     border-radius: 5px;
@@ -71,7 +72,7 @@ body{
     /* margin: 11px 0px 0px 6px; */
     padding: 2%;
     line-height: 15px;
-    background-color: rgba(255, 222, 89, 0.6);
+    background-color: #ffde59;
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
     width: 100%;
@@ -128,7 +129,7 @@ margin-top: 5px;
 .total-checkout{
     width: 80%;
     text-align: center;
-    margin:10px auto;
+    margin: 30px auto;
 }
 .total-checkout-border {
     border: solid grey 1px;
@@ -144,9 +145,10 @@ margin-top: 5px;
 }
 
 .total-checkout h1{
-    margin-bottom: 0px;
-    border-bottom: 1px solid;
-    background-color: rgba(255, 222, 89, 0.6); 
+    padding: 10px;
+    background-color: #ffde59; 
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 
 }
 .total-checkout p{
@@ -181,7 +183,7 @@ text-align: left;
     color: white;
 }
 .similar-interests{
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 15px;
 
 }
@@ -189,12 +191,13 @@ text-align: left;
     text-align: center;
     font-size: 22px;
     padding: 5px;
+    margin-bottom: 10px;
 }
-.main_slider-mini{
-    border: black solid 1px;
-    border-radius: 3px;
-    margin:auto;
-    width: 90%;
+.main-slider-mini{
+    /*border: black solid 1px;
+    border-radius: 3px;*/
+    margin: 10px auto;
+    width: 80%;
 }
 .slider-mini ul{
     display: flex;
@@ -234,11 +237,9 @@ text-align: left;
     .total-checkout {
         width: 30%;
         text-align: center;
-        margin: 10px auto;
+        margin: 0px auto;
     }
-    .total-checkout-border{
-        border:solid black 1px;
-    }
+    
     .product-image{
         width: 30%;
     }
