@@ -1,0 +1,534 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/*Define las caracteristicas del body
+fuente / tamaño / interlineado y margenes*/
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height:1.6em;
+    margin: 0;
+    background-image: url(/img/fondo2.jpg);
+    
+}
+/*Define caracteristicas del h1
+tamaño de fuente e interlineado, el tipo de fuente lo hereda del body*/
+h1{
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+/*Define caracteristicas de p
+margen de abajo*/
+p{
+    margin-bottom: 1.6em;
+}
+/*Define caracteristicas de los container
+ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado*/
+.container{
+    width: 100%;
+   /* max-width: 850px;*/
+    margin: 0 ;
+    padding: 0;
+    z-index: 3;
+    height: 13vh;
+}
+
+#burguer{
+    display: none;
+}
+
+.logo{
+    width: 50%;
+    padding: 0px;
+}
+header{
+    background-color: black;
+    color:white;
+    /*position: sticky; para hacer el menu pegajoso*/
+    top: 0; /*para que quede pegado a la parte superior*/
+
+    bottom: 150px;
+    z-index: 3;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+}
+.logo-nav-container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+}
+.navigation ul{
+ margin: 0;
+ padding: 0;
+ list-style:none;
+}
+.navigation ul li{
+    display:inline-block;
+}
+.navigation ul li a{
+    display:block;
+    padding: 0.5rem 1rem;
+    transition: all 0.5s linear;
+    border-radius: 1.5px
+}
+.navigation ul li a:hover{
+    background: #ffde59;
+    opacity: 0.9;
+    color:black;
+}
+.buscar{
+    border: solid red;
+    width: 80%;
+    display:inline-block;
+}
+
+.desplegable li {
+    float: left;
+    
+}
+.inner-nav li ul{
+    display:none ;
+    position: absolute;
+    min-width: 140px;
+    background-color: black;
+}
+.inner-nav li:hover > ul {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+/*aca empieza el slider*/
+
+
+.slider{
+    height: 45%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+}
+
+.slider ul{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    width: 400%;
+    animation: cambio 10s infinite  alternate;
+
+}
+.slider li {
+    list-style: none;
+    width: 100%;
+    
+   
+}
+
+.slider img{
+    width: 100%;
+    height:79vh;
+    object-fit: cover;
+    
+    
+    
+}
+
+@keyframes cambio{
+    0%{margin-left: 0;}
+    30%{margin-left: 0;}
+
+    35%{margin-left: -150%;}
+    65%{margin-left: -150%;}
+
+    70%{margin-left: -300%;}
+    100%{margin-left: -300%;}
+}
+
+
+/*Aca empieza la seccion de Categoria*/
+
+.main {
+    margin-top: 0%;
+    margin-bottom: 6%;
+    margin-left: 10%;
+    padding-top: 1%;
+    border: 0;
+    width: 80%;
+    z-index: 2;
+}
+#categorias{
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    
+    
+    
+    
+}
+
+
+/* #categorias div{
+    padding: 0;
+    border: 0;
+    gap: 0.5em; 
+    width: 25%;
+
+} */
+
+.category-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+.category-box a{
+    width: 23%;
+}
+    
+    
+    
+
+#categorias div a img{
+    width: 100%;
+    border-radius: 6px;
+    
+    
+}
+.category-box{ /*Agregue caja para englobar las imagenes de las categorias y asi aplicar flex GB*/
+    width: 90%; /*agrando espacio que ocupa la caja de categorias en pantalla GB*/
+    
+    gap: 10px;
+    margin: 0px auto; /*centro la caja de categorias GB*/
+    margin-top: 5%;
+    text-align: center;
+    align-content: space-around;
+}
+/*hover zoom*/
+.zoom{
+    transition: transform .05s;
+}
+.zoom:hover{
+    transform: scale(1.1);
+}
+    
+/*Mas vendidos*/
+#mas-vendidos{
+    
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-bottom: 10%;
+    
+}
+
+#titulo-mas-vendidos{
+    
+    height: 10%;
+    border-radius: 3px;
+    margin-left: 7%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    font-size: 3em;
+    color: white;
+}
+
+#mas-vendidos h2{
+        text-align: center;
+        
+      
+
+}
+
+ .elementos{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
+    margin-top: 10%;
+ }
+
+
+#mas-vendidos img{
+    width: 100%;
+    height: 100%;
+
+}
+
+ .box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    
+    
+} 
+
+
+.capa{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(256, 256,256, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    transform: scale(0);
+    transition: .5s ease;
+    border: 2px solid;
+    
+}
+.box:hover .capa{
+    transform: scale(1);
+}
+
+.capa h2{
+    font-size: 1em;
+    font-weight: bold;
+}
+/*footer*/
+
+.footer-{
+    display: flex;
+    background-color: black;
+}
+.footer-wrappler{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 1%;
+    
+    
+}
+
+.fa-facebook-square:before {
+    content: "\f082";
+    margin-left: 0px;
+}
+.footer-wrappler  article h4{
+    color: white;
+    margin: 0;
+    
+}
+.footer-wrappler article{
+    margin-left: 10%;
+    margin-right: 10%;
+    
+}
+.links ul{
+    padding: 0;
+    
+}
+.links ul li{
+    list-style: none;
+    
+    
+}    
+.links ul li a{
+    text-decoration: none;
+    color: white;
+}  
+
+
+.social-media ul{
+    
+    padding: 0;
+    justify-content: space-between;
+    
+}
+.social-media ul li a {
+    text-decoration: none;
+    color: white;
+}
+.contact{
+    text-align: justify;
+}
+.contact ul{
+    
+    padding: 0;
+}
+.contact ul li {
+    justify-content: space-between;
+}
+.contact ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+.fa-envelope:before {
+    content: "\f0e0";
+    margin-right: 7px;}
+.fa-whatsapp:before {
+    content: "\f232";
+    margin-right:7px;
+}
+.fa-facebook-square:before {
+    content: "\f082";
+    margin-right:7px;
+}
+
+.fa-instagram:before {
+    content: "\f16d";
+    margin-right: 7px;
+}    
+
+
+/*media queri de home*/
+@media (max-width: 798px){
+    .header{
+        z-index: 3;
+    }
+    .category-box{
+        margin-top: 50%;
+    }
+    .category-box a{
+        width: 32%;
+    }
+    #categorias div img{
+    width: 100%;
+    /* height: 30vh; */
+    /* padding-left: 1vh; */
+    ;
+    border: 0;
+    margin: 0;
+    align-self: center;
+    }
+    .logo{
+    width: 15vh;
+    padding: 0px;
+    
+
+    }
+    #mas-vendidos{
+    margin-top: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
+    z-index: 2;
+    }
+
+    #titulo-mas-vendidos{
+    margin-bottom: -30%;
+    height: 15%;
+    border-radius: 3px;
+    
+    
+    }
+
+    #mas-vendidos h2{
+        text-align: center;
+        margin: 10%;
+     } 
+
+    
+
+    .elementos{
+    display: flex;
+    flex-direction: column;
+    margin-top: -45%;
+    justify-content: space-between;
+    gap: 0.5em; /*agregue separacion entre las imagenes*/ 
+    }
+
+
+    #mas-vendidos img{
+    width: 100%;
+    height: 100%;
+    z-index: inherit;
+
+    }
+
+
+    #first-box{
+    margin-top: 60%;
+    }
+    .box{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    }
+    
+    .links ul li{
+    list-style: none;
+    
+    } 
+   
+    .inner-nav{
+        display: none;
+    }   
+    #burguer{
+    display: inline-block;
+    color: white;
+    width: 80px;
+    font-size: 200%
+    }
+    .footer-wrappler{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 3%;
+    }
+    .links{
+        display: none;
+    }
+   
+}    
+@media (max-width: 576px){
+    .slider img {
+            width: 100%;
+             height: 30vh;
+            object-fit: cover;
+    }
+    .banner-box{
+        width: 30%;
+    }
+    .banner{
+    flex-direction: row;
+    line-height: 12px;
+    font-size: 9px;
+    }
+    #titulo-mas-vendidos {
+    margin-bottom: -30%;
+    height: 15%;
+    border-radius: 3px;
+    }
+    .category-box a{
+    width: 48%;
+    }
+    #categorias div a img {
+    width: 100%;
+    border-radius: 6px;
+    }
+    #categorias div img {
+    width: 30%;
+    /* height: 30vh; */
+    /* padding-left: 1vh; */
+    border: 0;
+    margin: 0;
+    align-self: center;
+}
+}
+
+        
+
+    
+    
+ 
+

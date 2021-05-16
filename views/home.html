@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device=width, initial-scale=1.0">
+  <!---Al estar declarado en app.js el path.resolve(__dirname,'./public'), solo se indica lo que sigue a la ruta-->
+  <title>Focal Glow</title>
+  <link rel="icon" href="/icon/logo.ico">
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="/css/style_banner.css">
+  <link rel="stylesheet" href="/css/style_home.css">
+  <link rel="stylesheet" href="/css/style_menu_responsive.css">
+  
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+  </style>
+  <script src="https://kit.fontawesome.com/641c03bd1a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div class="container logo-nav-container">
+      <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
+      <nav class="navigation">
+        <div id="burguer" >
+        <div class="dropdown">
+          <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
+          <div class="dropdown-content">
+            <a href="#mas-vendidos">Sale</a>
+            <a href="#main-categori">Shop</a>
+            <a href="/us">Nosotros</a>
+            <!-- <a href="#">Usuario</a> -->
+            <a href="/login">Iniciar Sesión</a>
+            <a href="/registro">Registrate</a>
+            
+            <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+          </div>
+        </div>
+        </div>
+        <ul class='inner-nav'>
+          <li><a href="#mas-vendidos">Sale</a>
+          </li>
+          <li><a href="#main-categori">Shop</a>
+            <!--  <ul class='desplegable'>
+                            <li><a href="">Plafón</a></li>
+                            <li><a href="">Apliques</a></li>
+                            <li><a href="">Pie</a></li>
+                            <li><a href="">Colgantes</a></li>
+                            <li><a href="">Spots</a></li>
+                            <li><a href="">Accesorios</a></li>
+                            <li><a href="">Mesa</a></li>
+                            <li><a href="">Exterior</a></li>
+                        </ul> -->
+          </li>
+          <li><a href="/us">Nosotros</a></li>
+          <li><a href="#">Usuario</a>
+            <ul class='desplegable'>
+              <li><a href="/login">Iniciar Sesión</a></li>
+              <li><a href="">Registrate</a></li>
+            </ul>
+          </li>
+          <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+          <ul class='inner-nav'>
+            <li></li>
+            <li><button type="button"></button></li>
+            <li></li>
+            
+          </ul></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="main-slider">
+    <div class='slider'>
+      <ul>
+        <li><img src="/img/lamp1.jpg" alt=""></li>
+        <li><img src="/img/colgantes3.jpg" alt=""></li>
+        <li><img src="/img/lamp3.jpg" alt=""></li>
+      </ul>
+      
+
+    </div>
+  </section>
+  <section class="banner">
+    <div class="banner-box">
+      <p><i class="far fa-credit-card"></i> 3, 6 y 12 cuotas sin interés! A través de Mercado Pago</p>
+    </div>
+    <div class="banner-box">
+      <p><i class="fas fa-truck"></i> Envíos a todo el país gratis a partir de $10.000</p>
+    </div>
+    <div class="banner-box">
+      <p><i class="fas fa-money-bill-wave"></i> 20% descuento pagando con débito o transferencia</p>
+    </div>  
+  </section>
+    
+  <main id="main-categori" class="main">
+    <h2 id="titulo-mas-vendidos">SHOP</h2>
+    <section id="categorias">
+            <!--unifique las imagenes en una sola caja para mostrar mejor-->
+      <div class="category-box">
+        
+        <a href="/categorias/plafon"><img class="zoom" src="/img/Plafón.png" alt="Plafon"></a>
+        <a href="/categorias/apliques"><img class="zoom" src="/img/Aplique.png" alt="Aplique"></a>
+        <a href="/categorias/pie"><img class="zoom" src="/img/Pie.png" alt="Pie"></a>
+        <a href="/categorias/colgante"><img class="zoom" src="/img/Colgante.png" alt="Colgante"></a>
+        <a href="/categorias/spot"><img class="zoom" src="/img/Spot.png" alt="Spot"></a>
+        <a href="/categorias/sistema"><img class="zoom" src="/img/Sistemas.png" alt="Sistema"></a>
+        <a href="/categorias/mesa"><img class="zoom" src="/img/Mesa.png" alt="mesa"></a>
+        <a href="/categorias/exterior"><img class="zoom" src="/img/Exterior.png" alt="Exterior"></a>
+      </div>
+    </div>
+  </main>
+  
+ 
+
+  <section id="mas-vendidos">
+    <h2 id="titulo-mas-vendidos">SALE</h2>
+    <div class="elementos">
+      <div id="first-box" class="box">
+        <img src="/img/Barcelona.jpg" alt="Barcelona">
+        <div class="capa">
+          <h2>Barcelona <br><br>$9.600,00</h2>
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="/img/bon-jour.jpg" alt="Bon-Jour">
+        <div class="capa">
+          <h2>Bon-Jour <br><br>$7.400,00</h2>
+
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="/img/coral.jpg" alt="Coral">
+        <div class="capa">
+          <h2>Coral <br><br>$6.200,00</h2>
+
+        </div>
+      </div>
+
+      <div class="box">
+        <img src="/img/delfina.jpg" alt="Delfina">
+        <div class="capa">
+          <h2>Delfina <br><br>$8.300,00</h2>
+
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <footer class="footer-">
+    <section class="footer-wrappler">
+      <article id="part" class="links">
+        <h4>Preguntas frecuentes</h4>
+        <ul>
+          <li><a href="/us#us">Nosotros</a></li>
+          <li><a href="/us#payment_method">Metodos de Pago</a></li>
+          <li><a href="/us#delivery">Envios</a></li>
+        </ul>
+      </article>
+      <article id="part"class="social-media">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/focal.glow/" target="_blank"><i
+                class="fab fa-facebook-square"></i>Facebook</a></li>
+          <li><a href="https://www.instagram.com/focal_glow_baires/" target="_blank"><i
+                class="fab fa-instagram"></i>Instagram</a></li>
+        </ul>
+      </article>
+      <article id="part" class="contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href=""><i class="far fa-envelope"></i>E-mail</a></li>
+          <li><a href=""><i class="fab fa-whatsapp"></i>Whatsapp</a></li>
+        </ul>
+      </article>
+    </section>
+  </footer>
+</body>
+
+</html>
