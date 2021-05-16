@@ -457,10 +457,7 @@ input {
         max-width: 1500px;
         max-height: 1500px;
     }
-    header {
-        max-width: 1500px;
-        margin: 0 auto;
-    }
+ 
     .options-power-cct {
          width: 66.66%;
          flex-direction: row;
