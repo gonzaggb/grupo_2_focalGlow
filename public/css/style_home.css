@@ -180,13 +180,7 @@ header a{
 }
 
 
-/* #categorias div{
-    padding: 0;
-    border: 0;
-    gap: 0.5em; 
-    width: 25%;
 
-} */
 
 .category-box{
     display: flex;
@@ -247,9 +241,6 @@ header a{
 
 #mas-vendidos h2{
         text-align: center;
-        
-      
-
 }
 
  .elementos{
@@ -523,7 +514,13 @@ header a{
     border: 0;
     margin: 0;
     align-self: center;
-}
+    }
+    #burguer{
+    display: inline-block;
+    color: white;
+    width: 80px;
+    font-size: 200%
+    }
 }
 
         
