@@ -44,7 +44,11 @@ main {
 .main-img {
     margin-bottom: 10px;
     z-index: 0;
-}
+    opacity: 1;
+    transition: all 1s;
+    }
+
+
 
 /*Product Dimensions appear*/
 
@@ -68,17 +72,19 @@ main {
 .product-dimensions {
     position: absolute;
     top:0;
-    opacity: 0.1;
+    opacity: 0;
     z-index: 1000;
     transition: all 1s;
 }
-.product-detail i:hover .product-dimensions{
+.product-detail i:hover ~ .product-dimensions{
     opacity: 1;
 }
 
-.product-dimensions:hover {
-    opacity: 1;
+.product-detail i:hover ~ .main-img{
+    opacity: 0.1;
 }
+
+
 
 
 
@@ -481,7 +487,9 @@ footer {
     .product-dimensions-info:hover{
         transform: scale(1.5);
     }
-
+    .product-detail i {
+        display: none;
+    }
 
 }
 
@@ -492,7 +500,5 @@ footer {
         width: 83.33%;
         margin-top: 40px;
     }
-    .product-detail i {
-        display: none;
-    }
+    
 }
