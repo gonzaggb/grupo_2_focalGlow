@@ -37,7 +37,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     margin: 0 ;
     padding: 0;
     z-index: 3;
-    height: 13vh;
+    /* height: 13vh; */
 }
 
 #burguer{
@@ -86,11 +86,11 @@ header a{
     opacity: 0.9;
     color:black;
 }
-.buscar{
+/* .buscar{
     border: solid red;
     width: 80%;
     display:inline-block;
-}
+} */
 
 .desplegable li {
     float: left;
@@ -381,7 +381,7 @@ header a{
 
 
 /*media queri de home*/
-@media (max-width: 798px){
+@media (max-width: 796px){
     .header{
         z-index: 3;
     }

@@ -23,13 +23,13 @@ div  p{
 }
 
 @media (max-width: 952px){
-    .banner{
+    .banner {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     border-top: solid 2px black;
-    border-bottom:solid 2px black ;
+    border-bottom: solid 2px black;
     text-align: center;
-    }
+}
     
     
 }
