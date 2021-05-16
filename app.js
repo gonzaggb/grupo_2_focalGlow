@@ -29,11 +29,43 @@ app.get('/checkout', (req, res) => {
 })
 
 app.get('/product', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productDetail.html'))
+    res.sendFile(path.resolve(__dirname, './views/product-detail.html'))
 })
 
 app.get('/categories', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categories.html'))
+})
+
+app.get('/categorias/spot', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/spot.html'))
+})
+
+app.get('/categorias/sistema', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/sistema.html'))
+})
+
+app.get('/categorias/plafon', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/plafon.html'))
+})
+
+app.get('/categorias/pie', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/pie.html'))
+})
+
+app.get('/categorias/mesa', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/mesa.html'))
+})
+
+app.get('/categorias/exterior', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/exterior.html'))
+})
+
+app.get('/categorias/colgante', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/colgante.html'))
+})
+
+app.get('/categorias/apliques', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/apliques.html'))
 })
 
 app.get('/registro', (req, res) => {

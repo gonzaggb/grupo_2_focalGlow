@@ -1,17 +1,112 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    line-height:1.6em;
+    margin: 0;
+    background-color: #E5E5E5;
+}
+.container {
+    width: 100%;
+    /* max-width: 850px; */
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+}
 .logo{
     width: 50%;
     padding: 0px;
 }
-.header{
+.inner-nav{
+    display: none;
+}
+#burguer{
+    display: inline-block;
+    color: white;
+    width: 80px;
+    font-size: 200%
+    }
+
+.dropbtn {
+    background-color: black;
+    color: white;
+    padding: 38px;
+    font-size: 16px;
+    border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline;
+  float: right;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  float: right;
+  background-color: black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block    ;
+  font-size: 16px;
+  
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:#ffde59;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: #ffde59;}
+
+
+@media(min-width:798px){
+    .container{
+    width: 100%;
+   /* max-width: 850px;*/
+    margin: 0 ;
+    padding: 0;
+    z-index: 3;
+    height: 13vh;
+}
+
+#burguer{
+    display: none;
+}
+.inner-nav{
+    display: initial;
+}
+
+.logo{
+    width: 30%;
+    padding: 0px;
+}
+header{
     background-color: black;
     color:white;
-    position: sticky; /*para hacer el menu pegajoso*/
+    /*position: sticky; para hacer el menu pegajoso*/
     top: 0; /*para que quede pegado a la parte superior*/
 
     bottom: 150px;
+    z-index: 3;
 }
 
-.header a{
+header a{
     color:white;
     text-decoration:none;
 }
@@ -39,19 +134,48 @@
     opacity: 0.9;
     color:black;
 }
-.desplegagle li {
+.buscar{
+    border: solid red;
+    width: 80%;
+    display:inline-block;
+}
+
+.desplegable li {
     float: left;
     
 }
-.inner_nav li ul{
+.inner-nav li ul{
     display:none ;
     position: absolute;
     min-width: 140px;
     background-color: black;
 }
-.inner_nav li:hover > ul {
+.inner-nav li:hover > ul {
     display: flex;
     flex-direction: column;
     
 }
 
+}
+
+.slider-mini{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+    
+}
+
+@keyframes cambio-mini{
+    0%{margin-left: 0;}
+    30%{margin-left: 0;}
+
+    35%{margin-left: -100%;}
+    65%{margin-left: -100%;}
+
+    70%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+ 

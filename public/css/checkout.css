@@ -4,11 +4,7 @@
     margin:0px;
 }
 body{
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1rem;
-    line-height:1.6em;
-    margin: 0;
-    background-color: #E5E5E5;
+    background-image: url(/img/fondo2.jpg)
 }
 .checkout{
     display: flex;
@@ -24,7 +20,7 @@ body{
     padding: 5px
 }
 
-.checkout-product{
+.checkout-product {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
@@ -32,12 +28,17 @@ body{
     margin: 0 auto;
     margin-top: 5px;
     align-items: center;
-    border: solid black 1px;
+    border: solid grey 1px;
+    border-radius: 5px;
     margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 10px 10px 20px grey;
 }
 .img-detail{
     display: flex;
     align-items: center;
+    border-bottom: 1px solid black;
+    padding-bottom: 1%;
 }
 .product-image{
     width: 50%;
@@ -65,17 +66,21 @@ body{
 .detail .item{
     margin-left: 10px;
 }
-.name-category{
+.name-category {
     align-self: flex-start;
-    margin: 10px 0px 0px 20px;
-    line-height: 10px;
-
+    /* margin: 11px 0px 0px 6px; */
+    padding: 2%;
+    line-height: 15px;
+    background-color: rgba(255, 222, 89, 0.6);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    width: 100%;
 }
 .name-category h3{
 font-size: 15px;
 }
 .name-category h4{
-font-size: 10px;
+font-size: 13px;
 margin-top: 5px;
 }
 .item-left{
@@ -103,13 +108,19 @@ margin-top: 5px;
     margin-bottom: 5px;
     color:black;
 }
-#item-eliminar a{
-    color:black;
-    font-size: 15px;
-
+#item-eliminar a {
+    color: black;
+    font-size: 23px;
+    background-color: transparent;
+    transition: color 0.5s;
 }
+
+#item-eliminar a:hover{
+        color: red;
+}
+
 .separador{
-    border-bottom:black solid 1px;
+    /* border-bottom:black solid 1px; */
     width: 100%;
     text-align: center;
     margin: 5px;
@@ -119,18 +130,32 @@ margin-top: 5px;
     text-align: center;
     margin:10px auto;
 }
-.total-checkout-border{
-    border:solid black 1px;
+.total-checkout-border {
+    border: solid grey 1px;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 10px 10px 20px grey;
 }
+.total-checkout-border .separado{
+    border-bottom: black solid 1px;
+    width: 100%;
+    text-align: center;
+    margin: 5px;
+}
+
 .total-checkout h1{
     margin-bottom: 0px;
+    border-bottom: 1px solid;
+    background-color: rgba(255, 222, 89, 0.6); 
 
 }
 .total-checkout p{
     margin-top: 0px;
     margin-bottom: 0px;
-    margin-right: 5px;
-    margin-left: 5px;
+    /* margin-right: 5px;
+    margin-left: 5px; */
+    border-top: 1px solid;
+    border-bottom: 1px solid;
 
 }
 .total-checkout .separador{
@@ -139,10 +164,21 @@ margin-top: 5px;
 .total-checkout span{
 text-align: left;
 }
-.final-button{
-    padding: 5px;
+.final-button {
+    padding: 9px;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    border: 0;
+    width: 50%;
+    transition: 1s;
+}
+
+.final-button:hover{
+    background-color: rgba(255, 222, 89, 0.6);
+    color: black;
 }
 .similar-interests{
     margin-top: 10px;
@@ -151,7 +187,7 @@ text-align: left;
 }
 .similar-interests h3{
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     padding: 5px;
 }
 .main_slider-mini{
