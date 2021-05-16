@@ -35,3 +35,7 @@ app.get('/product', (req, res) => {
 app.get('/categories', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categories.html'))
 })
+
+app.get('/prueba', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/prueba.html'))
+})
