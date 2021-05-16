@@ -381,7 +381,7 @@ header a{
 
 
 /*media queri de home*/
-@media (max-width: 796px){
+@media (max-width: 767px){
     .header{
         z-index: 3;
     }
