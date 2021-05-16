@@ -14,7 +14,6 @@ body{
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     line-height: 1.6em;
-    /*background-color: black;*/
     background-image: url(/img/portada-uro-1024x768.jpg);
     background-size: cover;
     background-attachment: fixed;
@@ -23,47 +22,6 @@ body{
     color:white;
 }
 
-
-/*
-.main-container{
-
-    background-image: url(/img/portada-uro-1024x768.jpg);
-    background-size: cover;
-}
-.registry-container{
-    padding: 0 10px;
-    text-align: left;
-}
-
-.registry-form span{
-    margin-left: 0px;
-}
-
-.registry-form{
-    background-color: rgba(255, 255, 255, 0.1);
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 2%;
-    position: fixed;
-}
-.input-login{
-    width: 90%;
-    border: black 1px solid;
-    margin: 5px;
-    background-color: rgba(255,255,255,0.2);
-
-}
-.login-button{
-    background-color: black;
-    opacity: 100%;
-    color: white;
-    text-align: center;
-    margin: 5px;
-}*/
 
 .main-container2{
     text-align: center;
@@ -81,6 +39,7 @@ body{
     width: 200px;
     border: solid white 1px;
     background-color: rgba(0,0,0,0.4);
+    border-radius: 5px;
 
     
 
@@ -100,13 +59,20 @@ body{
 }
 .input-login{
     width: 90%;
-    border: white 1px solid;
+    outline:none;
+    border:none;
+    border-bottom: white 1px solid;
     margin: 5px;
-    background-color: rgba(0,0,0,0); /*agregado recien*/
+    background-color: rgba(0,0,0,0);
     color:white;
     font-size: 15px;
     border-radius: 0%;
+    transition: all 0.6s;
+    height: 20px;
     
+}
+.input-login:focus{
+    border-bottom: 1px #ffde59 solid; 
 }
 .inner_nav{
     display: none;
@@ -116,11 +82,16 @@ body{
     opacity: 100%;
     color: black;
     text-align: center;
-    border: white 1px solid;
+    border: none;
     margin: 5px;
-    font-size: 15px;
+    font-size: 20px;
     width: 90%;
-    border-radius: 2px;
+    border-radius: 15px;
+    transition: all 0.7s;    
+}
+.login-button:hover{
+    background-color: #ffde59;
+
 }
 
 .error-message{
@@ -140,7 +111,7 @@ body{
 
 }
 body{
-/* background-image: url(/img/portada-uro-1024x768.jpg);*/
+
     color:black;
 }
 .inner_nav{
