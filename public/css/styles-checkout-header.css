@@ -54,7 +54,7 @@ body{
   background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 10;
 }
 
 /* Links inside the dropdown */
@@ -140,6 +140,9 @@ header a{
     border: solid red;
     width: 80%;
     display:inline-block;
+}
+.desplegable {
+    z-index: 10;
 }
 
 .desplegable li {
