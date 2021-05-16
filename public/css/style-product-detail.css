@@ -321,6 +321,7 @@ input {
 
 .price-title {
     text-align: right;
+    font-size: 24px;
 }
 
 .product-dimensions-info {
@@ -336,10 +337,11 @@ input {
     margin-top: 20px;
 }
 
-footer {
+.similar-products-container {
     margin: 0 auto;
     text-align: center;
     width: 66.66%;
+    margin-bottom: 20px;
 }
 
 .similar-products {
