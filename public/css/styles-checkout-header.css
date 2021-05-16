@@ -11,13 +11,14 @@ body{
     margin: 0;
     padding: 0;
     z-index: 3;
-    height: 13vh;
+    
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
 }
 .logo{
-    width: 50%;
+    width: 35%;
     padding: 0px;
 }
 .inner-nav{
@@ -33,7 +34,7 @@ body{
 .dropbtn {
     background-color: black;
     color: white;
-    padding: 38px;
+    padding: 30px;
     font-size: 16px;
     border: none;
 }
@@ -76,14 +77,14 @@ body{
 .dropdown:hover .dropbtn {background-color: #ffde59;}
 
 
-@media(min-width:798px){
+@media(min-width:768px){
     .container{
     width: 100%;
    /* max-width: 850px;*/
     margin: 0 ;
     padding: 0;
     z-index: 3;
-    height: 13vh;
+    
 }
 
 #burguer{
