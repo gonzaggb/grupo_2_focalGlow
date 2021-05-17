@@ -27,7 +27,8 @@ h1{
 /*Define caracteristicas de p
 margen de abajo*/
 p{
-    margin-bottom: 1.6em;
+    margin:16px 0;
+
 }
 /*Define caracteristicas de los container
 ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado*/
@@ -45,7 +46,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 }
 
 .logo{
-    width: 50%;
+    width: 30%;
     padding: 0px;
 }
 header{
@@ -143,7 +144,13 @@ header a{
     }
 }
 
-@media (min-width: 798px){
+@media (min-width: 768px){
+    .logo-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+}
     .main-wrapper {
     display: flex;
     flex-direction: column;
