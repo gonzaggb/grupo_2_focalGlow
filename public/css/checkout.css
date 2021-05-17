@@ -182,8 +182,8 @@ text-align: left;
 }
 
 .final-button:hover{
-    background-color: rgb(15, 173, 15);
-    color: white;
+    background-color: rgba(255, 222, 89, 1);
+    color: black;
 }
 .similar-interests{
     margin-top: 20px;
@@ -224,6 +224,16 @@ text-align: left;
     
     
 }
+.container-login{
+    position: relative;
+}
+.container-login p{
+    position:absolute;
+}
+.login-form::before{
+    content:"Regresar";
+}
+
 @media (min-width: 768px){
     .checkout h2{
         text-align: left;
