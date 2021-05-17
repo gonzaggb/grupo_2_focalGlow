@@ -23,11 +23,57 @@ app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'))
 })
 
+app.get('/registro', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/registro.html'))
+})
+
 app.get('/checkout', (req, res) => {
 
     res.sendFile(path.resolve(__dirname, './views/checkout.html'))
 })
 
 app.get('/product', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/productDetail.html'))
+    res.sendFile(path.resolve(__dirname, './views/product-detail.html'))
 })
+
+app.get('/categories', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categories.html'))
+})
+
+app.get('/categories2', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+app.get('/categorias/spot', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+app.get('/categorias/sistema', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+app.get('/categorias/plafon', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+app.get('/categorias/pie', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+app.get('/categorias/mesa', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+app.get('/categorias/exterior', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+app.get('/categorias/colgante', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+app.get('/categorias/apliques', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
+
