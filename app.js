@@ -41,39 +41,39 @@ app.get('/categories', (req, res) => {
 })
 
 app.get('/categories2', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 app.get('/categorias/spot', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 app.get('/categorias/sistema', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 app.get('/categorias/plafon', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 app.get('/categorias/pie', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 app.get('/categorias/mesa', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 app.get('/categorias/exterior', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 app.get('/categorias/colgante', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 app.get('/categorias/apliques', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+    res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
 
