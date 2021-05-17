@@ -325,7 +325,7 @@ header a{
     margin-left: 0px;
 }
 .footer-wrappler  article h4{
-    color: white;
+    color: #ffde59;
     margin: 0;
     
 }
@@ -393,7 +393,7 @@ header a{
 
 
 /*media queri de home*/
-@media (max-width: 767px){
+@media (max-width: 769px){
     .logo-nav-container{
     display:flex;
     justify-content: space-between;
@@ -497,6 +497,8 @@ header a{
     .links{
         display: none;
     }
+    
+
    
 }    
 @media (max-width: 576px){
@@ -548,6 +550,9 @@ header a{
     color: white;
     width: 80px;
     font-size: 200%
+    }
+    .links{
+        display: none;
     }
 }
 
