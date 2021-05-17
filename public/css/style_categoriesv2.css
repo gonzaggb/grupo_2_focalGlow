@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    }
+
+html{
+    scroll-behavior: smooth;
+}
+
+
+body{
+    background-image: url(/img/fondo2.jpg);
+   /*  background-color: #E5E5E5; */    
+}
+
+main h2{
+    color: black;
+    text-align: center;
+}
+
+
+.item-list  p {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.nombre-precio{
+    
+    padding: 0;
+    margin-left: 7px;
+    margin-bottom: 8px;
+}
+
+.item-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    padding: 0;
+    justify-content: center;
+    gap: 16px;
+}
+.producto {
+    width: 21%;
+    background-color: rgba(255,255, 255, 0.9);
+    border: 2px solid black;
+    margin: 2px;
+    border-radius: 4px ;
+    box-shadow: 8px 8px 13px grey;
+}
+    
+    
+
+.item-list img{
+    
+    width: 100%;
+    border-bottom: solid 2px black
+    
+    
+    
+    
+}  
+
+
+@media (max-width: 576px){
+   .item-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 5%;
+     margin-right: 0; 
+    margin-left: 0; 
+    margin-bottom: 10%;
+    padding: 0;
+    justify-content: center;
+    gap: 2px;
+    }
+    /* .producto{
+    transition: transform .05s;
+    }
+    .producto:hover{
+    transform: scale(1.1);
+    } */
+   
+   
+   
+    .producto {
+    width: 100%;
+    /* background-color: transparent;
+    border: 0; */
+    }
+    /* .item-list p{
+        display: none;
+    } */
+    .item-list img{
+    
+    width: 100%;
+    
+    }  
+    .links{
+        display: none;
+    } 
+    .inner-nav{
+        display: none;
+    }   
+    #burguer{
+    display: inline-block;
+    color: white;
+    width: 80px;
+    font-size: 200%;
+    
+
+    }  
+    .footer-wrappler{
+        flex-direction: column;
+        align-content: center;
+        
+    }
+
+}
+
+@media (max-width: 798px){
+        .producto {
+    width: 100%;
+    margin: 0;
+    }
+    .producto p{
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 1em;
+    }
+    
+   
+
+}    
+        
+    
+    
+
+
+
+   
+    
+    
+  
+    

@@ -36,6 +36,10 @@ app.get('/categories', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categories.html'))
 })
 
+app.get('/categories2', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
 app.get('/categorias/spot', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categorias/spot.html'))
 })

@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width">
   <title>Product Detail</title>
+
   <link rel = "icon" type="ico" href="/icon/logo.ico">
   <script src="https://kit.fontawesome.com/3f6f16c204.js" crossorigin="anonymous"></script>
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
   <link rel = "stylesheet" href = "/css/normalize.css" type="text/css">
   <link rel = "stylesheet" href = "/css/styles-checkout-header.css">
   <link rel = "stylesheet" href ="css/styles-checkout-footer.css">
-  <link rel = "stylesheet" href = "/css/style-product-detail.css" type="text/css">
+  <link rel = "stylesheet" href = "/css/style-product-detail.css">
   
   
 </head>
@@ -22,57 +22,53 @@
 
   <header>
     <div class="container logo-nav-container">
-        <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
-        <nav class="navigation">
-            <div id="burguer">
-                <div class="dropdown">
-                    <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
-                    <div class="dropdown-content">
-                        <a href="#mas-vendidos">Sale</a>
-                        <a href="#main-categori">Shop</a>
-                        <a href="/us">Nosotros</a>
-                        <!-- <a href="#">Usuario</a> -->
-                        <a href="/login">Iniciar Sesión</a>
-                        <a href="/registro">Registrate</a>
-
-                        <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </div>
+      <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
+      <nav class="navigation">
+        <div id="burguer">
+          <div class="dropdown">
+            <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
+            <div class="dropdown-content">
+                  <a href="#mas-vendidos">Sale</a>
+                  <a href="#main-categori">Shop</a>
+                  <a href="/us">Nosotros</a>
+                  <a href="/login">Iniciar Sesión</a>
+                  <a href="/registro">Registrate</a>
+                  <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
             </div>
-            <ul class='inner-nav'>
-                <li><a href="#mas-vendidos">Sale</a>
-                </li>
-                <li><a href="#main-categori">Shop</a>
-                     <ul class='desplegable'>
-                            <li><a href="/categorias/plafon">Plafón</a></li>
-                            <li><a href="/categorias/apliques">Apliques</a></li>
-                            <li><a href="/categorias/pie">Pie</a></li>
-                            <li><a href="/categorias/colgante">Colgantes</a></li>
-                            <li><a href="/categorias/spot">Spots</a></li>
-                            <li><a href="/categorias/sistema">Accesorios</a></li>
-                            <li><a href="/categorias/mesa">Mesa</a></li>
-                            <li><a href="/categorias/exterior">Exterior</a></li>
-                        </ul>
-                </li>
-                <li><a href="/us">Nosotros</a></li>
-                <li><a href="#">Usuario</a>
-                    <ul class='desplegable'>
-                        <li><a href="/login">Iniciar Sesión</a></li>
-                        <li><a href="">Registrate</a></li>
-                    </ul>
-                </li>
-                <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
-                </li>
-            </ul>
-        </nav>
+          </div>  
+        </div>
+        <ul class='inner-nav'>
+            <li><a href="#mas-vendidos">Sale</a></li>
+            <li><a href="#main-categori">Shop</a>
+              <ul class='desplegable'>
+                <li><a href="/categorias/plafon">Plafón</a></li>
+                <li><a href="/categorias/apliques">Apliques</a></li>
+                <li><a href="/categorias/pie">Pie</a></li>
+                <li><a href="/categorias/colgante">Colgantes</a></li>
+                <li><a href="/categorias/spot">Spots</a></li>
+                <li><a href="/categorias/sistema">Accesorios</a></li>
+                <li><a href="/categorias/mesa">Mesa</a></li>
+                <li><a href="/categorias/exterior">Exterior</a></li>
+              </ul>
+            </li>
+            <li><a href="/us">Nosotros</a></li>
+            <li><a href="#">Usuario</a>
+              <ul class='desplegable'>
+                <li><a href="/login">Iniciar Sesión</a></li>
+                <li><a href="">Registrate</a></li>
+              </ul>
+            </li>
+            <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a></li>
+        </ul>
+      </nav>
     </div>
-</header>
+  </header>
 
   <div class="product-name">
     <h2>Nombre del Producto</h2>
     <a href="/"><i id ="x" class="fas fa-times"></i></a>      
   </div>
-
+ 
   <main> 
     <div class ="product-detail">
       <div class = "main-img">
@@ -162,6 +158,7 @@
 
       <div class = "product-dimensions-info">
         <img src = "img/product_dimensions.jpg" alt = "dimensiones luminaria">
+        <span>Dimensiones</span>
       </div>
   
       <section class = "documents">
@@ -207,42 +204,38 @@
           <label for="r3-2" class="dot"></label>
         </div>
       </div>
-
-
-
-      
     </article>
   </section>
 
 
   <footer class="footer-">
     <section class="footer-wrappler">
-        <article id="part" class="links">
-            <h4>Preguntas frecuentes</h4>
-            <ul>
-                <li><a href="/us#us">Nosotros</a></li>
-                <li><a href="/us#payment_method">Metodos de Pago</a></li>
-                <li><a href="/us#delivery">Envios</a></li>
-            </ul>
-        </article>
-        <article id="part" class="social-media">
-            <h4>Social Media</h4>
-            <ul>
-                <li><a href="https://www.facebook.com/focal.glow/" target="_blank"><i
-                            class="fab fa-facebook-square"></i>Facebook</a></li>
-                <li><a href="https://www.instagram.com/focal_glow_baires/" target="_blank"><i
-                            class="fab fa-instagram"></i>Instagram</a></li>
-            </ul>
-        </article>
-        <article id="part" class="contact">
-            <h4>Contact</h4>
-            <ul>
-                <li><a href=""><i class="far fa-envelope"></i>E-mail</a></li>
-                <li><a href=""><i class="fab fa-whatsapp"></i>Whatsapp</a></li>
-            </ul>
-        </article>
+     <article id="part" class="links">
+      <h4>Preguntas frecuentes</h4>
+      <ul>
+        <li><a href="/us#us">Nosotros</a></li>
+        <li><a href="/us#payment_method">Metodos de Pago</a></li>
+        <li><a href="/us#delivery">Envios</a></li>
+      </ul>
+      </article>
+
+      <article id="part" class="social-media">
+        <h4>Social Media</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/focal.glow/" target="_blank"><i class="fab fa-facebook-square"></i>Facebook</a></li>
+          <li><a href="https://www.instagram.com/focal_glow_baires/" target="_blank"><i class="fab fa-instagram"></i>Instagram</a></li>
+        </ul>
+      </article>
+
+      <article id="part" class="contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href=""><i class="far fa-envelope"></i>E-mail</a></li>
+          <li><a href=""><i class="fab fa-whatsapp"></i>Whatsapp</a></li>
+        </ul>
+      </article>
     </section>
-</footer>
+  </footer>
 
 </body>
 </html>
