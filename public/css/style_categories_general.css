@@ -34,9 +34,14 @@ main h2{
     min-height: 15%;
     display: flex;
     align-items: center;
+<<<<<<< HEAD
     bottom: 5%;
     padding-left: 5%;
     line-height: 18px
+=======
+    bottom: 0%;
+    padding-left: 5%   
+>>>>>>> 3ac7a3108ffedfe1922c280c5240543f6bff2a0f
 }
 
 .nombre {
