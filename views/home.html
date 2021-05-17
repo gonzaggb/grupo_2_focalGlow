@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device=width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!---Al estar declarado en app.js el path.resolve(__dirname,'./public'), solo se indica lo que sigue a la ruta-->
   <title>Focal Glow</title>
   <link rel="icon" href="/icon/logo.ico">
@@ -57,7 +57,7 @@
           <li><a href="#">Usuario</a>
             <ul class='desplegable'>
               <li><a href="/login">Iniciar Sesión</a></li>
-              <li><a href="">Registrate</a></li>
+              <li><a href="/registro">Registrate</a></li>
             </ul>
           </li>
           <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
@@ -80,13 +80,13 @@
   </section>
   <section class="banner">
     <div class="banner-box">
-      <p><i class="far fa-credit-card"></i> 3, 6 y 12 cuotas sin interés! A través de Mercado Pago</p>
+      <p class="banner-content"><i class="far fa-credit-card"></i> 3, 6 y 12 cuotas sin interés! A través de Mercado Pago</p>
     </div>
     <div class="banner-box">
-      <p><i class="fas fa-truck"></i> Envíos a todo el país gratis a partir de $10.000</p>
+      <p class="banner-content"><i class="fas fa-truck"></i> Envíos a todo el país gratis a partir de $10.000</p>
     </div>
     <div class="banner-box">
-      <p><i class="fas fa-money-bill-wave"></i> 20% descuento pagando con débito o transferencia</p>
+      <p class="banner-content"><i class="fas fa-money-bill-wave"></i> 20% descuento pagando con débito o transferencia</p>
     </div>  
   </section>
     
@@ -107,12 +107,9 @@
       </div>
     </div>
   </main>
-  
- 
-
   <section id="mas-vendidos">
-    <h2 id="titulo-mas-vendidos">SALE</h2>
-    <div class="elementos">
+    <h2 id="sale">SALE</h2>
+      <div class="elementos">
       <div id="first-box" class="box">
         <img src="/img/Barcelona.jpg" alt="Barcelona">
         <div class="capa">

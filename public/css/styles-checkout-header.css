@@ -10,13 +10,14 @@ body{
     /* max-width: 850px; */
     margin: 0;
     padding: 0;
-    z-index: 3;
+    z-index: 3;    
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
 }
 .logo{
-    width: 50%;
+    width: 35%;
     padding: 0px;
 }
 .inner-nav{
@@ -32,7 +33,7 @@ body{
 .dropbtn {
     background-color: black;
     color: white;
-    padding: 38px;
+    padding: 41px;
     font-size: 16px;
     border: none;
 }
@@ -52,7 +53,7 @@ body{
   background-color: black;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 10;
 }
 
 /* Links inside the dropdown */
@@ -75,14 +76,14 @@ body{
 .dropdown:hover .dropbtn {background-color: #ffde59;}
 
 
-@media(min-width:798px){
+@media(min-width:768px){
     .container{
     width: 100%;
    /* max-width: 850px;*/
     margin: 0 ;
     padding: 0;
     z-index: 3;
-    height: 13vh;
+    
 }
 
 #burguer{
@@ -114,6 +115,7 @@ header a{
     display:flex;
     justify-content: space-between;
     align-items:center;
+    padding-left: 20px;
 }
 .navigation ul{
  margin: 0;
@@ -138,6 +140,9 @@ header a{
     border: solid red;
     width: 80%;
     display:inline-block;
+}
+.desplegable {
+    z-index: 10;
 }
 
 .desplegable li {
