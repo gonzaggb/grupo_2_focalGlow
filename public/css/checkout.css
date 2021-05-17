@@ -224,6 +224,7 @@ text-align: left;
     
     
 }
+<<<<<<< HEAD
 
 .slider-mini{
     height: 100%;
@@ -245,6 +246,18 @@ text-align: left;
     70%{margin-left: -200%;}
     100%{margin-left: -200%;}
 }
+=======
+.container-login{
+    position: relative;
+}
+.container-login p{
+    position:absolute;
+}
+.login-form::before{
+    content:"Regresar";
+}
+
+>>>>>>> dev
 @media (min-width: 768px){
     .checkout h2{
         text-align: left;
