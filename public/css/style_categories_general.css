@@ -34,7 +34,7 @@ main h2{
     min-height: 15%;
     display: flex;
     align-items: center;
-    bottom: 5%;
+    bottom: 0;
     padding-left: 5%;
     line-height: 18px
 }

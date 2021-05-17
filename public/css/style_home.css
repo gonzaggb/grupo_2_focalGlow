@@ -394,6 +394,12 @@ header a{
 
 /*media queri de home*/
 @media (max-width: 767px){
+    .logo-nav-container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    /* padding-left: 20px; */
+}
     .header{
         z-index: 3;
     }
@@ -494,6 +500,16 @@ header a{
    
 }    
 @media (max-width: 576px){
+    .logo-nav-container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-left: 0px;
+    }
+    .logo {
+    width: 35%;
+    padding: 0px;
+    }
     .slider img {
             width: 100%;
              height: 30vh;
