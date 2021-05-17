@@ -110,9 +110,14 @@ main h2{
         transform: scale(1.1);
         } 
 
+    .producto:hover .nombre-precio{
+        background-color: #ffde59;
+    }    
+
     .nombre-precio {
         display: block;
         position: static;
+        transition: all 1s;
     }
     .precio {
         display: initial;
