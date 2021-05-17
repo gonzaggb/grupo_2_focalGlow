@@ -23,6 +23,10 @@ app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'))
 })
 
+app.get('/registro', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/registro.html'))
+})
+
 app.get('/checkout', (req, res) => {
 
     res.sendFile(path.resolve(__dirname, './views/checkout.html'))
@@ -36,38 +40,40 @@ app.get('/categories', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categories.html'))
 })
 
+app.get('/categories2', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
+})
+
 app.get('/categorias/spot', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/spot.html'))
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
 })
 
 app.get('/categorias/sistema', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/sistema.html'))
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
 })
 
 app.get('/categorias/plafon', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/plafon.html'))
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
 })
 
 app.get('/categorias/pie', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/pie.html'))
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
 })
 
 app.get('/categorias/mesa', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/mesa.html'))
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
 })
 
 app.get('/categorias/exterior', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/exterior.html'))
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
 })
 
 app.get('/categorias/colgante', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/colgante.html'))
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
 })
 
 app.get('/categorias/apliques', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/categorias/apliques.html'))
+    res.sendFile(path.resolve(__dirname, './views/categorias/categoria-general.html'))
 })
 
-app.get('/registro', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/registro.html'))
-})
+

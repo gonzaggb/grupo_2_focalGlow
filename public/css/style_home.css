@@ -27,7 +27,9 @@ h1{
 /*Define caracteristicas de p
 margen de abajo*/
 p{
-    margin-bottom: 1.6em;
+    
+    margin: 16px 0;
+
 }
 /*Define caracteristicas de los container
 ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado*/
@@ -37,7 +39,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     margin: 0 ;
     padding: 0;
     z-index: 3;
-    height: 13vh;
+    /* height: 13vh; */
 }
 
 #burguer{
@@ -45,7 +47,7 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 }
 
 .logo{
-    width: 50%;
+    width: 30%;
     padding: 0px;
 }
 header{
@@ -66,6 +68,7 @@ header a{
     display:flex;
     justify-content: space-between;
     align-items:center;
+    padding-left: 20px;
 }
 .navigation ul{
  margin: 0;
@@ -86,11 +89,11 @@ header a{
     opacity: 0.9;
     color:black;
 }
-.buscar{
+/* .buscar{
     border: solid red;
     width: 80%;
     display:inline-block;
-}
+} */
 
 .desplegable li {
     float: left;
@@ -239,9 +242,18 @@ header a{
     color: white;
 }
 
-#mas-vendidos h2{
-        text-align: center;
-}
+
+#sale{
+    height: 10%;
+    border-radius: 3px;
+    
+    text-align: left;
+    font-size: 3em;
+    color: white;
+   } 
+    
+
+
 
  .elementos{
     display: flex;
@@ -381,7 +393,13 @@ header a{
 
 
 /*media queri de home*/
-@media (max-width: 798px){
+@media (max-width: 767px){
+    .logo-nav-container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    /* padding-left: 20px; */
+}
     .header{
         z-index: 3;
     }
@@ -482,6 +500,16 @@ header a{
    
 }    
 @media (max-width: 576px){
+    .logo-nav-container{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding-left: 0px;
+    }
+    .logo {
+    width: 35%;
+    padding: 0px;
+    }
     .slider img {
             width: 100%;
              height: 30vh;
