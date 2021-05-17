@@ -224,29 +224,6 @@ text-align: left;
     
     
 }
-<<<<<<< HEAD
-
-.slider-mini{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    
-    
-}
-
-@keyframes cambio-mini{
-    0%{margin-left: 0;}
-    30%{margin-left: 0;}
-
-    35%{margin-left: -100%;}
-    65%{margin-left: -100%;}
-
-    70%{margin-left: -200%;}
-    100%{margin-left: -200%;}
-}
-=======
 .container-login{
     position: relative;
 }
@@ -257,7 +234,6 @@ text-align: left;
     content:"Regresar";
 }
 
->>>>>>> dev
 @media (min-width: 768px){
     .checkout h2{
         text-align: left;
