@@ -182,7 +182,7 @@ text-align: left;
 }
 
 .final-button:hover{
-    background-color: rgba(255, 222, 89, 0.6);
+    background-color: rgba(255, 222, 89, 1);
     color: black;
 }
 .similar-interests{
