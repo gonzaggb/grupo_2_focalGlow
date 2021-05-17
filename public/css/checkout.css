@@ -6,6 +6,9 @@
 body{
     background-image: url(/img/fondo2.jpg)
 }
+p{
+    margin: 16px 0;
+}
 .checkout{
     display: flex;
     flex-direction: row;
