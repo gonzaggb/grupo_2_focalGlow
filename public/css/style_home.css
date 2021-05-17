@@ -159,7 +159,31 @@ header a{
     70%{margin-left: -300%;}
     100%{margin-left: -300%;}
 }
+/*aca empieza banner*/
+.banner{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top: solid 1px black;
+    border-bottom:solid 1px black ;
+    flex-grow: inherit;
+    background-color: black;
+    color: white;
+    
+}
 
+.banner-box{
+    margin: 0 2vw;
+}  
+
+.banner-box a{
+    text-decoration: none;
+}
+
+.banner-content{
+    text-decoration: none;
+    margin: 1vh 0;
+}
 
 /*Aca empieza la seccion de Categoria*/
 
@@ -390,7 +414,27 @@ header a{
     content: "\f16d";
     margin-right: 7px;
 }    
-
+@media (max-width: 952px){
+    .banner {
+    display: flex;
+    flex-direction: row;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    text-align: center;
+}
+    
+    
+}
+@media (max-width: 576px){
+    .banner-box{
+        width: 30%;
+    }
+    .banner{
+    flex-direction: row;
+    line-height: 12px;
+    font-size: 9px;
+    }
+}
 
 /*media queri de home*/
 @media (max-width: 769px){
