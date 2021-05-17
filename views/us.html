@@ -2,155 +2,127 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device=width, initial-scale=1.0">
-  <!---Al estar declarado en app.js el path.resolve(__dirname,'./public'), solo se indica lo que sigue a la ruta-->
-  <title>Focal Glow</title>
-  <link rel="icon" href="/icon/logo.ico">
-  <link rel="stylesheet" href="/css/normalize.css">
-  <link rel="stylesheet" href="/css/styles.css">
-  <link rel="stylesheet" href="/css/style_us.css">
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
-  </style>
-  <script src="https://kit.fontawesome.com/641c03bd1a.js" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!---Al estar declarado en app.js el path.resolve(__dirname,'./public'), solo se indica lo que sigue a la ruta-->
+    <title>Focal Glow Us</title>
+    <link rel="icon" href="/icon/logo.ico">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <!-- <link rel="stylesheet" href="/css/style_banner.css"> -->
+    <!-- <link rel="stylesheet" href="/css/style_home.css"> -->
+    <link rel="stylesheet" href="/css/style_us.css">
+    <link rel="stylesheet" href="/css/style_menu_responsive.css">
+    <link rel="stylesheet" href="/css/styles-checkout-footer.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+    </style>
+    <script src="https://kit.fontawesome.com/641c03bd1a.js" crossorigin="anonymous"></script>
 </head>
-<header class="header">
-  <div class="container logo-nav-container">
-    <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
-    <nav class="navigation">
-      <ul class='inner_nav'>
-        <li><a href="/#mas_vendidos">Ofertas</a>
-        </li>
-        <li><a href="#">Categorias</a>
-          <ul class='desplegable'>
-            <li><a href="/categories#plafon">Plafón</a></li>
-            <li><a href="/categories#aplique">Apliques</a></li>
-            <li><a href="/categories#pie">Pie</a></li>
-            <li><a href="/categories#colgante">Colgantes</a></li>
-            <li><a href="/categories#embutido">Spots</a></li>
-            <li><a href="/categories#sistema">Accesorios</a></li>
-            <li><a href="/categories#mesa">Mesa</a></li>
-            <li><a href="/categories#exterior">Exterior</a></li>
-          </ul>
-        </li>
-        <li><a href="/us">Nosotros</a></li>
-        <li><a href="#">Usuario</a>
-          <ul class='desplegable'>
-            <li><a href="/login">Iniciar Sesión</a></li>
-            <li><a href="">Registrate</a></li>
-          </ul>
-        </li>
-        <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<section>
-  <div class='slider'>
-    <ul>
-      <li><img src="/img/colgantes1.jpg" alt=""></li>
-      <li><img src="/img/colgantes2.jpg" alt=""></li>
-      <li><img src="/img/colgantes3.jpg" alt=""></li>
-
-    </ul>
-
-  </div>
-</section>
-<main class="main">
-  <h6 id="us" style="color: transparent;">hola</h6>
-  <section class="us">
-    <article>
-      <h3>Nosotros</h3>
-      <p>
-        <strong>Focal Glow</strong> es una empresa dedicada a la fabricación integral de artefactos para iluminación y a
-        la importación de las
-        últimas tendencias lumínicas, con más de 15 años liderando el mercado.
-      </p>
-      <p>
-        Contamos con 4 sucursales modernas exhibiendo nuestros productos, donde el personal profesional y capacitado
-        podrá
-        asesorarte y hacer realidad tu proyecto tomando la mejor decisión de compra.
-      </p>
-      <p>
-        Somos sin dudas, la empresa líder en iluminación profesional y decorativa donde podés conocernos y tener la
-        tranquilidad
-        de que le estás comprando a una verdadera casa de iluminación, con las puertas abiertas para que vengas y
-        vuelvas en
-        cualquier momento, para eso trabajamos y queremos que tu experiencia con Focal Glow sea 100% satisfactoria.
-      </p>
-    </article>
-
-  </section>
-  <h6 id="us" style="color: transparent;">hola</h6>
-  <section id="payment_method">
-    <article>
-      <h3>Formas de Pago</h3>
-      <p>Acepatamos <strong>Mercado Pago</strong> con todas sus promociones vigentes</p>
-      <img src="/img/mercado-pago.jpg" alt="pagos mercadolibre">
-    </article>
-    <article>
-      <h3>Ahora 12</h3>
-      <p>Contamos con el programa <strong>Ahora 12</strong> todos los dias</p>
-      <img src="/img/ahora-12.jpg" alt="ahora 12">
-    </article>
-    <article class="icons">
-      <h3>En nuestras sucursales</h3>
-      <i class="fas fa-credit-card">
-        <p>Todas las tarjetas de crédito y débito tradicionales.</p>
-      </i>
-
-    </article>
-    <article class="icons">
-      <h3>Transferencia Bancaria</h3>
-      <i class="fas fa-exchange-alt">
-        <p>Podés abonar tus compras con transferencia bancaria solicitando los datos.</p>
-      </i>
-
-    </article>
-
-
-  </section>
-  <h6 id="us" style="color: transparent;">hola</h6>
-  <section id="delivery">
-    <article>
-
-    </article>
-
-  </section>
-</main>
 
 <body>
-
+    <header>
+        <div class="container logo-nav-container">
+            <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
+            <nav class="navigation">
+                <div id="burguer">
+                    <div class="dropdown">
+                        <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#mas-vendidos">Sale</a>
+                            <a href="#main-categori">Shop</a>
+                            <a href="/us">Nosotros</a>
+                            <!-- <a href="#">Usuario</a> -->
+                            <a href="/login">Iniciar Sesión</a>
+                            <a href="/registro">Registrate</a>
+    
+                            <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <ul class='inner-nav'>
+                    <li><a href="#mas-vendidos">Sale</a>
+                    </li>
+                    <li><a href="#main-categori">Shop</a>
+                         <ul class='desplegable'>
+                                <li><a href="">Plafón</a></li>
+                                <li><a href="">Apliques</a></li>
+                                <li><a href="">Pie</a></li>
+                                <li><a href="">Colgantes</a></li>
+                                <li><a href="">Spots</a></li>
+                                <li><a href="">Accesorios</a></li>
+                                <li><a href="">Mesa</a></li>
+                                <li><a href="">Exterior</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="/us">Nosotros</a></li>
+                    <li><a href="#">Usuario</a>
+                        <ul class='desplegable'>
+                            <li><a href="/login">Iniciar Sesión</a></li>
+                            <li><a href="/registro">Registrate</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+        <main>
+            <div class="main-wrapper">
+                <div class="aside">
+                    <h2>Quiénes Somos</h2>
+                    <p><strong>Focal Glow</strong> es diseño y creatividad, iluminación y pasión, adaptación y dedicación al cliente.<br><br>
+                    
+                    Somos especialistas en crear <strong>emociones</strong> a través de la luz. Nuestra experiencia en el sector consolida el éxito de
+                    nuestros proyectos.<br>
+                    
+                    De principio a fin, trabajamos mano a mano con nuestros clientes, sabiendo cumplir con las necesidades y expectativas
+                    que requiere cada desafío y, ofreciendo un servicio y gestión integral del proyecto.<br><br>
+                    
+                    Nos divierte <strong>transformar</strong> lugares, pero también queremos llegar a las personas que interactúan en esos <strong>espacios</strong>.
+                    Adaptamos el mundo del cliente transformándolo en un concepto propio e identificador.<br><br>
+                    
+                    Hoy en día seguimos <strong>innovando</strong> en cada una de nuestras creaciones, dotando de carácter y sofisticación cada proyecto.<br><br>
+                    
+                    La cercanía es uno de nuestros principales valores. Nos diferenciamos de las grandes plataformas on-line en la
+                    especialización y apostamos por un trato más cercano de persona a persona.<strong>¡Somos un equipo!</strong><br> Nuestro compromiso se basa
+                    en la lealtad. Trabajamos codo con codo para hacernos más fuerte. <strong>¡Siempre estamos a tu lado!</strong></p>
+                </div>
+                <div class="aside">
+                    <img src="/img/somos.jpg" alt="nuestro local">
+                </div>
+            </div>
+        </main>
+    
+    <footer class="footer-">
+        <section class="footer-wrappler">
+            <article id="part" class="links">
+                <h4>Preguntas frecuentes</h4>
+                <ul>
+                    <li><a href="/us#us">Nosotros</a></li>
+                    <li><a href="/us#payment_method">Metodos de Pago</a></li>
+                    <li><a href="/us#delivery">Envios</a></li>
+                </ul>
+            </article>
+            <article id="part" class="social-media">
+                <h4>Social Media</h4>
+                <ul>
+                    <li><a href="https://www.facebook.com/focal.glow/" target="_blank"><i
+                                class="fab fa-facebook-square"></i>Facebook</a></li>
+                    <li><a href="https://www.instagram.com/focal_glow_baires/" target="_blank"><i
+                                class="fab fa-instagram"></i>Instagram</a></li>
+                </ul>
+            </article>
+            <article id="part" class="contact">
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href=""><i class="far fa-envelope"></i>E-mail</a></li>
+                    <li><a href=""><i class="fab fa-whatsapp"></i>Whatsapp</a></li>
+                </ul>
+            </article>
+        </section>
+    </footer>
 </body>
-
-<footer class="footer">
-  <section class="footer_wrappler">
-    <article class="links">
-      <h4>Preguntas frecuentes</h4>
-      <ul>
-        <li><a href="/us#us">Nosotros</a></li>
-        <li><a href="/us#payment_method">Metodos de Pago</a></li>
-        <li><a href="/us#delivery">Envios</a></li>
-      </ul>
-    </article>
-    <article class="social_media">
-      <h4>Social Media</h4>
-      <ul>
-        <li><a href="https://www.facebook.com/focal.glow/" target="_blank"><i
-              class="fab fa-facebook-square"></i>Facebook</a></li>
-        <li><a href="https://www.instagram.com/focal_glow_baires/" target="_blank"><i
-              class="fab fa-instagram"></i>Instagram</a></li>
-      </ul>
-    </article>
-    <article class="contact">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href=""><i class="far fa-envelope"></i>E-mail</a></li>
-        <li><a href=""><i class="fab fa-whatsapp"></i>Whatsapp</a></li>
-      </ul>
-    </article>
-  </section>
-</footer>
 
 </html>

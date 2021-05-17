@@ -3,13 +3,16 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device=width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!---Al estar declarado en app.js el path.resolve(__dirname,'./public'), solo se indica lo que sigue a la ruta-->
   <title>Focal Glow</title>
   <link rel="icon" href="/icon/logo.ico">
   <link rel="stylesheet" href="/css/normalize">
-  <link rel="stylesheet" href="/css/styles.css">
+  <!-- <link rel="stylesheet" href="/css/styles.css"> -->
   <link rel="stylesheet" href="/css/style_categories.css">
+  <link rel="stylesheet" href="/css/style_banner.css">
+  <script src="https://kit.fontawesome.com/641c03bd1a.js" crossorigin="anonymous"></script>
+  
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
@@ -22,7 +25,10 @@
     <div class="container logo-nav-container">
       <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
       <nav class="navigation">
-        <ul class='inner_nav'>
+        <div class="">
+          <i id="burguer" class="fas fa-bars"></i>
+        </div>
+        <ul class='inner-nav'>
           <li><a href="/#mas_vendidos">Ofertas</a>
           </li>
           <li><a href="#">Categorias</a>
@@ -41,7 +47,7 @@
           <li><a href="#">Usuario</a>
             <ul class='desplegable'>
               <li><a href="/login">Iniciar Sesión</a></li>
-              <li><a href="">Registrate</a></li>
+              <li><a href="/registro">Registrate</a></li>
             </ul>
           </li>
           <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a></li>
@@ -50,132 +56,149 @@
     </div>
   </header>
 
-  <section class="main_slider">
-    <div class='slider'>
-      <ul>
-        <li><img src="/img/colgantes1.jpg" alt=""></li>
-        <li><img src="/img/colgantes2.jpg" alt=""></li>
-        <li><img src="/img/colgantes3.jpg" alt=""></li>
+<section class="main-slider">
+  <div class='slider'>
+    <ul>
+      <li><img src="/img/lamp1.jpg" alt=""></li>
+      <li><img src="/img/colgantes3.jpg" alt=""></li>
+      <li><img src="/img/lamp3.jpg" alt=""></li>
+    </ul>
 
-      </ul>
 
+  </div>
+</section>
+  <section class="banner">
+    <div class="banner-box">
+      <p><i class="far fa-credit-card"></i> 3, 6 y 12 cuotas sin interés! A través de Mercado Pago</p>
     </div>
+    <div class="banner-box">
+      <p><i class="fas fa-truck"></i> Envíos a todo el país gratis a partir de $10.000</p>
+    </div>
+    <div class="banner-box">
+      <p><i class="fas fa-money-bill-wave"></i> 20% descuento pagando con débito o transferencia</p>
+    </div>
+    <div class="banner-box">
+      <a href="">
+        <p><i class="fab fa-whatsapp"></i> Tenés dudas? Contactanos y te asesoramos</p>
+      </a>
+    </div>
+  
   </section>
 
-  <section class="diferent_categories">
+  <section class="diferent-categories">
     <article id="plafon">
-      <h2 style="color: transparent;">plafon</h2>
-      <ul class="item_list">
-        <li><img src="/img/plafon.jpg" alt=""></li>
-        <li><img src="/img/plafon.jpg" alt=""></li>
-        <li><img src="/img/plafon.jpg" alt=""></li>
-        <li><img src="/img/plafon.jpg" alt=""></li>
-        <li><img src="/img/plafon.jpg" alt=""></li>
-        <li><img src="/img/plafon.jpg" alt=""></li>
-        <li><img src="/img/plafon.jpg" alt=""></li>
-        <li><img src="/img/plafon.jpg" alt=""></li>
+      <h2>PLAFÓN</h2>
+      <ul class="item-list">
+        <li><img class="zoom" src="/img/plafon/plafon1.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/plafon/plafon2.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/plafon/plafon3.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/plafon/plafon4.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/plafon/plafon5.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/plafon/plafon6.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/plafon/plafon7.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/plafon/plafon8.jpg" alt=""></li>
       </ul>
 
     </article>
       
     
-    <article>
-      <h2 id="aplique">Plafon</h2>
-      <ul class="item_list">
-        <li><img src="/img/aplique.jpg" alt=""></li>
-        <li><img src="/img/aplique.jpg" alt=""></li>
-        <li><img src="/img/aplique.jpg" alt=""></li>
-        <li><img src="/img/aplique.jpg" alt=""></li>
-        <li><img src="/img/aplique.jpg" alt=""></li>
-        <li><img src="/img/aplique.jpg" alt=""></li>
-        <li><img src="/img/aplique.jpg" alt=""></li>
-        <li><img src="/img/aplique.jpg" alt=""></li>
+    <article id="aplique">
+      <h2>APLIQUE</h2>
+      <ul class="item-list">
+        <li><img class="zoom" src="/img/Aplique/aplique1.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/Aplique/aplique2.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/Aplique/aplique3.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/Aplique/aplique4.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/Aplique/aplique5.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/Aplique/aplique6.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/Aplique/aplique7.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/Aplique/aplique8.jpg" alt=""></li>
       </ul>
     </article>
 
     <article id="pie">
-      <h2>Aplique</h2>
-      <ul class="item_list">
-        <li><img src="/img/pie.jpg" alt=""></li>
-        <li><img src="/img/pie.jpg" alt=""></li>
-        <li><img src="/img/pie.jpg" alt=""></li>
-        <li><img src="/img/pie.jpg" alt=""></li>
-        <li><img src="/img/pie.jpg" alt=""></li>
-        <li><img src="/img/pie.jpg" alt=""></li>
-        <li><img src="/img/pie.jpg" alt=""></li>
-        <li><img src="/img/pie.jpg" alt=""></li>
+      <h2>PIE</h2>
+      <ul class="item-list">
+        <li><img class="zoom" src="/img/pie/pie1.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/pie/pie2.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/pie/pie3.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/pie/pie4.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/pie/pie5.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/pie/pie6.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/pie/pie7.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/pie/pie8.jpg" alt=""></li>
       </ul>
     </article>
     <article id="colgante">
-      <h2>Pie</h2>
-      <ul class="item_list">
-        <li><img src="/img/colgante.jpg" alt=""></li>
-        <li><img src="/img/colgante.jpg" alt=""></li>
-        <li><img src="/img/colgante.jpg" alt=""></li>
-        <li><img src="/img/colgante.jpg" alt=""></li>
-        <li><img src="/img/colgante.jpg" alt=""></li>
-        <li><img src="/img/colgante.jpg" alt=""></li>
-        <li><img src="/img/colgante.jpg" alt=""></li>
-        <li><img src="/img/colgante.jpg" alt=""></li>
+      <h2>COLGANTE</h2>
+      <ul class="item-list">
+        <li><img class="zoom" src="/img/colgante/colgante1.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/colgante/colgante2.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/colgante/colgante3.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/colgante/colgante4.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/colgante/colgante5.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/colgante/colgante6.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/colgante/colgante7.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/colgante/colgante8.jpg" alt=""></li>
       </ul>
     </article>
     <article id="embutido">
-      <h2>Colgante</h2>
-      <ul class="item_list">
-        <li><img src="/img/spot-embutido.jpg" alt=""></li>
-        <li><img src="/img/spot-embutido.jpg" alt=""></li>
-        <li><img src="/img/spot-embutido.jpg" alt=""></li>
-        <li><img src="/img/spot-embutido.jpg" alt=""></li>
-        <li><img src="/img/spot-embutido.jpg" alt=""></li>
-        <li><img src="/img/spot-embutido.jpg" alt=""></li>
-        <li><img src="/img/spot-embutido.jpg" alt=""></li>
-        <li><img src="/img/spot-embutido.jpg" alt=""></li>
+      <h2>SPOT</h2>
+      <ul class="item-list">
+        <li><img class="zoom" src="/img/spot/spot1.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/spot/spot2.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/spot/spot3.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/spot/spot4.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/spot/spot5.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/spot/spot6.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/spot/spot7.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/spot/spot8.jpg" alt=""></li>
       </ul>
     </article>
     <article id="sistema">
-      <h2>Spot</h2>
-      <ul class="item_list">
-        <li><img src="/img/sistema.jpg" alt=""></li>
-        <li><img src="/img/sistema.jpg" alt=""></li>
-        <li><img src="/img/sistema.jpg" alt=""></li>
-        <li><img src="/img/sistema.jpg" alt=""></li>
-        <li><img src="/img/sistema.jpg" alt=""></li>
-        <li><img src="/img/sistema.jpg" alt=""></li>
-        <li><img src="/img/sistema.jpg" alt=""></li>
-        <li><img src="/img/sistema.jpg" alt=""></li>
+      <h2>SISTEMAS/ACCESORIOS</h2>
+      <ul class="item-list">
+        <li><img class="zoom" src="/img/sistema/sis1.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/sistema/sis2.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/sistema/sis3.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/sistema/sis4.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/sistema/sis5.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/sistema/sis6.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/sistema/sis7.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/sistema/sis8.jpg" alt=""></li>
       </ul>
     </article>
     <article id="mesa">
-      <h2>Sistemas/Accesorios</h2>
-      <ul class="item_list">
-        <li><img src="/img/mesa.jpg" alt=""></li>
-        <li><img src="/img/mesa.jpg" alt=""></li>
-        <li><img src="/img/mesa.jpg" alt=""></li>
-        <li><img src="/img/mesa.jpg" alt=""></li>
-        <li><img src="/img/mesa.jpg" alt=""></li>
-        <li><img src="/img/mesa.jpg" alt=""></li>
-        <li><img src="/img/mesa.jpg" alt=""></li>
-        <li><img src="/img/mesa.jpg" alt=""></li>
+      <h2>MESA</h2>
+      <ul class="item-list">
+        <li><img class="zoom" src="/img/mesa/mesa1.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/mesa/mesa2.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/mesa/mesa3.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/mesa/mesa4.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/mesa/mesa5.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/mesa/mesa6.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/mesa/mesa7.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/mesa/mesa8.jpg" alt=""></li>
       </ul>
     </article>
     <article id="exterior">
-      <h2>Mesa</h2>
-      <ul class="item_list">
-        <li><img src="/img/exterior.jpg" alt=""></li>
-        <li><img src="/img/exterior.jpg" alt=""></li>
-        <li><img src="/img/exterior.jpg" alt=""></li>
-        <li><img src="/img/exterior.jpg" alt=""></li>
-        <li><img src="/img/exterior.jpg" alt=""></li>
-        <li><img src="/img/exterior.jpg" alt=""></li>
-        <li><img src="/img/exterior.jpg" alt=""></li>
-        <li><img src="/img/exterior.jpg" alt=""></li>
+      <h2>EXTERIOR</h2>
+      <ul class="item-list">
+        <li><img class="zoom" src="/img/exterior/exterior1.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/exterior/exterior2.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/exterior/exterior3.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/exterior/exterior4.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/exterior/exterior5.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/exterior/exterior6.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/exterior/exterior7.jpg" alt=""></li>
+        <li><img class="zoom" src="/img/exterior/exterior8.jpg" alt=""></li>
       </ul>
-      <h2>Exterior</h2>
+      
     </article>
   </section>
-  <footer class="footer">
-    <section class="footer_wrappler">
-      <article class="links">
+  <footer class="footer-">
+    <section class="footer-wrappler">
+      <article id="part" class="links">
         <h4>Preguntas frecuentes</h4>
         <ul>
           <li><a href="/us#us">Nosotros</a></li>
@@ -183,7 +206,7 @@
           <li><a href="/us#delivery">Envios</a></li>
         </ul>
       </article>
-      <article class="social_media">
+      <article id="part" class="social-media">
         <h4>Social Media</h4>
         <ul>
           <li><a href="https://www.facebook.com/focal.glow/" target="_blank"><i
@@ -192,7 +215,7 @@
                 class="fab fa-instagram"></i>Instagram</a></li>
         </ul>
       </article>
-      <article class="contact">
+      <article id="part" class="contact">
         <h4>Contact</h4>
         <ul>
           <li><a href=""><i class="far fa-envelope"></i>E-mail</a></li>

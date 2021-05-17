@@ -1,4 +1,4 @@
-@media (max-width: 952px){
+@media (max-width: 798px){
     .header{
         z-index: 3;
     }
@@ -15,8 +15,9 @@
     align-self: center;
     }
     .logo{
-    width: 25vh;
+    width: 15vh;
     padding: 0px;
+    
 
     }
     #mas_vendidos{
@@ -30,7 +31,7 @@
     margin-bottom: -30%;
     height: 15%;
     border-radius: 3px;
-    background-color: rgba(182, 186, 190, 0.5);
+    
     
     }
 
@@ -67,6 +68,50 @@
     position: relative;
     }
     
+    .links ul li{
+    list-style: none;
     
+    } 
+   
+    .inner_nav{
+        display: none;
+    }   
+    #burguer{
+    display: inline-block;
+    color: white;
+    width: 80px;
+    font-size: 200%
+    }
+    .footer_wrappler{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 3%;
+    }
+    .links{
+        display: none;
+    }
+   
 }    
-     
+@media (max-width: 576px){
+    .slider img {
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .banner {
+    display: flex;
+    flex-direction: column;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    text-align: center;
+    display: none;
+    }
+    #titulo_mas_vendidos {
+    margin-bottom: -30%;
+    height: 15%;
+    border-radius: 3px;
+    }
+}

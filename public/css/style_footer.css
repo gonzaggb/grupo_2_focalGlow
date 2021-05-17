@@ -1,97 +1,13 @@
 .footer{
-    background-color: rgba(0,0,0,0);
-    border-top: white solid 1px;
-    margin-top: 108%;
-    position:fixed;
-    width: 100%;
+    background-color: black;
+    color:white;
 }
 .footer_wrappler{
-
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    font-size: 0.8em;
-    line-height: 20px; 
-}
-.footer_wrappler  article h4{
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-.footer_wrappler article{
-    margin-left: 2%;
-    margin-right: 2%;
-    justify-content: space-between;
-    
-}
-.links ul{
-    padding: 0;
-}
-.links ul li{
-    list-style: none;
-}    
-.links ul li a{
-    text-decoration: none;
-    color: white;
-}  
-
-
-.social_media ul{
-    
-    padding: 0;
-    justify-content: space-between;
-    
-}
-.social_media ul li a {
-    text-decoration: none;
-    color: white;
-}
-.contact{
-    text-align: center;
-}
-.contact ul{
-    
-    padding: 0;
-}
-.contact ul li {
+    flex-direction: row;
     justify-content: space-between;
 }
-.contact ul li a {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-}
-.fa-envelope:before {
-    content: "\f0e0";
-    margin: 7px;}
-.fa-whatsapp:before {
-    content: "\f232";
-    margin: 7px;
-}
-.fa-facebook-square:before {
-    content: "\f082";
-    margin: 7px;
-}
-
-.fa-instagram:before {
-    content: "\f16d";
-    margin: 7px;
-}
-
-@media (min-width: 952px){
-    .footer{
-        background-color: rgba(0,0,0,0);
-        border-top: white solid 1px;
-        margin-top: 400px;
-        position:absolute;
-        width: 100%;
-    }
-    .footer_wrappler{
-    
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        font-size: 0.8em;
-        line-height: 20px; 
-    }
+ul{
+    list-style-type: none;
+    padding: 0;
 }

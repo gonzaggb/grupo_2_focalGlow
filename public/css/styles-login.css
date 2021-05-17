@@ -15,27 +15,14 @@ body{
     font-size: 1rem;
     line-height: 1.6em;
     background-color: black;
+    background-image: url(/img/portada-gogo-mobile.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: contain;
+    background-size: cover;
     background-position: center;
     color:white;
 }
-.container{
-    text-align: center;
-    background-image: url(/img/portada-gogo-mobile.jpg);
-}
-.login-container{
 
-    text-align: center;
-    width: 70%;
-    height: 70%;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 .login-form{
     background-color: rgba(255, 255, 255, 0.2);
     position: absolute;
@@ -46,6 +33,8 @@ body{
     transform: translate(-50%, -50%);
     border-radius: 2%;
     position: fixed;
+    height: 250px;
+    width: 200px;
 }
 .form-container{
 
@@ -72,12 +61,24 @@ body{
 .forgotten-button{
     font-size: 10px;
     color: white;
+    line-height: 20px;
     
 }
 .forgotten-button a{
     color: white;  
     text-decoration: none;  
+    line-height: 15px;
 }
+.error-data{
+    color:red;
+    font-size: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+.remember{
+    font-size: 12px;
+}
+
 
     
 /*Define caracteristicas del h1
@@ -578,10 +579,23 @@ body{
     background-image: url(/img/portada-gogo-1024x768.jpg);
     color:black;
 }
+.login-form{
+background-color: rgba(255, 255, 255, 0.1);
+position: absolute;
+top: 10px;
+left: 10px;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+border-radius: 2%;
+position: fixed;
+width: 250px;
 
-.forgotten-button{
+}
+
+.forgotten-button a{
     font-size: 10px;
-    color: white;
     text-decoration: none ;
 }
+
 }
