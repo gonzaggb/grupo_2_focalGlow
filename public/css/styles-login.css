@@ -1,6 +1,8 @@
 *{
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    margin:0;
+    padding:0;
 }
 
 
@@ -23,18 +25,21 @@ body{
     color:white;
 }
 
-.login-form{
+.login-form {
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.3);
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 2%;
     position: fixed;
-    height: 250px;
+    height: 270px;
     width: 230px;
+    text-align: center;
+}
+.login-form .back{
+    font-size:0.8em;
 }
 .form-container{
 
@@ -44,6 +49,52 @@ body{
 .form-container label{
     margin-left: 5px;
 }
+.container-login .back {
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    margin-right: 5px;
+}
+
+.back-container{
+    text-align: center;
+    line-height: 5px;
+    position: relative;
+    top: 290px;
+}
+.container-login .circulos{
+    font-size: 15px;
+    margin-bottom: 5px;
+    color: black;
+    margin-top: 15px;
+    font-weight: bold;
+}
+.container-login .circulos span{
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 3px;
+}
+.container-login .circulos div{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid white;
+    border-radius: 37px;
+    background: white;
+    font-size: 15px;
+}
+.container-login .circulos .circulo-amarillo{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #ffde59;
+    border-radius: 37px;
+    background: #ffde59;
+
+}
+
+
 
 .input-login{
     width: 90%;
@@ -66,7 +117,6 @@ body{
     margin: 0 auto;
     margin-bottom: 5px;
     height: 30px;
-    border:none;
     border-radius: 15px;
     transition: all 0.7s;
 }
@@ -152,4 +202,7 @@ width: 250px;
     text-decoration: none ;
 }
 
+.back-container {
+    top: 385px;
+}
 }

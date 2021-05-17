@@ -224,6 +224,16 @@ text-align: left;
     
     
 }
+.container-login{
+    position: relative;
+}
+.container-login p{
+    position:absolute;
+}
+.login-form::before{
+    content:"Regresar";
+}
+
 @media (min-width: 768px){
     .checkout h2{
         text-align: left;
