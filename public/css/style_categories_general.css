@@ -19,6 +19,15 @@ main {
     margin: 0 auto;
 }
 
+figure {
+    margin:0px;
+    padding:0px;
+}
+
+figure img {
+    width: 100%;
+}
+
 main h2{
     color: black;
     text-align: center;
