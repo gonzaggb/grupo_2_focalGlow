@@ -14,28 +14,60 @@ body{
    /*  background-color: #E5E5E5; */    
 }
 
+main {
+    width: 90%;
+    margin: 0 auto;
+}
+
 main h2{
     color: black;
     text-align: center;
+    font-size: 30px;
 }
 
-
-.item-list  p {
-    margin: 0;
-    border: 0;
-    padding: 0;
-    font-size: 1.2em;
-}
 
 .nombre-precio{
-    
-    padding: 0;
-    margin-left: 7px;
-    margin-bottom: 8px;
+    background-color: rgba(255,255,255, 0.8);
+    position: absolute;
+    width: 100%;
+    min-height: 15%;
+    display: flex;
+    align-items: center;
+    bottom: 5%;
+    padding-left: 5%   
 }
 
+.nombre {
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+}
+.precio {
+    display: none;
+    margin: 0;
+}
+    
+
+
+.producto {
+      
+    margin: 10px 0px;
+    
+    box-shadow: 8px 8px 13px grey;
+    position: relative;
+}
+    
+    
+
+.item-list img{
+    
+    width: 100%;
+
+}  
+
+/*media Query*/
+@media (min-width: 576px){
 .item-list {
-    list-style: none;
     display: flex;
     flex-wrap: wrap;
     margin-top: 1%;
@@ -44,109 +76,50 @@ main h2{
     margin-bottom: 10%;
     padding: 0;
     justify-content: center;
-    gap: 16px;
-}
-.producto {
-    width: 21%;
-    background-color: rgba(255,255, 255, 0.9);
-    border: 2px solid black;
-    margin: 2px;
-    border-radius: 4px ;
-    box-shadow: 8px 8px 13px grey;
-}
-    
-    
-
-.item-list img{
-    
-    width: 100%;
-    border-bottom: solid 2px black
-    
-    
-    
-    
-}  
-
-
-@media (max-width: 576px){
-   .item-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 5%;
-     margin-right: 0; 
-    margin-left: 0; 
-    margin-bottom: 10%;
-    padding: 0;
-    justify-content: center;
-    gap: 2px;
+    gap: 8px;
     }
-    /* .producto{
-    transition: transform .05s;
-    }
-    .producto:hover{
-    transform: scale(1.1);
-    } */
-   
-   
-   
     .producto {
-    width: 100%;
-    /* background-color: transparent;
-    border: 0; */
+    width: 49%;
+    margin: 2px 0px;
     }
-    /* .item-list p{
-        display: none;
-    } */
-    .item-list img{
-    
-    width: 100%;
-    
-    }  
-    .links{
-        display: none;
-    } 
-    .inner-nav{
-        display: none;
-    }   
-    #burguer{
-    display: inline-block;
-    color: white;
-    width: 80px;
-    font-size: 200%;
-    
+      
+    .nombre {
+        font-size: 18px;
+    }
+}    
 
-    }  
-    .footer-wrappler{
-        flex-direction: column;
-        align-content: center;
-        
+
+@media (min-width: 768px) {
+    .producto {
+        width: 32%;
+        transition: transform .05s;    
     }
 
+    .producto:hover{
+        transform: scale(1.1);
+        } 
+
+    .nombre-precio {
+        display: block;
+        position: static;
+    }
+    .precio {
+        display: initial;
+        font-size: 12px;
+     
+    }
+    .nombre {
+        font-size: 12px;
+      
+    }
 }
 
-@media (max-width: 798px){
-        .producto {
-    width: 100%;
-    margin: 0;
+@media (min-width: 1024px) {
+    main {
+        width: 100%;
     }
-    .producto p{
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 1em;
-    }
-    
-   
+    .producto {
+        width: 24%;
 
+    }
 }    
-        
-    
-    
-
-
-
-   
-    
-    
-  
-    

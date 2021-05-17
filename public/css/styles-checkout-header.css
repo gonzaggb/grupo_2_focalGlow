@@ -116,6 +116,7 @@ header a{
     display:flex;
     justify-content: space-between;
     align-items:center;
+    padding-left: 20px;
 }
 .navigation ul{
  margin: 0;
