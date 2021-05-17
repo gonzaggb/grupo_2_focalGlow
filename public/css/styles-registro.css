@@ -101,7 +101,13 @@ body{
     display: block;
     margin-left: 20px;
 }
-
+.back{
+    text-decoration: none;
+    color:white;
+    text-align: right;
+    margin-right: 15px;
+    font-size: 0.8rem;
+}
 
 @media (min-width: 768px){
 
