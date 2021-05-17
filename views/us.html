@@ -9,8 +9,9 @@
     <link rel="icon" href="/icon/logo.ico">
     <link rel="stylesheet" href="/css/normalize.css">
     <!-- <link rel="stylesheet" href="/css/style_banner.css"> -->
-    <link rel="stylesheet" href="/css/style_home.css">
+    <!-- <link rel="stylesheet" href="/css/style_home.css"> -->
     <link rel="stylesheet" href="/css/style_us.css">
+    <link rel="stylesheet" href="/css/style_menu_responsive.css">
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
@@ -23,49 +24,75 @@
         <div class="container logo-nav-container">
             <p><a href="/"><img class="logo" src="/img/kes_sey__15_.png"></a></p>
             <nav class="navigation">
-                <div class="">
-                    <i id="burguer" class="fas fa-bars"></i>
+                <div id="burguer">
+                    <div class="dropdown">
+                        <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
+                        <div class="dropdown-content">
+                            <a href="#mas-vendidos">Sale</a>
+                            <a href="#main-categori">Shop</a>
+                            <a href="/us">Nosotros</a>
+                            <!-- <a href="#">Usuario</a> -->
+                            <a href="/login">Iniciar Sesión</a>
+                            <a href="/registro">Registrate</a>
+    
+                            <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
+                        </div>
+                    </div>
                 </div>
                 <ul class='inner-nav'>
                     <li><a href="#mas-vendidos">Sale</a>
                     </li>
                     <li><a href="#main-categori">Shop</a>
                          <ul class='desplegable'>
-                            <li><a href="">Plafón</a></li>
-                            <li><a href="">Apliques</a></li>
-                            <li><a href="">Pie</a></li>
-                            <li><a href="">Colgantes</a></li>
-                            <li><a href="">Spots</a></li>
-                            <li><a href="">Accesorios</a></li>
-                            <li><a href="">Mesa</a></li>
-                            <li><a href="">Exterior</a></li>
-                        </ul>
+                                <li><a href="">Plafón</a></li>
+                                <li><a href="">Apliques</a></li>
+                                <li><a href="">Pie</a></li>
+                                <li><a href="">Colgantes</a></li>
+                                <li><a href="">Spots</a></li>
+                                <li><a href="">Accesorios</a></li>
+                                <li><a href="">Mesa</a></li>
+                                <li><a href="">Exterior</a></li>
+                            </ul>
                     </li>
                     <li><a href="/us">Nosotros</a></li>
                     <li><a href="#">Usuario</a>
                         <ul class='desplegable'>
                             <li><a href="/login">Iniciar Sesión</a></li>
-                            <li><a href="">Registrate</a></li>
+                            <li><a href="/registro">Registrate</a></li>
                         </ul>
                     </li>
                     <li><a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
-                        <!-- <ul class='inner-nav'>
-            <li></li>
-            <li><button type="button"></button></li>
-            <li></li>
-            
-          </ul></li> -->
+                    </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section>
-        <div class="map">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1643.1369191796998!2d-58.45108464173069!3d-34.5466213858759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb43a97a5ac6d%3A0x74b481de7d1efd76!2sAv.%20Pres.%20Figueroa%20Alcorta%207650-7602%2C%20C1428%20CABA!5e0!3m2!1ses!2sar!4v1620907184250!5m2!1ses!2sar"
-            allowfullscreen="" loading="lazy"></iframe>
-        </div>    
-    </section>
+        <main>
+            <div class="main-wrapper">
+                <div class="aside">
+                    <h2>Quiénes Somos</h2>
+                    <p><strong>Focal Glow</strong> es diseño y creatividad, iluminación y pasión, adaptación y dedicación al cliente.<br><br>
+                    
+                    Somos especialistas en crear <strong>emociones</strong> a través de la luz. Nuestra experiencia en el sector consolida el éxito de
+                    nuestros proyectos.<br>
+                    
+                    De principio a fin, trabajamos mano a mano con nuestros clientes, sabiendo cumplir con las necesidades y expectativas
+                    que requiere cada desafío y, ofreciendo un servicio y gestión integral del proyecto.<br><br>
+                    
+                    Nos divierte <strong>transformar</strong> lugares, pero también queremos llegar a las personas que interactúan en esos <strong>espacios</strong>.
+                    Adaptamos el mundo del cliente transformándolo en un concepto propio e identificador.<br><br>
+                    
+                    Hoy en día seguimos <strong>innovando</strong> en cada una de nuestras creaciones, dotando de carácter y sofisticación cada proyecto.<br><br>
+                    
+                    La cercanía es uno de nuestros principales valores. Nos diferenciamos de las grandes plataformas on-line en la
+                    especialización y apostamos por un trato más cercano de persona a persona.<strong>¡Somos un equipo!</strong> Nuestro compromiso se basa
+                    en la lealtad. Trabajamos codo con codo para hacernos más fuerte. <strong>¡Siempre estamos a tu lado!</strong></p>
+                </div>
+                <div class="aside">
+                    <img src="/img/somos.jpg" alt="nuestro local">
+                </div>
+            </div>
+        </main>
     
     <footer class="footer-">
         <section class="footer-wrappler">
