@@ -26,6 +26,7 @@ main h2{
 }
 
 
+
 .nombre-precio{
     background-color: rgba(255,255,255, 0.8);
     position: absolute;
@@ -34,7 +35,8 @@ main h2{
     display: flex;
     align-items: center;
     bottom: 5%;
-    padding-left: 5%   
+    padding-left: 5%;
+    line-height: 18px
 }
 
 .nombre {
@@ -52,7 +54,7 @@ main h2{
 .producto {
       
     margin: 10px 0px;
-    
+    line-height: 11px;
     box-shadow: 8px 8px 13px grey;
     position: relative;
 }
