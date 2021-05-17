@@ -239,9 +239,18 @@ header a{
     color: white;
 }
 
-#mas-vendidos h2{
-        text-align: center;
-}
+
+#sale{
+    height: 10%;
+    border-radius: 3px;
+    
+    text-align: left;
+    font-size: 3em;
+    color: white;
+   } 
+    
+
+
 
  .elementos{
     display: flex;
