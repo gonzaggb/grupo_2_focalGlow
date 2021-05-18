@@ -5,7 +5,16 @@
     padding:0;
 }
 
+.logo{
+    width: 50%;
+    padding: 0px;
+}
 
+.logo-nav-container{
+    display:flex;
+    justify-content: space-between;
+    align-items:left;
+}
 html{
     scroll-behavior: smooth;
 }
@@ -109,6 +118,7 @@ body{
     border-bottom: 1px #ffde59 solid; 
 }
 .login-button{
+    border: 0;
     background-color: black;
     opacity: 100%;
     color: white;
@@ -178,6 +188,14 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
 }
 }
 @media (min-width: 952px){
+    .header{
+        z-index: 3;
+    }
+    .logo{
+    width: 25vh;
+    padding: 0px;
+
+    }
 
 body{
     background-image: url(/img/portada-gogo-1024x768.jpg);
