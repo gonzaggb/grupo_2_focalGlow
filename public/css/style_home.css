@@ -287,6 +287,10 @@ header a{
     margin-top: 10%;
  }
 
+ .elementos a {
+     text-decoration: none;
+     color: black;
+ }
 
 #mas-vendidos img{
     width: 100%;
