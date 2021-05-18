@@ -1,0 +1,8 @@
+Puse este archivo porque sino git no me sube la carpeta vacia
+
+En esta carpeta debe ir el Wireframe de las siguientes páginas:
+Home
+Detalle de producto
+Carrito de compras
+Formulario de registro
+Formulario de login
