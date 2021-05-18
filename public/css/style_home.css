@@ -35,11 +35,11 @@ p{
 ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado*/
 .container{
     width: 100%;
-   /* max-width: 850px;*/
+   
     margin: 0 ;
     padding: 0;
     z-index: 3;
-    /* height: 13vh; */
+    
 }
 
 #burguer{
@@ -89,15 +89,9 @@ header a{
     opacity: 0.9;
     color:black;
 }
-/* .buscar{
-    border: solid red;
-    width: 80%;
-    display:inline-block;
-} */
 
 .desplegable li {
-    float: left;
-    
+    float: left;    
 }
 .inner-nav li ul{
     display:none ;
@@ -107,46 +101,31 @@ header a{
 }
 .inner-nav li:hover > ul {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
-
-
 /*aca empieza el slider*/
-
-
 .slider{
     height: 45%;
     width: 100%;
     margin: 0;
     padding: 0;
-    overflow: hidden;
-    
-    
+    overflow: hidden;   
 }
-
 .slider ul{
     display: flex;
     margin: 0;
     padding: 0;
     width: 400%;
     animation: cambio 10s infinite  alternate;
-
 }
 .slider li {
     list-style: none;
-    width: 100%;
-    
-   
-}
-
+    width: 100%;  
+} 
 .slider img{
     width: 100%;
     height:79vh;
-    object-fit: cover;
-    
-    
-    
+    object-fit: cover;   
 }
 
 @keyframes cambio{
@@ -168,25 +147,19 @@ header a{
     border-bottom:solid 1px black ;
     flex-grow: inherit;
     background-color: black;
-    color: white;
-    
+    color: white;   
 }
-
 .banner-box{
     margin: 0 2vw;
 }  
-
 .banner-box a{
     text-decoration: none;
 }
-
 .banner-content{
     text-decoration: none;
     margin: 1vh 0;
 }
-
 /*Aca empieza la seccion de Categoria*/
-
 .main {
     margin-top: 0%;
     margin-bottom: 6%;
@@ -199,38 +172,22 @@ header a{
 #categorias{
     display: flex;
     object-fit: cover;
-    width: 100%;
-    
-    
-    
-    
+    width: 100%;   
 }
-
-
-
-
 .category-box{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 .category-box a{
     width: 23%;
 }
-    
-    
-    
-
 #categorias div a img{
     width: 100%;
-    border-radius: 6px;
-    
-    
+    border-radius: 6px;   
 }
 .category-box{ /*Agregue caja para englobar las imagenes de las categorias y asi aplicar flex GB*/
-    width: 90%; /*agrando espacio que ocupa la caja de categorias en pantalla GB*/
-    
+    width: 90%; /*agrando espacio que ocupa la caja de categorias en pantalla GB*/   
     gap: 10px;
     margin: 0px auto; /*centro la caja de categorias GB*/
     margin-top: 5%;
@@ -246,16 +203,12 @@ header a{
 }
     
 /*Mas vendidos*/
-#mas-vendidos{
-    
+#mas-vendidos{   
     margin-left: 15%;
     margin-right: 15%;
-    margin-bottom: 10%;
-    
+    margin-bottom: 10%;    
 }
-
-#titulo-mas-vendidos{
-    
+#titulo-mas-vendidos{   
     height: 10%;
     border-radius: 3px;
     margin-left: 7%;
@@ -265,20 +218,13 @@ header a{
     font-size: 3em;
     color: white;
 }
-
-
 #sale{
     height: 10%;
-    border-radius: 3px;
-    
+    border-radius: 3px;   
     text-align: left;
     font-size: 3em;
     color: white;
    } 
-    
-
-
-
  .elementos{
     display: flex;
     justify-content: center;
@@ -295,18 +241,12 @@ header a{
 #mas-vendidos img{
     width: 100%;
     height: 100%;
-
 }
-
- .box{
+.box{
     width: 100%;
     height: 100%;
-    position: relative;
-    
-    
+    position: relative;    
 } 
-
-
 .capa{
     position: absolute;
     top: 0;
@@ -320,68 +260,52 @@ header a{
     color: black;
     transform: scale(0);
     transition: .5s ease;
-    border: 2px solid;
-    
+    border: 2px solid;   
 }
 .box:hover .capa{
     transform: scale(1);
 }
-
 .capa h2{
     font-size: 1em;
     font-weight: bold;
 }
 /*footer*/
-
 .footer-{
     display: flex;
     background-color: black;
 }
 .footer-wrappler{
-    
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
-    padding-top: 1%;
-    
-    
+    padding-top: 1%;    
 }
-
 .fa-facebook-square:before {
     content: "\f082";
     margin-left: 0px;
 }
 .footer-wrappler  article h4{
     color: #ffde59;
-    margin: 0;
-    
+    margin: 0;   
 }
 .footer-wrappler article{
     margin-left: 10%;
-    margin-right: 10%;
-    
+    margin-right: 10%;   
 }
 .links ul{
-    padding: 0;
-    
+    padding: 0;   
 }
 .links ul li{
-    list-style: none;
-    
-    
+    list-style: none;   
 }    
 .links ul li a{
     text-decoration: none;
     color: white;
 }  
-
-
-.social-media ul{
-    
+.social-media ul{    
     padding: 0;
-    justify-content: space-between;
-    
+    justify-content: space-between;   
 }
 .social-media ul li a {
     text-decoration: none;
@@ -390,8 +314,7 @@ header a{
 .contact{
     text-align: justify;
 }
-.contact ul{
-    
+.contact ul{   
     padding: 0;
 }
 .contact ul li {
@@ -413,7 +336,6 @@ header a{
     content: "\f082";
     margin-right:7px;
 }
-
 .fa-instagram:before {
     content: "\f16d";
     margin-right: 7px;
@@ -425,9 +347,7 @@ header a{
     border-top: solid 2px black;
     border-bottom: solid 2px black;
     text-align: center;
-}
-    
-    
+    }    
 }
 @media (max-width: 576px){
     .banner-box{
@@ -439,14 +359,12 @@ header a{
     font-size: 9px;
     }
 }
-
 /*media queri de home*/
 @media (max-width: 769px){
     .logo-nav-container{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    /* padding-left: 20px; */
 }
     .header{
         z-index: 3;
@@ -459,9 +377,6 @@ header a{
     }
     #categorias div img{
     width: 100%;
-    /* height: 30vh; */
-    /* padding-left: 1vh; */
-    ;
     border: 0;
     margin: 0;
     align-self: center;
@@ -483,17 +398,11 @@ header a{
     margin-bottom: -30%;
     height: 15%;
     border-radius: 3px;
-    
-    
     }
-
     #mas-vendidos h2{
         text-align: center;
         margin: 10%;
      } 
-
-    
-
     .elementos{
     display: flex;
     flex-direction: column;
@@ -501,16 +410,11 @@ header a{
     justify-content: space-between;
     gap: 0.5em; /*agregue separacion entre las imagenes*/ 
     }
-
-
     #mas-vendidos img{
     width: 100%;
     height: 100%;
     z-index: inherit;
-
     }
-
-
     #first-box{
     margin-top: 60%;
     }
@@ -544,10 +448,7 @@ header a{
     }
     .links{
         display: none;
-    }
-    
-
-   
+    }  
 }    
 @media (max-width: 576px){
     .logo-nav-container{
@@ -587,8 +488,6 @@ header a{
     }
     #categorias div img {
     width: 30%;
-    /* height: 30vh; */
-    /* padding-left: 1vh; */
     border: 0;
     margin: 0;
     align-self: center;
