@@ -26,6 +26,7 @@ figure {
 
 figure img {
     width: 100%;
+    
 }
 
 main h2{
@@ -33,7 +34,6 @@ main h2{
     text-align: center;
     font-size: 30px;
 }
-
 
 
 .nombre-precio{
@@ -57,8 +57,6 @@ main h2{
     display: none;
     margin: 0;
 }
-    
-
 
 .producto {
     z-index: 10;  
@@ -69,11 +67,8 @@ main h2{
 }
     
     
-
 .item-list img{
-    
     width: 100%;
-
 }  
 
 /*media Query*/
@@ -139,4 +134,14 @@ main h2{
         width: 24%;
 
     }
+}    
+
+/*Para que la imagen principal de la categoria no sea tan grande*/
+@media (min-width: 1200px) {
+    figure {
+        text-align: center;
+        overflow: hidden;
+        max-height: 80vh;
+    }
+
 }    

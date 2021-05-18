@@ -143,54 +143,54 @@ main {
 /*SLIDER without JS*/
 .slider-container,
 .slider-container-2 {
-            width: 100%;
-            position: relative;
-            height:auto;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: 0px;
-            text-align: center;
-            overflow: hidden;
-            -webkit-overflow-scrolling: touch;
-        }
-        input[name="r"]{
-            position: absolute;
-            visibility: hidden;
-        }
+    width: 100%;
+    position: relative;
+    height:auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
         
-        .slides,
-        .slides-2 {
-          width: 300%;
-          display: flex;
-          
-        }
+.slides,
+.slides-2 {
+    width: 300%;
+    display: flex;
+}
         
-        .slide,
-        .slide-2 {
-          width: 33.33%;
-          transition: 1s;
-        }
+.slide,
+.slide-2 {
+    width: 33.33%;
+    transition: 1s;
+}
         
-        #r1:checked ~ .s1,
-        #r1-2:checked ~ .s2{
-          margin-left: 0;
-        }
-        #r2:checked ~ .s1,
-        #r2-2:checked ~ .s2{
-          margin-left: -33.33%;
-        }
-        #r3:checked ~ .s1,
-        #r3-2:checked ~ .s2{
-          margin-left: -66.66%;
-        }
-        #rp:checked ~ .s1,
-        #rp-2:checked ~ .s2{
-            margin-left: 0;
-        }
-        #rn:checked ~ .s1,
-        #rn-2:checked ~ .s2{
-            margin-left: -33.33%;
-        }
+#r1:checked ~ .s1,
+#r1-2:checked ~ .s2{
+    margin-left: 0;
+}
+#r2:checked ~ .s1,
+#r2-2:checked ~ .s2{
+     margin-left: -33.33%;
+}
+#r3:checked ~ .s1,
+#r3-2:checked ~ .s2{
+    margin-left: -66.66%;
+}
+#rp:checked ~ .s1,
+#rp-2:checked ~ .s2{
+    margin-left: 0;
+}
+#rn:checked ~ .s1,
+#rn-2:checked ~ .s2{
+    margin-left: -33.33%;
+}
        
 
 
@@ -200,7 +200,6 @@ main {
     margin-top: 20px;
     max-height: 900px;
 }
-
 
 .options {
     display: flex;
