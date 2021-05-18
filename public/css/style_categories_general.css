@@ -140,11 +140,8 @@ main h2{
 @media (min-width: 1200px) {
     figure {
         text-align: center;
+        overflow: hidden;
+        max-height: 80vh;
     }
-    figure img {
-        height: 80vh;
-        width: auto;
-        margin:0 auto;
-        
-    }
+
 }    
