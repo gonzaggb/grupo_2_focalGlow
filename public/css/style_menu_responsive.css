@@ -67,7 +67,7 @@
   position: absolute;
   float: right;
   background-color: black;
-  min-width: 160px;
+  min-width: 162px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }

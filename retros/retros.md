@@ -1,2 +1,1 @@
-![Retro1](./retro1.jpg)
-
+![Screenshot](retro1.jpg)
