@@ -1,16 +1,20 @@
 const express = require('express') // trae el modulo de express para poder montar el servidor
 const path = require('path') //requiere el modulo nativo path de node
-const app = express() 
-publicPath = path.join(__dirname,'public') // indica que la ruta contiene recursos estaticos para consumir de manera sencilla
-console.log(publicPath)
+const app = express()
+const port = process.env.PORT || 3000
+publicPath = path.join(__dirname, 'public') // indica que la ruta contiene recursos estaticos para consumir de manera sencilla
+console.log(path.resolve(__dirname, './views/home.html'))
 
 app.use(express.static(publicPath));
+/*Configuracion del template engine*/
+app.set('view engine', 'ejs')
+/*---------------------------------*/
 
-app.listen(3000,() => console.log('Servidor corriendo en el puerto 3000'))
+app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
 
-app.get('/',(req,res) => {
-    
-    res.sendFile(path.resolve(__dirname,'./views/home.html'))
+app.get('/', (req, res) => {
+
+    res.sendFile(path.resolve(__dirname, './views/home.html'))
 })
 
 app.get('/us', (req, res) => {
@@ -18,7 +22,7 @@ app.get('/us', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/us.html'))
 })
 
-app.get('/login', (req, res) => {
+/* app.get('/login', (req, res) => {
 
     res.sendFile(path.resolve(__dirname, './views/login.html'))
 })
@@ -30,7 +34,26 @@ app.get('/registro', (req, res) => {
 app.get('/checkout', (req, res) => {
 
     res.sendFile(path.resolve(__dirname, './views/checkout.html'))
+}) */
+
+/*--------REEMPLAZO POR VERSION EJS--------*/
+app.get('/login', (req, res) => {
+
+    res.render('login')
 })
+
+app.get('/registro', (req, res) => {
+    res.render('registro')
+})
+
+app.get('/checkout', (req, res) => {
+
+    res.render('checkout')
+})
+/*--------REEMPLAZO POR VERSION EJS--------*/
+
+
+/*--------REEMPLAZO POR VERSION EJS--------*/
 
 app.get('/product', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/product-detail.html'))
