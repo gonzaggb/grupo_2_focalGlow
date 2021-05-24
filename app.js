@@ -22,6 +22,11 @@ app.get('/us', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/us.html'))
 })
 
+//Ruteo de product detail, hay que hacerlo para todos
+const productDetailRoute = require ('./src/routes/productDetailRoute')
+
+app.use('/product',productDetailRoute)
+
 /* app.get('/login', (req, res) => {
 
     res.sendFile(path.resolve(__dirname, './views/login.html'))
@@ -55,9 +60,9 @@ app.get('/checkout', (req, res) => {
 
 /*--------REEMPLAZO POR VERSION EJS--------*/
 
-app.get('/product', (req, res) => {
+/*app.get('/product', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/product-detail.html'))
-})
+})*/
 
 app.get('/categories', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categories.html'))
