@@ -124,7 +124,7 @@ header a{
 } 
 .slider img{
     width: 100%;
-    height:79vh;
+    height:74vh;
     object-fit: cover;   
 }
 
@@ -157,7 +157,7 @@ header a{
 }
 .banner-content{
     text-decoration: none;
-    margin: 1vh 0;
+    margin: 0vh 0;
 }
 /*Aca empieza la seccion de Categoria*/
 .main {
