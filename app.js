@@ -2,7 +2,10 @@ const express = require('express') // trae el modulo de express para poder monta
 const path = require('path') //requiere el modulo nativo path de node
 const app = express()
 const port = process.env.PORT || 3000
+
 const main = require ('./src/routes/main')
+const category = require ('./src/routes/category')
+const product = require ('./src/routes/product');
 
 publicPath = path.join(__dirname, 'public') // indica que la ruta contiene recursos estaticos para consumir de manera sencilla
 console.log(path.resolve(__dirname, './views/home.html'))
@@ -25,9 +28,10 @@ app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
 }) */
 
 //Ruteo de product detail, hay que hacerlo para todos
-const productDetailRoute = require ('./src/routes/productDetailRoute')
+const productDetailRoute = require ('./src/routes/product')
 
-app.use('/product',productDetailRoute)
+app.use('/product', product)
+app.use('/categorias', category)
 
 /* app.get('/login', (req, res) => {
 
