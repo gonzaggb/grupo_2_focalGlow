@@ -2,6 +2,8 @@ const express = require('express') // trae el modulo de express para poder monta
 const path = require('path') //requiere el modulo nativo path de node
 const app = express()
 const port = process.env.PORT || 3000
+const main = require ('./src/routes/main')
+
 publicPath = path.join(__dirname, 'public') // indica que la ruta contiene recursos estaticos para consumir de manera sencilla
 console.log(path.resolve(__dirname, './views/home.html'))
 
@@ -12,15 +14,15 @@ app.set('view engine', 'ejs')
 
 app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
 
     res.render('home')
-})
+}) */
 
-app.get('/us', (req, res) => {
+/* app.get('/us', (req, res) => {
 
     res.sendFile(path.resolve(__dirname, './views/us.html'))
-})
+}) */
 
 //Ruteo de product detail, hay que hacerlo para todos
 const productDetailRoute = require ('./src/routes/productDetailRoute')
@@ -42,19 +44,7 @@ app.get('/checkout', (req, res) => {
 }) */
 
 /*--------REEMPLAZO POR VERSION EJS--------*/
-app.get('/login', (req, res) => {
-
-    res.render('login')
-})
-
-app.get('/registro', (req, res) => {
-    res.render('registro')
-})
-
-app.get('/checkout', (req, res) => {
-
-    res.render('checkout')
-})
+app.use("/",main)
 /*--------REEMPLAZO POR VERSION EJS--------*/
 
 
@@ -64,7 +54,7 @@ app.get('/checkout', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/product-detail.html'))
 })*/
 
-app.get('/categories', (req, res) => {
+/* app.get('/categories', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categories.html'))
 })
 
@@ -102,7 +92,7 @@ app.get('/categorias/colgante', (req, res) => {
 
 app.get('/categorias/apliques', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
-})
+}) */
 
 /*linea de prueba*/
 

@@ -5,10 +5,10 @@
     padding:0;
 }
 
-.logo{
+/* .logo{
     width: 50%;
     padding: 0px;
-}
+} */
 
 .logo-nav-container{
     display:flex;
@@ -78,32 +78,6 @@ body{
     margin-top: 15px;
     font-weight: bold;
 }
-.container-login .circulos span{
-    font-size: 20px;
-    display: inline-block;
-    margin-top: 5px;
-    margin-right: 3px;
-}
-.container-login .circulos div{
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border: 1px solid white;
-    border-radius: 37px;
-    background: white;
-    font-size: 15px;
-}
-.container-login .circulos .circulo-amarillo{
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border: 1px solid #ffde59;
-    border-radius: 37px;
-    background: #ffde59;
-
-}
-
-
 
 .input-login{
     width: 90%;
@@ -171,10 +145,10 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     text-align: center;
     width: 100%;
 }
-.logo{
+/* .logo{
     width: 50%;
     padding: 0px;
-}
+} */
 
 
 
@@ -191,11 +165,11 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     .header{
         z-index: 3;
     }
-    .logo{
+/*     .logo{
     width: 25vh;
     padding: 0px;
 
-    }
+    } */
 
 body{
     background-image: url(/img/portada-gogo-1024x768.jpg);
