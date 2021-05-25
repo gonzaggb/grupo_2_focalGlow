@@ -13,6 +13,9 @@ const controlador = {
     },
     checkout: (req,res) => {
         res.render(path.resolve(viewsPath, 'checkout.ejs'))
+    },
+    us: (req,res) => {
+        res.render(path.resolve(viewsPath, 'us.ejs'))
     }
 }
 

@@ -10,4 +10,6 @@ router.get('/', mainController.home)
 router.get('/login', mainController.login);
 router.get('/registro', mainController.registro);
 router.get('/checkout', mainController.checkout);
+router.get('/us', mainController.us);
+
 module.exports = router;
