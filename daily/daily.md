@@ -1,4 +1,4 @@
-![Daily1](./daily/Daily 202105241.jpg)
+![Daily1](./Daily_202105241.jpg)
 
 
 
