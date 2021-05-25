@@ -17,166 +17,74 @@ body{
     background-image: url(/img/fondo2.jpg);
     
 }
-/*Define caracteristicas del h1
-tamaño de fuente e interlineado, el tipo de fuente lo hereda del body*/
-h1{
-    font-size: 1.2em;
-    line-height: 1.3em;
-}
 
-/*Define caracteristicas de p
-margen de abajo*/
-p{
-    margin:16px 0;
 
-}
-/*Define caracteristicas de los container
-ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado*/
-.container{
-    width: 100%;
-   /* max-width: 850px;*/
-    margin: 0 ;
-    padding: 0;
-    z-index: 3;
-    /* height: 13vh; */
-}
 
-#burguer{
-    display: none;
-}
 
-.logo{
-    width: 35%;
-    padding: 0px;
-}
-header{
-    background-color: black;
-    color:white;
-    /*position: sticky; para hacer el menu pegajoso*/
-    top: 0; /*para que quede pegado a la parte superior*/
 
-    bottom: 150px;
-    z-index: 3;
-}
 
-header a{
-    color:white;
-    text-decoration:none;
-}
-.logo-nav-container{
-    display:flex;
-    justify-content: space-between;
-    align-items:center;
-}
-.navigation ul{
- margin: 0;
- padding: 0;
- list-style:none;
-}
-.navigation ul li{
-    display:inline-block;
-}
-.navigation ul li a{
-    display:block;
-    padding: 0.5rem 1rem;
-    transition: all 0.5s linear;
-    border-radius: 1.5px
-}
-.navigation ul li a:hover{
-    background: #ffde59;
-    opacity: 0.9;
-    color:black;
-}
-/* .buscar{
-    border: solid red;
-    width: 80%;
-    display:inline-block;
-} */
-
-.desplegable li {
-    float: left;
-    
-}
-.inner-nav li ul{
-    display:none ;
-    position: absolute;
-    min-width: 140px;
-    background-color: black;
-}
-.inner-nav li:hover > ul {
-    display: flex;
-    flex-direction: column;
-    
-}
 /*aca empieza el main*/
+main {
+    margin: 0 auto;
+    text-align: center;
+}
 .main-wrapper{
     
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
 
 }
-.aside{
-    width:90%;
-}
-.aside img{
+.aside-image img{
     width: 100%;
 }
-.aside h2{
+main h2{
         text-align: center;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
         font-size: 2em;
-        color: white;
+        color: black;
 }
     
-    .aside p {
+.aside-text p {
         text-align: justify;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        background-color: #ffde59; 
+        padding: 20px 10px;
+        margin: 0;
     }
 
-@media (max-width: 576px){
-    .logo {
-    width: 30%;
-    padding: 0px;
-}
-    .inner-nav{
-        display: none;
-    }   
-    #burguer{
-    display: inline-block;
-    color: white;
-    width: 80px;
-    font-size: 200%
-    }
-}
+
 
 @media (min-width: 768px){
-    .logo-nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 20px;
-}
     .main-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 64px;
+    
     }
-    .aside h2{
-        text-align: center;
-    }
-    .aside p {
+
+    .aside-text {
         text-align: justify;
+        margin: 0;
+        width: 60%;
+        max-height: 255px;
+        overflow: scroll;
     }
-    .aside img {
-    width: 50%;
-    margin: 0 25%;
+    .aside-text p {
+        background-color: #ffffff;
+        text-align: left;
     }
-    .logo {
-    width: 30%;
-    padding: 0px;
+    .aside-image {
+    width: 40%
+    
+    }  
 }
 
+@media (min-width: 1024px){
+    .aside-text {
+        max-height: 340px;
+    }
 }
