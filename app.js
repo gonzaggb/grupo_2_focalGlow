@@ -104,4 +104,5 @@ app.get('/categorias/apliques', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/categoria-general.html'))
 })
 
+/*linea de prueba*/
 
