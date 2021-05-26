@@ -4,14 +4,14 @@ const app = express()
 const port = process.env.PORT || 3000
 
 // Requiriendo todos los routers
-const main = require ('./src/routes/main')
-const category = require ('./src/routes/category')
-const product = require ('./src/routes/product');
+const mainRoutes = require('./src/routes/main')
+const categoryRoutes = require('./src/routes/category')
+const productRoutes = require('./src/routes/product')
 
 publicPath = path.join(__dirname, 'public') // indica que la ruta contiene recursos estaticos para consumir de manera sencilla
 console.log(path.resolve(__dirname, './views/home.html'))
 
-app.use(express.static(publicPath));
+app.use(express.static(publicPath))
 
 /*Configuracion del template engine*/
 app.set('view engine', 'ejs')
@@ -29,9 +29,9 @@ app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
     res.sendFile(path.resolve(__dirname, './views/us.html'))
 }) */
 
-app.use("/",main)
-app.use('/product', product)
-app.use('/categorias', category)
+app.use('/', mainRoutes)
+app.use('/product', productRoutes)
+app.use('/categorias', categoryRoutes)
 
 /* app.get('/login', (req, res) => {
 
@@ -51,13 +51,4 @@ app.get('/checkout', (req, res) => {
 
 /*--------REEMPLAZO POR VERSION EJS--------*/
 
-
-
-
-
-
-
-
-
 /*linea de prueba*/
-
