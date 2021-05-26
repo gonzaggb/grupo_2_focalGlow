@@ -1,9 +1,7 @@
-const controlador = {
-    category: (req,res) => {
-        let categoryName = req.params.id;
-        res.render('category.ejs')
-    }
+const controller = {
+  category: (req, res) => {
+    res.render('category.ejs')
+  },
 }
 
-
-module.exports = controlador;
+module.exports = controller
