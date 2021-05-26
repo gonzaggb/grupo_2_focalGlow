@@ -1,21 +1,13 @@
-const path = require('path')
-const viewsPath = path.resolve(__dirname, '../views/');
-
 const controlador = {
     home: (req,res) => {
-        res.render(path.resolve(viewsPath, 'home.ejs'))
+        res.render('home.ejs')
     },
-    login: (req,res) => {
-        res.render(path.resolve(viewsPath, 'login.ejs'))
-    },
-    registro: (req,res) => {
-        res.render(path.resolve(viewsPath, 'registro.ejs'))
-    },
+    
     checkout: (req,res) => {
-        res.render(path.resolve(viewsPath, 'checkout.ejs'))
+        res.render('checkout.ejs')
     },
     us: (req,res) => {
-        res.render(path.resolve(viewsPath, 'us.ejs'))
+        res.render('us.ejs')
     }
 }
 

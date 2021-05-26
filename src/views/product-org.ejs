@@ -1,0 +1,140 @@
+<%- include('partials/head.ejs')%>
+<link rel="stylesheet" href="/css/normalize.css">
+<link rel="stylesheet" href="/css/styles-header.css">
+<link rel="stylesheet" href="/css/styles-footer.css">
+<link rel="stylesheet" href="/css/styles-product-org.css">
+</head>
+<body>
+    <%- include('partials/header.ejs')%>
+    <main>
+       <div class="container-form"> 
+        <form  id="register" action="" method="post">
+           <div class="first">
+                <div class="in-line-data">
+                    <label class="" for="product-id">Product Id: </label><br>
+                    <input class="box" type="text" name="product-id" id="product-id"  required>     
+                </div>
+                <div class="in-line-data">
+                    <label class="" for="nombre-producto">Nombre del Producto: </label>
+                    <input class="box" type="text" name="nombre-producto" id="nombre-producto"  required>
+             </div>
+            </div>
+            <div class="first-">
+                <label class="" for="fuente">Fuente: </label><br>
+                
+                <div>
+                    <input class="radio" type="radio" name="fuente" value="led">Led
+                </div>
+                <div>
+                    <input class="radio" type="radio" name="fuente" value="Lampara">Lampara
+                </div>   
+            </div>
+            <div class="first-">
+                <label class="" for="material">Material: </label><br>
+                <div>
+                    <input class="check" type="checkbox" name="material" value="Aluminio"> Aluminio
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="material" value="Madera"> Madera
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="material" value="Chapa"> Chapa
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="material" value="Hierro"> Hierro
+                </div>
+                <div class="in-line-data">
+                    <label class="" for="otros-material">Otros: </label>
+                    <input class="box" type="text" name="material" id="otros-material" >
+                </div>
+            </div>
+            <div class="first-">
+                <label class="" for="optica">Optica: </label>
+                <div>
+                    <input class="check" type="checkbox" name="optica" value="flood"> Flood
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="optica" value="Spot"> Spot
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="optica" value="WideFlood"> Wide Flood
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="optica" value="Oval"> Oval
+                </div>       
+            </div>
+            <div class="first">
+                <label for="potencia">Potencia: </label>
+                    <select name="potencia">
+                        <% for(i=1;i<=100;i++){ %>
+                            <option value="[i]"><%=[i]%>w</option>
+                        <%}%>
+                    </select>
+            </div>
+            <div class="first-">
+                <label class="" for="cct">CCT: </label>
+                <div>
+                    <input class="check" type="checkbox" name="cct" value="2700k"> 2700k
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="cct" value="3000k"> 3000k
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="cct" value="3500k"> 3500k
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="cct" value="4000k"> 4000k
+                </div>
+            </div>
+            <div class="first-">
+                <label class="" for="dim">Dim: </label>
+                <div>
+                    <input class="check" type="checkbox" name="dim" value="switch"> Switch
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="dim" value="dimeable"> Dimeable
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="dim" value="dali"> DALI
+                </div>
+                <div>
+                    <input class="check" type="checkbox" name="dim" value="bluetooth"> Bluetooth
+                </div>
+            </div>
+            <div class="first">
+                <label class="" for="precio">Precio: </label>
+                <input class="box" type="number" name="precio" id="precio" required>
+            </div>
+            <div class="first">
+                <label class="title" for="file">Imagen Principal: </label>
+                <input type="file">
+            </div>
+            <div class="first">
+                <label class="title" for="file">Dimensiones del Producto: </label>
+                <input type="file">
+            </div>
+            <div class="first">
+                <label class="title" for="file">Imagen 2: </label>
+                <input type="file">
+            </div>
+            <div class="first">
+                <label class="title" for="file">Imagen 3: </label>
+                <input type="file">
+            </div>
+            <div class="first">
+                <label class="" for="hoja-tecnica">Hoja Técnica: </label>
+                <input type="file" src="" alt="">
+            </div>
+            <div class="first">
+                <label class="" for="manual-instalacion">Manual de Instalación: </label>
+                <input type="file" src="" alt="">
+            </div>
+            <div class="button-container">
+            <button id="button-enviar" type="submit">Agregar Producto</button>
+            <button id="button-borrar" type="reset">Resetear</button>
+            </div>
+        </form>
+    </div>
+    </main>
+    <%- include('partials/footer.ejs')%>
+</body>
