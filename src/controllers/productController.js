@@ -1,9 +1,9 @@
 const controller = {
   detail: (req, res) => {
-    res.render('product-detail.ejs')
+    res.render('products/product-detail.ejs')
   },
   add: (req, res) => {
-    res.render('product-org.ejs')
+    res.render('products/product-org.ejs')
   },
 }
 
