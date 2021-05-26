@@ -7,6 +7,7 @@
 <body>
     <%- include('partials/header.ejs')%>
     <main>
+        <h2 class="titulo">Creación de Producto</h2>
        <div class="container-form"> 
         <form  id="register" action="" method="post">
            <div class="first">
@@ -15,12 +16,12 @@
                     <input class="box" type="text" name="product-id" id="product-id"  required>     
                 </div>
                 <div class="in-line-data">
-                    <label class="" for="nombre-producto">Nombre del Producto: </label>
+                    <label class="" for="nombre-producto">Nombre del Producto: </label><br>
                     <input class="box" type="text" name="nombre-producto" id="nombre-producto"  required>
              </div>
-            </div>
+            </div><br>
             <div class="first-">
-                <label class="" for="fuente">Fuente: </label><br>
+                <label class="" for="fuente">Fuente: </label>
                 
                 <div>
                     <input class="radio" type="radio" name="fuente" value="led">Led
@@ -28,26 +29,28 @@
                 <div>
                     <input class="radio" type="radio" name="fuente" value="Lampara">Lampara
                 </div>   
-            </div>
-            <div class="first-">
-                <label class="" for="material">Material: </label><br>
-                <div>
-                    <input class="check" type="checkbox" name="material" value="Aluminio"> Aluminio
-                </div>
-                <div>
-                    <input class="check" type="checkbox" name="material" value="Madera"> Madera
-                </div>
-                <div>
-                    <input class="check" type="checkbox" name="material" value="Chapa"> Chapa
-                </div>
-                <div>
-                    <input class="check" type="checkbox" name="material" value="Hierro"> Hierro
-                </div>
-                <div class="in-line-data">
-                    <label class="" for="otros-material">Otros: </label>
-                    <input class="box" type="text" name="material" id="otros-material" >
-                </div>
-            </div>
+            </div><br>
+            <div >
+                <div class="first-" >
+                    <label class="" for="material">Material: </label>
+                    <div>
+                        <input class="check" type="checkbox" name="material" value="Aluminio"> Aluminio
+                    </div>
+                    <div>
+                        <input class="check" type="checkbox" name="material" value="Madera"> Madera
+                    </div>
+                    <div>
+                        <input class="check" type="checkbox" name="material" value="Chapa"> Chapa
+                    </div>
+                    <div>
+                        <input class="check" type="checkbox" name="material" value="Hierro"> Hierro
+                    </div>
+                </div>    
+                    <div class="in-line-data">
+                        <label class="" for="otros-material">Otros: </label>
+                        <input class="box" type="text" name="material" id="otros-material" placeholder="Opcional" >
+                    </div>
+            </div><br>
             <div class="first-">
                 <label class="" for="optica">Optica: </label>
                 <div>
@@ -62,15 +65,36 @@
                 <div>
                     <input class="check" type="checkbox" name="optica" value="Oval"> Oval
                 </div>       
-            </div>
-            <div class="first">
+            </div><br>
+            <div class="first-">
                 <label for="potencia">Potencia: </label>
-                    <select name="potencia">
+                    <select name="potencia" class="select">
                         <% for(i=1;i<=100;i++){ %>
                             <option value="[i]"><%=[i]%>w</option>
                         <%}%>
                     </select>
-            </div>
+                    <select name="potencia">
+                        <% for(i=1;i<=100;i++){ %>
+                            <option value="[i]">
+                                <%=[i]%>w
+                            </option>
+                            <%}%>
+                    </select>
+                    <select name="potencia">
+                        <% for(i=1;i<=100;i++){ %>
+                            <option value="[i]">
+                                <%=[i]%>w
+                            </option>
+                            <%}%>
+                    </select>
+                    <select name="potencia">
+                        <% for(i=1;i<=100;i++){ %>
+                            <option value="[i]">
+                                <%=[i]%>w
+                            </option>
+                            <%}%>
+                    </select>
+            </div><br>
             <div class="first-">
                 <label class="" for="cct">CCT: </label>
                 <div>
@@ -85,7 +109,7 @@
                 <div>
                     <input class="check" type="checkbox" name="cct" value="4000k"> 4000k
                 </div>
-            </div>
+            </div><br>
             <div class="first-">
                 <label class="" for="dim">Dim: </label>
                 <div>
@@ -100,35 +124,41 @@
                 <div>
                     <input class="check" type="checkbox" name="dim" value="bluetooth"> Bluetooth
                 </div>
-            </div>
-            <div class="first">
-                <label class="" for="precio">Precio: </label>
-                <input class="box" type="number" name="precio" id="precio" required>
-            </div>
-            <div class="first">
-                <label class="title" for="file">Imagen Principal: </label>
-                <input type="file">
-            </div>
-            <div class="first">
-                <label class="title" for="file">Dimensiones del Producto: </label>
-                <input type="file">
-            </div>
-            <div class="first">
-                <label class="title" for="file">Imagen 2: </label>
-                <input type="file">
-            </div>
-            <div class="first">
-                <label class="title" for="file">Imagen 3: </label>
-                <input type="file">
-            </div>
-            <div class="first">
-                <label class="" for="hoja-tecnica">Hoja Técnica: </label>
-                <input type="file" src="" alt="">
-            </div>
-            <div class="first">
-                <label class="" for="manual-instalacion">Manual de Instalación: </label>
-                <input type="file" src="" alt="">
-            </div>
+            </div><br>
+            <div class="first-">
+                <label class="" for="precio">Precio: </label><br>
+                <input class="box" type="number" name="precio" id="precio" step="0.1" placeholder=" Ej 15235.35" required>
+            </div><br>
+         <div class="imagenes">   
+            <div class="imagen-input">
+                <label class="title" for="file">Imagen Principal: </label><br>
+                <input type="file" accept=".jpg">
+            </div><br>
+            <div class="imagen-input">
+                <label class="title" for="file">Dimensiones del Producto: </label><br>
+                <input type="file" accept=".jpg">
+            </div><br>
+         </div>  
+         <div class="imagenes">
+            <div class="imagen-input">
+                <label class="title" for="file">Imagen 2: </label><br>
+                <input type="file" accept=".jpg">
+            </div><br>
+            <div class="imagen-input">
+                <label class="title" for="file">Imagen 3: </label><br>
+                <input type="file" accept=".jpg">
+            </div><br>
+         </div> 
+        <div class="imagenes">
+            <div class="imagen-input">
+                <label class="" for="hoja-tecnica">Hoja Técnica: </label><br>
+                <input type="file" src="" alt="" accept=".pdf">
+            </div><br>
+            <div class="imagen-input">
+                <label class="" for="manual-instalacion">Manual de Instalación: </label><br>
+                <input type="file" src="" alt="" accept=".pdf">
+            </div><br>
+        </div>  
             <div class="button-container">
             <button id="button-enviar" type="submit">Agregar Producto</button>
             <button id="button-borrar" type="reset">Resetear</button>

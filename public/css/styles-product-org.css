@@ -4,17 +4,32 @@
     box-sizing: border-box;
 
 }
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    line-height:1.6em;
+    margin: 0;
+    background-image: url(/img/fondo2.jpg);
+    
+}
+.titulo{
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-top: 20px;
+    line-height: 34px;
+}
 .container-form{
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    width: 100%;
     
 }
 #register{
     display: flex;
     width: 100%;
-    background-color: white;
-    padding: 6%;
+    
+    padding: 2%;
     /* margin-bottom: 2%; */
     flex-wrap: wrap;
     flex-direction: column;
@@ -26,22 +41,27 @@
 label{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 20px;
+    text-decoration: underline;
 }
-.first-{
-    /* border: 1px solid black; */
+.first- {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color: rgb(184, 183, 183);
-    margin: 5px;
-    padding: 10px;
+    
+}
+.box {
+    border: 0;
+    height: 30px;
+   
 }
 .check{
     margin-left: 15px;
+    margin-right: 5px;
     margin-top: 10px;
 }
 .radio{
     margin-left: 15px;
+    margin-right: 5px;
     margin-top: 9px;
 }
 .button-container{
@@ -51,14 +71,26 @@ label{
         height: 35px;
         margin-top: 15px;
     }
+#button-enviar{
+        width: 40%;
+        border-radius: 5px;
+        transition: 0.3s;
+        
+}
+#button-borrar{
+        width: 30%;
+        border-radius: 5px;
+        transition: 0.3s;
+}    
 #button-enviar:hover{
-    background-color: rgb(25, 181, 75);
-    color: white;
+    background-color: #ffde59;
+    color: black;
+    box-shadow: 5px 5px 10px black;
 }
 #button-borrar:hover{
     background-color: red;
-    color: black;
-    /* transition: 0.5s; */
+    color: white;
+    box-shadow: 5px 5px 10px black;
 }
 
 @media(min-width: 361px){
@@ -66,8 +98,8 @@ label{
     #register{
     display: flex;
     width: 100%;
-    background-color: white;
-    padding: 6%;
+   
+    padding: 2%;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: flex-start;
@@ -79,37 +111,46 @@ label{
     
     .in-line-data{
         display: block;
+        width: 300px;
     }
 }
 @media(min-width: 1000px){
     #register {
-    display: block;
-    width: 90%;
-    background-color: #ebebeb;
-    padding-top: 2%;
-    flex-wrap: wrap;
-    flex-direction: column; 
-     align-items: center; 
-     margin: 0px 34%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap; 
     align-content: center;
     
     }
-    .button-i {
-    background-color: #1259c3;
-    color: white;
-    text-decoration: none;
-    /* margin-bottom: 3%; */
-    width: 41%;
-    border-radius: 5px;
-    padding: 2%;
-    text-align: center;
+    .box {
     border: 0;
-    box-shadow: 5px 5px 10px grey;
-    /* transition: 0.6s; */
+    height: 30px;
+    width: 100%;
+    margin-left: 2px;
+    margin-top: 5px;
     }
+    .imagenes{
+        display: flex;
+        flex-direction: row;
+    }
+    .imagen-input {
+    margin-right: 100px;
+    margin-bottom: 10px;
+}
+   
     .button-container{
         display: flex;
         justify-content: space-around;
         width: 100%;
+    }
+    .select{
+        margin-left: 10px;
+    }
+    #button-enviar{
+        width: 30%;
+    }
+    #button-borrar{
+        width: 30%;
     }
 }    
