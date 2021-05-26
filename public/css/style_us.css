@@ -62,29 +62,22 @@ main h2 {
 @media (min-width: 768px) {
   .main-wrapper {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+
     margin-bottom: 64px;
   }
 
   .aside-text {
-    text-align: justify;
     margin: 0;
-    width: 60%;
-    max-height: 255px;
-    overflow: scroll;
+    border-radius: 30px;
   }
-  .aside-text p {
-    background-color: #ffffff;
-    text-align: left;
-  }
-  .aside-image {
-    width: 40%;
-  }
-}
 
-@media (min-width: 1024px) {
-  .aside-text {
-    max-height: 340px;
+  .aside-image img {
+    margin-top: 32px;
+    border-radius: 30px;
+  }
+
+  .aside-text p {
+    padding: 20px;
   }
 }
