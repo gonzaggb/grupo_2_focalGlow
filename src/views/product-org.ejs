@@ -68,12 +68,12 @@
             </div><br>
             <div class="first-">
                 <label for="potencia">Potencia: </label>
-                    <select name="potencia" class="select">
+                    <select name="potencia" class="select" size='2' multiple>
                         <% for(i=1;i<=100;i++){ %>
                             <option value="[i]"><%=[i]%>w</option>
                         <%}%>
                     </select>
-                    <select name="potencia">
+                   <!--  <select name="potencia">
                         <% for(i=1;i<=100;i++){ %>
                             <option value="[i]">
                                 <%=[i]%>w
@@ -93,7 +93,7 @@
                                 <%=[i]%>w
                             </option>
                             <%}%>
-                    </select>
+                    </select> -->
             </div><br>
             <div class="first-">
                 <label class="" for="cct">CCT: </label>
