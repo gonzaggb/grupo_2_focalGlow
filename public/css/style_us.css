@@ -21,6 +21,8 @@ body {
 main {
   margin: 0 auto;
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 main h2 {
@@ -32,12 +34,17 @@ main h2 {
 .main-wrapper {
   display: flex;
   flex-direction: column-reverse;
-  width: 90%;
-  margin: 0 auto 40px;
+  margin-bottom: 40px;
+}
+
+.aside-image {
+  display: flex;
 }
 
 .aside-image img {
   width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .aside-text {
@@ -45,11 +52,6 @@ main h2 {
   padding: 20px 10px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-}
-
-.aside-image img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 
 .aside-text p {
