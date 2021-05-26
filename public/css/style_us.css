@@ -21,6 +21,8 @@ body {
 main {
   margin: 0 auto;
   text-align: center;
+  width: 90%;
+  margin: 0 auto;
 }
 
 main h2 {
@@ -32,12 +34,17 @@ main h2 {
 .main-wrapper {
   display: flex;
   flex-direction: column-reverse;
-  width: 90%;
-  margin: 0 auto 40px;
+  margin-bottom: 40px;
+}
+
+.aside-image {
+  display: flex;
 }
 
 .aside-image img {
   width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
 
 .aside-text {
@@ -45,11 +52,6 @@ main h2 {
   padding: 20px 10px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-}
-
-.aside-image img {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }
 
 .aside-text p {
@@ -60,29 +62,22 @@ main h2 {
 @media (min-width: 768px) {
   .main-wrapper {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+
     margin-bottom: 64px;
   }
 
   .aside-text {
-    text-align: justify;
     margin: 0;
-    width: 60%;
-    max-height: 255px;
-    overflow: scroll;
+    border-radius: 30px;
   }
-  .aside-text p {
-    background-color: #ffffff;
-    text-align: left;
-  }
-  .aside-image {
-    width: 40%;
-  }
-}
 
-@media (min-width: 1024px) {
-  .aside-text {
-    max-height: 340px;
+  .aside-image img {
+    margin-top: 32px;
+    border-radius: 30px;
+  }
+
+  .aside-text p {
+    padding: 20px;
   }
 }
