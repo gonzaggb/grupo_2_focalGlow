@@ -9,7 +9,7 @@
     <main>
         <h2 class="titulo">Creación de Producto</h2>
        <div class="container-form"> 
-        <form  id="register" action="" method="post">
+        <form  id="register" action="" method="GET">
            <div class="first">
                 <div class="in-line-data">
                     <label class="" for="nombre-producto">Nombre del Producto: </label><br>
@@ -68,7 +68,7 @@
                     <select name="potencia" class="select">
                         <option>Seleccionar</option>
                         <% for(i=1;i<=100;i++){ %>
-                            <option value="[i]"><%=[i]%>W</option>
+                            <option value="<%=[i]%>W"><%=[i]%>W</option>
                         <%}%>
                     </select>
                     <%}%>
