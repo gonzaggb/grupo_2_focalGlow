@@ -1,20 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<%- include ('partials/head')%>
   <title>Focal Glow Categoría</title>
-  <link rel="icon" type="ico" href="/icon/logo.ico">
-
-  <script src="https://kit.fontawesome.com/641c03bd1a.js" crossorigin="anonymous"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-
-  <link rel = "stylesheet" href = "/css/normalize.css" type="text/css">
-  <link rel = "stylesheet" href = "/css/styles-header.css">
-  <link rel = "stylesheet" href = "/css/styles-footer.css" type="text/css">
   <link rel = "stylesheet" href = "/css/style_categories_general.css">
-   
   
 </head>
 
@@ -29,75 +15,21 @@
   <main>
     
     <h2 class ="category-title"> Categoria </h2>
+
     <section class="item-list">
-
-      <article class="producto">
-        <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-        <div class="nombre-precio">
-          <p class ="nombre">Nombre del producto</p>
-          <p class ="precio">Desde:</p>
-        </div>
-      </article>
-
-      <article class="producto">
-        <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-        <div class="nombre-precio">
-          <p class ="nombre">Nombre del producto</p>
-          <p class ="precio">Desde:</p>
-        </div>
-      </article>
-
-      <article class="producto">
-        <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-        <div class="nombre-precio">
-          <p class ="nombre">Nombre del producto</p>
-          <p class ="precio">Desde:</p>
-        </div>
-      </article>
-
-      <article class="producto">
-        <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-        <div class="nombre-precio">
-          <p class ="nombre">Nombre del producto</p>
-          <p class ="precio">Desde:</p>
-        </div>
-      </article>
-
-      <article class="producto">
-        <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-        <div class="nombre-precio">
-          <p class ="nombre">Nombre del producto</p>
-          <p class ="precio">Desde:</p>
-        </div>
-      </article>
-
-      <article class="producto">
-        <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-        <div class="nombre-precio">
-          <p class ="nombre">Nombre del producto</p>
-          <p class ="precio">Desde:</p>
-        </div>
-      </article>
-
-      <article class="producto">
-        <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-        <div class="nombre-precio">
-          <p class ="nombre">Nombre del producto</p>
-          <p class ="precio">Desde:</p>
-        </div>
-      </article>
-
-      <article class="producto">
-        <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-        <div class="nombre-precio">
-          <p class ="nombre">Nombre del producto</p>
-          <p class ="precio">Desde:</p>
-        </div>
-      </article>
+      
+      <% for (i=1;i<=8;i++) { %>
+        <article class="producto">
+          <a href="/product"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
+          <div class="nombre-precio">
+            <p class ="nombre">Nombre del producto</p>
+            <p class ="precio">Desde:</p>
+          </div>
+        </article>
+      <%}%>
 
     </section>
   </main>
-
 
   <!--FOOTER-->
   <%- include('partials/footer') %>

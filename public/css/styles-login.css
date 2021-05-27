@@ -8,13 +8,13 @@
 /* .logo{
     width: 50%;
     padding: 0px;
-} */
+} 
 
 .logo-nav-container{
     display:flex;
     justify-content: space-between;
     align-items:left;
-}
+}*/
 html{
     scroll-behavior: smooth;
 }
@@ -138,13 +138,13 @@ body{
 }
 
 /*Define caracteristicas de los container
-ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado*/
+ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los margenes, de ese modo queda centrado
 .container{
     position: relative;
     display: inline-block;
     text-align: center;
     width: 100%;
-}
+}*/
 /* .logo{
     width: 50%;
     padding: 0px;
