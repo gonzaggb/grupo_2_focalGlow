@@ -12,10 +12,6 @@
         <form  id="register" action="" method="post">
            <div class="first">
                 <div class="in-line-data">
-                    <label class="" for="product-id">Product Id: </label><br>
-                    <input class="box" type="text" name="product-id" id="product-id"  required>     
-                </div>
-                <div class="in-line-data">
                     <label class="" for="nombre-producto">Nombre del Producto: </label><br>
                     <input class="box" type="text" name="nombre-producto" id="nombre-producto"  required>
              </div>
@@ -24,7 +20,7 @@
                 <label class="" for="fuente">Fuente: </label>
                 
                 <div>
-                    <input class="radio" type="radio" name="fuente" value="led">Led
+                    <input class="radio" type="radio" name="fuente" value="led">LED Incorporado
                 </div>
                 <div>
                     <input class="radio" type="radio" name="fuente" value="Lampara">Lampara
@@ -72,45 +68,24 @@
                     <select name="potencia" class="select">
                         <option>Seleccionar</option>
                         <% for(i=1;i<=100;i++){ %>
-                            <option value="[i]"><%=[i]%>w</option>
+                            <option value="[i]"><%=[i]%>W</option>
                         <%}%>
                     </select>
                     <%}%>
-<!--                     <select name="potencia">
-                        <% for(i=1;i<=100;i++){ %>
-                            <option value="[i]">
-                                <%=[i]%>w
-                            </option>
-                            <%}%>
-                    </select>
-                    <select name="potencia">
-                        <% for(i=1;i<=100;i++){ %>
-                            <option value="[i]">
-                                <%=[i]%>w
-                            </option>
-                            <%}%>
-                    </select>
-                    <select name="potencia">
-                        <% for(i=1;i<=100;i++){ %>
-                            <option value="[i]">
-                                <%=[i]%>w
-                            </option>
-                            <%}%>
-                    </select> -->
             </div><br>
             <div class="first-">
                 <label class="" for="cct">CCT: </label>
                 <div>
-                    <input class="check" type="checkbox" name="cct" value="2700k"> 2700k
+                    <input class="check" type="checkbox" name="cct" value="2700k"> 2700K
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="cct" value="3000k"> 3000k
+                    <input class="check" type="checkbox" name="cct" value="3000k"> 3000K
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="cct" value="3500k"> 3500k
+                    <input class="check" type="checkbox" name="cct" value="3500k"> 3500K
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="cct" value="4000k"> 4000k
+                    <input class="check" type="checkbox" name="cct" value="4000k"> 4000K
                 </div>
             </div><br>
             <div class="first-">
