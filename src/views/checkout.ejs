@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="/css/styles-header.css">
     <link rel="stylesheet" href="/css/styles-footer.css">
     <link rel="stylesheet" href="/css/checkout.css">
+    <link rel="stylesheet" href="/css/style-product-detail.css">
     <title>Checkout | Focal Glow</title>
 
 </head>
@@ -15,9 +16,12 @@
     <main class="checkout">
         <h2>DETALLE DEL PEDIDO</h2>
         <br>
+
         <section class="checkout-articles">
-            <!-- PRODUCTO 1 -->
-            <article class="checkout-product">
+            <% for (i =1; i <= 2; i++) { %>
+            <!-- PRODUCTO <%- i %> -->
+
+                <article class="checkout-product">
                 <div class="name-category">
                     <h3>Nombre</h3>
                     <h4>Categoria</h4>
@@ -62,102 +66,7 @@
                     </div>
                 </div>
             </article>
-            <!-- PRODUCTO 2 -->
-            <article class="checkout-product">
-                <div class="name-category">
-                    <h3>Nombre</h3>
-                    <h4>Categoria</h4>
-                </div>
-
-                <div class="product-detail">
-                    <div class="separador"></div>
-                    <div class="img-detail">
-                        <div class="product-image">
-                            <img src="/img/Barcelona.jpg">
-
-                        </div>
-                        <div class="detail">
-                            <div class="item-left">
-                                <div class="left-side">
-                                    <span>Marca: Focal Glow</span>
-                                    <br>
-                                    <span>Potencia: 20W</span>
-                                    <br>
-                                    <span>CCT: 3000K</span>
-                                    <br>
-                                    <span>DIM: DALI</span>
-
-                                </div>
-                            </div>
-                            <div class="item-right">
-                                <div class="left-side">
-                                    <span>Precio: $1000</span>
-                                    <br>
-                                    <span>Cantidad: <input type="text" name="quantity"></span>
-                                    <br>
-                                    <span>Total: $1000</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separador"></div>
-
-                    <div id="item-eliminar">
-                        <span><a href="#"><i class="far fa-trash-alt"></i></a></span>
-                    </div>
-                </div>
-            </article>
-            <!-- PRODUCTO 3 -->
-            <article class="checkout-product">
-                <div class="name-category">
-                    <h3>Nombre</h3>
-                    <h4>Categoria</h4>
-                </div>
-
-                <div class="product-detail">
-                    <div class="separador"></div>
-                    <div class="img-detail">
-                        <div class="product-image">
-                            <img src="/img/Barcelona.jpg">
-
-                        </div>
-                        <div class="detail">
-                            <div class="item-left">
-                                <div class="left-side">
-                                    <span>Marca: Focal Glow</span>
-                                    <br>
-                                    <span>Potencia: 20W</span>
-                                    <br>
-                                    <span>CCT: 3000K</span>
-                                    <br>
-                                    <span>DIM: DALI</span>
-
-                                </div>
-                            </div>
-                            <div class="item-right">
-                                <div class="left-side">
-                                    <span>Precio: $1000</span>
-                                    <br>
-                                    <span>Cantidad: <input type="text" name="quantity"></span>
-                                    <br>
-                                    <span>Total: $1000</span>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="separador"></div>
-
-                    <div id="item-eliminar">
-                        <span><a href="#"><i class="far fa-trash-alt"></i></a></span>
-                    </div>
-                </div>
-            </article>
-
-
-
-
+            <% } %>
         </section>
         <section class="total-checkout">
             <div class="total-checkout-border">
@@ -191,8 +100,6 @@
                     </section>
                 </div>
             </div>
-
-
         </section>
     </main>
 <!-- FOOTER -->
