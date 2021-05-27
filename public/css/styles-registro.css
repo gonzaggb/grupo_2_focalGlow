@@ -114,18 +114,13 @@ body{
 
 @media (min-width: 768px){
 
-    .logo{
-    width: 25vh;
-    padding: 0px;
 
-}
+
 body{
 
     color:black;
 }
-.inner_nav{
-    display: none;
-}
+
 
 
 .registry-form2{
@@ -157,6 +152,7 @@ body{
     
 }
 }
+
 
 @media (min-width: 992px){
     .registry-form2{
