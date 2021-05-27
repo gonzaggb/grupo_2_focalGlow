@@ -1,11 +1,11 @@
-<%- include('partials/head.ejs')%>
+<%- include('../partials/head.ejs')%>
 <link rel="stylesheet" href="/css/normalize.css">
 <link rel="stylesheet" href="/css/styles-header.css">
 <link rel="stylesheet" href="/css/styles-footer.css">
 <link rel="stylesheet" href="/css/styles-product-org.css">
 </head>
 <body>
-    <%- include('partials/header.ejs')%>
+    <%- include('../partials/header.ejs')%>
     <main>
         <h2 class="titulo">Creación de Producto</h2>
        <div class="container-form"> 
@@ -68,12 +68,15 @@
             </div><br>
             <div class="first-">
                 <label for="potencia">Potencia: </label>
+                <% for(j=1;j<=4;j++){ %>
                     <select name="potencia" class="select">
+                        <option>Seleccionar</option>
                         <% for(i=1;i<=100;i++){ %>
                             <option value="[i]"><%=[i]%>w</option>
                         <%}%>
                     </select>
-                    <select name="potencia">
+                    <%}%>
+<!--                     <select name="potencia">
                         <% for(i=1;i<=100;i++){ %>
                             <option value="[i]">
                                 <%=[i]%>w
@@ -93,7 +96,7 @@
                                 <%=[i]%>w
                             </option>
                             <%}%>
-                    </select>
+                    </select> -->
             </div><br>
             <div class="first-">
                 <label class="" for="cct">CCT: </label>
@@ -166,5 +169,5 @@
         </form>
     </div>
     </main>
-    <%- include('partials/footer.ejs')%>
+    <%- include('../partials/footer.ejs')%>
 </body>
