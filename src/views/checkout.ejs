@@ -14,13 +14,13 @@
         <br>
 
         <section class="checkout-articles">
-            <% for (i =1; i <= 2; i++) { %>
+            <% for (i =0; i < productCheckout.length; i++) { %>
             <!-- PRODUCTO <%- i %> -->
 
                 <article class="checkout-product">
                 <div class="name-category">
-                    <h3>Nombre</h3>
-                    <h4>Categoria</h4>
+                    <h3><%= productCheckout[i].nombre %></h3>
+                    <h4><%= productCheckout[i].categoria %></h4>
                 </div>
 
                 <div class="product-detail">
@@ -33,23 +33,23 @@
                         <div class="detail">
                             <div class="item-left">
                                 <div class="left-side">
-                                    <span>Marca: Focal Glow</span>
+                                    <span>Marca: <%= productCheckout[i].marca %></span>
                                     <br>
-                                    <span>Potencia: 20W</span>
+                                    <span>Potencia: <%= productCheckout[i].potencia %></span>
                                     <br>
-                                    <span>CCT: 3000K</span>
+                                    <span>CCT: <%= productCheckout[i].cct %></span>
                                     <br>
-                                    <span>DIM: DALI</span>
+                                    <span>DIM: <%= productCheckout[i].dim %></span>
 
                                 </div>
                             </div>
                             <div class="item-right">
                                 <div class="left-side">
-                                    <span>Precio: $1000</span>
+                                    <span>Precio: $<%= productCheckout[i].precio %></span>
                                     <br>
-                                    <span>Cantidad: <input type="text" name="quantity"></span>
+                                    <span>Cantidad: <input type="text" name="quantity" value="<%= productCheckout[i].cantidad %>"></span>
                                     <br>
-                                    <span>Total: $1000</span>
+                                    <span>Total: $<%= productCheckout[i].precio * productCheckout[i].cantidad %></span>
                                 </div>
 
                             </div>
@@ -68,9 +68,23 @@
             <div class="total-checkout-border">
                 <h1>CHECKOUT</h1>
                 <div class="separador"></div>
-                <span>Cantidad</span>
+                
+
+                <span>Cantidad: <%
+                    let cantidad = 0; 
+                    for (i =0; i < productCheckout.length; i++) { %>
+                    <% cantidad = cantidad + productCheckout[i].cantidad %> 
+                    <% }%>
+                    <%=cantidad %> </span>
                 <br>
-                <span>Total</span>
+                <span>Total:
+                    <%
+                    let total = 0; 
+                    for (i =0; i < productCheckout.length; i++) { %>
+                    <% total = total + productCheckout[i].cantidad * productCheckout[i].precio  %> 
+                    <% }%>
+                    <%=total %>
+                </span>
                 <br>
                 <div class="separador"></div>
                 <p>Revise bien todos los datos
