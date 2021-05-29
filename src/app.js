@@ -1,6 +1,6 @@
 const express = require('express') // trae el modulo de express para poder montar el servidor
-const path = require('path') //requiere el modulo nativo path de node
 const app = express()
+const path = require('path') //requiere el modulo nativo path de node
 const port = process.env.PORT || 3000
 
 // Indica a express la ruta que contiene los recursos estaticos  para consumir de manera sencilla
