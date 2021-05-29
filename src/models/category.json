@@ -1,0 +1,45 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "image": "/images/mercurio.jpeg",
+      "name": "PLUTO"
+    },
+    {
+      "id": 2,
+      "image": "/images/venus.jpeg",
+      "name": "Aplique"
+    },
+    {
+      "id": 3,
+      "image": "/images/tierra.jpeg",
+      "name": "Pie"
+    },
+    {
+      "id": 4,
+      "name": "Colgante",
+      "image": "/images/marte.jpeg"
+    },
+    {
+      "id": 5,
+      "name": "Spot",
+      "image": "/images/jupiter.jpeg"
+    },
+    {
+      "id": 6,
+      "name": "Sistemas/Accesorios",
+      "image": "/images/saturno.jpeg",
+      "anillos": "true"
+    },
+    {
+      "id": 7,
+      "name": "Mesa",
+      "image": "/images/urano.jpeg"
+    },
+    {
+      "id": 8,
+      "name": "Exterior",
+      "image": "/images/neptuno.jpeg"
+    }
+  ]
+}
