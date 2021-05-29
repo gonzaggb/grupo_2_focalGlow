@@ -1,3 +1,4 @@
+const { name } = require('ejs')
 const fs = require('fs')
 
 const file = fs.readFileSync(__dirname + '/category.json')

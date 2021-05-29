@@ -2,44 +2,51 @@
   "categories": [
     {
       "id": 1,
-      "image": "/images/mercurio.jpeg",
-      "name": "PLUTO"
+      "name": "Plafón",
+      "image": "/img/plafon.png",
+      "imageCover": "/img/cover/cover-plafon.jpg"
     },
     {
       "id": 2,
+      "name": "Apliques",
       "image": "/images/venus.jpeg",
-      "name": "Aplique"
+      "imageCover": "/img/cover/cover-aplique.jpg"
     },
     {
       "id": 3,
+      "name": "Pie",
       "image": "/images/tierra.jpeg",
-      "name": "Pie"
+      "imageCover": "/img/cover/cover-pie.jpg"
     },
     {
       "id": 4,
       "name": "Colgante",
-      "image": "/images/marte.jpeg"
+      "image": "/images/marte.jpeg",
+      "imageCover": "/img/cover/cover-colgante.jpg"
     },
     {
       "id": 5,
       "name": "Spot",
-      "image": "/images/jupiter.jpeg"
+      "image": "/images/jupiter.jpeg",
+      "imageCover": "/img/cover/cover-spot.jpg"
     },
     {
       "id": 6,
       "name": "Sistemas/Accesorios",
       "image": "/images/saturno.jpeg",
-      "anillos": "true"
+      "imageCover": "/img/cover/cover-sistemas.jpg"
     },
     {
       "id": 7,
       "name": "Mesa",
-      "image": "/images/urano.jpeg"
+      "image": "img/Mesa.png",
+      "imageCover": "/img/cover/cover-mesa.jpg"
     },
     {
       "id": 8,
       "name": "Exterior",
-      "image": "/images/neptuno.jpeg"
+      "image": "/images/neptuno.jpeg",
+      "imageCover": "/img/cover/cover-outdoor.jpg"
     }
   ]
 }
