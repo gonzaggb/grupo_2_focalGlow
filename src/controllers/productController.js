@@ -9,8 +9,7 @@ const controller = {
   },
   create:(req,res) =>{
     let producto= req.body
-    
-     agregarProducto.create(producto)
+    agregarProducto.create(producto)
     res.redirect('/product/add')
   }
 }
