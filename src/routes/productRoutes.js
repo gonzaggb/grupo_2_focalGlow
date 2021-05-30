@@ -6,7 +6,8 @@ const router = express.Router()
 const productController = require('../controllers/productController')
 
 //Asigno a cada ruta la propiedad del controlador
-router.get('/', productController.detail)
-router.get('/add', productController.add)
+router.get('/', productController.detail);
+router.get('/add', productController.add);
+router.post('/add', productController.create)
 
 module.exports = router

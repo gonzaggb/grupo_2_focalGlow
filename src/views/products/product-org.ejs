@@ -6,7 +6,7 @@
     <main>
         <h2 class="titulo">Creación de Producto</h2>
        <div class="container-form"> 
-        <form  id="register" action="" method="GET">
+        <form  id="register" action="/product/add" method="POST">
             <div class="first">
                 <div class="in-line-data">
                     <label class="" for="categoria">Categoria: </label><br>
@@ -15,8 +15,8 @@
             </div><br>
            <div class="first">
                 <div class="in-line-data">
-                    <label class="" for="nombre-producto">Nombre del Producto: </label><br>
-                    <input class="box" type="text" name="nombre-producto" id="nombre-producto"  required>
+                    <label class="" for="producto">Nombre del Producto: </label><br>
+                    <input class="box" type="text" name="producto" id="producto"  required>
              </div>
             </div><br>
             <div class="first-">
@@ -69,7 +69,7 @@
                 <label for="potencia">Potencia: </label>
                 <% for(j=1;j<=4;j++){ %>
                     <select name="potencia" class="select">
-                        <option>Seleccionar</option>
+                        <option value="null">Seleccionar</option>
                         <% for(i=1;i<=100;i++){ %>
                             <option value="<%=[i]%>W"><%=[i]%>W</option>
                         <%}%>
@@ -117,27 +117,27 @@
             </div><br>
             <div class="imagen-input">
                 <label class="title" for="file">Dimensiones del Producto: </label><br>
-                <input type="file" accept=".jpg">
+                <input type="file" name="file" accept=".jpg">
             </div><br>
          </div>  
          <div class="imagenes">
             <div class="imagen-input">
                 <label class="title" for="file">Imagen 2: </label><br>
-                <input type="file" accept=".jpg">
+                <input type="file"  name="file" accept=".jpg">
             </div><br>
             <div class="imagen-input">
                 <label class="title" for="file">Imagen 3: </label><br>
-                <input type="file" accept=".jpg">
+                <input type="file" name="file" accept=".jpg">
             </div><br>
          </div> 
         <div class="imagenes">
             <div class="imagen-input">
                 <label class="" for="hoja-tecnica">Hoja Técnica: </label><br>
-                <input type="file" src="" alt="" accept=".pdf">
+                <input type="file" src="" alt="" name="file" accept=".pdf">
             </div><br>
             <div class="imagen-input">
                 <label class="" for="manual-instalacion">Manual de Instalación: </label><br>
-                <input type="file" src="" alt="" accept=".pdf">
+                <input type="file" src="" alt="" name="file" accept=".pdf">
             </div><br>
         </div>  
             <div class="button-container">

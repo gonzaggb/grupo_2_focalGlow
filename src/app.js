@@ -11,6 +11,9 @@ app.use(express.static(publicPath))
 app.set('views', path.join(__dirname, 'views')) // indica al template engine donde buscar las vistas//
 app.set('view engine', 'ejs')
 
+app.use(express.urlencoded({extended: false}));
+app.use(express.json())
+
 //Levantamos el Servidor
 app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
 
