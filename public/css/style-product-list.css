@@ -78,6 +78,9 @@ body{
     .add-product{
         width: 50%;   
     }
+    .id{
+        width: 4%;
+    }
     .form-lista-productos{
         border: 0;
     }

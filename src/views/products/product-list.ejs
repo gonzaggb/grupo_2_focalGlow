@@ -10,15 +10,18 @@
         </div>
         <h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %> </h4>
         <div>
-            <% for (let i = 0; i < products.length; i++) {%>
-                <form  class='form-lista-productos' action="" >
+            <% for (let i =0 ; i < products.length; i++) {%>
+                <form  class='form-lista-productos' action="/product/edit"  method="POST">
+                 <label for="id">
+                 <h2>Id: <input  class="id" type="number" name="id" value="<%=[i]%>"></h2>
+                 </label>      
                 <h2> Categoria: <%=products[i].categoria%></h2>
                 <h2> Nombre: <%=products[i].producto%></h2>
                 <h2> Cantidad: <%=products[i].cantidad%></h2>
                 <h2> Fuente: <%=products[i].fuente%></h2>
                 <h2> Material: <%=products[i].material%></h2>
                 <h2> Potencia: <%=products[i].potencia%></h2>
-                <h2> Precio: $<%=products[i].cantidad%></h2>
+                <h2> Precio: $<%=products[i].precio%></h2>
                 <h2> Archivos: <%=products[i].file%></h2>
                 <div>
                 <div class="button-container"> 
