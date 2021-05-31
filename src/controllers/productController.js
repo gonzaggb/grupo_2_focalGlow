@@ -5,7 +5,7 @@ const controller = {
     res.render('products/product-detail.ejs')
   },
   add: (req, res) => {
-    res.render('products/product-org.ejs')
+    res.render('products/product-create.ejs')
   },
   create:(req,res) =>{
     let producto= req.body
@@ -15,7 +15,12 @@ const controller = {
   list: (req,res) =>{
     let products= agregarProducto.findAll()
     res.render('products/product-list.ejs' ,{ 'products': products })
-  }
+  },
+  edit: (req,res) =>{
+    let id = req.body.id
+    console.log(req.body.id)
+    res.render('products/product-edit.ejs')
+  },
 }
     
     

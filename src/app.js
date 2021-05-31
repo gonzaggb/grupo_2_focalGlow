@@ -2,6 +2,7 @@ const express = require('express') // trae el modulo de express para poder monta
 const app = express()
 const path = require('path') //requiere el modulo nativo path de node
 const port = process.env.PORT || 3000
+const methodOverride = require ('method-override');
 
 // Indica a express la ruta que contiene los recursos estaticos  para consumir de manera sencilla
 publicPath = path.join(__dirname, '../public')
@@ -13,6 +14,8 @@ app.set('view engine', 'ejs')
 
 app.use(express.urlencoded({extended: false}));
 app.use(express.json())
+
+app.use(methodOverride('_method'))
 
 //Levantamos el Servidor
 app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))

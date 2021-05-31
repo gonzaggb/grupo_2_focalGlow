@@ -15,7 +15,10 @@ module.exports={
     findAll() {
         return productosJson.products
     
-  },
+    },
+    findByPk(id) {
+    return productosJson.products.find((e) => e.id == id)
+    },
 
 
 }
