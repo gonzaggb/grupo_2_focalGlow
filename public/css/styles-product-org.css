@@ -120,6 +120,9 @@ label{
         display: block;
         width: 300px;
     }
+    .category-selector{
+        width: 100%;
+    }
 }
 @media(min-width: 1000px){
     #register {
@@ -129,6 +132,9 @@ label{
     flex-wrap: wrap; 
     align-content: center;
     
+    }
+     .category-selector{
+        width: 100%;
     }
     .box {
     border: 0;

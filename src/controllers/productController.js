@@ -10,7 +10,11 @@ const controller = {
   create:(req,res) =>{
     let producto= req.body
     agregarProducto.create(producto)
-    res.redirect('/product/add')
+    res.redirect('/product/list')
+  },
+  list: (req,res) =>{
+    let products= agregarProducto.findAll()
+    res.render('products/product-list.ejs' ,{ 'products': products })
   }
 }
     

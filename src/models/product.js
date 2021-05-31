@@ -11,5 +11,11 @@ module.exports={
         productosJson.products.push(i);
         return fs.writeFileSync(__dirname + '/product.json', JSON.stringify(productosJson))
 
-    } 
+    },
+    findAll() {
+        return productosJson.products
+    
+  },
+
+
 }

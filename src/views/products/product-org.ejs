@@ -8,9 +8,19 @@
        <div class="container-form"> 
         <form  id="register" action="/product/add" method="POST">
             <div class="first">
-                <div class="in-line-data">
+                <div class="cateogry-selector">
                     <label class="" for="categoria">Categoria: </label><br>
-                    <input class="box" type="text" name="categoria" id="categoria" required>
+                    <select name="categoria" class="select">
+                        <option value="">Seleccionar</option>
+                        <option value="plafon">Plafón</option>
+                        <option value="aplique">Aplique</option>
+                        <option value="pie">Pie</option>
+                        <option value="colgante">Colgante</option>
+                        <option value="spot">Spot</option>
+                        <option value="accesorios">Sistemas/Accesorios</option>
+                        <option value="mesa">Mesa</option>
+                        <option value="exterior">Exterior</option>
+                    </select>
                 </div>
             </div><br>
            <div class="first">
@@ -18,6 +28,12 @@
                     <label class="" for="producto">Nombre del Producto: </label><br>
                     <input class="box" type="text" name="producto" id="producto"  required>
              </div>
+            </div><br>
+            <div class="first">
+                <div class="in-line-data">
+                    <label class="" for="cantidad">Cantidad: </label><br>
+                    <input class="box" type="number" name="cantidad" id="producto" min="0" required>
+                </div>
             </div><br>
             <div class="first-">
                 <label class="" for="fuente">Fuente: </label>
@@ -107,7 +123,7 @@
                 </div>
             </div><br>
             <div class="first-">
-                <label class="" for="precio">Precio: </label><br>
+                <label class="" for="precio">Precio unitario base: </label><br>
                 <input class="box" type="number" name="precio" id="precio" step="0.1" placeholder=" Ej 15235.35" required>
             </div><br>
          <div class="imagenes">   

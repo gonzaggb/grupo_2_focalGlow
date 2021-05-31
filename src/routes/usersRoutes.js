@@ -6,4 +6,5 @@ const userController = require('../controllers/userController')
 router.get('/login', userController.login)
 router.get('/registro', userController.newUser)
 
+
 module.exports = router
