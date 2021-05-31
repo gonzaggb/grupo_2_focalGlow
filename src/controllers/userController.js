@@ -15,8 +15,8 @@ const controller = {
     let session = req.body
     let userStatus = user.validateUser(session)
     console.log(userStatus)
-     res.render('users/login.ejs', {'userStatus': userStatus })
-   }
+/*      res.render('users/login.ejs', {'userStatus': userStatus })
+ */   }
 }
 
 module.exports = controller
