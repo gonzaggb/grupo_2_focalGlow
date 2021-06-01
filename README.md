@@ -11,17 +11,11 @@ Grupo 2: Armando-Baigorria-Leguizamón
 ## Contenido
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Screenshot](#screenshot)
   - [Links](#links)
-- [My process](#my-process)
-  - [Built with](#built-with)
-  - [Webs de referencia](#what-i-learned)
+  -
+  - [Webs de referencia](#webs-de-referencia)
   - [Autores](#autores)
-
-Live Site URL: [https://focalglow.herokuapp.com/]
-
-Trello: [https://trello.com/b/CuQYclp3/focal-glow]
 
 ## Overview
 
@@ -37,6 +31,16 @@ Por un lado a la persona que quiere un elemento de diseño exclusivo en su hogar
 
 El nombre:
 Focal Glow es un término utilizado en iluminación arquitectural que indica la dirección del espacio. Te orienta, es la luz que te ayuda a focalizarte. Focal Glow llama la atención, une las partes divergentes, vende mercadería, separa lo importante de lo no importante.
+
+### Screenshot
+
+![](design/Screenshot.jpg)
+
+## Links
+
+Live Site URL: [https://focalglow.herokuapp.com/]
+
+Trello: [https://trello.com/b/CuQYclp3/focal-glow]
 
 ## Webs de referencia
 
