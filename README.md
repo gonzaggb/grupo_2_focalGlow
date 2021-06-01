@@ -1,8 +1,9 @@
-
 # grupo_2_ecommerce
-   ![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)
 
-                       
+![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)
+
+Live Site URL: [https://focalglow.herokuapp.com/]
+
 Trabajo integrador Digital House
 
 Trello: https://trello.com/b/CuQYclp3/focal-glow
@@ -38,18 +39,12 @@ https://flos.com/es/
 
 https://www.louispoulsen.com/
 
-
 Integrantes:
-Pablo Daniel Armando 
-Desde que tengo uso de razón que me apasiona el mundo de la programación, desde hace mucho tiempo que trabajo en un ambiente totalmente alejado de lo que realmente me gusta, y por eso con ayuda de este curso voy a  cambiar esa realidad, ya sea ingresando a una empresa, trabajando freelance o porque no, incursionar en el mundo de la enseñanza.  
-
-
+Pablo Daniel Armando
+Desde que tengo uso de razón que me apasiona el mundo de la programación, desde hace mucho tiempo que trabajo en un ambiente totalmente alejado de lo que realmente me gusta, y por eso con ayuda de este curso voy a cambiar esa realidad, ya sea ingresando a una empresa, trabajando freelance o porque no, incursionar en el mundo de la enseñanza.
 
 Gonzalo Baigorra
 Actualmente trabajo en un empresa de tecnología, pero en un area orientada a lo comercial. Espero a través de este curso poder sumar otro valor para la compañia, además de encarar otros desafíos a nivel profesional, ya que la programación es una asignatura pendiente en mi vida.
 
 Martiniano Leguizamón (Mars)
 Soy un apasionado de la Luz. Tomo el principio “less is more” de Mies Van der Rohe como mi filosofía personal en iluminación. He recorrido el mundo y profundizado mi conocimiento no sólo en el aspecto técnico sino en el concepto de proveer soluciones en vez de luminarias y quiero hacer lo mismo con la programación.
-
-
-
