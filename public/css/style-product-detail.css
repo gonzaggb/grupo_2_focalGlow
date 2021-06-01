@@ -101,6 +101,7 @@ main {
     border-radius: 0 3px 3px 0;
     user-select: none;
     z-index: 10;
+    display: none;
   }
   /* Position the "next button" mad "left button */
 .prev {

@@ -18,7 +18,6 @@ const controller = {
   },
   edit: (req,res) =>{
     let id = req.body.id
-    console.log(req.body.id)
     res.render('products/product-edit.ejs')
   },
 }
