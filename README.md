@@ -1,4 +1,4 @@
-# grupo_2_ecommerce
+# Focal Glow
 
 ![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)
 
@@ -13,7 +13,6 @@ Grupo 2: Armando-Baigorria-Leguizamón
 - [Overview](#overview)
   - [Screenshot](#screenshot)
   - [Links](#links)
-  -
   - [Webs de referencia](#webs-de-referencia)
   - [Autores](#autores)
 
