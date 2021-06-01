@@ -1,7 +1,9 @@
 const user = require('../models/user')
 const controller = {
   login: (req, res) => {
-    res.render('users/login.ejs')
+    const userStatus = ''
+    res.render('users/login.ejs', { userStatus })
+
   },
   newUser: (req, res) => {
     res.render('users/registro.ejs')
@@ -12,11 +14,15 @@ const controller = {
     res.redirect('/')
   },
   loginUser: (req,res) =>{
-    let session = req.body
-    let userStatus = user.validateUser(session)
-    console.log(userStatus)
-/*      res.render('users/login.ejs', {'userStatus': userStatus })
- */   }
+    const session = req.body
+    const userStatus = user.validateUser(session) //valido el usuario
+    if(userStatus == 'Acceso concedido'){
+    res.redirect('/product/list')
+     }else{
+       console.log('entro al if negativo')
+    res.render('users/login.ejs', { userStatus })
+    }
+  }
 }
 
 module.exports = controller

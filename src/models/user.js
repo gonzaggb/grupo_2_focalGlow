@@ -8,7 +8,7 @@ module.exports = {
     },
     validateUser(user) {
         const findUser = users.usuarios.find(e => e.email === user.email)
-        if (findUser == undefined) {
+        if (findUser === undefined) {
             return 'El usuario no existe'
         } else if (findUser.password == user.password) {
             return 'Acceso concedido'
