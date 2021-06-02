@@ -1,13 +1,37 @@
 const fs = require('fs')
-const users = JSON.parse(fs.readFileSync(__dirname + '/users.json', 'utf-8'))
+const path = require('path')
 
 module.exports = {
-    createUser(newUser) {
-        users.usuarios.push(newUser)
-        return fs.writeFileSync(__dirname + '/users.json', JSON.stringify(users))
+    usersPath : path.resolve(__dirname + '/users.json'),
+    readFile(){
+        const usersJson = JSON.parse(fs.readFileSync(this.usersPath, 'utf-8'))
+        return  usersJson
     },
+
+    writeFile(newData){
+        console.log('Ingreso a writeFile')
+        console.log('recibo por parametros')
+        console.log(newData)
+        fs.writeFileSync(this.usersPath, JSON.stringify(newData, null, 2))
+        return newData
+    },
+
+    generateId(){
+        console.log('Ingrese a generate ID')
+        return this.readFile().pop().id + 1
+    },
+
+    createUser(newUser) {
+        newUser.id = this.generateId()
+        const userJson = this.readFile()
+        const usersUpdated = [...userJson, newUser]
+        this.writeFile(usersUpdated)
+        return newUser
+    },
+
     validateUser(user) {
-        const findUser = users.usuarios.find(e => e.email === user.email)
+        users = this.readFile()
+        const findUser = users.find(e => e.email === user.email)
         if (findUser === undefined) {
             return 'El usuario no existe'
         } else if (findUser.password == user.password) {

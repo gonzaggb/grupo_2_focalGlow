@@ -17,9 +17,10 @@ const controller = {
     const session = req.body
     const userStatus = user.validateUser(session) //valido el usuario
     if(userStatus == 'Acceso concedido'){
+      console.log(userStatus)
     res.redirect('/product/list')
      }else{
-       console.log('entro al if negativo')
+      console.log(userStatus)
     res.render('users/login.ejs', { userStatus })
     }
   }
