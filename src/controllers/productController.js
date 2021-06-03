@@ -1,4 +1,4 @@
-const agregarProducto=require('../models/product')
+const agregarProducto = require('../models/product')
 
 const controller = {
   detail: (req, res) => {
@@ -7,22 +7,19 @@ const controller = {
   add: (req, res) => {
     res.render('products/product-create.ejs')
   },
-  create:(req,res) =>{
-    let producto= req.body
+  create: (req, res) => {
+    let producto = req.body
     agregarProducto.create(producto)
     res.redirect('/product/list')
   },
-  list: (req,res) =>{
-    let products= agregarProducto.findAll()
-    res.render('products/product-list.ejs' ,{ 'products': products })
+  list: (req, res) => {
+    let products = agregarProducto.findAll()
+    res.render('products/product-list.ejs', { products: products })
   },
-  edit: (req,res) =>{
+  edit: (req, res) => {
     let id = req.body.id
     res.render('products/product-edit.ejs')
   },
 }
-    
-    
-    
 
 module.exports = controller

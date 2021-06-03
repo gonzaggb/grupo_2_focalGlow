@@ -1,24 +1,25 @@
 const fs = require('fs')
+const path = require('path')
 
-const productosJson = JSON.parse(fs.readFileSync(__dirname + '/product.json', 'utf-8'))
+//Determino la ruta y el nombre del archivo a leer
+const filename = path.resolve(__dirname, '../data/product.json')
 
+//Leo el archivo product en formato JSON
+let productsJson = fs.readFileSync(filename, 'utf-8')
 
+//Paso el JSON a objeto literal
+let products = JSON.parse(productsJson)
 
-
-module.exports={
-    create(i){
-
-        productosJson.products.push(i);
-        return fs.writeFileSync(__dirname + '/product.json', JSON.stringify(productosJson))
-
-    },
-    findAll() {
-        return productosJson.products
-    
-    },
-    findByPk(id) {
-    return productosJson.products.find((e) => e.id == id)
-    },
-
-
+module.exports = {
+  create(i) {
+    products.push(i)
+    productsJson = JSON.stringify(products)
+    return fs.writeFileSync(filename, productsJson)
+  },
+  findAll() {
+    return products
+  },
+  findByPk(id) {
+    return products.find((e) => e.id == id)
+  },
 }
