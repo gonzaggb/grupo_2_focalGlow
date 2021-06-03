@@ -24,6 +24,7 @@ const controller = {
     let productDetail = product.findByPk(id)
     res.render('products/product-edit.ejs', { productDetail })
   },
+  delete: (req, res) => {},
 }
 
 module.exports = controller
