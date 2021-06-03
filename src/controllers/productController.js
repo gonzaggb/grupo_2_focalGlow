@@ -1,25 +1,28 @@
-const agregarProducto = require('../models/product')
+//Requiero el modelo product para poder usar todos sus metodos
+const product = require('../models/product')
 
 const controller = {
   detail: (req, res) => {
     let id = req.params.id
-    res.render('products/product-detail.ejs')
+    let productDetail = product.findByPk(id)
+    res.render('products/product-detail.ejs', { productDetail })
   },
   add: (req, res) => {
     res.render('products/product-create.ejs')
   },
   create: (req, res) => {
-    let producto = req.body
-    agregarProducto.create(producto)
+    let productUpdate = req.body
+    product.create(productUpdate)
     res.redirect('/product/list')
   },
   list: (req, res) => {
-    let products = agregarProducto.findAll()
+    let products = product.findAll()
     res.render('products/product-list.ejs', { products: products })
   },
   edit: (req, res) => {
     let id = req.body.id
-    res.render('products/product-edit.ejs')
+    let productDetail = product.findByPk(id)
+    res.render('products/product-edit.ejs', { productDetail })
   },
 }
 
