@@ -2,6 +2,7 @@ const agregarProducto = require('../models/product')
 
 const controller = {
   detail: (req, res) => {
+    let id = req.params.id
     res.render('products/product-detail.ejs')
   },
   add: (req, res) => {
