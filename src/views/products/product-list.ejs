@@ -25,8 +25,9 @@
                 <h2> Archivos: <%=products[i].file%></h2>
                 <div>
                 <div class="button-container"> 
-                    <button id="button-modificar" type="submit"> Modificar</button>
-                    <button id="button-eliminar" type="submit">Eliminar</button>
+                    <button id="button-visualizar" type="submit" value="visualize" formaction="/product/detail/<%=i%>">Visualizar</button>
+                    <button id="button-modificar" type="submit" value="update">Modificar</button>
+                    <button id="button-eliminar" type="submit" value="delete">Eliminar</button>
                 </div>      
                 </div>
                 </form>             

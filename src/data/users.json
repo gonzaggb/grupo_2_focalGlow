@@ -4,15 +4,13 @@
     "nombre": "gonzalo",
     "apellido": "baigorria",
     "email": "gonzaggb@hotmail.com",
-    "password": "123456",
-    "re-password": "123456"
+    "password": "123456"
   },
   {
     "nombre": "Homero J",
     "apellido": "Simpson",
     "email": "hjs@springfield.com",
     "password": "callefalsa123",
-    "re-password": "callefalsa123",
     "id": 2
   },
   {
@@ -20,7 +18,13 @@
     "apellido": "Araujo Martinez",
     "email": "gonzaggb@hotmail.com",
     "password": "asd",
-    "re-password": "asd",
     "id": 3
+  },
+  {
+    "nombre": "Benicio",
+    "apellido": "Baigorria",
+    "email": "beni@gmail.com",
+    "password": "123456",
+    "id": 4
   }
 ]
