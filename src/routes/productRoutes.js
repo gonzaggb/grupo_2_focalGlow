@@ -11,5 +11,6 @@ router.get('/add', productController.add)
 router.post('/add', productController.create)
 router.get('/list', productController.list)
 router.get('/edit', productController.edit)
+router.get('/delete/:id', productController.delete) //estoy usando metodo GET por que uso el mismo form para varios botones
 /* router.put('/edit', productController.edit) */
 module.exports = router

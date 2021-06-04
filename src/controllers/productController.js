@@ -24,7 +24,17 @@ const controller = {
     let productDetail = product.findByPk(id)
     res.render('products/product-edit.ejs', { productDetail })
   },
-  delete: (req, res) => {},
+  delete: (req, res) => {
+    //guardo la variable del id del articulo a borrar
+    let id = req.params.id
+
+    //llamo al modelo para que borre al articulo por su id
+    product.delete(id)
+
+    //retorno la lista de productos actualizada
+    let products = product.findAll()
+    res.render('products/product-list.ejs', { products: products })
+  },
 }
 
 module.exports = controller
