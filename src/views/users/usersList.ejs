@@ -1,0 +1,65 @@
+<!-- Partial head -->
+<%- include('../partials/head.ejs')%>
+
+    <title>Login | Focal Glow</title>
+    <link rel="stylesheet" href="/css/styles-user-list.css">
+
+
+    </head>
+
+    <body>
+        <%- include('../partials/header.ejs')%>
+
+            <main class="container-users">
+                <section>
+                    <article class="user-row">
+                        <div class="header-list">
+                            <div class="item">ID</div>
+                            <div class="item">Nombre</div>
+                            <div class="item">Apellido</div>
+                            <div class="item">Mail</div>
+                            <div class="action">
+                                <i class="far fa-trash-alt"></i>
+                                <i class="far fa-edit"></i>
+                            </div>
+                        </div>
+
+                        <div class="content-container">
+                            <% userList.forEach(e=> { %>
+                                <div class="content-list">
+
+                                    <div class="item">
+                                        <%= e.id%>
+                                    </div>
+                                    <div class="item">
+                                        <%= e.nombre%>
+                                    </div>
+                                    <div class="item">
+                                        <%= e.apellido%>
+                                    </div>
+                                    <div class="item">
+                                        <%= e.email%>
+                                    </div>
+                                    <div class="action">
+                                        <form action="/users/<%=e.id%>?_method=DELETE" method="POST">
+                                            <button type="submit"><i class="far fa-trash-alt"></i></button>
+                                        </form>
+                                        <a href="/users/<%=e.id%>/edit">
+                                            <i class="far fa-edit"></i>
+                                        </a>
+                                    </div>
+                                </div>
+
+
+                        </div>
+                        <%})%>
+                    </article>
+
+                </section>
+
+
+
+            </main>
+    </body>
+
+    </html>

@@ -1,0 +1,35 @@
+<!-- Partial head -->
+<%- include('../partials/head.ejs')%>
+
+    <title>Login | Focal Glow</title>
+
+
+    </head>
+
+    <body>
+        <%- include('../partials/header.ejs')%>
+        <form class="registry-form2" method="POST" action="/users/<%=userToEdit.id%>?_method=PUT">
+
+            <div class="registry-container2">
+                <label for="id">ID</label>
+                <input class="input-login" type="text" name="id" id="id" value="<%=userToEdit.id%>" required>
+                <label for="nombre">Nombre</label>
+                <input class="input-login" type="text" name="nombre" id="nombre" value="<%=userToEdit.nombre%>" required>
+                <label for="apellido">Apellido</label>
+                <input class="input-login" type="text" name="apellido" id="apellido" value="<%=userToEdit.apellido%>" required>
+                <label for="email">Email</label>
+                <input class="input-login" type="email" name="email" id="email" value="<%=userToEdit.email%>" required>
+                <label for="password">Contraseña</label>
+                <input class="input-login" type="password" name="password" id="password" value="password" required>
+
+            </div>
+            <div class="button-container">
+                <button type="submit" class="edit-button">Editar</button>
+
+            </div>
+
+            </section>
+        </form>
+    </body>
+
+    </html>
