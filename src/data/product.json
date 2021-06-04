@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "categoria": "aplique",
     "producto": "Aplique un toque caro",
     "cantidad": "14",
@@ -13,6 +14,7 @@
     "file": ["", "", "", "", ""]
   },
   {
+    "id": 2,
     "categoria": "spot",
     "producto": "Un spot accesible",
     "cantidad": "6",
@@ -25,6 +27,7 @@
     "file": ["", "", "", "", ""]
   },
   {
+    "id": 3,
     "categoria": "colgante",
     "producto": "Esta es la que cuelta",
     "cantidad": "4",
@@ -37,6 +40,7 @@
     "file": ["", "", "", "", ""]
   },
   {
+    "id": 4,
     "categoria": "colgante",
     "producto": "Como esta",
     "cantidad": "123",
@@ -50,6 +54,7 @@
     "file": ["", "", "", "", ""]
   },
   {
+    "id": 5,
     "categoria": "accesorios",
     "producto": "Lamparita",
     "cantidad": "14",
@@ -59,6 +64,7 @@
     "file": ["", "", "", "", ""]
   },
   {
+    "id": 6,
     "categoria": "mesa",
     "producto": "y mesita ",
     "cantidad": "567",
@@ -72,6 +78,7 @@
     "file": ["", "", "", "", ""]
   },
   {
+    "id": 7,
     "categoria": "mesa",
     "producto": "Mars",
     "cantidad": "1",
@@ -85,6 +92,7 @@
     "file": ["", "", "", "", ""]
   },
   {
+    "id": 8,
     "categoria": "",
     "producto": "Gonzalo",
     "cantidad": "1",
