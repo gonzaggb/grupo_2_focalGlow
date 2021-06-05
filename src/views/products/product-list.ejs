@@ -11,8 +11,7 @@
         <h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %> </h4>
         <div>
             <% for (let i =0 ; i < products.length; i++) {%>
-                <form  class='form-lista-productos' action="/product/edit"  method="GET">
-                
+                               
                 <h2> Id: <%=products[i].id%></h2>
                 <h2> Categoria: <%=products[i].categoria%></h2>
                 <h2> Nombre: <%=products[i].producto%></h2>
@@ -25,11 +24,16 @@
                 <div>
                 <div class="button-container"> 
                     <button id="button-visualizar" type="submit" value="visualize" formaction="/product/detail/<%=i%>">Visualizar</button>
+
                     <button id="button-modificar" type="submit" value="update">Modificar</button>
-                    <button id="button-eliminar" type="submit" value="delete" formaction="/product/delete/<%=products[i].id%>">Eliminar</button>
+
+                    <form action="/product/delete/<%= products[i].id %>?_method=DELETE" method="POST">
+                        <button id="button-eliminar" type="submit">Eliminar</button>
+                    </form>
+                    
                 </div>      
                 </div>
-                </form>             
+                            
            <%}%>
         </div>  
 

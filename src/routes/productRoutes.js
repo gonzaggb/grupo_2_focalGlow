@@ -6,11 +6,19 @@ const router = express.Router()
 const productController = require('../controllers/productController')
 
 //Asigno a cada ruta la propiedad del controlador
-router.get('/detail/:id', productController.detail)
-router.get('/add', productController.add)
-router.post('/add', productController.create)
+
+//Mostrar Productos
 router.get('/list', productController.list)
+router.get('/detail/:id', productController.detail)
+
+//Crear Productos
+router.get('/add', productController.formNew)
+router.post('/add', productController.create)
+
+//Update Productos
 router.get('/edit', productController.edit)
-router.get('/delete/:id', productController.delete) //estoy usando metodo GET por que uso el mismo form para varios botones
-/* router.put('/edit', productController.edit) */
+router.put('/edit/:id', productController.update)
+
+//Delete Producto
+router.delete('/delete/:id', productController.delete)
 module.exports = router

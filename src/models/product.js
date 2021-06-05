@@ -1,22 +1,27 @@
 const fs = require('fs')
 const path = require('path')
-//Determino la ruta y el nombre del archivo a leer
-const filename = path.resolve(__dirname, '../data/product.json')
 
 module.exports = {
+  //Determino la ruta y el nombre del archivo a leer
+  filename: path.resolve(__dirname, '../data/product.json'),
+
   read() {
     //Leo el archivo product en formato JSON
-    let productsJson = fs.readFileSync(filename, 'utf-8')
+    let productsJson = fs.readFileSync(this.filename, 'utf-8')
     //Paso el JSON a objeto literal
     let products = JSON.parse(productsJson)
     return products
   },
 
+  writeFile(newData) {
+    productsJson = JSON.stringify(newData)
+    return fs.writeFileSync(this.filename, productsJson)
+  },
+
   create(i) {
     let products = this.read()
     products.push(i)
-    productsJson = JSON.stringify(products)
-    return fs.writeFileSync(filename, productsJson)
+    return this.writeFile(products)
   },
   findAll() {
     let products = this.read()
@@ -34,7 +39,6 @@ module.exports = {
     products.splice(index, 1)
 
     //vuelvo a escribir el archivo
-    productsJson = JSON.stringify(products)
-    return fs.writeFileSync(filename, productsJson)
+    return this.writeFile(products)
   },
 }
