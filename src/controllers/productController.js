@@ -2,6 +2,10 @@
 const product = require('../models/product')
 
 const controller = {
+  list: (req, res) => {
+    let products = product.findAll()
+    return res.render('products/product-list.ejs', { products: products })
+  },
   detail: (req, res) => {
     let id = req.params.id
     let productDetail = product.findByPk(id)
@@ -14,10 +18,6 @@ const controller = {
     let productUpdate = req.body
     product.create(productUpdate)
     res.redirect('/product/list')
-  },
-  list: (req, res) => {
-    let products = product.findAll()
-    res.render('products/product-list.ejs', { products: products })
   },
   edit: (req, res) => {
     let id = req.body.id
@@ -32,8 +32,10 @@ const controller = {
     product.delete(id)
 
     //retorno la lista de productos actualizada
-    let products = product.findAll()
-    res.render('products/product-list.ejs', { products: products })
+    return controller.list(req, res)
+
+    //let products = product.findAll()
+    //res.redirect('product/list') //, { product: product })
   },
 }
 

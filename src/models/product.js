@@ -32,10 +32,9 @@ module.exports = {
     let index = products.findIndex((e) => e.id == id)
     //uso el metodo splice para sacar ese producto
     products.splice(index, 1)
-    console.log(index)
-    console.log(products)
+
     //vuelvo a escribir el archivo
-    //productsJson = JSON.stringify(products)
-    //return fs.writeFileSync(filename, productsJson)
+    productsJson = JSON.stringify(products)
+    return fs.writeFileSync(filename, productsJson)
   },
 }
