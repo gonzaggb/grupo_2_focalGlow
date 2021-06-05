@@ -20,9 +20,10 @@ const controller = {
     res.redirect('/product/list')
   },
   edit: (req, res) => {
-    let id = req.body.id
+    let id = req.params.id
     let productDetail = product.findByPk(id)
-    res.render('products/product-edit.ejs', { productDetail })
+    console.log(productDetail)
+    //res.render('products/product-edit.ejs', { productDetail })
   },
   update: (req, res) => {},
 

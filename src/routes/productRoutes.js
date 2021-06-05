@@ -16,7 +16,7 @@ router.get('/add', productController.formNew)
 router.post('/add', productController.create)
 
 //Update Productos
-router.get('/edit', productController.edit)
+router.get('/edit/:id', productController.edit)
 router.put('/edit/:id', productController.update)
 
 //Delete Producto
