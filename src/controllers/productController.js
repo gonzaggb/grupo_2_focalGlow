@@ -12,7 +12,7 @@ const controller = {
   },
   create:(req,res) =>{       
         const product = req.body;
-        const productCreated = agregarProducto.create(product);
+        const productCreated = product.create(product);
     res.redirect('/product/list')
   },
   list: (req, res) => {
@@ -22,21 +22,21 @@ const controller = {
 
   edit:(req,res) =>{
     let id = req.params.id
-    let productFound= agregarProducto.findByPk(id)
+    let productFound= product.findByPk(id)
     res.render('products/product-edit.ejs',{ 'productFound': productFound } )
 
   },
   update:(req,res) =>{
     let data = req.body
     let id = req.params.id
-    agregarProducto.update(data,id)
+    product.update(data,id)
     res.redirect('/product/list')
   },
 
   
   delete:(req,res) =>{
     let id =req.params.id
-    let productDelet = agregarProducto.delete(id)
+    let productDelet = product.delete(id)
     res.redirect('/product/list')
   },
   
