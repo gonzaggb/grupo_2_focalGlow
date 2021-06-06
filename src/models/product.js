@@ -7,7 +7,7 @@ const path= require('path')
 
 
 module.exports={
-    filename: path.resolve(__dirname + '/product.json'),
+    filename: path.resolve(__dirname , '../data/product.json'),
 
     readFile() {
         // Leer nuestra informacion
