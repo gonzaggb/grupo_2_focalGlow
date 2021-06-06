@@ -1,0 +1,37 @@
+
+.container-users{
+    width: 90%;
+    margin: 0 auto;
+}
+.content-container{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.header-list{
+    margin-top: 10px;
+}
+
+.header-list,
+.content-list{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 5px;;
+    
+}
+.header-list .item,
+.content-list .item{
+    margin: 0 auto;
+    width: 40%;
+    border: solid 1px black;
+    gap: 10px;
+}
+
+.action{
+    display: flex;
+    display: row;
+    font-size: 20px;
+    width: 50px;
+}

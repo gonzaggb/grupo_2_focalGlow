@@ -8,30 +8,9 @@
   },
   {
     "nombre": "Gonzalo",
-    "apellido": "4",
-    "email": "gonzaggb@hotmail.com",
+    "apellido": "German",
+    "email": "gonzaggb@hotmail.co",
     "password": "123456",
     "id": 2
-  },
-  {
-    "nombre": "gonzalo",
-    "apellido": "5",
-    "email": "gonzaggb@hotmail.com",
-    "password": "123456",
-    "id": 3
-  },
-  {
-    "nombre": "gonzalo",
-    "apellido": "6",
-    "email": "gonzaggb@hotmail.com",
-    "password": "123456",
-    "id": 4
-  },
-  {
-    "nombre": "gonzalo",
-    "apellido": "6",
-    "email": "gonzaggb@hotmail.com",
-    "password": "123456",
-    "id": 5
   }
 ]

@@ -49,11 +49,20 @@ const controller = {
   edit: (req, res) => {
     const id = req.params.id
     const userToEdit = user.findByPk(id)
-    console.log(userToEdit)
-      res.render('users/user-edit.ejs', {userToEdit})
+    res.render('users/user-edit.ejs', { userToEdit })
   },
-  update:(req, res) => {
-    const id = req.body
+  update: (req, res) => {
+    console.log("entro al update del controlador")
+    const { nombre, apellido, email, password } = req.body
+    const { id } = req.params
+    const userUpdate = {
+      nombre,
+      apellido,
+      email,
+      password
+    }
+    user.update(userUpdate, id)
+    res.redirect("/users")
   }
 }
 

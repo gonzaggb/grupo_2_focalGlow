@@ -14,13 +14,13 @@ router.get('/registro', userController.newUser)
 router.post('/registro', userController.create)
 
 //envia al usuario admin al listado de usuarios
-router.get('/',  userController.list) 
+router.get('/',  userController.list) // la barra sola equivale a /users porque del app.js vengo con /users
 
 //elimina usuario de la lista
 router.get('/:id/edit', userController.edit)
 router.delete('/:id', userController.delete)
+router.put('/:id/edit', userController.update)
 
 
-router.put('/userEdit/:id', userController.update)
 module.exports = router
 

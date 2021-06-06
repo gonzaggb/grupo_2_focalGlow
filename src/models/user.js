@@ -14,9 +14,6 @@ module.exports = {
     },
     //escribe los datos nuevos en el archivo
     writeFile(newData) {
-        console.log('Ingreso a writeFile')
-        console.log('recibo por parametros')
-        console.log(newData)
         fs.writeFileSync(this.usersPath, JSON.stringify(newData, null, 2))
         return newData
     },
@@ -48,11 +45,28 @@ module.exports = {
         const users = this.readFile()
         return users.find(e => e.id == id)
     },
-    delete(id){
+    delete(id) {
         const users = this.readFile()
         const usersUpdate = users.filter(e => e.id != id)
         this.writeFile(usersUpdate)
         return usersUpdate
+    },
+    update(userUpdate, id) {
+        console.log(id)
+        const users = this.readFile()
+        const modifiedUsers = users.map(usersEdit => {
+            if (usersEdit.id == id) {
+                usersEdit = {
+                    id,
+                    ...userUpdate
+                }
+            }   
+                return usersEdit
+            })
+        this.writeFile(modifiedUsers)
+        return modifiedUsers
+
+
     },
 
     //valida si existe el usuario y devuelvo algo, según corresponda
