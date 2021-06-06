@@ -2,44 +2,42 @@
 const product = require('../models/product')
 
 const controller = {
-  detail: (req, res) => {
-    let id = req.params.id
-    let productDetail = product.findByPk(id)
-    res.render('products/product-detail.ejs', { productDetail })
-  },
-  add: (req, res) => {
-    res.render('products/product-create.ejs')
-  },
-  create:(req,res) =>{       
-        const product = req.body;
-        const productCreated = agregarProducto.create(product);
-    res.redirect('/product/list')
-  },
   list: (req, res) => {
     let products = product.findAll()
     res.render('products/product-list.ejs', { products: products })
   },
-
-  edit:(req,res) =>{
+  detail: (req, res) => {
     let id = req.params.id
-    let productFound= agregarProducto.findByPk(id)
-    res.render('products/product-edit.ejs',{ 'productFound': productFound } )
-
+    let productFound = product.findByPk(id)
+    res.render('products/product-detail.ejs', { productFound })
   },
-  update:(req,res) =>{
+
+  formNew: (req, res) => {
+    res.render('products/product-create.ejs')
+  },
+  create: (req, res) => {
+    const product = req.body
+    const productCreated = product.create(product)
+    res.redirect('/product/list')
+  },
+
+  edit: (req, res) => {
+    let id = req.params.id
+    let productFound = product.findByPk(id)
+    res.render('products/product-edit.ejs', { productFound: productFound })
+  },
+  update: (req, res) => {
     let data = req.body
     let id = req.params.id
-    agregarProducto.update(data,id)
+    product.update(data, id)
     res.redirect('/product/list')
   },
 
-  
-  delete:(req,res) =>{
-    let id =req.params.id
-    let productDelet = agregarProducto.delete(id)
+  delete: (req, res) => {
+    let id = req.params.id
+    let productDelet = product.delete(id)
     res.redirect('/product/list')
   },
-  
 }
 
 module.exports = controller
