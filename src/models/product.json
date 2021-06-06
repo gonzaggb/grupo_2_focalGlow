@@ -1,0 +1,295 @@
+[
+  {
+    "categoria": "Aplique",
+    "producto": "Gonza y su forEach del orto ",
+    "cantidad": "1",
+    "fuente": "led",
+    "material": [
+      "Aluminio",
+      "Madera",
+      ""
+    ],
+    "optica": [
+      "flood",
+      "Spot"
+    ],
+    "potencia": [
+      "1W",
+      "11W",
+      "3W",
+      "27W"
+    ],
+    "cct": "2700k",
+    "dim": "switch",
+    "precio": "123123",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 28
+  },
+  {
+    "categoria": "",
+    "producto": "3233232",
+    "cantidad": "2232332",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "23322332",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 30
+  },
+  {
+    "categoria": "",
+    "producto": "234234",
+    "cantidad": "23423423",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "24244444444",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 31
+  },
+  {
+    "id": 32,
+    "categoria": "",
+    "producto": "test1 ",
+    "cantidad": "123312",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "132332",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "categoria": "",
+    "producto": "243424",
+    "cantidad": "32234243243",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "2423342243",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 33
+  },
+  {
+    "categoria": "",
+    "producto": "test2",
+    "cantidad": "1",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "1",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 34
+  },
+  {
+    "categoria": "",
+    "producto": "21",
+    "cantidad": "2222",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "222",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 35
+  },
+  {
+    "categoria": "",
+    "producto": "12",
+    "cantidad": "12",
+    "material": [
+      "Aluminio",
+      ""
+    ],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "2",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 36
+  },
+  {
+    "categoria": "",
+    "producto": "2323",
+    "cantidad": "233223",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "2323",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 37
+  },
+  {
+    "categoria": "",
+    "producto": "2323",
+    "cantidad": "3223",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "323232",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 38
+  },
+  {
+    "categoria": "",
+    "producto": "23432",
+    "cantidad": "234234",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "243423",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 39,
+    "optica": []
+  },
+  {
+    "categoria": "",
+    "producto": "123",
+    "cantidad": "234342",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "111111",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 40,
+    "optica": [],
+    "cct": []
+  },
+  {
+    "categoria": "",
+    "producto": "final test",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "123456",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 41,
+    "optica": [],
+    "cct": [],
+    "dim": []
+  }
+]
