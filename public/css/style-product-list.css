@@ -82,7 +82,11 @@ body {
         height: 40px;
         transition: 0.3s;
 }
-
+#button-modificar:hover{
+  background-color: green;
+  color: white;
+  box-shadow: 5px 5px 10px black;
+}
 #button-eliminar:hover {
   background-color: red;
   color: white;
