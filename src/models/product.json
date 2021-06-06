@@ -249,37 +249,5 @@
       "",
       ""
     ]
-  },
-  {
-    "id": 30,
-    "categoria": "Plafon",
-    "producto": "Lamparita",
-    "cantidad": "6",
-    "fuente": "led",
-    "material": [
-      "Aluminio",
-      "Madera",
-      ""
-    ],
-    "optica": [
-      "flood",
-      "WideFlood"
-    ],
-    "potencia": [
-      "19W",
-      "18W",
-      "",
-      ""
-    ],
-    "cct": "2700k",
-    "dim": "dimeable",
-    "precio": "5536",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
   }
 ]
