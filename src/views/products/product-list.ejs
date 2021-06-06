@@ -22,10 +22,10 @@
       <h2> Archivos: <%=products[i].file%></h2>
 		</div>
     <div class="button-container"> 
-      <form action="/product/detail/<%=i%>" method="GET">
+      <form action="/product/detail/<%=products[i].id%>" method="GET">
         <button id="button-visualizar" type="submit">Visualizar</button>
       </form>
-      <form action="/product/edit/<%=i%>" method="GET">
+      <form action="/product/edit/<%=products[i].id%>" method="GET">
         <button id="button-modificar" type="submit">Modificar</button>
       </form>             
 			<form action="/product/delete/<%= products[i].id %>?_method=DELETE" method="POST">

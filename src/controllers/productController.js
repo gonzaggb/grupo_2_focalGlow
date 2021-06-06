@@ -21,9 +21,10 @@ const controller = {
   },
   edit: (req, res) => {
     let id = req.params.id
+
     let productDetail = product.findByPk(id)
-    console.log(productDetail)
-    //res.render('products/product-edit.ejs', { productDetail })
+
+    res.render('products/product-edit.ejs', { productDetail })
   },
   update: (req, res) => {},
 
