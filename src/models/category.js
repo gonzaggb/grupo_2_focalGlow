@@ -26,6 +26,8 @@ module.exports = {
 
   findByName(name) {
     const categories = this.readFile()
-    return categories.find((e) => e.name == name)
+    console.log(name)
+    return categories.find((e) => e.id == name)
+    
   },
 }

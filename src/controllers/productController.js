@@ -16,8 +16,8 @@ const controller = {
     res.render('products/product-create.ejs')
   },
   create: (req, res) => {
-    const product = req.body
-    const productCreated = product.create(product)
+    const productNew = req.body
+    product.create(productNew)
     res.redirect('/product/list')
   },
 

@@ -44,8 +44,14 @@ module.exports={
         product.id = this.generateId();
 
         // Leer el archivo
-        const products = this.readFile();
+        const products = this.readFile();   
         // Agregar nuestro planeta al array de planetas
+        product.material == '' ? product.material = [] : '';
+        product.optica == undefined ? product.optica = [] : '';
+        product.potencia == '' ? product.potencia = [] : '';
+        product.cct == undefined ? product.cct = [] : '';
+        product.dim == undefined ? product.dim = [] : '';
+        product.file == '' ? product.file = [] : '';
         const productsUpdated = [...products, product ];
         // Volver a escribir el archivo con el nuevo array de planetas
         this.writeFile(productsUpdated);

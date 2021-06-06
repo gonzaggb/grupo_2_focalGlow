@@ -50,16 +50,16 @@
                             <div class="first-">
                                 <label class="" for="material">Material: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="material" value="Aluminio"  <%= typeof productFound.material != 'undefined' ? (productFound.material.includes("Aluminio") ? 'checked' : '') : ''%>> Aluminio
+                                    <input class="check" type="checkbox" name="material" value="Aluminio"  <%= (productFound.material.includes("Aluminio") ? 'checked' : '')%>> Aluminio
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="material" value="Madera"  <%= typeof productFound.material != 'undefined' ? (productFound.material.includes("Madera") ? 'checked' : '') : ''%>> Madera
+                                    <input class="check" type="checkbox" name="material" value="Madera"  <%= (productFound.material.includes("Madera") ? 'checked' : '')%>> Madera
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="material" value="Chapa"  <%= typeof productFound.material != 'undefined' ? (productFound.material.includes("Chapa") ? 'checked' : '') : ''%>> Chapa
+                                    <input class="check" type="checkbox" name="material" value="Chapa"  <%= (productFound.material.includes("Chapa") ? 'checked' : '') %>> Chapa
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="material" value="Hierro"  <%= typeof productFound.material != 'undefined' ? (productFound.material.includes("Hierro") ? 'checked' : '') : ''%>> Hierro
+                                    <input class="check" type="checkbox" name="material" value="Hierro"  <%= (productFound.material.includes("Hierro") ? 'checked' : '')%>> Hierro
                                 </div>
                             </div>
                             <div class="in-line-data">
@@ -71,16 +71,16 @@
                         <div class="first-">
                             <label class="" for="optica">Optica: </label>
                             <div>
-                                <input class="check" type="checkbox" name="optica" value="flood"  <%= typeof productFound.optica != 'undefined' ? (productFound.optica.includes("flood") ? 'checked' : '') : ''%>> Flood
+                                <input class="check" type="checkbox" name="optica" value="flood"  <%= productFound.optica.includes("flood") ? 'checked' : '' %>> Flood
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optica" value="Spot"  <%= typeof productFound.optica != 'undefined' ? (productFound.optica.includes("Spot") ? 'checked' : '') : ''%>> Spot
+                                <input class="check" type="checkbox" name="optica" value="Spot"  <%=  productFound.optica.includes("Spot") ? 'checked' : '' %>> Spot
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optica" value="WideFlood" <%= typeof productFound.optica != 'undefined' ? (productFound.optica.includes("WideFlood") ? 'checked' : '') : ''%>> Wide Flood
+                                <input class="check" type="checkbox" name="optica" value="WideFlood" <%=  productFound.optica.includes("WideFlood") ? 'checked' : ''%>> Wide Flood
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optica" value="Oval"  <%= typeof productFound.optica != 'undefined' ? (productFound.optica.includes("Oval") ? 'checked' : '') : ''%>> Oval
+                                <input class="check" type="checkbox" name="optica" value="Oval"  <%=  productFound.optica.includes("Oval") ? 'checked' : ''%>> Oval
                             </div>
                         </div><br>
                         <div class="first-">
@@ -99,31 +99,31 @@
                         <div class="first-">
                             <label class="" for="cct">CCT: </label>
                             <div>
-                                <input class="check" type="checkbox" name="cct" value="2700k"  <%= typeof productFound.cct != 'undefined' ? (productFound.cct.includes("2700k") ? 'checked' : '') : ''%>> 2700K
+                                <input class="check" type="checkbox" name="cct" value="2700k"  <%=  (productFound.cct.includes("2700k") ? 'checked' : '')%>> 2700K
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="cct" value="3000k"  <%= typeof productFound.cct != 'undefined' ? (productFound.cct.includes("3000k") ? 'checked' : '') : ''%>> 3000K
+                                <input class="check" type="checkbox" name="cct" value="3000k"  <%=  (productFound.cct.includes("3000k") ? 'checked' : '')%>> 3000K
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="cct" value="3500k"  <%= typeof productFound.cct != 'undefined' ? (productFound.cct.includes("3500K") ? 'checked' : '') : ''%>> 3500K
+                                <input class="check" type="checkbox" name="cct" value="3500k"  <%=  (productFound.cct.includes("3500K") ? 'checked' : '')%>> 3500K
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="cct" value="4000k"  <%= typeof productFound.cct != 'undefined' ? (productFound.cct.includes("4000k") ? 'checked' : '') : ''%>> 4000K
+                                <input class="check" type="checkbox" name="cct" value="4000k"  <%=  (productFound.cct.includes("4000k") ? 'checked' : '')%>> 4000K
                             </div>
                         </div><br>
-                        <div class="first-">
+                        <div class="first-"
                             <label class="" for="dim">Dim: </label>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="switch"  <%= typeof productFound.dim != 'undefined' ? (productFound.dim.includes("switch") ? 'checked' : '') : ''%>> Switch
+                                <input class="check" type="checkbox" name="dim" value="switch"  <%=  (productFound.dim.includes("switch") ? 'checked' : '')%>> Switch
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="dimeable"  <%= typeof productFound.dim != 'undefined' ? (productFound.dim.includes("dimeable") ? 'checked' : '') : ''%>> Dimeable
+                                <input class="check" type="checkbox" name="dim" value="dimeable"  <%= (productFound.dim.includes("dimeable") ? 'checked' : '')%>> Dimeable
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="dali"  <%= typeof productFound.dim != 'undefined' ? (productFound.dim.includes("dali") ? 'checked' : '') : ''%>> DALI
+                                <input class="check" type="checkbox" name="dim" value="dali"  <%= (productFound.dim.includes("dali") ? 'checked' : '')%>> DALI
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="bluetooth"  <%= typeof productFound.dim != 'undefined' ? (productFound.dim.includes("bluetoot") ? 'checked' : '') : ''%>> Bluetooth
+                                <input class="check" type="checkbox" name="dim" value="bluetooth"  <%= (productFound.dim.includes("bluetoot") ? 'checked' : '')%>> Bluetooth
                             </div>
                         </div><br>
                         <div class="first-">

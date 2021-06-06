@@ -1,196 +1,5 @@
 [
   {
-    "id": 21,
-    "categoria": "Plafon",
-    "producto": "Plafon Interesante",
-    "cantidad": "",
-    "material": "",
-    "potencia": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "precio": "122356",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "categoria": "Plafon",
-    "producto": "Plafon re caro",
-    "cantidad": "5",
-    "fuente": "led",
-    "material": [
-      "Aluminio",
-      "Polimero"
-    ],
-    "optica": [
-      "flood",
-      "WideFlood"
-    ],
-    "potencia": [
-      "1W",
-      "2W",
-      "5W",
-      "6W"
-    ],
-    "cct": [
-      "2700k",
-      "3000k"
-    ],
-    "dim": "dali",
-    "precio": "156352",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "id": 22
-  },
-  {
-    "id": 23,
-    "categoria": "Plafon",
-    "producto": "No tan caro ",
-    "cantidad": "",
-    "fuente": "led",
-    "material": [
-      "Aluminio",
-      "Madera",
-      ""
-    ],
-    "optica": "flood",
-    "potencia": [
-      "2W",
-      "3W",
-      "",
-      ""
-    ],
-    "cct": "2700k",
-    "dim": "switch",
-    "precio": "22356",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": 24,
-    "categoria": "",
-    "producto": "Mas accesible",
-    "cantidad": "",
-    "material": "",
-    "potencia": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "cct": [
-      "2700k",
-      "3000k",
-      "4000k"
-    ],
-    "precio": "23423",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "id": 25,
-    "categoria": "Aplique",
-    "producto": "Este si que no lo podes comprar",
-    "cantidad": "",
-    "fuente": "led",
-    "material": [
-      "Aluminio",
-      "Madera",
-      "Chapa",
-      "Hierro",
-      ""
-    ],
-    "optica": [
-      "flood",
-      "Spot",
-      "WideFlood",
-      "Oval"
-    ],
-    "potencia": [
-      "1W",
-      "2W",
-      "3W",
-      "4W"
-    ],
-    "cct": [
-      "2700k",
-      "3000k",
-      "4000k"
-    ],
-    "dim": [
-      "switch",
-      "dimeable",
-      "dali"
-    ],
-    "precio": "23423423",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  {
-    "categoria": "",
-    "producto": "123123",
-    "cantidad": "12312",
-    "fuente": "led",
-    "material": [
-      "Chapa",
-      ""
-    ],
-    "optica": [
-      "flood",
-      "WideFlood"
-    ],
-    "potencia": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "cct": [
-      "2700k",
-      "3500k"
-    ],
-    "dim": [
-      "switch",
-      "dali"
-    ],
-    "precio": "1231231323",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "id": 26
-  },
-  {
     "categoria": "Aplique",
     "producto": "Gonza y su forEach del orto ",
     "cantidad": "1",
@@ -223,25 +32,60 @@
     "id": 28
   },
   {
-    "id": 29,
     "categoria": "",
-    "producto": "Con potencia y sin potencia 2 ",
-    "cantidad": "12312",
-    "fuente": "led",
-    "material": [
-      "Aluminio",
-      ""
-    ],
-    "optica": "flood",
+    "producto": "3233232",
+    "cantidad": "2232332",
+    "material": "",
     "potencia": [
-      "4W",
       "",
-      "10W",
+      "",
+      "",
       ""
     ],
-    "cct": "2700k",
-    "dim": "switch",
-    "precio": "1231231",
+    "precio": "23322332",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 30
+  },
+  {
+    "categoria": "",
+    "producto": "234234",
+    "cantidad": "23423423",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "24244444444",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 31
+  },
+  {
+    "id": 32,
+    "categoria": "",
+    "producto": "test1 ",
+    "cantidad": "123312",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "132332",
     "file": [
       "",
       "",
@@ -249,5 +93,203 @@
       "",
       ""
     ]
+  },
+  {
+    "categoria": "",
+    "producto": "243424",
+    "cantidad": "32234243243",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "2423342243",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 33
+  },
+  {
+    "categoria": "",
+    "producto": "test2",
+    "cantidad": "1",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "1",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 34
+  },
+  {
+    "categoria": "",
+    "producto": "21",
+    "cantidad": "2222",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "222",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 35
+  },
+  {
+    "categoria": "",
+    "producto": "12",
+    "cantidad": "12",
+    "material": [
+      "Aluminio",
+      ""
+    ],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "2",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 36
+  },
+  {
+    "categoria": "",
+    "producto": "2323",
+    "cantidad": "233223",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "2323",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 37
+  },
+  {
+    "categoria": "",
+    "producto": "2323",
+    "cantidad": "3223",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "323232",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 38
+  },
+  {
+    "categoria": "",
+    "producto": "23432",
+    "cantidad": "234234",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "243423",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 39,
+    "optica": []
+  },
+  {
+    "categoria": "",
+    "producto": "123",
+    "cantidad": "234342",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "111111",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 40,
+    "optica": [],
+    "cct": []
+  },
+  {
+    "categoria": "",
+    "producto": "final test",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "123456",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 41,
+    "optica": [],
+    "cct": [],
+    "dim": []
   }
 ]
