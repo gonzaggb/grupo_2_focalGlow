@@ -35,84 +35,100 @@
           <div class="first">
             <div class="in-line-data">
               <label class="" for="cantidad">Cantidad: </label><br>
-              <input class="box" type="number" name="cantidad" id="producto" min="0" required>
+              <input class="box" type="number" name="cantidad" id="producto" min="0" value = "<%=productDetail.cantidad%>"required>
             </div>
           </div><br>
 
           <div class="first-">
             <label class="" for="fuente">Fuente: </label>
             <div>
-              <input class="radio" type="radio" name="fuente" value="led" <% productDetail.fuente =="led" ? %> <%="checked"%> : <%=""%> %>LED Incorporado
+              <input class="radio" type="radio" name="fuente" value="led">
+							<label>LED Incorporado</label>
             </div>
             <div>
-              <input class="radio" type="radio" name="fuente" value="Lampara">Lampara
+              <input class="radio" type="radio" name="fuente" value="lampara">
+							<label>Lámpara</label>
             </div>
           </div><br>
-          <div>
-                            <div class="first-">
-                                <label class="" for="material">Material: </label>
-                                <div>
-                                    <input class="check" type="checkbox" name="material" value="Aluminio"> Aluminio
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="material" value="Madera"> Madera
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="material" value="Chapa"> Chapa
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="material" value="Hierro"> Hierro
-                                </div>
-                            </div>
-                            <div class="in-line-data">
-                                <label class="otros-materiales" for="otros-material">Otros materiales: </label><br>
-                                <input class="box-1" type="text" name="material" id="otros-material"
-                                    placeholder="Opcional">
-                            </div>
-                        </div><br>
-                        <div class="first-">
-                            <label class="" for="optica">Optica: </label>
-                            <div>
-                                <input class="check" type="checkbox" name="optica" value="flood"> Flood
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="optica" value="Spot"> Spot
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="optica" value="WideFlood"> Wide Flood
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="optica" value="Oval"> Oval
-                            </div>
-                        </div><br>
-                        <div class="first-">
-                            <label for="potencia">Potencia: </label>
-                            <% for(j=1;j<=4;j++){ %>
-                                <select name="potencia" class="select">
-                                    <option value="">Seleccionar</option>
-                                    <% for(i=1;i<=100;i++){ %>
-                                        <option value="<%=[i]%>W">
-                                            <%=[i]%>W
-                                        </option>
-                                        <%}%>
-                                </select>
-                                <%}%>
-                        </div><br>
-                        <div class="first-">
-                            <label class="" for="cct">CCT: </label>
-                            <div>
-                                <input class="check" type="checkbox" name="cct" value="2700k"> 2700K
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="cct" value="3000k"> 3000K
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="cct" value="3500k"> 3500K
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="cct" value="4000k"> 4000K
-                            </div>
-                        </div><br>
+          
+          <div class="first-">
+            <label class="" for="material">Material: </label>
+            <div>
+              <input class="check" type="checkbox" name="material" value="Aluminio">
+							<label>Aluminio</label> 
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="material" value="Madera"> 
+							<label>Madera</label>
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="material" value="Chapa">
+							<label>Chapa</label> 
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="material" value="Hierro"> 
+							<label>Hierro</label>
+            </div>
+          </div>
+          <div class="in-line-data">
+            <label class="otros-materiales" for="otros-material">Otros materiales: </label><br>
+            <input class="box-1" type="text" name="material" id="otros-material"                              placeholder="Opcional">
+          </div>
+          <br>
+					
+          <div class="first-">
+            <label class="" for="optica">Optica: </label>
+            <div>
+              <input class="check" type="checkbox" name="optica" value="flood"> 
+							<label>Flood</label>
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="optica" value="Spot"> 
+							<label>Spot</label>
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="optica" value="WideFlood"> 
+							<label>Wide Flood</label>
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="optica" value="Oval"> 
+							<label>Oval</label>
+            </div>
+        	</div><br>
+
+          <div class="first-">
+            <label for="potencia">Potencia: </label>
+            <% for(j=1;j<=4;j++){ %>
+            	<select name="potencia" class="select">
+            	<option value="">Seleccionar</option>
+            	<% for(i=1;i<=100;i++){ %>
+            		<option value="<%=[i]%>W">
+              	<%=[i]%>W
+            		</option>
+              <%}%>
+              </select>
+            <%}%>
+          </div><br>
+
+          <div class="first-">
+            <label class="" for="cct">CCT: </label>
+            <div>
+              <input class="check" type="checkbox" name="cct" value="2700k"> 
+							<label>2700K</label>
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="cct" value="3000k"> 
+							<label>3000K</label>
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="cct" value="3500k">
+							<label>3500K</label>
+            </div>
+            <div>
+              <input class="check" type="checkbox" name="cct" value="4000k"> 
+							<label>4000K</label>
+            </div>
+        	</div><br>
                         <div class="first-">
                             <label class="" for="dim">Dim: </label>
                             <div>
@@ -162,7 +178,7 @@
                                 <label class="" for="manual-instalacion">Manual de Instalación: </label><br>
                                 <input type="file" src="" alt="" name="file" accept=".pdf">
                             </div><br>
-                        </div>
+          </div>
           <div class="button-container">
             <button id="button-enviar" type="submit">Agregar Producto</button>
             <button id="button-borrar" type="reset">Resetear</button>
