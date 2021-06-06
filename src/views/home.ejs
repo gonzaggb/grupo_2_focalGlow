@@ -54,28 +54,35 @@
       <div id="first-box" class="box">
         <img src="/img/Barcelona.jpg" alt="Barcelona">
         <a href = "/product"><div class="capa">
-          <h2>Barcelona <br><br>$9.600,00</h2>
+          <h2><%= products[1].producto %>  <br><br>$<%= products[1].precio %></h2>
         </div></a>
       </div>
 
       <div class="box">
         <img src="/img/bon-jour.jpg" alt="Bon-Jour">
         <a href = "/product"><div class="capa">
-          <h2>Bon-Jour <br><br>$7.400,00</h2>
+          <h2> 
+            <%= products[2].producto %> <br><br>$<%= products[2].precio %></h2>        
         </div></a>
       </div>
 
       <div class="box">
         <img src="/img/coral.jpg" alt="Coral">
         <a href = "/product"><div class="capa">
-          <h2>Coral <br><br>$6.200,00</h2>
+        <h2>
+          <%= products[3].producto %> <br><br>$
+            <%= products[3].precio %>
+        </h2>
         </div></a>
       </div>
 
       <div class="box">
         <img src="/img/delfina.jpg" alt="Delfina">
         <a href = "/product"><div class="capa">
-          <h2>Delfina <br><br>$8.300,00</h2>
+          <h2> 
+            <%= products[4].producto %> <br><br>$
+              <%= products[4].precio %>
+          </h2>
         </div></a>
       </div>
     </div>

@@ -2,8 +2,8 @@ const categories = require('../models/category')
 
 const controller = {
   category: (req, res) => {
-    const name = req.params.id
-    let category = categories.findByName(name)
+    const id = req.params.id
+    let category = categories.findByPk(id)
     res.render('category.ejs', { category })
   },
 }
