@@ -1,10 +1,8 @@
 const express = require('express') // trae el modulo de express para poder montar el servidor
-const app = express()
-const path = require('path') //requiere el modulo nativo path de node
-const port = process.env.PORT || 3000
-const methodOverride = require ('method-override');
+const app = express() //declaramos la variable app que va utilizar todos los metodos de express.
 
-// Indica a express la ruta que contiene los recursos estaticos  para consumir de manera sencilla
+// Coonfiguracion de la ruta que contiene los recursos estaticos para consumir de manera sencilla
+const path = require('path') //requiere el modulo nativo path de node
 publicPath = path.join(__dirname, '../public')
 app.use(express.static(publicPath))
 
@@ -12,12 +10,16 @@ app.use(express.static(publicPath))
 app.set('views', path.join(__dirname, 'views')) // indica al template engine donde buscar las vistas//
 app.set('view engine', 'ejs')
 
-app.use(express.urlencoded({extended: false}));
+//Configuracion de express para poder trabajar con los datos que se envian desde el formulario//
+app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
+//Requerimos y usamos el metodo Override para soportar los metodos PUT y DELETE en HTML//
+const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 
 //Levantamos el Servidor
+const port = process.env.PORT || 3000 // use port 3000 unless there exists a preconfigured port (e.g. Heroku)//
 app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
 
 // Requiriendo todos los routers

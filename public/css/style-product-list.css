@@ -1,16 +1,14 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    line-height:1.6em;
-    margin: 0;
-    background-image: url(/img/fondo2.jpg);
-    
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6em;
+  margin: 0;
+  background-image: url(/img/fondo2.jpg);
 }
 .id-box{
     display: none;
@@ -21,20 +19,20 @@ body{
     justify-content: center;
     text-decoration: none;
 }
-.titulo{
-    text-align: center;
-    font-size: 30px;
-    margin-top: 5px;
+.titulo {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5px;
 }
-.add-product{
-    width: 100%;
-    height: 4vh;
-    transition: 0.3s;
-    margin-top: 15px;
+.add-product {
+  width: 100%;
+  height: 4vh;
+  transition: 0.3s;
+  margin-top: 15px;
 }
-.add-product:hover{
-    background-color: #ffde59;
-    color: black;
+.add-product:hover {
+  background-color: #ffde59;
+  color: black;
 }
 .form-lista-productos {
     margin-left: 10px;
@@ -70,10 +68,13 @@ body{
         height: 40px;
         transition: 0.3s;  
 }
-#button-modificar:hover{
-    background-color: rgb(4, 173, 4);
-    color: white;
-    box-shadow: 5px 5px 10px black;
+#button-modificar,
+#button-eliminar,
+#button-visualizar {
+  width: 40%;
+  border-radius: 5px;
+  height: 40px;
+  transition: 0.3s;
 }
 #button-eliminar{
         width: 100%;
@@ -81,10 +82,11 @@ body{
         height: 40px;
         transition: 0.3s;
 }
-#button-eliminar:hover{
-    background-color: red;
-    color: white;
-    box-shadow: 5px 5px 10px black;
+
+#button-eliminar:hover {
+  background-color: red;
+  color: white;
+  box-shadow: 5px 5px 10px black;
 }
 
 @media(min-width: 769px){

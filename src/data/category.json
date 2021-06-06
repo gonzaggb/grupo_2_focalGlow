@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "plafon",
+    "imageCover": "/img/cover/cover-plafon.jpg"
+  },
+  {
+    "id": 2,
+    "name": "apliques",
+    "imageCover": "/img/cover/cover-aplique.jpg"
+  },
+  {
+    "id": 3,
+    "name": "pie",
+    "imageCover": "/img/cover/cover-pie.jpg"
+  },
+  {
+    "id": 4,
+    "name": "colgantes",
+    "imageCover": "/img/cover/cover-colgante.jpg"
+  },
+  {
+    "id": 5,
+    "name": "spots",
+    "imageCover": "/img/cover/cover-spot.jpg"
+  },
+  {
+    "id": 6,
+    "name": "sistemas",
+    "imageCover": "/img/cover/cover-sistemas.jpg"
+  },
+  {
+    "id": 7,
+    "name": "mesa",
+    "imageCover": "/img/cover/cover-mesa.jpg"
+  },
+  {
+    "id": 8,
+    "name": "exterior",
+    "imageCover": "/img/cover/cover-outdoor.jpg"
+  }
+]
