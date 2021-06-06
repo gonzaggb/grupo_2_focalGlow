@@ -12,6 +12,9 @@ body{
     background-image: url(/img/fondo2.jpg);
     
 }
+.id-box{
+    display: none;
+}
 .add-container a{
     display: flex;
     width: 100%;
@@ -46,9 +49,23 @@ body{
     width: 100%;
     justify-content: space-around;
     margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+}
+#button-product{
+     width: 100%;
+        border-radius: 5px;
+        height: 40px;
+        transition: 0.3s; 
+}
+#button-product:hover{
+    background-color: #ffde59;
+    color: black;
+    box-shadow: 5px 5px 10px black;
 }
 #button-modificar{
-     width: 40%;
+     width: 100%;
         border-radius: 5px;
         height: 40px;
         transition: 0.3s;  
@@ -59,7 +76,7 @@ body{
     box-shadow: 5px 5px 10px black;
 }
 #button-eliminar{
-        width: 30%;
+        width: 100%;
         border-radius: 5px;
         height: 40px;
         transition: 0.3s;
@@ -87,13 +104,17 @@ body{
     .button-container{
         width: 50%;
     }
+    #button-product{
+        width: 150%; 
+        height: 40px;
+    }    
     #button-modificar{
-     width: 20%;
-     height: 40px;
+        width: 200%;
+        height: 40px;
 
     } 
     #button-eliminar{
-        width: 20%;
+        width: 200%;
         height: 40px;
     }    
 }    

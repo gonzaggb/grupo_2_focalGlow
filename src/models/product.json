@@ -1,1 +1,285 @@
-{"products":[{"categoria":"aplique","producto":"Aplique un toque caro","cantidad":"14","fuente":"led","material":["Aluminio","Polimero"],"optica":"Oval","potencia":["14W","68W","76W","4W"],"cct":"3000k","dim":["switch","dimeable","dali"],"precio":"1458","file":["","","","",""]},{"categoria":"spot","producto":"Un spot accesible","cantidad":"6","fuente":"led","material":["Chapa",""],"optica":"WideFlood","potencia":["","","",""],"dim":"dimeable","precio":"123456","file":["","","","",""]},{"categoria":"colgante","producto":"Esta es la que cuelta","cantidad":"4","material":["Madera","Polimero"],"optica":"flood","potencia":["","","",""],"cct":"3000k","dim":"dimeable","precio":"12536.2","file":["","","","",""]},{"categoria":"colgante","producto":"Como esta","cantidad":"123","fuente":"led","material":["Madera","Polimero"],"optica":"Spot","potencia":["19W","18W","21W","60W"],"cct":"2700k","dim":"dimeable","precio":"12222458","file":["","","","",""]},{"categoria":"accesorios","producto":"Lamparita","cantidad":"14","material":"","potencia":["","","",""],"precio":"2365","file":["","","","",""]},{"categoria":"mesa","producto":"y mesita ","cantidad":"567","fuente":"led","material":["Madera","Chapa",""],"optica":["Spot","WideFlood"],"potencia":["18W","90W","18W",""],"cct":"2700k","dim":"dimeable","precio":"12345.5","file":["","","","",""]}]}
+[
+  {
+    "id": 21,
+    "categoria": "Plafon",
+    "producto": "Plafon Interesante",
+    "cantidad": "",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "122356",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "categoria": "Plafon",
+    "producto": "Plafon re caro",
+    "cantidad": "5",
+    "fuente": "led",
+    "material": [
+      "Aluminio",
+      "Polimero"
+    ],
+    "optica": [
+      "flood",
+      "WideFlood"
+    ],
+    "potencia": [
+      "1W",
+      "2W",
+      "5W",
+      "6W"
+    ],
+    "cct": [
+      "2700k",
+      "3000k"
+    ],
+    "dim": "dali",
+    "precio": "156352",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 22
+  },
+  {
+    "id": 23,
+    "categoria": "Plafon",
+    "producto": "No tan caro ",
+    "cantidad": "",
+    "fuente": "led",
+    "material": [
+      "Aluminio",
+      "Madera",
+      ""
+    ],
+    "optica": "flood",
+    "potencia": [
+      "2W",
+      "3W",
+      "",
+      ""
+    ],
+    "cct": "2700k",
+    "dim": "switch",
+    "precio": "22356",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 24,
+    "categoria": "",
+    "producto": "Mas accesible",
+    "cantidad": "",
+    "material": "",
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "cct": [
+      "2700k",
+      "3000k",
+      "4000k"
+    ],
+    "precio": "23423",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 25,
+    "categoria": "Aplique",
+    "producto": "Este si que no lo podes comprar",
+    "cantidad": "",
+    "fuente": "led",
+    "material": [
+      "Aluminio",
+      "Madera",
+      "Chapa",
+      "Hierro",
+      ""
+    ],
+    "optica": [
+      "flood",
+      "Spot",
+      "WideFlood",
+      "Oval"
+    ],
+    "potencia": [
+      "1W",
+      "2W",
+      "3W",
+      "4W"
+    ],
+    "cct": [
+      "2700k",
+      "3000k",
+      "4000k"
+    ],
+    "dim": [
+      "switch",
+      "dimeable",
+      "dali"
+    ],
+    "precio": "23423423",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "categoria": "",
+    "producto": "123123",
+    "cantidad": "12312",
+    "fuente": "led",
+    "material": [
+      "Chapa",
+      ""
+    ],
+    "optica": [
+      "flood",
+      "WideFlood"
+    ],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "cct": [
+      "2700k",
+      "3500k"
+    ],
+    "dim": [
+      "switch",
+      "dali"
+    ],
+    "precio": "1231231323",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 26
+  },
+  {
+    "categoria": "Aplique",
+    "producto": "Gonza y su forEach del orto ",
+    "cantidad": "1",
+    "fuente": "led",
+    "material": [
+      "Aluminio",
+      "Madera",
+      ""
+    ],
+    "optica": [
+      "flood",
+      "Spot"
+    ],
+    "potencia": [
+      "1W",
+      "11W",
+      "3W",
+      "27W"
+    ],
+    "cct": "2700k",
+    "dim": "switch",
+    "precio": "123123",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 28
+  },
+  {
+    "id": 29,
+    "categoria": "",
+    "producto": "Con potencia y sin potencia 2 ",
+    "cantidad": "12312",
+    "fuente": "led",
+    "material": [
+      "Aluminio",
+      ""
+    ],
+    "optica": "flood",
+    "potencia": [
+      "4W",
+      "",
+      "10W",
+      ""
+    ],
+    "cct": "2700k",
+    "dim": "switch",
+    "precio": "1231231",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "id": 30,
+    "categoria": "Plafon",
+    "producto": "Lamparita",
+    "cantidad": "6",
+    "fuente": "led",
+    "material": [
+      "Aluminio",
+      "Madera",
+      ""
+    ],
+    "optica": [
+      "flood",
+      "WideFlood"
+    ],
+    "potencia": [
+      "19W",
+      "18W",
+      "",
+      ""
+    ],
+    "cct": "2700k",
+    "dim": "dimeable",
+    "precio": "5536",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+]
