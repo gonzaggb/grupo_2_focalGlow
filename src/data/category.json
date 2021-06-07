@@ -27,13 +27,13 @@
     "id": 5,
     "name": "Spot",
     "imageCover": "/img/cover/cover-spot.jpg",
-    "homeImage": "/img/spot.png"
+    "homeImage": "/img/Spot.png"
   },
   {
     "id": 6,
     "name": "Accesorios",
     "imageCover": "/img/cover/cover-sistemas.jpg",
-    "homeImage": "/img/sistemas.png"
+    "homeImage": "/img/Sistemas.png"
   },
   {
     "id": 7,
