@@ -35,11 +35,15 @@ let productCheckout = [
   },
 ]
 const agregarProducto=require('../models/product')
+const categories = require('../models/category')
 
 const controller = {
   home: (req, res) => {
     let products= agregarProducto.findAll()
-    res.render('home.ejs',{ 'products': products })
+    let categoryList = categories.findAll()
+    let homeData= {products, categoryList}
+    console.log(homeData.categoryList)
+    res.render('home.ejs',{ homeData })
   
     
 
