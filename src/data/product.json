@@ -50,9 +50,14 @@
     ],
     "dim": "dimeable",
     "precio": "123456",
-    "file": ["", "", "", "", ""],
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "homeImage": "/img/coral.jpg"
-
   },
   {
     "id": 3,
@@ -73,7 +78,13 @@
     "cct": "3000k",
     "dim": "dimeable",
     "precio": "12536.2",
-    "file": ["", "", "", "", ""],
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "homeImage": "/img/bon-jour.jpg"
   },
   {
@@ -96,7 +107,13 @@
     "cct": "2700k",
     "dim": "dimeable",
     "precio": "12222458",
-    "file": ["", "", "", "", ""],
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "homeImage": "/img/bon-jour.jpg"
   },
   {
@@ -112,7 +129,13 @@
       ""
     ],
     "precio": "2365",
-    "file": ["", "", "", "", ""],
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "homeImage": "/img/bon-jour.jpg"
   },
   {
@@ -139,7 +162,13 @@
     "cct": "2700k",
     "dim": "dimeable",
     "precio": "12345.5",
-    "file": ["", "", "", "", ""],
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "homeImage": "/img/bon-jour.jpg"
   },
   {
@@ -171,7 +200,13 @@
       "dali"
     ],
     "precio": "30000",
-    "file": ["", "", "", "", ""],
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "homeImage": "/img/bon-jour.jpg"
   },
   {
@@ -201,7 +236,133 @@
     ],
     "dim": "switch",
     "precio": "15000",
-    "file": ["", "", "", "", ""],
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
     "homeImage": "/img/bon-jour.jpg"
+  },
+  {
+    "categoria": "Aplique",
+    "producto": "Aplique",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "1233",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 9,
+    "optica": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "categoria": "Accesorios",
+    "producto": "Sistema ",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "1321365",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 10,
+    "optica": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "categoria": "Exterior",
+    "producto": "Exterior",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "123132",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 11,
+    "optica": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "categoria": "Mesa",
+    "producto": "Mesa que mas aplauda",
+    "cantidad": "123",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "12313",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 12,
+    "optica": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "categoria": "Pie",
+    "producto": "Pie pequeño",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "12",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 13,
+    "optica": [],
+    "cct": [],
+    "dim": []
   }
 ]

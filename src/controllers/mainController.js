@@ -42,7 +42,7 @@ const controller = {
     let products= agregarProducto.findAll()
     let categoryList = categories.findAll()
     let homeData= {products, categoryList}
-    console.log(homeData.categoryList)
+    
     res.render('home.ejs',{ homeData })
   
     
