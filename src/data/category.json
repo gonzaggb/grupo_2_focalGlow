@@ -1,42 +1,42 @@
 [
   {
     "id": 1,
-    "name": "plafon",
+    "name": "Plafon",
     "imageCover": "/img/cover/cover-plafon.jpg"
   },
   {
     "id": 2,
-    "name": "apliques",
+    "name": "Aplique",
     "imageCover": "/img/cover/cover-aplique.jpg"
   },
   {
     "id": 3,
-    "name": "pie",
+    "name": "Pie",
     "imageCover": "/img/cover/cover-pie.jpg"
   },
   {
     "id": 4,
-    "name": "colgantes",
+    "name": "Colgante",
     "imageCover": "/img/cover/cover-colgante.jpg"
   },
   {
     "id": 5,
-    "name": "spots",
+    "name": "Spot",
     "imageCover": "/img/cover/cover-spot.jpg"
   },
   {
     "id": 6,
-    "name": "sistemas",
+    "name": "Accesorios",
     "imageCover": "/img/cover/cover-sistemas.jpg"
   },
   {
     "id": 7,
-    "name": "mesa",
+    "name": "Mesa",
     "imageCover": "/img/cover/cover-mesa.jpg"
   },
   {
     "id": 8,
-    "name": "exterior",
+    "name": "Exterior",
     "imageCover": "/img/cover/cover-outdoor.jpg"
   }
 ]

@@ -78,6 +78,13 @@ module.exports={
 
 
     },
+    filterByCategory(categoryName){
+        let products =this.findAll()
+        
+        return products.filter(e => e.categoria.toLowerCase() == categoryName.toLowerCase())
+        
+        
+    }
     
         
         

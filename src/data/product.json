@@ -1,17 +1,35 @@
 [
   {
     "id": 1,
-    "categoria": "aplique",
+    "categoria": "Plafon",
     "producto": "Aplique un toque caro",
     "cantidad": "14",
     "fuente": "led",
-    "material": ["Aluminio", "Polimero"],
+    "material": [
+      "Aluminio",
+      "Polimero"
+    ],
     "optica": "Oval",
-    "potencia": ["14W", "68W", "76W", "4W"],
+    "potencia": [
+      "14W",
+      "68W",
+      "76W",
+      "4W"
+    ],
     "cct": "3000k",
-    "dim": ["switch", "dimeable", "dali"],
+    "dim": [
+      "switch",
+      "dimeable",
+      "dali"
+    ],
     "precio": "1458",
-    "file": ["", "", "", "", ""]
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   {
     "id": 2,
@@ -19,25 +37,53 @@
     "producto": "Un spot accesible",
     "cantidad": "6",
     "fuente": "led",
-    "material": ["Chapa", ""],
+    "material": [
+      "Chapa",
+      ""
+    ],
     "optica": "WideFlood",
-    "potencia": ["", "", "", ""],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
     "dim": "dimeable",
     "precio": "123456",
-    "file": ["", "", "", "", ""]
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   {
     "id": 3,
-    "categoria": "colgante",
+    "categoria": "SPOT",
     "producto": "Esta es la que cuelta",
     "cantidad": "4",
-    "material": ["Madera", "Polimero"],
+    "material": [
+      "Madera",
+      "Polimero"
+    ],
     "optica": "flood",
-    "potencia": ["", "", "", ""],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
     "cct": "3000k",
     "dim": "dimeable",
     "precio": "12536.2",
-    "file": ["", "", "", "", ""]
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   {
     "id": 4,
@@ -45,13 +91,27 @@
     "producto": "Como esta",
     "cantidad": "123",
     "fuente": "led",
-    "material": ["Madera", "Polimero"],
+    "material": [
+      "Madera",
+      "Polimero"
+    ],
     "optica": "Spot",
-    "potencia": ["19W", "18W", "21W", "60W"],
+    "potencia": [
+      "19W",
+      "18W",
+      "21W",
+      "60W"
+    ],
     "cct": "2700k",
     "dim": "dimeable",
     "precio": "12222458",
-    "file": ["", "", "", "", ""]
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   {
     "id": 5,
@@ -59,9 +119,20 @@
     "producto": "Lamparita",
     "cantidad": "14",
     "material": "",
-    "potencia": ["", "", "", ""],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
     "precio": "2365",
-    "file": ["", "", "", "", ""]
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   {
     "id": 6,
@@ -69,13 +140,31 @@
     "producto": "y mesita ",
     "cantidad": "567",
     "fuente": "led",
-    "material": ["Madera", "Chapa", ""],
-    "optica": ["Spot", "WideFlood"],
-    "potencia": ["18W", "90W", "18W", ""],
+    "material": [
+      "Madera",
+      "Chapa",
+      ""
+    ],
+    "optica": [
+      "Spot",
+      "WideFlood"
+    ],
+    "potencia": [
+      "18W",
+      "90W",
+      "18W",
+      ""
+    ],
     "cct": "2700k",
     "dim": "dimeable",
     "precio": "12345.5",
-    "file": ["", "", "", "", ""]
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   {
     "id": 7,
@@ -83,13 +172,36 @@
     "producto": "Mars",
     "cantidad": "1",
     "fuente": "led",
-    "material": ["Aluminio", ""],
-    "optica": ["flood", "WideFlood"],
-    "potencia": ["16W", "33W", "", ""],
-    "cct": ["3000k", "4000k"],
-    "dim": ["switch", "dali"],
+    "material": [
+      "Aluminio",
+      ""
+    ],
+    "optica": [
+      "flood",
+      "WideFlood"
+    ],
+    "potencia": [
+      "16W",
+      "33W",
+      "",
+      ""
+    ],
+    "cct": [
+      "3000k",
+      "4000k"
+    ],
+    "dim": [
+      "switch",
+      "dali"
+    ],
     "precio": "30000",
-    "file": ["", "", "", "", ""]
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   {
     "id": 8,
@@ -97,12 +209,57 @@
     "producto": "Gonzalo",
     "cantidad": "1",
     "fuente": "led",
-    "material": ["Aluminio", ""],
-    "optica": ["flood", "Spot", "WideFlood"],
-    "potencia": ["6W", "11W", "", ""],
-    "cct": ["3000k", "3500k"],
+    "material": [
+      "Aluminio",
+      ""
+    ],
+    "optica": [
+      "flood",
+      "Spot",
+      "WideFlood"
+    ],
+    "potencia": [
+      "6W",
+      "11W",
+      "",
+      ""
+    ],
+    "cct": [
+      "3000k",
+      "3500k"
+    ],
     "dim": "switch",
     "precio": "15000",
-    "file": ["", "", "", "", ""]
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "categoria": "Pie",
+    "producto": "Pie caro",
+    "cantidad": "2",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "321321321",
+    "file": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "id": 9,
+    "optica": [],
+    "cct": [],
+    "dim": []
   }
 ]
