@@ -29,7 +29,8 @@
       "",
       ""
     ],
-    "id": 28
+    "id": 28,
+    "homeImage": "/img/delfina.jpg"
   },
   {
     "categoria": "",
@@ -50,7 +51,8 @@
       "",
       ""
     ],
-    "id": 30
+    "id": 30,
+    "homeImage": "/img/coral.jpg"
   },
   {
     "categoria": "",
@@ -71,7 +73,8 @@
       "",
       ""
     ],
-    "id": 31
+    "id": 31,
+    "homeImage": "/img/bon-jour.jpg"
   },
   {
     "id": 32,
@@ -92,7 +95,9 @@
       "",
       "",
       ""
-    ]
+    ],
+    "homeImage": "/img/bon-jour.jpg"
+   
   },
   {
     "categoria": "",
@@ -113,7 +118,9 @@
       "",
       ""
     ],
-    "id": 33
+    "id": 33,
+    "homeImage": "/img/bon-jour.jpg"
+
   },
   {
     "categoria": "",
@@ -134,7 +141,9 @@
       "",
       ""
     ],
-    "id": 34
+    "id": 34,
+    "homeImage": "/img/bon-jour.jpg"
+
   },
   {
     "categoria": "",
@@ -155,7 +164,9 @@
       "",
       ""
     ],
-    "id": 35
+    "id": 35,
+    "homeImage": "/img/bon-jour.jpg"
+
   },
   {
     "categoria": "",
@@ -179,7 +190,9 @@
       "",
       ""
     ],
-    "id": 36
+    "id": 36,
+    "homeImage": "/img/bon-jour.jpg"
+
   },
   {
     "categoria": "",
@@ -200,7 +213,9 @@
       "",
       ""
     ],
-    "id": 37
+    "id": 37,
+    "homeImage": "/img/bon-jour.jpg"
+
   },
   {
     "categoria": "",
@@ -221,7 +236,9 @@
       "",
       ""
     ],
-    "id": 38
+    "id": 38,
+    "homeImage": "/img/bon-jour.jpg"
+
   },
   {
     "categoria": "",
@@ -243,7 +260,9 @@
       ""
     ],
     "id": 39,
-    "optica": []
+    "optica": [],
+    "homeImage": "/img/bon-jour.jpg"
+
   },
   {
     "categoria": "",
@@ -266,7 +285,9 @@
     ],
     "id": 40,
     "optica": [],
-    "cct": []
+    "cct": [],
+    "homeImage": "/img/bon-jour.jpg"
+
   },
   {
     "categoria": "",
@@ -290,6 +311,8 @@
     "id": 41,
     "optica": [],
     "cct": [],
-    "dim": []
+    "dim": [],
+    "homeImage": "/img/bon-jour.jpg"
+
   }
 ]

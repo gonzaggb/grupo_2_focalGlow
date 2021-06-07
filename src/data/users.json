@@ -12,5 +12,12 @@
     "email": "gonzaggb@hotmail.co",
     "password": "123456",
     "id": 2
+  },
+  {
+    "nombre": "admin",
+    "apellido": "admin",
+    "email": "admin@admin.com",
+    "password": "admin",
+    "id": 3
   }
 ]
