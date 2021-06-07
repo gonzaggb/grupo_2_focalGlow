@@ -7,7 +7,7 @@ const controller = {
     let category = categories.findByPk(id)
     let product = products.filterByCategory (category.name)
     let dataCategory = {category , product}
-    console.log (dataCategory.product.length)
+    
     res.render('category.ejs', { dataCategory } )
   },
 
