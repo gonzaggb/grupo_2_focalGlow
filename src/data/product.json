@@ -11,8 +11,9 @@
     "cct": "3000k",
     "dim": ["switch", "dimeable", "dali"],
     "precio": "1458",
-    "file": ["", "", "", "", ""]
-  },
+    "file": ["", "", "", "", ""],
+    "homeImage": "/img/delfina.jpg"
+    },
   {
     "id": 2,
     "categoria": "spot",
@@ -24,7 +25,9 @@
     "potencia": ["", "", "", ""],
     "dim": "dimeable",
     "precio": "123456",
-    "file": ["", "", "", "", ""]
+    "file": ["", "", "", "", ""],
+    "homeImage": "/img/coral.jpg"
+
   },
   {
     "id": 3,
@@ -37,7 +40,8 @@
     "cct": "3000k",
     "dim": "dimeable",
     "precio": "12536.2",
-    "file": ["", "", "", "", ""]
+    "file": ["", "", "", "", ""],
+    "homeImage": "/img/bon-jour.jpg"
   },
   {
     "id": 4,
@@ -51,7 +55,8 @@
     "cct": "2700k",
     "dim": "dimeable",
     "precio": "12222458",
-    "file": ["", "", "", "", ""]
+    "file": ["", "", "", "", ""],
+    "homeImage": "/img/bon-jour.jpg"
   },
   {
     "id": 5,
@@ -61,7 +66,8 @@
     "material": "",
     "potencia": ["", "", "", ""],
     "precio": "2365",
-    "file": ["", "", "", "", ""]
+    "file": ["", "", "", "", ""],
+    "homeImage": "/img/bon-jour.jpg"
   },
   {
     "id": 6,
@@ -75,7 +81,8 @@
     "cct": "2700k",
     "dim": "dimeable",
     "precio": "12345.5",
-    "file": ["", "", "", "", ""]
+    "file": ["", "", "", "", ""],
+    "homeImage": "/img/bon-jour.jpg"
   },
   {
     "id": 7,
@@ -89,7 +96,8 @@
     "cct": ["3000k", "4000k"],
     "dim": ["switch", "dali"],
     "precio": "30000",
-    "file": ["", "", "", "", ""]
+    "file": ["", "", "", "", ""],
+    "homeImage": "/img/bon-jour.jpg"
   },
   {
     "id": 8,
@@ -103,6 +111,7 @@
     "cct": ["3000k", "3500k"],
     "dim": "switch",
     "precio": "15000",
-    "file": ["", "", "", "", ""]
+    "file": ["", "", "", "", ""],
+    "homeImage": "/img/bon-jour.jpg"
   }
 ]
