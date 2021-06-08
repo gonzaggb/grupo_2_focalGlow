@@ -11,7 +11,17 @@ module.exports = {
     const productPath = this.filename
     const productosJson = fs.readFileSync(productPath, 'utf-8')
     // Parsear la informacion
-    return JSON.parse(productosJson)
+    const products = JSON.parse(productosJson)
+    //Ordeno los elementos en cada una de las propiedades - Debe haber una forma mejor
+    products.forEach((element) => {
+      element.material.sort()
+      element.optica.sort()
+      element.potencia.sort()
+      element.cct.sort()
+      element.dim.sort()
+    })
+
+    return products
   },
 
   writeFile(newData) {

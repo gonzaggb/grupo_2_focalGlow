@@ -15,7 +15,7 @@
     <main>
       <div class="product-detail">
         <div class="main-img">
-          <img src="/img/product_main.jpg" alt="luminaria" />
+          <img src="<%=productFound.image%>" alt="luminaria" />
         </div>
         <i class="fas fa-ruler"></i>
 
@@ -62,7 +62,7 @@
               <select name="power" class="options-control">
                <%productFound.potencia.forEach(function (element) { 
                 if (element != ""){%>
-                  <option value="<%=element%>"><%=element%></option>
+                  <option value="<%=element%>"><%=element%>W</option>
                 <% }}) %>
               </select>
               <select name="cct" class="options-control">
