@@ -10,20 +10,20 @@
   <%- include ('partials/header')%>
 
   <figure class="main-image">
-    <img src="<%=category.imageCover%>">
+    <img src="<%=dataCategory.category.imageCover%>">
   </figure>
   <main>
     
-    <h2 class ="category-title"><%=category.name%></h2>
+    <h2 class ="category-title"><%=dataCategory.category.name%></h2>
 
     <section class="item-list">
       
-      <% for (i=1;i<=8;i++) { %>
+      <% for (i=0;i<dataCategory.product.length;i++) { %>
         <article class="producto">
           <a href="/product/detail/<%=i%>"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
-          <div class="nombre-precio">
-            <p class ="nombre">Nombre del producto</p>
-            <p class ="precio">Desde:</p>
+          <div class="nombre-precio">       
+            <p class ="nombre">Nombre del producto: <%=dataCategory.product[i].producto%></p>
+            <p class ="precio">Desde: <%=dataCategory.product[i].precio%></p>       
           </div>
         </article>
       <%}%>

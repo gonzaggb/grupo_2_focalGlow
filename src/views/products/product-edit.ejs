@@ -2,152 +2,134 @@
   <link rel="stylesheet" href="/css/styles-product-org.css">
   </head>
 
-  <body>
-    <%- include('../partials/header.ejs')%>
-    <main>
-      <h2 class="titulo">Modificación de Producto</h2>
-      <div class="container-form">
-        <form id="register" action="/product/add" method="POST">
-          <div class="first">
-            <div class="cateogry-selector">
-              <label class="" for="categoria">Categoria: </label><br>
-              <select name="categoria" class="select" value="<%=productDetail.categoria %>">
-                <option value="">Seleccionar</option>
-                <option value="plafon">Plafón</option>
-                <option value="aplique">Aplique</option>
-                <option value="pie">Pie</option>
-                <option value="colgante">Colgante</option>
-                <option value="spot">Spot</option>
-                <option value="accesorios">Sistemas/Accesorios</option>
-                <option value="mesa">Mesa</option>
-                <option value="exterior">Exterior</option>
-              </select>
-            </div>
-          </div><br>
+    <body>
+        <%- include('../partials/header.ejs')%>
+            <main>
+                <h2 class="titulo">Modificación de Producto</h2>
+                <div class="container-form">
+                    <form id="register" action="/product/<%= productFound.id %>/edit?_method=PUT" method="POST">
+                        <div class="first">
+                            <div class="cateogry-selector">
+                                <label class="" for="categoria">Categoria: </label><br>
+                                <select name="categoria" class="select">
+                                    <option value="<%= productFound.categoria %>"><%= productFound.categoria %></option>
+                                    <option value="Plafon">Plafón</option>
+                                    <option value="Aplique">Aplique</option>
+                                    <option value="Pie">Pie</option>
+                                    <option value="Colgante">Colgante</option>
+                                    <option value="Spot">Spot</option>
+                                    <option value="Accesorios">Sistemas/Accesorios</option>
+                                    <option value="Mesa">Mesa</option>
+                                    <option value="Exterior">Exterior</option>
+                                </select>
+                            </div>
+                        </div><br>
+                        <div class="first">
+                            <div class="in-line-data">
+                                <label class="" for="producto">Nombre del Producto: </label><br>
+                                <input class="box" type="text" name="producto" id="producto" value="<%= productFound.producto %> " >
+                            </div>
+                        </div><br>
+                        <div class="first">
+                            <div class="in-line-data">
+                                <label class="" for="cantidad">Cantidad: </label><br>
+                                <input class="box" type="number" name="cantidad" id="producto" min="0" value="<%= productFound.cantidad %> " >
+                            </div>
+                        </div><br>
+                        <div class="first-">
+                            <label class="" for="fuente">Fuente: </label>
 
-      		<div class="first">
-          	<div class="in-line-data">
-              <label class="" for="producto">Nombre del Producto: </label><br>
-              <input class="box" type="text" name="producto" id="producto" value = "<%=productDetail.producto%>"required>
-          	</div>
-      		</div><br>
-
-          <div class="first">
-            <div class="in-line-data">
-              <label class="" for="cantidad">Cantidad: </label><br>
-              <input class="box" type="number" name="cantidad" id="producto" min="0" value = "<%=productDetail.cantidad%>"required>
-            </div>
-          </div><br>
-
-          <div class="first-">
-            <label class="" for="fuente">Fuente: </label>
-            <div>
-              <input class="radio" type="radio" name="fuente" value="led">
-							<label>LED Incorporado</label>
-            </div>
-            <div>
-              <input class="radio" type="radio" name="fuente" value="lampara">
-							<label>Lámpara</label>
-            </div>
-          </div><br>
-          
-          <div class="first-">
-            <label class="" for="material">Material: </label>
-            <div>
-              <input class="check" type="checkbox" name="material" value="Aluminio">
-							<label>Aluminio</label> 
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="material" value="Madera"> 
-							<label>Madera</label>
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="material" value="Chapa">
-							<label>Chapa</label> 
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="material" value="Hierro"> 
-							<label>Hierro</label>
-            </div>
-          </div>
-          <div class="in-line-data">
-            <label class="otros-materiales" for="otros-material">Otros materiales: </label><br>
-            <input class="box-1" type="text" name="material" id="otros-material"                              placeholder="Opcional">
-          </div>
-          <br>
-					
-          <div class="first-">
-            <label class="" for="optica">Optica: </label>
-            <div>
-              <input class="check" type="checkbox" name="optica" value="flood"> 
-							<label>Flood</label>
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="optica" value="Spot"> 
-							<label>Spot</label>
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="optica" value="WideFlood"> 
-							<label>Wide Flood</label>
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="optica" value="Oval"> 
-							<label>Oval</label>
-            </div>
-        	</div><br>
-
-          <div class="first-">
-            <label for="potencia">Potencia: </label>
-            <% for(j=1;j<=4;j++){ %>
-            	<select name="potencia" class="select">
-            	<option value="">Seleccionar</option>
-            	<% for(i=1;i<=100;i++){ %>
-            		<option value="<%=[i]%>W">
-              	<%=[i]%>W
-            		</option>
-              <%}%>
-              </select>
-            <%}%>
-          </div><br>
-
-          <div class="first-">
-            <label class="" for="cct">CCT: </label>
-            <div>
-              <input class="check" type="checkbox" name="cct" value="2700k"> 
-							<label>2700K</label>
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="cct" value="3000k"> 
-							<label>3000K</label>
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="cct" value="3500k">
-							<label>3500K</label>
-            </div>
-            <div>
-              <input class="check" type="checkbox" name="cct" value="4000k"> 
-							<label>4000K</label>
-            </div>
-        	</div><br>
+                            <div>
+                                <input class="radio" type="radio" name="fuente" value="led"  <%= productFound.fuente == "led" ? 'checked' : '' %>>LED Incorporado
+                            </div>
+                            <div>
+                                <input class="radio" type="radio" name="fuente" value="Lampara"  <%= productFound.fuente == 'Lampara' ? 'checked' : '' %>>Lampara
+                            </div>
+                        </div><br>
+                        <div>
+                            <div class="first-">
+                                <label class="" for="material">Material: </label>
+                                <div>
+                                    <input class="check" type="checkbox" name="material" value="Aluminio"  <%= (productFound.material.includes("Aluminio") ? 'checked' : '')%>> Aluminio
+                                </div>
+                                <div>
+                                    <input class="check" type="checkbox" name="material" value="Madera"  <%= (productFound.material.includes("Madera") ? 'checked' : '')%>> Madera
+                                </div>
+                                <div>
+                                    <input class="check" type="checkbox" name="material" value="Chapa"  <%= (productFound.material.includes("Chapa") ? 'checked' : '') %>> Chapa
+                                </div>
+                                <div>
+                                    <input class="check" type="checkbox" name="material" value="Hierro"  <%= (productFound.material.includes("Hierro") ? 'checked' : '')%>> Hierro
+                                </div>
+                            </div>
+                            <div class="in-line-data">
+                                <label class="otros-materiales" for="otros-material">Otros materiales: </label><br>
+                                <input class="box-1" type="text" name="material" id="otros-material"
+                                    placeholder="Opcional">
+                            </div>
+                        </div><br>
+                        <div class="first-">
+                            <label class="" for="optica">Optica: </label>
+                            <div>
+                                <input class="check" type="checkbox" name="optica" value="flood"  <%= productFound.optica.includes("flood") ? 'checked' : '' %>> Flood
+                            </div>
+                            <div>
+                                <input class="check" type="checkbox" name="optica" value="Spot"  <%=  productFound.optica.includes("Spot") ? 'checked' : '' %>> Spot
+                            </div>
+                            <div>
+                                <input class="check" type="checkbox" name="optica" value="WideFlood" <%=  productFound.optica.includes("WideFlood") ? 'checked' : ''%>> Wide Flood
+                            </div>
+                            <div>
+                                <input class="check" type="checkbox" name="optica" value="Oval"  <%=  productFound.optica.includes("Oval") ? 'checked' : ''%>> Oval
+                            </div>
+                        </div><br>
+                        <div class="first-">
+                            <label for="potencia">Potencia: </label>
+                            <% for(j=0;j<4;j++){ %>
+                                <select name="potencia" class="select">
+                                    <option value="<%= productFound.potencia[j] %>"><%= productFound.potencia[j] %></option>
+                                    <% for(i=1;i<=100;i++){ %>     
+                                        <option value="<%=[i]%>W">
+                                            <%=[i]%>W
+                                        </option>
+                                        <%}%>
+                                </select>
+                                <%}%>
+                        </div><br>
+                        <div class="first-">
+                            <label class="" for="cct">CCT: </label>
+                            <div>
+                                <input class="check" type="checkbox" name="cct" value="2700k"  <%=  (productFound.cct.includes("2700k") ? 'checked' : '')%>> 2700K
+                            </div>
+                            <div>
+                                <input class="check" type="checkbox" name="cct" value="3000k"  <%=  (productFound.cct.includes("3000k") ? 'checked' : '')%>> 3000K
+                            </div>
+                            <div>
+                                <input class="check" type="checkbox" name="cct" value="3500k"  <%=  (productFound.cct.includes("3500K") ? 'checked' : '')%>> 3500K
+                            </div>
+                            <div>
+                                <input class="check" type="checkbox" name="cct" value="4000k"  <%=  (productFound.cct.includes("4000k") ? 'checked' : '')%>> 4000K
+                            </div>
+                        </div><br>
                         <div class="first-">
                             <label class="" for="dim">Dim: </label>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="switch"> Switch
+                                <input class="check" type="checkbox" name="dim" value="switch"  <%=  (productFound.dim.includes("switch") ? 'checked' : '')%>> Switch
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="dimeable"> Dimeable
+                                <input class="check" type="checkbox" name="dim" value="dimeable"  <%= (productFound.dim.includes("dimeable") ? 'checked' : '')%>> Dimeable
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="dali"> DALI
+                                <input class="check" type="checkbox" name="dim" value="dali"  <%= (productFound.dim.includes("dali") ? 'checked' : '')%>> DALI
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="bluetooth"> Bluetooth
+                                <input class="check" type="checkbox" name="dim" value="bluetooth"  <%= (productFound.dim.includes("bluetoot") ? 'checked' : '')%>> Bluetooth
                             </div>
                         </div><br>
                         <div class="first-">
                             <label class="" for="precio">Precio unitario base: </label><br>
                             <input class="box" type="number" name="precio" id="precio" min="0"
-                                placeholder=" Ej 15235.35" required>
+                                placeholder=" Ej 15235.35" value="<%= productFound.precio %>" >
                         </div><br>
                         <div class="imagenes">
                             <div class="imagen-input">
@@ -178,14 +160,14 @@
                                 <label class="" for="manual-instalacion">Manual de Instalación: </label><br>
                                 <input type="file" src="" alt="" name="file" accept=".pdf">
                             </div><br>
-          </div>
-          <div class="button-container">
-            <button id="button-enviar" type="submit">Agregar Producto</button>
-            <button id="button-borrar" type="reset">Resetear</button>
-          </div>
-        </form>
-      </div>
-    </main>
-    <%- include('../partials/footer.ejs')%>
-  </body>
+                        </div>
+                        <div class="button-container">
+                            <button id="button-enviar" type="submit">Modificar</button>
+                            <button id="button-borrar" type="reset">Resetear</button>
+                        </div>
+                    </form>
+                </div>
+            </main>
+            <%- include('../partials/footer.ejs')%>
+    </body>
 </html>    

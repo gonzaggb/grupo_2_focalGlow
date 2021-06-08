@@ -1,26 +1,23 @@
 [
   {
-    "id": 1,
-    "nombre": "gonzalo",
-    "apellido": "baigorria",
+    "nombre": "Gonzalo",
+    "apellido": "1",
     "email": "gonzaggb@hotmail.com",
     "password": "123456",
-    "re-password": "123456"
+    "id": 1
   },
   {
-    "nombre": "Homero J",
-    "apellido": "Simpson",
-    "email": "hjs@springfield.com",
-    "password": "callefalsa123",
-    "re-password": "callefalsa123",
+    "nombre": "Gonzalo",
+    "apellido": "German",
+    "email": "gonzaggb@hotmail.co",
+    "password": "123456",
     "id": 2
   },
   {
-    "nombre": "Cesar",
-    "apellido": "Araujo Martinez",
-    "email": "gonzaggb@hotmail.com",
-    "password": "asd",
-    "re-password": "asd",
+    "nombre": "admin",
+    "apellido": "admin",
+    "email": "admin@admin.com",
+    "password": "admin",
     "id": 3
   }
 ]

@@ -1,39 +1,44 @@
 <%- include('../partials/head.ejs')%>
-	<link rel="stylesheet" href="/css/style-product-list.css" />
-	</head>
-	<body>
-    <%- include('../partials/header.ejs')%>
-    <h3 class="titulo">Listado de productos</h3>
-    <div class="add-container">
-    	<a href="/product/add"><button class="add-product">Agregar producto</button></a>
-    </div>
-    <h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %> </h4>
-    <div>
-      <% for (let i =0 ; i < products.length; i++) {%>
-                               
-      <h2> Id: <%=products[i].id%></h2>
-      <h2> Categoria: <%=products[i].categoria%></h2>
-      <h2> Nombre: <%=products[i].producto%></h2>
-      <h2> Cantidad: <%=products[i].cantidad%></h2>
-      <h2> Fuente: <%=products[i].fuente%></h2>
-      <h2> Material: <%=products[i].material%></h2>
-      <h2> Potencia: <%=products[i].potencia%></h2>
-      <h2> Precio: $<%=products[i].precio%></h2>
-      <h2> Archivos: <%=products[i].file%></h2>
-		</div>
-    <div class="button-container"> 
-      <form action="/product/detail/<%=products[i].id%>" method="GET">
-        <button id="button-visualizar" type="submit">Visualizar</button>
-      </form>
-      <form action="/product/edit/<%=products[i].id%>" method="GET">
-        <button id="button-modificar" type="submit">Modificar</button>
-      </form>             
-			<form action="/product/delete/<%= products[i].id %>?_method=DELETE" method="POST">
-        <button id="button-eliminar" type="submit">Eliminar</button>
-      </form>
-    </div>      
-                              
-    	<%}%>
-    <%- include('../partials/footer.ejs')%>
-  </body>
+<link rel="stylesheet" href="/css/style-product-list.css" />
+</head>
+    <body>
+        <%- include('../partials/header.ejs')%>
+        <h3 class="titulo">Listado de productos</h3>
+        <div class="add-container">
+            
+        <a href="/product/add"><button class="add-product">Agregar producto</button></a>
+        </div>
+        <h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %> </h4>
+        <h4 class='form-lista-productos'> Recordá que los primeros 4 productos son los que van a SALE</h4>
+        <div class='form-lista-productos'>
+
+            <% for (let i =0 ; i < products.length; i++) {%>
+               
+                <h2>ID: <%=products[i].id%></h2>      
+                <h2>Categoria: <%=products[i].categoria%></h2>
+                <h2>Nombre: <%=products[i].producto%></h2>
+                <h2>Cantidad: <%=products[i].cantidad%></h2>
+                <h2>Fuente: <%=products[i].fuente%></h2>
+                <h2>Material: <%=products[i].material%></h2>
+                <h2>Optica: <%=products[i].optica%></h2>
+                <h2>Potencia: <%=products[i].potencia%></h2>
+                <h2>CCT: <%=products[i].cct%></h2>
+                <h2>Dim: <%=products[i].dim%></h2>
+                <h2>Precio: $<%=products[i].precio%></h2>
+                <h2>Archivos: <%=products[i].file%></h2>
+                <div>
+                <div class="button-container"> 
+                <a href='/product/detail/:<%=products[i].id%>'><button id="button-product">Ver Producto</button></a>
+                <a href='/product/<%=products[i].id%>/edit'><button id="button-modificar">Modificar</button></a>
+                 <form  class='' action="/product/<%=products[i].id%>?_method=DELETE"  method="POST">    
+                    <button id="button-eliminar" type="submit">Eliminar</button>
+                </form>     
+                </div>      
+                </div>
+                            
+           <%}%>
+        </div>  
+
+        <%- include('../partials/footer.ejs')%>
+    </body>
 </html>    

@@ -1,89 +1,74 @@
 <%- include('partials/head.ejs')%>
   <link rel="stylesheet" href="/css/style_home.css">
   <link rel="stylesheet" href="/css/style_menu_responsive.css">
-  
-</head>
 
-<body>
-  <!-- HEADER -->
-  <%- include('partials/header.ejs')%>
+  </head>
+
+  <body>
     <!-- HEADER -->
+    <%- include('partials/header.ejs')%>
+      <!-- HEADER -->
 
-  <section class="main-slider">
-    <div class='slider'>
-      <ul>
-        <li><img src="/img/lamp1.jpg" alt=""></li>
-        <li><img src="/img/colgantes3.jpg" alt=""></li>
-        <li><img src="/img/lamp3.jpg" alt=""></li>
-      </ul>
-    </div>
-  </section>
-  
-  <section class="banner">
-    <div class="banner-box">
-      <p class="banner-content"><i class="far fa-credit-card"></i> 3, 6 y 12 cuotas sin interés! A través de Mercado Pago</p>
-    </div>
-    <div class="banner-box">
-      <p class="banner-content"><i class="fas fa-truck"></i> Envíos a todo el país gratis a partir de $10.000</p>
-    </div>
-    <div class="banner-box">
-      <p class="banner-content"><i class="fas fa-money-bill-wave"></i> 20% descuento pagando con débito o transferencia</p>
-    </div>  
-  </section>
-    
-  <main id="main-categori" class="main">
-    <h2 id="titulo-mas-vendidos">SHOP</h2>
-    <section id="categorias">
-            <!--unifique las imagenes en una sola caja para mostrar mejor-->
-      <div class="category-box">
-        <a href="/categorias/1"><img class="zoom" src="/img/Plafón.png" alt="Plafon"></a>
-        <a href="/categorias/2"><img class="zoom" src="/img/Aplique.png" alt="Aplique"></a>
-        <a href="/categorias/3"><img class="zoom" src="/img/Pie.png" alt="Pie"></a>
-        <a href="/categorias/4"><img class="zoom" src="/img/Colgante.png" alt="Colgante"></a>
-        <a href="/categorias/5"><img class="zoom" src="/img/Spot.png" alt="Spot"></a>
-        <a href="/categorias/6"><img class="zoom" src="/img/Sistemas.png" alt="Sistema"></a>
-        <a href="/categorias/7"><img class="zoom" src="/img/Mesa.png" alt="mesa"></a>
-        <a href="/categorias/8"><img class="zoom" src="/img/Exterior.png" alt="Exterior"></a>
-      </div>
-    </div>
-  </main>
+      <section class="main-slider">
+        <div class='slider'>
+          <ul>
+            <li><img src="/img/lamp1.jpg" alt=""></li>
+            <li><img src="/img/colgantes3.jpg" alt=""></li>
+            <li><img src="/img/lamp3.jpg" alt=""></li>
+          </ul>
+        </div>
+      </section>
 
-  <section id="mas-vendidos">
-    <h2 id="sale">SALE</h2>
-    <div class="elementos">
-      <div id="first-box" class="box">
-        <img src="/img/Barcelona.jpg" alt="Barcelona">
-        <a href = "/product"><div class="capa">
-          <h2>Barcelona <br><br>$9.600,00</h2>
-        </div></a>
-      </div>
+      <section class="banner">
+        <div class="banner-box">
+          <p class="banner-content"><i class="far fa-credit-card"></i> 3, 6 y 12 cuotas sin interés! A través de Mercado
+            Pago</p>
+        </div>
+        <div class="banner-box">
+          <p class="banner-content"><i class="fas fa-truck"></i> Envíos a todo el país gratis a partir de $10.000</p>
+        </div>
+        <div class="banner-box">
+          <p class="banner-content"><i class="fas fa-money-bill-wave"></i> 20% descuento pagando con débito o
+            transferencia</p>
+        </div>
+      </section>
 
-      <div class="box">
-        <img src="/img/bon-jour.jpg" alt="Bon-Jour">
-        <a href = "/product"><div class="capa">
-          <h2>Bon-Jour <br><br>$7.400,00</h2>
-        </div></a>
-      </div>
+      <main id="main-categori" class="main">
+        <h2 id="titulo-mas-vendidos">SHOP</h2>
+        <section id="categorias">
+          <!--unifique las imagenes en una sola caja para mostrar mejor-->
+          <div class="category-box">
+            <%for(i=0; i < homeData.categoryList.length; i++) { %>
+              <a href="/categorias/<%=i+1%>"><img class="zoom" src="<%=homeData.categoryList[i].homeImage%>"
+                  alt="<%=homeData.categoryList[i].name%>"></a>
+              <%}%>
+          </div>
+          </div>
+      </main>
 
-      <div class="box">
-        <img src="/img/coral.jpg" alt="Coral">
-        <a href = "/product"><div class="capa">
-          <h2>Coral <br><br>$6.200,00</h2>
-        </div></a>
-      </div>
+      <section id="mas-vendidos">
+        <h2 id="sale">SALE</h2>
+        <div class="elementos">
+            <%for(i=0; i < 4; i++){%>
+              <div id="first-box" class="box">
+                <img src="<%=homeData.products[i].homeImage%>" alt="<%=homeData.products[i].producto%>">
+                <a href="/product">
+                  <div class="capa">
+                    <h2>
+                      <%= homeData.products[i].producto %> <br><br>
+                        $<%= homeData.products[i].precio %>
+                    </h2>
+                  </div>
+                </a>
+              </div>
+              <%}%>
+          </div>
 
-      <div class="box">
-        <img src="/img/delfina.jpg" alt="Delfina">
-        <a href = "/product"><div class="capa">
-          <h2>Delfina <br><br>$8.300,00</h2>
-        </div></a>
-      </div>
-    </div>
-  </section>
-  <!-- FOOTER -->
-  <%- include('partials/footer.ejs')%>
-    <!-- FOOTER -->
-  
-</body>
+      </section>
+      <!-- FOOTER -->
+      <%- include('partials/footer.ejs')%>
+        <!-- FOOTER -->
 
-</html>
+  </body>
+
+  </html>

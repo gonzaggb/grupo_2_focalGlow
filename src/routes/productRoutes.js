@@ -7,18 +7,19 @@ const productController = require('../controllers/productController')
 
 //Asigno a cada ruta la propiedad del controlador
 
-//Mostrar Productos
+//View
 router.get('/list', productController.list)
 router.get('/detail/:id', productController.detail)
 
-//Crear Productos
-router.get('/add', productController.formNew)
-router.post('/add', productController.create)
+//Create
+router.get('/add', productController.formNew) //formulario de creacion de producto
+router.post('/add', productController.create) // a donde va el producto creado
 
-//Update Productos
-router.get('/edit/:id', productController.edit)
-router.put('/edit/:id', productController.update)
+//Update
+router.get('/:id/edit', productController.edit) //formulario de edicion de producto
+router.put('/:id/edit', productController.update)
 
-//Delete Producto
-router.delete('/delete/:id', productController.delete)
+//Delete
+router.delete('/:id', productController.delete)
+
 module.exports = router

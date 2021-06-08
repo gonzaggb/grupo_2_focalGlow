@@ -34,12 +34,19 @@ let productCheckout = [
     cantidad: 5,
   },
 ]
-
-//El controlador dice que tiene que hacer cada metodo
+const agregarProducto=require('../models/product')
+const categories = require('../models/category')
 
 const controller = {
   home: (req, res) => {
-    res.render('home.ejs')
+    let products= agregarProducto.findAll()
+    let categoryList = categories.findAll()
+    let homeData= {products, categoryList}
+    
+    res.render('home.ejs',{ homeData })
+  
+    
+
   },
   checkout: (req, res) => {
     res.render('checkout.ejs', { productCheckout: productCheckout })
