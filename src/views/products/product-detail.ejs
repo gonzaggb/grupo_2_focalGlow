@@ -1,6 +1,5 @@
-<%- include ('../partials/head')%>
-    <title>Focal Glow Product Detail</title>
-    <link rel="stylesheet" href="/css/style-product-detail.css" />
+<%- include ('../partials/head', {title:productFound.producto}) %>
+      <link rel="stylesheet" href="/css/style-product-detail.css" />
   </head>
 
   <body>
@@ -8,7 +7,7 @@
     <%- include ('../partials/header')%>
 
     <div class="product-name">
-      <h2>Nombre del Producto</h2>
+      <h2><%=productFound.producto%></h2>
       <a href="#" onclick="history.go(-1)"><i id="x" class="fas fa-arrow-circle-left"></i>
       </a>
     </div>
@@ -61,30 +60,47 @@
           <div class="options">
             <div class="options-power-cct">
               <select name="power" class="options-control">
-                <option value="10W">10W</option>
-                <option value="20W">20W</option>
-                <option value="30W">30W</option>
+               <%productFound.potencia.forEach(function (element) { 
+                if (element != ""){%>
+                  <option value="<%=element%>"><%=element%></option>
+                <% }}) %>
               </select>
               <select name="cct" class="options-control">
-                <option value="3000K">3000K</option>
-                <option value="4000K">4000K</option>
+                <%productFound.cct.forEach(function (element) { 
+                  if (element != "") {%>
+                <option value="<%=element%>"><%=element.toUpperCase()%></option>
+                <% }}) %>
+              
               </select>
             </div>
 
             <select name="dim" class="options-control-dim">
-              <option value="switch" id="off-icon">&#xf011; Switch</option>
-              <option value="dim">Dimeable</option>
-              <option value="dali">DALI</option>
-              <option value="bt" id="bt-icon">&#xf293; Bluetooth</option>
+              <%productFound.dim.forEach(function (element) { 
+                switch (element) {
+                  case '':
+                    break
+                  case 'Switch':%>
+                    <option value="<%=element%>">&#xf011; <%=element%></option>
+                  <%  break
+                  case 'Bluetooth': %>
+                  <option value="<%=element%>">&#xf293; <%=element%></option>
+                  <% break
+                  default:%>
+                  <option value="<%=element%>"><%=element%></option>
+                  <%  break;
+                
+                 }}) %>
+
+            
             </select>
           </div>
 
           <article class="technical-data">
             <h3>Características</h3>
             <ul>
-              <li>Fuente: LED</li>
-              <li>Material: Aluminio</li>
-              <li>Óptica: Flood</li>
+              <li>Fuente: <%=(productFound.fuente).toUpperCase()%></li>
+              <li>Material:  <%=productFound.material.join('-')%></li>
+              <li>Óptica: <%=productFound.optica%></li>
               <li>Potencia [W]: <em>Seleccionar opción</em></li>
               <li>CCT: <em>Seleccionar opción</em></li>
               <li>Dim: <em>Seleccionar opción</em></li>
@@ -93,7 +109,7 @@
         </section>
 
         <section class="price">
-          <h3 class="price-title">$14.500</h3>
+          <h3 class="price-title">$<%= productFound.precio%></h3>
           <div class="qtyadd">
             <input type="number" placeholder="1" min="0" />
             <button class="add">AÑADIR</button>

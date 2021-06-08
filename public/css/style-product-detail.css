@@ -221,8 +221,7 @@ input[name='r'] {
   flex-direction: column;
 }
 
-#bt-icon,
-#off-icon {
+.options-control-dim option {
   font-family: 'FontAwesome', 'Roboto';
 }
 
