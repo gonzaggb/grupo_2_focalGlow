@@ -14,8 +14,8 @@ module.exports = {
     const products = JSON.parse(productosJson)
     //Ordeno los elementos en cada una de las propiedades -
     products.forEach((element) => {
-      for (const propiedad in element) {
-        Array.isArray(element[propiedad]) ? element[propiedad].sort() : ''
+      for (const prop in element) {
+        Array.isArray(element[prop]) ? element[prop].sort() : ''
       }
     })
 
