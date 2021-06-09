@@ -12,13 +12,11 @@ module.exports = {
     const productosJson = fs.readFileSync(productPath, 'utf-8')
     // Parsear la informacion
     const products = JSON.parse(productosJson)
-    //Ordeno los elementos en cada una de las propiedades - Debe haber una forma mejor
+    //Ordeno los elementos en cada una de las propiedades -
     products.forEach((element) => {
-      element.material.sort()
-      element.optica.sort()
-      element.potencia.sort()
-      element.cct.sort()
-      element.dim.sort()
+      for (const propiedad in element) {
+        Array.isArray(element[propiedad]) ? element[propiedad].sort() : ''
+      }
     })
 
     return products
