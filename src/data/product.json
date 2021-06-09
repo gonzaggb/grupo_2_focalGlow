@@ -2,7 +2,7 @@
   {
     "id": 1,
     "producto": "Four-striped grass mouse",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 5,
     "fuente": "LED",
     "material": ["Chapa", "Madera"],
@@ -20,7 +20,7 @@
   {
     "id": 2,
     "producto": "Violet-eared waxbill",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 31,
     "fuente": "LED",
     "material": ["Chapa", "Otros", "Hierro", "Polimero"],
@@ -56,7 +56,7 @@
   {
     "id": 4,
     "producto": "Egyptian viper",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 32,
     "fuente": "LED",
     "material": ["Hierro", "Madera", "Chapa", "Otros", "Polimero"],
@@ -81,7 +81,7 @@
   {
     "id": 5,
     "producto": "Weeper capuchin",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 37,
     "fuente": "LED",
     "material": ["Polimero", "Chapa", "Aluminio", "Madera"],
@@ -99,7 +99,7 @@
   {
     "id": 6,
     "producto": "Mexican wolf",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 34,
     "fuente": "Lámpara",
     "material": ["Aluminio", "Hierro", "Otros", "Chapa"],
@@ -117,7 +117,7 @@
   {
     "id": 7,
     "producto": "Arctic hare",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 68,
     "fuente": "LED",
     "material": ["Otros", "Hierro", "Madera", "Chapa", "Polimero"],
@@ -142,7 +142,7 @@
   {
     "id": 8,
     "producto": "Robin, kalahari scrub",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 59,
     "fuente": "Lámpara",
     "material": ["Polimero", "Chapa"],
@@ -160,7 +160,7 @@
   {
     "id": 9,
     "producto": "Andean goose",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 1,
     "fuente": "Lámpara",
     "material": ["Aluminio", "Madera", "Polimero", "Hierro"],
@@ -317,7 +317,7 @@
   {
     "id": 17,
     "producto": "Common brushtail possum",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 47,
     "fuente": "Lámpara",
     "material": ["Polimero"],
@@ -443,7 +443,7 @@
   {
     "id": 24,
     "producto": "Southern boubou",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 21,
     "fuente": "LED",
     "material": ["Aluminio", "Otros", "Polimero"],
@@ -461,7 +461,7 @@
   {
     "id": 25,
     "producto": "Snow goose",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 56,
     "fuente": "LED",
     "material": ["Madera", "Hierro"],
@@ -540,7 +540,7 @@
   {
     "id": 29,
     "producto": "Racer snake",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 48,
     "fuente": "LED",
     "material": ["Madera", "Otros", "Aluminio", "Polimero", "Hierro", "Chapa"],
@@ -618,7 +618,7 @@
   {
     "id": 33,
     "producto": "Scaly-breasted lorikeet",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 44,
     "fuente": "Lámpara",
     "material": ["Otros", "Madera", "Hierro", "Polimero"],
@@ -636,7 +636,7 @@
   {
     "id": 34,
     "producto": "Pheasant, ring-necked",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 58,
     "fuente": "Lámpara",
     "material": ["Polimero", "Aluminio", "Hierro", "Otros"],
@@ -654,7 +654,7 @@
   {
     "id": 35,
     "producto": "Macaque, rhesus",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 42,
     "fuente": "LED",
     "material": ["Madera", "Polimero", "Hierro", "Chapa"],
@@ -672,7 +672,7 @@
   {
     "id": 36,
     "producto": "Sungazer, yellow-brown",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 73,
     "fuente": "LED",
     "material": ["Chapa", "Aluminio"],
@@ -690,7 +690,7 @@
   {
     "id": 37,
     "producto": "Green-winged trumpeter",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 59,
     "fuente": "Lámpara",
     "material": ["Polimero", "Madera", "Otros", "Hierro"],
@@ -708,7 +708,7 @@
   {
     "id": 38,
     "producto": "Sage grouse",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 20,
     "fuente": "LED",
     "material": ["Otros", "Chapa", "Aluminio", "Madera"],
@@ -726,7 +726,7 @@
   {
     "id": 39,
     "producto": "Bandicoot, southern brown",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 67,
     "fuente": "Lámpara",
     "material": ["Chapa", "Aluminio", "Polimero", "Otros", "Hierro", "Madera"],
@@ -744,7 +744,7 @@
   {
     "id": 40,
     "producto": "Eastern grey kangaroo",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 59,
     "fuente": "Lámpara",
     "material": ["Polimero", "Otros", "Chapa", "Aluminio", "Madera", "Hierro"],
@@ -762,7 +762,7 @@
   {
     "id": 41,
     "producto": "Alligator, american",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 2,
     "fuente": "Lámpara",
     "material": ["Aluminio", "Polimero", "Chapa"],
@@ -780,7 +780,7 @@
   {
     "id": 42,
     "producto": "Red and blue macaw",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 58,
     "fuente": "Lámpara",
     "material": ["Madera"],
@@ -877,7 +877,7 @@
   {
     "id": 47,
     "producto": "Common langur",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 27,
     "fuente": "Lámpara",
     "material": ["Chapa", "Otros", "Polimero"],
@@ -920,7 +920,7 @@
   {
     "id": 49,
     "producto": "Sifaka, verreaux's",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 45,
     "fuente": "LED",
     "material": ["Polimero", "Otros", "Hierro", "Chapa", "Madera", "Aluminio"],
@@ -963,7 +963,7 @@
   {
     "id": 51,
     "producto": "Southern tamandua",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 43,
     "fuente": "LED",
     "material": ["Otros", "Chapa", "Polimero", "Aluminio", "Madera", "Hierro"],
@@ -1114,7 +1114,7 @@
   {
     "id": 59,
     "producto": "Cat, kaffir",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 9,
     "fuente": "Lámpara",
     "material": ["Hierro", "Chapa", "Aluminio", "Madera"],
@@ -1139,7 +1139,7 @@
   {
     "id": 60,
     "producto": "Cat, african wild",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 5,
     "fuente": "Lámpara",
     "material": ["Chapa", "Polimero", "Hierro", "Otros"],
@@ -1157,7 +1157,7 @@
   {
     "id": 61,
     "producto": "Owl, australian masked",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 23,
     "fuente": "LED",
     "material": ["Polimero"],
@@ -1314,7 +1314,7 @@
   {
     "id": 69,
     "producto": "Porcupine, indian",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 11,
     "fuente": "LED",
     "material": ["Chapa", "Madera", "Hierro", "Aluminio", "Otros"],
@@ -1350,7 +1350,7 @@
   {
     "id": 71,
     "producto": "Swan, black",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 73,
     "fuente": "LED",
     "material": ["Chapa", "Hierro"],
@@ -1567,7 +1567,7 @@
   {
     "id": 82,
     "producto": "White-cheeked pintail",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 64,
     "fuente": "Lámpara",
     "material": ["Chapa", "Otros", "Polimero", "Hierro", "Aluminio"],
@@ -1585,7 +1585,7 @@
   {
     "id": 83,
     "producto": "Red brocket",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 0,
     "fuente": "LED",
     "material": ["Chapa", "Hierro"],
@@ -1603,7 +1603,7 @@
   {
     "id": 84,
     "producto": "Turkey, wild",
-    "categoria": "Plafón",
+    "categoria": "plafon",
     "cantidad": 54,
     "fuente": "Lámpara",
     "material": ["Madera", "Aluminio", "Chapa", "Hierro", "Otros"],
@@ -1646,7 +1646,7 @@
   {
     "id": 86,
     "producto": "Pelican, great white",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 24,
     "fuente": "LED",
     "material": ["Chapa", "Madera"],
@@ -1671,7 +1671,7 @@
   {
     "id": 87,
     "producto": "Ibis, sacred",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 70,
     "fuente": "LED",
     "material": ["Polimero", "Otros", "Hierro", "Aluminio", "Chapa"],
@@ -1707,7 +1707,7 @@
   {
     "id": 89,
     "producto": "Southern white-crowned shrike",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 74,
     "fuente": "Lámpara",
     "material": ["Otros", "Polimero", "Aluminio", "Madera"],
@@ -1725,7 +1725,7 @@
   {
     "id": 90,
     "producto": "Steller sea lion",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 22,
     "fuente": "LED",
     "material": ["Madera", "Hierro", "Aluminio"],
@@ -1743,7 +1743,7 @@
   {
     "id": 91,
     "producto": "Macaw, blue and gold",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 51,
     "fuente": "LED",
     "material": ["Polimero", "Aluminio", "Hierro", "Chapa", "Madera"],
@@ -1821,7 +1821,7 @@
   {
     "id": 95,
     "producto": "Marmot, hoary",
-    "categoria": "Sistemas",
+    "categoria": "sistemas",
     "cantidad": 69,
     "fuente": "LED",
     "material": ["Hierro", "Chapa", "Madera", "Aluminio", "Polimero", "Otros"],
@@ -1918,7 +1918,7 @@
   {
     "id": 100,
     "producto": "Blackbuck",
-    "categoria": "Aplique",
+    "categoria": "apliques",
     "cantidad": 12,
     "fuente": "LED",
     "material": ["Polimero", "Madera", "Chapa"],

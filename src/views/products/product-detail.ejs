@@ -20,37 +20,30 @@
         <i class="fas fa-ruler"></i>
 
         <div class="product-dimensions">
-          <img src="/img/product_dimensions.jpg" alt="dimensiones luminaria" />
+          <img src="<%=productFound.image_dimension%>" alt="dimensiones luminaria" />
         </div>
 
         <div class="slider-container">
           <div class="slides">
-            <input type="radio" name="r" id="r1" checked />
-            <input type="radio" name="r" id="r2" />
-            <input type="radio" name="r" id="r3" />
-            <input type="radio" name="r" id="rp" />
-            <input type="radio" name="r" id="rn" />
-
-            <div class="slide s1">
-              <img src="/img/slider_1.jpg" alt="" />
+             <% for (let i=0; i < productFound.image_slider.length; i++) { %>
+             
+            <% if (i == 0) { %>
+              <div class="slide-s1">
+              <img src="<%=productFound.image_slider[i]%>" alt="" />
             </div>
-            <div class="slide">
-              <img src="/img/slider_2.jpg" alt="" />
-            </div>
-            <div class="slide">
-              <img src="/img/slider_3.jpg" alt="" />
-            </div>
+            <%} else { %>
+              <div class="slide">
+                <img src="<%=productFound.image_slider[i]%>" alt="" />
+              </div>
+             <%}}%>
           </div>
-
-          <!-- Next and previous buttons -->
-          <label for="rp" class="prev">&#10094;</label>
-          <label for="rn" class="next">&#10095;</label>
 
           <!-- Slider buttons -->
           <div class="dots-container">
-            <label for="r1" class="dot"></label>
-            <label for="r2" class="dot"></label>
-            <label for="r3" class="dot"></label>
+            <% for (let i=0; i < productFound.image_slider.length; i++) { %>
+            <label for="r<%=i%>" class="dot"></label>
+            <input type="radio" name="r" id="r<%=[i]%>">
+            <%}%>
           </div>
         </div>
       </div>
@@ -117,7 +110,7 @@
         </section>
 
         <div class="product-dimensions-info">
-          <img src="/img/product_dimensions.jpg" alt="dimensiones luminaria" />
+          <img src="<%=productFound.image_dimension%>" alt="dimensiones luminaria" />
           <span>Dimensiones</span>
         </div>
 
