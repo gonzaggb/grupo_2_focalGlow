@@ -1,5 +1,4 @@
-<%- include ('../partials/head', {title:productFound.producto}) %>
-      <link rel="stylesheet" href="/css/style-product-detail.css" />
+<%- include ('../partials/head', {title:productFound.producto}) %>            <link rel="stylesheet" href="/css/style-product-detail.css" />
   </head>
 
   <body>
@@ -24,27 +23,22 @@
         </div>
 
         <div class="slider-container">
-          <div class="slides">
-             <% for (let i=0; i < productFound.image_slider.length; i++) { %>
-             
-            <% if (i == 0) { %>
-              <div class="slide-s1">
-              <img src="<%=productFound.image_slider[i]%>" alt="" />
-            </div>
-            <%} else { %>
-              <div class="slide">
+          <ul class="slider">
+             <% for (let i =0 ; i < productFound.image_slider.length; i++) { %>
+               <li id = slide<%=i%>>
                 <img src="<%=productFound.image_slider[i]%>" alt="" />
-              </div>
-             <%}}%>
-          </div>
+               </li>
+             <%} %>
+          </ul>
 
           <!-- Slider buttons -->
-          <div class="dots-container">
-            <% for (let i=0; i < productFound.image_slider.length; i++) { %>
-            <label for="r<%=i%>" class="dot"></label>
-            <input type="radio" name="r" id="r<%=[i]%>">
+          <ul class="dots-container">
+            <% for (let i =0 ; i < productFound.image_slider.length; i++ ) { %>
+            <li class="dot">
+              <a href="#slide<%=i%>"><%=i%></a>
+            </li>
             <%}%>
-          </div>
+          </ul>  
         </div>
       </div>
 
@@ -124,7 +118,7 @@
     <section class="similar-products-container">
       <article class="similar-products">
         <h3>Productos Similares</h3>
-        <div class="slider-container-2">
+        <div class="slider-container-sp">
           <div class="slides-2">
             <input type="radio" name="r" id="r1-2" checked />
             <input type="radio" name="r" id="r2-2" />

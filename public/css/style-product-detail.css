@@ -77,36 +77,6 @@ main {
 
 /*new slider*/
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -22px;
-  padding: 8px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  z-index: 10;
-  display: none;
-}
-/* Position the "next button" mad "left button */
-.prev {
-  left: 0;
-  border-radius: 3px 0 0 3px;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover,
 .dot:hover {
   background-color: #ffde59;
   opacity: 0.8;
@@ -115,9 +85,8 @@ main {
 .dots-container,
 .dots-container-2 {
   position: absolute;
-  bottom: 5%;
-  left: 50%;
-  margin-left: -25px;
+  bottom: 2%;
+  left: 45%;
   text-align: center;
 }
 .dot {
@@ -130,57 +99,55 @@ main {
   display: inline-block;
   transition: background-color 0.6s ease;
 }
+.dot a {
+  text-decoration: none;
+  opacity: 0;
+}
 
 /*SLIDER without JS*/
-.slider-container,
-.slider-container-2 {
+.slider-container ul,
+.slider-container li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slider-container {
   width: 100%;
-  position: relative;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0px;
-  text-align: center;
-  overflow: hidden;
-  -webkit-overflow-scrolling: touch;
+  max-height: 300px;
+  margin: 0px auto;
 }
 
-input[name='r'] {
+ul.slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+}
+
+ul.slider li {
   position: absolute;
-  visibility: hidden;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  width: inherit;
+  height: inherit;
+  transition: opacity 0.5s;
+  background: #fff;
 }
 
-.slides,
-.slides-2 {
-  width: 300%;
-  display: flex;
+ul.slider li img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 
-.slide,
-.slide-2 {
-  width: 33.33%;
-  transition: 1s;
+ul.slider li:first-child {
+  opacity: 1; /*Mostramos el primer <li>*/
 }
 
-#r1:checked ~ .s1,
-#r1-2:checked ~ .s2 {
-  margin-left: 0;
-}
-#r2:checked ~ .s1,
-#r2-2:checked ~ .s2 {
-  margin-left: -33.33%;
-}
-#r3:checked ~ .s1,
-#r3-2:checked ~ .s2 {
-  margin-left: -66.66%;
-}
-#rp:checked ~ .s1,
-#rp-2:checked ~ .s2 {
-  margin-left: 0;
-}
-#rn:checked ~ .s1,
-#rn-2:checked ~ .s2 {
-  margin-left: -33.33%;
+ul.slider li:target {
+  opacity: 1; /*Mostramos el <li> del enlace que pulsemos*/
 }
 
 .product-info {
