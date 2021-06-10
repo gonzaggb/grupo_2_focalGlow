@@ -38,7 +38,7 @@
   {
     "id": 3,
     "name": "Sidewinder",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 51,
     "source": "LED",
     "material": ["Madera", "Otros", "Polimero", "Hierro"],
@@ -74,7 +74,7 @@
   {
     "id": 5,
     "name": "Sloth, hoffman's",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 74,
     "source": "LED",
     "material": ["Polimero", "Aluminio", "Chapa", "Madera", "Hierro", "Otros"],
@@ -128,7 +128,7 @@
   {
     "id": 8,
     "name": "Dove, little brown",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 52,
     "source": "LED",
     "material": ["Otros", "Aluminio", "Polimero", "Madera"],
@@ -182,7 +182,7 @@
   {
     "id": 11,
     "name": "Black-tailed prairie dog",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 63,
     "source": "LED",
     "material": ["Polimero", "Otros", "Madera"],
@@ -218,7 +218,7 @@
   {
     "id": 13,
     "name": "Wallaby, dama",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 9,
     "source": "Lámpara",
     "material": ["Chapa", "Madera", "Otros", "Aluminio"],
@@ -326,7 +326,7 @@
   {
     "id": 19,
     "name": "Vulture, oriental white-backed",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 57,
     "source": "LED",
     "material": ["Otros", "Aluminio", "Hierro", "Chapa", "Polimero"],
@@ -416,7 +416,7 @@
   {
     "id": 24,
     "name": "Grison",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 26,
     "source": "Lámpara",
     "material": ["Madera", "Hierro"],
@@ -506,7 +506,7 @@
   {
     "id": 29,
     "name": "Emerald green tree boa",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 48,
     "source": "LED",
     "material": ["Hierro", "Aluminio", "Madera", "Polimero"],
@@ -686,7 +686,7 @@
   {
     "id": 39,
     "name": "Javanese cormorant",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 25,
     "source": "LED",
     "material": ["Madera"],
@@ -758,7 +758,7 @@
   {
     "id": 43,
     "name": "Antelope, four-horned",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 48,
     "source": "Lámpara",
     "material": ["Hierro", "Otros", "Polimero", "Aluminio", "Chapa", "Madera"],
@@ -776,7 +776,7 @@
   {
     "id": 44,
     "name": "Cougar",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 13,
     "source": "LED",
     "material": ["Otros", "Polimero"],
@@ -866,7 +866,7 @@
   {
     "id": 49,
     "name": "Large cormorant",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 48,
     "source": "Lámpara",
     "material": ["Polimero", "Aluminio"],
@@ -884,7 +884,7 @@
   {
     "id": 50,
     "name": "Serval",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 50,
     "source": "LED",
     "material": ["Aluminio", "Polimero", "Chapa"],
@@ -920,7 +920,7 @@
   {
     "id": 52,
     "name": "Javanese cormorant",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 38,
     "source": "Lámpara",
     "material": ["Aluminio", "Chapa", "Madera", "Polimero", "Hierro"],
@@ -992,7 +992,7 @@
   {
     "id": 56,
     "name": "Mountain duck",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 53,
     "source": "Lámpara",
     "material": ["Otros", "Madera"],
@@ -1010,7 +1010,7 @@
   {
     "id": 57,
     "name": "White-browed owl",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 6,
     "source": "Lámpara",
     "material": ["Otros", "Madera"],
@@ -1046,7 +1046,7 @@
   {
     "id": 59,
     "name": "Cat, jungle",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 68,
     "source": "LED",
     "material": ["Polimero", "Otros", "Hierro", "Chapa", "Aluminio"],
@@ -1172,7 +1172,7 @@
   {
     "id": 66,
     "name": "Fox, grey",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 48,
     "source": "Lámpara",
     "material": ["Polimero", "Otros"],
@@ -1208,7 +1208,7 @@
   {
     "id": 68,
     "name": "Flicker, campo",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 50,
     "source": "Lámpara",
     "material": ["Chapa", "Hierro", "Otros", "Aluminio", "Madera"],
@@ -1262,7 +1262,7 @@
   {
     "id": 71,
     "name": "Openbill, asian",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 24,
     "source": "Lámpara",
     "material": ["Madera", "Polimero"],
@@ -1280,7 +1280,7 @@
   {
     "id": 72,
     "name": "Kirk's dik dik",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 18,
     "source": "LED",
     "material": ["Chapa", "Otros", "Polimero"],
@@ -1334,7 +1334,7 @@
   {
     "id": 75,
     "name": "Sable antelope",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 14,
     "source": "LED",
     "material": ["Madera", "Polimero", "Chapa", "Aluminio", "Hierro"],
@@ -1370,7 +1370,7 @@
   {
     "id": 77,
     "name": "Potoroo",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 49,
     "source": "Lámpara",
     "material": ["Hierro", "Otros", "Madera"],
@@ -1424,7 +1424,7 @@
   {
     "id": 80,
     "name": "Gerbil (unidentified)",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 57,
     "source": "LED",
     "material": ["Otros", "Madera", "Aluminio", "Hierro"],
@@ -1478,7 +1478,7 @@
   {
     "id": 83,
     "name": "Turkey, wild",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 31,
     "source": "Lámpara",
     "material": ["Polimero", "Hierro", "Madera", "Chapa", "Otros", "Aluminio"],
@@ -1568,7 +1568,7 @@
   {
     "id": 88,
     "name": "Goose, cereopsis",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 34,
     "source": "LED",
     "material": ["Aluminio", "Chapa", "Madera"],
@@ -1658,7 +1658,7 @@
   {
     "id": 93,
     "name": "Waterbuck, defassa",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 71,
     "source": "Lámpara",
     "material": ["Madera", "Polimero", "Otros", "Hierro", "Aluminio"],

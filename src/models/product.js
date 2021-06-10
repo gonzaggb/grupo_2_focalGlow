@@ -41,18 +41,7 @@ module.exports = {
     const products = this.readFile()
     // Filtrar por el ID
     const productFound = products.find((product) => product.id == id)
-    // Devolvemos el planeta
-    return productFound
-  },
-
-  findAll() {
-    return this.readFile()
-  },
-  findByPk(id) {
-    const products = this.readFile()
-    // Filtrar por el ID
-    const productFound = products.find((product) => product.id == id)
-    // Devolvemos el planeta
+    // Devolvemos el producto
     return productFound
   },
   create(product, files) {
