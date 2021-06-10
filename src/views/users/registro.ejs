@@ -4,13 +4,17 @@
     <link rel="stylesheet" href="/css/styles-registro.css">
 
     </head>
+    <script>function cambiar(){
+        var pdrs = document.getElementById('file-upload').files[0].name;
+        document.getElementById('info').innerHTML = pdrs;
+    }</script>
 
     <body>
         <%- include('../partials/header.ejs')%>
 
 
             <main class="main-container2">
-                <form class="registry-form2" method="POST" action="/users/registro">
+                <form class="registry-form2" method="POST" action="/users/registro" enctype="multipart/form-data">
 
                     <div class="registry-container2">
                         <label for="nombre">Nombre</label>
@@ -25,11 +29,14 @@
                         <label for="re-password">Confirmar contraseña</label>
                         <input class="input-login" type="password" name="re-password" id="re-password" required>
                         <span class="error-message">Las contraseñas no coinciden</span>
-
+                        <label for="file-upload" class="subir">
+                            <span><i class="far fa-user-circle"></i> Subir foto de perfil</span>
+                        </label>
+                        <input id="file-upload" name='profile-img' onchange='cambiar()' type="file" style='display: none;'/>
+                        <div id="info"></div>
                     </div>
                     <div class="button-container">
                         <button type="submit" class="login-button">Continuar</button>
-
                     </div>
 
                     </section>

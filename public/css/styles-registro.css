@@ -39,10 +39,17 @@ body{
     width: 240px;
     border: solid white 1px;
     background-color: rgba(0,0,0,0.4);
-    border-radius: 5px;
+    border-radius: 5px; 
 
-    
+}
 
+ 
+.subir span{
+    text-align: center;
+}
+.subir:hover{
+    color:#fff;
+    background: #f7cb15;
 }
 .registry-container2{
     padding-top:5px;
@@ -60,6 +67,28 @@ body{
     text-align: left;
     margin-left: 15px;
 }
+.registry-container2 .subir{
+    text-align: center;
+}
+.subir{
+    padding: 5px 5px;
+    color:#fff;
+    border:0px solid #fff;
+    width: 90%;
+    font-size: 15px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    opacity: 100%;
+    color: black;
+    text-align: center;
+    border: none;
+    margin: 5px;
+    border-radius: 15px;
+    transition: all 0.7s;  
+
+}
+
 .input-login{
     width: 90%;
     outline:none;
@@ -122,6 +151,10 @@ body{
 }
 
 
+.file-upload{
+    text-align: center;
+}
+
 
 .registry-form2{
     color:white;
@@ -157,7 +190,6 @@ body{
 @media (min-width: 992px){
     .registry-form2{
         justify-content: space-evenly;
-        height: 400px;
         width: 300px;
 
         

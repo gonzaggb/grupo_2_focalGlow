@@ -19,5 +19,13 @@
     "email": "admin@admin.com",
     "password": "admin",
     "id": 3
+  },
+  {
+    "nombre": "gonzalo",
+    "apellido": "con imagen",
+    "email": "gonzaggb@hotmail.com",
+    "password": "123",
+    "profileImg": "/img/profile-pictures/1623250634275.jpg",
+    "id": 4
   }
 ]

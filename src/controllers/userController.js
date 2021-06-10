@@ -19,7 +19,8 @@ const controller = {
       nombre,
       apellido,
       email,
-      password
+      password,
+      profileImg: '/img/profile-pictures/' + req.file.filename
     }
     user.create(newUser)
     res.redirect('/')
