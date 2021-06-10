@@ -51,12 +51,12 @@
         <div class="elementos">
             <%for(i=0; i < 4; i++){%>
               <div id="first-box" class="box">
-                <img src="<%=homeData.products[i].homeImage%>" alt="<%=homeData.products[i].producto%>">
+                <img src="<%=homeData.products[i].main_image%>" alt="<%=homeData.products[i].name%>">
                 <a href="/product">
                   <div class="capa">
                     <h2>
-                      <%= homeData.products[i].producto %> <br><br>
-                        $<%= homeData.products[i].precio %>
+                      <%= homeData.products[i].name %> <br><br>
+                        $<%= homeData.products[i].price %>
                     </h2>
                   </div>
                 </a>
