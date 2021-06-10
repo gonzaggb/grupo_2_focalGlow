@@ -20,7 +20,7 @@
       
       <% for (i=0;i<dataCategory.product.length;i++) { %>
         <article class="producto">
-          <a href="/product/detail/<%=i%>"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
+          <a href="/product/detail/<%=i%>"><img class="zoom" src="<%=dataCategory.product[i].main_image%>" alt=""></a>
           <div class="nombre-precio">       
             <p class ="nombre">Nombre del producto: <%=dataCategory.product[i].product%></p>
             <p class ="precio">Desde: <%=dataCategory.product[i].price%></p>       
