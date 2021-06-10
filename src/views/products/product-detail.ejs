@@ -23,22 +23,13 @@
         </div>
 
         <div class="slider-container">
-          <ul class="slider">
-             <% for (let i =0 ; i < productFound.image_slider.length; i++) { %>
-               <li id = slide<%=i%>>
-                <img src="<%=productFound.image_slider[i]%>" alt="" />
-               </li>
-             <%} %>
-          </ul>
-
-          <!-- Slider buttons -->
-          <ul class="dots-container">
-            <% for (let i =0 ; i < productFound.image_slider.length; i++ ) { %>
-            <li class="dot">
-              <a href="#slide<%=i%>"><%=i%></a>
-            </li>
-            <%}%>
-          </ul>  
+          <% for (let i =0 ; i < productFound.image_slider.length; i++) { %>
+            <input type="radio" id="trigger<%=i%>" name="slider" checked autofocus>
+            <label for="trigger<%=i%>"></label>
+            <div class="slide <%=i%>">
+              <img src ="<%=productFound.image_slider[i]%>">
+            </div>  
+          <%} %>
         </div>
       </div>
 
@@ -113,45 +104,23 @@
           <span><i class="far fa-file-pdf"></i> Manual de Instalación</span>
         </section>
       </div>
+        <section class="similar-products-container">
+          <article class="similar-products">
+            <h3>Productos Similares</h3>
+            <div class="slider-container">
+              <% for (let i =3 ; i < 5; i++) { %>
+                <input type="radio" id="trigger<%=i%>" name="slider" checked autofocus>
+                <label for="trigger<%=i%>"></label>
+                <div class="slide <%=i%>">
+                  <img src ="/img/similar_products_<%=i%>.jpg">
+                </div>  
+              <%} %>
+            </div>
+          </article>
+        </section>
     </main>
 
-    <section class="similar-products-container">
-      <article class="similar-products">
-        <h3>Productos Similares</h3>
-        <div class="slider-container-sp">
-          <div class="slides-2">
-            <input type="radio" name="r" id="r1-2" checked />
-            <input type="radio" name="r" id="r2-2" />
-            <input type="radio" name="r" id="r3-2" />
-            <input type="radio" name="r" id="rp-2" />
-            <input type="radio" name="r" id="rn-2" />
-
-            <div class="slide s2">
-              <img src="/img/similar_products_1.jpg" alt="" />
-            </div>
-            <div class="slide-2">
-              <img src="/img/similar_products_2.jpg" alt="" />
-            </div>
-            <div class="slide-2">
-              <img src="/img/similar_products_3.jpg" alt="" />
-            </div>
-          </div>
-
-          <!-- Next and previous buttons -->
-          <div class="prev-next-buttons-2">
-            <label for="rp-2" class="prev">&#10094;</label>
-            <label for="rn-2" class="next">&#10095;</label>
-          </div>
-
-          <!-- Slider buttons -->
-          <div class="dots-container-2">
-            <label for="r1-2" class="dot"></label>
-            <label for="r2-2" class="dot"></label>
-            <label for="r3-2" class="dot"></label>
-          </div>
-        </div>
-      </article>
-    </section>
+    
 
     <!--FOOTER-->
     <%- include('../partials/footer') %>
