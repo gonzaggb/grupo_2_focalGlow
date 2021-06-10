@@ -1,8 +1,6 @@
 const fs = require('fs')
 const path = require('path')
 
-/* const productosJson = JSON.parse(fs.readFileSync(__dirname + '/product.json', 'utf-8')) */
-
 module.exports = {
   filename: path.resolve(__dirname, '../data/product.json'),
 
@@ -28,15 +26,18 @@ module.exports = {
     // Escribir el archivo
     fs.writeFileSync(this.filename, dataJson)
   },
+
   generateId() {
     const product = this.readFile()
     const lastProduct = product.pop()
+
     return lastProduct.id + 1
   },
 
   findAll() {
     return this.readFile()
   },
+
   findByPk(id) {
     const products = this.readFile()
     // Filtrar por el ID
@@ -44,9 +45,12 @@ module.exports = {
     // Devolvemos el producto
     return productFound
   },
+
   create(product, files) {
     product.id = this.generateId()
     product.file = []
+
+    //Dependiendo del tipo de archivo donde se guarda
     for (let i = 0; i < files.length; i++) {
       switch (files[i].fieldname) {
         case 'product_img':
@@ -66,21 +70,25 @@ module.exports = {
 
     // Leer el archivo
     const products = this.readFile()
-    // Agregar nuestro planeta al array de planetas
+    // Agregar nuestro producto al array de products
     product.material == '' ? (product.material = []) : ''
-    product.optica == undefined ? (product.optica = []) : ''
-    product.potencia == '' ? (product.potencia = []) : ''
+    product.optic == undefined ? (product.optic = []) : ''
+    product.power == '' ? (product.power = []) : ''
     product.cct == undefined ? (product.cct = []) : ''
     product.dim == undefined ? (product.dim = []) : ''
     product.file == '' ? (product.file = []) : ''
-    const productsUpdated = [...products, product]
+
     console.log(product)
 
-    // Volver a escribir el archivo con el nuevo array de planetas
+    //Incluimos el producto nuevo al array products
+    const productsUpdated = [...products, product]
+
+    // Volver a escribir el archivo con el nuevo array de productos
     this.writeFile(productsUpdated)
 
     return product
   },
+
   delete(id) {
     const products = this.readFile() //traer el array de productos
     const newProducts = products.filter((idProduct) => idProduct.id != id) //busca el producto a borrar
