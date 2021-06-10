@@ -1,153 +1,80 @@
 [
   {
-    "id": 1,
-    "categoria": "aplique",
-    "producto": "Aplique un toque caro",
-    "cantidad": "14",
-    "fuente": "led",
-    "material": ["Aluminio", "Polimero"],
-    "optica": "Oval",
-    "potencia": ["14W", "68W", "76W", "4W"],
-    "cct": "3000k",
-    "dim": ["switch", "dimeable", "dali"],
-    "precio": "1458",
-    "file": ["", "", "", "", ""],
-    "homeImage": "/img/delfina.jpg"
-    },
-  {
-    "id": 2,
-    "categoria": "spot",
-    "producto": "Un spot accesible",
-    "cantidad": "6",
-    "fuente": "led",
-    "material": ["Chapa", ""],
-    "optica": "WideFlood",
-    "potencia": ["", "", "", ""],
-    "dim": "dimeable",
-    "precio": "123456",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "homeImage": "/img/coral.jpg"
-  },
-  {
-    "id": 3,
-    "categoria": "colgante",
-    "producto": "Esta es la que cuelta",
-    "cantidad": "4",
-    "material": ["Madera", "Polimero"],
-    "optica": "flood",
-    "potencia": ["", "", "", ""],
-    "cct": "3000k",
-    "dim": "dimeable",
-    "precio": "12536.2",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "homeImage": "/img/bon-jour.jpg"
-  },
-  {
-    "id": 4,
-    "categoria": "colgante",
-    "producto": "Como esta",
-    "cantidad": "123",
-    "fuente": "led",
-    "material": ["Madera", "Polimero"],
-    "optica": "Spot",
-    "potencia": ["19W", "18W", "21W", "60W"],
-    "cct": "2700k",
-    "dim": "dimeable",
-    "precio": "12222458",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "homeImage": "/img/bon-jour.jpg"
-  },
-  {
-    "id": 5,
-    "categoria": "accesorios",
-    "producto": "Lamparita",
-    "cantidad": "14",
-    "material": "",
-    "potencia": ["", "", "", ""],
-    "precio": "2365",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "homeImage": "/img/bon-jour.jpg"
-  },
-  {
-    "id": 6,
-    "categoria": "mesa",
-    "producto": "y mesita ",
-    "cantidad": "567",
-    "fuente": "led",
-    "material": ["Madera", "Chapa", ""],
-    "optica": ["Spot", "WideFlood"],
-    "potencia": ["18W", "90W", "18W", ""],
-    "cct": "2700k",
-    "dim": "dimeable",
-    "precio": "12345.5",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "homeImage": "/img/bon-jour.jpg"
-  },
-  {
-    "id": 7,
-    "categoria": "mesa",
-    "producto": "Mars",
-    "cantidad": "1",
-    "fuente": "led",
-    "material": ["Aluminio", ""],
-    "optica": ["flood", "WideFlood"],
-    "potencia": ["16W", "33W", "", ""],
-    "cct": ["3000k", "4000k"],
-    "dim": ["switch", "dali"],
-    "precio": "30000",
-    "file": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "homeImage": "/img/bon-jour.jpg"
-  },
-  {
-    "id": 8,
     "categoria": "",
-    "producto": "Gonzalo",
+    "producto": "test gonza gatito",
     "cantidad": "1",
-    "fuente": "led",
-    "material": ["Aluminio", ""],
-    "optica": ["flood", "Spot", "WideFlood"],
-    "potencia": ["6W", "11W", "", ""],
-    "cct": ["3000k", "3500k"],
-    "dim": "switch",
-    "precio": "15000",
-    "file": ["", "", "", "", ""],
-    "homeImage": "/img/bon-jour.jpg"
-
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "1",
+    "id": 16,
+    "main_image": "/img/product1623292694118.jpg",
+    "optica": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "categoria": "",
+    "producto": "test gonza gatito v1",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "1",
+    "id": 17,
+    "main_image": "/img/product1623292777370.jpg",
+    "data_sheet": "/pdf/product1623292777374.pdf",
+    "install_sheet": "/pdf/product1623292777378.pdf",
+    "optica": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "categoria": "Plafon",
+    "producto": "gonza michi",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "1",
+    "id": 18,
+    "main_image": "/img/product1623292925244.jpg",
+    "optica": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "categoria": "Plafon",
+    "producto": "gonza michi",
+    "cantidad": "1",
+    "material": [],
+    "potencia": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "precio": "1",
+    "id": 19,
+    "file": [
+      "/img/product1623293284450.jpg",
+      "/img/product1623293284451.jpg"
+    ],
+    "main_image": "/img/product1623293284447.jpg",
+    "optica": [],
+    "cct": [],
+    "dim": []
   }
 ]

@@ -40,8 +40,26 @@ module.exports={
         // Devolvemos el planeta
         return productFound;
     },
-    create (product) {
+    create (product, files) {
         product.id = this.generateId();
+        product.file = []
+        for (let i = 0; i < files.length; i++) {
+                   
+            switch (files[i].fieldname) {
+                case 'product_img':
+                 product.main_image = '/img/'+ files[i].filename
+                break;
+                case 'data_sheet' :
+                product.data_sheet = '/pdf/'+ files[i].filename
+                 break;
+                 case 'install_sheet' :
+                product.install_sheet = '/pdf/'+ files[i].filename
+                 break;
+                 case 'file':
+                product.file.push('/img/'+ files[i].filename)     
+                default:                   
+            }
+        }
 
         // Leer el archivo
         const products = this.readFile();   
@@ -53,8 +71,11 @@ module.exports={
         product.dim == undefined ? product.dim = [] : '';
         product.file == '' ? product.file = [] : '';
         const productsUpdated = [...products, product ];
+        console.log(product)
+        
         // Volver a escribir el archivo con el nuevo array de planetas
         this.writeFile(productsUpdated);
+        
         return product;
     },
     delete (id){

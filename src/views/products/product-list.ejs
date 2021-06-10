@@ -13,7 +13,7 @@
         <div class='form-lista-productos'>
 
             <% for (let i =0 ; i < products.length; i++) {%>
-               
+                
                 <h2>ID: <%=products[i].id%></h2>      
                 <h2>Categoria: <%=products[i].categoria%></h2>
                 <h2>Nombre: <%=products[i].producto%></h2>
@@ -25,7 +25,12 @@
                 <h2>CCT: <%=products[i].cct%></h2>
                 <h2>Dim: <%=products[i].dim%></h2>
                 <h2>Precio: $<%=products[i].precio%></h2>
-                <h2>Archivos: <%=products[i].file%></h2>
+                <div >
+                <h2>Imagen Principal:<%=products[i].main_image%></h2>
+                <img src="<%=products[i].main_image%>" alt="" width="100" height="100">
+                </div>
+                <h2>Archivos: <%=products[i].data_sheet%></h2>
+                <h2>Archivos 2: <%=products[i].file%></h2>                 
                 <div>
                 <div class="button-container"> 
                 <a href='/product/detail/:<%=products[i].id%>'><button id="button-product">Ver Producto</button></a>

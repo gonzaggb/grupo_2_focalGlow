@@ -6,7 +6,7 @@
     <main>
         <h2 class="titulo">Creación de Producto</h2>
        <div class="container-form"> 
-        <form  id="register" action="/product/add" method="POST">
+        <form  id="register" action="/product/add" method="POST" enctype="multipart/form-data">
             <div class="first">
                 <div class="cateogry-selector">
                     <label class="" for="categoria">Categoria: </label><br>
@@ -95,16 +95,16 @@
             <div class="first-">
                 <label class="" for="cct">CCT: </label>
                 <div>
-                    <input class="check" type="checkbox" name="cct" value="2700k"> 2700K
+                    <input class="check" type="checkbox" name="cct" value="2700"> 2700K
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="cct" value="3000k"> 3000K
+                    <input class="check" type="checkbox" name="cct" value="3000"> 3000K
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="cct" value="3500k"> 3500K
+                    <input class="check" type="checkbox" name="cct" value="3500"> 3500K
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="cct" value="4000k"> 4000K
+                    <input class="check" type="checkbox" name="cct" value="4000"> 4000K
                 </div>
             </div><br>
             <div class="first-">
@@ -128,8 +128,8 @@
             </div><br>
          <div class="imagenes">   
             <div class="imagen-input">
-                <label class="title" for="file">Imagen Principal: </label><br>
-                <input type="file" accept=".jpg">
+                <label class="title" for="product_img">Imagen Principal: </label><br>
+                <input type="file"  name='product_img' accept=".jpg" >
             </div><br>
             <div class="imagen-input">
                 <label class="title" for="file">Dimensiones del Producto: </label><br>
@@ -138,22 +138,23 @@
          </div>  
          <div class="imagenes">
             <div class="imagen-input">
-                <label class="title" for="file">Imagen 2: </label><br>
-                <input type="file"  name="file" accept=".jpg">
-            </div><br>
-            <div class="imagen-input">
-                <label class="title" for="file">Imagen 3: </label><br>
+                <label class="title" for="file">Imagen 1: </label><br>
+                <input type="file"  name="file" accept=".jpg"> <br>
                 <input type="file" name="file" accept=".jpg">
             </div><br>
+            <div class="imagen-input">
+                <label class="title" for="file">Imagen 2: </label><br>
+                
+            </div>
          </div> 
         <div class="imagenes">
             <div class="imagen-input">
-                <label class="" for="hoja-tecnica">Hoja Técnica: </label><br>
-                <input type="file" src="" alt="" name="file" accept=".pdf">
+                <label class="" for="data_sheet">Hoja Técnica: </label><br>
+                <input type="file" src="" alt="" name="data_sheet" accept=".pdf">
             </div><br>
             <div class="imagen-input">
-                <label class="" for="manual-instalacion">Manual de Instalación: </label><br>
-                <input type="file" src="" alt="" name="file" accept=".pdf">
+                <label class="" for="install_sheet">Manual de Instalación: </label><br>
+                <input type="file" src="" alt="" name="install_sheet" accept=".pdf">
             </div><br>
         </div>  
             <div class="button-container">

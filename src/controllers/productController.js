@@ -17,7 +17,10 @@ const controller = {
   },
   create: (req, res) => {
     const productNew = req.body
-    product.create(productNew)
+    const files = req.files
+    
+    console.log(files)
+    product.create(productNew , files)
     res.redirect('/product/list')
   },
 
