@@ -24,7 +24,7 @@ main {
 .product-name {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: baseline;
   margin: 0 auto;
   width: 90%;
 }
