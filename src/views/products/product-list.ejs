@@ -33,7 +33,7 @@
                 <h2>Archivos 2: <%=products[i].file%></h2>                 
                 <div>
                 <div class="button-container"> 
-                <a href='/product/detail/:<%=products[i].id%>'><button id="button-product">Ver Producto</button></a>
+                <a href='/product/detail/<%=products[i].id%>'><button id="button-product">Ver Producto</button></a>
                 <a href='/product/<%=products[i].id%>/edit'><button id="button-modificar">Modificar</button></a>
                  <form  class='' action="/product/<%=products[i].id%>?_method=DELETE"  method="POST">    
                     <button id="button-eliminar" type="submit">Eliminar</button>

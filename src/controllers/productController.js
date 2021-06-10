@@ -11,7 +11,6 @@ const controller = {
     let productFound = product.findByPk(id)
     res.render('products/product-detail.ejs', { productFound })
   },
-
   formNew: (req, res) => {
     res.render('products/product-create.ejs')
   },
@@ -39,6 +38,18 @@ const controller = {
   delete: (req, res) => {
     let id = req.params.id
     let productDelet = product.delete(id)
+    res.redirect('/product/list')
+  },
+  update: (req, res) => {},
+
+  delete: (req, res) => {
+    //guardo la variable del id del articulo a borrar
+    let id = req.params.id
+
+    //llamo al modelo para que borre al articulo por su id
+    product.delete(id)
+
+    //retorno la lista de productos actualizada
     res.redirect('/product/list')
   },
 }
