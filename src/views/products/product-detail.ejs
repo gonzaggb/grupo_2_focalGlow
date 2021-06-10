@@ -6,7 +6,7 @@
     <%- include ('../partials/header')%>
 
     <div class="product-name">
-      <h2><%=productFound.producto%></h2>
+      <h2><%=productFound.name%></h2>
       <a href="#" onclick="history.go(-1)"><i id="x" class="fas fa-arrow-circle-left"></i>
       </a>
     </div>
@@ -14,7 +14,7 @@
     <main>
       <div class="product-detail">
         <div class="main-img">
-          <img src="<%=productFound.image%>" alt="luminaria" />
+          <img src="<%=productFound.main_image%>" alt="luminaria" />
         </div>
         <i class="fas fa-ruler"></i>
 
@@ -38,7 +38,7 @@
           <div class="options">
             <div class="options-power-cct">
               <select name="power" class="options-control">
-               <%productFound.potencia.forEach(function (element) { 
+               <%productFound.power.forEach(function (element) { 
                 if (element != ""){%>
                   <option value="<%=element%>"><%=element%>W</option>
                 <% }}) %>
@@ -46,7 +46,7 @@
               <select name="cct" class="options-control">
                 <%productFound.cct.forEach(function (element) { 
                   if (element != "") {%>
-                <option value="<%=element%>"><%=element.toUpperCase()%></option>
+                <option value="<%=element%>"><%=element%>K</option>
                 <% }}) %>
               
               </select>
@@ -67,18 +67,16 @@
                   <option value="<%=element%>"><%=element%></option>
                   <%  break;
                 
-                 }}) %>
-
-            
+              }}) %>
             </select>
           </div>
-
+        
           <article class="technical-data">
             <h3>Características</h3>
             <ul>
-              <li>Fuente: <%=(productFound.fuente).toUpperCase()%></li>
+              <li>Fuente: <%=(productFound.source).toUpperCase()%></li>
               <li>Material:  <%=productFound.material.join('-')%></li>
-              <li>Óptica: <%=productFound.optica%></li>
+              <li>Óptica: <%=productFound.optic%></li>
               <li>Potencia [W]: <em>Seleccionar opción</em></li>
               <li>CCT: <em>Seleccionar opción</em></li>
               <li>Dim: <em>Seleccionar opción</em></li>
@@ -87,7 +85,7 @@
         </section>
 
         <section class="price">
-          <h3 class="price-title">$<%= productFound.precio%></h3>
+          <h3 class="price-title">$<%= productFound.price%></h3>
           <div class="qtyadd">
             <input type="number" placeholder="1" min="0" />
             <button class="add">AÑADIR</button>
@@ -104,21 +102,22 @@
           <span><i class="far fa-file-pdf"></i> Manual de Instalación</span>
         </section>
       </div>
-        <section class="similar-products-container">
-          <article class="similar-products">
-            <h3>Productos Similares</h3>
-            <div class="slider-container">
-              <% for (let i =3 ; i < 5; i++) { %>
-                <input type="radio" id="trigger<%=i%>" name="slider" checked autofocus>
-                <label for="trigger<%=i%>"></label>
-                <div class="slide <%=i%>">
-                  <img src ="/img/similar_products_<%=i%>.jpg">
-                </div>  
-              <%} %>
-            </div>
-          </article>
-        </section>
     </main>
+
+    <section class="similar-products-container">
+      <article class="similar-products">
+        <h3>Productos Similares</h3>
+        <div class="slider-container">
+          <% for (let i =3 ; i < 5; i++) { %>
+            <input type="radio" id="trigger<%=i%>" name="slider2" checked autofocus >
+            <label for="trigger<%=i%>"></label>
+            <div class="slide2 <%=i%>">
+              <img src ="/img/similar_products_<%=i%>.jpg">
+            </div>  
+          <%} %>
+        </div>
+      </article>
+    </section>
 
     
 

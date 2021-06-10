@@ -139,7 +139,8 @@ input:checked + label {
   background-color: #ffde59;
 }
 
-.slide {
+.slide,
+.slide2 {
   position: absolute;
   width: 100%;
   height: 250x;
@@ -156,11 +157,13 @@ input:checked + label {
   object-fit: cover;
 }
 
-input:checked ~ .slide {
+input:checked ~ .slide,
+input:checked ~ .slide2 {
   transform: translateX(100%);
 }
 
-input:checked + label + .slide {
+input:checked + label + .slide,
+input:checked + label + .slide2 {
   transform: translateX(0);
   opacity: 1;
 }
