@@ -39,7 +39,7 @@
           <!--unifique las imagenes en una sola caja para mostrar mejor-->
           <div class="category-box">
             <%for(i=0; i < homeData.categoryList.length; i++) { %>
-              <a href="/categorias/<%=i+1%>"><img class="zoom" src="<%=homeData.categoryList[i].homeImage%>"
+              <a href="/categorias/<%=homeData.categoryList[i].name+"/"+homeData.categoryList[i].id%>"><img class="zoom" src="<%=homeData.categoryList[i].homeImage%>"
                   alt="<%=homeData.categoryList[i].name%>"></a>
               <%}%>
           </div>
@@ -52,7 +52,7 @@
             <%for(i=0; i < 4; i++){%>
               <div id="first-box" class="box">
                 <img src="<%=homeData.products[i].main_image%>" alt="<%=homeData.products[i].name%>">
-                <a href="/product">
+                <a href="/product/detail/<%=homeData.products[i].id%>">
                   <div class="capa">
                     <h2>
                       <%= homeData.products[i].name %> <br><br>
