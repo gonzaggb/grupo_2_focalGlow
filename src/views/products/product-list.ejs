@@ -6,7 +6,7 @@
         <h3 class="titulo">Listado de productos</h3>
         <div class="add-container">
             
-        <a href="/product/add"><button class="add-product">Agregar producto</button></a>
+        <a href="/product/add"><button id="product-create" class="add-product">Agregar producto</button></a>
         </div>
         <h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %> </h4>
         <h4 class='form-lista-productos'> Recordá que los primeros 4 productos son los que van a SALE</h4>
@@ -15,16 +15,16 @@
             <% for (let i =0 ; i < products.length; i++) {%>
                 
                 <h2>ID: <%=products[i].id%></h2>      
-                <h2>Categoria: <%=products[i].categoria%></h2>
-                <h2>Nombre: <%=products[i].producto%></h2>
-                <h2>Cantidad: <%=products[i].cantidad%></h2>
-                <h2>Fuente: <%=products[i].fuente%></h2>
+                <h2>Categoria: <%=products[i].category%></h2>
+                <h2>Nombre: <%=products[i].name%></h2>
+                <h2>Cantidad: <%=products[i].qty%></h2>
+                <h2>Fuente: <%=products[i].source%></h2>
                 <h2>Material: <%=products[i].material%></h2>
-                <h2>Optica: <%=products[i].optica%></h2>
-                <h2>Potencia: <%=products[i].potencia%></h2>
+                <h2>Optica: <%=products[i].optic%></h2>
+                <h2>Potencia: <%=products[i].power%></h2>
                 <h2>CCT: <%=products[i].cct%></h2>
                 <h2>Dim: <%=products[i].dim%></h2>
-                <h2>Precio: $<%=products[i].precio%></h2>
+                <h2>Precio: $<%=products[i].price%></h2>
                 <div >
                 <h2>Imagen Principal:<%=products[i].main_image%></h2>
                 <img src="<%=products[i].main_image%>" alt="" width="100" height="100">
@@ -43,6 +43,9 @@
                             
            <%}%>
         </div>  
+        <div class="up-button">
+            <a href="#product-create"><i class="fas fa-chevron-up"></i></a>
+        </div>
 
         <%- include('../partials/footer.ejs')%>
     </body>

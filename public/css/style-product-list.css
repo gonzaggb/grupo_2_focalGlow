@@ -9,6 +9,7 @@ body {
   line-height: 1.6em;
   margin: 0;
   background-image: url(/img/fondo2.jpg);
+  position: relative;
 }
 .id-box{
     display: none;
@@ -91,6 +92,23 @@ body {
   background-color: red;
   color: white;
   box-shadow: 5px 5px 10px black;
+}
+
+.up-button{
+  background-color: #ffde59 ;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 30px;
+  position: relative;
+  text-align: center;
+  left: 90%;
+  bottom: 20px;
+
+}
+.up-button i{
+  color: black;
+  padding: 10px;
 }
 
 @media(min-width: 769px){
