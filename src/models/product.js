@@ -102,7 +102,7 @@ module.exports={
     filterByCategory(categoryName){
         let products =this.findAll()
         
-        return products.filter(e => e.categoria.toLowerCase() == categoryName.toLowerCase())
+        return products.filter(e => e.category.toLowerCase() == categoryName.toLowerCase())
         
         
     }

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Plafon",
+    "name": "Plafón",
     "imageCover": "/img/cover/cover-plafon.jpg",
     "homeImage": "/img/plafon.png"
   },
@@ -19,19 +19,19 @@
   },
   {
     "id": 4,
-    "name": "Colgante",
+    "name": "Colgantes",
     "imageCover": "/img/cover/cover-colgante.jpg",
     "homeImage": "/img/Colgante.png"
   },
   {
     "id": 5,
-    "name": "Spot",
+    "name": "Spots",
     "imageCover": "/img/cover/cover-spot.jpg",
     "homeImage": "/img/Spot.png"
   },
   {
     "id": 6,
-    "name": "Accesorios",
+    "name": "Sistemas",
     "imageCover": "/img/cover/cover-sistemas.jpg",
     "homeImage": "/img/Sistemas.png"
   },
