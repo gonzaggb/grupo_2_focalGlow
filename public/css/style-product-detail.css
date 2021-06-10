@@ -131,11 +131,11 @@ input:checked + label {
 }
 
 .slide img {
-  max-height: 250px;
+  height: inherit;
   object-fit: cover;
 }
 .slide2 img {
-  max-height: 250px;
+  height: inherit;
   object-fit: scale-down;
 }
 
