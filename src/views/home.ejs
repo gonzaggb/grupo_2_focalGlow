@@ -2,6 +2,7 @@
   <link rel="stylesheet" href="/css/style_home.css">
   <link rel="stylesheet" href="/css/style_menu_responsive.css">
 
+
   </head>
 
   <body>
@@ -50,13 +51,15 @@
         <h2 id="sale">SALE</h2>
         <div class="elementos">
             <%for(i=0; i < 4; i++){%>
+              <%const random = getRandomInt(0, homeData.products.length)%>
+
               <div id="first-box" class="box">
-                <img src="<%=homeData.products[i].homeImage%>" alt="<%=homeData.products[i].producto%>">
+                <img src="<%=homeData.products[random].homeImage%>" alt="<%=homeData.products[random].producto%>">
                 <a href="/product">
                   <div class="capa">
                     <h2>
-                      <%= homeData.products[i].producto %> <br><br>
-                        $<%= homeData.products[i].precio %>
+                      <%= homeData.products[random].producto %> <br><br>
+                        $<%= homeData.products[random].precio %>
                     </h2>
                   </div>
                 </a>
