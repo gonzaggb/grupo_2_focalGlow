@@ -43,6 +43,18 @@ body {
     padding-bottom: 10px;
     border-bottom: 1px solid black;
 }
+.product_container{
+  display: flex;
+  flex-direction: column;
+}
+.material_container h2{
+  justify-content: left;
+}
+.slider_content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
 .button-container{
     display: flex;
     width: 100%;
@@ -72,7 +84,7 @@ body {
 #button-modificar,
 #button-eliminar,
 #button-visualizar {
-  width: 40%;
+  width: 100%;
   border-radius: 5px;
   height: 40px;
   transition: 0.3s;
@@ -124,9 +136,12 @@ body {
     }
     .form-lista-productos{
         border: 0;
+        
     }
     .button-container{
         width: 50%;
+        border: 0;
+        
     }
     #button-product{
         width: 150%; 
@@ -140,5 +155,14 @@ body {
     #button-eliminar{
         width: 200%;
         height: 40px;
-    }    
+    } 
+    .product_container{
+      border: 1px solid black;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      background-color: rgb(225, 230, 230);
+      padding: 10px;
+
+    }
+     
 }    
