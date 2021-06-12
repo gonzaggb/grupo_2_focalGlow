@@ -48,7 +48,7 @@ module.exports = {
 
   create(product, files) {
     product.id = this.generateId()
-    product.file = []
+    product.image_slider = []
 
     //Dependiendo del tipo de archivo donde se guarda
     for (let i = 0; i < files.length; i++) {
@@ -62,8 +62,11 @@ module.exports = {
         case 'install_sheet':
           product.install_sheet = '/pdf/' + files[i].filename
           break
-        case 'file':
-          product.file.push('/img/' + files[i].filename)
+        case 'image_slider':
+          product.image_slider.push('/img/' + files[i].filename)
+        case 'image_dimension':
+          product.image_dimension = '/img/' + files[i].filename
+          break
         default:
       }
     }
@@ -76,7 +79,7 @@ module.exports = {
     product.power == '' ? (product.power = []) : ''
     product.cct == undefined ? (product.cct = []) : ''
     product.dim == undefined ? (product.dim = []) : ''
-    product.file == '' ? (product.file = []) : ''
+    product.image_slider == '' ? (product.image_slider = []) : ''
 
     console.log(product)
 

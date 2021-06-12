@@ -8,7 +8,7 @@ const path = require('path')
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    if (path.extname(file.originalname) == ('.jpg' || '.png')) {
+    if (path.extname(file.originalname) == '.jpg' || path.extname(file.originalname) == '.png') {
       /* console.log(path.extname(file.originalname)) */
       cb(null, path.join(__dirname, '../../public/img'))
     } else {
@@ -17,7 +17,7 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     let category = req.body.category
-    cb(null, 'product' + category + Date.now() + path.extname(file.originalname))
+    cb(null, category + Date.now() + path.extname(file.originalname))
   },
 })
 const upload = multer({ storage })
@@ -33,7 +33,11 @@ router.get('/detail/:id', productController.detail)
 
 //Create
 router.get('/add', productController.formNew) //formulario de creacion de producto
-router.post('/add', upload.any('product_img', 'data_sheet', 'install_sheet', 'image_slider'), productController.create) // a donde va el producto creado
+router.post(
+  '/add',
+  upload.any('product_img', 'data_sheet', 'install_sheet', 'image_slider', 'image_dimension'),
+  productController.create
+) // a donde va el producto creado
 
 //Update
 router.get('/:id/edit', productController.edit) //formulario de edicion de producto
