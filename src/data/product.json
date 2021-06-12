@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Raccoon, crab-eating",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 46,
     "source": "LED",
     "material": ["Chapa"],
@@ -135,7 +135,7 @@
   {
     "id": 8,
     "name": "Whale, killer",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 26,
     "source": "LED",
     "material": ["Hierro", "Madera"],
@@ -211,7 +211,7 @@
   {
     "id": 12,
     "name": "Butterfly, canadian tiger swallowtail",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 30,
     "source": "LED",
     "material": ["Otros", "Aluminio"],
@@ -268,7 +268,7 @@
   {
     "id": 15,
     "name": "Banded mongoose",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 63,
     "source": "Lámpara",
     "material": ["Aluminio", "Chapa", "Polimero"],
@@ -287,7 +287,7 @@
   {
     "id": 16,
     "name": "Long-necked turtle",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 9,
     "source": "LED",
     "material": ["Aluminio", "Otros"],
@@ -344,7 +344,7 @@
   {
     "id": 19,
     "name": "Crimson-breasted shrike",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 8,
     "source": "LED",
     "material": ["Madera"],
@@ -382,7 +382,7 @@
   {
     "id": 21,
     "name": "African bush squirrel",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 8,
     "source": "LED",
     "material": ["Madera", "Polimero", "Aluminio", "Otros"],
@@ -420,7 +420,7 @@
   {
     "id": 23,
     "name": "Grison",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 8,
     "source": "Lámpara",
     "material": ["Otros", "Madera"],
@@ -705,7 +705,7 @@
   {
     "id": 38,
     "name": "Vulture, king",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 66,
     "source": "Lámpara",
     "material": ["Hierro", "Polimero", "Chapa", "Otros", "Aluminio"],
@@ -857,7 +857,7 @@
   {
     "id": 46,
     "name": "Rhinoceros, white",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 59,
     "source": "Lámpara",
     "material": ["Madera", "Chapa"],
@@ -914,7 +914,7 @@
   {
     "id": 49,
     "name": "Black-throated butcher bird",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 66,
     "source": "Lámpara",
     "material": ["Chapa", "Madera", "Polimero", "Aluminio"],
@@ -933,7 +933,7 @@
   {
     "id": 50,
     "name": "Creeper, black-tailed tree",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 6,
     "source": "Lámpara",
     "material": ["Polimero", "Hierro", "Aluminio", "Madera", "Otros", "Chapa"],
@@ -1028,7 +1028,7 @@
   {
     "id": 55,
     "name": "Parrot, hawk-headed",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 62,
     "source": "Lámpara",
     "material": ["Otros", "Chapa", "Hierro", "Madera", "Aluminio"],
@@ -1142,7 +1142,7 @@
   {
     "id": 61,
     "name": "Denham's bustard",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 40,
     "source": "Lámpara",
     "material": ["Hierro", "Polimero", "Chapa", "Aluminio"],
@@ -1180,7 +1180,7 @@
   {
     "id": 63,
     "name": "Great cormorant",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 59,
     "source": "Lámpara",
     "material": ["Madera", "Aluminio", "Chapa", "Hierro"],
@@ -1351,7 +1351,7 @@
   {
     "id": 72,
     "name": "Pied crow",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 17,
     "source": "LED",
     "material": ["Otros"],
@@ -1370,7 +1370,7 @@
   {
     "id": 73,
     "name": "Heron, green-backed",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 37,
     "source": "Lámpara",
     "material": ["Otros", "Madera"],
@@ -1389,7 +1389,7 @@
   {
     "id": 74,
     "name": "Common langur",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 20,
     "source": "Lámpara",
     "material": ["Hierro"],
@@ -1503,7 +1503,7 @@
   {
     "id": 80,
     "name": "Deer, mule",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 47,
     "source": "Lámpara",
     "material": ["Polimero", "Madera", "Chapa", "Otros", "Aluminio"],
@@ -1560,7 +1560,7 @@
   {
     "id": 83,
     "name": "European red squirrel",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 26,
     "source": "LED",
     "material": ["Madera", "Chapa"],
@@ -1617,7 +1617,7 @@
   {
     "id": 86,
     "name": "Dove, laughing",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 66,
     "source": "LED",
     "material": ["Chapa", "Hierro"],
@@ -1636,7 +1636,7 @@
   {
     "id": 87,
     "name": "Common waterbuck",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 54,
     "source": "LED",
     "material": ["Hierro", "Aluminio", "Otros", "Chapa"],
@@ -1674,7 +1674,7 @@
   {
     "id": 89,
     "name": "Ox, musk",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 27,
     "source": "LED",
     "material": ["Otros", "Madera", "Hierro"],
@@ -1712,7 +1712,7 @@
   {
     "id": 91,
     "name": "Steller sea lion",
-    "category": "Aplique",
+    "category": "apliques",
     "qty": 32,
     "source": "LED",
     "material": ["Polimero"],
@@ -1731,7 +1731,7 @@
   {
     "id": 92,
     "name": "Black-crowned night heron",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 69,
     "source": "LED",
     "material": ["Polimero", "Aluminio", "Hierro"],
@@ -1788,7 +1788,7 @@
   {
     "id": 95,
     "name": "Squirrel, grey-footed",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 67,
     "source": "LED",
     "material": ["Polimero"],
@@ -1883,7 +1883,7 @@
   {
     "id": 100,
     "name": "Field flicker",
-    "category": "Plafón",
+    "category": "Plafon",
     "qty": 1,
     "source": "Lámpara",
     "material": ["Polimero", "Chapa", "Aluminio"],

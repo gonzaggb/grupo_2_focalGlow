@@ -29,6 +29,14 @@
                     <input class="box" type="text" name="name" id="producto"  required>
              </div>
             </div><br>
+            <!--AGREGADO POR MARS-->
+            <div class="first">
+                <div class="in-line-data">
+                    <label class="" for="description">Descripción: </label><br>
+                    <textarea name="description" id ="producto"></textarea>
+             </div>
+            </div><br>
+            <!--HASTA ACA-->
             <div class="first">
                 <div class="in-line-data">
                     <label class="" for="qty">Cantidad: </label><br>
@@ -87,7 +95,7 @@
                     <select name="power" class="select">
                         <option value="">Seleccionar</option>
                         <% for(i=1;i<=100;i++){ %>
-                            <option value="<%=[i]%>W"><%=[i]%>W</option>
+                            <option value="<%=[i]%>"><%=[i]%>W</option>
                         <%}%>
                     </select>
                     <%}%>

@@ -203,6 +203,7 @@ input:checked + label + .slide2 {
   text-align: left;
   padding-bottom: 10px;
   padding-right: 10px;
+  margin: 10px auto;
 }
 
 .technical-data h3,
@@ -308,6 +309,12 @@ input {
     margin-right: 5px;
     position: sticky;
   }
+
+  .technical-data {
+    max-height: 250px;
+    overflow-y: scroll;
+  }
+
   .technical-info-title {
     margin: 0 auto;
   }
@@ -389,7 +396,7 @@ input {
 @media (min-width: 1024px) {
   .product-name,
   main {
-    width: 70%;
+    width: 75%;
     max-width: 1500px;
     max-height: 1500px;
   }
