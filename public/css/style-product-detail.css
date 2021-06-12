@@ -200,7 +200,8 @@ input:checked + label + .slide2 {
   padding-right: 10px;
 }
 
-.technical-data h3 {
+.technical-data h3,
+.technical-data p {
   margin: 9px 25px;
   padding-top: 10px;
 }
@@ -412,7 +413,7 @@ input {
   }
 
   .product-dimensions-info img:hover {
-    transform: scale(2);
+    transform: scale(1.8);
     transform-origin: right top;
   }
   .product-detail i {
