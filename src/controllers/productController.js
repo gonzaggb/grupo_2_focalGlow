@@ -17,15 +17,17 @@ const controller = {
   create: (req, res) => {
     const productNew = req.body
     const files = req.files
-    
+
     console.log(files)
-    product.create(productNew , files)
+    product.create(productNew, files)
     res.redirect('/product/list')
   },
 
   edit: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
+    console.log(productFound.cct.includes(2700))
+
     res.render('products/product-edit.ejs', { productFound: productFound })
   },
   update: (req, res) => {
