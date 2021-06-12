@@ -39,44 +39,45 @@
             <h3>Configure su producto</h3>
             <p>Potencia, Temperatura de Color, Óptica & Control</p>
           </div>
-          <div class="options">
-            <select name="power" class="options-control">
-              <%productFound.power.forEach(function (element) { 
-                if (element != ""){%>
-                  <option value="<%=element%>"><%=element%>W</option>
-                <% }}) %>
-            </select>
-              <select name="cct" class="options-control">
+          <div class = "options">
+            <div class="options-column">
+              <select name="power" class="btn">
+                <%productFound.power.forEach(function (element) { 
+                  if (element != ""){%>
+                    <option value="<%=element%>"><%=element%>W</option>
+                  <% }}) %>
+              </select>
+              <select name="cct" class="btn">
                 <%productFound.cct.forEach(function (element) { 
                   if (element != "") {%>
                 <option value="<%=element%>"><%=element%>K</option>
                 <% }}) %>
               </select>
-              <select name="optic" class="options-control">
+            </div>
+            <div class="options-column">
+              <select name="optic" class="btn">
                 <%productFound.optic.forEach(function (element) { 
                   if (element != "") {%>
                 <option value="<%=element%>"><%=element%></option>
                 <% }}) %>
               </select>
-            
-
-            <select name="dim" class="options-control-dim">
-              <%productFound.dim.forEach(function (element) { 
-                switch (element) {
-                  case '':
-                    break
-                  case 'Switch':%>
-                    <option value="<%=element%>">&#xf011; <%=element%></option>
-                  <%  break
-                  case 'Bluetooth': %>
-                  <option value="<%=element%>">&#xf293; <%=element%></option>
-                  <% break
-                  default:%>
-                  <option value="<%=element%>"><%=element%></option>
+              <select name="dim" class="btn">
+                <%productFound.dim.forEach(function (element) { 
+                  switch (element) {
+                    case '':
+                      break
+                    case 'Switch':%>
+                      <option value="<%=element%>">&#xf011; <%=element%></option>
+                    <%  break
+                    case 'Bluetooth': %>
+                      <option value="<%=element%>">&#xf293; <%=element%></option>
+                    <% break
+                    default:%>
+                    <option value="<%=element%>"><%=element%></option>
                   <%  break;
-                
-              }}) %>
-            </select>
+                }}) %>
+              </select>
+            </div>
           </div>
         
           <article class="technical-data">

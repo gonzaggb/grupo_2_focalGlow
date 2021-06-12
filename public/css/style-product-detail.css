@@ -157,11 +157,6 @@ input:checked + label + .slide2 {
   max-height: 900px;
 }
 
-.options {
-  display: flex;
-  flex-direction: column;
-}
-
 .technical-info-title {
   margin: 5px auto;
 }
@@ -172,8 +167,14 @@ input:checked + label + .slide2 {
   text-align: left;
 }
 
-.options-control,
-.options-control-dim {
+/*BOTON OPCIONES*/
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
   color: white;
   background-color: black;
   font-size: 1rem;
@@ -186,20 +187,14 @@ input:checked + label + .slide2 {
   font-family: 'FontAwesome', 'Roboto';
 }
 
-.options-control:hover,
-.options-control-dim:hover {
+.btn option {
+  font-family: 'FontAwesome', 'Roboto';
+}
+
+.btn:hover {
   background-color: #ffde59;
   opacity: 0.9;
   color: black;
-}
-
-.options-power-cct {
-  display: flex;
-  flex-direction: column;
-}
-
-.options-control-dim option {
-  font-family: 'FontAwesome', 'Roboto';
 }
 
 .technical-data {
@@ -241,7 +236,7 @@ input {
   font-weight: bold;
 }
 
-.add {
+.qtyadd .add {
   width: 50%;
   background-color: black;
   color: white;
@@ -313,17 +308,16 @@ input {
     margin-right: 5px;
     position: sticky;
   }
-
+  .technical-info-title {
+    margin: 0 auto;
+  }
   .options {
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
   }
-  .options-power-cct {
-    width: 50%;
-  }
-  .options-control-dim {
+  .options-column {
     width: 50%;
   }
 
@@ -399,14 +393,6 @@ input {
     max-width: 1500px;
     max-height: 1500px;
   }
-
-  .options-power-cct {
-    width: 66.66%;
-    flex-direction: row;
-  }
-  .options-control-dim {
-    width: 33.33%;
-  }
 }
 
 /*Media Query Desktop*/
@@ -418,12 +404,11 @@ input {
     margin-left: 50%;
     width: 50%;
     margin-top: 40px;
-
     z-index: 10;
   }
 
   .product-dimensions-info img:hover {
-    transform: scale(1.8);
+    transform: scale(1.75);
     transform-origin: right top;
   }
   .product-detail i {
