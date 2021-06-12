@@ -35,22 +35,30 @@
 
       <div class="product-info">
         <section class="technical-info">
+          <div class = "technical-info-title">
+            <h3>Configure su producto</h3>
+            <p>Potencia, Temperatura de Color, Óptica & Control</p>
+          </div>
           <div class="options">
-            <div class="options-power-cct">
-              <select name="power" class="options-control">
-               <%productFound.power.forEach(function (element) { 
+            <select name="power" class="options-control">
+              <%productFound.power.forEach(function (element) { 
                 if (element != ""){%>
                   <option value="<%=element%>"><%=element%>W</option>
                 <% }}) %>
-              </select>
+            </select>
               <select name="cct" class="options-control">
                 <%productFound.cct.forEach(function (element) { 
                   if (element != "") {%>
                 <option value="<%=element%>"><%=element%>K</option>
                 <% }}) %>
-              
               </select>
-            </div>
+              <select name="optic" class="options-control">
+                <%productFound.optic.forEach(function (element) { 
+                  if (element != "") {%>
+                <option value="<%=element%>"><%=element%></option>
+                <% }}) %>
+              </select>
+            
 
             <select name="dim" class="options-control-dim">
               <%productFound.dim.forEach(function (element) { 
@@ -76,7 +84,6 @@
             <ul>
               <li>Fuente: <%=(productFound.source).toUpperCase()%></li>
               <li>Material:  <%=productFound.material.join('-')%></li>
-              <li>Óptica: <%=productFound.optic%></li>
             </ul>
             <p><strong>Descripción:</strong> <br>
               <%=productFound.description%></p>

@@ -162,6 +162,16 @@ input:checked + label + .slide2 {
   flex-direction: column;
 }
 
+.technical-info-title {
+  margin: 5px auto;
+}
+
+.technical-info-title h3,
+.technical-info-title p {
+  margin: 0px;
+  text-align: left;
+}
+
 .options-control,
 .options-control-dim {
   color: white;
