@@ -25,40 +25,40 @@
             </div><br>
            <div class="first">
                 <div class="in-line-data">
-                    <label class="" for="producto">Nombre del Producto: </label><br>
-                    <input class="box" type="text" name="producto" id="producto"  required>
+                    <label class="" for="name">Nombre del Producto: </label><br>
+                    <input class="box" type="text" name="name" id="producto"  required>
              </div>
             </div><br>
             <div class="first">
                 <div class="in-line-data">
-                    <label class="" for="cantidad">Cantidad: </label><br>
-                    <input class="box" type="number" name="cantidad" id="producto" min="0" required>
+                    <label class="" for="qty">Cantidad: </label><br>
+                    <input class="box" type="number" name="qty" id="producto" min="0" required>
                 </div>
             </div><br>
             <div class="first-">
-                <label class="" for="fuente">Fuente: </label>
+                <label class="" for="source">Fuente: </label>
                 
                 <div>
-                    <input class="radio" type="radio" name="fuente" value="led">LED Incorporado
+                    <input class="radio" type="radio" name="source" value="led">LED Incorporado
                 </div>
                 <div>
-                    <input class="radio" type="radio" name="fuente" value="Lampara">Lampara
+                    <input class="radio" type="radio" name="source" value="Lampara">Lampara
                 </div>   
             </div><br>
             <div >
                 <div class="first-" >
-                    <label class="" for="material">Material: </label>
+                    <label class="" for="source">Material: </label>
                     <div>
-                        <input class="check" type="checkbox" name="material" value="Aluminio"> Aluminio
+                        <input class="check" type="checkbox" name="source" value="Aluminio"> Aluminio
                     </div>
                     <div>
-                        <input class="check" type="checkbox" name="material" value="Madera"> Madera
+                        <input class="check" type="checkbox" name="source" value="Madera"> Madera
                     </div>
                     <div>
-                        <input class="check" type="checkbox" name="material" value="Chapa"> Chapa
+                        <input class="check" type="checkbox" name="source" value="Chapa"> Chapa
                     </div>
                     <div>
-                        <input class="check" type="checkbox" name="material" value="Hierro"> Hierro
+                        <input class="check" type="checkbox" name="source" value="Hierro"> Hierro
                     </div>
                 </div>    
                     <div class="in-line-data">
@@ -67,24 +67,24 @@
                     </div>
             </div><br>
             <div class="first-">
-                <label class="" for="optica">Optica: </label>
+                <label class="" for="optic">Optica: </label>
                 <div>
-                    <input class="check" type="checkbox" name="optica" value="flood"> Flood
+                    <input class="check" type="checkbox" name="optic" value="flood"> Flood
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="optica" value="Spot"> Spot
+                    <input class="check" type="checkbox" name="optic" value="Spot"> Spot
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="optica" value="WideFlood"> Wide Flood
+                    <input class="check" type="checkbox" name="optic" value="WideFlood"> Wide Flood
                 </div>
                 <div>
-                    <input class="check" type="checkbox" name="optica" value="Oval"> Oval
+                    <input class="check" type="checkbox" name="optic" value="Oval"> Oval
                 </div>       
             </div><br>
             <div class="first-">
-                <label for="potencia">Potencia: </label>
+                <label for="power">Potencia: </label>
                 <% for(j=1;j<=4;j++){ %>
-                    <select name="potencia" class="select">
+                    <select name="power" class="select">
                         <option value="">Seleccionar</option>
                         <% for(i=1;i<=100;i++){ %>
                             <option value="<%=[i]%>W"><%=[i]%>W</option>
@@ -123,8 +123,8 @@
                 </div>
             </div><br>
             <div class="first-">
-                <label class="" for="precio">Precio unitario base: </label><br>
-                <input class="box" type="number" name="precio" id="precio"  min="0" max="999999999999" step="0.01" placeholder=" Ej 1525.35" required>
+                <label class="" for="price">Precio unitario base: </label><br>
+                <input class="box" type="number" name="price" id="precio"  min="0" max="999999999999" step="0.01" placeholder=" Ej 1525.35" required>
             </div><br>
          <div class="imagenes">   
             <div class="imagen-input">

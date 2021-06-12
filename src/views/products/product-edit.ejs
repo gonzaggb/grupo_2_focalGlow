@@ -10,8 +10,8 @@
                     <form id="register" action="/product/<%= productFound.id %>/edit?_method=PUT" method="POST">
                         <div class="first">
                             <div class="cateogry-selector">
-                                <label class="" for="categoria">Categoria: </label><br>
-                                <select name="categoria" class="select">
+                                <label class="" for="category">Categoria: </label><br>
+                                <select name="category" class="select">
                                     <option value="<%= productFound.categoria %>"><%= productFound.categoria %></option>
                                     <option value="Plafon">Plafón</option>
                                     <option value="Aplique">Aplique</option>
@@ -26,24 +26,24 @@
                         </div><br>
                         <div class="first">
                             <div class="in-line-data">
-                                <label class="" for="producto">Nombre del Producto: </label><br>
-                                <input class="box" type="text" name="producto" id="producto" value="<%= productFound.producto %> " >
+                                <label class="" for="name">Nombre del Producto: </label><br>
+                                <input class="box" type="text" name="name" id="producto" value="<%= productFound.producto %> " >
                             </div>
                         </div><br>
                         <div class="first">
                             <div class="in-line-data">
-                                <label class="" for="cantidad">Cantidad: </label><br>
-                                <input class="box" type="number" name="cantidad" id="producto" min="0" value="<%= productFound.cantidad %> " >
+                                <label class="" for="qty">Cantidad: </label><br>
+                                <input class="box" type="number" name="qty" id="producto" min="0" value="<%= productFound.cantidad %> " >
                             </div>
                         </div><br>
                         <div class="first-">
-                            <label class="" for="fuente">Fuente: </label>
+                            <label class="" for="source">Fuente: </label>
 
                             <div>
-                                <input class="radio" type="radio" name="fuente" value="led"  <%= productFound.fuente == "led" ? 'checked' : '' %>>LED Incorporado
+                                <input class="radio" type="radio" name="source" value="led"  <%= productFound.fuente == "led" ? 'checked' : '' %>>LED Incorporado
                             </div>
                             <div>
-                                <input class="radio" type="radio" name="fuente" value="Lampara"  <%= productFound.fuente == 'Lampara' ? 'checked' : '' %>>Lampara
+                                <input class="radio" type="radio" name="source" value="Lampara"  <%= productFound.fuente == 'Lampara' ? 'checked' : '' %>>Lampara
                             </div>
                         </div><br>
                         <div>
@@ -69,24 +69,24 @@
                             </div>
                         </div><br>
                         <div class="first-">
-                            <label class="" for="optica">Optica: </label>
+                            <label class="" for="optic">Optica: </label>
                             <div>
-                                <input class="check" type="checkbox" name="optica" value="flood"  <%= productFound.optica.includes("flood") ? 'checked' : '' %>> Flood
+                                <input class="check" type="checkbox" name="optic" value="flood"  <%= productFound.optica.includes("flood") ? 'checked' : '' %>> Flood
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optica" value="Spot"  <%=  productFound.optica.includes("Spot") ? 'checked' : '' %>> Spot
+                                <input class="check" type="checkbox" name="optic" value="Spot"  <%=  productFound.optica.includes("Spot") ? 'checked' : '' %>> Spot
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optica" value="WideFlood" <%=  productFound.optica.includes("WideFlood") ? 'checked' : ''%>> Wide Flood
+                                <input class="check" type="checkbox" name="optic" value="WideFlood" <%=  productFound.optica.includes("WideFlood") ? 'checked' : ''%>> Wide Flood
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optica" value="Oval"  <%=  productFound.optica.includes("Oval") ? 'checked' : ''%>> Oval
+                                <input class="check" type="checkbox" name="optic" value="Oval"  <%=  productFound.optica.includes("Oval") ? 'checked' : ''%>> Oval
                             </div>
                         </div><br>
                         <div class="first-">
-                            <label for="potencia">Potencia: </label>
+                            <label for="power">Potencia: </label>
                             <% for(j=0;j<4;j++){ %>
-                                <select name="potencia" class="select">
+                                <select name="power" class="select">
                                     <option value="<%= productFound.potencia[j] %>"><%= productFound.potencia[j] %></option>
                                     <% for(i=1;i<=100;i++){ %>     
                                         <option value="<%=[i]%>W">
@@ -127,8 +127,8 @@
                             </div>
                         </div><br>
                         <div class="first-">
-                            <label class="" for="precio">Precio unitario base: </label><br>
-                            <input class="box" type="number" name="precio" id="precio" min="0"
+                            <label class="" for="price">Precio unitario base: </label><br>
+                            <input class="box" type="number" name="price" id="precio" min="0"
                                 placeholder=" Ej 15235.35" value="<%= productFound.precio %>" >
                         </div><br>
                         <div class="imagenes">
