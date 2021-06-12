@@ -9,8 +9,8 @@
         <form  id="register" action="/product/add" method="POST" enctype="multipart/form-data">
             <div class="first">
                 <div class="cateogry-selector">
-                    <label class="" for="categoria">Categoria: </label><br>
-                    <select name="categoria" class="select">
+                    <label class="" for="category">Categoria: </label><br>
+                    <select name="category" class="select">
                         <option value="">Seleccionar</option>
                         <option value="Plafon">Plafón</option>
                         <option value="Aplique">Aplique</option>
@@ -47,18 +47,18 @@
             </div><br>
             <div >
                 <div class="first-" >
-                    <label class="" for="source">Material: </label>
+                    <label class="" for="material">Material: </label>
                     <div>
-                        <input class="check" type="checkbox" name="source" value="Aluminio"> Aluminio
+                        <input class="check" type="checkbox" name="material" value="Aluminio"> Aluminio
                     </div>
                     <div>
-                        <input class="check" type="checkbox" name="source" value="Madera"> Madera
+                        <input class="check" type="checkbox" name="material" value="Madera"> Madera
                     </div>
                     <div>
-                        <input class="check" type="checkbox" name="source" value="Chapa"> Chapa
+                        <input class="check" type="checkbox" name="material" value="Chapa"> Chapa
                     </div>
                     <div>
-                        <input class="check" type="checkbox" name="source" value="Hierro"> Hierro
+                        <input class="check" type="checkbox" name="material" value="Hierro"> Hierro
                     </div>
                 </div>    
                     <div class="in-line-data">
@@ -132,15 +132,15 @@
                 <input type="file"  name='product_img' accept=".jpg" >
             </div><br>
             <div class="imagen-input">
-                <label class="title" for="file">Dimensiones del Producto: </label><br>
-                <input type="file" name="file" accept=".jpg">
+                <label class="title" for="image_dimension">Dimensiones del Producto: </label><br>
+                <input type="file" name="image_dimension" accept=".jpg">
             </div><br>
          </div>  
          <div class="imagenes">
             <div class="imagen-input">
-                <label class="title" for="file">Imagen 1: </label><br>
-                <input type="file"  name="file" accept=".jpg"> <br>
-                <input type="file" name="file" accept=".jpg">
+                <label class="title" for="image_slider">Imagen 1: </label><br>
+                <input type="file"  name="image_slider" accept=".jpg"> <br>
+                <input type="file" name="image_slider" accept=".jpg">
             </div><br>
             <div class="imagen-input">
                 <label class="title" for="file">Imagen 2: </label><br>
