@@ -1,4 +1,5 @@
-<%- include ('../partials/head', {title:productFound.producto}) %>            
+<%- include ('../partials/head')%>
+  <title>Focal Glow | <%=productFound.name%></title>            
   <link rel="stylesheet" href="/css/style-product-detail.css" />
   </head>
 
@@ -115,7 +116,7 @@
       <article class="similar-products">
         <h3>Productos Similares</h3>
         <div class="slider-container">
-          <% for (let i =3 ; i < 5; i++) { %>
+          <% for (let i =3 ; i <= 5; i++) { %>
             <input type="radio" id="trigger<%=i%>" name="slider2" checked autofocus >
             <label for="trigger<%=i%>"></label>
             <div class="slide2 <%=i%>">
