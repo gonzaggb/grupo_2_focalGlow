@@ -33,7 +33,7 @@ router.get('/detail/:id', productController.detail)
 
 //Create
 router.get('/add', productController.formNew) //formulario de creacion de producto
-router.post('/add', upload.any('product_img', 'data_sheet', 'install_sheet'), productController.create) // a donde va el producto creado
+router.post('/add', upload.any('product_img', 'data_sheet', 'install_sheet', 'image_slider'), productController.create) // a donde va el producto creado
 
 //Update
 router.get('/:id/edit', productController.edit) //formulario de edicion de producto
