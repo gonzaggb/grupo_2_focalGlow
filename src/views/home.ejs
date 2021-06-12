@@ -51,8 +51,8 @@
         <div class="elementos">
             <%for(i=0; i < 4; i++){%>
               <div id="first-box" class="box">
-                <img src="<%=homeData.products[i].main_image%>" alt="<%=homeData.products[i].name%>">
-                <a href="/product/detail/<%=homeData.products[i].id%>">
+                <img src="<%=homeData.products[randomArray[i]].main_image%>" alt="<%=homeData.products[randomArray[i]].name%>">
+                <a href="/product/detail/<%=homeData.products[randomArray[i]].id%>">
                   <div class="capa">
                     <h2>
                       <%= homeData.products[i].name %> <br><br>
