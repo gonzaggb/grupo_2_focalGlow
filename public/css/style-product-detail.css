@@ -281,13 +281,11 @@ input {
 }
 
 .similar-products-container {
-  margin: 0 auto;
+  margin: 30px auto;
   text-align: center;
   width: 66.66%;
-  margin-bottom: 20px;
 }
-
-.similar-products {
+  .similar-products {
   align-content: flex-end;
 }
 
@@ -348,10 +346,10 @@ input {
   .similar-products .slider-container {
     width: 100%;
     margin-top: 10px;
-    height: 33vh;
+    height: initial;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .similar-products input,
@@ -361,7 +359,7 @@ input {
 
   .slide2 {
     position: initial;
-    width: 100%;
+    width: 23.5%;
     height: auto;
     top: 0;
     left: 0;

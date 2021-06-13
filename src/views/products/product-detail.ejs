@@ -24,13 +24,14 @@
         </div>
 
         <div class="slider-container">
-          <% for (let i =0 ; i < productFound.image_slider.length; i++) { %>
-            <input type="radio" id="trigger<%=i%>" name="slider" checked autofocus>
-            <label for="trigger<%=i%>"></label>
-            <div class="slide <%=i%>">
-              <img src ="<%=productFound.image_slider[i]%>">
+          <% productFound.image_slider.forEach((element, index) => { %>
+            <input type="radio" id="trigger<%=index%>" name="slider" checked autofocus>
+            <label for="trigger<%=index%>"></label>
+            <div class="slide <%=index%>">
+              <img src ="<%=element%>">
             </div>  
-          <%} %>
+          <%})%>;
+         
         </div>
       </div>
 
@@ -116,13 +117,13 @@
       <article class="similar-products">
         <h3>Productos Similares</h3>
         <div class="slider-container">
-          <% for (let i =3 ; i <= 5; i++) { %>
-            <input type="radio" id="trigger<%=i%>" name="slider2" checked autofocus >
-            <label for="trigger<%=i%>"></label>
-            <div class="slide2 <%=i%>">
-              <img src ="/img/similar_products_<%=i%>.jpg">
+          <% similarProducts.forEach((element, index) => { %>
+            <input type="radio" id="trigger<%=index + productFound.image_slider.length%>" name="slider2" checked autofocus >
+            <label for="trigger<%=index + productFound.image_slider.length%>"></label>
+            <div class="slide2 <%=index + productFound.image_slider.length%>">
+              <a href="/product/detail/<%=element.id%>"><img src ="<%=element.main_image%>"></a>
             </div>  
-          <%} %>
+          <%}) %>
         </div>
       </article>
     </section>

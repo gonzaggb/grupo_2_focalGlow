@@ -9,7 +9,9 @@ const controller = {
   detail: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
-    res.render('products/product-detail.ejs', { productFound })
+    let category = productFound.category
+    let similarProducts = product.filterByCategory(category)
+    res.render('products/product-detail.ejs', { productFound, similarProducts })
   },
   formNew: (req, res) => {
     res.render('products/product-create.ejs')
@@ -26,8 +28,6 @@ const controller = {
   edit: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
-    console.log(productFound.cct.includes(2700))
-
     res.render('products/product-edit.ejs', { productFound: productFound })
   },
   update: (req, res) => {
