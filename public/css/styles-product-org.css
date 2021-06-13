@@ -17,6 +17,7 @@ body{
     font-size: 40px;
     color: black;
     margin-top: 20px;
+    margin-bottom: 20px;
     line-height: 34px;
 }
 .container-form{
@@ -131,8 +132,9 @@ label{
     width: 100%;
     flex-wrap: wrap; 
     align-content: center;
-    
+    background-color: rgba(0,0,0,0.1);
     }
+    
 
      .category-selector{
         width: 100%;
@@ -163,14 +165,12 @@ label{
     #output{
         width: 150px;
         height: 150px;
-        margin-top: 30px;
-        margin-left: 30px;
+        margin-top: 20px;
+        margin-left: 70px;
         object-fit: contain;
+        border: 0;
     }
-    .imagen-input {
-    margin-right: 100px;
-    margin-bottom: 10px;
-}
+    
    
     .button-container{
         display: flex;

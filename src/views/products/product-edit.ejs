@@ -8,6 +8,7 @@
                 <h2 class="titulo">Modificación de Producto</h2>
                 <div class="container-form">
                     <form id="register" action="/product/<%= productFound.id %>/edit?_method=PUT" method="POST">
+                    <div class="form_left">
                         <div class="first">
                             <div class="cateogry-selector">
                                 <label class="" for="category">Categoria: </label><br>
@@ -127,10 +128,12 @@
                             </div>
                         </div><br>
                         <div class="first-">
-                            <label class="" for="price">Precio unitario base: </label><br>
-                            <input class="box" type="number" name="price" id="precio" min="0"
+                            <label class="price" for="price">Precio unitario base: </label><br>
+                            <input class="price" type="number" name="price" id="precio" min="0"
                                 placeholder=" Ej 15235.35" value="<%= productFound.price %>" >
                         </div><br>
+                    </div>
+                    <div class="form_right">
                         <div class="imagenes">
                             <div class="imagen-input">
                                 <label class="title" for="product_img">Imagen Principal: </label><br>
@@ -159,6 +162,7 @@
                                 <input type="file" src="" alt="" name="install_sheet" accept=".pdf">
                             </div><br>
                         </div>
+                    </div>
                         <div class="button-container">
                             <button id="button-enviar" type="submit">Modificar</button>
                             <button id="button-borrar" type="reset">Resetear</button>
