@@ -118,11 +118,13 @@ body {
     align-items: center;
     padding-left: 10px;
     padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
     transition: 0.3s;
     }
     .product_container:hover{
       box-shadow: 5px 5px 10px black;
-      transform: scale(1.02);
+      transform: scale(1.01);
       background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(179,180,169,1) 28%, rgba(231,228,7,1) 100%);
       border: 1px solid #ffde59;
     }
@@ -166,6 +168,7 @@ body {
     left: 90%;
     bottom: 20px;
     display: block;
+    z-index: 99;
 
 }
      
