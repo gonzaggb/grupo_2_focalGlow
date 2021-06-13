@@ -375,50 +375,6 @@
     "image_dimension": "/img/product_dimensions.jpg"
   },
   {
-    "id": 11,
-    "name": "Black-tailed prairie dog",
-    "category": "Plafon",
-    "qty": 63,
-    "source": "LED",
-    "material": [
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      30,
-      46,
-      62
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Dimeable"
-    ],
-    "price": 3274,
-    "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-    "file": [
-      "Tempor.avi",
-      "VivamusIn.avi"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/delfina.jpg",
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
-  },
-  {
     "id": 12,
     "name": "Long-tailed spotted cat",
     "category": "Sistemas",

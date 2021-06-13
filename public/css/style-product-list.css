@@ -50,9 +50,8 @@ body {
   background-color: rgb(225, 230, 230);
     margin-bottom: 10px;
 }
-.main-img{
-  display: none;
-  transition: 0.2s;
+.product_container h2 {
+    font-size: 16px;
 }
 
 .button-container{
@@ -83,11 +82,11 @@ body {
   height: 60px;
   border-radius: 50px;
   font-size: 30px;
-  position: relative;
+  position: fixed;
   text-align: center;
-  left: 90%;
+  left: 80%;
   bottom: 20px;
-  display: none;
+  
 
 }
 .up-button i{
@@ -121,18 +120,22 @@ body {
     margin-left: 10px;
     margin-right: 10px;
     transition: 0.3s;
+    border: 1px solid black;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      background-color: rgb(225, 230, 230);
+    
     }
     .product_container:hover{
-      box-shadow: 5px 5px 10px black;
+      box-shadow: 0 0 10px black;
       transform: scale(1.01);
-      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(179,180,169,1) 28%, rgba(231,228,7,1) 100%);
-      border: 1px solid #ffde59;
+      border: 1px solid black;
     }
     .product_container h2 {
       font-size: 16px;
     }
-    .inner_data{
-      text-align: left;
+    .inner_img{
+      margin-top: 9px;
     }
 
     .button-container{
@@ -150,13 +153,7 @@ body {
         height: 40px;
     }    
     
-    .product_container{
-      border: 1px solid black;
-      border-radius: 3px;
-      margin-bottom: 10px;
-      background-color: rgb(225, 230, 230);
-      
-    }
+  
     .up-button{
     background-color: #ffde59 ;
     width: 60px;
