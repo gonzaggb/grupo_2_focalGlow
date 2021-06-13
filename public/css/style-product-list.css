@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -9,7 +10,7 @@ body {
   line-height: 1.6em;
   margin: 0;
   background-image: url(/img/fondo2.jpg);
-  position: relative;
+  /* position: relative; */
 }
 .id-box{
     display: none;
@@ -86,6 +87,7 @@ body {
   text-align: center;
   left: 90%;
   bottom: 20px;
+  display: none;
 
 }
 .up-button i{
@@ -121,6 +123,8 @@ body {
     .product_container:hover{
       box-shadow: 5px 5px 10px black;
       transform: scale(1.02);
+      background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(179,180,169,1) 28%, rgba(231,228,7,1) 100%);
+      border: 1px solid #ffde59;
     }
     .product_container h2 {
       font-size: 16px;
@@ -133,7 +137,8 @@ body {
         width: 100%;
         border: 0;
         display: flex;
-        gap: 10px;   
+        gap: 10px; 
+        font-size: 20px;  
     }
     .button-container a i {
       color: black;
@@ -150,5 +155,18 @@ body {
       background-color: rgb(225, 230, 230);
       
     }
+    .up-button{
+    background-color: #ffde59 ;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 30px;
+    position: fixed;
+    text-align: center;
+    left: 90%;
+    bottom: 20px;
+    display: block;
+
+}
      
 }    
