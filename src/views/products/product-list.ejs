@@ -11,49 +11,33 @@
         <h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %> </h4>
         <h4 class='form-lista-productos'> Recordá que los primeros 4 productos son los que van a SALE</h4>
         <div class='form-lista-productos'>
-
+              
             <% for (let i =0 ; i < products.length; i++) {%>
               <div class="product_container"> 
-                <!-- <h2>ID: <%=products[i].id%></h2> -->      
+                 <h2>ID: <%=products[i].id%></h2> 
                 <h2>Categoria: <%=products[i].category%></h2>
-                <h2>Nombre: <%=products[i].name%></h2>
-                        <img src="<%=products[i].main_image%>" alt="" width="100" height="100">
-                <h2>Cantidad: <%=products[i].qty%></h2>
-                <h2>Fuente: <%=products[i].source%></h2>
-                <div class="material_container">
-                    <h2>Material: <%=products[i].material%></h2>
-                </div>    
-                <h2>Optica: <%=products[i].optic%></h2>
-                <h2>Potencia: <%=products[i].power%></h2>
-                <h2>CCT: <%=products[i].cct%></h2>
-                <h2>Dim: <%=products[i].dim%></h2>
-                <h2>Precio: $<%=products[i].price%></h2>
-                <div >
-                    <h2>Imagen Principal:<%=products[i].main_image%></h2>
-                    
+                <div class="inner_data">
+                    <h2>Nombre: <%=products[i].name%></h2>
                 </div>
-                <h2>Archivos: <%=products[i].data_sheet%></h2>
-                <h2>Manual de Instalación: <%=products[i].install_sheet%></h2> 
-                <h2>Dimensiones: <%=products[i].image_dimension%></h2> 
-                <h2>Slider:</h2>
-                <div class="slider_content">
-                    <% for( j=0 ; j< products[i].image_slider.length ;j++){%>
-
-                        <img src="<%=products[i].image_slider[j]%>" alt=""width="100" height="100" >
-
-                    <%}%>
+                <div class="inner_data">
+                    <h2>Cantidad: <%=products[i].qty%></h2>
+                </div>
+                <div class="inner_data">
+                    <h2>Precio: $<%=products[i].price%></h2>
                 </div>     
-                <div>
+                <div >
                     <div class="button-container"> 
-                        <a href='/product/detail/<%=products[i].id%>'><button id="button-product">Ver Producto</button></a>
-                        <a href='/product/<%=products[i].id%>/edit'><button id="button-modificar">Modificar</button></a>
-                        <form  class='' action="/product/<%=products[i].id%>?_method=DELETE"  method="POST">    
-                            <button id="button-eliminar" type="submit">Eliminar</button>
-                        </form>     
+                        <a href='/product/detail/<%=products[i].id%>'><i class="fas fa-search"><!-- <button id="button-product">Ver Producto</button> --></i></a>
+                        <a href='/product/<%=products[i].id%>/edit'><i class="far fa-edit"><!-- <button id="button-modificar">Modificar</button> --></i></a>
+                    <form  class='' action="/product/<%=products[i].id%>?_method=DELETE"  method="POST">    
+                           <button type="submit" class="delete_icon"><i class="far fa-trash-alt"></i></button><!-- <button id="button-eliminar" type="submit">Eliminar</button> -->
+                        </form> 
+                            
                     </div>      
                 </div>
               </div>               
            <%}%>
+        
         </div>  
         <div class="up-button">
             <a href="#product-create"><i class="fas fa-chevron-up"></i></a>

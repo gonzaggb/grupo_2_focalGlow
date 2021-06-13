@@ -77,51 +77,6 @@
     "image_dimension": "/img/product_dimensions.jpg"
   },
   {
-    "id": 3,
-    "name": "Sidewinder",
-    "category": "Apliques",
-    "qty": 51,
-    "source": "LED",
-    "material": [
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      1,
-      2,
-      81
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "DALI",
-      "Switch"
-    ],
-    "price": 33058,
-    "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-    "file": [
-      "Sapien.xls"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
-  },
-  {
     "id": 4,
     "name": "Tayra",
     "category": "Spots",
@@ -4196,18 +4151,18 @@
     "qty": "1",
     "source": "led",
     "material": [
-      "Aluminio",
-      ""
+      "",
+      "Aluminio"
     ],
     "optic": [
-      "flood",
-      "Spot"
+      "Spot",
+      "flood"
     ],
     "power": [
-      "6W",
-      "10W",
       "",
-      ""
+      "",
+      "10W",
+      "6W"
     ],
     "cct": [
       "2700",
@@ -4215,8 +4170,8 @@
       "3500"
     ],
     "dim": [
-      "switch",
-      "dimeable"
+      "dimeable",
+      "switch"
     ],
     "price": "12",
     "id": 101,

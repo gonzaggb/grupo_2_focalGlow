@@ -46,65 +46,35 @@ body {
 .product_container{
   display: flex;
   flex-direction: column;
+  background-color: rgb(225, 230, 230);
+    margin-bottom: 10px;
 }
-.material_container h2{
-  justify-content: left;
+.main-img{
+  display: none;
+  transition: 0.2s;
 }
-.slider_content{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-}
+
 .button-container{
     display: flex;
     width: 100%;
     justify-content: space-around;
+    border-top: 1px solid black;
     margin-top: 15px;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 1px solid black;
+    
+    
 }
-#button-product{
-     width: 100%;
-        border-radius: 5px;
-        height: 40px;
-        transition: 0.3s; 
+.button-container a i {
+      color: black;
+    }
+  
+
+.delete_icon{
+  border: 0;
+  background-color: transparent;
 }
-#button-product:hover{
-    background-color: #ffde59;
-    color: black;
-    box-shadow: 5px 5px 10px black;
-}
-#button-modificar{
-     width: 100%;
-        border-radius: 5px;
-        height: 40px;
-        transition: 0.3s;  
-}
-#button-modificar,
-#button-eliminar,
-#button-visualizar {
-  width: 100%;
-  border-radius: 5px;
-  height: 40px;
-  transition: 0.3s;
-}
-#button-eliminar{
-        width: 100%;
-        border-radius: 5px;
-        height: 40px;
-        transition: 0.3s;
-}
-#button-modificar:hover{
-  background-color: green;
-  color: white;
-  box-shadow: 5px 5px 10px black;
-}
-#button-eliminar:hover {
-  background-color: red;
-  color: white;
-  box-shadow: 5px 5px 10px black;
-}
+
 
 .up-button{
   background-color: #ffde59 ;
@@ -138,31 +108,47 @@ body {
         border: 0;
         
     }
+    .product_container{
+      flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition: 0.3s;
+    }
+    .product_container:hover{
+      box-shadow: 5px 5px 10px black;
+      transform: scale(1.02);
+    }
+    .product_container h2 {
+      font-size: 16px;
+    }
+    .inner_data{
+      text-align: left;
+    }
+
     .button-container{
-        width: 50%;
+        width: 100%;
         border: 0;
-        
+        display: flex;
+        gap: 10px;   
+    }
+    .button-container a i {
+      color: black;
     }
     #button-product{
         width: 150%; 
         height: 40px;
     }    
-    #button-modificar{
-        width: 200%;
-        height: 40px;
-
-    } 
-    #button-eliminar{
-        width: 200%;
-        height: 40px;
-    } 
+    
     .product_container{
       border: 1px solid black;
       border-radius: 3px;
       margin-bottom: 10px;
       background-color: rgb(225, 230, 230);
-      padding: 10px;
-
+      
     }
      
 }    
