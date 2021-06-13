@@ -94,7 +94,10 @@
         </section>
 
         <section class="price">
-          <h3 class="price-title">$<%= productFound.price%></h3>
+          <h3 class="price-title">$ 
+            <% const toThousand = (n) =>
+                n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+             <%= toThousand(productFound.price)%></h3>
           <div class="qtyadd">
             <input type="number" placeholder="1" min="0" />
             <button class="add">AÑADIR</button>
