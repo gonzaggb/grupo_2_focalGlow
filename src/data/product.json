@@ -4139,24 +4139,5 @@
     "image_dimension": "/img/Aplique1623461309066.jpg",
     "data_sheet": "/pdf/Aplique1623461309069.pdf",
     "install_sheet": "/pdf/Aplique1623461309090.pdf"
-  },
-  {
-    "category": "Plafon",
-    "name": "Un domingo mas",
-    "qty": "1",
-    "material": [],
-    "power": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "price": "12.3",
-    "id": 102,
-    "image_slider": [],
-    "main_image": "/img/Plafon1623621677910.jpg",
-    "optic": [],
-    "cct": [],
-    "dim": []
   }
 ]
