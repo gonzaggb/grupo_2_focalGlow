@@ -8,7 +8,7 @@
             <main>
                 <h2 class="titulo">Modificación de Producto</h2>
                 <div class="container-form">
-                    <form id="register" action="/product/<%= productFound.id %>/edit?_method=PUT" method="POST">
+                    <form id="register" action="/product/<%= productFound.id %>/edit?_method=PUT" enctype="multipart/form-data" method="POST">
                         <div class="first">
                             <div class="cateogry-selector">
                                 <label class="" for="category">Categoria: </label><br>

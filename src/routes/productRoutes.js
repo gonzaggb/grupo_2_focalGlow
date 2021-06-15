@@ -5,7 +5,16 @@ const router = express.Router()
 const multer = require('multer')
 //requerir path
 const path = require('path')
+//requerir express-validator
+const{body} = require('express-validator')
+//agregar las validaciones
+const validateCreateForm = [
+  body('name').notEmpty().withMessage('* Falta agregar nombre de producto'),
+  body('qty').notEmpty().withMessage('* Falta agregar la cantidad de productos'),
+  body('price').notEmpty().withMessage('* Falta agregar el precio del producto'),
+]
 
+//aplicacion de multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     if (path.extname(file.originalname) == '.jpg' || path.extname(file.originalname) == '.png') {
@@ -33,15 +42,12 @@ router.get('/detail/:id', productController.detail)
 
 //Create
 router.get('/add', productController.formNew) //formulario de creacion de producto
-router.post(
-  '/add',
-  upload.any('product_img', 'data_sheet', 'install_sheet', 'image_slider', 'image_dimension'),
-  productController.create
-) // a donde va el producto creado
+router.post('/add', validateCreateForm , upload.any('product_img', 'data_sheet', 'install_sheet', 'image_slider', 'image_dimension'),productController.create)
+// a donde va el producto creado
 
 //Update
 router.get('/:id/edit', productController.edit) //formulario de edicion de producto
-router.put('/:id/edit', productController.update)
+router.put('/:id/edit', upload.any('product_img', 'data_sheet', 'install_sheet', 'image_slider', 'image_dimension'), productController.update)
 
 //Delete
 router.delete('/:id', productController.delete)

@@ -99,7 +99,7 @@ module.exports = {
     /* const productDelete = products.splice(productFound,1) */ //borra el producto
     this.writeFile(newProducts) //desvuelve el array de productos sin el elemento borrado
   },
-  update(body, id) {
+  update(body, id , files) {
     const products = this.readFile()
     const productEdit = products.map((product) => {
       if (product.id == id) {

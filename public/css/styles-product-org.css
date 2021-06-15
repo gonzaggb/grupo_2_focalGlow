@@ -125,6 +125,7 @@ label{
     }
 }
 @media(min-width: 1000px){
+   
     #register {
     display: flex;
     flex-direction: column;
@@ -132,6 +133,11 @@ label{
     flex-wrap: wrap; 
     align-content: center;
     
+    }
+    .error_msg{
+        margin-left: 10px;
+        font-size: 18px;
+        color: red;
     }
      .category-selector{
         width: 100%;

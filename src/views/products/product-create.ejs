@@ -6,8 +6,14 @@
     <%- include('../partials/header.ejs')%>
     <main>
         <h2 class="titulo">Creación de Producto</h2>
-       <div class="container-form"> 
-        <form  id="register" action="/product/add" method="POST" enctype="multipart/form-data">
+       <div class="container-form">
+      <% if(locals.errors) {        
+         errors.forEach(error => { %>
+            <p class="error_msg"><%= error.msg %></p>
+          
+        <% })   
+       }%>   
+        <form  id="register" action="/product/add" method="POST" >
             <div class="first">
                 <div class="cateogry-selector">
                     <label class="" for="category">Categoria: </label><br>
@@ -27,7 +33,7 @@
            <div class="first">
                 <div class="in-line-data">
                     <label class="" for="name">Nombre del Producto: </label><br>
-                    <input class="box" type="text" name="name" id="producto"  required>
+                    <input class="box" type="text" name="name" id="producto" value="hola " >
              </div>
             </div><br>
             <!--AGREGADO POR MARS-->
@@ -41,7 +47,7 @@
             <div class="first">
                 <div class="in-line-data">
                     <label class="" for="qty">Cantidad: </label><br>
-                    <input class="box" type="number" name="qty" id="producto" min="0" required>
+                    <input class="box" type="number" name="qty" id="producto" min="0" value=" " >
                 </div>
             </div><br>
             <div class="first-">
@@ -133,7 +139,7 @@
             </div><br>
             <div class="first-">
                 <label class="" for="price">Precio unitario base: </label><br>
-                <input class="box" type="number" name="price" id="precio"  min="0" max="999999999999" step="0.01" placeholder=" Ej 1525.35" required>
+                <input class="box" type="number" value=" " name="price" id="precio"  min="0" max="999999999999" step="0.01" placeholder=" Ej 1525.35" >
             </div><br>
          <div class="imagenes">   
             <div class="imagen-input">
