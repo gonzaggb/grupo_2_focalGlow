@@ -11,54 +11,42 @@
         <%- include('../partials/header.ejs')%>
 
             <main class="container-users">
-                <section>
-                    <article class="user-row">
-                        <div class="header-list">
-                            <div class="item">ID</div>
-                            <div class="item">Nombre</div>
-                            <div class="item">Apellido</div>
-                            <div class="item">Mail</div>
-                            <div class="action">
-                                <i class="far fa-trash-alt"></i>
+                <table id="customers">
+                    <tr>
+                        <th class="id">ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Mail</th>
+                        <th class="profile">Imagen de Perfil</th>
+                        <th>Editar</th>
+                        <th>Borrar</th>
+                    </tr>
+                    <% userList.forEach(e=> { %>
+                        <tr>
+                            <td>
+                                <%= e.id%>
+                            </td>
+                            <td>
+                                <%= e.name%>
+                            </td>
+                            <td>
+                                <%= e.surname%>
+                            </td>
+                            <td>
+                                <%= e.email%>
+                            </td>
+                            <td>
+                                <img class = "img_Redonda" src="<%= e.profileImg%>">
+                            </td>
+                            <td><form action="/users/<%=e.id%>?_method=DELETE" method="POST">
+                                <button type="submit"><i class="far fa-trash-alt"></i></button>
+                            </form></td>
+                           <td> <a href="/users/<%=e.id%>/edit">
                                 <i class="far fa-edit"></i>
-                            </div>
-                        </div>
+                            </a></td>
 
-                        <div class="content-container">
-                            <% userList.forEach(e=> { %>
-                                <div class="content-list">
-
-                                    <div class="item">
-                                        <%= e.id%>
-                                    </div>
-                                    <div class="item">
-                                        <%= e.nombre%>
-                                    </div>
-                                    <div class="item">
-                                        <%= e.apellido%>
-                                    </div>
-                                    <div class="item">
-                                        <%= e.email%>
-                                    </div>
-                                    <div class="action">
-                                        <form action="/users/<%=e.id%>?_method=DELETE" method="POST">
-                                            <button type="submit"><i class="far fa-trash-alt"></i></button>
-                                        </form>
-                                        <a href="/users/<%=e.id%>/edit">
-                                            <i class="far fa-edit"></i>
-                                        </a>
-                                    </div>
-                                </div>
-
-
-                        </div>
+                        </tr>
                         <%})%>
-                    </article>
-
-                </section>
-
-
-
             </main>
     </body>
 

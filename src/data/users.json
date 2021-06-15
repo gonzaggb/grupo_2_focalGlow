@@ -1,28 +1,7 @@
 [
   {
-    "nombre": "Gonzalo",
-    "apellido": "1",
-    "email": "gonzaggb@hotmail.com",
-    "password": "123456",
-    "id": 1
-  },
-  {
-    "nombre": "Gonzalo",
-    "apellido": "German",
-    "email": "gonzaggb@hotmail.co",
-    "password": "123456",
-    "id": 2
-  },
-  {
-    "nombre": "admin",
-    "apellido": "admin",
-    "email": "admin@admin.com",
-    "password": "admin",
-    "id": 3
-  },
-  {
-    "nombre": "gonzalo",
-    "apellido": "con imagen",
+    "name": "gonzalo",
+    "surname": "con imagen",
     "email": "gonzaggb@hotmail.com",
     "password": "123",
     "profileImg": "/img/profile-pictures/1623250634275.jpg",
