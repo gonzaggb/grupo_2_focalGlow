@@ -135,6 +135,11 @@ label{
     align-content: center;
     background-color: rgba(0,0,0,0.1);
     }
+    .error_msg{
+        margin-left: 10px;
+        font-size: 18px;
+        color: red;
+    }
     label{
         transition: 0.2s;
     }

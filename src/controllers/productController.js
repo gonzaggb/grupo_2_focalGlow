@@ -28,7 +28,9 @@ const controller = {
     product.create(productNew, files)
     res.redirect('/product/list')
     } else {
-      res.render('products/product-create.ejs', { errors: errors.array()})
+      res.render('products/product-create.ejs',
+       { errors: errors.array(),
+         old: req.body})
     } 
     console.log(errors)     
     

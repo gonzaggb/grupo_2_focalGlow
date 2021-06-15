@@ -42,7 +42,7 @@ router.get('/detail/:id', productController.detail)
 
 //Create
 router.get('/add', productController.formNew) //formulario de creacion de producto
-router.post('/add', validateCreateForm , upload.any('product_img', 'data_sheet', 'install_sheet', 'image_slider', 'image_dimension'),productController.create)
+router.post('/add', upload.any('product_img', 'data_sheet', 'install_sheet', 'image_slider', 'image_dimension'),validateCreateForm ,productController.create)
 // a donde va el producto creado
 
 //Update

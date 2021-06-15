@@ -5,15 +5,37 @@
     "category": "Plafon",
     "qty": 46,
     "source": "LED",
-    "material": ["Chapa"],
-    "optic": ["Flood", "Wideflood", "Ovalflood"],
-    "power": [1, 38],
-    "cct": [3500, 2700, 3000, 4000],
-    "dim": ["Dimeable", "Switch", "DALI", "Bluetooth"],
+    "material": [
+      "Chapa"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      1,
+      38
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 10161,
     "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -24,15 +46,38 @@
     "category": "Exterior",
     "qty": 48,
     "source": "LED",
-    "material": ["Chapa", "Polimero", "Madera", "Hierro", "Aluminio", "Otros"],
-    "optic": ["Ovalflood", "Wideflood", "Spot", "Flood"],
-    "power": [85, 94],
-    "cct": [4000],
-    "dim": ["Switch", "DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      85,
+      94
+    ],
+    "cct": [
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Switch"
+    ],
     "price": 44690,
     "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -43,15 +88,38 @@
     "category": "Sistemas",
     "qty": 41,
     "source": "LED",
-    "material": ["Aluminio", "Otros", "Chapa"],
-    "optic": ["Wideflood", "Flood", "Spot"],
-    "power": [68, 15, 49, 77],
-    "cct": [3500, 2700, 4000, 3000],
-    "dim": ["DALI", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      15,
+      49,
+      68,
+      77
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI"
+    ],
     "price": 25842,
     "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -62,15 +130,40 @@
     "category": "Colgantes",
     "qty": 71,
     "source": "LED",
-    "material": ["Aluminio", "Otros", "Madera", "Hierro", "Chapa"],
-    "optic": ["Ovalflood", "Flood", "Wideflood", "Spot"],
-    "power": [33, 83, 2, 43],
-    "cct": [3000, 3500],
-    "dim": ["Switch", "DALI", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      2,
+      33,
+      43,
+      83
+    ],
+    "cct": [
+      3000,
+      3500
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 38676,
     "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/delfina.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -81,15 +174,42 @@
     "category": "Mesa",
     "qty": 33,
     "source": "Lámpara",
-    "material": ["Otros", "Hierro", "Polimero", "Chapa", "Madera"],
-    "optic": ["Ovalflood", "Flood", "Spot"],
-    "power": [31, 16, 4],
-    "cct": [4000, 3000, 2700, 3500],
-    "dim": ["Switch", "Dimeable", "DALI"],
+    "material": [
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      16,
+      31,
+      4
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 9198,
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/product_main.jpg", "/img/delfina.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -100,15 +220,34 @@
     "category": "Spots",
     "qty": 46,
     "source": "LED",
-    "material": ["Chapa", "Madera", "Otros"],
-    "optic": ["Wideflood"],
-    "power": [35, 100, 67],
-    "cct": [4000],
-    "dim": ["DALI", "Switch", "Dimeable", "Bluetooth"],
+    "material": [
+      "Chapa",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      100,
+      35,
+      67
+    ],
+    "cct": [
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 13585,
     "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -119,15 +258,32 @@
     "category": "Mesa",
     "qty": 54,
     "source": "LED",
-    "material": ["Polimero"],
-    "optic": ["Wideflood", "Spot", "Flood"],
-    "power": [41],
-    "cct": [2700, 4000, 3500, 3000],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      41
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 14272,
     "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -138,15 +294,36 @@
     "category": "apliques",
     "qty": 26,
     "source": "LED",
-    "material": ["Hierro", "Madera"],
-    "optic": ["Ovalflood", "Spot"],
-    "power": [44, 94, 13],
-    "cct": [4000, 3000, 2700],
-    "dim": ["Bluetooth", "Switch", "Dimeable", "DALI"],
+    "material": [
+      "Hierro",
+      "Madera"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      13,
+      44,
+      94
+    ],
+    "cct": [
+      2700,
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 11671,
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -157,15 +334,36 @@
     "category": "Colgantes",
     "qty": 56,
     "source": "LED",
-    "material": ["Chapa", "Aluminio"],
-    "optic": ["Wideflood"],
-    "power": [31, 78, 68],
-    "cct": [3500, 4000, 3000, 2700],
-    "dim": ["Dimeable", "DALI", "Bluetooth", "Switch"],
+    "material": [
+      "Aluminio",
+      "Chapa"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      31,
+      68,
+      78
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 49960,
     "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -176,15 +374,36 @@
     "category": "Spots",
     "qty": 64,
     "source": "LED",
-    "material": ["Aluminio", "Polimero"],
-    "optic": ["Spot"],
-    "power": [84, 58, 70, 94],
-    "cct": [3000, 4000],
-    "dim": ["Switch", "Bluetooth", "DALI"],
+    "material": [
+      "Aluminio",
+      "Polimero"
+    ],
+    "optic": [
+      "Spot"
+    ],
+    "power": [
+      58,
+      70,
+      84,
+      94
+    ],
+    "cct": [
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 19390,
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/coral.jpg", "/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -195,15 +414,37 @@
     "category": "Pie",
     "qty": 65,
     "source": "LED",
-    "material": ["Madera", "Aluminio", "Otros", "Chapa", "Polimero"],
-    "optic": ["Flood", "Spot"],
-    "power": [62, 32, 49],
-    "cct": [3500, 3000, 2700, 4000],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Spot"
+    ],
+    "power": [
+      32,
+      49,
+      62
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 65541,
     "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -214,15 +455,34 @@
     "category": "apliques",
     "qty": 30,
     "source": "LED",
-    "material": ["Otros", "Aluminio"],
-    "optic": ["Ovalflood"],
-    "power": [79, 68, 24],
-    "cct": [3500, 2700],
-    "dim": ["Dimeable", "Switch", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Otros"
+    ],
+    "optic": [
+      "Ovalflood"
+    ],
+    "power": [
+      24,
+      68,
+      79
+    ],
+    "cct": [
+      2700,
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 66856,
     "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -233,15 +493,35 @@
     "category": "Exterior",
     "qty": 0,
     "source": "LED",
-    "material": ["Chapa", "Otros", "Aluminio", "Madera", "Polimero", "Hierro"],
-    "optic": ["Wideflood"],
-    "power": [25],
-    "cct": [2700, 3500, 4000],
-    "dim": ["DALI", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      25
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI"
+    ],
     "price": 68618,
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -252,15 +532,33 @@
     "category": "Mesa",
     "qty": 70,
     "source": "LED",
-    "material": ["Polimero", "Otros", "Hierro"],
-    "optic": ["Ovalflood"],
-    "power": [96, 12],
-    "cct": [2700],
-    "dim": ["DALI", "Dimeable", "Bluetooth", "Switch"],
+    "material": [
+      "Hierro",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood"
+    ],
+    "power": [
+      12,
+      96
+    ],
+    "cct": [
+      2700
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 11869,
     "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -271,15 +569,36 @@
     "category": "Plafon",
     "qty": 63,
     "source": "Lámpara",
-    "material": ["Aluminio", "Chapa", "Polimero"],
-    "optic": ["Wideflood", "Ovalflood"],
-    "power": [24, 41, 49],
-    "cct": [3000, 3500, 4000, 2700],
-    "dim": ["DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      24,
+      41,
+      49
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI"
+    ],
     "price": 46863,
     "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -290,15 +609,36 @@
     "category": "apliques",
     "qty": 9,
     "source": "LED",
-    "material": ["Aluminio", "Otros"],
-    "optic": ["Flood", "Ovalflood"],
-    "power": [95, 75],
-    "cct": [3500, 3000, 2700, 4000],
-    "dim": ["DALI", "Switch", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood"
+    ],
+    "power": [
+      75,
+      95
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 58710,
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/product_main.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -309,15 +649,35 @@
     "category": "Pie",
     "qty": 41,
     "source": "LED",
-    "material": ["Chapa", "Madera"],
-    "optic": ["Spot", "Flood"],
-    "power": [65, 27],
-    "cct": [3500, 3000, 2700, 4000],
-    "dim": ["Switch", "DALI"],
+    "material": [
+      "Chapa",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Spot"
+    ],
+    "power": [
+      27,
+      65
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Switch"
+    ],
     "price": 12357,
     "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/delfina.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/delfina.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -328,15 +688,39 @@
     "category": "Mesa",
     "qty": 3,
     "source": "Lámpara",
-    "material": ["Polimero", "Otros", "Hierro", "Madera", "Aluminio", "Chapa"],
-    "optic": ["Ovalflood"],
-    "power": [8, 37, 100, 19],
-    "cct": [3000, 4000, 2700, 3500],
-    "dim": ["DALI", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood"
+    ],
+    "power": [
+      100,
+      19,
+      37,
+      8
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable"
+    ],
     "price": 20843,
     "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/delfina.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -347,15 +731,31 @@
     "category": "apliques",
     "qty": 8,
     "source": "LED",
-    "material": ["Madera"],
-    "optic": ["Flood", "Wideflood"],
-    "power": [84, 59, 21],
-    "cct": [2700, 4000],
-    "dim": ["Dimeable"],
+    "material": [
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Wideflood"
+    ],
+    "power": [
+      21,
+      59,
+      84
+    ],
+    "cct": [
+      2700,
+      4000
+    ],
+    "dim": [
+      "Dimeable"
+    ],
     "price": 67994,
     "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -366,15 +766,35 @@
     "category": "Exterior",
     "qty": 37,
     "source": "Lámpara",
-    "material": ["Otros"],
-    "optic": ["Wideflood", "Ovalflood", "Spot", "Flood"],
-    "power": [15, 12, 57, 90],
-    "cct": [3000, 4000, 2700],
-    "dim": ["Dimeable"],
+    "material": [
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      12,
+      15,
+      57,
+      90
+    ],
+    "cct": [
+      2700,
+      3000,
+      4000
+    ],
+    "dim": [
+      "Dimeable"
+    ],
     "price": 58485,
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -385,15 +805,34 @@
     "category": "apliques",
     "qty": 8,
     "source": "LED",
-    "material": ["Madera", "Polimero", "Aluminio", "Otros"],
-    "optic": ["Flood"],
-    "power": [5, 100],
-    "cct": [3000, 2700],
-    "dim": ["DALI", "Switch"],
+    "material": [
+      "Aluminio",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      100,
+      5
+    ],
+    "cct": [
+      2700,
+      3000
+    ],
+    "dim": [
+      "DALI",
+      "Switch"
+    ],
     "price": 35832,
     "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/delfina.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -404,15 +843,37 @@
     "category": "Pie",
     "qty": 6,
     "source": "LED",
-    "material": ["Chapa", "Hierro", "Otros", "Aluminio", "Polimero", "Madera"],
-    "optic": ["Wideflood", "Flood", "Ovalflood"],
-    "power": [62],
-    "cct": [3000, 2700],
-    "dim": ["DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      62
+    ],
+    "cct": [
+      2700,
+      3000
+    ],
+    "dim": [
+      "DALI"
+    ],
     "price": 34218,
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/slider_2.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -423,15 +884,37 @@
     "category": "apliques",
     "qty": 8,
     "source": "Lámpara",
-    "material": ["Otros", "Madera"],
-    "optic": ["Spot", "Wideflood", "Flood", "Ovalflood"],
-    "power": [52, 29, 33, 100],
-    "cct": [4000, 3500],
-    "dim": ["Bluetooth", "DALI"],
+    "material": [
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      100,
+      29,
+      33,
+      52
+    ],
+    "cct": [
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI"
+    ],
     "price": 55874,
     "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -442,15 +925,36 @@
     "category": "Mesa",
     "qty": 10,
     "source": "LED",
-    "material": ["Hierro", "Polimero", "Chapa"],
-    "optic": ["Wideflood"],
-    "power": [51, 89, 23, 92],
-    "cct": [3000, 2700, 3500],
-    "dim": ["DALI"],
+    "material": [
+      "Chapa",
+      "Hierro",
+      "Polimero"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      23,
+      51,
+      89,
+      92
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500
+    ],
+    "dim": [
+      "DALI"
+    ],
     "price": 56215,
     "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/product_main.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg",
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -461,15 +965,36 @@
     "category": "Pie",
     "qty": 58,
     "source": "Lámpara",
-    "material": ["Otros", "Hierro", "Polimero", "Chapa", "Aluminio"],
-    "optic": ["Flood"],
-    "power": [4, 8],
-    "cct": [2700],
-    "dim": ["Switch", "DALI", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      4,
+      8
+    ],
+    "cct": [
+      2700
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 64900,
     "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/slider_2.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -480,15 +1005,39 @@
     "category": "Mesa",
     "qty": 31,
     "source": "LED",
-    "material": ["Aluminio", "Chapa", "Polimero", "Madera", "Otros"],
-    "optic": ["Ovalflood", "Wideflood", "Flood"],
-    "power": [19, 54, 54],
-    "cct": [2700],
-    "dim": ["Dimeable", "Bluetooth", "DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      19,
+      54,
+      54
+    ],
+    "cct": [
+      2700
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable"
+    ],
     "price": 18571,
     "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/coral.jpg", "/img/slider_3.jpg", "/img/delfina.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/delfina.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -499,15 +1048,34 @@
     "category": "Colgantes",
     "qty": 2,
     "source": "Lámpara",
-    "material": ["Otros"],
-    "optic": ["Wideflood", "Spot"],
-    "power": [4, 2],
-    "cct": [3500],
-    "dim": ["Switch", "DALI", "Dimeable", "Bluetooth"],
+    "material": [
+      "Otros"
+    ],
+    "optic": [
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      2,
+      4
+    ],
+    "cct": [
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 1260,
     "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/coral.jpg", "/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/delfina.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -518,15 +1086,40 @@
     "category": "Pie",
     "qty": 63,
     "source": "Lámpara",
-    "material": ["Chapa", "Polimero", "Aluminio", "Otros", "Hierro"],
-    "optic": ["Spot", "Flood", "Ovalflood"],
-    "power": [85, 10, 58, 81],
-    "cct": [3500, 2700, 4000],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      10,
+      58,
+      81,
+      85
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 62251,
     "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -537,15 +1130,36 @@
     "category": "Spots",
     "qty": 47,
     "source": "LED",
-    "material": ["Chapa", "Hierro", "Otros", "Polimero"],
-    "optic": ["Wideflood", "Spot", "Flood"],
-    "power": [51, 10],
-    "cct": [2700, 3500],
-    "dim": ["DALI", "Switch", "Bluetooth"],
+    "material": [
+      "Chapa",
+      "Hierro",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      10,
+      51
+    ],
+    "cct": [
+      2700,
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 48031,
     "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -556,15 +1170,35 @@
     "category": "Mesa",
     "qty": 16,
     "source": "LED",
-    "material": ["Aluminio", "Otros"],
-    "optic": ["Ovalflood", "Spot"],
-    "power": [42, 9, 70, 79],
-    "cct": [4000],
-    "dim": ["Bluetooth", "Switch"],
+    "material": [
+      "Aluminio",
+      "Otros"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      42,
+      70,
+      79,
+      9
+    ],
+    "cct": [
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "Switch"
+    ],
     "price": 64743,
     "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/delfina.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/delfina.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -575,15 +1209,33 @@
     "category": "Colgantes",
     "qty": 45,
     "source": "Lámpara",
-    "material": ["Madera", "Aluminio"],
-    "optic": ["Spot", "Ovalflood", "Flood"],
-    "power": [14],
-    "cct": [2700, 3000],
-    "dim": ["Dimeable", "DALI"],
+    "material": [
+      "Aluminio",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      14
+    ],
+    "cct": [
+      2700,
+      3000
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable"
+    ],
     "price": 43196,
     "description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -594,15 +1246,34 @@
     "category": "Exterior",
     "qty": 11,
     "source": "Lámpara",
-    "material": ["Polimero", "Otros"],
-    "optic": ["Flood"],
-    "power": [56, 85, 36],
-    "cct": [3000, 4000, 2700, 3500],
-    "dim": ["Dimeable", "DALI"],
+    "material": [
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      36,
+      56,
+      85
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable"
+    ],
     "price": 47071,
     "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -613,15 +1284,32 @@
     "category": "Spots",
     "qty": 2,
     "source": "Lámpara",
-    "material": ["Chapa", "Otros"],
-    "optic": ["Flood", "Wideflood"],
-    "power": [76, 92],
-    "cct": [3000, 4000],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Chapa",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Wideflood"
+    ],
+    "power": [
+      76,
+      92
+    ],
+    "cct": [
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 48095,
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -632,15 +1320,35 @@
     "category": "Sistemas",
     "qty": 69,
     "source": "Lámpara",
-    "material": ["Polimero", "Chapa"],
-    "optic": ["Spot", "Wideflood", "Ovalflood"],
-    "power": [89, 64],
-    "cct": [4000, 3500, 3000],
-    "dim": ["DALI"],
+    "material": [
+      "Chapa",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      64,
+      89
+    ],
+    "cct": [
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI"
+    ],
     "price": 35343,
     "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/bon-jour.jpg", "/img/product_main.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -651,15 +1359,39 @@
     "category": "Colgantes",
     "qty": 0,
     "source": "Lámpara",
-    "material": ["Madera", "Polimero", "Otros"],
-    "optic": ["Wideflood", "Ovalflood", "Spot", "Flood"],
-    "power": [13, 30, 66, 62],
-    "cct": [3000, 2700, 3500],
-    "dim": ["Switch"],
+    "material": [
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      13,
+      30,
+      62,
+      66
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500
+    ],
+    "dim": [
+      "Switch"
+    ],
     "price": 57632,
     "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/bon-jour.jpg", "/img/slider_3.jpg", "/img/product_main.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -670,15 +1402,37 @@
     "category": "Pie",
     "qty": 24,
     "source": "LED",
-    "material": ["Aluminio", "Polimero", "Otros", "Hierro"],
-    "optic": ["Spot", "Wideflood"],
-    "power": [8, 77, 75],
-    "cct": [2700, 3000],
-    "dim": ["Switch", "Dimeable", "Bluetooth", "DALI"],
+    "material": [
+      "Aluminio",
+      "Hierro",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      75,
+      77,
+      8
+    ],
+    "cct": [
+      2700,
+      3000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 448,
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -689,15 +1443,35 @@
     "category": "Colgantes",
     "qty": 31,
     "source": "Lámpara",
-    "material": ["Madera", "Otros", "Aluminio"],
-    "optic": ["Ovalflood"],
-    "power": [54, 21],
-    "cct": [3500, 2700, 4000],
-    "dim": ["Dimeable", "Bluetooth", "DALI"],
+    "material": [
+      "Aluminio",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Ovalflood"
+    ],
+    "power": [
+      21,
+      54
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable"
+    ],
     "price": 20773,
     "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/coral.jpg", "/img/product_main.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -708,15 +1482,40 @@
     "category": "apliques",
     "qty": 66,
     "source": "Lámpara",
-    "material": ["Hierro", "Polimero", "Chapa", "Otros", "Aluminio"],
-    "optic": ["Wideflood", "Flood"],
-    "power": [87, 25, 12, 26],
-    "cct": [4000, 3000],
-    "dim": ["Bluetooth", "Dimeable", "DALI", "Switch"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Wideflood"
+    ],
+    "power": [
+      12,
+      25,
+      26,
+      87
+    ],
+    "cct": [
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 70923,
     "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/coral.jpg", "/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/coral.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -727,15 +1526,34 @@
     "category": "Exterior",
     "qty": 55,
     "source": "LED",
-    "material": ["Polimero", "Otros"],
-    "optic": ["Ovalflood", "Spot"],
-    "power": [22],
-    "cct": [2700, 4000, 3500, 3000],
-    "dim": ["DALI"],
+    "material": [
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      22
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI"
+    ],
     "price": 71104,
     "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/coral.jpg", "/img/product_main.jpg", "/img/delfina.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/delfina.jpg",
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -746,15 +1564,33 @@
     "category": "Exterior",
     "qty": 50,
     "source": "LED",
-    "material": ["Otros"],
-    "optic": ["Spot", "Wideflood", "Flood", "Ovalflood"],
-    "power": [98, 78],
-    "cct": [3000, 2700, 3500],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      78,
+      98
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 24515,
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -765,15 +1601,37 @@
     "category": "Colgantes",
     "qty": 61,
     "source": "Lámpara",
-    "material": ["Chapa", "Madera"],
-    "optic": ["Ovalflood", "Wideflood", "Spot", "Flood"],
-    "power": [56, 39],
-    "cct": [3000, 2700, 3500],
-    "dim": ["DALI", "Dimeable", "Switch", "Bluetooth"],
+    "material": [
+      "Chapa",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      39,
+      56
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 23824,
     "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -784,15 +1642,42 @@
     "category": "Colgantes",
     "qty": 64,
     "source": "LED",
-    "material": ["Madera", "Polimero", "Hierro", "Otros", "Aluminio", "Chapa"],
-    "optic": ["Flood", "Wideflood", "Spot", "Ovalflood"],
-    "power": [76, 31, 88, 68],
-    "cct": [3000, 3500, 4000, 2700],
-    "dim": ["Switch", "DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      31,
+      68,
+      76,
+      88
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Switch"
+    ],
     "price": 47991,
     "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -803,15 +1688,43 @@
     "category": "Spots",
     "qty": 66,
     "source": "LED",
-    "material": ["Madera", "Chapa", "Otros", "Polimero", "Hierro", "Aluminio"],
-    "optic": ["Flood", "Spot", "Ovalflood"],
-    "power": [35, 19],
-    "cct": [4000, 3000, 2700, 3500],
-    "dim": ["Switch", "DALI", "Dimeable", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      19,
+      35
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 11242,
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/delfina.jpg", "/img/product_main.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -822,15 +1735,38 @@
     "category": "Exterior",
     "qty": 34,
     "source": "LED",
-    "material": ["Madera", "Hierro", "Chapa", "Aluminio"],
-    "optic": ["Wideflood", "Flood"],
-    "power": [12, 5, 53],
-    "cct": [4000, 3000, 3500, 2700],
-    "dim": ["Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Wideflood"
+    ],
+    "power": [
+      12,
+      5,
+      53
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Dimeable"
+    ],
     "price": 60776,
     "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/coral.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -841,15 +1777,41 @@
     "category": "Spots",
     "qty": 74,
     "source": "Lámpara",
-    "material": ["Aluminio", "Hierro", "Madera", "Otros"],
-    "optic": ["Ovalflood", "Flood", "Spot", "Wideflood"],
-    "power": [3],
-    "cct": [3000, 2700, 3500, 4000],
-    "dim": ["Switch", "Bluetooth", "DALI", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Hierro",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      3
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 15319,
     "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/bon-jour.jpg", "/img/product_main.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/coral.jpg",
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -860,15 +1822,37 @@
     "category": "Plafon",
     "qty": 59,
     "source": "Lámpara",
-    "material": ["Madera", "Chapa"],
-    "optic": ["Spot", "Ovalflood", "Wideflood"],
-    "power": [79, 56, 71],
-    "cct": [3500, 2700, 3000, 4000],
-    "dim": ["Bluetooth", "DALI", "Switch"],
+    "material": [
+      "Chapa",
+      "Madera"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      56,
+      71,
+      79
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 33131,
     "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -879,15 +1863,36 @@
     "category": "Mesa",
     "qty": 38,
     "source": "LED",
-    "material": ["Polimero", "Hierro", "Madera", "Chapa"],
-    "optic": ["Spot", "Flood", "Wideflood"],
-    "power": [57, 25, 24, 54],
-    "cct": [3500, 3000],
-    "dim": ["Switch"],
+    "material": [
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      24,
+      25,
+      54,
+      57
+    ],
+    "cct": [
+      3000,
+      3500
+    ],
+    "dim": [
+      "Switch"
+    ],
     "price": 14475,
     "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -898,15 +1903,35 @@
     "category": "Sistemas",
     "qty": 32,
     "source": "LED",
-    "material": ["Aluminio", "Chapa"],
-    "optic": ["Spot", "Ovalflood"],
-    "power": [81, 15, 26],
-    "cct": [2700, 3000, 4000],
-    "dim": ["Bluetooth", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      15,
+      26,
+      81
+    ],
+    "cct": [
+      2700,
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "Dimeable"
+    ],
     "price": 29153,
     "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/delfina.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -917,15 +1942,40 @@
     "category": "Plafon",
     "qty": 66,
     "source": "Lámpara",
-    "material": ["Chapa", "Madera", "Polimero", "Aluminio"],
-    "optic": ["Spot", "Ovalflood", "Wideflood", "Flood"],
-    "power": [14, 24, 76],
-    "cct": [3500, 3000, 4000],
-    "dim": ["Dimeable", "Switch", "DALI", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Madera",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      14,
+      24,
+      76
+    ],
+    "cct": [
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 3232,
     "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -936,15 +1986,43 @@
     "category": "Plafon",
     "qty": 6,
     "source": "Lámpara",
-    "material": ["Polimero", "Hierro", "Aluminio", "Madera", "Otros", "Chapa"],
-    "optic": ["Ovalflood", "Wideflood", "Spot", "Flood"],
-    "power": [75, 83, 73, 23],
-    "cct": [3500, 3000],
-    "dim": ["Bluetooth", "Switch", "DALI", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      23,
+      73,
+      75,
+      83
+    ],
+    "cct": [
+      3000,
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 16937,
     "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/delfina.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/delfina.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -955,15 +2033,36 @@
     "category": "Exterior",
     "qty": 65,
     "source": "LED",
-    "material": ["Otros", "Chapa", "Polimero", "Hierro", "Madera", "Aluminio"],
-    "optic": ["Ovalflood", "Spot", "Wideflood"],
-    "power": [8],
-    "cct": [2700, 4000, 3500],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      8
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 58575,
     "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -974,15 +2073,33 @@
     "category": "Pie",
     "qty": 18,
     "source": "LED",
-    "material": ["Otros", "Aluminio", "Chapa"],
-    "optic": ["Ovalflood"],
-    "power": [13],
-    "cct": [4000],
-    "dim": ["DALI", "Switch", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Otros"
+    ],
+    "optic": [
+      "Ovalflood"
+    ],
+    "power": [
+      13
+    ],
+    "cct": [
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 14218,
     "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/bon-jour.jpg", "/img/slider_1.jpg", "/img/product_main.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -993,15 +2110,37 @@
     "category": "Mesa",
     "qty": 70,
     "source": "Lámpara",
-    "material": ["Chapa", "Madera", "Aluminio"],
-    "optic": ["Ovalflood", "Flood"],
-    "power": [91, 43, 38],
-    "cct": [4000],
-    "dim": ["DALI", "Bluetooth", "Switch", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood"
+    ],
+    "power": [
+      38,
+      43,
+      91
+    ],
+    "cct": [
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 13518,
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/delfina.jpg", "/img/slider_3.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1012,15 +2151,41 @@
     "category": "Colgantes",
     "qty": 47,
     "source": "Lámpara",
-    "material": ["Polimero", "Hierro", "Aluminio", "Otros", "Chapa", "Madera"],
-    "optic": ["Flood", "Wideflood", "Spot", "Ovalflood"],
-    "power": [95],
-    "cct": [3000, 2700, 3500, 4000],
-    "dim": ["Bluetooth", "Dimeable", "Switch", "DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      95
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 19589,
     "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1031,15 +2196,35 @@
     "category": "Plafon",
     "qty": 62,
     "source": "Lámpara",
-    "material": ["Otros", "Chapa", "Hierro", "Madera", "Aluminio"],
-    "optic": ["Flood"],
-    "power": [69, 23, 5],
-    "cct": [3000, 4000, 3500],
-    "dim": ["Switch"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      23,
+      5,
+      69
+    ],
+    "cct": [
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Switch"
+    ],
     "price": 43032,
     "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1050,15 +2235,39 @@
     "category": "Mesa",
     "qty": 20,
     "source": "Lámpara",
-    "material": ["Otros", "Madera", "Hierro", "Chapa", "Polimero", "Aluminio"],
-    "optic": ["Wideflood", "Ovalflood", "Spot", "Flood"],
-    "power": [41],
-    "cct": [3500, 2700],
-    "dim": ["Switch", "Dimeable", "DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      41
+    ],
+    "cct": [
+      2700,
+      3500
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 44074,
     "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1069,15 +2278,38 @@
     "category": "Sistemas",
     "qty": 6,
     "source": "LED",
-    "material": ["Aluminio", "Polimero", "Otros", "Hierro"],
-    "optic": ["Wideflood", "Ovalflood"],
-    "power": [60, 62, 69, 49],
-    "cct": [4000, 3500, 2700],
-    "dim": ["Switch", "Bluetooth", "DALI"],
+    "material": [
+      "Aluminio",
+      "Hierro",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      49,
+      60,
+      62,
+      69
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 37484,
     "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1088,15 +2320,35 @@
     "category": "Pie",
     "qty": 59,
     "source": "LED",
-    "material": ["Polimero", "Madera", "Aluminio", "Otros"],
-    "optic": ["Wideflood"],
-    "power": [7, 33, 29, 69],
-    "cct": [2700, 3500],
-    "dim": ["Dimeable"],
+    "material": [
+      "Aluminio",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      29,
+      33,
+      69,
+      7
+    ],
+    "cct": [
+      2700,
+      3500
+    ],
+    "dim": [
+      "Dimeable"
+    ],
     "price": 40472,
     "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1107,15 +2359,38 @@
     "category": "Spots",
     "qty": 68,
     "source": "LED",
-    "material": ["Otros"],
-    "optic": ["Wideflood", "Spot", "Flood", "Ovalflood"],
-    "power": [57, 37, 51],
-    "cct": [4000, 3500, 3000, 2700],
-    "dim": ["Bluetooth", "DALI", "Switch", "Dimeable"],
+    "material": [
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      37,
+      51,
+      57
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 8992,
     "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1126,15 +2401,36 @@
     "category": "Colgantes",
     "qty": 23,
     "source": "LED",
-    "material": ["Aluminio", "Madera"],
-    "optic": ["Ovalflood", "Flood"],
-    "power": [20, 56],
-    "cct": [3500, 3000, 4000],
-    "dim": ["Dimeable", "DALI", "Bluetooth", "Switch"],
+    "material": [
+      "Aluminio",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood"
+    ],
+    "power": [
+      20,
+      56
+    ],
+    "cct": [
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 14313,
     "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1145,15 +2441,36 @@
     "category": "apliques",
     "qty": 40,
     "source": "Lámpara",
-    "material": ["Hierro", "Polimero", "Chapa", "Aluminio"],
-    "optic": ["Wideflood"],
-    "power": [94, 32],
-    "cct": [3500, 4000, 2700, 3000],
-    "dim": ["Switch", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Polimero"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      32,
+      94
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Dimeable",
+      "Switch"
+    ],
     "price": 63257,
     "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/bon-jour.jpg", "/img/product_main.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1164,15 +2481,36 @@
     "category": "Sistemas",
     "qty": 7,
     "source": "Lámpara",
-    "material": ["Hierro"],
-    "optic": ["Ovalflood", "Spot", "Wideflood"],
-    "power": [46],
-    "cct": [3000, 4000, 3500],
-    "dim": ["Dimeable", "Switch", "Bluetooth", "DALI"],
+    "material": [
+      "Hierro"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      46
+    ],
+    "cct": [
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 2812,
     "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/product_main.jpg", "/img/bon-jour.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1183,15 +2521,35 @@
     "category": "Plafon",
     "qty": 59,
     "source": "Lámpara",
-    "material": ["Madera", "Aluminio", "Chapa", "Hierro"],
-    "optic": ["Flood", "Ovalflood"],
-    "power": [21, 46, 28],
-    "cct": [2700],
-    "dim": ["DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood"
+    ],
+    "power": [
+      21,
+      28,
+      46
+    ],
+    "cct": [
+      2700
+    ],
+    "dim": [
+      "DALI"
+    ],
     "price": 10535,
     "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/coral.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1202,15 +2560,35 @@
     "category": "Sistemas",
     "qty": 51,
     "source": "LED",
-    "material": ["Madera"],
-    "optic": ["Wideflood", "Flood"],
-    "power": [23],
-    "cct": [2700, 4000, 3500, 3000],
-    "dim": ["DALI", "Bluetooth", "Switch", "Dimeable"],
+    "material": [
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Wideflood"
+    ],
+    "power": [
+      23
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 45569,
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/bon-jour.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1221,15 +2599,36 @@
     "category": "Exterior",
     "qty": 3,
     "source": "LED",
-    "material": ["Aluminio", "Chapa", "Madera", "Polimero", "Otros"],
-    "optic": ["Wideflood"],
-    "power": [27, 77, 36],
-    "cct": [3000, 2700, 3500],
-    "dim": ["Bluetooth", "Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      27,
+      36,
+      77
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "Dimeable"
+    ],
     "price": 46245,
     "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1240,15 +2639,37 @@
     "category": "Exterior",
     "qty": 1,
     "source": "LED",
-    "material": ["Chapa", "Polimero", "Aluminio"],
-    "optic": ["Flood", "Spot", "Wideflood", "Ovalflood"],
-    "power": [17],
-    "cct": [3000],
-    "dim": ["Switch", "Dimeable", "Bluetooth", "DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      17
+    ],
+    "cct": [
+      3000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 7698,
     "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/delfina.jpg", "/img/product_main.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1259,15 +2680,38 @@
     "category": "Mesa",
     "qty": 38,
     "source": "LED",
-    "material": ["Otros", "Aluminio", "Madera", "Hierro"],
-    "optic": ["Ovalflood", "Wideflood"],
-    "power": [42, 82, 66],
-    "cct": [2700, 3000, 4000],
-    "dim": ["Switch", "Bluetooth", "DALI"],
+    "material": [
+      "Aluminio",
+      "Hierro",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      42,
+      66,
+      82
+    ],
+    "cct": [
+      2700,
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 61159,
     "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1278,15 +2722,31 @@
     "category": "Mesa",
     "qty": 34,
     "source": "Lámpara",
-    "material": ["Hierro"],
-    "optic": ["Flood"],
-    "power": [5, 95, 66],
-    "cct": [2700, 4000],
-    "dim": ["DALI"],
+    "material": [
+      "Hierro"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      5,
+      66,
+      95
+    ],
+    "cct": [
+      2700,
+      4000
+    ],
+    "dim": [
+      "DALI"
+    ],
     "price": 14112,
     "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1297,15 +2757,37 @@
     "category": "Spots",
     "qty": 52,
     "source": "Lámpara",
-    "material": ["Aluminio", "Madera", "Otros"],
-    "optic": ["Flood", "Ovalflood", "Spot", "Wideflood"],
-    "power": [72, 20, 48, 54],
-    "cct": [3500, 3000, 4000],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      20,
+      48,
+      54,
+      72
+    ],
+    "cct": [
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 72347,
     "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1316,15 +2798,36 @@
     "category": "Colgantes",
     "qty": 65,
     "source": "Lámpara",
-    "material": ["Otros", "Madera", "Polimero"],
-    "optic": ["Ovalflood"],
-    "power": [60, 95, 22, 65],
-    "cct": [2700, 4000, 3000, 3500],
-    "dim": ["Switch", "DALI"],
+    "material": [
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood"
+    ],
+    "power": [
+      22,
+      60,
+      65,
+      95
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Switch"
+    ],
     "price": 26102,
     "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1335,15 +2838,32 @@
     "category": "Pie",
     "qty": 49,
     "source": "LED",
-    "material": ["Madera", "Otros"],
-    "optic": ["Wideflood"],
-    "power": [54],
-    "cct": [4000, 3500],
-    "dim": ["Bluetooth", "Switch"],
+    "material": [
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      54
+    ],
+    "cct": [
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "Switch"
+    ],
     "price": 11092,
     "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/bon-jour.jpg", "/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1354,15 +2874,31 @@
     "category": "Plafon",
     "qty": 17,
     "source": "LED",
-    "material": ["Otros"],
-    "optic": ["Spot", "Flood"],
-    "power": [89, 73],
-    "cct": [3000, 2700],
-    "dim": ["Switch", "Dimeable"],
+    "material": [
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Spot"
+    ],
+    "power": [
+      73,
+      89
+    ],
+    "cct": [
+      2700,
+      3000
+    ],
+    "dim": [
+      "Dimeable",
+      "Switch"
+    ],
     "price": 62968,
     "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1373,15 +2909,35 @@
     "category": "Plafon",
     "qty": 37,
     "source": "Lámpara",
-    "material": ["Otros", "Madera"],
-    "optic": ["Flood", "Wideflood", "Ovalflood", "Spot"],
-    "power": [96, 49],
-    "cct": [3000, 4000, 3500],
-    "dim": ["Bluetooth", "Switch"],
+    "material": [
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      49,
+      96
+    ],
+    "cct": [
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "Switch"
+    ],
     "price": 10585,
     "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1392,15 +2948,38 @@
     "category": "apliques",
     "qty": 20,
     "source": "Lámpara",
-    "material": ["Hierro"],
-    "optic": ["Ovalflood", "Spot", "Wideflood"],
-    "power": [22, 88, 27],
-    "cct": [4000, 3500, 3000, 2700],
-    "dim": ["Switch", "Bluetooth", "DALI"],
+    "material": [
+      "Hierro"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      22,
+      27,
+      88
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 21324,
     "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/slider_2.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1411,15 +2990,35 @@
     "category": "Exterior",
     "qty": 51,
     "source": "Lámpara",
-    "material": ["Chapa", "Aluminio"],
-    "optic": ["Wideflood"],
-    "power": [84, 79, 98],
-    "cct": [4000, 3000],
-    "dim": ["Dimeable", "Bluetooth", "Switch"],
+    "material": [
+      "Aluminio",
+      "Chapa"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      79,
+      84,
+      98
+    ],
+    "cct": [
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 6158,
     "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/coral.jpg", "/img/bon-jour.jpg", "/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/coral.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1430,15 +3029,34 @@
     "category": "Mesa",
     "qty": 59,
     "source": "LED",
-    "material": ["Chapa", "Madera", "Polimero"],
-    "optic": ["Flood", "Spot", "Wideflood", "Ovalflood"],
-    "power": [57],
-    "cct": [3500],
-    "dim": ["Switch", "Dimeable", "Bluetooth"],
+    "material": [
+      "Chapa",
+      "Madera",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      57
+    ],
+    "cct": [
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 66748,
     "description": "Fusce consequat. Nulla nisl. Nunc nisl.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1449,15 +3067,35 @@
     "category": "Sistemas",
     "qty": 70,
     "source": "LED",
-    "material": ["Hierro", "Polimero"],
-    "optic": ["Flood", "Spot", "Wideflood", "Ovalflood"],
-    "power": [60],
-    "cct": [2700, 3000, 4000],
-    "dim": ["Dimeable", "Bluetooth", "Switch"],
+    "material": [
+      "Hierro",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      60
+    ],
+    "cct": [
+      2700,
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 45908,
     "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1468,15 +3106,29 @@
     "category": "Mesa",
     "qty": 51,
     "source": "Lámpara",
-    "material": ["Aluminio"],
-    "optic": ["Wideflood", "Spot"],
-    "power": [59],
-    "cct": [3500],
-    "dim": ["Switch", "Bluetooth"],
+    "material": [
+      "Aluminio"
+    ],
+    "optic": [
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      59
+    ],
+    "cct": [
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "Switch"
+    ],
     "price": 4589,
     "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1487,15 +3139,34 @@
     "category": "Spots",
     "qty": 60,
     "source": "Lámpara",
-    "material": ["Madera", "Hierro", "Chapa"],
-    "optic": ["Ovalflood"],
-    "power": [70],
-    "cct": [3500, 4000],
-    "dim": ["Switch", "DALI", "Dimeable"],
+    "material": [
+      "Chapa",
+      "Hierro",
+      "Madera"
+    ],
+    "optic": [
+      "Ovalflood"
+    ],
+    "power": [
+      70
+    ],
+    "cct": [
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 26420,
     "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/bon-jour.jpg", "/img/slider_1.jpg", "/img/delfina.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/delfina.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1506,15 +3177,37 @@
     "category": "apliques",
     "qty": 47,
     "source": "Lámpara",
-    "material": ["Polimero", "Madera", "Chapa", "Otros", "Aluminio"],
-    "optic": ["Spot", "Ovalflood"],
-    "power": [54],
-    "cct": [4000, 2700, 3500],
-    "dim": ["Bluetooth", "DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      54
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI"
+    ],
     "price": 29290,
     "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_3.jpg", "/img/bon-jour.jpg", "/img/product_main.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1525,15 +3218,39 @@
     "category": "Sistemas",
     "qty": 46,
     "source": "Lámpara",
-    "material": ["Polimero", "Madera", "Chapa", "Hierro", "Otros", "Aluminio"],
-    "optic": ["Ovalflood", "Spot", "Wideflood", "Flood"],
-    "power": [37, 13, 22],
-    "cct": [3500, 2700, 3000],
-    "dim": ["Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      13,
+      22,
+      37
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500
+    ],
+    "dim": [
+      "Dimeable"
+    ],
     "price": 53660,
     "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1544,15 +3261,38 @@
     "category": "Spots",
     "qty": 1,
     "source": "Lámpara",
-    "material": ["Polimero", "Hierro", "Chapa"],
-    "optic": ["Flood", "Spot", "Wideflood"],
-    "power": [71, 19, 12, 90],
-    "cct": [4000, 2700, 3500, 3000],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Chapa",
+      "Hierro",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      12,
+      19,
+      71,
+      90
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 37682,
     "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1563,15 +3303,34 @@
     "category": "Plafon",
     "qty": 26,
     "source": "LED",
-    "material": ["Madera", "Chapa"],
-    "optic": ["Spot", "Wideflood", "Flood", "Ovalflood"],
-    "power": [22],
-    "cct": [2700],
-    "dim": ["Dimeable", "Switch", "DALI"],
+    "material": [
+      "Chapa",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      22
+    ],
+    "cct": [
+      2700
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 28617,
     "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1582,15 +3341,38 @@
     "category": "Pie",
     "qty": 49,
     "source": "LED",
-    "material": ["Chapa", "Aluminio", "Hierro"],
-    "optic": ["Flood", "Wideflood", "Ovalflood", "Spot"],
-    "power": [13, 96, 14, 18],
-    "cct": [2700, 3500, 4000],
-    "dim": ["DALI"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      13,
+      14,
+      18,
+      96
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI"
+    ],
     "price": 28815,
     "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1601,15 +3383,36 @@
     "category": "Pie",
     "qty": 74,
     "source": "Lámpara",
-    "material": ["Aluminio", "Otros", "Polimero"],
-    "optic": ["Spot"],
-    "power": [89, 62, 30],
-    "cct": [4000, 2700],
-    "dim": ["Bluetooth", "DALI", "Switch"],
+    "material": [
+      "Aluminio",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Spot"
+    ],
+    "power": [
+      30,
+      62,
+      89
+    ],
+    "cct": [
+      2700,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 58268,
     "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/bon-jour.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1620,15 +3423,34 @@
     "category": "apliques",
     "qty": 66,
     "source": "LED",
-    "material": ["Chapa", "Hierro"],
-    "optic": ["Spot", "Flood"],
-    "power": [72, 15, 77],
-    "cct": [3500, 2700, 3000],
-    "dim": ["Bluetooth", "Dimeable"],
+    "material": [
+      "Chapa",
+      "Hierro"
+    ],
+    "optic": [
+      "Flood",
+      "Spot"
+    ],
+    "power": [
+      15,
+      72,
+      77
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "Dimeable"
+    ],
     "price": 17246,
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1639,15 +3461,39 @@
     "category": "apliques",
     "qty": 54,
     "source": "LED",
-    "material": ["Hierro", "Aluminio", "Otros", "Chapa"],
-    "optic": ["Spot", "Flood", "Wideflood", "Ovalflood"],
-    "power": [52, 95, 90],
-    "cct": [2700, 4000],
-    "dim": ["Switch", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      52,
+      90,
+      95
+    ],
+    "cct": [
+      2700,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "Switch"
+    ],
     "price": 67309,
     "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/bon-jour.jpg", "/img/coral.jpg", "/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/coral.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1658,15 +3504,38 @@
     "category": "Exterior",
     "qty": 0,
     "source": "LED",
-    "material": ["Aluminio", "Polimero", "Madera", "Hierro", "Otros"],
-    "optic": ["Flood"],
-    "power": [73, 75],
-    "cct": [3000, 4000],
-    "dim": ["DALI", "Switch", "Dimeable", "Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      73,
+      75
+    ],
+    "cct": [
+      3000,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 68719,
     "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/slider_3.jpg", "/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1677,15 +3546,37 @@
     "category": "Plafon",
     "qty": 27,
     "source": "LED",
-    "material": ["Otros", "Madera", "Hierro"],
-    "optic": ["Wideflood", "Ovalflood", "Spot", "Flood"],
-    "power": [63, 17, 59],
-    "cct": [4000, 3500, 2700],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Hierro",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      17,
+      59,
+      63
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 70479,
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1696,15 +3587,39 @@
     "category": "Pie",
     "qty": 5,
     "source": "LED",
-    "material": ["Hierro", "Chapa", "Aluminio"],
-    "optic": ["Wideflood", "Spot", "Flood", "Ovalflood"],
-    "power": [59, 61, 69],
-    "cct": [4000, 3500, 2700, 3000],
-    "dim": ["Switch"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      59,
+      61,
+      69
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Switch"
+    ],
     "price": 46449,
     "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/slider_2.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/slider_1.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1715,15 +3630,39 @@
     "category": "apliques",
     "qty": 32,
     "source": "LED",
-    "material": ["Polimero"],
-    "optic": ["Wideflood", "Ovalflood", "Flood", "Spot"],
-    "power": [80, 89, 21],
-    "cct": [2700, 3500, 4000],
-    "dim": ["DALI", "Dimeable", "Switch", "Bluetooth"],
+    "material": [
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      21,
+      80,
+      89
+    ],
+    "cct": [
+      2700,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 43083,
     "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/delfina.jpg", "/img/coral.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/delfina.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1734,15 +3673,35 @@
     "category": "Plafon",
     "qty": 69,
     "source": "LED",
-    "material": ["Polimero", "Aluminio", "Hierro"],
-    "optic": ["Spot", "Ovalflood"],
-    "power": [14, 8, 73],
-    "cct": [3000, 3500],
-    "dim": ["Switch"],
+    "material": [
+      "Aluminio",
+      "Hierro",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      14,
+      73,
+      8
+    ],
+    "cct": [
+      3000,
+      3500
+    ],
+    "dim": [
+      "Switch"
+    ],
     "price": 38606,
     "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/product_main.jpg", "/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/delfina.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1753,15 +3712,36 @@
     "category": "Colgantes",
     "qty": 55,
     "source": "LED",
-    "material": ["Chapa", "Polimero", "Madera", "Hierro", "Aluminio", "Otros"],
-    "optic": ["Wideflood", "Ovalflood"],
-    "power": [100, 87, 72],
-    "cct": [3000, 3500],
-    "dim": ["Bluetooth"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      100,
+      72,
+      87
+    ],
+    "cct": [
+      3000,
+      3500
+    ],
+    "dim": [
+      "Bluetooth"
+    ],
     "price": 66055,
     "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/product_main.jpg"],
+    "image_slider": [
+      "/img/product_main.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1772,15 +3752,35 @@
     "category": "Pie",
     "qty": 60,
     "source": "LED",
-    "material": ["Aluminio", "Madera", "Polimero", "Otros"],
-    "optic": ["Spot", "Ovalflood", "Flood", "Wideflood"],
-    "power": [100],
-    "cct": [3500],
-    "dim": ["Bluetooth", "DALI", "Switch"],
+    "material": [
+      "Aluminio",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      100
+    ],
+    "cct": [
+      3500
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 927,
     "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": ["/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1791,15 +3791,31 @@
     "category": "Plafon",
     "qty": 67,
     "source": "LED",
-    "material": ["Polimero"],
-    "optic": ["Spot"],
-    "power": [57],
-    "cct": [3000],
-    "dim": ["DALI", "Switch", "Bluetooth"],
+    "material": [
+      "Polimero"
+    ],
+    "optic": [
+      "Spot"
+    ],
+    "power": [
+      57
+    ],
+    "cct": [
+      3000
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Switch"
+    ],
     "price": 44730,
     "description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/product_main.jpg", "/img/coral.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1810,15 +3826,32 @@
     "category": "Sistemas",
     "qty": 15,
     "source": "Lámpara",
-    "material": ["Otros", "Aluminio"],
-    "optic": ["Flood", "Spot", "Ovalflood"],
-    "power": [63],
-    "cct": [3000, 4000],
-    "dim": ["Switch", "DALI"],
+    "material": [
+      "Aluminio",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot"
+    ],
+    "power": [
+      63
+    ],
+    "cct": [
+      3000,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Switch"
+    ],
     "price": 36555,
     "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1829,15 +3862,40 @@
     "category": "Exterior",
     "qty": 72,
     "source": "LED",
-    "material": ["Madera", "Aluminio", "Otros", "Hierro"],
-    "optic": ["Flood", "Ovalflood", "Wideflood", "Spot"],
-    "power": [3, 24, 24, 81],
-    "cct": [3000, 2700, 3500],
-    "dim": ["Dimeable", "Switch"],
+    "material": [
+      "Aluminio",
+      "Hierro",
+      "Madera",
+      "Otros"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Spot",
+      "Wideflood"
+    ],
+    "power": [
+      24,
+      24,
+      3,
+      81
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500
+    ],
+    "dim": [
+      "Dimeable",
+      "Switch"
+    ],
     "price": 25796,
     "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "main_image": "/img/coral.jpg",
-    "image_slider": ["/img/bon-jour.jpg", "/img/slider_2.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_2.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1848,15 +3906,39 @@
     "category": "Sistemas",
     "qty": 52,
     "source": "LED",
-    "material": ["Madera", "Aluminio", "Hierro", "Chapa", "Otros", "Polimero"],
-    "optic": ["Ovalflood"],
-    "power": [100, 74, 13, 74],
-    "cct": [4000, 3500, 3000, 2700],
-    "dim": ["Dimeable"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Hierro",
+      "Madera",
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Ovalflood"
+    ],
+    "power": [
+      100,
+      13,
+      74,
+      74
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "Dimeable"
+    ],
     "price": 15641,
     "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/slider_2.jpg", "/img/slider_3.jpg"],
+    "image_slider": [
+      "/img/slider_2.jpg",
+      "/img/slider_3.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1867,15 +3949,38 @@
     "category": "Spots",
     "qty": 2,
     "source": "Lámpara",
-    "material": ["Otros", "Polimero"],
-    "optic": ["Ovalflood", "Flood", "Wideflood"],
-    "power": [79, 28, 30],
-    "cct": [2700, 3500, 4000, 3000],
-    "dim": ["Switch", "Dimeable", "DALI"],
+    "material": [
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      28,
+      30,
+      79
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 31355,
     "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": ["/img/slider_1.jpg", "/img/bon-jour.jpg"],
+    "image_slider": [
+      "/img/bon-jour.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
@@ -1886,17 +3991,57 @@
     "category": "Plafon",
     "qty": 1,
     "source": "Lámpara",
-    "material": ["Polimero", "Chapa", "Aluminio"],
-    "optic": ["Wideflood"],
-    "power": [46, 1, 1],
-    "cct": [2700],
-    "dim": ["DALI", "Dimeable", "Bluetooth", "Switch"],
+    "material": [
+      "Aluminio",
+      "Chapa",
+      "Polimero"
+    ],
+    "optic": [
+      "Wideflood"
+    ],
+    "power": [
+      1,
+      1,
+      46
+    ],
+    "cct": [
+      2700
+    ],
+    "dim": [
+      "Bluetooth",
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
     "price": 48528,
     "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": ["/img/coral.jpg", "/img/product_main.jpg", "/img/slider_1.jpg"],
+    "image_slider": [
+      "/img/coral.jpg",
+      "/img/product_main.jpg",
+      "/img/slider_1.jpg"
+    ],
     "image_dimension": "/img/product_dimensions.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
+  },
+  {
+    "category": "",
+    "name": "thfgh",
+    "qty": "23",
+    "material": [],
+    "power": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "price": "2332",
+    "id": 101,
+    "image_slider": [],
+    "main_image": "/img/1623731748210.jpg",
+    "optic": [],
+    "cct": [],
+    "dim": []
   }
 ]
