@@ -55,8 +55,11 @@
                                             <span><i class="far fa-user-circle"></i>
                                                 Subir foto de perfil</span>
                                         </label>
+                                        <%if(locals.errors && errors.profileImg){%>
+                                            <span class="error-message"><%=errors.profileImg.msg%></span>
+                                            <%}%>
                                         <div id="info"></div>
-                                        <input id="file-upload" name="profile-img" onchange='cambiar()' type="file" style='display: none;'/>
+                                        <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none;'/>
                     <div class="button-container">
                         <button type="submit" class="login-button">Continuar</button>
                     </div>
