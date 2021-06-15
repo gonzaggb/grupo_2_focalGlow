@@ -135,8 +135,15 @@ label{
     align-content: center;
     background-color: rgba(0,0,0,0.1);
     }
-    
+    label{
+        transition: 0.2s;
+    }
+    label:hover{
+        color: #ffde59;
+        text-decoration: underline;
+        
 
+    }
      .category-selector{
         width: 100%;
     }
