@@ -6,10 +6,12 @@ const multer = require('multer')
 const path = require('path')
 const { body } = require('express-validator')
 const validations = [
-    body('name').notEmpty(),
-    body('surname').notEmpty(),
-    body('email').notEmpty().isEmail(),
-    body('password').notEmpty().isStrongPassword()
+    body('name').notEmpty().withMessage('Debes poner tu nombre'),
+    body('surname').notEmpty().withMessage('Debes poner tu apellido'),
+    body('email').notEmpty().withMessage('Debes poner tu email'),
+    body('password').notEmpty().withMessage('Debes poner una contraseña'),
+    body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña')
+
 ]
 
 var storage = multer.diskStorage({

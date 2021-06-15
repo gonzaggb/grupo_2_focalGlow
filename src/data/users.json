@@ -27,5 +27,13 @@
     "password": "123",
     "profileImg": "/img/profile-pictures/1623250634275.jpg",
     "id": 4
+  },
+  {
+    "name": "prueba",
+    "surname": "asd",
+    "email": "gonzaggb@hotmail.com",
+    "password": "asd",
+    "profileImg": "/img/profile-pictures/1623788550000.jpeg",
+    "id": 5
   }
 ]

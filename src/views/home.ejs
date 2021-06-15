@@ -51,15 +51,13 @@
         <h2 id="sale">SALE</h2>
         <div class="elementos">
             <%for(i=0; i < 4; i++){%>
-              <%const random = getRandomInt(0, homeData.products.length)%>
-
               <div id="first-box" class="box">
-                <img src="<%=homeData.products[random].homeImage%>" alt="<%=homeData.products[random].producto%>">
+                <img src="<%=homeData.products[randomArray[i]].main_image%>" alt="<%=homeData.products[randomArray[i]].name%>">
                 <a href="/product">
                   <div class="capa">
                     <h2>
-                      <%= homeData.products[random].producto %> <br><br>
-                        $<%= homeData.products[random].precio %>
+                      <%= homeData.products[randomArray[i]].name %> <br><br>
+                        $<%= homeData.products[randomArray[i]].price %>
                     </h2>
                   </div>
                 </a>

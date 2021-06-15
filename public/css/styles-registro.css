@@ -125,6 +125,24 @@ body{
     background-color: #ffde59;
 
 }
+.error{
+    width: 90%;
+    outline:none;
+    border:none;
+    border-bottom: white 1px solid;
+    margin: 5px;
+    background-color: rgba(0,0,0,0);
+    color:white;
+    font-size: 15px;
+    border-radius: 0%;
+    transition: all 0.6s;
+    height: 20px;
+}
+.error::placeholder{
+    color: red;
+    opacity: 90%;
+    transition: all 0.7s; 
+}
 
 .error-message{
     color:red;
