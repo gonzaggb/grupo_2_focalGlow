@@ -1,5 +1,5 @@
 <%- include ('partials/head')%>
-  <title>Focal Glow Categoría</title>
+  <title>Focal Glow | <%=dataCategory.category.name%></title>
   <link rel = "stylesheet" href = "/css/style_categories_general.css">
   
 </head>
@@ -18,15 +18,17 @@
 
     <section class="item-list">
       
-      <% for (i=0;i<dataCategory.product.length;i++) { %>
+      <% dataCategory.product.forEach(element => {%>
         <article class="producto">
-          <a href="/product/detail/<%=i%>"><img class="zoom" src="/img/product_main.jpg" alt=""></a>
+          <a href="/product/detail/<%=element.id%>"><img class="zoom" src="<%=element.main_image%>" alt=""></a>
           <div class="nombre-precio">       
-            <p class ="nombre">Nombre del producto: <%=dataCategory.product[i].producto%></p>
-            <p class ="precio">Desde: <%=dataCategory.product[i].precio%></p>       
+            <p class ="nombre">Nombre del producto: <%=element.name%></p>
+            <p class ="precio">Desde: <%=element.price%></p>       
           </div>
         </article>
-      <%}%>
+      <%}) %>
+        
+      
 
     </section>
   </main>

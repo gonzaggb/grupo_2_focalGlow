@@ -1,4 +1,5 @@
 <%- include('../partials/head.ejs')%>
+<title>Focal Glow | Listado de Productos</title>  
 <link rel="stylesheet" href="/css/style-product-list.css" />
 </head>
     <body>
@@ -6,38 +7,73 @@
         <h3 class="titulo">Listado de productos</h3>
         <div class="add-container">
             
-        <a href="/product/add"><button class="add-product">Agregar producto</button></a>
+        <a href="/product/add"><button id="product-create" class="add-product">Agregar producto</button></a>
         </div>
         <h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %> </h4>
         <h4 class='form-lista-productos'> Recordá que los primeros 4 productos son los que van a SALE</h4>
         <div class='form-lista-productos'>
-
-            <% for (let i =0 ; i < products.length; i++) {%>
-               
-                <h2>ID: <%=products[i].id%></h2>      
-                <h2>Categoria: <%=products[i].categoria%></h2>
-                <h2>Nombre: <%=products[i].producto%></h2>
-                <h2>Cantidad: <%=products[i].cantidad%></h2>
-                <h2>Fuente: <%=products[i].fuente%></h2>
-                <h2>Material: <%=products[i].material%></h2>
-                <h2>Optica: <%=products[i].optica%></h2>
-                <h2>Potencia: <%=products[i].potencia%></h2>
-                <h2>CCT: <%=products[i].cct%></h2>
-                <h2>Dim: <%=products[i].dim%></h2>
-                <h2>Precio: $<%=products[i].precio%></h2>
-                <h2>Archivos: <%=products[i].file%></h2>
-                <div>
-                <div class="button-container"> 
-                <a href='/product/detail/:<%=products[i].id%>'><button id="button-product">Ver Producto</button></a>
-                <a href='/product/<%=products[i].id%>/edit'><button id="button-modificar">Modificar</button></a>
-                 <form  class='' action="/product/<%=products[i].id%>?_method=DELETE"  method="POST">    
-                    <button id="button-eliminar" type="submit">Eliminar</button>
-                </form>     
-                </div>      
+            <div class="product_container">
+                <h2>ID
+                </h2>
+                <h2>Categoria
+                </h2>
+                <div class="inner_data">
+                    <h2>Nombre
+                    </h2>
+            
                 </div>
+                <div class="inner_data">
+                    <h2>Imagen
+
+                    </h2>
+                </div>
+                <div class="inner_data">
+                    <h2>Cantidad
+                    </h2>
+                </div>
+                <div class="inner_data">
+                    <h2>Precio
+                    </h2>
+                </div>
+                <div class="inner_data">
+                    <h2>Accion
+                    </h2>
+                </div>
+            </div>    
+            <% for (let i =0 ; i < products.length; i++) {%>
+              <div class="product_container"> 
+                 <h2> <%=products[i].id%></h2> 
+                <h2 ><%=products[i].category%></h2>
+                <div class="inner_data">
+                    <h2><%=products[i].name%></h2>
+                    
+                </div>
+                <div class="inner_img">
+                    <img src="<%=products[i].main_image%>" alt="" width="60" height="60">
+                </div>
+                <div class="inner_data">
+                    <h2><%=products[i].qty%></h2>
+                </div>
+                <div class="inner_data">
+                    <h2>$<%=products[i].price%></h2>
+                </div>     
+                <div >
+                    <div class="button-container"> 
+                        <a href='/product/detail/<%=products[i].id%>'><i class="fas fa-search"><!-- <button id="button-product">Ver Producto</button> --></i></a>
+                        <a href='/product/<%=products[i].id%>/edit'><i class="far fa-edit"><!-- <button id="button-modificar">Modificar</button> --></i></a>
+                    <form  class='' action="/product/<%=products[i].id%>?_method=DELETE"  method="POST">    
+                           <button type="submit" class="delete_icon"><i class="far fa-trash-alt"></i></button><!-- <button id="button-eliminar" type="submit">Eliminar</button> -->
+                        </form> 
                             
+                    </div>      
+                </div>
+              </div>               
            <%}%>
+        
         </div>  
+        <div class="up-button">
+            <a href="#product-create"><i class="fas fa-chevron-up"></i></a>
+        </div>
 
         <%- include('../partials/footer.ejs')%>
     </body>

@@ -40,7 +40,7 @@
           <!--unifique las imagenes en una sola caja para mostrar mejor-->
           <div class="category-box">
             <%for(i=0; i < homeData.categoryList.length; i++) { %>
-              <a href="/categorias/<%=i+1%>"><img class="zoom" src="<%=homeData.categoryList[i].homeImage%>"
+              <a href="/categorias/<%=homeData.categoryList[i].name+"/"+homeData.categoryList[i].id%>"><img class="zoom" src="<%=homeData.categoryList[i].homeImage%>"
                   alt="<%=homeData.categoryList[i].name%>"></a>
               <%}%>
           </div>

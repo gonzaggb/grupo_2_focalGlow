@@ -1,11 +1,22 @@
+# Focal Glow
 
-# grupo_2_ecommerce
-   ![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)
+![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)
 
-                       
-Trabajo integrador Digital House
+# Digital House - Proyecto Integrador Fullstack Developer
 
-Trello: https://trello.com/b/CuQYclp3/focal-glow
+Este es el proyecto integrador para el curso de Fullstack Developer de Digital House - Marzo 2021
+
+Grupo 2: Armando-Baigorria-Leguizamón
+
+## Contenido
+
+- [Overview](#overview)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+  - [Webs de referencia](#webs-de-referencia)
+  - [Autores](#autores)
+
+## Overview
 
 Nombre del e-commerce: Focal Glow
 
@@ -20,7 +31,17 @@ Por un lado a la persona que quiere un elemento de diseño exclusivo en su hogar
 El nombre:
 Focal Glow es un término utilizado en iluminación arquitectural que indica la dirección del espacio. Te orienta, es la luz que te ayuda a focalizarte. Focal Glow llama la atención, une las partes divergentes, vende mercadería, separa lo importante de lo no importante.
 
-Webs de referencia:
+### Screenshot
+
+![](design/Screenshot.jpg)
+
+## Links
+
+Live Site URL: [https://focalglow.herokuapp.com/]
+
+Trello: [https://trello.com/b/CuQYclp3/focal-glow]
+
+## Webs de referencia
 
 Argentinas
 
@@ -38,18 +59,16 @@ https://flos.com/es/
 
 https://www.louispoulsen.com/
 
+## Autores
 
-Integrantes:
-Pablo Daniel Armando 
-Desde que tengo uso de razón que me apasiona el mundo de la programación, desde hace mucho tiempo que trabajo en un ambiente totalmente alejado de lo que realmente me gusta, y por eso con ayuda de este curso voy a  cambiar esa realidad, ya sea ingresando a una empresa, trabajando freelance o porque no, incursionar en el mundo de la enseñanza.  
+Pablo Daniel Armando [https://github.com/Pablito-1988]
 
+Desde que tengo uso de razón que me apasiona el mundo de la programación, desde hace mucho tiempo que trabajo en un ambiente totalmente alejado de lo que realmente me gusta, y por eso con ayuda de este curso voy a cambiar esa realidad, ya sea ingresando a una empresa, trabajando freelance o porque no, incursionar en el mundo de la enseñanza.
 
+Gonzalo Baigorra [https://github.com/gonzaggb]
 
-Gonzalo Baigorra
 Actualmente trabajo en un empresa de tecnología, pero en un area orientada a lo comercial. Espero a través de este curso poder sumar otro valor para la compañia, además de encarar otros desafíos a nivel profesional, ya que la programación es una asignatura pendiente en mi vida.
 
-Martiniano Leguizamón (Mars)
+Martiniano Leguizamón (Mars) [https://github.com/martinianol]
+
 Soy un apasionado de la Luz. Tomo el principio “less is more” de Mies Van der Rohe como mi filosofía personal en iluminación. He recorrido el mundo y profundizado mi conocimiento no sólo en el aspecto técnico sino en el concepto de proveer soluciones en vez de luminarias y quiero hacer lo mismo con la programación.
-
-
-

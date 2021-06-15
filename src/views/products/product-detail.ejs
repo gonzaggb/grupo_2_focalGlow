@@ -1,6 +1,6 @@
 <%- include ('../partials/head')%>
-    <title>Focal Glow Product Detail</title>
-    <link rel="stylesheet" href="/css/style-product-detail.css" />
+  <title>Focal Glow | <%=productFound.name%></title>            
+  <link rel="stylesheet" href="/css/style-product-detail.css" />
   </head>
 
   <body>
@@ -8,91 +8,96 @@
     <%- include ('../partials/header')%>
 
     <div class="product-name">
-      <h2><%=productFound.producto%></h2>
-      <a href="#" onclick="history.go(-1)"><i id="x" class="fas fa-times"></i></a>
+      <h2><%=productFound.name%></h2>
+      <a href="#" onclick="history.go(-1)"><i id="x" class="fas fa-arrow-circle-left"></i></a>
     </div>
 
     <main>
       <div class="product-detail">
         <div class="main-img">
-          <img src="/img/product_main.jpg" alt="luminaria" />
+          <img src="<%=productFound.main_image%>" alt="luminaria" />
         </div>
         <i class="fas fa-ruler"></i>
 
         <div class="product-dimensions">
-          <img src="/img/product_dimensions.jpg" alt="dimensiones luminaria" />
+          <img src="<%=productFound.image_dimension%>" alt="dimensiones luminaria" />
         </div>
 
         <div class="slider-container">
-          <div class="slides">
-            <input type="radio" name="r" id="r1" checked />
-            <input type="radio" name="r" id="r2" />
-            <input type="radio" name="r" id="r3" />
-            <input type="radio" name="r" id="rp" />
-            <input type="radio" name="r" id="rn" />
-
-            <div class="slide s1">
-              <img src="/img/slider_1.jpg" alt="" />
-            </div>
-            <div class="slide">
-              <img src="/img/slider_2.jpg" alt="" />
-            </div>
-            <div class="slide">
-              <img src="/img/slider_3.jpg" alt="" />
-            </div>
-          </div>
-
-          <!-- Next and previous buttons -->
-          <label for="rp" class="prev">&#10094;</label>
-          <label for="rn" class="next">&#10095;</label>
-
-          <!-- Slider buttons -->
-          <div class="dots-container">
-            <label for="r1" class="dot"></label>
-            <label for="r2" class="dot"></label>
-            <label for="r3" class="dot"></label>
-          </div>
+          <% productFound.image_slider.forEach((element, index) => { %>
+            <input type="radio" id="trigger<%=index%>" name="slider" checked autofocus>
+            <label for="trigger<%=index%>"></label>
+            <div class="slide <%=index%>">
+              <img src ="<%=element%>">
+            </div>  
+          <%})%>;
+         
         </div>
       </div>
 
       <div class="product-info">
         <section class="technical-info">
-          <div class="options">
-            <div class="options-power-cct">
-              <select name="power" class="options-control">
-                <option value="10W">10W</option>
-                <option value="20W">20W</option>
-                <option value="30W">30W</option>
+          <div class = "technical-info-title">
+            <h3>Configure su producto</h3>
+            <p>Potencia, Temperatura de Color, Óptica & Control</p>
+          </div>
+          <div class = "options">
+            <div class="options-column">
+              <select name="power" class="btn">
+                <%productFound.power.forEach(function (element) { 
+                  if (element != ""){%>
+                    <option value="<%=element%>"><%=element%>W</option>
+                  <% }}) %>
               </select>
-              <select name="cct" class="options-control">
-                <option value="3000K">3000K</option>
-                <option value="4000K">4000K</option>
+              <select name="cct" class="btn">
+                <%productFound.cct.forEach(function (element) { 
+                  if (element != "") {%>
+                <option value="<%=element%>"><%=element%>K</option>
+                <% }}) %>
               </select>
             </div>
-
-            <select name="dim" class="options-control-dim">
-              <option value="switch" id="off-icon">&#xf011; Switch</option>
-              <option value="dim">Dimeable</option>
-              <option value="dali">DALI</option>
-              <option value="bt" id="bt-icon">&#xf293; Bluetooth</option>
-            </select>
+            <div class="options-column">
+              <select name="optic" class="btn">
+                <%productFound.optic.forEach(function (element) { 
+                  if (element != "") {%>
+                <option value="<%=element%>"><%=element%></option>
+                <% }}) %>
+              </select>
+              <select name="dim" class="btn">
+                <%productFound.dim.forEach(function (element) { 
+                  switch (element) {
+                    case '':
+                      break
+                    case 'Switch':%>
+                      <option value="<%=element%>">&#xf011; <%=element%></option>
+                    <%  break
+                    case 'Bluetooth': %>
+                      <option value="<%=element%>">&#xf293; <%=element%></option>
+                    <% break
+                    default:%>
+                    <option value="<%=element%>"><%=element%></option>
+                  <%  break;
+                }}) %>
+              </select>
+            </div>
           </div>
-
+        
           <article class="technical-data">
             <h3>Características</h3>
             <ul>
-              <li>Fuente: LED</li>
-              <li>Material: Aluminio</li>
-              <li>Óptica: Flood</li>
-              <li>Potencia [W]: <em>Seleccionar opción</em></li>
-              <li>CCT: <em>Seleccionar opción</em></li>
-              <li>Dim: <em>Seleccionar opción</em></li>
+              <li>Fuente: <%=(productFound.source).toUpperCase()%></li>
+              <li>Material:  <%=productFound.material.join('-')%></li>
             </ul>
+            <p><strong>Descripción:</strong> <br>
+              <%=productFound.description%></p>
           </article>
         </section>
 
         <section class="price">
-          <h3 class="price-title">$14.500</h3>
+          <h3 class="price-title">$ 
+            <% const toThousand = (n) =>
+                n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+             <%= toThousand(productFound.price)%></h3>
           <div class="qtyadd">
             <input type="number" placeholder="1" min="0" />
             <button class="add">AÑADIR</button>
@@ -100,13 +105,13 @@
         </section>
 
         <div class="product-dimensions-info">
-          <img src="/img/product_dimensions.jpg" alt="dimensiones luminaria" />
+          <img src="<%=productFound.image_dimension%>" alt="dimensiones luminaria" />
           <span>Dimensiones</span>
         </div>
 
         <section class="documents">
-          <span><i class="far fa-file-pdf"></i> Hoja Técnica</span>
-          <span><i class="far fa-file-pdf"></i> Manual de Instalación</span>
+          <a href="<%=productFound.data_sheet%>" target="_blank"><span><i class="far fa-file-pdf"></i> Hoja Técnica</span></a>
+          <a href="<%=productFound.install_sheet%>"target="_blank"><span><i class="far fa-file-pdf"></i> Manual de Instalación</span></a>
         </section>
       </div>
     </main>
@@ -114,40 +119,19 @@
     <section class="similar-products-container">
       <article class="similar-products">
         <h3>Productos Similares</h3>
-        <div class="slider-container-2">
-          <div class="slides-2">
-            <input type="radio" name="r" id="r1-2" checked />
-            <input type="radio" name="r" id="r2-2" />
-            <input type="radio" name="r" id="r3-2" />
-            <input type="radio" name="r" id="rp-2" />
-            <input type="radio" name="r" id="rn-2" />
-
-            <div class="slide s2">
-              <img src="/img/similar_products_1.jpg" alt="" />
-            </div>
-            <div class="slide-2">
-              <img src="/img/similar_products_2.jpg" alt="" />
-            </div>
-            <div class="slide-2">
-              <img src="/img/similar_products_3.jpg" alt="" />
-            </div>
-          </div>
-
-          <!-- Next and previous buttons -->
-          <div class="prev-next-buttons-2">
-            <label for="rp-2" class="prev">&#10094;</label>
-            <label for="rn-2" class="next">&#10095;</label>
-          </div>
-
-          <!-- Slider buttons -->
-          <div class="dots-container-2">
-            <label for="r1-2" class="dot"></label>
-            <label for="r2-2" class="dot"></label>
-            <label for="r3-2" class="dot"></label>
-          </div>
+        <div class="slider-container">
+          <% similarProducts.forEach((element, index) => { %>
+            <input type="radio" id="trigger<%=index + productFound.image_slider.length%>" name="slider2" checked autofocus >
+            <label for="trigger<%=index + productFound.image_slider.length%>"></label>
+            <div class="slide2 <%=index + productFound.image_slider.length%>">
+              <a href="/product/detail/<%=element.id%>"><img src ="<%=element.main_image%>"></a>
+            </div>  
+          <%}) %>
         </div>
       </article>
     </section>
+
+    
 
     <!--FOOTER-->
     <%- include('../partials/footer') %>

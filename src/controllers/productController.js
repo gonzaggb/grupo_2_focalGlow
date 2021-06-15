@@ -1,5 +1,7 @@
 //Requiero el modelo product para poder usar todos sus metodos
 const product = require('../models/product')
+// se requiere express-validator, pero la parte de validation result
+const {validationResult}= require('express-validator')
 
 const controller = {
   list: (req, res) => {
@@ -9,16 +11,27 @@ const controller = {
   detail: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
-    res.render('products/product-detail.ejs', { productFound })
+    let category = productFound.category
+    let similarProducts = product.filterByCategory(category)
+    res.render('products/product-detail.ejs', { productFound, similarProducts })
   },
-
   formNew: (req, res) => {
     res.render('products/product-create.ejs')
   },
   create: (req, res) => {
-    const productNew = req.body
-    product.create(productNew)
+    let errors = validationResult(req)
+    if(errors.isEmpty()){
+      const productNew = req.body
+    const files = req.files
+
+    
+    product.create(productNew, files)
     res.redirect('/product/list')
+    } else {
+      res.render('products/product-create.ejs',
+       { errors: errors.array(),
+         old: req.body})
+    } 
   },
 
   edit: (req, res) => {
@@ -29,6 +42,12 @@ const controller = {
   update: (req, res) => {
     let data = req.body
     let id = req.params.id
+    let productOriginal = product.findByPk(id)
+    let {files} = req
+   
+    
+    console.log(data)
+    return
     product.update(data, id)
     res.redirect('/product/list')
   },

@@ -17,6 +17,7 @@ body{
     font-size: 40px;
     color: black;
     margin-top: 20px;
+    margin-bottom: 20px;
     line-height: 34px;
 }
 .container-form{
@@ -125,16 +126,43 @@ label{
     }
 }
 @media(min-width: 1000px){
+   
     #register {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     flex-wrap: wrap; 
     align-content: center;
-    
+    background-color: rgba(0,0,0,0.1);
+    }
+    .error_msg{
+        margin-left: 10px;
+        font-size: 18px;
+        color: red;
+    }
+    label{
+        transition: 0.2s;
+    }
+    label:hover{
+        color: #ffde59;
+        text-decoration: underline;
+        
+
     }
      .category-selector{
         width: 100%;
+    }
+    .form_left{
+        width: 50%;
+        border-right: 1px solid black;
+    }
+    .form_right{
+        width: 50%;
+        padding-left: 5%;
+
+    }
+    .price{
+        width: 30%;
     }
     .box {
     border: 0;
@@ -145,12 +173,17 @@ label{
     }
     .imagenes{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
-    .imagen-input {
-    margin-right: 100px;
-    margin-bottom: 10px;
-}
+    #output{
+        width: 150px;
+        height: 150px;
+        margin-top: 10px;
+        margin-left: 70px;
+        object-fit: contain;
+        border: 0;
+    }
+    
    
     .button-container{
         display: flex;
