@@ -126,6 +126,7 @@ label{
     }
 }
 @media(min-width: 1000px){
+   
     #register {
     display: flex;
     flex-direction: row;

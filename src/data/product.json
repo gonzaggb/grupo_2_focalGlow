@@ -1,4143 +1,1902 @@
 [
   {
     "id": 1,
-    "name": "Hen, sage",
-    "category": "Sistemas",
-    "qty": 39,
+    "name": "Raccoon, crab-eating",
+    "category": "Plafon",
+    "qty": 46,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      15
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 1480,
-    "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-    "file": [
-      "Neque.mp3"
-    ],
+    "material": ["Chapa"],
+    "optic": ["Flood", "Wideflood", "Ovalflood"],
+    "power": [1, 38],
+    "cct": [3500, 2700, 3000, 4000],
+    "dim": ["Dimeable", "Switch", "DALI", "Bluetooth"],
+    "price": 10161,
+    "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
     "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_2.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 2,
-    "name": "Grey lourie",
-    "category": "Pie",
-    "qty": 61,
+    "name": "American racer",
+    "category": "Exterior",
+    "qty": 48,
     "source": "LED",
-    "material": [
-      "Hierro"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood"
-    ],
-    "power": [
-      66
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 1268,
-    "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-    "file": [
-      "ConvallisNullaNeque.ppt",
-      "Magna.ppt"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Chapa", "Polimero", "Madera", "Hierro", "Aluminio", "Otros"],
+    "optic": ["Ovalflood", "Wideflood", "Spot", "Flood"],
+    "power": [85, 94],
+    "cct": [4000],
+    "dim": ["Switch", "DALI"],
+    "price": 44690,
+    "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
+  },
+  {
+    "id": 3,
+    "name": "Baboon, gelada",
+    "category": "Sistemas",
+    "qty": 41,
+    "source": "LED",
+    "material": ["Aluminio", "Otros", "Chapa"],
+    "optic": ["Wideflood", "Flood", "Spot"],
+    "power": [68, 15, 49, 77],
+    "cct": [3500, 2700, 4000, 3000],
+    "dim": ["DALI", "Bluetooth"],
+    "price": 25842,
+    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 4,
-    "name": "Tayra",
-    "category": "Spots",
-    "qty": 67,
+    "name": "Columbian rainbow boa",
+    "category": "Colgantes",
+    "qty": 71,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Otros"
-    ],
-    "optic": [
-      "Ovalflood"
-    ],
-    "power": [
-      51,
-      58,
-      73
-    ],
-    "cct": [
-      2700,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 28911,
-    "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-    "file": [
-      "EgetOrciVehicula.txt",
-      "VivamusVel.txt"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Aluminio", "Otros", "Madera", "Hierro", "Chapa"],
+    "optic": ["Ovalflood", "Flood", "Wideflood", "Spot"],
+    "power": [33, 83, 2, 43],
+    "cct": [3000, 3500],
+    "dim": ["Switch", "DALI", "Dimeable"],
+    "price": 38676,
+    "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/delfina.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 5,
-    "name": "Sloth, hoffman's",
-    "category": "Apliques",
-    "qty": 74,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      33,
-      36
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "Dimeable"
-    ],
-    "price": 14569,
-    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-    "file": [
-      "Lectus.xls",
-      "LoremQuisque.xls"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Greater blue-eared starling",
+    "category": "Mesa",
+    "qty": 33,
+    "source": "Lámpara",
+    "material": ["Otros", "Hierro", "Polimero", "Chapa", "Madera"],
+    "optic": ["Ovalflood", "Flood", "Spot"],
+    "power": [31, 16, 4],
+    "cct": [4000, 3000, 2700, 3500],
+    "dim": ["Switch", "Dimeable", "DALI"],
+    "price": 9198,
+    "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/product_main.jpg", "/img/delfina.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 6,
-    "name": "Ring-tailed possum",
-    "category": "Sistemas",
-    "qty": 35,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      15,
-      38,
-      81
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 37388,
-    "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-    "file": [
-      "EtiamVelAugue.mp3",
-      "VivamusMetus.mp3"
-    ],
+    "name": "Gaur",
+    "category": "Spots",
+    "qty": 46,
+    "source": "LED",
+    "material": ["Chapa", "Madera", "Otros"],
+    "optic": ["Wideflood"],
+    "power": [35, 100, 67],
+    "cct": [4000],
+    "dim": ["DALI", "Switch", "Dimeable", "Bluetooth"],
+    "price": 13585,
+    "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 7,
-    "name": "Cormorant, great",
-    "category": "Colgantes",
-    "qty": 69,
-    "source": "Lámpara",
-    "material": [
-      "Madera"
-    ],
-    "optic": [
-      "Flood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      41,
-      41,
-      78
-    ],
-    "cct": [
-      2700,
-      3000,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 49770,
-    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-    "file": [
-      "AdipiscingElitProin.ppt",
-      "Semper.ppt"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Mongoose, eastern dwarf",
+    "category": "Mesa",
+    "qty": 54,
+    "source": "LED",
+    "material": ["Polimero"],
+    "optic": ["Wideflood", "Spot", "Flood"],
+    "power": [41],
+    "cct": [2700, 4000, 3500, 3000],
+    "dim": ["Bluetooth"],
+    "price": 14272,
+    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 8,
-    "name": "Dove, little brown",
-    "category": "Plafon",
-    "qty": 52,
+    "name": "Whale, killer",
+    "category": "apliques",
+    "qty": 26,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot"
-    ],
-    "power": [
-      38
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "Switch"
-    ],
-    "price": 36625,
-    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-    "file": [
-      "UtMaurisEget.ppt",
-      "Vivamus.ppt"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Hierro", "Madera"],
+    "optic": ["Ovalflood", "Spot"],
+    "power": [44, 94, 13],
+    "cct": [4000, 3000, 2700],
+    "dim": ["Bluetooth", "Switch", "Dimeable", "DALI"],
+    "price": 11671,
+    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 9,
-    "name": "Thomson's gazelle",
+    "name": "Bustard, denham's",
     "category": "Colgantes",
-    "qty": 1,
-    "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Polimero"
-    ],
-    "optic": [
-      "Spot"
-    ],
-    "power": [
-      42,
-      94
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 55512,
-    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-    "file": [
-      "Convallis.jpeg",
-      "Suspendisse.jpeg"
-    ],
+    "qty": 56,
+    "source": "LED",
+    "material": ["Chapa", "Aluminio"],
+    "optic": ["Wideflood"],
+    "power": [31, 78, 68],
+    "cct": [3500, 4000, 3000, 2700],
+    "dim": ["Dimeable", "DALI", "Bluetooth", "Switch"],
+    "price": 49960,
+    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 10,
-    "name": "Trotter, lily",
-    "category": "Mesa",
-    "qty": 35,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Wideflood"
-    ],
-    "power": [
-      52,
-      69
-    ],
-    "cct": [
-      2700,
-      3000,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 36767,
-    "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-    "file": [
-      "AtNulla.pdf",
-      "IdMauris.pdf"
-    ],
+    "name": "Parakeet, rose-ringed",
+    "category": "Spots",
+    "qty": 64,
+    "source": "LED",
+    "material": ["Aluminio", "Polimero"],
+    "optic": ["Spot"],
+    "power": [84, 58, 70, 94],
+    "cct": [3000, 4000],
+    "dim": ["Switch", "Bluetooth", "DALI"],
+    "price": 19390,
+    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_2.jpg", "/img/coral.jpg", "/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
+  },
+  {
+    "id": 11,
+    "name": "Duck, white-faced whistling",
+    "category": "Pie",
+    "qty": 65,
+    "source": "LED",
+    "material": ["Madera", "Aluminio", "Otros", "Chapa", "Polimero"],
+    "optic": ["Flood", "Spot"],
+    "power": [62, 32, 49],
+    "cct": [3500, 3000, 2700, 4000],
+    "dim": ["Bluetooth"],
+    "price": 65541,
+    "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 12,
-    "name": "Long-tailed spotted cat",
-    "category": "Sistemas",
-    "qty": 11,
+    "name": "Butterfly, canadian tiger swallowtail",
+    "category": "apliques",
+    "qty": 30,
     "source": "LED",
-    "material": [
-      "Madera"
-    ],
-    "optic": [
-      "Ovalflood"
-    ],
-    "power": [
-      2,
-      36,
-      52
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 14283,
-    "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    "file": [
-      "HabitassePlateaDictumst.mp3"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/product_main.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Otros", "Aluminio"],
+    "optic": ["Ovalflood"],
+    "power": [79, 68, 24],
+    "cct": [3500, 2700],
+    "dim": ["Dimeable", "Switch", "Bluetooth"],
+    "price": 66856,
+    "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_3.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 13,
-    "name": "Wallaby, dama",
-    "category": "Plafon",
-    "qty": 9,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood"
-    ],
-    "power": [
-      18
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Switch"
-    ],
-    "price": 68074,
-    "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
-    "file": [
-      "Ut.tiff"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Eagle, golden",
+    "category": "Exterior",
+    "qty": 0,
+    "source": "LED",
+    "material": ["Chapa", "Otros", "Aluminio", "Madera", "Polimero", "Hierro"],
+    "optic": ["Wideflood"],
+    "power": [25],
+    "cct": [2700, 3500, 4000],
+    "dim": ["DALI", "Bluetooth"],
+    "price": 68618,
+    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 14,
-    "name": "Spoonbill, white",
-    "category": "Sistemas",
-    "qty": 23,
-    "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Madera"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      81
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": 61078,
-    "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-    "file": [
-      "AcNullaSed.mp3",
-      "NuncDonecQuis.mp3"
-    ],
+    "name": "Black spider monkey",
+    "category": "Mesa",
+    "qty": 70,
+    "source": "LED",
+    "material": ["Polimero", "Otros", "Hierro"],
+    "optic": ["Ovalflood"],
+    "power": [96, 12],
+    "cct": [2700],
+    "dim": ["DALI", "Dimeable", "Bluetooth", "Switch"],
+    "price": 11869,
+    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 15,
-    "name": "Colobus, white-mantled",
-    "category": "Spots",
-    "qty": 7,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood"
-    ],
-    "power": [
-      81
-    ],
-    "cct": [
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 47166,
-    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
-    "file": [
-      "Et.mov",
-      "OrciLuctus.mov"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Banded mongoose",
+    "category": "Plafon",
+    "qty": 63,
+    "source": "Lámpara",
+    "material": ["Aluminio", "Chapa", "Polimero"],
+    "optic": ["Wideflood", "Ovalflood"],
+    "power": [24, 41, 49],
+    "cct": [3000, 3500, 4000, 2700],
+    "dim": ["DALI"],
+    "price": 46863,
+    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 16,
-    "name": "Elephant, asian",
-    "category": "Sistemas",
-    "qty": 72,
+    "name": "Long-necked turtle",
+    "category": "apliques",
+    "qty": 9,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      32,
-      35,
-      36,
-      36
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Switch"
-    ],
-    "price": 59254,
-    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
-    "file": [
-      "CuraeDonec.mp3"
-    ],
+    "material": ["Aluminio", "Otros"],
+    "optic": ["Flood", "Ovalflood"],
+    "power": [95, 75],
+    "cct": [3500, 3000, 2700, 4000],
+    "dim": ["DALI", "Switch", "Bluetooth"],
+    "price": 58710,
+    "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/product_main.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 17,
-    "name": "Golden eagle",
-    "category": "Spots",
-    "qty": 71,
+    "name": "Gull, silver",
+    "category": "Pie",
+    "qty": 41,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      20,
-      28,
-      43
-    ],
-    "cct": [
-      2700
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 29474,
-    "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
-    "file": [
-      "Ut.avi"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Chapa", "Madera"],
+    "optic": ["Spot", "Flood"],
+    "power": [65, 27],
+    "cct": [3500, 3000, 2700, 4000],
+    "dim": ["Switch", "DALI"],
+    "price": 12357,
+    "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/delfina.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 18,
-    "name": "Square-lipped rhinoceros",
-    "category": "Sistemas",
-    "qty": 5,
+    "name": "Asian openbill",
+    "category": "Mesa",
+    "qty": 3,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      29,
-      60
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 14025,
-    "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-    "file": [
-      "UtMassa.jpeg"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Polimero", "Otros", "Hierro", "Madera", "Aluminio", "Chapa"],
+    "optic": ["Ovalflood"],
+    "power": [8, 37, 100, 19],
+    "cct": [3000, 4000, 2700, 3500],
+    "dim": ["DALI", "Dimeable"],
+    "price": 20843,
+    "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/delfina.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 19,
-    "name": "Vulture, oriental white-backed",
-    "category": "Plafon",
-    "qty": 57,
+    "name": "Crimson-breasted shrike",
+    "category": "apliques",
+    "qty": 8,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood"
-    ],
-    "power": [
-      100,
-      20,
-      8
-    ],
-    "cct": [
-      2700,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 69695,
-    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-    "file": [
-      "VolutpatErat.mov"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Madera"],
+    "optic": ["Flood", "Wideflood"],
+    "power": [84, 59, 21],
+    "cct": [2700, 4000],
+    "dim": ["Dimeable"],
+    "price": 67994,
+    "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 20,
-    "name": "Sugar glider",
-    "category": "Mesa",
-    "qty": 67,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      46,
-      58
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": 51660,
-    "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
-    "file": [
-      "DuiProin.mov"
-    ],
+    "name": "Dragon, ornate rock",
+    "category": "Exterior",
+    "qty": 37,
+    "source": "Lámpara",
+    "material": ["Otros"],
+    "optic": ["Wideflood", "Ovalflood", "Spot", "Flood"],
+    "power": [15, 12, 57, 90],
+    "cct": [3000, 4000, 2700],
+    "dim": ["Dimeable"],
+    "price": 58485,
+    "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 21,
-    "name": "White-tailed deer",
-    "category": "Spots",
-    "qty": 14,
-    "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      52,
-      91
-    ],
-    "cct": [
-      2700
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI"
-    ],
-    "price": 36724,
-    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    "file": [
-      "Est.pdf"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "African bush squirrel",
+    "category": "apliques",
+    "qty": 8,
+    "source": "LED",
+    "material": ["Madera", "Polimero", "Aluminio", "Otros"],
+    "optic": ["Flood"],
+    "power": [5, 100],
+    "cct": [3000, 2700],
+    "dim": ["DALI", "Switch"],
+    "price": 35832,
+    "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/delfina.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 22,
-    "name": "Zorilla",
-    "category": "Sistemas",
-    "qty": 1,
+    "name": "Comb duck",
+    "category": "Pie",
+    "qty": 6,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      79
-    ],
-    "cct": [
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable"
-    ],
-    "price": 23252,
-    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-    "file": [
-      "NullaDapibusDolor.jpeg",
-      "PotentiInEleifend.jpeg"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/product_main.jpg",
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Chapa", "Hierro", "Otros", "Aluminio", "Polimero", "Madera"],
+    "optic": ["Wideflood", "Flood", "Ovalflood"],
+    "power": [62],
+    "cct": [3000, 2700],
+    "dim": ["DALI"],
+    "price": 34218,
+    "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_3.jpg", "/img/slider_2.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 23,
-    "name": "Australian masked owl",
-    "category": "Colgantes",
-    "qty": 21,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      11,
-      21,
-      75
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 19071,
-    "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "file": [
-      "InterdumVenenatis.mp3",
-      "UltricesAliquet.mp3"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Grison",
+    "category": "apliques",
+    "qty": 8,
+    "source": "Lámpara",
+    "material": ["Otros", "Madera"],
+    "optic": ["Spot", "Wideflood", "Flood", "Ovalflood"],
+    "power": [52, 29, 33, 100],
+    "cct": [4000, 3500],
+    "dim": ["Bluetooth", "DALI"],
+    "price": 55874,
+    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_3.jpg", "/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 24,
-    "name": "Grison",
-    "category": "Plafon",
-    "qty": 26,
-    "source": "Lámpara",
-    "material": [
-      "Hierro",
-      "Madera"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      36,
-      38,
-      47,
-      58
-    ],
-    "cct": [
-      3500,
-      4000
-    ],
-    "dim": [
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 28093,
-    "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
-    "file": [
-      "NuncVestibulumAnte.mp3"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/delfina.jpg",
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Sugar glider",
+    "category": "Mesa",
+    "qty": 10,
+    "source": "LED",
+    "material": ["Hierro", "Polimero", "Chapa"],
+    "optic": ["Wideflood"],
+    "power": [51, 89, 23, 92],
+    "cct": [3000, 2700, 3500],
+    "dim": ["DALI"],
+    "price": 56215,
+    "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/product_main.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 25,
-    "name": "Dragonfly, russian",
-    "category": "Exterior",
-    "qty": 17,
+    "name": "Carpet snake",
+    "category": "Pie",
+    "qty": 58,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      42,
-      61,
-      67
-    ],
-    "cct": [
-      2700,
-      3000
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": 37706,
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
-    "file": [
-      "At.xls",
-      "LacusCurabiturAt.xls"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Otros", "Hierro", "Polimero", "Chapa", "Aluminio"],
+    "optic": ["Flood"],
+    "power": [4, 8],
+    "cct": [2700],
+    "dim": ["Switch", "DALI", "Dimeable"],
+    "price": 64900,
+    "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/slider_2.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 26,
-    "name": "Cormorant, pied",
-    "category": "Colgantes",
-    "qty": 4,
-    "source": "Lámpara",
-    "material": [
-      "Otros"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      10,
-      22,
-      53
-    ],
-    "cct": [
-      3000,
-      4000
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 401,
-    "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-    "file": [
-      "ConvallisTortor.mp3"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/product_main.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Colobus, black and white",
+    "category": "Mesa",
+    "qty": 31,
+    "source": "LED",
+    "material": ["Aluminio", "Chapa", "Polimero", "Madera", "Otros"],
+    "optic": ["Ovalflood", "Wideflood", "Flood"],
+    "power": [19, 54, 54],
+    "cct": [2700],
+    "dim": ["Dimeable", "Bluetooth", "DALI"],
+    "price": 18571,
+    "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/coral.jpg", "/img/slider_3.jpg", "/img/delfina.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 27,
-    "name": "Cat, kaffir",
-    "category": "Pie",
-    "qty": 45,
-    "source": "LED",
-    "material": [
-      "Hierro",
-      "Otros"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      48
-    ],
-    "cct": [
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 50241,
-    "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-    "file": [
-      "AugueAliquamErat.avi",
-      "Lacinia.avi"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Wallaroo, common",
+    "category": "Colgantes",
+    "qty": 2,
+    "source": "Lámpara",
+    "material": ["Otros"],
+    "optic": ["Wideflood", "Spot"],
+    "power": [4, 2],
+    "cct": [3500],
+    "dim": ["Switch", "DALI", "Dimeable", "Bluetooth"],
+    "price": 1260,
+    "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/coral.jpg", "/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 28,
-    "name": "Heron, striated",
-    "category": "Mesa",
-    "qty": 60,
-    "source": "LED",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Otros"
-    ],
-    "optic": [
-      "Flood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      82,
-      84,
-      88
-    ],
-    "cct": [
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Switch"
-    ],
-    "price": 54466,
-    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-    "file": [
-      "Nunc.mp3"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Black and white colobus",
+    "category": "Pie",
+    "qty": 63,
+    "source": "Lámpara",
+    "material": ["Chapa", "Polimero", "Aluminio", "Otros", "Hierro"],
+    "optic": ["Spot", "Flood", "Ovalflood"],
+    "power": [85, 10, 58, 81],
+    "cct": [3500, 2700, 4000],
+    "dim": ["Bluetooth"],
+    "price": 62251,
+    "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 29,
-    "name": "Emerald green tree boa",
-    "category": "Apliques",
-    "qty": 48,
+    "name": "Brown antechinus",
+    "category": "Spots",
+    "qty": 47,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood"
-    ],
-    "power": [
-      25,
-      74,
-      81,
-      85
-    ],
-    "cct": [
-      3000,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 58678,
-    "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.",
-    "file": [
-      "Amet.xls",
-      "RisusAuctor.xls"
-    ],
+    "material": ["Chapa", "Hierro", "Otros", "Polimero"],
+    "optic": ["Wideflood", "Spot", "Flood"],
+    "power": [51, 10],
+    "cct": [2700, 3500],
+    "dim": ["DALI", "Switch", "Bluetooth"],
+    "price": 48031,
+    "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 30,
-    "name": "Pied kingfisher",
-    "category": "Sistemas",
-    "qty": 34,
-    "source": "Lámpara",
-    "material": [
-      "Madera"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      83
-    ],
-    "cct": [
-      2700
-    ],
-    "dim": [
-      "DALI",
-      "Switch"
-    ],
-    "price": 50467,
-    "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
-    "file": [
-      "ElementumNullamVarius.avi",
-      "SuspendissePotentiNullam.avi"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Greater blue-eared starling",
+    "category": "Mesa",
+    "qty": 16,
+    "source": "LED",
+    "material": ["Aluminio", "Otros"],
+    "optic": ["Ovalflood", "Spot"],
+    "power": [42, 9, 70, 79],
+    "cct": [4000],
+    "dim": ["Bluetooth", "Switch"],
+    "price": 64743,
+    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_3.jpg", "/img/delfina.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 31,
-    "name": "Blue waxbill",
+    "name": "Caiman, spectacled",
     "category": "Colgantes",
-    "qty": 62,
+    "qty": 45,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      24,
-      50,
-      88,
-      95
-    ],
-    "cct": [
-      3000,
-      3500
-    ],
-    "dim": [
-      "Dimeable"
-    ],
-    "price": 22577,
-    "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-    "file": [
-      "Nulla.mp3"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Madera", "Aluminio"],
+    "optic": ["Spot", "Ovalflood", "Flood"],
+    "power": [14],
+    "cct": [2700, 3000],
+    "dim": ["Dimeable", "DALI"],
+    "price": 43196,
+    "description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 32,
-    "name": "Flamingo, greater",
-    "category": "Spots",
-    "qty": 12,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      7,
-      82
-    ],
-    "cct": [
-      2700,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 67695,
-    "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-    "file": [
-      "AmetNulla.avi",
-      "TellusNullaUt.avi"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Ring-tailed lemur",
+    "category": "Exterior",
+    "qty": 11,
+    "source": "Lámpara",
+    "material": ["Polimero", "Otros"],
+    "optic": ["Flood"],
+    "power": [56, 85, 36],
+    "cct": [3000, 4000, 2700, 3500],
+    "dim": ["Dimeable", "DALI"],
+    "price": 47071,
+    "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 33,
-    "name": "Common wombat",
-    "category": "Colgantes",
-    "qty": 15,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Polimero"
-    ],
-    "optic": [
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      42
-    ],
-    "cct": [
-      3000,
-      4000
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 25076,
-    "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-    "file": [
-      "CurabiturInLibero.xls",
-      "Ut.xls"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Masked booby",
+    "category": "Spots",
+    "qty": 2,
+    "source": "Lámpara",
+    "material": ["Chapa", "Otros"],
+    "optic": ["Flood", "Wideflood"],
+    "power": [76, 92],
+    "cct": [3000, 4000],
+    "dim": ["Bluetooth"],
+    "price": 48095,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 34,
-    "name": "Duck, white-faced whistling",
-    "category": "Colgantes",
-    "qty": 56,
+    "name": "Field flicker",
+    "category": "Sistemas",
+    "qty": 69,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      48
-    ],
-    "cct": [
-      2700
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable"
-    ],
-    "price": 14779,
-    "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-    "file": [
-      "Sapien.ppt"
-    ],
+    "material": ["Polimero", "Chapa"],
+    "optic": ["Spot", "Wideflood", "Ovalflood"],
+    "power": [89, 64],
+    "cct": [4000, 3500, 3000],
+    "dim": ["DALI"],
+    "price": 35343,
+    "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_3.jpg", "/img/bon-jour.jpg", "/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 35,
-    "name": "Kaffir cat",
-    "category": "Sistemas",
-    "qty": 29,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      28
-    ],
-    "cct": [
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 18379,
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.",
-    "file": [
-      "AmetConsectetuer.ppt"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "White-mantled colobus",
+    "category": "Colgantes",
+    "qty": 0,
+    "source": "Lámpara",
+    "material": ["Madera", "Polimero", "Otros"],
+    "optic": ["Wideflood", "Ovalflood", "Spot", "Flood"],
+    "power": [13, 30, 66, 62],
+    "cct": [3000, 2700, 3500],
+    "dim": ["Switch"],
+    "price": 57632,
+    "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/bon-jour.jpg", "/img/slider_3.jpg", "/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 36,
-    "name": "Jackrabbit, white-tailed",
+    "name": "Eagle, crowned",
     "category": "Pie",
-    "qty": 70,
-    "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Hierro"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      41,
-      47,
-      50
-    ],
-    "cct": [
-      4000
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": 45231,
-    "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-    "file": [
-      "Ultrices.ppt"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "qty": 24,
+    "source": "LED",
+    "material": ["Aluminio", "Polimero", "Otros", "Hierro"],
+    "optic": ["Spot", "Wideflood"],
+    "power": [8, 77, 75],
+    "cct": [2700, 3000],
+    "dim": ["Switch", "Dimeable", "Bluetooth", "DALI"],
+    "price": 448,
+    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 37,
-    "name": "Two-banded monitor",
+    "name": "Grouse, greater sage",
     "category": "Colgantes",
-    "qty": 3,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Wideflood"
-    ],
-    "power": [
-      12,
-      94
-    ],
-    "cct": [
-      3500,
-      4000
-    ],
-    "dim": [
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 39044,
-    "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-    "file": [
-      "Dui.avi",
-      "SodalesScelerisque.avi"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "qty": 31,
+    "source": "Lámpara",
+    "material": ["Madera", "Otros", "Aluminio"],
+    "optic": ["Ovalflood"],
+    "power": [54, 21],
+    "cct": [3500, 2700, 4000],
+    "dim": ["Dimeable", "Bluetooth", "DALI"],
+    "price": 20773,
+    "description": "Morbi non lectus. Aliquam sit amet diam in magna bibendum imperdiet. Nullam orci pede, venenatis non, sodales sed, tincidunt eu, felis.\n\nFusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/coral.jpg", "/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 38,
-    "name": "Black-backed magpie",
-    "category": "Spots",
-    "qty": 40,
-    "source": "LED",
-    "material": [
-      "Hierro",
-      "Madera"
-    ],
-    "optic": [
-      "Spot"
-    ],
-    "power": [
-      15,
-      64,
-      70,
-      9
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 54062,
-    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
-    "file": [
-      "Amet.doc",
-      "ParturientMontes.doc"
-    ],
+    "name": "Vulture, king",
+    "category": "apliques",
+    "qty": 66,
+    "source": "Lámpara",
+    "material": ["Hierro", "Polimero", "Chapa", "Otros", "Aluminio"],
+    "optic": ["Wideflood", "Flood"],
+    "power": [87, 25, 12, 26],
+    "cct": [4000, 3000],
+    "dim": ["Bluetooth", "Dimeable", "DALI", "Switch"],
+    "price": 70923,
+    "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/coral.jpg", "/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 39,
-    "name": "Javanese cormorant",
-    "category": "Plafon",
-    "qty": 25,
+    "name": "Waterbuck, common",
+    "category": "Exterior",
+    "qty": 55,
     "source": "LED",
-    "material": [
-      "Madera"
-    ],
-    "optic": [
-      "Ovalflood"
-    ],
-    "power": [
-      32,
-      58
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 36024,
-    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-    "file": [
-      "FringillaRhoncusMauris.mp3",
-      "Non.mp3"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Polimero", "Otros"],
+    "optic": ["Ovalflood", "Spot"],
+    "power": [22],
+    "cct": [2700, 4000, 3500, 3000],
+    "dim": ["DALI"],
+    "price": 71104,
+    "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/coral.jpg", "/img/product_main.jpg", "/img/delfina.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 40,
-    "name": "Numbat",
-    "category": "Pie",
-    "qty": 18,
-    "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      20,
-      30,
-      48,
-      52
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 52133,
-    "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\n\nAenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.",
-    "file": [
-      "Cras.tiff"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Pie, rufous tree",
+    "category": "Exterior",
+    "qty": 50,
+    "source": "LED",
+    "material": ["Otros"],
+    "optic": ["Spot", "Wideflood", "Flood", "Ovalflood"],
+    "power": [98, 78],
+    "cct": [3000, 2700, 3500],
+    "dim": ["Bluetooth"],
+    "price": 24515,
+    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 41,
-    "name": "Common wolf",
+    "name": "Bennett's wallaby",
     "category": "Colgantes",
-    "qty": 47,
+    "qty": 61,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      15,
-      79,
-      99
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 8490,
-    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-    "file": [
-      "JustoSitAmet.jpeg",
-      "PraesentLectus.jpeg"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Chapa", "Madera"],
+    "optic": ["Ovalflood", "Wideflood", "Spot", "Flood"],
+    "power": [56, 39],
+    "cct": [3000, 2700, 3500],
+    "dim": ["DALI", "Dimeable", "Switch", "Bluetooth"],
+    "price": 23824,
+    "description": "In quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 42,
-    "name": "Mongoose, eastern dwarf",
-    "category": "Spots",
-    "qty": 66,
+    "name": "Stanley crane",
+    "category": "Colgantes",
+    "qty": 64,
     "source": "LED",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Spot"
-    ],
-    "power": [
-      61
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 20923,
-    "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.",
-    "file": [
-      "QuamPedeLobortis.xls"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Madera", "Polimero", "Hierro", "Otros", "Aluminio", "Chapa"],
+    "optic": ["Flood", "Wideflood", "Spot", "Ovalflood"],
+    "power": [76, 31, 88, 68],
+    "cct": [3000, 3500, 4000, 2700],
+    "dim": ["Switch", "DALI"],
+    "price": 47991,
+    "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 43,
-    "name": "Antelope, four-horned",
-    "category": "Apliques",
-    "qty": 48,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Wideflood"
-    ],
-    "power": [
-      15,
-      18,
-      39,
-      57
-    ],
-    "cct": [
-      2700,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 21921,
-    "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
-    "file": [
-      "At.mpeg",
-      "VolutpatDuiMaecenas.mpeg"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Cow, scottish highland",
+    "category": "Spots",
+    "qty": 66,
+    "source": "LED",
+    "material": ["Madera", "Chapa", "Otros", "Polimero", "Hierro", "Aluminio"],
+    "optic": ["Flood", "Spot", "Ovalflood"],
+    "power": [35, 19],
+    "cct": [4000, 3000, 2700, 3500],
+    "dim": ["Switch", "DALI", "Dimeable", "Bluetooth"],
+    "price": 11242,
+    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/delfina.jpg", "/img/product_main.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 44,
-    "name": "Cougar",
-    "category": "Plafon",
-    "qty": 13,
+    "name": "Barbet, levaillant's",
+    "category": "Exterior",
+    "qty": 34,
     "source": "LED",
-    "material": [
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      100
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": 74117,
-    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-    "file": [
-      "Tortor.xls"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Madera", "Hierro", "Chapa", "Aluminio"],
+    "optic": ["Wideflood", "Flood"],
+    "power": [12, 5, 53],
+    "cct": [4000, 3000, 3500, 2700],
+    "dim": ["Dimeable"],
+    "price": 60776,
+    "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_3.jpg", "/img/coral.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 45,
-    "name": "Starling, red-shouldered glossy",
-    "category": "Pie",
-    "qty": 62,
-    "source": "LED",
-    "material": [
-      "Hierro",
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      3,
-      8
-    ],
-    "cct": [
-      2700,
-      3000
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 32601,
-    "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-    "file": [
-      "Montes.xls",
-      "NecEuismodScelerisque.xls"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Squirrel, nelson ground",
+    "category": "Spots",
+    "qty": 74,
+    "source": "Lámpara",
+    "material": ["Aluminio", "Hierro", "Madera", "Otros"],
+    "optic": ["Ovalflood", "Flood", "Spot", "Wideflood"],
+    "power": [3],
+    "cct": [3000, 2700, 3500, 4000],
+    "dim": ["Switch", "Bluetooth", "DALI", "Dimeable"],
+    "price": 15319,
+    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/bon-jour.jpg", "/img/product_main.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 46,
-    "name": "Goose, andean",
-    "category": "Sistemas",
-    "qty": 24,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Wideflood"
-    ],
-    "power": [
-      40
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable"
-    ],
-    "price": 6267,
-    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
-    "file": [
-      "FelisUt.jpeg",
-      "PlaceratPraesent.jpeg"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Rhinoceros, white",
+    "category": "Plafon",
+    "qty": 59,
+    "source": "Lámpara",
+    "material": ["Madera", "Chapa"],
+    "optic": ["Spot", "Ovalflood", "Wideflood"],
+    "power": [79, 56, 71],
+    "cct": [3500, 2700, 3000, 4000],
+    "dim": ["Bluetooth", "DALI", "Switch"],
+    "price": 33131,
+    "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 47,
-    "name": "Turtle, long-necked",
-    "category": "Colgantes",
-    "qty": 26,
-    "source": "Lámpara",
-    "material": [
-      "Chapa"
-    ],
-    "optic": [
-      "Spot"
-    ],
-    "power": [
-      16,
-      17,
-      99
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 7219,
-    "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-    "file": [
-      "NullaElitAc.mp3",
-      "QuisqueErat.mp3"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Otter, north american river",
+    "category": "Mesa",
+    "qty": 38,
+    "source": "LED",
+    "material": ["Polimero", "Hierro", "Madera", "Chapa"],
+    "optic": ["Spot", "Flood", "Wideflood"],
+    "power": [57, 25, 24, 54],
+    "cct": [3500, 3000],
+    "dim": ["Switch"],
+    "price": 14475,
+    "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 48,
-    "name": "Reindeer",
+    "name": "Southern black-backed gull",
     "category": "Sistemas",
-    "qty": 60,
+    "qty": 32,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      64
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 19107,
-    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-    "file": [
-      "Viverra.mov"
-    ],
+    "material": ["Aluminio", "Chapa"],
+    "optic": ["Spot", "Ovalflood"],
+    "power": [81, 15, 26],
+    "cct": [2700, 3000, 4000],
+    "dim": ["Bluetooth", "Dimeable"],
+    "price": 29153,
+    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/product_main.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_3.jpg", "/img/delfina.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 49,
-    "name": "Large cormorant",
+    "name": "Black-throated butcher bird",
     "category": "Plafon",
-    "qty": 48,
+    "qty": 66,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      15
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable"
-    ],
-    "price": 64812,
-    "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-    "file": [
-      "Est.xls",
-      "LaciniaAeneanSit.xls"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Chapa", "Madera", "Polimero", "Aluminio"],
+    "optic": ["Spot", "Ovalflood", "Wideflood", "Flood"],
+    "power": [14, 24, 76],
+    "cct": [3500, 3000, 4000],
+    "dim": ["Dimeable", "Switch", "DALI", "Bluetooth"],
+    "price": 3232,
+    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 50,
-    "name": "Serval",
-    "category": "Apliques",
-    "qty": 50,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      10,
-      39,
-      81
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable"
-    ],
-    "price": 30612,
-    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-    "file": [
-      "NullaEgetEros.mp3",
-      "PurusSitAmet.mp3"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Creeper, black-tailed tree",
+    "category": "Plafon",
+    "qty": 6,
+    "source": "Lámpara",
+    "material": ["Polimero", "Hierro", "Aluminio", "Madera", "Otros", "Chapa"],
+    "optic": ["Ovalflood", "Wideflood", "Spot", "Flood"],
+    "power": [75, 83, 73, 23],
+    "cct": [3500, 3000],
+    "dim": ["Bluetooth", "Switch", "DALI", "Dimeable"],
+    "price": 16937,
+    "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/delfina.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 51,
-    "name": "Squirrel, golden-mantled ground",
-    "category": "Colgantes",
-    "qty": 22,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      54
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 15791,
-    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
-    "file": [
-      "Ipsum.mp3"
-    ],
+    "name": "Fox, arctic",
+    "category": "Exterior",
+    "qty": 65,
+    "source": "LED",
+    "material": ["Otros", "Chapa", "Polimero", "Hierro", "Madera", "Aluminio"],
+    "optic": ["Ovalflood", "Spot", "Wideflood"],
+    "power": [8],
+    "cct": [2700, 4000, 3500],
+    "dim": ["Bluetooth"],
+    "price": 58575,
+    "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 52,
-    "name": "Javanese cormorant",
-    "category": "Plafon",
-    "qty": 38,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      39
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 71510,
-    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.",
-    "file": [
-      "Odio.gif",
-      "UltricesPosuere.gif"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Egyptian cobra",
+    "category": "Pie",
+    "qty": 18,
+    "source": "LED",
+    "material": ["Otros", "Aluminio", "Chapa"],
+    "optic": ["Ovalflood"],
+    "power": [13],
+    "cct": [4000],
+    "dim": ["DALI", "Switch", "Bluetooth"],
+    "price": 14218,
+    "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/bon-jour.jpg", "/img/slider_1.jpg", "/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 53,
-    "name": "Heron, boat-billed",
-    "category": "Colgantes",
-    "qty": 59,
+    "name": "Blacksmith plover",
+    "category": "Mesa",
+    "qty": 70,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Spot"
-    ],
-    "power": [
-      63
-    ],
-    "cct": [
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable"
-    ],
-    "price": 15299,
-    "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
-    "file": [
-      "SemperInterdum.gif"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Chapa", "Madera", "Aluminio"],
+    "optic": ["Ovalflood", "Flood"],
+    "power": [91, 43, 38],
+    "cct": [4000],
+    "dim": ["DALI", "Bluetooth", "Switch", "Dimeable"],
+    "price": 13518,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/delfina.jpg", "/img/slider_3.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 54,
-    "name": "Coyote",
-    "category": "Mesa",
-    "qty": 21,
-    "source": "LED",
-    "material": [
-      "Madera"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      70,
-      76
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 27839,
-    "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "file": [
-      "UtUltrices.tiff"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Baboon, yellow",
+    "category": "Colgantes",
+    "qty": 47,
+    "source": "Lámpara",
+    "material": ["Polimero", "Hierro", "Aluminio", "Otros", "Chapa", "Madera"],
+    "optic": ["Flood", "Wideflood", "Spot", "Ovalflood"],
+    "power": [95],
+    "cct": [3000, 2700, 3500, 4000],
+    "dim": ["Bluetooth", "Dimeable", "Switch", "DALI"],
+    "price": 19589,
+    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 55,
-    "name": "Zebra, plains",
-    "category": "Spots",
-    "qty": 47,
+    "name": "Parrot, hawk-headed",
+    "category": "Plafon",
+    "qty": 62,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      57
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 32318,
-    "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-    "file": [
-      "DuiProin.mp3",
-      "DuisConsequatDui.mp3"
-    ],
+    "material": ["Otros", "Chapa", "Hierro", "Madera", "Aluminio"],
+    "optic": ["Flood"],
+    "power": [69, 23, 5],
+    "cct": [3000, 4000, 3500],
+    "dim": ["Switch"],
+    "price": 43032,
+    "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.\n\nNullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 56,
-    "name": "Mountain duck",
-    "category": "Plafon",
-    "qty": 53,
+    "name": "Lynx, african",
+    "category": "Mesa",
+    "qty": 20,
     "source": "Lámpara",
-    "material": [
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      37,
-      75
-    ],
-    "cct": [
-      2700,
-      3000,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable"
-    ],
-    "price": 43817,
-    "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    "file": [
-      "IntegerA.avi",
-      "QuisOrci.avi"
-    ],
+    "material": ["Otros", "Madera", "Hierro", "Chapa", "Polimero", "Aluminio"],
+    "optic": ["Wideflood", "Ovalflood", "Spot", "Flood"],
+    "power": [41],
+    "cct": [3500, 2700],
+    "dim": ["Switch", "Dimeable", "DALI"],
+    "price": 44074,
+    "description": "Nullam sit amet turpis elementum ligula vehicula consequat. Morbi a ipsum. Integer a nibh.\n\nIn quis justo. Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_2.jpg", "/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 57,
-    "name": "White-browed owl",
-    "category": "Plafon",
+    "name": "Capybara",
+    "category": "Sistemas",
     "qty": 6,
-    "source": "Lámpara",
-    "material": [
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      67,
-      77
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 59671,
-    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-    "file": [
-      "CrasPellentesque.mp3",
-      "RhoncusSedVestibulum.mp3"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "source": "LED",
+    "material": ["Aluminio", "Polimero", "Otros", "Hierro"],
+    "optic": ["Wideflood", "Ovalflood"],
+    "power": [60, 62, 69, 49],
+    "cct": [4000, 3500, 2700],
+    "dim": ["Switch", "Bluetooth", "DALI"],
+    "price": 37484,
+    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 58,
-    "name": "Indian peacock",
-    "category": "Colgantes",
-    "qty": 58,
-    "source": "Lámpara",
-    "material": [
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      55,
-      62
-    ],
-    "cct": [
-      2700,
-      3000
-    ],
-    "dim": [
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 39727,
-    "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-    "file": [
-      "LuctusEt.mp3"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Dassie",
+    "category": "Pie",
+    "qty": 59,
+    "source": "LED",
+    "material": ["Polimero", "Madera", "Aluminio", "Otros"],
+    "optic": ["Wideflood"],
+    "power": [7, 33, 29, 69],
+    "cct": [2700, 3500],
+    "dim": ["Dimeable"],
+    "price": 40472,
+    "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 59,
-    "name": "Cat, jungle",
-    "category": "Apliques",
+    "name": "Buffalo, american",
+    "category": "Spots",
     "qty": 68,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Wideflood"
-    ],
-    "power": [
-      12,
-      48,
-      57
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 24001,
-    "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-    "file": [
-      "IpsumInteger.mp3",
-      "NonVelit.mp3"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Otros"],
+    "optic": ["Wideflood", "Spot", "Flood", "Ovalflood"],
+    "power": [57, 37, 51],
+    "cct": [4000, 3500, 3000, 2700],
+    "dim": ["Bluetooth", "DALI", "Switch", "Dimeable"],
+    "price": 8992,
+    "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 60,
-    "name": "Hornbill, yellow-billed",
+    "name": "Nuthatch, red-breasted",
     "category": "Colgantes",
-    "qty": 25,
+    "qty": 23,
     "source": "LED",
-    "material": [
-      "Chapa"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      3,
-      31,
-      44
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 71186,
-    "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-    "file": [
-      "InTempus.mov"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/coral.jpg",
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Aluminio", "Madera"],
+    "optic": ["Ovalflood", "Flood"],
+    "power": [20, 56],
+    "cct": [3500, 3000, 4000],
+    "dim": ["Dimeable", "DALI", "Bluetooth", "Switch"],
+    "price": 14313,
+    "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 61,
-    "name": "Swan, trumpeter",
-    "category": "Mesa",
-    "qty": 38,
+    "name": "Denham's bustard",
+    "category": "apliques",
+    "qty": 40,
     "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      28,
-      33,
-      80
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 13632,
-    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.\n\nIn congue. Etiam justo. Etiam pretium iaculis justo.",
-    "file": [
-      "DisParturient.mp3",
-      "Venenatis.mp3"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Hierro", "Polimero", "Chapa", "Aluminio"],
+    "optic": ["Wideflood"],
+    "power": [94, 32],
+    "cct": [3500, 4000, 2700, 3000],
+    "dim": ["Switch", "Dimeable"],
+    "price": 63257,
+    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/bon-jour.jpg", "/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 62,
-    "name": "Squirrel, eastern fox",
-    "category": "Pie",
-    "qty": 27,
+    "name": "Lorikeet, scaly-breasted",
+    "category": "Sistemas",
+    "qty": 7,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      2,
-      3,
-      59,
-      65
-    ],
-    "cct": [
-      2700,
-      3500,
-      4000
-    ],
-    "dim": [
-      "DALI",
-      "Switch"
-    ],
-    "price": 62242,
-    "description": "Praesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-    "file": [
-      "Lacinia.ppt",
-      "LiberoQuis.ppt"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Hierro"],
+    "optic": ["Ovalflood", "Spot", "Wideflood"],
+    "power": [46],
+    "cct": [3000, 4000, 3500],
+    "dim": ["Dimeable", "Switch", "Bluetooth", "DALI"],
+    "price": 2812,
+    "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/product_main.jpg", "/img/bon-jour.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 63,
-    "name": "Puku",
-    "category": "Colgantes",
-    "qty": 69,
+    "name": "Great cormorant",
+    "category": "Plafon",
+    "qty": 59,
     "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood"
-    ],
-    "power": [
-      45,
-      62
-    ],
-    "cct": [
-      2700,
-      4000
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": 1067,
-    "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
-    "file": [
-      "UtMassa.xls"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Madera", "Aluminio", "Chapa", "Hierro"],
+    "optic": ["Flood", "Ovalflood"],
+    "power": [21, 46, 28],
+    "cct": [2700],
+    "dim": ["DALI"],
+    "price": 10535,
+    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_3.jpg", "/img/coral.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 64,
-    "name": "Cockatoo, red-breasted",
-    "category": "Spots",
-    "qty": 37,
+    "name": "Brazilian tapir",
+    "category": "Sistemas",
+    "qty": 51,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot"
-    ],
-    "power": [
-      100,
-      33,
-      64,
-      79
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 60429,
-    "description": "Proin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.\n\nDuis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
-    "file": [
-      "AmetSemFusce.ppt",
-      "Integer.ppt"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/coral.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Madera"],
+    "optic": ["Wideflood", "Flood"],
+    "power": [23],
+    "cct": [2700, 4000, 3500, 3000],
+    "dim": ["DALI", "Bluetooth", "Switch", "Dimeable"],
+    "price": 45569,
+    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/bon-jour.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 65,
-    "name": "Mockingbird, galapagos",
-    "category": "Colgantes",
-    "qty": 63,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      19,
-      42,
-      49,
-      6
-    ],
-    "cct": [
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 23384,
-    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "file": [
-      "HacHabitasse.avi"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/delfina.jpg",
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Eastern boa constrictor",
+    "category": "Exterior",
+    "qty": 3,
+    "source": "LED",
+    "material": ["Aluminio", "Chapa", "Madera", "Polimero", "Otros"],
+    "optic": ["Wideflood"],
+    "power": [27, 77, 36],
+    "cct": [3000, 2700, 3500],
+    "dim": ["Bluetooth", "Dimeable"],
+    "price": 46245,
+    "description": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 66,
-    "name": "Fox, grey",
-    "category": "Plafon",
-    "qty": 48,
-    "source": "Lámpara",
-    "material": [
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot"
-    ],
-    "power": [
-      13,
-      44,
-      68,
-      83
-    ],
-    "cct": [
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 8573,
-    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
-    "file": [
-      "NecNisiVolutpat.mp3"
-    ],
+    "name": "Hedgehog, south african",
+    "category": "Exterior",
+    "qty": 1,
+    "source": "LED",
+    "material": ["Chapa", "Polimero", "Aluminio"],
+    "optic": ["Flood", "Spot", "Wideflood", "Ovalflood"],
+    "power": [17],
+    "cct": [3000],
+    "dim": ["Switch", "Dimeable", "Bluetooth", "DALI"],
+    "price": 7698,
+    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
     "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/coral.jpg",
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/delfina.jpg", "/img/product_main.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 67,
-    "name": "Woolly-necked stork",
-    "category": "Spots",
-    "qty": 46,
-    "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot"
-    ],
-    "power": [
-      3,
-      30,
-      31
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 13527,
-    "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.\n\nQuisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.",
-    "file": [
-      "Platea.ppt",
-      "PosuereCubiliaCurae.ppt"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Black-backed jackal",
+    "category": "Mesa",
+    "qty": 38,
+    "source": "LED",
+    "material": ["Otros", "Aluminio", "Madera", "Hierro"],
+    "optic": ["Ovalflood", "Wideflood"],
+    "power": [42, 82, 66],
+    "cct": [2700, 3000, 4000],
+    "dim": ["Switch", "Bluetooth", "DALI"],
+    "price": 61159,
+    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 68,
-    "name": "Flicker, campo",
-    "category": "Apliques",
-    "qty": 50,
+    "name": "Lesser double-collared sunbird",
+    "category": "Mesa",
+    "qty": 34,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Flood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      71
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500
-    ],
-    "dim": [
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 10433,
-    "description": "Maecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.\n\nNullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
-    "file": [
-      "LuctusEtUltrices.mpeg"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/product_main.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Hierro"],
+    "optic": ["Flood"],
+    "power": [5, 95, 66],
+    "cct": [2700, 4000],
+    "dim": ["DALI"],
+    "price": 14112,
+    "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 69,
-    "name": "Uinta ground squirrel",
-    "category": "Exterior",
-    "qty": 50,
+    "name": "Lemur, grey mouse",
+    "category": "Spots",
+    "qty": 52,
     "source": "Lámpara",
-    "material": [
-      "Polimero"
-    ],
-    "optic": [
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      24,
-      8,
-      90,
-      98
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 50991,
-    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "file": [
-      "Consectetuer.xls",
-      "Nisl.xls"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Aluminio", "Madera", "Otros"],
+    "optic": ["Flood", "Ovalflood", "Spot", "Wideflood"],
+    "power": [72, 20, 48, 54],
+    "cct": [3500, 3000, 4000],
+    "dim": ["Bluetooth"],
+    "price": 72347,
+    "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 70,
-    "name": "Sage grouse",
-    "category": "Sistemas",
-    "qty": 30,
+    "name": "Duck, white-faced whistling",
+    "category": "Colgantes",
+    "qty": 65,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      18
-    ],
-    "cct": [
-      2700,
-      3000,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 25756,
-    "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "file": [
-      "QuisOrci.xls"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Otros", "Madera", "Polimero"],
+    "optic": ["Ovalflood"],
+    "power": [60, 95, 22, 65],
+    "cct": [2700, 4000, 3000, 3500],
+    "dim": ["Switch", "DALI"],
+    "price": 26102,
+    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 71,
-    "name": "Openbill, asian",
-    "category": "Plafon",
-    "qty": 24,
-    "source": "Lámpara",
-    "material": [
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      47,
-      59,
-      63,
-      92
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable"
-    ],
-    "price": 33829,
-    "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.",
-    "file": [
-      "PedeLiberoQuis.ppt"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Wolf, mexican",
+    "category": "Pie",
+    "qty": 49,
+    "source": "LED",
+    "material": ["Madera", "Otros"],
+    "optic": ["Wideflood"],
+    "power": [54],
+    "cct": [4000, 3500],
+    "dim": ["Bluetooth", "Switch"],
+    "price": 11092,
+    "description": "Curabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/bon-jour.jpg", "/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 72,
-    "name": "Kirk's dik dik",
+    "name": "Pied crow",
     "category": "Plafon",
-    "qty": 18,
+    "qty": 17,
     "source": "LED",
-    "material": [
-      "Chapa",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      52,
-      54,
-      87
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 40225,
-    "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.\n\nEtiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    "file": [
-      "ConvallisDuis.avi",
-      "Nullam.avi"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/product_main.jpg",
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Otros"],
+    "optic": ["Spot", "Flood"],
+    "power": [89, 73],
+    "cct": [3000, 2700],
+    "dim": ["Switch", "Dimeable"],
+    "price": 62968,
+    "description": "Nullam porttitor lacus at turpis. Donec posuere metus vitae ipsum. Aliquam non mauris.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 73,
-    "name": "Polar bear",
-    "category": "Pie",
-    "qty": 71,
-    "source": "LED",
-    "material": [
-      "Chapa",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      33,
-      72
-    ],
-    "cct": [
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 11305,
-    "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "file": [
-      "PrimisInFaucibus.mpeg"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Heron, green-backed",
+    "category": "Plafon",
+    "qty": 37,
+    "source": "Lámpara",
+    "material": ["Otros", "Madera"],
+    "optic": ["Flood", "Wideflood", "Ovalflood", "Spot"],
+    "power": [96, 49],
+    "cct": [3000, 4000, 3500],
+    "dim": ["Bluetooth", "Switch"],
+    "price": 10585,
+    "description": "Cras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 74,
-    "name": "Grey heron",
-    "category": "Pie",
-    "qty": 18,
+    "name": "Common langur",
+    "category": "apliques",
+    "qty": 20,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Wideflood"
-    ],
-    "power": [
-      35
-    ],
-    "cct": [
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 3943,
-    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.",
-    "file": [
-      "TortorId.pdf"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Hierro"],
+    "optic": ["Ovalflood", "Spot", "Wideflood"],
+    "power": [22, 88, 27],
+    "cct": [4000, 3500, 3000, 2700],
+    "dim": ["Switch", "Bluetooth", "DALI"],
+    "price": 21324,
+    "description": "In congue. Etiam justo. Etiam pretium iaculis justo.\n\nIn hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_3.jpg", "/img/slider_2.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 75,
-    "name": "Sable antelope",
-    "category": "Plafon",
-    "qty": 14,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood"
-    ],
-    "power": [
-      19,
-      29,
-      70
-    ],
-    "cct": [
-      2700,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 2830,
-    "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "file": [
-      "Orci.mov"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Bird, magnificent frigate",
+    "category": "Exterior",
+    "qty": 51,
+    "source": "Lámpara",
+    "material": ["Chapa", "Aluminio"],
+    "optic": ["Wideflood"],
+    "power": [84, 79, 98],
+    "cct": [4000, 3000],
+    "dim": ["Dimeable", "Bluetooth", "Switch"],
+    "price": 6158,
+    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/coral.jpg", "/img/bon-jour.jpg", "/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 76,
-    "name": "Bobcat",
-    "category": "Colgantes",
+    "name": "Urial",
+    "category": "Mesa",
     "qty": 59,
-    "source": "Lámpara",
-    "material": [
-      "Chapa",
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      78,
-      94
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": 53108,
-    "description": "Nulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.",
-    "file": [
-      "EgestasMetusAenean.ppt"
-    ],
+    "source": "LED",
+    "material": ["Chapa", "Madera", "Polimero"],
+    "optic": ["Flood", "Spot", "Wideflood", "Ovalflood"],
+    "power": [57],
+    "cct": [3500],
+    "dim": ["Switch", "Dimeable", "Bluetooth"],
+    "price": 66748,
+    "description": "Fusce consequat. Nulla nisl. Nunc nisl.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 77,
-    "name": "Potoroo",
-    "category": "Plafon",
-    "qty": 49,
-    "source": "Lámpara",
-    "material": [
-      "Hierro",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot"
-    ],
-    "power": [
-      23,
-      50,
-      72,
-      92
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Switch"
-    ],
-    "price": 41476,
-    "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
-    "file": [
-      "Non.ppt",
-      "PlateaDictumstAliquam.ppt"
-    ],
+    "name": "Glider, sugar",
+    "category": "Sistemas",
+    "qty": 70,
+    "source": "LED",
+    "material": ["Hierro", "Polimero"],
+    "optic": ["Flood", "Spot", "Wideflood", "Ovalflood"],
+    "power": [60],
+    "cct": [2700, 3000, 4000],
+    "dim": ["Dimeable", "Bluetooth", "Switch"],
+    "price": 45908,
+    "description": "Duis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
     "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 78,
-    "name": "Egret, cattle",
-    "category": "Colgantes",
-    "qty": 26,
+    "name": "Southern lapwing",
+    "category": "Mesa",
+    "qty": 51,
     "source": "Lámpara",
-    "material": [
-      "Hierro",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot"
-    ],
-    "power": [
-      50,
-      61,
-      8
-    ],
-    "cct": [
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 45029,
-    "description": "Pellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "file": [
-      "VivamusVel.ppt"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/delfina.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Aluminio"],
+    "optic": ["Wideflood", "Spot"],
+    "power": [59],
+    "cct": [3500],
+    "dim": ["Switch", "Bluetooth"],
+    "price": 4589,
+    "description": "Vestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.\n\nDuis consequat dui nec nisi volutpat eleifend. Donec ut dolor. Morbi vel lectus in quam fringilla rhoncus.\n\nMauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 79,
-    "name": "Long-tailed skua",
-    "category": "Colgantes",
-    "qty": 62,
+    "name": "Nilgai",
+    "category": "Spots",
+    "qty": 60,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      100,
-      59,
-      76,
-      91
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 10050,
-    "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
-    "file": [
-      "MaurisEnimLeo.avi",
-      "VitaeNislAenean.avi"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Madera", "Hierro", "Chapa"],
+    "optic": ["Ovalflood"],
+    "power": [70],
+    "cct": [3500, 4000],
+    "dim": ["Switch", "DALI", "Dimeable"],
+    "price": 26420,
+    "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Proin risus. Praesent lectus.\n\nVestibulum quam sapien, varius ut, blandit non, interdum in, ante. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis faucibus accumsan odio. Curabitur convallis.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/bon-jour.jpg", "/img/slider_1.jpg", "/img/delfina.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 80,
-    "name": "Gerbil (unidentified)",
-    "category": "Apliques",
-    "qty": 57,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot"
-    ],
-    "power": [
-      63
-    ],
-    "cct": [
-      2700,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 25415,
-    "description": "Nam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.\n\nCurabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "file": [
-      "HabitassePlateaDictumst.pdf",
-      "Nibh.pdf"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Deer, mule",
+    "category": "apliques",
+    "qty": 47,
+    "source": "Lámpara",
+    "material": ["Polimero", "Madera", "Chapa", "Otros", "Aluminio"],
+    "optic": ["Spot", "Ovalflood"],
+    "power": [54],
+    "cct": [4000, 2700, 3500],
+    "dim": ["Bluetooth", "DALI"],
+    "price": 29290,
+    "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\n\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_3.jpg", "/img/bon-jour.jpg", "/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 81,
-    "name": "Groundhog",
-    "category": "Pie",
-    "qty": 43,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro"
-    ],
-    "optic": [
-      "Ovalflood"
-    ],
-    "power": [
-      12,
-      4,
-      52,
-      69
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 61517,
-    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-    "file": [
-      "Ligula.avi"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/product_main.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Tortoise, galapagos",
+    "category": "Sistemas",
+    "qty": 46,
+    "source": "Lámpara",
+    "material": ["Polimero", "Madera", "Chapa", "Hierro", "Otros", "Aluminio"],
+    "optic": ["Ovalflood", "Spot", "Wideflood", "Flood"],
+    "power": [37, 13, 22],
+    "cct": [3500, 2700, 3000],
+    "dim": ["Dimeable"],
+    "price": 53660,
+    "description": "Fusce consequat. Nulla nisl. Nunc nisl.\n\nDuis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 82,
-    "name": "Black-eyed bulbul",
-    "category": "Mesa",
-    "qty": 2,
+    "name": "Common ringtail",
+    "category": "Spots",
+    "qty": 1,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      10,
-      38,
-      80
-    ],
-    "cct": [
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 54361,
-    "description": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "file": [
-      "Blandit.tiff"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Polimero", "Hierro", "Chapa"],
+    "optic": ["Flood", "Spot", "Wideflood"],
+    "power": [71, 19, 12, 90],
+    "cct": [4000, 2700, 3500, 3000],
+    "dim": ["Bluetooth"],
+    "price": 37682,
+    "description": "Duis aliquam convallis nunc. Proin at turpis a pede posuere nonummy. Integer non velit.\n\nDonec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 83,
-    "name": "Turkey, wild",
+    "name": "European red squirrel",
     "category": "Plafon",
-    "qty": 31,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      100,
-      69,
-      83,
-      97
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "Bluetooth"
-    ],
-    "price": 5709,
-    "description": "Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec pharetra, magna vestibulum aliquet ultrices, erat tortor sollicitudin mi, sit amet lobortis sapien sapien non mi. Integer ac neque.\n\nDuis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-    "file": [
-      "ConsequatMorbiA.gif",
-      "TempusVelPede.gif"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "qty": 26,
+    "source": "LED",
+    "material": ["Madera", "Chapa"],
+    "optic": ["Spot", "Wideflood", "Flood", "Ovalflood"],
+    "power": [22],
+    "cct": [2700],
+    "dim": ["Dimeable", "Switch", "DALI"],
+    "price": 28617,
+    "description": "Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.\n\nSed ante. Vivamus tortor. Duis mattis egestas metus.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 84,
-    "name": "Skink, african",
-    "category": "Exterior",
-    "qty": 19,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      50
-    ],
-    "cct": [
-      2700
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 18749,
-    "description": "Proin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    "file": [
-      "Facilisi.mp3",
-      "NullaFacilisi.mp3"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "White-eye, cape",
+    "category": "Pie",
+    "qty": 49,
+    "source": "LED",
+    "material": ["Chapa", "Aluminio", "Hierro"],
+    "optic": ["Flood", "Wideflood", "Ovalflood", "Spot"],
+    "power": [13, 96, 14, 18],
+    "cct": [2700, 3500, 4000],
+    "dim": ["DALI"],
+    "price": 28815,
+    "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 85,
-    "name": "Wolf spider",
-    "category": "Colgantes",
-    "qty": 6,
+    "name": "Yak",
+    "category": "Pie",
+    "qty": 74,
     "source": "Lámpara",
-    "material": [
-      "Hierro",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      64
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Switch"
-    ],
-    "price": 31484,
-    "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.\n\nMaecenas tristique, est et tempus semper, est quam pharetra magna, ac consequat metus sapien ut nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Mauris viverra diam vitae quam. Suspendisse potenti.",
-    "file": [
-      "AugueVestibulum.mp3",
-      "UltricesPosuereCubilia.mp3"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Aluminio", "Otros", "Polimero"],
+    "optic": ["Spot"],
+    "power": [89, 62, 30],
+    "cct": [4000, 2700],
+    "dim": ["Bluetooth", "DALI", "Switch"],
+    "price": 58268,
+    "description": "Fusce posuere felis sed lacus. Morbi sem mauris, laoreet ut, rhoncus aliquet, pulvinar sed, nisl. Nunc rhoncus dui vel sem.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/bon-jour.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 86,
-    "name": "Egret, snowy",
-    "category": "Mesa",
-    "qty": 8,
+    "name": "Dove, laughing",
+    "category": "apliques",
+    "qty": 66,
     "source": "LED",
-    "material": [
-      "Madera"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      70
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 52173,
-    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.",
-    "file": [
-      "AdipiscingMolestieHendrerit.jpeg",
-      "InLacusCurabitur.jpeg"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/delfina.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Chapa", "Hierro"],
+    "optic": ["Spot", "Flood"],
+    "power": [72, 15, 77],
+    "cct": [3500, 2700, 3000],
+    "dim": ["Bluetooth", "Dimeable"],
+    "price": 17246,
+    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 87,
-    "name": "Capuchin, white-fronted",
-    "category": "Sistemas",
-    "qty": 72,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      42,
-      74,
-      88
-    ],
-    "cct": [
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable"
-    ],
-    "price": 35580,
-    "description": "In hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\n\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
-    "file": [
-      "SapienUrna.mp3"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Common waterbuck",
+    "category": "apliques",
+    "qty": 54,
+    "source": "LED",
+    "material": ["Hierro", "Aluminio", "Otros", "Chapa"],
+    "optic": ["Spot", "Flood", "Wideflood", "Ovalflood"],
+    "power": [52, 95, 90],
+    "cct": [2700, 4000],
+    "dim": ["Switch", "Bluetooth"],
+    "price": 67309,
+    "description": "Etiam vel augue. Vestibulum rutrum rutrum neque. Aenean auctor gravida sem.\n\nPraesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/bon-jour.jpg", "/img/coral.jpg", "/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 88,
-    "name": "Goose, cereopsis",
-    "category": "Plafon",
-    "qty": 34,
+    "name": "Spoonbill, white",
+    "category": "Exterior",
+    "qty": 0,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Madera"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      66
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 68744,
-    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.",
-    "file": [
-      "Aenean.mp3",
-      "NuncNislDuis.mp3"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/delfina.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Aluminio", "Polimero", "Madera", "Hierro", "Otros"],
+    "optic": ["Flood"],
+    "power": [73, 75],
+    "cct": [3000, 4000],
+    "dim": ["DALI", "Switch", "Dimeable", "Bluetooth"],
+    "price": 68719,
+    "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/slider_3.jpg", "/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 89,
-    "name": "Tarantula",
-    "category": "Mesa",
-    "qty": 64,
+    "name": "Ox, musk",
+    "category": "Plafon",
+    "qty": 27,
     "source": "LED",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      40,
-      71
-    ],
-    "cct": [
-      2700
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 24402,
-    "description": "Mauris enim leo, rhoncus sed, vestibulum sit amet, cursus id, turpis. Integer aliquet, massa id lobortis convallis, tortor risus dapibus augue, vel accumsan tellus nisi eu orci. Mauris lacinia sapien quis libero.",
-    "file": [
-      "Blandit.xls",
-      "Magna.xls"
-    ],
+    "material": ["Otros", "Madera", "Hierro"],
+    "optic": ["Wideflood", "Ovalflood", "Spot", "Flood"],
+    "power": [63, 17, 59],
+    "cct": [4000, 3500, 2700],
+    "dim": ["Bluetooth"],
+    "price": 70479,
+    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/product_main.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_1.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 90,
-    "name": "Three-banded plover",
-    "category": "Mesa",
-    "qty": 8,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      100
-    ],
-    "cct": [
-      3000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 23983,
-    "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-    "file": [
-      "Nisl.jpeg"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Tortoise, galapagos",
+    "category": "Pie",
+    "qty": 5,
+    "source": "LED",
+    "material": ["Hierro", "Chapa", "Aluminio"],
+    "optic": ["Wideflood", "Spot", "Flood", "Ovalflood"],
+    "power": [59, 61, 69],
+    "cct": [4000, 3500, 2700, 3000],
+    "dim": ["Switch"],
+    "price": 46449,
+    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/slider_2.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 91,
-    "name": "Duck, blue",
-    "category": "Pie",
-    "qty": 68,
+    "name": "Steller sea lion",
+    "category": "apliques",
+    "qty": 32,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Otros"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      34,
-      58
-    ],
-    "cct": [
-      2700,
-      4000
-    ],
-    "dim": [
-      "DALI",
-      "Dimeable"
-    ],
-    "price": 22362,
-    "description": "Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo. Pellentesque viverra pede ac diam. Cras pellentesque volutpat dui.",
-    "file": [
-      "JustoPellentesqueViverra.avi",
-      "Sapien.avi"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Polimero"],
+    "optic": ["Wideflood", "Ovalflood", "Flood", "Spot"],
+    "power": [80, 89, 21],
+    "cct": [2700, 3500, 4000],
+    "dim": ["DALI", "Dimeable", "Switch", "Bluetooth"],
+    "price": 43083,
+    "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.\n\nProin eu mi. Nulla ac enim. In tempor, turpis nec euismod scelerisque, quam turpis adipiscing lorem, vitae mattis nibh ligula nec sem.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_2.jpg", "/img/delfina.jpg", "/img/coral.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 92,
-    "name": "Coot, red-knobbed",
-    "category": "Colgantes",
-    "qty": 18,
+    "name": "Black-crowned night heron",
+    "category": "Plafon",
+    "qty": 69,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Wideflood"
-    ],
-    "power": [
-      27,
-      75,
-      81,
-      82
-    ],
-    "cct": [
-      3000,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 44326,
-    "description": "Duis bibendum. Morbi non quam nec dui luctus rutrum. Nulla tellus.\n\nIn sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
-    "file": [
-      "MaecenasRhoncusAliquam.avi",
-      "OdioCras.avi"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/slider_1.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Polimero", "Aluminio", "Hierro"],
+    "optic": ["Spot", "Ovalflood"],
+    "power": [14, 8, 73],
+    "cct": [3000, 3500],
+    "dim": ["Switch"],
+    "price": 38606,
+    "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/product_main.jpg", "/img/delfina.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 93,
-    "name": "Waterbuck, defassa",
-    "category": "Plafon",
-    "qty": 71,
-    "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      58
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 63017,
-    "description": "Aenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.\n\nQuisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-    "file": [
-      "Praesent.mp3"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "White-nosed coatimundi",
+    "category": "Colgantes",
+    "qty": 55,
+    "source": "LED",
+    "material": ["Chapa", "Polimero", "Madera", "Hierro", "Aluminio", "Otros"],
+    "optic": ["Wideflood", "Ovalflood"],
+    "power": [100, 87, 72],
+    "cct": [3000, 3500],
+    "dim": ["Bluetooth"],
+    "price": 66055,
+    "description": "Aenean lectus. Pellentesque eget nunc. Donec quis orci eget orci vehicula condimentum.\n\nCurabitur in libero ut massa volutpat convallis. Morbi odio odio, elementum eu, interdum eu, tincidunt in, leo. Maecenas pulvinar lobortis est.\n\nPhasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/product_main.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 94,
-    "name": "Two-toed sloth",
-    "category": "Spots",
-    "qty": 58,
-    "source": "Lámpara",
-    "material": [
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot"
-    ],
-    "power": [
-      3,
-      48,
-      56
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 67670,
-    "description": "Phasellus sit amet erat. Nulla tempus. Vivamus in felis eu sapien cursus vestibulum.",
-    "file": [
-      "NonVelitNec.png",
-      "NullamMolestie.png"
-    ],
-    "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_1.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "name": "Arboral spiny rat",
+    "category": "Pie",
+    "qty": 60,
+    "source": "LED",
+    "material": ["Aluminio", "Madera", "Polimero", "Otros"],
+    "optic": ["Spot", "Ovalflood", "Flood", "Wideflood"],
+    "power": [100],
+    "cct": [3500],
+    "dim": ["Bluetooth", "DALI", "Switch"],
+    "price": 927,
+    "description": "Cras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.",
+    "main_image": "/img/bon-jour.jpg",
+    "image_slider": ["/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 95,
-    "name": "Starfish, crown of thorns",
-    "category": "Exterior",
-    "qty": 26,
+    "name": "Squirrel, grey-footed",
+    "category": "Plafon",
+    "qty": 67,
     "source": "LED",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      36,
-      41,
-      74
-    ],
-    "cct": [
-      2700,
-      3500,
-      4000
-    ],
-    "dim": [
-      "DALI"
-    ],
-    "price": 48042,
-    "description": "Suspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.\n\nMaecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
-    "file": [
-      "ElementumEuInterdum.jpeg",
-      "IpsumIntegerA.jpeg"
-    ],
-    "main_image": "/img/bon-jour.jpg",
-    "image_slider": [
-      "/img/coral.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "material": ["Polimero"],
+    "optic": ["Spot"],
+    "power": [57],
+    "cct": [3000],
+    "dim": ["DALI", "Switch", "Bluetooth"],
+    "price": 44730,
+    "description": "Quisque porta volutpat erat. Quisque erat eros, viverra eget, congue eget, semper rutrum, nulla. Nunc purus.\n\nPhasellus in felis. Donec semper sapien a libero. Nam dui.",
+    "main_image": "/img/coral.jpg",
+    "image_slider": ["/img/product_main.jpg", "/img/coral.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 96,
-    "name": "Crocodile, nile",
-    "category": "Colgantes",
-    "qty": 35,
+    "name": "Wapiti, elk,",
+    "category": "Sistemas",
+    "qty": 15,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      54
-    ],
-    "cct": [
-      2700,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": 5948,
-    "description": "Phasellus in felis. Donec semper sapien a libero. Nam dui.\n\nProin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.\n\nInteger ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.",
-    "file": [
-      "Blandit.jpeg"
-    ],
+    "material": ["Otros", "Aluminio"],
+    "optic": ["Flood", "Spot", "Ovalflood"],
+    "power": [63],
+    "cct": [3000, 4000],
+    "dim": ["Switch", "DALI"],
+    "price": 36555,
+    "description": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.\n\nCurabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 97,
-    "name": "Colobus, magistrate black",
-    "category": "Spots",
-    "qty": 60,
+    "name": "Frogmouth, tawny",
+    "category": "Exterior",
+    "qty": 72,
     "source": "LED",
-    "material": [
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      59,
-      77
-    ],
-    "cct": [
-      3000,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable"
-    ],
-    "price": 26509,
-    "description": "Integer tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.\n\nMorbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.",
-    "file": [
-      "Sit.ppt",
-      "Sit.ppt"
-    ],
+    "material": ["Madera", "Aluminio", "Otros", "Hierro"],
+    "optic": ["Flood", "Ovalflood", "Wideflood", "Spot"],
+    "power": [3, 24, 24, 81],
+    "cct": [3000, 2700, 3500],
+    "dim": ["Dimeable", "Switch"],
+    "price": 25796,
+    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/product_main.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/bon-jour.jpg", "/img/slider_2.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 98,
-    "name": "Albatross, galapagos",
-    "category": "Pie",
-    "qty": 30,
-    "source": "Lámpara",
-    "material": [
-      "Hierro",
-      "Madera",
-      "Otros"
-    ],
-    "optic": [
-      "Spot"
-    ],
-    "power": [
-      85,
-      95
-    ],
-    "cct": [
-      3000,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "Dimeable"
-    ],
-    "price": 71538,
-    "description": "Integer ac leo. Pellentesque ultrices mattis odio. Donec vitae nisi.\n\nNam ultrices, libero non mattis pulvinar, nulla pede ullamcorper augue, a suscipit nulla elit ac nulla. Sed vel enim sit amet nunc viverra dapibus. Nulla suscipit ligula in lacus.",
-    "file": [
-      "Est.txt",
-      "SitAmetTurpis.txt"
-    ],
+    "name": "Striped hyena",
+    "category": "Sistemas",
+    "qty": 52,
+    "source": "LED",
+    "material": ["Madera", "Aluminio", "Hierro", "Chapa", "Otros", "Polimero"],
+    "optic": ["Ovalflood"],
+    "power": [100, 74, 13, 74],
+    "cct": [4000, 3500, 3000, 2700],
+    "dim": ["Dimeable"],
+    "price": 15641,
+    "description": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.\n\nSuspendisse potenti. In eleifend quam a odio. In hac habitasse platea dictumst.",
     "main_image": "/img/product_main.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_2.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "image_slider": ["/img/slider_2.jpg", "/img/slider_3.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 99,
-    "name": "Elephant, asian",
+    "name": "Mongoose, eastern dwarf",
     "category": "Spots",
-    "qty": 38,
-    "source": "LED",
-    "material": [
-      "Aluminio",
-      "Hierro",
-      "Madera"
-    ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      30,
-      72
-    ],
-    "cct": [
-      2700,
-      3000,
-      4000
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable"
-    ],
-    "price": 17341,
-    "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\n\nNulla ut erat id mauris vulputate elementum. Nullam varius. Nulla facilisi.\n\nCras non velit nec nisi vulputate nonummy. Maecenas tincidunt lacus at velit. Vivamus vel nulla eget eros elementum pellentesque.",
-    "file": [
-      "EuTinciduntIn.ppt"
-    ],
-    "main_image": "/img/coral.jpg",
-    "image_slider": [
-      "/img/delfina.jpg",
-      "/img/slider_2.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
+    "qty": 2,
+    "source": "Lámpara",
+    "material": ["Otros", "Polimero"],
+    "optic": ["Ovalflood", "Flood", "Wideflood"],
+    "power": [79, 28, 30],
+    "cct": [2700, 3500, 4000, 3000],
+    "dim": ["Switch", "Dimeable", "DALI"],
+    "price": 31355,
+    "description": "Morbi porttitor lorem id ligula. Suspendisse ornare consequat lectus. In est risus, auctor sed, tristique in, tempus sit amet, sem.\n\nFusce consequat. Nulla nisl. Nunc nisl.",
+    "main_image": "/img/delfina.jpg",
+    "image_slider": ["/img/slider_1.jpg", "/img/bon-jour.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 100,
-    "name": "Mongoose, eastern dwarf",
-    "category": "Sistemas",
-    "qty": 43,
+    "name": "Field flicker",
+    "category": "Plafon",
+    "qty": 1,
     "source": "Lámpara",
-    "material": [
-      "Aluminio",
-      "Chapa",
-      "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
-    ],
-    "optic": [
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
-    ],
-    "power": [
-      26,
-      41,
-      61,
-      68
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI"
-    ],
-    "price": 74706,
-    "description": "Sed sagittis. Nam congue, risus semper porta volutpat, quam pede lobortis ligula, sit amet eleifend pede libero quis orci. Nullam molestie nibh in lectus.\n\nPellentesque at nulla. Suspendisse potenti. Cras in purus eu magna vulputate luctus.\n\nCum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus vestibulum sagittis sapien. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-    "file": [
-      "TemporConvallis.txt"
-    ],
-    "main_image": "/img/delfina.jpg",
-    "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/coral.jpg",
-      "/img/slider_3.jpg"
-    ],
-    "image_dimension": "/img/product_dimensions.jpg"
-  },
-  {
-    "category": "Aplique",
-    "name": "Mars FInal",
-    "qty": "1",
-    "source": "led",
-    "material": [
-      "",
-      "Aluminio"
-    ],
-    "optic": [
-      "Spot",
-      "flood"
-    ],
-    "power": [
-      "",
-      "",
-      "10W",
-      "6W"
-    ],
-    "cct": [
-      "2700",
-      "3000",
-      "3500"
-    ],
-    "dim": [
-      "dimeable",
-      "switch"
-    ],
-    "price": "12",
-    "id": 101,
-    "image_slider": [
-      "/img/Aplique1623461309059.jpg",
-      "/img/Aplique1623461309066.jpg"
-    ],
-    "main_image": "/img/Aplique1623461309051.jpg",
-    "image_dimension": "/img/Aplique1623461309066.jpg",
-    "data_sheet": "/pdf/Aplique1623461309069.pdf",
-    "install_sheet": "/pdf/Aplique1623461309090.pdf"
+    "material": ["Polimero", "Chapa", "Aluminio"],
+    "optic": ["Wideflood"],
+    "power": [46, 1, 1],
+    "cct": [2700],
+    "dim": ["DALI", "Dimeable", "Bluetooth", "Switch"],
+    "price": 48528,
+    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+    "main_image": "/img/product_main.jpg",
+    "image_slider": ["/img/coral.jpg", "/img/product_main.jpg", "/img/slider_1.jpg"],
+    "image_dimension": "/img/product_dimensions.jpg",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   }
 ]

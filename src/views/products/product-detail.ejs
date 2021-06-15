@@ -1,4 +1,5 @@
-<%- include ('../partials/head', {title:productFound.producto}) %>            
+<%- include ('../partials/head')%>
+  <title>Focal Glow | <%=productFound.name%></title>            
   <link rel="stylesheet" href="/css/style-product-detail.css" />
   </head>
 
@@ -23,52 +24,62 @@
         </div>
 
         <div class="slider-container">
-          <% for (let i =0 ; i < productFound.image_slider.length; i++) { %>
-            <input type="radio" id="trigger<%=i%>" name="slider" checked autofocus>
-            <label for="trigger<%=i%>"></label>
-            <div class="slide <%=i%>">
-              <img src ="<%=productFound.image_slider[i]%>">
+          <% productFound.image_slider.forEach((element, index) => { %>
+            <input type="radio" id="trigger<%=index%>" name="slider" checked autofocus>
+            <label for="trigger<%=index%>"></label>
+            <div class="slide <%=index%>">
+              <img src ="<%=element%>">
             </div>  
-          <%} %>
+          <%})%>;
+         
         </div>
       </div>
 
       <div class="product-info">
         <section class="technical-info">
-          <div class="options">
-            <div class="options-power-cct">
-              <select name="power" class="options-control">
-               <%productFound.power.forEach(function (element) { 
-                if (element != ""){%>
-                  <option value="<%=element%>"><%=element%>W</option>
-                <% }}) %>
+          <div class = "technical-info-title">
+            <h3>Configure su producto</h3>
+            <p>Potencia, Temperatura de Color, Óptica & Control</p>
+          </div>
+          <div class = "options">
+            <div class="options-column">
+              <select name="power" class="btn">
+                <%productFound.power.forEach(function (element) { 
+                  if (element != ""){%>
+                    <option value="<%=element%>"><%=element%>W</option>
+                  <% }}) %>
               </select>
-              <select name="cct" class="options-control">
+              <select name="cct" class="btn">
                 <%productFound.cct.forEach(function (element) { 
                   if (element != "") {%>
                 <option value="<%=element%>"><%=element%>K</option>
                 <% }}) %>
-              
               </select>
             </div>
-
-            <select name="dim" class="options-control-dim">
-              <%productFound.dim.forEach(function (element) { 
-                switch (element) {
-                  case '':
-                    break
-                  case 'Switch':%>
-                    <option value="<%=element%>">&#xf011; <%=element%></option>
-                  <%  break
-                  case 'Bluetooth': %>
-                  <option value="<%=element%>">&#xf293; <%=element%></option>
-                  <% break
-                  default:%>
-                  <option value="<%=element%>"><%=element%></option>
+            <div class="options-column">
+              <select name="optic" class="btn">
+                <%productFound.optic.forEach(function (element) { 
+                  if (element != "") {%>
+                <option value="<%=element%>"><%=element%></option>
+                <% }}) %>
+              </select>
+              <select name="dim" class="btn">
+                <%productFound.dim.forEach(function (element) { 
+                  switch (element) {
+                    case '':
+                      break
+                    case 'Switch':%>
+                      <option value="<%=element%>">&#xf011; <%=element%></option>
+                    <%  break
+                    case 'Bluetooth': %>
+                      <option value="<%=element%>">&#xf293; <%=element%></option>
+                    <% break
+                    default:%>
+                    <option value="<%=element%>"><%=element%></option>
                   <%  break;
-                
-              }}) %>
-            </select>
+                }}) %>
+              </select>
+            </div>
           </div>
         
           <article class="technical-data">
@@ -76,16 +87,17 @@
             <ul>
               <li>Fuente: <%=(productFound.source).toUpperCase()%></li>
               <li>Material:  <%=productFound.material.join('-')%></li>
-              <li>Óptica: <%=productFound.optic%></li>
-              <li>Potencia [W]: <em>Seleccionar opción</em></li>
-              <li>CCT: <em>Seleccionar opción</em></li>
-              <li>Dim: <em>Seleccionar opción</em></li>
             </ul>
+            <p><strong>Descripción:</strong> <br>
+              <%=productFound.description%></p>
           </article>
         </section>
 
         <section class="price">
-          <h3 class="price-title">$<%= productFound.price%></h3>
+          <h3 class="price-title">$ 
+            <% const toThousand = (n) =>
+                n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+             <%= toThousand(productFound.price)%></h3>
           <div class="qtyadd">
             <input type="number" placeholder="1" min="0" />
             <button class="add">AÑADIR</button>
@@ -108,13 +120,13 @@
       <article class="similar-products">
         <h3>Productos Similares</h3>
         <div class="slider-container">
-          <% for (let i =3 ; i < 5; i++) { %>
-            <input type="radio" id="trigger<%=i%>" name="slider2" checked autofocus >
-            <label for="trigger<%=i%>"></label>
-            <div class="slide2 <%=i%>">
-              <img src ="/img/similar_products_<%=i%>.jpg">
+          <% similarProducts.forEach((element, index) => { %>
+            <input type="radio" id="trigger<%=index + productFound.image_slider.length%>" name="slider2" checked autofocus >
+            <label for="trigger<%=index + productFound.image_slider.length%>"></label>
+            <div class="slide2 <%=index + productFound.image_slider.length%>">
+              <a href="/product/detail/<%=element.id%>"><img src ="<%=element.main_image%>"></a>
             </div>  
-          <%} %>
+          <%}) %>
         </div>
       </article>
     </section>

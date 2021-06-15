@@ -157,13 +157,24 @@ input:checked + label + .slide2 {
   max-height: 900px;
 }
 
+.technical-info-title {
+  margin: 5px auto;
+}
+
+.technical-info-title h3,
+.technical-info-title p {
+  margin: 0px;
+  text-align: left;
+}
+
+/*BOTON OPCIONES*/
+
 .options {
   display: flex;
   flex-direction: column;
 }
 
-.options-control,
-.options-control-dim {
+.btn {
   color: white;
   background-color: black;
   font-size: 1rem;
@@ -176,20 +187,14 @@ input:checked + label + .slide2 {
   font-family: 'FontAwesome', 'Roboto';
 }
 
-.options-control:hover,
-.options-control-dim:hover {
+.btn option {
+  font-family: 'FontAwesome', 'Roboto';
+}
+
+.btn:hover {
   background-color: #ffde59;
   opacity: 0.9;
   color: black;
-}
-
-.options-power-cct {
-  display: flex;
-  flex-direction: column;
-}
-
-.options-control-dim option {
-  font-family: 'FontAwesome', 'Roboto';
 }
 
 .technical-data {
@@ -198,9 +203,11 @@ input:checked + label + .slide2 {
   text-align: left;
   padding-bottom: 10px;
   padding-right: 10px;
+  margin: 10px auto;
 }
 
-.technical-data h3 {
+.technical-data h3,
+.technical-data p {
   margin: 9px 25px;
   padding-top: 10px;
 }
@@ -230,7 +237,7 @@ input {
   font-weight: bold;
 }
 
-.add {
+.qtyadd .add {
   width: 50%;
   background-color: black;
   color: white;
@@ -268,14 +275,17 @@ input {
   margin-top: 20px;
 }
 
-.similar-products-container {
-  margin: 0 auto;
-  text-align: center;
-  width: 66.66%;
-  margin-bottom: 20px;
+.documents a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.similar-products {
+.similar-products-container {
+  margin: 30px auto;
+  text-align: center;
+  width: 66.66%;
+}
+  .similar-products {
   align-content: flex-end;
 }
 
@@ -298,16 +308,21 @@ input {
     position: sticky;
   }
 
+  .technical-data {
+    max-height: 250px;
+    overflow-y: scroll;
+  }
+
+  .technical-info-title {
+    margin: 0 auto;
+  }
   .options {
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0;
     margin: 0;
   }
-  .options-power-cct {
-    width: 50%;
-  }
-  .options-control-dim {
+  .options-column {
     width: 50%;
   }
 
@@ -331,10 +346,10 @@ input {
   .similar-products .slider-container {
     width: 100%;
     margin-top: 10px;
-    height: 33vh;
+    height: initial;
     display: flex;
     justify-content: space-evenly;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .similar-products input,
@@ -344,7 +359,7 @@ input {
 
   .slide2 {
     position: initial;
-    width: 100%;
+    width: 23.5%;
     height: auto;
     top: 0;
     left: 0;
@@ -379,17 +394,9 @@ input {
 @media (min-width: 1024px) {
   .product-name,
   main {
-    width: 70%;
+    width: 75%;
     max-width: 1500px;
     max-height: 1500px;
-  }
-
-  .options-power-cct {
-    width: 66.66%;
-    flex-direction: row;
-  }
-  .options-control-dim {
-    width: 33.33%;
   }
 }
 
@@ -402,12 +409,11 @@ input {
     margin-left: 50%;
     width: 50%;
     margin-top: 40px;
-
     z-index: 10;
   }
 
   .product-dimensions-info img:hover {
-    transform: scale(2);
+    transform: scale(1.75);
     transform-origin: right top;
   }
   .product-detail i {

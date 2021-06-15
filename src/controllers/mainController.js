@@ -34,12 +34,12 @@ let productCheckout = [
     cantidad: 5,
   },
 ]
-const agregarProducto = require('../models/product')
+const product = require('../models/product')
 const categories = require('../models/category')
 
 const controller = {
   home: (req, res) => {
-    let products = agregarProducto.findAll()
+    let products = product.findAll()
     let categoryList = categories.findAll()
     let homeData = { products, categoryList }
 
