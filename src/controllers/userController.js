@@ -1,5 +1,6 @@
 const { usersPath } = require('../models/user')
 const user = require('../models/user')
+const { validationResults } = require('express-validator')
 
 const controller = {
   //envia al usuario a la pagina de login
@@ -14,14 +15,16 @@ const controller = {
   },
   //captura y envia los datos enviados por post al modelo
   create: (req, res) => {
-    let { nombre, apellido, email, password } = req.body
+    const validationStatus = validationResults(req)
+    let { name, surname, email, password } = req.body
     let newUser = {
-      nombre,
-      apellido,
+      name,
+      surname,
       email,
       password,
       profileImg: '/img/profile-pictures/' + req.file.filename
     }
+    res.send(validationStatus)
     user.create(newUser)
     res.redirect('/')
   },
@@ -30,10 +33,10 @@ const controller = {
     const session = req.body
     const userStatus = user.validateUser(session) //valido el usuario
     if (userStatus == 'Acceso concedido') {
-      
+
       res.redirect('/product/list')
     } else {
-      
+
       res.render('users/login.ejs', { userStatus })
     }
   },
@@ -54,11 +57,11 @@ const controller = {
   },
   update: (req, res) => {
     console.log("entro al update del controlador")
-    const { nombre, apellido, email, password } = req.body
+    const { name, surname, email, password } = req.body
     const { id } = req.params
     const userUpdate = {
-      nombre,
-      apellido,
+      name,
+      surname,
       email,
       password
     }

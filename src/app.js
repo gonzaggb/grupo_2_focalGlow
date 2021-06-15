@@ -11,7 +11,7 @@ app.set('views', path.join(__dirname, 'views')) // indica al template engine don
 app.set('view engine', 'ejs')
 
 //Configuracion de express para poder trabajar con los datos que se envian desde el formulario//
-app.use(express.urlencoded({ extended: false }))
+app.use(express.urlencoded({ extended: false })) // sin esta linea no vienen los datos del body que se mandan de los formularios
 app.use(express.json())
 
 //Requerimos y usamos el metodo Override para soportar los metodos PUT y DELETE en HTML//
