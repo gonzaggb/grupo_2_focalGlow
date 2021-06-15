@@ -1,4 +1,5 @@
 <%- include('../partials/head.ejs')%>
+<title>Focal Glow | Formulario de Edición</title>  
   <link rel="stylesheet" href="/css/styles-product-org.css">
   </head>
 
@@ -8,6 +9,7 @@
                 <h2 class="titulo">Modificación de Producto</h2>
                 <div class="container-form">
                     <form id="register" action="/product/<%= productFound.id %>/edit?_method=PUT" method="POST">
+                    <div class="form_left">
                         <div class="first">
                             <div class="cateogry-selector">
                                 <label class="" for="category">Categoria: </label><br>
@@ -71,16 +73,16 @@
                         <div class="first-">
                             <label class="" for="optic">Optica: </label>
                             <div>
-                                <input class="check" type="checkbox" name="optic" value="flood"  <%= productFound.optic.includes("flood") ? 'checked' : '' %>> Flood
+                                <input class="check" type="checkbox" name="optic" value="Flood"  <%= productFound.optic.includes("Flood") ? 'checked' : '' %>> Flood
                             </div>
                             <div>
                                 <input class="check" type="checkbox" name="optic" value="Spot"  <%=  productFound.optic.includes("Spot") ? 'checked' : '' %>> Spot
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optic" value="WideFlood" <%=  productFound.optic.includes("WideFlood") ? 'checked' : ''%>> Wide Flood
+                                <input class="check" type="checkbox" name="optic" value="WideFlood" <%=  productFound.optic.includes("Wideflood") ? 'checked' : ''%>> Wide Flood
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optic" value="Oval"  <%=  productFound.optic.includes("Oval") ? 'checked' : ''%>> Oval
+                                <input class="check" type="checkbox" name="optic" value="Oval"  <%=  productFound.optic.includes("Ovalflood") ? 'checked' : ''%>> Oval
                             </div>
                         </div><br>
                         <div class="first-">
@@ -99,38 +101,40 @@
                         <div class="first-">
                             <label class="" for="cct">CCT: </label>
                             <div>
-                                <input class="check" type="checkbox" name="cct" value="2700k"  <%=  (productFound.cct.includes("2700k") ? 'checked' : '')%>> 2700K
+                                <input class="check" type="checkbox" name="cct" value="2700"  <%=  (productFound.cct.includes(2700) ? 'checked' : '')%>> 2700K
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="cct" value="3000k"  <%=  (productFound.cct.includes("3000k") ? 'checked' : '')%>> 3000K
+                                <input class="check" type="checkbox" name="cct" value="3000"  <%=  (productFound.cct.includes(3000) ? 'checked' : '')%>> 3000K
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="cct" value="3500k"  <%=  (productFound.cct.includes("3500K") ? 'checked' : '')%>> 3500K
+                                <input class="check" type="checkbox" name="cct" value="3500"  <%=  (productFound.cct.includes(3500) ? 'checked' : '')%>> 3500K
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="cct" value="4000k"  <%=  (productFound.cct.includes("4000k") ? 'checked' : '')%>> 4000K
+                                <input class="check" type="checkbox" name="cct" value="4000"  <%=  (productFound.cct.includes(4000) ? 'checked' : '')%>> 4000K
                             </div>
                         </div><br>
                         <div class="first-">
                             <label class="" for="dim">Dim: </label>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="switch"  <%=  (productFound.dim.includes("switch") ? 'checked' : '')%>> Switch
+                                <input class="check" type="checkbox" name="dim" value="Switch"  <%=  (productFound.dim.includes("Switch") ? 'checked' : '')%>> Switch
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="dimeable"  <%= (productFound.dim.includes("dimeable") ? 'checked' : '')%>> Dimeable
+                                <input class="check" type="checkbox" name="dim" value="Dimeable"  <%= (productFound.dim.includes("Dimeable") ? 'checked' : '')%>> Dimeable
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="dali"  <%= (productFound.dim.includes("dali") ? 'checked' : '')%>> DALI
+                                <input class="check" type="checkbox" name="dim" value="DALI"  <%= (productFound.dim.includes("DALI") ? 'checked' : '')%>> DALI
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="dim" value="bluetooth"  <%= (productFound.dim.includes("bluetoot") ? 'checked' : '')%>> Bluetooth
+                                <input class="check" type="checkbox" name="dim" value="Bluetooth"  <%= (productFound.dim.includes("Bluetooth") ? 'checked' : '')%>> Bluetooth
                             </div>
                         </div><br>
                         <div class="first-">
-                            <label class="" for="price">Precio unitario base: </label><br>
-                            <input class="box" type="number" name="price" id="precio" min="0"
+                            <label class="price" for="price">Precio unitario base: </label><br>
+                            <input class="price" type="number" name="price" id="precio" min="0"
                                 placeholder=" Ej 15235.35" value="<%= productFound.price %>" >
                         </div><br>
+                    </div>
+                    <div class="form_right">
                         <div class="imagenes">
                             <div class="imagen-input">
                                 <label class="title" for="product_img">Imagen Principal: </label><br>
@@ -159,6 +163,7 @@
                                 <input type="file" src="" alt="" name="install_sheet" accept=".pdf">
                             </div><br>
                         </div>
+                    </div>
                         <div class="button-container">
                             <button id="button-enviar" type="submit">Modificar</button>
                             <button id="button-borrar" type="reset">Resetear</button>

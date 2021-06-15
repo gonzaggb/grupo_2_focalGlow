@@ -48,7 +48,7 @@ module.exports = {
 
   create(product, files) {
     product.id = this.generateId()
-    product.file = []
+    product.image_slider = []
 
     //Dependiendo del tipo de archivo donde se guarda
     for (let i = 0; i < files.length; i++) {
@@ -56,14 +56,18 @@ module.exports = {
         case 'product_img':
           product.main_image = '/img/' + files[i].filename
           break
+        case 'image_slider':
+          product.image_slider.push('/img/' + files[i].filename)
+          break
+        case 'image_dimension':
+          product.image_dimension = '/img/' + files[i].filename
+          break
         case 'data_sheet':
           product.data_sheet = '/pdf/' + files[i].filename
           break
         case 'install_sheet':
           product.install_sheet = '/pdf/' + files[i].filename
           break
-        case 'file':
-          product.file.push('/img/' + files[i].filename)
         default:
       }
     }
@@ -76,7 +80,7 @@ module.exports = {
     product.power == '' ? (product.power = []) : ''
     product.cct == undefined ? (product.cct = []) : ''
     product.dim == undefined ? (product.dim = []) : ''
-    product.file == '' ? (product.file = []) : ''
+    product.image_slider == '' ? (product.image_slider = []) : ''
 
     console.log(product)
 
@@ -95,7 +99,7 @@ module.exports = {
     /* const productDelete = products.splice(productFound,1) */ //borra el producto
     this.writeFile(newProducts) //desvuelve el array de productos sin el elemento borrado
   },
-  update(body, id) {
+  update(body, id , files) {
     const products = this.readFile()
     const productEdit = products.map((product) => {
       if (product.id == id) {

@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
   font-family: 'Roboto', sans-serif;
@@ -9,7 +10,7 @@ body {
   line-height: 1.6em;
   margin: 0;
   background-image: url(/img/fondo2.jpg);
-  position: relative;
+  /* position: relative; */
 }
 .id-box{
     display: none;
@@ -43,56 +44,37 @@ body {
     padding-bottom: 10px;
     border-bottom: 1px solid black;
 }
+.product_container{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(225, 230, 230);
+    margin-bottom: 10px;
+}
+.product_container h2 {
+    font-size: 16px;
+}
+
 .button-container{
     display: flex;
     width: 100%;
     justify-content: space-around;
+    border-top: 1px solid black;
     margin-top: 15px;
     margin-bottom: 15px;
     padding-bottom: 5px;
-    border-bottom: 1px solid black;
+    
+    
 }
-#button-product{
-     width: 100%;
-        border-radius: 5px;
-        height: 40px;
-        transition: 0.3s; 
+.button-container a i {
+      color: black;
+    }
+  
+
+.delete_icon{
+  border: 0;
+  background-color: transparent;
 }
-#button-product:hover{
-    background-color: #ffde59;
-    color: black;
-    box-shadow: 5px 5px 10px black;
-}
-#button-modificar{
-     width: 100%;
-        border-radius: 5px;
-        height: 40px;
-        transition: 0.3s;  
-}
-#button-modificar,
-#button-eliminar,
-#button-visualizar {
-  width: 40%;
-  border-radius: 5px;
-  height: 40px;
-  transition: 0.3s;
-}
-#button-eliminar{
-        width: 100%;
-        border-radius: 5px;
-        height: 40px;
-        transition: 0.3s;
-}
-#button-modificar:hover{
-  background-color: green;
-  color: white;
-  box-shadow: 5px 5px 10px black;
-}
-#button-eliminar:hover {
-  background-color: red;
-  color: white;
-  box-shadow: 5px 5px 10px black;
-}
+
 
 .up-button{
   background-color: #ffde59 ;
@@ -100,10 +82,11 @@ body {
   height: 60px;
   border-radius: 50px;
   font-size: 30px;
-  position: relative;
+  position: fixed;
   text-align: center;
-  left: 90%;
+  left: 80%;
   bottom: 20px;
+  
 
 }
 .up-button i{
@@ -124,21 +107,66 @@ body {
     }
     .form-lista-productos{
         border: 0;
+        
     }
+    .product_container{
+      flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.3s;
+    border: 1px solid black;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      background-color: rgb(225, 230, 230);
+    
+    }
+    .product_container:hover{
+      box-shadow: 0 0 10px black;
+      transform: scale(1.01);
+      border: 1px solid black;
+    }
+    .product_container h2 {
+      font-size: 16px;
+    }
+    .inner_img{
+      margin-top: 9px;
+    }
+
     .button-container{
-        width: 50%;
+        width: 100%;
+        border: 0;
+        display: flex;
+        gap: 10px; 
+        font-size: 20px;  
+    }
+    .button-container a i {
+      color: black;
     }
     #button-product{
         width: 150%; 
         height: 40px;
     }    
-    #button-modificar{
-        width: 200%;
-        height: 40px;
+    
+  
+    .up-button{
+    background-color: #ffde59 ;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    font-size: 30px;
+    position: fixed;
+    text-align: center;
+    left: 90%;
+    bottom: 20px;
+    display: block;
+    z-index: 99;
 
-    } 
-    #button-eliminar{
-        width: 200%;
-        height: 40px;
-    }    
+}
+     
 }    
