@@ -1,6 +1,6 @@
 const { usersPath } = require('../models/user')
 const user = require('../models/user')
-const { validationResults } = require('express-validator')
+const { validationResult } = require('express-validator')
 
 const controller = {
   //envia al usuario a la pagina de login
@@ -15,7 +15,11 @@ const controller = {
   },
   //captura y envia los datos enviados por post al modelo
   create: (req, res) => {
-    const validationStatus = validationResults(req)
+    const validationStatus = validationResult(req)
+    if(validationStatus.errors.length > 0){
+      return res.render('users/registro.ejs', {errors: validationStatus.mapped(), oldData: req.body})
+    }
+    console.log(req.file)
     let { name, surname, email, password } = req.body
     let newUser = {
       name,
@@ -24,7 +28,7 @@ const controller = {
       password,
       profileImg: '/img/profile-pictures/' + req.file.filename
     }
-    res.send(validationStatus)
+   
     user.create(newUser)
     res.redirect('/')
   },
