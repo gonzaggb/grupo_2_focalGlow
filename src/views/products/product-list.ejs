@@ -12,23 +12,50 @@
         <h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %> </h4>
         <h4 class='form-lista-productos'> Recordá que los primeros 4 productos son los que van a SALE</h4>
         <div class='form-lista-productos'>
-              
+            <div class="product_container">
+                <h2>ID
+                </h2>
+                <h2>Categoria
+                </h2>
+                <div class="inner_data">
+                    <h2>Nombre
+                    </h2>
+            
+                </div>
+                <div class="inner_data">
+                    <h2>Imagen
+
+                    </h2>
+                </div>
+                <div class="inner_data">
+                    <h2>Cantidad
+                    </h2>
+                </div>
+                <div class="inner_data">
+                    <h2>Precio
+                    </h2>
+                </div>
+                <div class="inner_data">
+                    <h2>Accion
+                    </h2>
+                </div>
+            </div>    
             <% for (let i =0 ; i < products.length; i++) {%>
               <div class="product_container"> 
-                 <h2>ID: <%=products[i].id%></h2> 
-                <h2>Categoria: <%=products[i].category%></h2>
+                 <h2> <%=products[i].id%></h2> 
+                <h2 ><%=products[i].category%></h2>
                 <div class="inner_data">
-                    <h2>Nombre: <%=products[i].name%></h2>
+                    <h2><%=products[i].name%></h2>
                     
                 </div>
                 <div class="inner_img">
                     <img src="<%=products[i].main_image%>" alt="" width="60" height="60">
                 </div>
                 <div class="inner_data">
-                    <h2>Cantidad: <%=products[i].qty%></h2>
+                    <h2><%=products[i].qty%></h2>
                 </div>
                 <div class="inner_data">
-                    <h2>Precio: $<%=products[i].price%></h2>
+                    <h2>$<%=products[i].price%></h2>
                 </div>     
                 <div >
                     <div class="button-container"> 

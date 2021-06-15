@@ -24,7 +24,7 @@ const controller = {
       const productNew = req.body
     const files = req.files
 
-    console.log(files)
+    
     product.create(productNew, files)
     res.redirect('/product/list')
     } else {
@@ -32,9 +32,6 @@ const controller = {
        { errors: errors.array(),
          old: req.body})
     } 
-    console.log(errors)     
-    
-    
   },
 
   edit: (req, res) => {
