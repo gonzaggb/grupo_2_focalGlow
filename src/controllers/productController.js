@@ -2,6 +2,8 @@
 const product = require('../models/product')
 // se requiere express-validator, pero la parte de validation result
 const {validationResult}= require('express-validator')
+const { isFileImage, isPdf } = require('../helpers/files')
+
 
 const controller = {
   list: (req, res) => {
@@ -24,12 +26,12 @@ const controller = {
       const productNew = req.body
     const files = req.files
 
-    
     product.create(productNew, files)
     res.redirect('/product/list')
     } else {
+      console.log('ESTOS SON LOS ERRORES DEL CREATE')
       res.render('products/product-create.ejs',
-       { errors: errors.array(),
+       { errors: errors.mapped(),
          old: req.body})
     } 
   },

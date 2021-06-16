@@ -24,8 +24,7 @@ var storage = multer.diskStorage({
 
 const fileFilter = (req, file, cb) => {
     console.log(file)
-    if (!files.isFileImage(file.originalname)) {
-        console.log(`file que llega al route ${file.path}`)
+    if (!files.isFileImage(file.originalname)) { //evalua que el archivo sea una imagen
         req.file = file
         cb(null, false)
         return

@@ -10,32 +10,23 @@
                     <form id="register" action="/product/add" method="POST" enctype="multipart/form-data">
                         
                         <div class="form_left">
-                            <% if(locals.errors) { errors.forEach(error=> { %>
-                            <p class="error_msg">
-                                <%= error.msg %>
-                            </p>
+
                         
-                            <% }) }%>
                             <div class="first">
                                 <div class="cateogry-selector">
                                     <label class="" for="category">Categoria: </label><br>
                                     <select name="category" class="select">
                                         <option value="">Seleccionar</option>
-                                        <option value="Plafon">Plafón</option>
-                                        <option value="Aplique">Aplique</option>
-                                        <option value="Pie">Pie</option>
-                                        <option value="Colgante">Colgante</option>
-                                        <option value="Spot">Spot</option>
-                                        <option value="Accesorios">Sistemas/Accesorios</option>
-                                        <option value="Mesa">Mesa</option>
-                                        <option value="Exterior">Exterior</option>
-                                    </select>
+                                        <% locals.categories.forEach(categorie => { %>
+                                            <option value="categorie.name"><%=categorie.name.charAt(0).toUpperCase() + categorie.name.slice(1)%></option>
+                                        <% }) %>
+                                     </select>
                                 </div>
                             </div><br>
                             <div class="first">
                                 <div class="in-line-data">
                                     <label class="" for="name">Nombre del Producto: </label><br>
-                                    <input class="box" type="text" name="name" id="producto" value="<%= locals.old && old.name ? old.name : '' %>" >
+                                    <input class="box" type="text" name="name" id="producto" value="<%= locals.old && old.name ? old.name : '' %>" placeholder="<%= locals.errors && errors.name ? errors.name.msg : null  %>" >
                                 </div>
                             </div><br>
                             <div class="first">

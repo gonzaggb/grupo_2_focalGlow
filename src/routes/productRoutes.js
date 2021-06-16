@@ -6,13 +6,7 @@ const multer = require('multer')
 //requerir path
 const path = require('path')
 //requerir express-validator
-const{body} = require('express-validator')
-//agregar las validaciones
-const validateCreateForm = [
-  body('name').notEmpty().withMessage('* Falta agregar nombre de producto'),
-  body('qty').notEmpty().withMessage('* Falta agregar la cantidad de productos'),
-  body('price').notEmpty().withMessage('* Falta agregar el precio del producto'),
-]
+const { validateCreateForm }  = require('../middleware/validateCreateForm')
 
 //aplicacion de multer
 const storage = multer.diskStorage({

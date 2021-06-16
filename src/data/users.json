@@ -14,5 +14,29 @@
     "password": "asd",
     "profileImg": "/img/profile-pictures/1623788550000.jpeg",
     "id": 5
+  },
+  {
+    "name": "",
+    "surname": "",
+    "email": "",
+    "password": "",
+    "profileImg": "/img/profile-pictures/undefined",
+    "id": 6
+  },
+  {
+    "name": "",
+    "surname": "",
+    "email": "",
+    "password": "",
+    "profileImg": "/img/profile-pictures/undefined",
+    "id": 7
+  },
+  {
+    "name": "Gonzalo",
+    "surname": "Baigorria",
+    "email": "gonzaggb@hotmail.com",
+    "password": "123456",
+    "profileImg": "/img/profile-pictures/1623884679198.jpeg",
+    "id": 8
   }
 ]
