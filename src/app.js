@@ -1,6 +1,6 @@
 const express = require('express') // trae el modulo de express para poder montar el servidor
 const app = express() //declaramos la variable app que va utilizar todos los metodos de express.
-
+const categoriesMiddleware = require('./middleware/headerCategories')
 // Coonfiguracion de la ruta que contiene los recursos estaticos para consumir de manera sencilla
 const path = require('path') //requiere el modulo nativo path de node
 publicPath = path.join(__dirname, '../public')
@@ -23,6 +23,7 @@ const port = process.env.PORT || 3000 // use port 3000 unless there exists a pre
 app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
 
 // Requiriendo todos los routers
+app.use(categoriesMiddleware)
 const mainRoutes = require('./routes/mainRoutes')
 const categoryRoutes = require('./routes/categoryRoutes')
 const productRoutes = require('./routes/productRoutes')
