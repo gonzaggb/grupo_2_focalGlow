@@ -15,9 +15,9 @@ const controller = {
   },
   //captura y envia los datos enviados por post al modelo
   create: (req, res) => {
-    const validationStatus = validationResult(req)
-    if(validationStatus.errors.length > 0){
-      return res.render('users/registro.ejs', {errors: validationStatus.mapped(), oldData: req.body})
+    const validationStatus = validationResult(req) // trae los resultados del middleware
+    if (validationStatus.errors.length > 0) {
+      return res.render('users/registro.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
     }
     console.log(req.file)
     let { name, surname, email, password } = req.body
@@ -28,7 +28,7 @@ const controller = {
       password,
       profileImg: '/img/profile-pictures/' + req.file.filename
     }
-   
+
     user.create(newUser)
     res.redirect('/')
   },

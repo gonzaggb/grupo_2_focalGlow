@@ -4,10 +4,12 @@
     <link rel="stylesheet" href="/css/styles-registro.css">
 
     </head>
-    <script>function cambiar() {
+    <script>
+        function cambiar() {
             var pdrs = document.getElementById('file-upload').files[0].name;
             document.getElementById('info').innerHTML = pdrs;
-        }</script>
+        }
+    </script>
 
     <body>
         <%- include('../partials/header.ejs')%>
@@ -17,85 +19,46 @@
                 <form class="registry-form2" method="POST" action="/users/registro" enctype="multipart/form-data">
                     <div class="registry-container2">
                         <label for="nombre">Nombre</label>
-                        <input class="<%=locals.errors && errors.name ? 'error' : 'input-login'%>" type="text"
-                            name="name" id="name" <% if (locals.errors && errors.name) { %>
-                            placeholder="<%=errors.name.msg%>"
+                            <input class="<%=locals.errors && errors.name ? 'error' : 'input-login'%>" type="text"
+                            name="name" id="name" <% if (locals.errors && errors.name) { %> placeholder="<%=errors.name.msg%>"
                             <% }else if(locals.oldData){ %>
                                 value = "<%=oldData.name%>"
-                                    <%}%>>
+                            <%}%>>
                         <label for="apellido">Apellido</label>
-                            <input class="<%=locals.errors && errors.surname ? 'error' : 'input-login'%>"
-                                            type="text" name="surname" id="surname" <% if (locals.errors &&
-                                            errors.surname) { %>
-                                        placeholder="<%=errors.surname.msg%>"
-                                            <% }else if(locals.oldData){ %>
-                                                value = "<%=oldData.surname%>"
-                                                    <%}%>>
-                            <label for="email">Email</label>
-                                <input class="<%=locals.errors && errors.email ? 'error' : 'input-login'%>"
-                                                            type="text" name="email" id="email" <% if (locals.errors &&
-                                                            errors.email) { %>
-                                                        placeholder="<%=errors.email.msg%>"
-                                                            <% }else if(locals.oldData){ %>
-                                                                value = "<%=oldData.email%>"
-                                                                    <%}%>>
-                            <label for="password">Contraseña</label>
-                                <input class="<%=locals.errors && errors.password ? 'error' : 'input-login'%>"
-                                         type="password" name="password" id="password"
-                                    <% if (locals.errors && errors.password) { %>
-                                     placeholder="<%=errors.password.msg%>"
-                                         <%}%>>
-                            <label for="rePassword">Confirmar contraseña</label>
-                                <input class="<%=locals.errors && errors.rePassword ? 'error' : 'input-login'%>"
-                                     type="password" name="rePassword" id="rePassword"
-                                     <% if (locals.errors && errors.rePassword) { %>
-                                 placeholder="<%=errors.rePassword.msg%>"
-                                     <%}%>>
-                                        <label for="file-upload" class="subir">
-                                            <span><i class="far fa-user-circle"></i>
-                                                Subir foto de perfil</span>
-                                        </label>
-                                        <%if(locals.errors && errors.profileImg){%>
-                                            <span class="error-message"><%=errors.profileImg.msg%></span>
-                                            <%}%>
-                                        <div id="info"></div>
-                                        <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none;'/>
-                    <div class="button-container">
-                        <button type="submit" class="login-button">Continuar</button>
-                    </div>
+                            <input class="<%=locals.errors && errors.surname ? 'error' : 'input-login'%>" type="text" 
+                            name="surname" id="surname" <% if (locals.errors && errors.surname) { %> placeholder="<%=errors.surname.msg%>"
+                            <% }else if(locals.oldData){ %> value = "<%=oldData.surname%>"
+                            <%}%>>
+                        <label for="email">Email</label>
+                            <input class="<%=locals.errors && errors.email ? 'error' : 'input-login'%>" type="text" 
+                            name="email" id="email" <% if (locals.errors && errors.email) { %> placeholder=" <%=errors.email.msg%>"
+                            <% }else if(locals.oldData){%>
+                                value = "<%=oldData.email%>"
+                            <%}%>>
+                        <label for="password">Contraseña</label>
+                            <input class="<%=locals.errors && errors.password ? 'error' : 'input-login'%>" type="password" 
+                            name="password" id="password"
+                            <% if (locals.errors && errors.password) { %> placeholder=" <%=errors.password.msg%>"
+                            <%}%>>
+                        <label for="rePassword">Confirmar contraseña</label>
+                            <input class="<%=locals.errors && errors.rePassword ? 'error' : 'input-login'%>" type="password"
+                            name="rePassword" id="rePassword"
+                            <% if (locals.errors&& errors.rePassword) { %> placeholder="<%=errors.rePassword.msg%>"
+                            <%}%>>
+                        <label for="file-upload" class="subir">
+                            <span><i class="far fa-user-circle"></i> Subir foto de perfil</span>
+                        </label>
+                            <%if(locals.errors && errors.profileImg){%>
+                                <span class="error-message"> <%=errors.profileImg.msg%> </span>
+                                     <%}%>
+                        <div id="info"></div>
+                            <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
+                        <div class="button-container">
+                            <button type="submit" class="login-button">Continuar</button>
+                        </div>
 
-                    </section>
-                </form>
 
             </main>
-            <!--  <footer class="footer">
-        <section class="footer_wrappler">
-            <article class="links">
-                <h4>Preguntas frecuentes</h4>
-                <ul>
-                    <li><a href="/us#us">Nosotros</a></li>
-                    <li><a href="/us#payment_method">Metodos de Pago</a></li>
-                    <li><a href="/us#delivery">Envios</a></li>
-                </ul>
-            </article>
-            <article class="social_media">
-                <h4>Social Media</h4>
-                <ul>
-                    <li><a href="https://www.facebook.com/focal.glow/" target="_blank"><i
-                                class="fab fa-facebook-square"></i>Facebook</a></li>
-                    <li><a href="https://www.instagram.com/focal_glow_baires/" target="_blank"><i
-                                class="fab fa-instagram"></i>Instagram</a></li>
-                </ul>
-            </article>
-            <article class="contact">
-                <h4>Contact</h4>
-                <ul>
-                    <li><a href=""><i class="far fa-envelope"></i>E-mail</a></li>
-                    <li><a href=""><i class="fab fa-whatsapp"></i>Whatsapp</a></li>
-                </ul>
-            </article>
-        </section>
-    </footer> -->
     </body>
 
     </html>
