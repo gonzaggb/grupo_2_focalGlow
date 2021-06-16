@@ -1,6 +1,6 @@
 const express = require('express') // trae el modulo de express para poder montar el servidor
 const app = express() //declaramos la variable app que va utilizar todos los metodos de express.
-const categoriesMiddleware = require('./middleware/headerCategories')
+const categoriesMiddleware = require('./middleware/categoriesList')
 // Coonfiguracion de la ruta que contiene los recursos estaticos para consumir de manera sencilla
 const path = require('path') //requiere el modulo nativo path de node
 publicPath = path.join(__dirname, '../public')
