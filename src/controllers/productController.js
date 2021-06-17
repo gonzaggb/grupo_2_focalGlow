@@ -30,6 +30,7 @@ const controller = {
     res.redirect('/product/list')
     } else {
       console.log('ESTOS SON LOS ERRORES DEL CREATE')
+      console.log(errors)
       res.render('products/product-create.ejs',
        { errors: errors.mapped(),
          old: req.body})
