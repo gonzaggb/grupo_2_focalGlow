@@ -152,10 +152,6 @@ const controller = {
     let id = req.params.id
     let productDelet = product.findByPk(id)
 
-    fs.unlinkSync(path.join(__dirname, '../../public/', productDelet.main_image))
-    fs.unlinkSync(path.join(__dirname, '../../public/', productDelet.image_dimension))
-    fs.unlinkSync(path.join(__dirname, '../../public/', productDelet.data_sheet))
-    fs.unlinkSync(path.join(__dirname, '../../public/', productDelet.install_sheet))
 
     res.redirect('/product/list')
     product.delete(id)

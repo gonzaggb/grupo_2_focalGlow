@@ -108,8 +108,6 @@ module.exports = {
     fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet)) // borra data sheet
 
     fs.unlinkSync(path.join(resourcesPath, productToDelete.install_sheet))// borra install sheet
-
-
   },
   update(body, id, files) {
     const products = this.readFile()
