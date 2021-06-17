@@ -120,7 +120,7 @@
       <article class="similar-products">
         <h3>Productos Similares</h3>
         <div class="slider-container">
-          <% similarProducts.forEach((element, index) => { %>
+          <% similarProductsFiltered.forEach((element, index) => { %>
             <input type="radio" id="trigger<%=index + productFound.image_slider.length%>" name="slider2" checked autofocus >
             <label for="trigger<%=index + productFound.image_slider.length%>"></label>
             <div class="slide2 <%=index + productFound.image_slider.length%>">
