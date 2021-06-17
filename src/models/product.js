@@ -48,16 +48,20 @@ module.exports = {
 
   create(product, files) {
     product.id = this.generateId()
-    product.image_slider = []
-
     //Dependiendo del tipo de archivo donde se guarda
     for (let i = 0; i < files.length; i++) {
       switch (files[i].fieldname) {
         case 'main_image':
           product.main_image = '/img/' + files[i].filename
           break
-        case 'image_slider':
-          product.image_slider.push('/img/' + files[i].filename)
+        case 'image_slider_1':
+          product.image_slider_1 = ('/img/' + files[i].filename)
+          break
+        case 'image_slider_2':
+          product.image_slider_2 = ('/img/' + files[i].filename)
+          break
+        case 'image_slider_3':
+          product.image_slider_3 = ('/img/' + files[i].filename)
           break
         case 'image_dimension':
           product.image_dimension = '/img/' + files[i].filename
@@ -103,7 +107,7 @@ module.exports = {
     fs.unlinkSync(path.join(resourcesPath, productToDelete.main_image)) // borra main_image
     for (i = 0; i < productToDelete.image_slider.length; i++) {
       fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider[i]))
-      } // borra image slider      
+    } // borra image slider      
 
     fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet)) // borra data sheet
 

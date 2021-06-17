@@ -62,12 +62,12 @@ router.get('/detail/:id', productController.detail)
 
 //Create
 router.get('/add', productController.formNew) //formulario de creacion de producto
-router.post('/add', upload.any('main_image', 'data_sheet', 'install_sheet', 'image_slider', 'image_dimension'),validateCreateForm ,productController.create)
+router.post('/add', upload.any('main_image', 'data_sheet', 'install_sheet', 'image_slider_1', 'image_slider_2','image_slider_3', 'image_dimension'),validateCreateForm ,productController.create)
 // a donde va el producto creado
 
 //Update
 router.get('/:id/edit', productController.edit) //formulario de edicion de producto
-router.put('/:id/edit', upload.any('main_image', 'data_sheet', 'install_sheet', 'image_slider', 'image_dimension'), productController.update)
+router.put('/:id/edit', upload.any('main_image', 'data_sheet', 'install_sheet', 'image_slider_1', 'image_slider_2','image_slider_3', 'image_dimension'), productController.update)
 
 //Delete
 router.delete('/:id', productController.delete)
