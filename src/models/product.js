@@ -98,8 +98,20 @@ module.exports = {
     const newProducts = products.filter((idProduct) => idProduct.id != id) //busca el producto a borrar
     /* const productDelete = products.splice(productFound,1) */ //borra el producto
     this.writeFile(newProducts) //desvuelve el array de productos sin el elemento borrado
+    /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
+    const resourcesPath = path.join(__dirname, '../../public')
+    fs.unlinkSync(path.join(resourcesPath, productToDelete.main_image)) // borra main_image
+    for (i = 0; i < productToDelete.image_slider.length; i++) {
+      fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider[i]))
+      } // borra image slider      
+
+    fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet)) // borra data sheet
+
+    fs.unlinkSync(path.join(resourcesPath, productToDelete.install_sheet))// borra install sheet
+
+
   },
-  update(body, id , files) {
+  update(body, id, files) {
     const products = this.readFile()
     const productEdit = products.map((product) => {
       if (product.id == id) {
