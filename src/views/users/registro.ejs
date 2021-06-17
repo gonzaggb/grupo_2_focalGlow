@@ -18,16 +18,16 @@
             <main class="main-container2">
                 <form class="registry-form2" method="POST" action="/users/registro" enctype="multipart/form-data">
                     <div class="registry-container2">
-                        <label for="nombre">Nombre</label>
-                            <input class="<%=locals.errors && errors.name ? 'error' : 'input-login'%>" type="text"
-                            name="name" id="name" <% if (locals.errors && errors.name) { %> placeholder="<%=errors.name.msg%>"
+                        <label for="first_name">Nombre</label>
+                            <input class="<%=locals.errors && errors.first_name ? 'error' : 'input-login'%>" type="text"
+                            name="first_name" id="first_name" <% if (locals.errors && errors.first_name) { %> placeholder="<%=errors.first_name.msg%>"
                             <% }else if(locals.oldData){ %>
-                                value = "<%=oldData.name%>"
+                                value = "<%=oldData.first_name%>"
                             <%}%>>
-                        <label for="apellido">Apellido</label>
-                            <input class="<%=locals.errors && errors.surname ? 'error' : 'input-login'%>" type="text" 
-                            name="surname" id="surname" <% if (locals.errors && errors.surname) { %> placeholder="<%=errors.surname.msg%>"
-                            <% }else if(locals.oldData){ %> value = "<%=oldData.surname%>"
+                        <label for="last_name">Apellido</label>
+                            <input class="<%=locals.errors && errors.last_name ? 'error' : 'input-login'%>" type="text" 
+                            name="last_name" id="last_name" <% if (locals.errors && errors.last_name) { %> placeholder="<%=errors.last_name.msg%>"
+                            <% }else if(locals.oldData){ %> value = "<%=oldData.last_name%>"
                             <%}%>>
                         <label for="email">Email</label>
                             <input class="<%=locals.errors && errors.email ? 'error' : 'input-login'%>" type="text" 

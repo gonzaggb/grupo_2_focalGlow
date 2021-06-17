@@ -29,10 +29,10 @@ const controller = {
       return res.render('users/registro.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
     }
   }
-    let { name, surname, email, password } = req.body
+    let { first_name, last_name, email, password } = req.body
     let newUser = {
-      name,
-      surname,
+      first_name,
+      last_name,
       email,
       password,
       profileImg: '/img/profile-pictures/' + req.file.filename
