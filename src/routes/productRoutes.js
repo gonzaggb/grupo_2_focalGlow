@@ -22,6 +22,21 @@ const validateCreateForm = [
   body('price')
     .notEmpty()
     .withMessage('* Falta agregar el precio del producto'),
+  body('source')
+    .notEmpty()
+    .withMessage('Por favor seleccione el tipo de fuente'),
+  body('material')
+    .notEmpty()
+    .withMessage('Por favor seleccione uno o varios materiales'),
+  body('optic')
+    .notEmpty()
+    .withMessage('Por favor seleccione una o varias opticas'),
+  body('cct')
+    .notEmpty()
+    .withMessage('Por favor seleccione uno o varios cct'),
+  body('dim')
+    .notEmpty()
+    .withMessage('Por favor seleccione uno o varios dim'),
   
 ]
 
