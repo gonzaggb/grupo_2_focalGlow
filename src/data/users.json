@@ -700,11 +700,27 @@
     "password": "mDNF1U"
   },
   {
-    "first_name": "gonzalo",
-    "last_name": "baigorria",
-    "email": "gonzaggb@hotmail.com",
+    "id": "101",
+    "first_name": "Gonzalo",
+    "last_name": "Baigorria2",
+    "email": "gonzaggb@focalglow.com",
     "password": "123456",
-    "profileImg": "/img/profile-pictures/1623952443311.jpg",
-    "id": 101
+    "profileImg": "/img/profile-pictures/1623960003503.jpg"
+  },
+  {
+    "id": "102",
+    "first_name": "Pablo",
+    "last_name": "Armando",
+    "email": "pablito_1988@focalglow.com",
+    "password": "123456",
+    "profileImg": "/img/profile-pictures/1623958918143.jpg"
+  },
+  {
+    "id": "103",
+    "first_name": "Mars",
+    "last_name": "Leguizamon",
+    "email": "mars@focalglow.com",
+    "password": "123456",
+    "profileImg": "/img/profile-pictures/1623956248312.jpg"
   }
 ]

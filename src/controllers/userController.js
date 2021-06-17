@@ -71,14 +71,22 @@ const controller = {
   },
   update: (req, res) => {
     console.log("entro al update del controlador")
-    const { name, surname, email, password } = req.body
+    const { first_name, last_name, email, password } = req.body
     const { id } = req.params
+    const { file } = req
+    const { profileImg } = user.findByPk(id) 
     const userUpdate = {
-      name,
-      surname,
+      first_name,
+      last_name,
       email,
       password
     }
+    if(!file){
+      userUpdate.profileImg = profileImg
+    } else {
+      userUpdate.profileImg = '/img/profile-pictures/' + file.filename
+    } 
+
     user.update(userUpdate, id)
     res.redirect("/users")
   }

@@ -55,7 +55,7 @@ router.get('/', userController.list) // la barra sola equivale a /users porque d
 //elimina usuario de la lista
 router.get('/:id/edit', userController.edit)
 router.delete('/:id', userController.delete)
-router.put('/:id/edit', userController.update)
+router.put('/:id/edit',upload.single('profileImg'), userController.update)
 
 
 module.exports = router

@@ -59,6 +59,12 @@
         height:50px;
         border-radius:25px;
 }
+.img-redonda{
+    width:50px;
+    height:50px;
+    border-radius:25px;
+
+}
 .header-list .item,
 .content-list .item{
     margin: 0 auto;
@@ -72,4 +78,15 @@
     display: row;
     font-size: 20px;
     width: 50px;
+}
+
+.user-container{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+.user-container
+input, label{
+    margin: 10px;
+    text-align: left;
 }
