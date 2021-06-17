@@ -4043,5 +4043,119 @@
     "optic": [],
     "cct": [],
     "dim": []
+  },
+  {
+    "category": "",
+    "name": "hola",
+    "qty": "1",
+    "material": [],
+    "power": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "price": "123",
+    "id": 102,
+    "image_slider": [],
+    "main_image": "/img/1623901606712.jpg",
+    "optic": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "category": "categorie.name",
+    "name": "gonza prueba",
+    "qty": "1",
+    "material": [],
+    "power": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "price": "",
+    "id": 103,
+    "image_slider": [],
+    "main_image": "/img/categorie.name1623931832992.jpg",
+    "optic": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "category": "plafon",
+    "name": "gonza prueba 1",
+    "qty": "1",
+    "material": [],
+    "power": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "price": "",
+    "id": 104,
+    "image_slider": [],
+    "main_image": "/img/plafon1623932045181.jpg",
+    "optic": [],
+    "cct": [],
+    "dim": []
+  },
+  {
+    "category": "apliques",
+    "name": "prueba final",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "Madera",
+      ""
+    ],
+    "optic": "Spot",
+    "power": [
+      "16W",
+      "19W",
+      "",
+      ""
+    ],
+    "name": "Mongoose, eastern dwarf",
+    "category": "Spots",
+    "qty": 2,
+    "source": "Lámpara",
+    "material": [
+      "Otros",
+      "Polimero"
+    ],
+    "optic": [
+      "Flood",
+      "Ovalflood",
+      "Wideflood"
+    ],
+    "power": [
+      28,
+      30,
+      79
+    ],
+    "cct": [
+      2700,
+      3000,
+      3500,
+      4000
+    ],
+    "dim": [
+      "DALI",
+      "Dimeable",
+      "Switch"
+    ],
+    "price": 31355,
+    "id": 105,
+    "image_slider": [
+      "/img/apliques1623932702681.jpg",
+      "/img/apliques1623932702696.jpg",
+      "/img/apliques1623932702698.jpg"
+    ],
+    "main_image": "/img/apliques1623932702675.jpg",
+    "image_dimension": "/img/apliques1623932702680.png",
+    "data_sheet": "/pdf/apliques1623932702703.pdf",
+    "install_sheet": "/pdf/apliques1623932702705.pdf"
   }
 ]
