@@ -17,7 +17,25 @@ const controller = {
     let productFound = product.findByPk(id)
     let category = productFound.category
     let similarProducts = product.filterByCategory(category)
-    res.render('products/product-detail.ejs', { productFound, similarProducts })
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min)) + min
+    }
+
+    let numberSimilarProducts = Math.min(similarProducts.length, 3) //determino cuantos productos similares voy a pasar a la vista. 4 como máximo
+    let max = similarProducts.length //maximo numero del array de Similiar Products
+    const randomArray = [getRandomInt(0, max)] // saco un numero random
+
+    //Creo un array de numeros random que no se repitan
+    for (i = 0; i < numberSimilarProducts; i++) {
+      let randomNumber = getRandomInt(0, max)
+      !randomArray.includes(randomNumber) ? randomArray.push(randomNumber) : ''
+    }
+
+    //filtro los Similar Products de forma aleatoria
+    let similarProductsFiltered = similarProducts.filter((e, index) => randomArray.includes(index))
+
+    res.render('products/product-detail.ejs', { productFound, similarProductsFiltered })
   },
   formNew: (req, res) => {
     res.render('products/product-create.ejs')
@@ -30,13 +48,8 @@ const controller = {
       product.create(productNew, files)
       res.redirect('/product/list')
     } else {
-      console.log('ESTOS SON LOS ERRORES DEL CREATE')
-      console.log(errors)
-      res.render('products/product-create.ejs',
-        {
-          errors: errors.mapped(),
-          old: req.body
-        })
+
+      res.render('products/product-create.ejs',{errors: errors.mapped(), old: req.body})
     }
   },
 
@@ -45,7 +58,6 @@ const controller = {
     let productFound = product.findByPk(id)
 
     res.render('products/product-edit.ejs', { productFound: productFound })
-
   },
   update: (req, res) => {
     let data = req.body
@@ -96,8 +108,6 @@ const controller = {
   delete: (req, res) => {
     let id = req.params.id
     let productDelet = product.findByPk(id)
-
-
     res.redirect('/product/list')
     product.delete(id)
 
