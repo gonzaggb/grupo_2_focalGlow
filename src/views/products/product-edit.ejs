@@ -8,7 +8,7 @@
             <main>
                 <h2 class="titulo">Modificación de Producto</h2>
                 <div class="container-form">
-                    <form id="register" action="/product/<%= productFound.id %>/edit?_method=PUT" method="POST">
+                    <form id="register" action="/product/<%= productFound.id %>/edit?_method=PUT"  enctype="multipart/form-data" method="POST">
                     <div class="form_left">
                         <div class="first">
                             <div class="cateogry-selector">
@@ -137,8 +137,10 @@
                     <div class="form_right">
                         <div class="imagenes">
                             <div class="imagen-input">
-                                <label class="title" for="product_img">Imagen Principal: </label><br>
-                                <input type="file" name='product_img' accept=".jpg">
+                                <label class="title" for="main_image">Imagen Principal: </label><br>
+                                <input type="file" name='main_image' accept=".jpg">
+                                <img src="<%= productFound.main_image %>" alt="" width="50" height="50">
+                                <input type="text" value="<%= productFound.main_image %>" name="ruta_producto">
                             </div><br>
                             <div class="imagen-input">
                                 <label class="title" for="image_dimension">Dimensiones del Producto: </label><br>

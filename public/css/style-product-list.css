@@ -133,6 +133,9 @@ body {
     }
     .product_container h2 {
       font-size: 16px;
+      max-width: 100px;
+      font-weight: 400;
+      width: 97px;
     }
     .inner_img{
       margin-top: 9px;

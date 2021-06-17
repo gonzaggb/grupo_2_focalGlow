@@ -20,7 +20,9 @@ app.use(methodOverride('_method'))
 
 //Levantamos el Servidor
 const port = process.env.PORT || 3000 // use port 3000 unless there exists a preconfigured port (e.g. Heroku)//
-app.listen(port, () => console.log('Servidor corriendo en el puerto ' + port))
+app.listen(port, () =>
+  console.log('Servidor corriendo en el puerto ' + port + '\n' + 'Focal Glow es el mejor grupo!!!')
+)
 
 // Requiriendo todos los routers
 const mainRoutes = require('./routes/mainRoutes')

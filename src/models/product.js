@@ -53,7 +53,7 @@ module.exports = {
     //Dependiendo del tipo de archivo donde se guarda
     for (let i = 0; i < files.length; i++) {
       switch (files[i].fieldname) {
-        case 'product_img':
+        case 'main_image':
           product.main_image = '/img/' + files[i].filename
           break
         case 'image_slider':
