@@ -1,48 +1,15 @@
 [
   {
-    "id": 1,
-    "category": "Plafon",
-    "name": "Raccoon, crab-eating  2 ",
-    "qty": "",
-    "material": [
-      "",
-      "Chapa"
-    ],
-    "optic": "Flood",
-    "power": [
-      "",
-      "",
-      "1",
-      "38"
-    ],
-    "dim": [
-      "Bluetooth",
-      "DALI",
-      "Dimeable",
-      "Switch"
-    ],
-    "price": "10161",
-    "ruta_producto": "/img/1623982756163.jpg",
-    "image_slider": [
-      null,
-      null,
-      null
-    ],
-    "main_image": "/img/1623982756163.jpg",
-    "data_sheet": "/pdf/data-sheet-sample.pdf",
-    "install_sheet": "/pdf/install-sheet-sample.pdf"
-  },
-  {
     "id": 2,
     "category": "plafon",
     "name": "American racer  1  2",
     "qty": "",
     "material": [
+      "",
       "Aluminio",
-      "Madera",
       "Chapa",
       "Hierro",
-      ""
+      "Madera"
     ],
     "optic": [
       "Flood",
@@ -56,8 +23,8 @@
     ],
     "cct": "4000",
     "dim": [
-      "Switch",
-      "DALI"
+      "DALI",
+      "Switch"
     ],
     "price": "44690",
     "ruta_producto": "/img/product_main.jpg",
@@ -4031,82 +3998,5 @@
     "optic": [],
     "cct": [],
     "dim": []
-  },
-  {
-    "category": "categorie.name",
-    "name": "gonza prueba",
-    "qty": "1",
-    "material": [],
-    "power": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "price": "",
-    "id": 103,
-    "image_slider": [],
-    "main_image": "/img/categorie.name1623931832992.jpg",
-    "optic": [],
-    "cct": [],
-    "dim": []
-  },
-  {
-    "category": "plafon",
-    "name": "gonza prueba 1",
-    "qty": "1",
-    "material": [],
-    "power": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "price": "",
-    "id": 104,
-    "image_slider": [],
-    "main_image": "/img/plafon1623932045181.jpg",
-    "optic": [],
-    "cct": [],
-    "dim": []
-  },
-  {
-    "category": "plafon",
-    "name": "asdasdasd",
-    "qty": "1",
-    "source": "led",
-    "material": [
-      "",
-      "Aluminio"
-    ],
-    "optic": [
-      "Flood"
-    ],
-    "power": [
-      "",
-      "",
-      "",
-      "20W"
-    ],
-    "cct": [
-      "2700"
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": "1",
-    "id": 105,
-    "image_slider": [
-      "/img/plafon1623983545288.jpg",
-      "/img/plafon1623983545291.jpg",
-      "/img/plafon1623983545292.jpg"
-    ],
-    "main_image": "/img/plafon1623983545284.jpg",
-    "image_dimension": "/img/plafon1623983545287.jpg",
-    "image_slider_1": "/img/plafon1623983545288.jpg",
-    "image_slider_2": "/img/plafon1623983545291.jpg",
-    "image_slider_3": "/img/plafon1623983545292.jpg",
-    "data_sheet": "/pdf/plafon1623983545293.pdf",
-    "install_sheet": "/pdf/plafon1623983545309.pdf"
   }
 ]

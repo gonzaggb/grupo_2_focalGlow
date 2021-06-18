@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6em;
+  margin: 0;
+}
+
+main {
+  width: 80%;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.add-container a {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.titulo {
+  text-align: center;
+  font-size: 30px;
+  margin: 15px auto;
+}
+.add-product {
+  width: 80%;
+  height: 4vh;
+  transition: 0.3s;
+  margin: 15px 0;
+}
+.add-product:hover {
+  background-color: #ffde59;
+  color: black;
+}
+
+main {
+  width: 100%;
+  margin: 0 auto;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+}
+.header-list {
+  margin-top: 10px;
+}
+
+.header-list,
+.content-list {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+#products {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#products td,
+#products th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#products tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#products tr:hover {
+  background-color: #ffde59;
+}
+
+#products th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04aa6d;
+  color: white;
+}
+
+#products th.id {
+  width: 10px;
+}
+
+#products th.profile {
+  width: 150px;
+}
+
+.center {
+  text-align: center;
+  width: 100px;
+}
+.left {
+  text-align: left;
+}
+.imagen {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+.center img {
+  width: 50px;
+  height: 50px;
+}
+.header-list .item,
+.content-list .item {
+  margin: 0 auto;
+  width: 40%;
+  border: solid 1px black;
+  gap: 10px;
+}
+
+.action {
+  display: flex;
+  display: row;
+  font-size: 20px;
+  width: 50px;
+}
+
+.user-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.user-container input,
+label {
+  margin: 10px;
+  text-align: left;
+}
+
+form button {
+  border: none;
+  background-color: transparent;
+}
+.up-button {
+  background-color: #ffde59;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 30px;
+  position: fixed;
+  text-align: center;
+  left: 80%;
+  bottom: 20px;
+}
+.up-button i {
+  color: black;
+  padding: 10px;
+}
