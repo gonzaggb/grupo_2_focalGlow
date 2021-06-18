@@ -1,27 +1,19 @@
 [
   {
     "id": 1,
-    "name": "Raccoon, crab-eating",
     "category": "Plafon",
-    "qty": 46,
-    "source": "LED",
+    "name": "Raccoon, crab-eating  2 ",
+    "qty": "",
     "material": [
+      "",
       "Chapa"
     ],
-    "optic": [
-      "Flood",
-      "Ovalflood",
-      "Wideflood"
-    ],
+    "optic": "Flood",
     "power": [
-      1,
-      38
-    ],
-    "cct": [
-      2700,
-      3000,
-      3500,
-      4000
+      "",
+      "",
+      "1",
+      "38"
     ],
     "dim": [
       "Bluetooth",
@@ -29,56 +21,52 @@
       "Dimeable",
       "Switch"
     ],
-    "price": 10161,
-    "description": "Proin leo odio, porttitor id, consequat in, consequat ut, nulla. Sed accumsan felis. Ut at dolor quis odio consequat varius.",
-    "main_image": "/img/coral.jpg",
+    "price": "10161",
+    "ruta_producto": "/img/1623982756163.jpg",
     "image_slider": [
-      "/img/coral.jpg",
-      "/img/slider_2.jpg"
+      null,
+      null,
+      null
     ],
-    "image_dimension": "/img/product_dimensions.jpg",
+    "main_image": "/img/1623982756163.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 2,
-    "name": "American racer",
-    "category": "Exterior",
-    "qty": 48,
-    "source": "LED",
+    "category": "plafon",
+    "name": "American racer  1  2",
+    "qty": "",
     "material": [
       "Aluminio",
+      "Madera",
       "Chapa",
       "Hierro",
-      "Madera",
-      "Otros",
-      "Polimero"
+      ""
     ],
     "optic": [
       "Flood",
-      "Ovalflood",
-      "Spot",
-      "Wideflood"
+      "Spot"
     ],
     "power": [
-      85,
-      94
+      "",
+      "",
+      "85",
+      "94"
     ],
-    "cct": [
-      4000
-    ],
+    "cct": "4000",
     "dim": [
-      "DALI",
-      "Switch"
+      "Switch",
+      "DALI"
     ],
-    "price": 44690,
-    "description": "Curabitur at ipsum ac tellus semper interdum. Mauris ullamcorper purus sit amet nulla. Quisque arcu libero, rutrum ac, lobortis vel, dapibus at, diam.",
-    "main_image": "/img/product_main.jpg",
+    "price": "44690",
+    "ruta_producto": "/img/product_main.jpg",
     "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/slider_1.jpg"
+      null,
+      null,
+      null
     ],
-    "image_dimension": "/img/product_dimensions.jpg",
+    "main_image": "/img/product_main.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
     "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
@@ -4026,10 +4014,11 @@
     "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
+    "id": 101,
     "category": "",
-    "name": "thfgh",
-    "qty": "23",
-    "material": [],
+    "name": "Hola ",
+    "qty": "",
+    "material": "",
     "power": [
       "",
       "",
@@ -4037,28 +4026,8 @@
       ""
     ],
     "price": "2332",
-    "id": 101,
     "image_slider": [],
     "main_image": "/img/1623731748210.jpg",
-    "optic": [],
-    "cct": [],
-    "dim": []
-  },
-  {
-    "category": "",
-    "name": "hola",
-    "qty": "1",
-    "material": [],
-    "power": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "price": "123",
-    "id": 102,
-    "image_slider": [],
-    "main_image": "/img/1623901606712.jpg",
     "optic": [],
     "cct": [],
     "dim": []
@@ -4100,5 +4069,44 @@
     "optic": [],
     "cct": [],
     "dim": []
+  },
+  {
+    "category": "plafon",
+    "name": "asdasdasd",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "",
+      "Aluminio"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      "",
+      "",
+      "",
+      "20W"
+    ],
+    "cct": [
+      "2700"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "1",
+    "id": 105,
+    "image_slider": [
+      "/img/plafon1623983545288.jpg",
+      "/img/plafon1623983545291.jpg",
+      "/img/plafon1623983545292.jpg"
+    ],
+    "main_image": "/img/plafon1623983545284.jpg",
+    "image_dimension": "/img/plafon1623983545287.jpg",
+    "image_slider_1": "/img/plafon1623983545288.jpg",
+    "image_slider_2": "/img/plafon1623983545291.jpg",
+    "image_slider_3": "/img/plafon1623983545292.jpg",
+    "data_sheet": "/pdf/plafon1623983545293.pdf",
+    "install_sheet": "/pdf/plafon1623983545309.pdf"
   }
 ]

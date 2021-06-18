@@ -13,17 +13,12 @@
                         <div class="first">
                             <div class="cateogry-selector">
                                 <label class="" for="category">Categoria: </label><br>
-                                <select name="category" class="select">
-                                    <option value="<%= productFound.categoria %>"><%= productFound.category %></option>
-                                    <option value="Plafon">Plafón</option>
-                                    <option value="Aplique">Aplique</option>
-                                    <option value="Pie">Pie</option>
-                                    <option value="Colgante">Colgante</option>
-                                    <option value="Spot">Spot</option>
-                                    <option value="Accesorios">Sistemas/Accesorios</option>
-                                    <option value="Mesa">Mesa</option>
-                                    <option value="Exterior">Exterior</option>
-                                </select>
+                                    <select name="category" class="select">
+                                        <option value="<%= productFound.category %>"><%= productFound.category %></option>
+                                        <% locals.categories.forEach(categorie => { %>
+                                            <option value="<%=categorie.name%>"><%=categorie.name.charAt(0).toUpperCase() + categorie.name.slice(1)%></option>
+                                        <% }) %>
+                                     </select>
                             </div>
                         </div><br>
                         <div class="first">
