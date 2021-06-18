@@ -43,7 +43,11 @@ const controller = {
   create: (req, res) => {
     let errors = validationResult(req)
     if (errors.isEmpty()) {
-      const productNew = req.body
+      const  productNew  = req.body
+      productNew.optic = [productNew.optic]
+      productNew.cct = [productNew.cct]
+      productNew.dim = [productNew.dim]
+      console.log(productNew)
       const files = req.files
       product.create(productNew, files)
       res.redirect('/product/list')
@@ -64,10 +68,14 @@ const controller = {
     let id = req.params.id
     let productOriginal = product.findByPk(id)
     let { files } = req
+    data.image_slider = []
     data.main_image = productOriginal.main_image
     data.image_slider_1 = productOriginal.image_slider_1
+    data.image_slider.push(productOriginal.image_slider_1)
     data.image_slider_2 = productOriginal.image_slider_2
+    data.image_slider.push(productOriginal.image_slider_2)
     data.image_slider_3 = productOriginal.image_slider_3
+    data.image_slider.push(productOriginal.image_slider_3)
     data.data_sheet = productOriginal.data_sheet
     data.install_sheet = productOriginal.install_sheet
     for (let i = 0; i < files.length; i++) {
@@ -78,13 +86,19 @@ const controller = {
           break
         case 'image_slider_1':
           data.image_slider_1 = ('/img/' + files[i].filename)
+          data.image_slider.push(data.image_slider_1)
+
 
           break
         case 'image_slider_2':
           data.image_slider_2 = ('/img/' + files[i].filename)
+          data.image_slider.push(data.image_slider_2)
+
           break
         case 'image_slider_3':
           data.image_slider_3 = ('/img/' + files[i].filename)
+          data.image_slider.push(data.image_slider_3)
+
           break
         case 'data_sheet':
 

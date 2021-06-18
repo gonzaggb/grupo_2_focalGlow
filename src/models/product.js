@@ -49,6 +49,7 @@ module.exports = {
   create(product, files) {
     product.id = this.generateId()
     //Dependiendo del tipo de archivo donde se guarda
+      product.image_slider = []
     for (let i = 0; i < files.length; i++) {
       switch (files[i].fieldname) {
         case 'main_image':
@@ -56,12 +57,17 @@ module.exports = {
           break
         case 'image_slider_1':
           product.image_slider_1 = ('/img/' + files[i].filename)
+          product.image_slider.push(product.image_slider_1)
           break
         case 'image_slider_2':
           product.image_slider_2 = ('/img/' + files[i].filename)
+          product.image_slider.push(product.image_slider_2)
+
           break
         case 'image_slider_3':
           product.image_slider_3 = ('/img/' + files[i].filename)
+          product.image_slider.push(product.image_slider_3)
+
           break
         case 'image_dimension':
           product.image_dimension = '/img/' + files[i].filename
@@ -100,17 +106,15 @@ module.exports = {
   delete(id) {
     const products = this.readFile() //traer el array de productos
     const newProducts = products.filter((idProduct) => idProduct.id != id) //busca el producto a borrar
-    /* const productDelete = products.splice(productFound,1) */ //borra el producto
-    this.writeFile(newProducts) //desvuelve el array de productos sin el elemento borrado
+    const productToDelete = this.findByPk(id)
+    this.writeFile(newProducts) //devuelve el array de productos sin el elemento borrado
     /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
     const resourcesPath = path.join(__dirname, '../../public')
     fs.unlinkSync(path.join(resourcesPath, productToDelete.main_image)) // borra main_image
     for (i = 0; i < productToDelete.image_slider.length; i++) {
       fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider[i]))
     } // borra image slider      
-
     fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet)) // borra data sheet
-
     fs.unlinkSync(path.join(resourcesPath, productToDelete.install_sheet))// borra install sheet
   },
   update(body, id, files) {
