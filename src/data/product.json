@@ -38,11 +38,11 @@
     "name": "American racer  1  2",
     "qty": "",
     "material": [
+      "",
       "Aluminio",
-      "Madera",
       "Chapa",
       "Hierro",
-      ""
+      "Madera"
     ],
     "optic": [
       "Flood",
@@ -56,8 +56,8 @@
     ],
     "cct": "4000",
     "dim": [
-      "Switch",
-      "DALI"
+      "DALI",
+      "Switch"
     ],
     "price": "44690",
     "ruta_producto": "/img/product_main.jpg",
@@ -4108,5 +4108,34 @@
     "image_slider_3": "/img/plafon1623983545292.jpg",
     "data_sheet": "/pdf/plafon1623983545293.pdf",
     "install_sheet": "/pdf/plafon1623983545309.pdf"
+  },
+  {
+    "category": "plafon",
+    "name": "Bueno veremos si funciona",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "Madera",
+      ""
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      "14W",
+      "15W",
+      "",
+      ""
+    ],
+    "cct": [
+      "3000"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "2",
+    "id": 106,
+    "image_slider": [],
+    "main_image": "/img/plafon1624018116363.jpg"
   }
 ]

@@ -9,19 +9,17 @@
     <!-- HEADER -->
     <%- include('partials/header.ejs')%>
       <!-- HEADER -->
-      
-        <!-- <video src="/video/video.mp4" autoplay="autoplay" preload="auto" loop="loop"  ></video> -->
-        
+        <div>
           <div class="header-video">
               <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline oncontextmenu="return false;" preload="auto"id="miVideo">
               <source src="/video/video.mp4" type="video/mp4"> 
             </video>
-            
+            <div class="up-button">
+              <p><i>Conocé nuestros productos</i></p>
+              <a href="#categorias"><i class="fas fa-chevron-down"></i></a>
+            </div>
           </div>
-
-       
-
-
+        </div>  
       <section class="main-slider">
         <div class='slider'>
           <ul>
