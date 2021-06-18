@@ -3,23 +3,23 @@
 
     <title>Focal Glow | Listado de Usuarios </title>
     <link rel="stylesheet" href="/css/styles-user-list.css">
-
-
-    </head>
+   </head>
 
     <body>
         <%- include('../partials/header.ejs')%>
 
-            <main class="container-users">
+            <main>
+                <h3 class="titulo">Listado de Usuarios</h3>
+
                 <table id="customers">
                     <tr>
-                        <th class="id">ID</th>
-                        <th>Nombre</th>
-                        <th>Apellido</th>
-                        <th>Mail</th>
-                        <th class="profile">Imagen de Perfil</th>
-                        <th>Editar</th>
-                        <th>Borrar</th>
+                        <th class="id left">ID</th>
+                        <th class ="left">Nombre</th>
+                        <th class ="left">Apellido</th>
+                        <th class ="left">Mail</th>
+                        <th class="profile center">Imagen de Perfil</th>
+                        <th class="center">Editar</th>
+                        <th class ="center">Borrar</th>
                     </tr>
                     <% userList.forEach(e=> { %>
                         <tr>
@@ -35,21 +35,22 @@
                             <td>
                                 <%= e.email%>
                             </td>
-                            <td>
-                                <img class = "img-redonda" src=
+                            <td class="center">
+                                <img class = "img-round" src=
                                 <%=e.profileImg ? e.profileImg : '/img/profile-pictures/profile.jpg'%>>
                                  
                             </td>
-                            <td> <a href="/users/<%=e.id%>/edit">
-                                <i class="far fa-edit"></i>
-                            </a></td>
-                            <td><form action="/users/<%=e.id%>?_method=DELETE" method="POST">
-                                <button type="submit"><i class="far fa-trash-alt"></i></button>
-                            </form></td>
-
-
+                            <td class="center"> 
+                                <a href="/users/<%=e.id%>/edit"><i class="far fa-edit"></i></a>
+                            </td>
+                            <td class="center">
+                                <form action="/users/<%=e.id%>?_method=DELETE" method="POST">
+                                    <button type="submit"><i class="far fa-trash-alt"></i></button>
+                                </form>
+                            </td>
                         </tr>
                         <%})%>
+                </table>        
             </main>
     </body>
 
