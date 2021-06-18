@@ -44,10 +44,10 @@ const controller = {
     let errors = validationResult(req)
     if (errors.isEmpty()) {
       const  productNew  = req.body
-      productNew.optic = [productNew.optic]
-      productNew.cct = [productNew.cct]
-      productNew.dim = [productNew.dim]
-      console.log(productNew)
+      typeof(productNew.power) === 'string' ? (productNew.power = [productNew.power]) : productNew.power    
+      typeof(productNew.cct) === 'string' ? productNew.cct = [productNew.cct] : productNew.cct   
+      typeof(productNew.optic) === 'string' ? productNew.optic = [productNew.optic] : productNew.optic
+      typeof(productNew.dim) === 'string' ?  productNew.dim = [productNew.dim] : productNew.dim 
       const files = req.files
       product.create(productNew, files)
       res.redirect('/product/list')
