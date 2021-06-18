@@ -48,26 +48,26 @@
                                 <label class="" for="source">Fuente: </label>
 
                                 <div>
-                                    <input class="radio" type="radio" name="source" value="led" <%= (locals.old && old.source === 'led') ? 'checked' : '' %>>LED Incorporado
+                                    <input class="radio" type="radio" name="source" value="led" >LED Incorporado
                                 </div>
                                 <div>
-                                    <input class="radio" type="radio" name="source" value="Lampara" <%= (locals.old && old.source === 'Lampara') ? 'checked' : '' %>>Lampara
+                                    <input class="radio" type="radio" name="source" value="Lampara" >Lampara
                                 </div>
                             </div><br>
                             <div>
                                 <div class="first-">
                                     <label class="" for="material">Material: </label>
                                     <div>
-                                        <input class="check" type="checkbox" name="material" value="Aluminio"<%= (locals.old && old.material === 'Aluminio') ? 'checked' : '' %> > Aluminio
+                                        <input class="check" type="checkbox" name="material" value="Aluminio" > Aluminio
                                     </div>
                                     <div>
-                                        <input class="check" type="checkbox" name="material" value="Madera"<%= (locals.old && old.material === 'Madera') ? 'checked' : '' %> > Madera
+                                        <input class="check" type="checkbox" name="material" value="Madera" > Madera
                                     </div>
                                     <div>
-                                        <input class="check" type="checkbox" name="material" value="Chapa"<%= (locals.old && old.material === 'Chapa') ? 'checked' : '' %> > Chapa
+                                        <input class="check" type="checkbox" name="material" value="Chapa" > Chapa
                                     </div>
                                     <div>
-                                        <input class="check" type="checkbox" name="material" value="Hierro"<%= (locals.old && old.material === 'Hierro') ? 'checked' : '' %> > Hierro
+                                        <input class="check" type="checkbox" name="material" value="Hierro" > Hierro
                                     </div>
                                 </div>
                                 <div class="in-line-data">
@@ -79,16 +79,16 @@
                             <div class="first-">
                                 <label class="" for="optic">Optica: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic" value="Flood" <%= (locals.old && old.optic === 'Hierro') ? 'checked' : '' %>> Flood
+                                    <input class="check" type="checkbox" name="optic" value="Flood" > Flood
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic" value="Spot"<%= (locals.old && old.optic === 'Spot') ? 'checked' : '' %>> Spot
+                                    <input class="check" type="checkbox" name="optic" value="Spot"> Spot
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic" value="WideFlood"<%= (locals.old && old.optic === 'WideFlood') ? 'checked' : '' %>> Wide Flood
+                                    <input class="check" type="checkbox" name="optic" value="WideFlood"> Wide Flood
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic" value="Oval"<%= (locals.old && old.optic === 'Oval') ? 'checked' : '' %>> Oval
+                                    <input class="check" type="checkbox" name="optic" value="Oval"> Oval
                                 </div>
                             </div><br>
                             <div class="first-">
@@ -97,7 +97,7 @@
                                     <select name="power" class="select">
                                         <option value="">Seleccionar</option>
                                         <% for(i=1;i<=100;i++){ %>
-                                            <option value="<%=[i]%>W">
+                                            <option value="<%=[i]%>">
                                                 <%=[i]%>W
                                             </option>
                                             <%}%>
@@ -107,35 +107,35 @@
                             <div class="first-">
                                 <label class="" for="cct">CCT: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="cct" value="2700" <%= (locals.old && old.cct == 2700) ? 'checked' : '' %>>2700k
+                                    <input class="check" type="checkbox" name="cct" value="2700" >2700k
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct" value="3000" <%= (locals.old && old.cct == 3000) ? 'checked' : '' %>>3000k
+                                    <input class="check" type="checkbox" name="cct" value="3000" >3000k
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct" value="3500" <%= (locals.old && old.cct == 3500) ? 'checked' : '' %>>3500k
+                                    <input class="check" type="checkbox" name="cct" value="3500" >3500k
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct" value="4000" <%= (locals.old && old.cct === 4000) ? 'checked' : '' %>>4000k
+                                    <input class="check" type="checkbox" name="cct" value="4000" >4000k
                                 </div>
                                 
                             </div><br>
                             <div class="first-">
                                 <label class="" for="dim">Dim: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="dim" value="Switch" <%= (locals.old && old.dim === 'Switch') ? 'checked' : '' %>> Switch
+                                    <input class="check" type="checkbox" name="dim" value="Switch" > Switch
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="dim" value="Dimeable" <%= (locals.old && old.dim === 'Dimeable') ? 'checked' : '' %>> Dimeable
+                                    <input class="check" type="checkbox" name="dim" value="Dimeable" > Dimeable
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="dim" value="DALI" <%= (locals.old && old.dim === 'DALI') ? 'checked' : '' %>> DALI
+                                    <input class="check" type="checkbox" name="dim" value="DALI" > DALI
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="dim" value="Bluetooth" <%= (locals.old && old.dim === 'Bluetooth') ? 'checked' : '' %>> Bluetooth
+                                    <input class="check" type="checkbox" name="dim" value="Bluetooth" > Bluetooth
                                 </div>
                             </div><br>
                             <div class="first-">

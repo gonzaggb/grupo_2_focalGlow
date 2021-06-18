@@ -115,6 +115,10 @@ header a{
     overflow: hidden;
   
 }
+.overlay{
+    z-index: 99;
+    position: absolute;
+}
 
 .header-video video {
   min-width: 100%;

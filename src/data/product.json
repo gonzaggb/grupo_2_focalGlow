@@ -4026,10 +4026,11 @@
     "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
+    "id": 101,
     "category": "",
-    "name": "thfgh",
-    "qty": "23",
-    "material": [],
+    "name": "Hola ",
+    "qty": "",
+    "material": "",
     "power": [
       "",
       "",
@@ -4037,11 +4038,6 @@
       ""
     ],
     "price": "2332",
-    "id": 101,
-    "image_slider": [],
-    "main_image": "/img/1623731748210.jpg",
-    "optic": [],
-    "cct": [],
-    "dim": []
+    "ruta_producto": "/img/1623731748210.jpg"
   }
 ]
