@@ -1,41 +1,48 @@
-body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    line-height:1.6em;
-    margin: 0;
-    background-color: #E5E5E5;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6em;
+  margin: 0;
+  background-color: #e5e5e5;
 }
 .container {
-    width: 100%;
-    /* max-width: 850px; */
-    margin: 0;
-    padding: 0;
-    z-index: 3;    
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: black;
+  width: 100%;
+  /* max-width: 850px; */
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
 }
-.logo{
-    width: 35%;
-    padding: 0px;
+.logo {
+  width: 35%;
+  padding: 0px;
 }
-.inner-nav{
-    display: none;
+.inner-nav {
+  display: none;
 }
-#burguer{
-    display: inline-block;
-    color: white;
-    width: 80px;
-    font-size: 200%
-    }
+#burguer {
+  display: inline-block;
+  color: white;
+  width: 80px;
+  font-size: 200%;
+}
 
 .dropbtn {
-    background-color: black;
-    color: white;
-    padding: 41px;
-    font-size: 16px;
-    border: none;
+  background-color: black;
+  color: white;
+  padding: 41px;
+  font-size: 16px;
+  border: none;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -52,7 +59,7 @@ body{
   float: right;
   background-color: black;
   min-width: 162px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1000;
 }
 
@@ -61,130 +68,139 @@ body{
   color: white;
   padding: 12px 16px;
   text-decoration: none;
-  display: block    ;
+  display: block;
   font-size: 16px;
-  
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color:#ffde59;}
+.dropdown-content a:hover {
+  background-color: #ffde59;
+}
 
 /* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #ffde59;}
+.dropdown:hover .dropbtn {
+  background-color: #ffde59;
+}
 
-
-@media(min-width:768px){
-    .container{
+@media (min-width: 768px) {
+  .container {
     width: 100%;
-   /* max-width: 850px;*/
-    margin: 0 ;
+    /* max-width: 850px;*/
+    margin: 0;
     padding: 0;
     z-index: 3;
-    
-}
+  }
 
-#burguer{
+  #burguer {
     display: none;
-}
-.inner-nav{
+  }
+  .inner-nav {
     display: initial;
-}
+  }
 
-.logo{
+  .logo {
     width: 30%;
     padding: 0px;
-}
-header{
+  }
+  header {
     background-color: black;
-    color:white;
+    color: white;
     /*position: sticky; para hacer el menu pegajoso*/
     top: 0; /*para que quede pegado a la parte superior*/
 
     bottom: 150px;
     z-index: 3;
-}
+  }
 
-header a{
-    color:white;
-    text-decoration:none;
-}
-.logo-nav-container{
-    display:flex;
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  .logo-nav-container {
+    display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
     padding-left: 20px;
     height: 90px;
-}
-.logo-nav-container p{
-    text-align: left; 
-}
-.navigation ul{
- margin: 0;
- padding: 0;
- list-style:none;
-}
-.navigation ul li{
-    display:inline-block;
-}
-.navigation ul li a{
-    display:block;
+  }
+  .logo-nav-container p {
+    text-align: left;
+  }
+  .navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .navigation ul li {
+    display: inline-block;
+  }
+  .navigation ul li a {
+    display: block;
     padding: 0.5rem 1rem;
     transition: all 0.5s linear;
-    border-radius: 1.5px
-}
-.navigation ul li a:hover{
+    border-radius: 1.5px;
+  }
+  .navigation ul li a:hover {
     background: #ffde59;
     opacity: 0.9;
-    color:black;
-}
-.buscar{
+    color: black;
+  }
+  .buscar {
     border: solid red;
     width: 80%;
-    display:inline-block;
-}
-.desplegable {
+    display: inline-block;
+  }
+  .desplegable {
     z-index: 10;
-}
+  }
 
-.desplegable li {
+  .desplegable li {
     float: left;
-    
-}
-.inner-nav li ul{
-    display:none ;
+  }
+  .inner-nav li ul {
+    display: none;
     position: absolute;
     min-width: 140px;
     background-color: black;
-}
-.inner-nav li:hover > ul {
+  }
+  .inner-nav li:hover > ul {
     display: flex;
     flex-direction: column;
-    
+  }
 }
 
+.slider-mini {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.slider-mini{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    
-    
+@keyframes cambio-mini {
+  0% {
+    margin-left: 0;
+  }
+  30% {
+    margin-left: 0;
+  }
+
+  35% {
+    margin-left: -100%;
+  }
+  65% {
+    margin-left: -100%;
+  }
+
+  70% {
+    margin-left: -200%;
+  }
+  100% {
+    margin-left: -200%;
+  }
 }
-
-@keyframes cambio-mini{
-    0%{margin-left: 0;}
-    30%{margin-left: 0;}
-
-    35%{margin-left: -100%;}
-    65%{margin-left: -100%;}
-
-    70%{margin-left: -200%;}
-    100%{margin-left: -200%;}
-}
- 

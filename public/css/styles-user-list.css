@@ -1,92 +1,82 @@
-
-.container-users{
-    width: 90%;
-    margin: 0 auto;
-}
-.content-container{
-    display: flex;
-    flex-direction: column;
-
-
-}
-.header-list{
-    margin-top: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.header-list,
-.content-list{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-bottom: 5px;;
-    
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main h3 {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 30px;
 }
 
 #customers {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 10px;
-  }
-  
-  #customers td, #customers th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #customers tr:nth-child(even){background-color: #f2f2f2;}
-  
-  #customers tr:hover {background-color: #ffde59;}
-  
-  #customers th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #04AA6D;
-    color: white;
-  }
-
-  #customers th.id{
-      width: 10px;
-  }
-
-  #customers th.profile{
-      width: 150px;
-  }
-    td img {
-
-        width:50px;
-        height:50px;
-        border-radius:25px;
-}
-.img-redonda{
-    width:50px;
-    height:50px;
-    border-radius:25px;
-
-}
-.header-list .item,
-.content-list .item{
-    margin: 0 auto;
-    width: 40%;
-    border: solid 1px black;
-    gap: 10px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
 }
 
-.action{
-    display: flex;
-    display: row;
-    font-size: 20px;
-    width: 50px;
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
 
-.user-container{
-    width: 80%;
-    margin: 0 auto;
-    text-align: center;
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
 }
-.user-container
-input, label{
-    margin: 10px;
-    text-align: left;
+
+#customers tr:hover {
+  background-color: #ffde59;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04aa6d;
+  color: white;
+}
+
+#customers th.id {
+  width: 10px;
+}
+
+#customers th.profile {
+  width: 150px;
+  text-align: center;
+}
+
+td img {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+.img-round {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+form button {
+  background-color: transparent;
+  border: none;
+}
+
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
 }
