@@ -60,7 +60,6 @@ const controller = {
   edit: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
-
     res.render('products/product-edit.ejs', { productFound: productFound })
   },
   update: (req, res) => {
@@ -87,28 +86,20 @@ const controller = {
         case 'image_slider_1':
           data.image_slider_1 = ('/img/' + files[i].filename)
           data.image_slider.push(data.image_slider_1)
-
-
           break
         case 'image_slider_2':
           data.image_slider_2 = ('/img/' + files[i].filename)
           data.image_slider.push(data.image_slider_2)
-
           break
         case 'image_slider_3':
           data.image_slider_3 = ('/img/' + files[i].filename)
           data.image_slider.push(data.image_slider_3)
-
           break
         case 'data_sheet':
-
           data.data_sheet = ('/pdf/' + files[i].filename)
-
           break
         case 'install_sheet':
-
           data.install_sheet = ('/pdf/' + files[i].filename)
-
           break
         default:
       }
