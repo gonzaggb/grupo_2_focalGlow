@@ -70,7 +70,7 @@ const controller = {
     res.render('users/user-edit.ejs', { userToEdit })
   },
   update: (req, res) => {
-    console.log("entro al update del controlador")
+    
     const { first_name, last_name, email, password } = req.body
     const { id } = req.params
     const { file } = req

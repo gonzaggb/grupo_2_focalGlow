@@ -72,7 +72,7 @@ module.exports = {
     //valida si existe el usuario y devuelvo algo, según corresponda
     validateUser(user) {
         const findUser = this.findUser(user)
-        console.log(findUser)
+        
         if (findUser === undefined) {
             return 'El usuario no existe'
         } else if (findUser.password == user.password) {

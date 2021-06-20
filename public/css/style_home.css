@@ -145,6 +145,12 @@ header a{
   padding: 10px;
   
 }
+.up-button a {
+    text-decoration: none;
+  color: #ffde59;
+  padding: 10px;
+  
+}
 
 
 

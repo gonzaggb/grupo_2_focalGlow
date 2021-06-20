@@ -92,7 +92,7 @@ module.exports = {
     product.dim == undefined ? (product.dim = []) : ''
     product.image_slider == '' ? (product.image_slider = []) : ''
 
-    console.log(product)
+    
 
     //Incluimos el producto nuevo al array products
     const productsUpdated = [...products, product]

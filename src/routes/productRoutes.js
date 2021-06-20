@@ -12,7 +12,7 @@ const { validateCreateForm }  = require('../middleware/validateCreateForm')
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     if (path.extname(file.originalname) == '.jpg' || path.extname(file.originalname) == '.png') {
-      /* console.log(path.extname(file.originalname)) */
+      
       cb(null, path.join(__dirname, '../../public/img'))
     } else {
       cb(null, path.join(__dirname, '../../public/pdf'))
