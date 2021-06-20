@@ -42,18 +42,13 @@ const controller = {
   },
   create: (req, res) => {
     let errors = validationResult(req)
+    console.log(req.body)
     if (errors.isEmpty()) {
-      const  productNew  = req.body
-      typeof(productNew.power) === 'string' ? (productNew.power = [productNew.power]) : productNew.power    
-      typeof(productNew.cct) === 'string' ? productNew.cct = [productNew.cct] : productNew.cct   
-      typeof(productNew.optic) === 'string' ? productNew.optic = [productNew.optic] : productNew.optic
-      typeof(productNew.dim) === 'string' ?  productNew.dim = [productNew.dim] : productNew.dim 
       const files = req.files
       console.log(files)
       product.create(productNew, files)
       res.redirect('/product/list')
     } else {
-
       res.render('products/product-create.ejs',{errors: errors.mapped(), old: req.body})
     }
   },
