@@ -49,6 +49,7 @@ const controller = {
       typeof(productNew.optic) === 'string' ? productNew.optic = [productNew.optic] : productNew.optic
       typeof(productNew.dim) === 'string' ?  productNew.dim = [productNew.dim] : productNew.dim 
       const files = req.files
+      console.log(files)
       product.create(productNew, files)
       res.redirect('/product/list')
     } else {
@@ -77,15 +78,16 @@ const controller = {
     data.image_slider.push(productOriginal.image_slider_3)
     data.data_sheet = productOriginal.data_sheet
     data.install_sheet = productOriginal.install_sheet
+    data.image_dimension = productOriginal.image_dimension
     typeof (data.power) === 'string' ? (data.power = [data.power]) : ''
     typeof (data.cct) === 'string' ? data.cct = [data.cct] : ''
     typeof (data.optic) === 'string' ? data.optic = [data.optic] : ''
     typeof (data.dim) === 'string' ? data.dim = [data.dim] : ''
+    console.log(data.qty)
     for (let i = 0; i < files.length; i++) {
       switch (files[i].fieldname) {
         case 'main_image':
           data.main_image = ('/img/' + files[i].filename)
-
           break
         case 'image_slider_1':
           data.image_slider_1 = ('/img/' + files[i].filename)
@@ -104,6 +106,9 @@ const controller = {
           break
         case 'install_sheet':
           data.install_sheet = ('/pdf/' + files[i].filename)
+          break
+        case 'image_dimension':
+          data.image_dimension = ('/img/' + files[i].filename)
           break
         default:
       }

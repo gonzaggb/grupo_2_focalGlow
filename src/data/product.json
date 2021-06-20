@@ -4002,8 +4002,107 @@
   {
     "id": 102,
     "category": "plafon",
-    "name": "hola      ",
-    "qty": "",
+    "name": "final test    ",
+    "qty": "3",
+    "source": "led",
+    "material": [
+      "",
+      "Aluminio",
+      "Madera"
+    ],
+    "optic": [
+      "Flood",
+      "Spot"
+    ],
+    "power": [
+      "",
+      "",
+      "",
+      "1W"
+    ],
+    "cct": [
+      "2700",
+      "3000"
+    ],
+    "dim": [
+      "Dimeable",
+      "Switch"
+    ],
+    "price": "1",
+    "ruta_producto": "/img/plafon1624153745767.jpg",
+    "image_slider": [
+      "/img/plafon1624153745777.jpg",
+      "/img/plafon1624153745780.jpg",
+      "/img/plafon1624153745791.jpg",
+      "/img/plafon1624154174392.jpg",
+      "/img/plafon1624154174399.jpg",
+      "/img/plafon1624154174405.jpg"
+    ],
+    "main_image": "/img/plafon1624153745767.jpg",
+    "image_slider_1": "/img/plafon1624154174392.jpg",
+    "image_slider_2": "/img/plafon1624154174399.jpg",
+    "image_slider_3": "/img/plafon1624154174405.jpg",
+    "data_sheet": "/pdf/plafon1624154174409.pdf",
+    "install_sheet": "/pdf/plafon1624154174410.pdf"
+  },
+  {
+    "id": 103,
+    "category": "plafon",
+    "name": "1 ",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "",
+      "Aluminio"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      "",
+      "",
+      "",
+      "1W"
+    ],
+    "cct": [
+      "2700"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "1",
+    "ruta_producto": "",
+    "image_slider": [
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 104,
+    "category": "",
+    "name": "3",
+    "qty": "1",
+    "material": "",
+    "power": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "price": "1",
+    "ruta_producto": "",
+    "image_slider": [
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "id": 105,
+    "category": "",
+    "name": "2",
+    "qty": "2",
     "source": "led",
     "material": [
       "Aluminio",
@@ -4016,7 +4115,7 @@
       "",
       "",
       "",
-      "14W"
+      "1W"
     ],
     "cct": [
       "2700"
@@ -4024,14 +4123,14 @@
     "dim": [
       "Switch"
     ],
-    "price": "1",
-    "ruta_producto": "/img/1624152486080.jpg",
+    "price": "2",
+    "ruta_producto": "/img/1624154951143.jpg",
     "image_slider": [
-      "/img/1624152486093.jpg",
+      null,
       null,
       null
     ],
-    "main_image": "/img/1624152486080.jpg",
-    "image_slider_1": "/img/1624152486093.jpg"
+    "main_image": "/img/1624154951143.jpg",
+    "image_dimension": "/img/1624154951143.jpg"
   }
 ]

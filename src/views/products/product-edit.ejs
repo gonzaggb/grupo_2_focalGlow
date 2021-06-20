@@ -30,7 +30,8 @@
                         <div class="first">
                             <div class="in-line-data">
                                 <label class="" for="qty">Cantidad: </label><br>
-                                <input class="box" type="number" name="qty" id="producto" min="0" value="<%= productFound.qty %> " >
+                                <input class="box" type="number" name="qty" id="producto" min="0" value="<%= Number(productFound.qty) %>" >
+                                
                             </div>
                         </div><br>
                         <div class="first-">
@@ -126,7 +127,7 @@
                         <div class="first-">
                             <label class="price" for="price">Precio unitario base: </label><br>
                             <input class="price" type="number" name="price" id="precio" min="0"
-                                placeholder=" Ej 15235.35" value="<%= productFound.price %>" >
+                                placeholder=" Ej 15235.35" value="<%=Number(productFound.price)%>" >
                         </div><br>
                     </div>
                     <div class="form_right">
@@ -139,7 +140,7 @@
                             </div><br>
                             <div class="imagen-input">
                                 <label class="title" for="image_dimension">Dimensiones del Producto: </label><br>
-                                <input type="file" name="image_dimension" accept=".jpg">
+                                <input type="file" name="image_dimension" accept=".jpg , .png">
                             </div><br>
                         </div>
                         <div class="imagenes">
