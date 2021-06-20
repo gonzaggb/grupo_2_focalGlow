@@ -62,57 +62,64 @@ const controller = {
     res.render('products/product-edit.ejs', { productFound: productFound })
   },
   update: (req, res) => {
-    let data = req.body
+    let errors = validationResult(req)
     let id = req.params.id
-    let productOriginal = product.findByPk(id)
-    let { files } = req
-    data.image_slider = []
-    data.main_image = productOriginal.main_image
-    data.image_slider_1 = productOriginal.image_slider_1
-    data.image_slider.push(productOriginal.image_slider_1)
-    data.image_slider_2 = productOriginal.image_slider_2
-    data.image_slider.push(productOriginal.image_slider_2)
-    data.image_slider_3 = productOriginal.image_slider_3
-    data.image_slider.push(productOriginal.image_slider_3)
-    data.data_sheet = productOriginal.data_sheet
-    data.install_sheet = productOriginal.install_sheet
-    data.image_dimension = productOriginal.image_dimension
-    typeof (data.power) === 'string' ? (data.power = [data.power]) : ''
-    typeof (data.cct) === 'string' ? data.cct = [data.cct] : ''
-    typeof (data.optic) === 'string' ? data.optic = [data.optic] : ''
-    typeof (data.dim) === 'string' ? data.dim = [data.dim] : ''
-    console.log(data.qty)
-    for (let i = 0; i < files.length; i++) {
-      switch (files[i].fieldname) {
-        case 'main_image':
-          data.main_image = ('/img/' + files[i].filename)
-          break
-        case 'image_slider_1':
-          data.image_slider_1 = ('/img/' + files[i].filename)
-          data.image_slider.push(data.image_slider_1)
-          break
-        case 'image_slider_2':
-          data.image_slider_2 = ('/img/' + files[i].filename)
-          data.image_slider.push(data.image_slider_2)
-          break
-        case 'image_slider_3':
-          data.image_slider_3 = ('/img/' + files[i].filename)
-          data.image_slider.push(data.image_slider_3)
-          break
-        case 'data_sheet':
-          data.data_sheet = ('/pdf/' + files[i].filename)
-          break
-        case 'install_sheet':
-          data.install_sheet = ('/pdf/' + files[i].filename)
-          break
-        case 'image_dimension':
-          data.image_dimension = ('/img/' + files[i].filename)
-          break
-        default:
-      }
-    }
-    product.update(data, id)
-    res.redirect('/product/list')
+    let productFound = product.findByPk(id)
+    if (errors.isEmpty()) {
+        let data = req.body
+        let id = req.params.id
+        let productOriginal = product.findByPk(id)
+        let { files } = req
+        data.image_slider = []
+        data.main_image = productOriginal.main_image
+        data.image_slider_1 = productOriginal.image_slider_1
+        data.image_slider.push(productOriginal.image_slider_1)
+        data.image_slider_2 = productOriginal.image_slider_2
+        data.image_slider.push(productOriginal.image_slider_2)
+        data.image_slider_3 = productOriginal.image_slider_3
+        data.image_slider.push(productOriginal.image_slider_3)
+        data.data_sheet = productOriginal.data_sheet
+        data.install_sheet = productOriginal.install_sheet
+        data.image_dimension = productOriginal.image_dimension
+        typeof (data.power) === 'string' ? (data.power = [data.power]) : ''
+        typeof (data.cct) === 'string' ? data.cct = [data.cct] : ''
+        typeof (data.optic) === 'string' ? data.optic = [data.optic] : ''
+        typeof (data.dim) === 'string' ? data.dim = [data.dim] : ''
+        console.log(data.qty)
+        for (let i = 0; i < files.length; i++) {
+          switch (files[i].fieldname) {
+            case 'main_image':
+              data.main_image = ('/img/' + files[i].filename)
+              break
+            case 'image_slider_1':
+              data.image_slider_1 = ('/img/' + files[i].filename)
+              data.image_slider.push(data.image_slider_1)
+              break
+            case 'image_slider_2':
+              data.image_slider_2 = ('/img/' + files[i].filename)
+              data.image_slider.push(data.image_slider_2)
+              break
+            case 'image_slider_3':
+              data.image_slider_3 = ('/img/' + files[i].filename)
+              data.image_slider.push(data.image_slider_3)
+              break
+            case 'data_sheet':
+              data.data_sheet = ('/pdf/' + files[i].filename)
+              break
+            case 'install_sheet':
+              data.install_sheet = ('/pdf/' + files[i].filename)
+              break
+            case 'image_dimension':
+              data.image_dimension = ('/img/' + files[i].filename)
+              break
+            default:
+          }
+        }
+        product.update(data, id)
+        res.redirect('/product/list')
+    } else{
+      res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound: productFound})
+    }  
   },
 
 

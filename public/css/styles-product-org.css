@@ -12,6 +12,11 @@ body{
     background-image: url(/img/fondo2.jpg);
     
 }
+span{
+    color: red;
+    font-weight: bold;
+    font-size: 14px;
+}
 .titulo{
     text-align: center;
     font-size: 40px;

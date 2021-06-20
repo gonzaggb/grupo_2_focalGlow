@@ -4029,11 +4029,112 @@
       "4000"
     ],
     "dim": [
-      "Switch",
-      "DALI"
+      "DALI",
+      "Switch"
     ],
     "price": "1",
     "id": 102,
     "image_slider": []
+  },
+  {
+    "id": 103,
+    "category": "plafon",
+    "name": "test1    ",
+    "qty": "1",
+    "source": "led",
+    "material": "",
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      "",
+      "",
+      "1W",
+      "2W"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "1",
+    "ruta_producto": "/img/plafon1624219858002.jpg",
+    "image_slider": [
+      null,
+      null,
+      null
+    ],
+    "main_image": "/img/plafon1624219858002.jpg"
+  },
+  {
+    "id": 104,
+    "category": "plafon",
+    "name": "Test 2 ",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "",
+      "Aluminio"
+    ],
+    "power": [
+      "",
+      "",
+      "",
+      ""
+    ],
+    "cct": [
+      "2700"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "1",
+    "ruta_producto": "/img/plafon1624221682902.jpg",
+    "image_slider": [
+      null,
+      null,
+      null
+    ],
+    "main_image": "/img/plafon1624221682902.jpg"
+  },
+  {
+    "id": 105,
+    "category": "apliques",
+    "name": "Test 4 4            ",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "Madera",
+      "Chapa",
+      "Hierro",
+      ""
+    ],
+    "optic": [
+      "Spot",
+      "WideFlood",
+      "Oval"
+    ],
+    "power": [
+      "1W",
+      "2W",
+      "4W",
+      "6W"
+    ],
+    "cct": [
+      "3000",
+      "3500",
+      "4000"
+    ],
+    "dim": [
+      "Dimeable",
+      "DALI",
+      "Bluetooth"
+    ],
+    "price": "4",
+    "ruta_producto": "/img/apliques1624222060798.jpg",
+    "image_slider": [
+      null,
+      null,
+      null
+    ],
+    "main_image": "/img/apliques1624222060798.jpg"
   }
 ]
