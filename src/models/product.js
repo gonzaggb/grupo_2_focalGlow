@@ -48,6 +48,7 @@ module.exports = {
 
   create(product, files) {
     product.id = this.generateId()
+    console.log(files)
     //Dependiendo del tipo de archivo donde se guarda
       product.image_slider = []
     for (let i = 0; i < files.length; i++) {
@@ -81,7 +82,7 @@ module.exports = {
         default:
       }
     }
-
+      console.log(product.image_dimension)
     // Leer el archivo
     const products = this.readFile()
     // Agregar nuestro producto al array de products

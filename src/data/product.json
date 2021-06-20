@@ -1891,22 +1891,5 @@
     "optic": [],
     "cct": [],
     "dim": []
-  },
-  {
-    "id": 102,
-    "category": "plafon",
-    "name": "hola      ",
-    "qty": "",
-    "source": "led",
-    "material": ["Aluminio", ""],
-    "optic": ["Flood"],
-    "power": ["", "", "", "14W"],
-    "cct": ["2700"],
-    "dim": ["Switch"],
-    "price": "1",
-    "ruta_producto": "/img/1624152486080.jpg",
-    "image_slider": ["/img/1624152486093.jpg", null, null],
-    "main_image": "/img/1624152486080.jpg",
-    "image_slider_1": "/img/1624152486093.jpg"
   }
 ]
