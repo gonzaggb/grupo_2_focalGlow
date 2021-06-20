@@ -81,8 +81,8 @@ const controller = {
         data.data_sheet = productOriginal.data_sheet
         data.install_sheet = productOriginal.install_sheet
         data.image_dimension = productOriginal.image_dimension
-        typeof (data.power) === 'string' ? (data.power = [data.power]) : ''
-        typeof (data.cct) === 'string' ? data.cct = [data.cct] : ''
+        typeof (data.power) === Number ? (data.power = [data.power]) : ''
+        typeof (data.cct) === Number ? data.cct = [data.cct] : ''
         typeof (data.optic) === 'string' ? data.optic = [data.optic] : ''
         typeof (data.dim) === 'string' ? data.dim = [data.dim] : ''
         console.log(data.qty)
