@@ -29,7 +29,9 @@ main {
   width: 90%;
 }
 
-.product-name i {
+.product-name i,
+.product-name h2 {
+  margin: 20px 0px;
   color: black;
   font-size: 1.5rem;
 }
@@ -163,7 +165,6 @@ input:checked + label + .slide2 {
 
 .technical-info-title h3,
 .technical-info-title p {
-  margin: 0px;
   text-align: left;
 }
 
@@ -211,11 +212,8 @@ input:checked + label + .slide2 {
   margin: 9px 25px;
   padding-top: 10px;
 }
-.technical-data ul {
-  margin: 0 auto;
-}
-.technical-data li em {
-  color: darkgrey;
+.technical-data li {
+  margin-left: 25px;
 }
 
 .price {
@@ -285,7 +283,7 @@ input {
   text-align: center;
   width: 66.66%;
 }
-  .similar-products {
+.similar-products {
   align-content: flex-end;
 }
 
