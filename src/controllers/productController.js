@@ -113,7 +113,7 @@ const controller = {
               data.image_dimension = ('/img/' + files[i].filename)
               break
             default:
-          }
+          }  
         }
         product.update(data, id)
         res.redirect('/product/list')
