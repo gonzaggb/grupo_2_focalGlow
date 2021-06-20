@@ -21,7 +21,7 @@
                                             <option value="<%=element.name%>"><%=element.name.charAt(0).toUpperCase() + element.name.slice(1)%></option>
                                         <% }) %>
                                      </select>
-                                     <span><%= locals.errors && errors.category ? errors.category.msg : null  %></span>
+                                     <span class="error_msg"><%= locals.errors && errors.category ? errors.category.msg : null  %></span>
 
 
                                 </div>
@@ -30,7 +30,7 @@
                                 <div class="in-line-data">
                                     <label class="" for="name">Nombre del Producto: </label><br>
                                     <input class="box" type="text" name="name" id="producto" value="<%= locals.old && old.name ? old.name : '' %>">
-                                    <span><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
+                                    <span class="error_msg"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                                 </div>
                             </div><br>
                             <div class="first">
@@ -48,7 +48,7 @@
                                 <div>
                                     <input class="radio" type="radio" name="source" value="Lampara" <%= (locals.old && old.source == 'Lampara') ? 'checked' : '' %>>Lampara
                                 </div>
-                                <span><%=locals.errors && errors.source ? errors.source.msg : '' %></span>
+                                <span class="error_msg"><%=locals.errors && errors.source ? errors.source.msg : '' %></span>
 
                             </div><br>
                             <div>
@@ -67,7 +67,7 @@
                                         <input class="check" type="checkbox" name="material[]" value="Hierro"<%= (locals.old && old.material && old.material.includes('Hierro')) ? 'checked' : '' %> > Hierro
                                     </div>
                                 </div>
-                                <span><%=locals.errors && errors.material ? errors.material.msg : '' %></span>
+                                <span class="error_msg"><%=locals.errors && errors.material ? errors.material.msg : '' %></span>
                             </div><br>
                             <div class="first-">
                                 <label class="" for="optic">Optica: </label>
@@ -83,7 +83,7 @@
                                 <div>
                                     <input class="check" type="checkbox" name="optic[]" value="Oval"<%= (locals.old && old.optic &&  old.optic.includes('Oval')) ? 'checked' : '' %>> Oval
                                 </div>
-                                <span><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span>
+                                <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span>
 
                             </div><br>
                             <div class="first-">
@@ -98,29 +98,28 @@
                                             <%}%>
                                     </select>
                                     <%}%>
-                                    <span><%=locals.errors && errors.power ? errors.power.msg : '' %></span>
+                                    <span class="error_msg"><%=locals.errors && errors.power ? errors.power.msg : '' %></span>
 
                             </div><br>
                             <div class="first-">
                                 <label class="" for="cct">CCT: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="2700" <%= (locals.old && old.cct && (old.cct.includes(2700) || old.cct.includes('2700'))) ? 'checked' : '' %>>2700k
+                                    <input class="check" type="checkbox" name="cct[]" value="2700" <%= (locals.old && old.cct && (old.cct.includes(2700) || old.cct.includes('2700'))) ? 'checked' : '' %>>2700K
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="3000" <%= (locals.old && old.cct &&  (old.cct.includes(3000) || old.cct.includes('300'))) ? 'checked' : '' %>>3000k
+                                    <input class="check" type="checkbox" name="cct[]" value="3000" <%= (locals.old && old.cct &&  (old.cct.includes(3000) || old.cct.includes('300'))) ? 'checked' : '' %>>3000K
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="3500" <%= (locals.old && old.cct &&  (old.cct.includes(3500) || old.cct.includes('3500')))? 'checked' : '' %>>3500k
+                                    <input class="check" type="checkbox" name="cct[]" value="3500" <%= (locals.old && old.cct &&  (old.cct.includes(3500) || old.cct.includes('3500')))? 'checked' : '' %>>3500K
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="4000" <%= (locals.old && old.cct &&  (old.cct.includes(4000) || old.cct.includes('4000'))) ? 'checked' : '' %>>4000k
+                                    <input class="check" type="checkbox" name="cct[]" value="4000" <%= (locals.old && old.cct &&  (old.cct.includes(4000) || old.cct.includes('4000'))) ? 'checked' : '' %>>4000K
                                 </div>
-                                <span><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span>
-
-                                
+                                <span class="error_msg"><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span>
+                        
                             </div><br>
                             <div class="first-">
                                 <label class="" for="dim">Dim: </label>
@@ -136,20 +135,23 @@
                                 <div>
                                     <input class="check" type="checkbox" name="dim[]" value="Bluetooth" <%= (locals.old && old.dim && old.dim.includes('Bluetooth')) ? 'checked' : '' %>> Bluetooth
                                 </div>
-                                <span><%=locals.errors && errors.dim ? errors.dim.msg : '' %></span>
-
+                                <span class="error_msg"><%=locals.errors && errors.dim ? errors.dim.msg : '' %></span>
                             </div><br>
                             <div class="first-">
                                 <label class="price" for="price">Precio unitario base: </label><br>
                                 <input class="price" type="number" name="price" id="precio" min="0" max="999999999999"
                                     step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >
+                                    <span class="error_msg"><%=locals.errors && errors.price ? errors.price.msg : '' %></span>
                             </div><br>
                         </div>
+
                         <div class="form_right">
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="title" for="main_image">Imagen Principal: </label><br>
-                                    <input type="file" name='main_image' onchange="loadFile(event)" accept=".jpg"><br>
+                                    <input type="file" name='main_image' onchange="loadFile(event)" accept=".jpg">
+                                    <span class="error_msg"><%=locals.errors && errors.main_image ? errors.main_image.msg : '' %></span>
+                                    <br>
                                     <p>Preview:</p>
                                     <img id="output" />
                                     <script>
@@ -165,6 +167,7 @@
                                 <div class="imagen-input">
                                     <label class="title" for="image_dimension">Dimensiones del Producto: </label><br>
                                     <input type="file" name="image_dimension" accept=".jpg , .png">
+                                    <span class="error_msg"><%=locals.errors && errors.image_dimension ? errors.image_dimension.msg : '' %></span>
                                 </div><br>
                             </div>
                             <div class="imagenes">

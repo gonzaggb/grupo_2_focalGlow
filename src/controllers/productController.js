@@ -45,6 +45,7 @@ const controller = {
     console.log(req.body)
     console.log('controlador')
     console.log(errors)
+
     if (errors.isEmpty()) {
       const productNew = req.body
       const files = req.files
@@ -52,7 +53,7 @@ const controller = {
       product.create(productNew, files)
       res.redirect('/product/list')
     } else {
-      res.render('products/product-create.ejs',{errors: errors.mapped(), old: req.body})
+      res.render('products/product-create.ejs', { errors: errors.mapped(), old: req.body })
     }
   },
 
@@ -77,36 +78,36 @@ const controller = {
     data.data_sheet = productOriginal.data_sheet
     data.install_sheet = productOriginal.install_sheet
     data.image_dimension = productOriginal.image_dimension
-    typeof (data.power) === 'string' ? (data.power = [data.power]) : ''
-    typeof (data.cct) === 'string' ? data.cct = [data.cct] : ''
-    typeof (data.optic) === 'string' ? data.optic = [data.optic] : ''
-    typeof (data.dim) === 'string' ? data.dim = [data.dim] : ''
+    typeof data.power === 'string' ? (data.power = [data.power]) : ''
+    typeof data.cct === 'string' ? (data.cct = [data.cct]) : ''
+    typeof data.optic === 'string' ? (data.optic = [data.optic]) : ''
+    typeof data.dim === 'string' ? (data.dim = [data.dim]) : ''
     console.log(data.qty)
     for (let i = 0; i < files.length; i++) {
       switch (files[i].fieldname) {
         case 'main_image':
-          data.main_image = ('/img/' + files[i].filename)
+          data.main_image = '/img/' + files[i].filename
           break
         case 'image_slider_1':
-          data.image_slider_1 = ('/img/' + files[i].filename)
+          data.image_slider_1 = '/img/' + files[i].filename
           data.image_slider.push(data.image_slider_1)
           break
         case 'image_slider_2':
-          data.image_slider_2 = ('/img/' + files[i].filename)
+          data.image_slider_2 = '/img/' + files[i].filename
           data.image_slider.push(data.image_slider_2)
           break
         case 'image_slider_3':
-          data.image_slider_3 = ('/img/' + files[i].filename)
+          data.image_slider_3 = '/img/' + files[i].filename
           data.image_slider.push(data.image_slider_3)
           break
         case 'data_sheet':
-          data.data_sheet = ('/pdf/' + files[i].filename)
+          data.data_sheet = '/pdf/' + files[i].filename
           break
         case 'install_sheet':
-          data.install_sheet = ('/pdf/' + files[i].filename)
+          data.install_sheet = '/pdf/' + files[i].filename
           break
         case 'image_dimension':
-          data.image_dimension = ('/img/' + files[i].filename)
+          data.image_dimension = '/img/' + files[i].filename
           break
         default:
       }
@@ -115,15 +116,11 @@ const controller = {
     res.redirect('/product/list')
   },
 
-
-
   delete: (req, res) => {
     let id = req.params.id
     let productDelet = product.findByPk(id)
     res.redirect('/product/list')
     product.delete(id)
-
-
   },
 }
 
