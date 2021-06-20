@@ -43,7 +43,10 @@ const controller = {
   create: (req, res) => {
     let errors = validationResult(req)
     console.log(req.body)
+    console.log('controlador')
+    console.log(errors)
     if (errors.isEmpty()) {
+      const productNew = req.body
       const files = req.files
       console.log(files)
       product.create(productNew, files)

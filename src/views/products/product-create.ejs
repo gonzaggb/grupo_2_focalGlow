@@ -16,17 +16,21 @@
                                 <div class="cateogry-selector">
                                     <label class="" for="category">Categoria: </label><br>
                                     <select name="category" class="select">
-                                        <option value="">Seleccionar</option>
+                                        <option value="<%= locals.old && old.category ? old.category : ''%>"><%=locals.old && old.category ? old.category : 'Seleccionar'%></option>
                                         <% locals.categories.forEach(categorie => { %>
                                             <option value="<%=categorie.name%>"><%=categorie.name.charAt(0).toUpperCase() + categorie.name.slice(1)%></option>
                                         <% }) %>
                                      </select>
+                                     <span><%= locals.errors && errors.category ? errors.category.msg : null  %></span>
+
+
                                 </div>
                             </div><br>
                             <div class="first">
                                 <div class="in-line-data">
                                     <label class="" for="name">Nombre del Producto: </label><br>
-                                    <input class="box" type="text" name="name" id="producto" value="<%= locals.old && old.name ? old.name : '' %>" placeholder="<%= locals.errors && errors.name ? errors.name.msg : null  %>" >
+                                    <input class="box" type="text" name="name" id="producto" value="<%= locals.old && old.name ? old.name : '' %>">
+                                    <span><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                                 </div>
                             </div><br>
                             <div class="first">
@@ -44,46 +48,49 @@
                                 <div>
                                     <input class="radio" type="radio" name="source" value="Lampara" <%= (locals.old && old.source == 'Lampara') ? 'checked' : '' %>>Lampara
                                 </div>
+                                <span><%=locals.errors && errors.source ? errors.source.msg : '' %></span>
+
                             </div><br>
                             <div>
                                 <div class="first-">
                                     <label class="" for="material">Material: </label>
                                     <div>
-                                        <input class="check" type="checkbox" name="material[]" value="Aluminio"<%= (locals.old && old.material.includes('Aluminio')) ? 'checked' : '' %> > Aluminio
+                                        <input class="check" type="checkbox" name="material[]" value="Aluminio"<%= (locals.old && old.material && old.material.includes('Aluminio')) ? 'checked' : '' %> > Aluminio
                                     </div>
                                     <div>
-                                        <input class="check" type="checkbox" name="material[]" value="Madera"<%= (locals.old && old.material.includes('Madera')) ? 'checked' : '' %> > Madera
+                                        <input class="check" type="checkbox" name="material[]" value="Madera"<%= (locals.old && old.material && old.material.includes('Madera')) ? 'checked' : '' %> > Madera
                                     </div>
                                     <div>
-                                        <input class="check" type="checkbox" name="material[]" value="Chapa"<%= (locals.old && old.material.includes('Chapa')) ? 'checked' : '' %> > Chapa
+                                        <input class="check" type="checkbox" name="material[]" value="Chapa"<%= (locals.old && old.material &&old.material.includes('Chapa')) ? 'checked' : '' %> > Chapa
                                     </div>
                                     <div>
-                                        <input class="check" type="checkbox" name="material[]" value="Hierro"<%= (locals.old && old.material.includes('Hierro')) ? 'checked' : '' %> > Hierro
+                                        <input class="check" type="checkbox" name="material[]" value="Hierro"<%= (locals.old && old.material && old.material.includes('Hierro')) ? 'checked' : '' %> > Hierro
                                     </div>
                                 </div>
-
-                                 <span><%=locals.errors && errors.material ? errors.material.msg : '' %></span>
+                                <span><%=locals.errors && errors.material ? errors.material.msg : '' %></span>
                             </div><br>
                             <div class="first-">
                                 <label class="" for="optic">Optica: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Flood" <%= (locals.old && old.optic.includes('Flood') ? 'checked' : '' %>> Flood
+                                    <input class="check" type="checkbox" name="optic[]" value="Flood" <%= (locals.old && old.optic && old.optic.includes('Flood')) ? 'checked' : '' %>> Flood
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Spot"<%= (locals.old && old.optic.includes('Spot')) ? 'checked' : '' %>> Spot
+                                    <input class="check" type="checkbox" name="optic[]" value="Spot"<%= (locals.old && old.optic &&  old.optic.includes('Spot')) ? 'checked' : '' %>> Spot
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="WideFlood"<%= (locals.old && old.optic.includes('WideFlood')) ? 'checked' : '' %>> Wide Flood
+                                    <input class="check" type="checkbox" name="optic[]" value="WideFlood"<%= (locals.old && old.optic &&  old.optic.includes('WideFlood')) ? 'checked' : '' %>> Wide Flood
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Oval"<%= (locals.old && old.optic.includes('Oval')) ? 'checked' : '' %>> Oval
+                                    <input class="check" type="checkbox" name="optic[]" value="Oval"<%= (locals.old && old.optic &&  old.optic.includes('Oval')) ? 'checked' : '' %>> Oval
                                 </div>
+                                <span><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span>
+
                             </div><br>
                             <div class="first-">
                                 <label for="power">Potencia: </label>
                                 <% for(j=1;j<=4;j++){ %>
                                     <select name="power" class="select">
-                                        <option value="">Seleccionar</option>
+                                        <option value="<%=locals.old && old.power[j] ? old.power[j] : ''%>"><%=locals.old && old.power[j] ? old.power[j] : 'Seleccionar'%></option>
                                         <% for(i=1;i<=100;i++){ %>
                                             <option value="<%=[i]%>W">
                                                 <%=[i]%>W
@@ -91,40 +98,46 @@
                                             <%}%>
                                     </select>
                                     <%}%>
+                                    <span><%=locals.errors && errors.power ? errors.power.msg : '' %></span>
+
                             </div><br>
                             <div class="first-">
                                 <label class="" for="cct">CCT: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="2700" <%= (locals.old && (old.cct.includes(2700) || old.cct.includes('2700'))) ? 'checked' : '' %>>2700k
+                                    <input class="check" type="checkbox" name="cct[]" value="2700" <%= (locals.old && old.cct && (old.cct.includes(2700) || old.cct.includes('2700'))) ? 'checked' : '' %>>2700k
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="3000" <%= (locals.old && (old.cct.includes(3000) || old.cct.includes('300'))) ? 'checked' : '' %>>3000k
+                                    <input class="check" type="checkbox" name="cct[]" value="3000" <%= (locals.old && old.cct &&  (old.cct.includes(3000) || old.cct.includes('300'))) ? 'checked' : '' %>>3000k
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="3500" <%= (locals.old && (old.cct.includes(3500) || old.cct.includes('3500')))? 'checked' : '' %>>3500k
+                                    <input class="check" type="checkbox" name="cct[]" value="3500" <%= (locals.old && old.cct &&  (old.cct.includes(3500) || old.cct.includes('3500')))? 'checked' : '' %>>3500k
                                 </div>
                                 
                                 <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="4000" <%= (locals.old && (old.cct.includes(4000) || old.cct.includes('4000'))) ? 'checked' : '' %>>4000k
+                                    <input class="check" type="checkbox" name="cct[]" value="4000" <%= (locals.old && old.cct &&  (old.cct.includes(4000) || old.cct.includes('4000'))) ? 'checked' : '' %>>4000k
                                 </div>
+                                <span><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span>
+
                                 
                             </div><br>
                             <div class="first-">
                                 <label class="" for="dim">Dim: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="dim[]" value="Switch" <%= (locals.old && old.dim.includes('Switch')) ? 'checked' : '' %>> Switch
+                                    <input class="check" type="checkbox" name="dim[]" value="Switch" <%= (locals.old && old.dim &&  old.dim.includes('Switch')) ? 'checked' : '' %>> Switch
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="dim[]" value="Dimeable" <%= (locals.old && old.dim.includes('Dimeable')) ? 'checked' : '' %>> Dimeable
+                                    <input class="check" type="checkbox" name="dim[]" value="Dimeable" <%= (locals.old && old.dim && old.dim.includes('Dimeable')) ? 'checked' : '' %>> Dimeable
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="dim[]" value="DALI" <%= (locals.old && old.dim.includes('DALI')) ? 'checked' : '' %>> DALI
+                                    <input class="check" type="checkbox" name="dim[]" value="DALI" <%= (locals.old && old.dim && old.dim.includes('DALI')) ? 'checked' : '' %>> DALI
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="dim[]" value="Bluetooth" <%= (locals.old && old.dim.includes('Bluetooth')) ? 'checked' : '' %>> Bluetooth
+                                    <input class="check" type="checkbox" name="dim[]" value="Bluetooth" <%= (locals.old && old.dim && old.dim.includes('Bluetooth')) ? 'checked' : '' %>> Bluetooth
                                 </div>
+                                <span><%=locals.errors && errors.dim ? errors.dim.msg : '' %></span>
+
                             </div><br>
                             <div class="first-">
                                 <label class="price" for="price">Precio unitario base: </label><br>

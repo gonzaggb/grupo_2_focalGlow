@@ -9,8 +9,12 @@ const validateCreateForm = [
   body('cct').notEmpty().withMessage('* Falta seleccionar el cct'),
   body('dim').notEmpty().withMessage('* Falta seleccionar el DIM'),
   body('material').notEmpty().withMessage('* Falta seleccionar el material'),
+  body('optic').notEmpty().withMessage('* Falta seleccionar el material'),
+  body('category').notEmpty().withMessage('* Falta seleccionar una categoria'),
 
-   body('product_img').custom(((value, { req }) => {
+/* 
+
+  body('product_img').custom(((value, { req }) => {
     const file = req.file
     if (!file) {
       throw new Error('Debes subir una imagen')
@@ -54,7 +58,7 @@ const validateCreateForm = [
       throw new Error(`Ingrese un archivo que sea un pdf`)
     }
     return true
-  })),
+  })), */
 
   /*
 source
