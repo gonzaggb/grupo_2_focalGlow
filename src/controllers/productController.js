@@ -77,6 +77,10 @@ const controller = {
     data.image_slider.push(productOriginal.image_slider_3)
     data.data_sheet = productOriginal.data_sheet
     data.install_sheet = productOriginal.install_sheet
+    typeof (data.power) === 'string' ? (data.power = [data.power]) : ''
+    typeof (data.cct) === 'string' ? data.cct = [data.cct] : ''
+    typeof (data.optic) === 'string' ? data.optic = [data.optic] : ''
+    typeof (data.dim) === 'string' ? data.dim = [data.dim] : ''
     for (let i = 0; i < files.length; i++) {
       switch (files[i].fieldname) {
         case 'main_image':
