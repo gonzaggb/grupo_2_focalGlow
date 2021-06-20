@@ -25,7 +25,8 @@
 
 
                                 </div>
-                            </div><br>
+                            </div>
+                            <span><%= locals.errors && errors.category ? errors.category.msg : null  %></span><br>
                             <div class="first">
                                 <div class="in-line-data">
                                     <label class="" for="name">Nombre del Producto: </label><br>
@@ -37,6 +38,9 @@
                                 <div class="in-line-data">
                                     <label class="" for="qty">Cantidad: </label><br>
                                     <input class="box" type="number" name="qty" id="producto" min="0" value="<%= locals.old && old.qty ? old.qty : '' %>" >
+                                    <span>
+                                        <%= locals.errors && errors.qty ? errors.qty.msg : null %>
+                                    </span>
                                 </div>
                             </div><br>
                             <div class="first-">
@@ -85,7 +89,8 @@
                                 </div>
                                 <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span>
 
-                            </div><br>
+                            </div>
+                            <span><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
                                 <label for="power">Potencia: </label>
                                 <% for(j=1;j<=4;j++){ %>
