@@ -17,8 +17,8 @@
                                     <label class="" for="category">Categoria: </label><br>
                                     <select name="category" class="select">
                                         <option value="<%= locals.old && old.category ? old.category : ''%>"><%=locals.old && old.category ? old.category : 'Seleccionar'%></option>
-                                        <% locals.categories.forEach(categorie => { %>
-                                            <option value="<%=categorie.name%>"><%=categorie.name.charAt(0).toUpperCase() + categorie.name.slice(1)%></option>
+                                        <% locals.categories.forEach(element => { %>
+                                            <option value="<%=element.name%>"><%=element.name.charAt(0).toUpperCase() + element.name.slice(1)%></option>
                                         <% }) %>
                                      </select>
                                      <span><%= locals.errors && errors.category ? errors.category.msg : null  %></span>

@@ -257,6 +257,7 @@ input {
 .price-title {
   text-align: right;
   font-size: 24px;
+  margin: 16px 0px;
 }
 
 .product-dimensions-info {

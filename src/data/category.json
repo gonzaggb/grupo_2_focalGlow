@@ -1,49 +1,49 @@
 [
   {
     "id": 1,
-    "name": "plafon",
+    "name": "Plafón",
     "imageCover": "/img/cover/cover-plafon.jpg",
     "homeImage": "/img/plafon.png"
   },
   {
     "id": 2,
-    "name": "apliques",
+    "name": "Apliques",
     "imageCover": "/img/cover/cover-aplique.jpg",
     "homeImage": "/img/Aplique.png"
   },
   {
     "id": 3,
-    "name": "pie",
+    "name": "Pie",
     "imageCover": "/img/cover/cover-pie.jpg",
     "homeImage": "/img/Pie.png"
   },
   {
     "id": 4,
-    "name": "colgantes",
+    "name": "Colgantes",
     "imageCover": "/img/cover/cover-colgante.jpg",
     "homeImage": "/img/Colgante.png"
   },
   {
     "id": 5,
-    "name": "spots",
+    "name": "Spots",
     "imageCover": "/img/cover/cover-spot.jpg",
     "homeImage": "/img/Spot.png"
   },
   {
     "id": 6,
-    "name": "sistemas",
+    "name": "Sistemas",
     "imageCover": "/img/cover/cover-sistemas.jpg",
     "homeImage": "/img/Sistemas.png"
   },
   {
     "id": 7,
-    "name": "mesa",
+    "name": "Mesa",
     "imageCover": "/img/cover/cover-mesa.jpg",
     "homeImage": "/img/Mesa.png"
   },
   {
     "id": 8,
-    "name": "exterior",
+    "name": "Exterior",
     "imageCover": "/img/cover/cover-outdoor.jpg",
     "homeImage": "/img/Exterior.png"
   }
