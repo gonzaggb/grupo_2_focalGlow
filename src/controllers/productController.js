@@ -2,7 +2,9 @@
 const product = require('../models/product')
 // se requiere express-validator, pero la parte de validation result
 const { validationResult } = require('express-validator')
-const { isFileImage, isPdf } = require('../helpers/files')
+//funciones Auxilliares
+//const { isFileImage, isPdf } = require('../helpers/files')
+const { randomArray2 } = require('../helpers/utilities')
 
 const fs = require('fs')
 const path = require('path')
@@ -17,23 +19,11 @@ const controller = {
     let productFound = product.findByPk(id)
     let category = productFound.category
     let similarProducts = product.filterByCategory(category)
-
-    function getRandomInt(min, max) {
-      return Math.floor(Math.random() * (max - min)) + min
-    }
-
-    let numberSimilarProducts = Math.min(similarProducts.length, 3) //determino cuantos productos similares voy a pasar a la vista. 4 como máximo
-    let max = similarProducts.length //maximo numero del array de Similiar Products
-    const randomArray = [getRandomInt(0, max)] // saco un numero random
-
-    //Creo un array de numeros random que no se repitan
-    for (i = 0; i < numberSimilarProducts; i++) {
-      let randomNumber = getRandomInt(0, max)
-      !randomArray.includes(randomNumber) ? randomArray.push(randomNumber) : ''
-    }
+    //utilizando una funcion auxiliar creo un array de numeros aleatorios con maximo 3 posiciones
+    let indexArray = randomArray2(similarProducts.length, 3)
 
     //filtro los Similar Products de forma aleatoria
-    let similarProductsFiltered = similarProducts.filter((e, index) => randomArray.includes(index))
+    let similarProductsFiltered = similarProducts.filter((e, index) => indexArray.includes(index))
 
     res.render('products/product-detail.ejs', { productFound, similarProductsFiltered })
   },
