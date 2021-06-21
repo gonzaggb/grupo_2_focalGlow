@@ -12,7 +12,7 @@ function randomArray(arrayLength, max) {
       randomArray.push(randomNumber) // lo guardo
     }
   }
-  console.log(randomArray)
+
   return randomArray
 }
 

@@ -70,11 +70,7 @@
                                     <div>
                                         <input class="check" type="checkbox" name="material[]" value="Hierro"<%= (locals.old && old.material && old.material.includes('Hierro')) ? 'checked' : '' %> > Hierro
                                     </div>
-                                    <div class="in-line-data"><br>
-                                        <label class="otros-materiales" for="otros-material">Otros materiales: </label>
-                                        <input class="box-1" type="text" name="material[]" id="otros-material"
-                                            placeholder="Opcional" value="">
-                                    </div>
+                                   
                                 </div>   
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.material ? errors.material.msg : '' %></span><br>
@@ -87,10 +83,10 @@
                                     <input class="check" type="checkbox" name="optic[]" value="Spot"<%= (locals.old && old.optic &&  old.optic.includes('Spot')) ? 'checked' : '' %>> Spot
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="WideFlood"<%= (locals.old && old.optic &&  old.optic.includes('WideFlood')) ? 'checked' : '' %>> Wide Flood
+                                    <input class="check" type="checkbox" name="optic[]" value="Wideflood"<%= (locals.old && old.optic &&  old.optic.includes('Wideflood')) ? 'checked' : '' %>> Wide Flood
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Oval"<%= (locals.old && old.optic &&  old.optic.includes('Oval')) ? 'checked' : '' %>> Oval
+                                    <input class="check" type="checkbox" name="optic[]" value="Ovalflood"<%= (locals.old && old.optic &&  old.optic.includes('Ovalflood')) ? 'checked' : '' %>> Ovalflood
                                 </div>
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
