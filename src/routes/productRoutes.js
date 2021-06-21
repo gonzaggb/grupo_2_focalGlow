@@ -7,7 +7,7 @@ const multer = require('multer')
 const path = require('path')
 //requerir express-validator
 const { validateCreateForm } = require('../middleware/validateCreateForm')
-
+const { validateEditForm } = require('../middleware/validateEditForm')
 //aplicacion de multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -18,8 +18,8 @@ const storage = multer.diskStorage({
     }
   },
   filename: (req, file, cb) => {
-    let category = req.body.category
-    cb(null, category + Date.now() + path.extname(file.originalname))
+    
+    cb(null, Date.now() + path.extname(file.originalname))
   },
 })
 
@@ -88,7 +88,7 @@ router.put(
     'image_slider_2',
     'image_slider_3'
   ),
-  validateCreateForm,
+  validateEditForm,
   productController.update
 )
 

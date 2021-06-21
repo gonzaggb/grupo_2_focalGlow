@@ -60,6 +60,7 @@ const controller = {
     let productFound = product.findByPk(id)
     console.log(errors)
     console.log(req.files)
+    console.log (req.body.power)
     if (errors.isEmpty()) {
       let data = req.body
       let id = req.params.id
@@ -113,6 +114,7 @@ const controller = {
       product.update(data, id)
       res.redirect('/product/list')
     } else {
+
       res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound: productFound })
     }
   },

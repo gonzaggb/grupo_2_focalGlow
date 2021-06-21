@@ -2,11 +2,10 @@
   {
     "id": 2,
     "category": "Plafón",
-    "name": "American racer  1  2       ",
+    "name": "Gonza gato",
     "qty": "20",
     "source": "led",
     "material": [
-      "",
       "Aluminio",
       "Chapa",
       "Hierro",
@@ -15,7 +14,7 @@
     "optic": [
       "Flood",
       "Spot",
-      "WideFlood"
+      "Wideflood"
     ],
     "power": [
       "",
@@ -34,6 +33,7 @@
       "Switch"
     ],
     "price": "44690",
+    "description": "\"\"",
     "ruta_producto": "/img/product_main.jpg",
     "image_slider": [
       "/img/Plafón1624156998337.jpg",
@@ -50,45 +50,46 @@
   },
   {
     "id": 3,
-    "name": "Baboon, gelada",
     "category": "Sistemas",
-    "qty": 41,
-    "source": "LED",
+    "name": "Baboon, gelada    ",
+    "qty": "41",
+    "source": "Lámpara",
     "material": [
       "Aluminio",
-      "Chapa",
-      "Otros"
+      "Chapa"
     ],
     "optic": [
       "Flood",
-      "Spot",
-      "Wideflood"
+      "Spot"
     ],
     "power": [
-      15,
-      49,
-      68,
-      77
+      "15",
+      "49",
+      "68",
+      "77"
     ],
     "cct": [
-      2700,
-      3000,
-      3500,
-      4000
+      "2700",
+      "3000",
+      "3500",
+      "4000"
     ],
     "dim": [
       "Bluetooth",
       "DALI"
     ],
-    "price": 25842,
-    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\n\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\n\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.",
-    "main_image": "/img/product_main.jpg",
+    "price": "25842",
+    "description": "Praesent id massa id nisl venenatis lacinia. Aenean sit amet justo. Morbi ut odio.\r\n\r\nCras mi pede, malesuada in, imperdiet et, commodo vulputate, justo. In blandit ultrices enim. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.\r\n\r\nProin interdum mauris non ligula pellentesque ultrices. Phasellus id sapien in sapien iaculis congue. Vivamus metus arcu, adipiscing molestie, hendrerit at, vulputate vitae, nisl.\"\"\"\"",
+    "ruta_producto": "/img/product_main.jpg",
     "image_slider": [
-      "/img/product_main.jpg"
+      null,
+      null,
+      null
     ],
-    "image_dimension": "/img/product_dimensions.jpg",
+    "main_image": "/img/product_main.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
-    "install_sheet": "/pdf/install-sheet-sample.pdf"
+    "install_sheet": "/pdf/install-sheet-sample.pdf",
+    "image_dimension": "/img/product_dimensions.jpg"
   },
   {
     "id": 4,
@@ -376,44 +377,46 @@
   },
   {
     "id": 11,
-    "name": "Duck, white-faced whistling",
     "category": "Pie",
-    "qty": 65,
-    "source": "LED",
+    "name": "Duck, white-faced whistling ",
+    "qty": "65",
+    "source": "led",
     "material": [
       "Aluminio",
       "Chapa",
-      "Madera",
-      "Otros",
-      "Polimero"
+      "Madera"
     ],
     "optic": [
       "Flood",
       "Spot"
     ],
     "power": [
-      32,
-      49,
-      62
+      "",
+      "32",
+      "49",
+      "62"
     ],
     "cct": [
-      2700,
-      3000,
-      3500,
-      4000
+      "2700",
+      "3000",
+      "3500",
+      "4000"
     ],
     "dim": [
       "Bluetooth"
     ],
-    "price": 65541,
-    "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.",
-    "main_image": "/img/coral.jpg",
+    "price": "65541",
+    "description": "In hac habitasse platea dictumst. Etiam faucibus cursus urna. Ut tellus.\"",
+    "ruta_producto": "/img/coral.jpg",
     "image_slider": [
-      "/img/product_main.jpg"
+      null,
+      null,
+      null
     ],
-    "image_dimension": "/img/product_dimensions.jpg",
+    "main_image": "/img/coral.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
-    "install_sheet": "/pdf/install-sheet-sample.pdf"
+    "install_sheet": "/pdf/install-sheet-sample.pdf",
+    "image_dimension": "/img/product_dimensions.jpg"
   },
   {
     "id": 12,
@@ -4082,5 +4085,86 @@
       null
     ],
     "main_image": "/img/Colgantes1624224322370.jpg"
+  },
+  {
+    "id": 104,
+    "category": "Plafón",
+    "name": "test2  ",
+    "qty": "12",
+    "source": "led",
+    "material": [
+      "Aluminio"
+    ],
+    "optic": [
+      "Flood",
+      "Spot"
+    ],
+    "power": [
+      "",
+      "",
+      "1",
+      "1"
+    ],
+    "cct": [
+      "2700"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "1",
+    "description": "1\"\"",
+    "ruta_producto": "/img/Plafón1624309501653.jpg",
+    "image_slider": [
+      "/img/Plafón1624309501657.jpg",
+      "/img/Plafón1624309501670.jpg",
+      "/img/Plafón1624309501675.jpg"
+    ],
+    "main_image": "/img/Plafón1624309501653.jpg",
+    "image_slider_1": "/img/Plafón1624309501657.jpg",
+    "image_slider_2": "/img/Plafón1624309501670.jpg",
+    "image_slider_3": "/img/Plafón1624309501675.jpg",
+    "data_sheet": "/pdf/Plafón1624309501677.pdf",
+    "install_sheet": "/pdf/Plafón1624309501678.pdf",
+    "image_dimension": "/img/Plafón1624309501654.jpg"
+  },
+  {
+    "id": 105,
+    "category": "Plafón",
+    "name": "Mars come trabas   ",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "Aluminio"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      "",
+      "2",
+      "3W",
+      "6W"
+    ],
+    "cct": [
+      "2700"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "1",
+    "description": "hola ",
+    "ruta_producto": "/img/1624311726725.jpg",
+    "image_slider": [
+      "/img/1624311726726.jpg",
+      "/img/1624311726742.jpg",
+      "/img/1624311726748.jpg"
+    ],
+    "main_image": "/img/1624311726725.jpg",
+    "image_slider_1": "/img/1624311726726.jpg",
+    "image_slider_2": "/img/1624311726742.jpg",
+    "image_slider_3": "/img/1624311726748.jpg",
+    "data_sheet": "/pdf/1624311726750.pdf",
+    "install_sheet": "/pdf/1624311726751.pdf",
+    "image_dimension": "/img/1624311726726.png"
   }
 ]
