@@ -58,6 +58,8 @@ const controller = {
     let errors = validationResult(req)
     let id = req.params.id
     let productFound = product.findByPk(id)
+    console.log(errors)
+    console.log(req.files)
     if (errors.isEmpty()) {
       let data = req.body
       let id = req.params.id
@@ -86,15 +88,15 @@ const controller = {
             break
           case 'image_slider_1':
             data.image_slider_1 = '/img/' + files[i].filename
-            data.image_slider.push(data.image_slider_1)
+            data.image_slider[0] = data.image_slider_1
             break
           case 'image_slider_2':
             data.image_slider_2 = '/img/' + files[i].filename
-            data.image_slider.push(data.image_slider_2)
+            data.image_slider[1] = data.image_slider_2
             break
           case 'image_slider_3':
             data.image_slider_3 = '/img/' + files[i].filename
-            data.image_slider.push(data.image_slider_3)
+            data.image_slider[2] = data.image_slider_3
             break
           case 'data_sheet':
             data.data_sheet = '/pdf/' + files[i].filename
