@@ -2,14 +2,14 @@
   {
     "id": 2,
     "category": "Plafón",
-    "name": "Gonza gato",
+    "name": "Gonza gato  ",
     "qty": "20",
     "source": "led",
     "material": [
       "Aluminio",
+      "Madera",
       "Chapa",
-      "Hierro",
-      "Madera"
+      "Hierro"
     ],
     "optic": [
       "Flood",
@@ -29,11 +29,11 @@
       "4000"
     ],
     "dim": [
-      "DALI",
-      "Switch"
+      "Switch",
+      "DALI"
     ],
     "price": "44690",
-    "description": "\"\"",
+    "description": "hola",
     "ruta_producto": "/img/product_main.jpg",
     "image_slider": [
       "/img/Plafón1624156998337.jpg",

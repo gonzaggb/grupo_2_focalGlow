@@ -20,20 +20,29 @@
                                         <% }) %>
                                      </select>
                             </div>
-                        </div><br>
+                        </div>
+                        <span class="error_msg">
+                            <%= locals.errors && errors.category ? errors.category.msg : null %>
+                        </span><br>
                         <div class="first">
                             <div class="in-line-data">
                                 <label class="" for="name">Nombre del Producto: </label><br>
                                 <input class="box" type="text" name="name" id="producto" value="<%= productFound.name %> " >
                             </div>
-                        </div><br>
+                        </div>
+                        <span class="error_msg">
+                            <%= locals.errors && errors.name ? errors.name.msg : null %>
+                        </span><br>
                         <div class="first">
                             <div class="in-line-data">
                                 <label class="" for="qty">Cantidad: </label><br>
                                 <input class="box" type="number" name="qty" id="producto" min="0" value="<%= Number(productFound.qty) %>" >
                                 
                             </div>
-                        </div><br>
+                        </div>
+                        <span class="error_msg">
+                            <%= locals.errors && errors.qty ? errors.qty.msg : null %>
+                        </span><br>
                         <div class="first-">
                             <label class="" for="source">Fuente: </label>
 
@@ -43,7 +52,9 @@
                             <div>
                                 <input class="radio" type="radio" name="source" value="Lámpara"  <%= productFound.source == 'Lámpara' ? 'checked' : '' %>>Lampara
                             </div>
-                        </div><br>
+                    </div><span class="error_msg">
+                        <%=locals.errors && errors.source ? errors.source.msg : '' %>
+                    </span><br>
                         <div>
                             <div class="first-">
                                 <label class="" for="material">Material: </label>
@@ -65,7 +76,10 @@
                                 <input class="box-1" type="text" name="material" id="otros-material"
                                     placeholder="Opcional">
                             </div> -->
-                        </div><br>
+                        </div>
+                        <span class="error_msg">
+                            <%=locals.errors && errors.material ? errors.material.msg : '' %>
+                        </span><br>
                         <div class="first-">
                             <label class="" for="optic">Optica: </label>
                             <div>
@@ -80,7 +94,10 @@
                             <div>
                                 <input class="check" type="checkbox" name="optic[]" value="Oval"  <%=  productFound.optic.includes("Oval") ? 'checked' : ''%>> Oval
                             </div>
-                        </div><br>                        
+                        </div>
+                        <span class="error_msg">
+                            <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
+                        </span><br>
                         <div class="first-">
                             <label for="power">Potencia: </label>
                             <% for(j=0;j<4;j++){ %>
@@ -93,7 +110,10 @@
                                         <%}%>
                                 </select>
                                 <%}%>
-                        </div><br>
+                        </div>
+                        <span class="error_msg">
+                            <%=locals.errors && errors.power ? errors.power.msg : '' %>
+                        </span><br>
                         <div class="first-">
                             <label class="" for="cct">CCT: </label>
                             <div>
@@ -108,7 +128,10 @@
                             <div>
                                 <input class="check" type="checkbox" name="cct[]" value="4000"  <%=  (productFound.cct.includes(4000) || productFound.cct.includes('4000') ? 'checked' : '')%>> 4000K
                             </div>
-                        </div><br>
+                        </div>
+                        <span class="error_msg">
+                            <%=locals.errors && errors.cct ? errors.cct.msg : '' %>
+                        </span><br>
                         <div class="first-">
                             <label class="" for="dim">Dim: </label>
                             <div>
@@ -123,16 +146,24 @@
                             <div>
                                 <input class="check" type="checkbox" name="dim[]" value="Bluetooth"  <%= (productFound.dim.includes("Bluetooth") ? 'checked' : '')%>> Bluetooth
                             </div>
-                        </div><br>
+                        </div>
+                        <span class="error_msg">
+                            <%=locals.errors && errors.dim ? errors.dim.msg : '' %>
+                        </span><br>
                         <div class="first-">
                             <label class="price" for="price">Precio unitario base: </label><br>
                             <input class="price" type="number" name="price" id="precio" min="0"
                                 placeholder=" Ej 15235.35" value="<%=Number(productFound.price)%>" >
-                        </div><br>
+                        </div>
+                        <span class="error_msg">
+                            <%=locals.errors && errors.price ? errors.price.msg : '' %>
+                        </span><br>
                         <div class="description-container">
                             <label class="title" for="description">Descripción del producto:</label><br> 
                             <textarea class ="description" name="description" placeholder="Poné una descripción copada"><%=productFound.description%></textarea><br>
-                           
+                        <span class="error_msg">
+                            <%=locals.errors && errors.description ? errors.description.msg : '' %>
+                        </span>
                         </div>
                     </div>
                     <div class="form_right">
@@ -140,7 +171,9 @@
                             <div class="imagen-input">
                                 <label class="title" for="main_image">Imagen Principal: </label><br>
                                 <input type="file" name='main_image' accept=".jpg">
-                                <img src="<%= productFound.main_image %>" alt="" width="50" height="50">
+                                <br>
+                                <p>Preview:</p>
+                                <img  id="output" src="<%= productFound.main_image %>" alt="" >
                                 <input type="text" value="<%= productFound.main_image %>" name="ruta_producto">
                             </div><br>
                             <div class="imagen-input">
