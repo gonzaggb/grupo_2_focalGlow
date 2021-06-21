@@ -71,7 +71,7 @@ a {
   color: white;
 }
 
-#products th.id {
+#products .id {
   width: 10px;
 }
 
@@ -95,6 +95,7 @@ a {
 form button {
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 .up-button {
   background-color: #ffde59;

@@ -63,12 +63,12 @@ router.post(
   '/add',
   upload.any(
     'main_image',
+    'image_dimension',
     'data_sheet',
     'install_sheet',
     'image_slider_1',
     'image_slider_2',
-    'image_slider_3',
-    'image_dimension'
+    'image_slider_3'
   ),
   validateCreateForm,
   productController.create

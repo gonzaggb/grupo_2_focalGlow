@@ -12,7 +12,9 @@ const validateCreateForm = [
   body('material').notEmpty().withMessage('Favor de seleccionar el material'),
   body('optic').notEmpty().withMessage('Favor de seleccionar la óptica'),
   body('category').notEmpty().withMessage('Favor de seleccionar una categoría'),
+  body('description').notEmpty().withMessage('Favor de incluir una descripción del producto'),
 
+  //Para las imagenes y pdf llamamos a una funcion auxiliadora
   body('main_image').custom((value, { req }) => {
     const { files } = req
     checkFieldImage('main_image', files)

@@ -96,6 +96,18 @@ label {
   box-shadow: 5px 5px 10px black;
 }
 
+.error_msg {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+}
+
+.description {
+  width: 80%;
+  height: 100px;
+}
+
 @media (min-width: 361px) {
   #register {
     display: flex;
@@ -126,11 +138,7 @@ label {
     align-content: center;
     background-color: rgba(0, 0, 0, 0.1);
   }
-  .error_msg {
-    margin-left: 10px;
-    font-size: 18px;
-    color: red;
-  }
+
   label {
     transition: 0.2s;
   }

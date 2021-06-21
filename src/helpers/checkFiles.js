@@ -7,13 +7,13 @@ function checkFieldImage(fieldName, array) {
     valuesFieldname.push(element.fieldname)
     if (element.fieldname == fieldName) {
       if (!isFileImage(element.originalname)) {
-        throw new Error('Ingrese un archivo que sea una imágen')
+        throw new Error('El archivo debe tener formato imagen')
       }
     }
   })
 
   if (!valuesFieldname.includes(fieldName)) {
-    throw new Error('Debes subir una imagen')
+    throw new Error('Seleccione imagen para este campo')
   }
 
   return true
@@ -32,7 +32,7 @@ function checkFieldPdf(fieldName, array) {
   })
 
   if (!valuesFieldname.includes(fieldName)) {
-    throw new Error('Debes subir un documento')
+    throw new Error('Seleccione documento para este campo')
   }
 
   return true
