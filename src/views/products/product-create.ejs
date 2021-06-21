@@ -154,7 +154,7 @@
                             </div><br>
                             <div class="description-container">
                                 <label class="title" for="description">Descripción del producto:</label><br> 
-                                <textarea class ="description" name="description" placeholder="Poné una descripción copada"></textarea><br>
+                                <textarea class ="description" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>
                                 <span class="error_msg"><%=locals.errors && errors.description ? errors.description.msg : '' %></span> 
                             </div>
                         </div>
