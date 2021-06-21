@@ -6,11 +6,11 @@
     "qty": "20",
     "source": "led",
     "material": [
+      "",
       "Aluminio",
-      "Madera",
       "Chapa",
       "Hierro",
-      ""
+      "Madera"
     ],
     "optic": [
       "Flood",
@@ -30,8 +30,8 @@
       "4000"
     ],
     "dim": [
-      "Switch",
-      "DALI"
+      "DALI",
+      "Switch"
     ],
     "price": "44690",
     "ruta_producto": "/img/product_main.jpg",
@@ -4082,5 +4082,62 @@
       null
     ],
     "main_image": "/img/Colgantes1624224322370.jpg"
+  },
+  {
+    "category": "Plafón",
+    "name": "MARS",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "Aluminio"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      "",
+      "",
+      "",
+      "15W"
+    ],
+    "cct": [
+      "2700"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "3500",
+    "id": 104,
+    "image_slider": [],
+    "main_image": "/img/Plafón1624238021436.jpg"
+  },
+  {
+    "category": "Apliques",
+    "name": "MARS",
+    "qty": "1",
+    "source": "led",
+    "material": [
+      "Aluminio"
+    ],
+    "optic": [
+      "Flood"
+    ],
+    "power": [
+      "14W",
+      "",
+      "",
+      ""
+    ],
+    "cct": [
+      "2700"
+    ],
+    "dim": [
+      "Switch"
+    ],
+    "price": "3500",
+    "id": 105,
+    "image_slider": [],
+    "main_image": "/img/Apliques1624238088309.jpg",
+    "image_dimension": "/img/Apliques1624238088324.jpg"
   }
 ]

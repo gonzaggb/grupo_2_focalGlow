@@ -154,7 +154,7 @@
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="title" for="main_image">Imagen Principal: </label><br>
-                                    <input type="file" name='main_image' onchange="loadFile(event)" accept=".jpg">
+                                    <input type="file" name="main_image" onchange="loadFile(event)" accept=".jpg">
                                     <span class="error_msg"><%=locals.errors && errors.main_image ? errors.main_image.msg : '' %></span>
                                     <br>
                                     <p>Preview:</p>
@@ -178,19 +178,26 @@
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="title" for="image_slider">Slider: </label><br>
-                                    <input type="file" name="image_slider_1" accept=".jpg , .png"> <br>
-                                    <input type="file" name="image_slider_2" accept=".jpg , .png"><br>
-                                    <input type="file" name="image_slider_3" accept=".jpg , .png">
-                                </div><br>
+                                    <input type="file" name="image_slider_1" accept=".jpg , .png"> 
+                                    <span class="error_msg"><%=locals.errors && errors.image_slider_1? errors.image_slider_1.msg : '' %></span> <br>
+                                    <input type="file" name="image_slider_2" accept=".jpg , .png"> 
+                                    <span class="error_msg"><%=locals.errors && errors.image_slider_2? errors.image_slider_2.msg : '' %></span> <br>
+                                    <input type="file" name="image_slider_3" accept=".jpg , .png"> 
+                                    <span class="error_msg"><%=locals.errors && errors.image_slider_3? errors.image_slider_3.msg : '' %></span> <br>
+                                                                  
+                                </div>
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="" for="data_sheet">Hoja Técnica: </label><br>
                                     <input type="file" src="" alt="" name="data_sheet" accept=".pdf">
-                                </div><br>
+                                </div>
+                                <span class="error_msg"><%=locals.errors && errors.data_sheet? errors.data_sheet.msg : '' %></span>
+                                <br>
                                 <div class="imagen-input">
                                     <label class="" for="install_sheet">Manual de Instalación: </label><br>
                                     <input type="file" src="" alt="" name="install_sheet" accept=".pdf">
+                                    <span class="error_msg"><%=locals.errors && errors.install_sheet? errors.install_sheet.msg : '' %></span>
                                 </div><br>
                             </div>
                         </div>

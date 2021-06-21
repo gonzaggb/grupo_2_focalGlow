@@ -1,5 +1,6 @@
 const { body } = require('express-validator')
-const { isFileImage, isPdf } = require('../helpers/files')
+const { checkFieldImage, checkFieldPdf } = require('../helpers/checkFiles')
+
 //agregar las validaciones
 const validateCreateForm = [
   body('name').notEmpty().withMessage('Favor de indicar el nombre de producto'),
@@ -13,69 +14,45 @@ const validateCreateForm = [
   body('category').notEmpty().withMessage('Favor de seleccionar una categoría'),
 
   body('main_image').custom((value, { req }) => {
-    const { file } = req
-
-    console.log('file', file)
-
-    if (!file) {
-      throw new Error('Debes subir una imagen')
-    }
-
-    if (!isFileImage(file.originalname)) {
-      throw new Error('Ingrese un archivo que sea una imágen')
-    }
-
+    const { files } = req
+    checkFieldImage('main_image', files)
     return true
   }),
 
   body('image_dimension').custom((value, { req }) => {
-    const file = req.file
-    if (!file) {
-      throw new Error('Debes subir una imagen')
-    } else if (!isFileImage(file.originalname)) {
-      throw new Error('Ingrese un archivo que sea una imágen')
-    }
+    const files = req.files
+    checkFieldImage('image_dimension', files)
     return true
   }),
 
-  /* body('image_slider').custom(((value, { req }) => {
-    const file = req.file
-    if (!file) {
-      throw new Error('Debes subir una imagen')
-    } else if (!isFileImage(file.originalname)) {
-      throw new Error(`Ingrese un archivo que sea una imágen`)
-    }
+  body('image_slider_1').custom((value, { req }) => {
+    const { files } = req
+    checkFieldImage('image_slider_1', files)
     return true
-  })),
-  body('data_sheet').custom(((value, { req }) => {
-    const file = req.file
-    if (!file) {
-      throw new Error('Debes subir un pdf')
-    } else if (!isPdf(file.originalname)) {
-      throw new Error(`Ingrese un archivo que sea un pdf`)
-    }
-    return true
-  })),
-  body('install_sheet').custom(((value, { req }) => {
-    const file = req.file
-    if (!file) {
-      throw new Error('Debes subir un pdf')
-    } else if (!isPdf(file.originalname)) {
-      throw new Error(`Ingrese un archivo que sea un pdf`)
-    }
-    return true
-  })), */
+  }),
 
-  /*
-source
-material
-optic
-cct
-dim
-product_img
-image_dimension
-image_slider
-data_sheet
-install_sheet */
+  body('image_slider_2').custom((value, { req }) => {
+    const { files } = req
+    checkFieldImage('image_slider_2', files)
+    return true
+  }),
+
+  body('image_slider_3').custom((value, { req }) => {
+    const { files } = req
+    checkFieldImage('image_slider_3', files)
+    return true
+  }),
+
+  body('data_sheet').custom((value, { req }) => {
+    const { files } = req
+    checkFieldPdf('data_sheet', files)
+    return true
+  }),
+
+  body('install_sheet').custom((value, { req }) => {
+    const { files } = req
+    checkFieldPdf('install_sheet', files)
+    return true
+  }),
 ]
 module.exports = { validateCreateForm }
