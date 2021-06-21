@@ -60,7 +60,7 @@ const controller = {
     let productFound = product.findByPk(id)
     console.log(errors)
     console.log(req.files)
-    console.log (req.body.power)
+    console.log(req.body.power)
     if (errors.isEmpty()) {
       let data = req.body
       let id = req.params.id
@@ -81,7 +81,7 @@ const controller = {
       typeof data.cct === Number ? (data.cct = [data.cct]) : ''
       typeof data.optic === 'string' ? (data.optic = [data.optic]) : ''
       typeof data.dim === 'string' ? (data.dim = [data.dim]) : ''
-      console.log(data.qty)
+
       for (let i = 0; i < files.length; i++) {
         switch (files[i].fieldname) {
           case 'main_image':
@@ -114,14 +114,12 @@ const controller = {
       product.update(data, id)
       res.redirect('/product/list')
     } else {
-
       res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound: productFound })
     }
   },
 
   delete: (req, res) => {
     let id = req.params.id
-    let productDelet = product.findByPk(id)
     res.redirect('/product/list')
     product.delete(id)
   },

@@ -7,9 +7,9 @@
     "source": "led",
     "material": [
       "Aluminio",
-      "Madera",
       "Chapa",
-      "Hierro"
+      "Hierro",
+      "Madera"
     ],
     "optic": [
       "Flood",
@@ -29,8 +29,8 @@
       "4000"
     ],
     "dim": [
-      "Switch",
-      "DALI"
+      "DALI",
+      "Switch"
     ],
     "price": "44690",
     "description": "hola",
@@ -2604,26 +2604,27 @@
   },
   {
     "id": 66,
-    "name": "Hedgehog, south african",
     "category": "Exterior",
-    "qty": 1,
+    "name": "Hedgehog, south african ",
+    "qty": "1",
     "source": "LED",
     "material": [
       "Aluminio",
-      "Chapa",
-      "Polimero"
+      "Chapa"
     ],
     "optic": [
       "Flood",
-      "Ovalflood",
       "Spot",
       "Wideflood"
     ],
     "power": [
-      17
+      "",
+      "",
+      "",
+      "17"
     ],
     "cct": [
-      3000
+      "3000"
     ],
     "dim": [
       "Bluetooth",
@@ -2631,17 +2632,18 @@
       "Dimeable",
       "Switch"
     ],
-    "price": 7698,
-    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\n\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
-    "main_image": "/img/delfina.jpg",
+    "price": "7698",
+    "description": "Sed ante. Vivamus tortor. Duis mattis egestas metus.\r\n\r\nAenean fermentum. Donec ut mauris eget massa tempor convallis. Nulla neque libero, convallis eget, eleifend luctus, ultricies eu, nibh.",
+    "ruta_producto": "/img/delfina.jpg",
     "image_slider": [
-      "/img/delfina.jpg",
-      "/img/product_main.jpg",
-      "/img/slider_1.jpg"
+      null,
+      null,
+      null
     ],
-    "image_dimension": "/img/product_dimensions.jpg",
+    "main_image": "/img/delfina.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
-    "install_sheet": "/pdf/install-sheet-sample.pdf"
+    "install_sheet": "/pdf/install-sheet-sample.pdf",
+    "image_dimension": "/img/product_dimensions.jpg"
   },
   {
     "id": 67,
@@ -2955,9 +2957,9 @@
   },
   {
     "id": 75,
-    "name": "Bird, magnificent frigate",
     "category": "Exterior",
-    "qty": 51,
+    "name": "Bird, magnificent frigate ",
+    "qty": "51",
     "source": "Lámpara",
     "material": [
       "Aluminio",
@@ -2967,30 +2969,33 @@
       "Wideflood"
     ],
     "power": [
-      79,
-      84,
-      98
+      "",
+      "79",
+      "84",
+      "98"
     ],
     "cct": [
-      3000,
-      4000
+      "3000",
+      "3500",
+      "4000"
     ],
     "dim": [
       "Bluetooth",
       "Dimeable",
       "Switch"
     ],
-    "price": 6158,
-    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\n\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
-    "main_image": "/img/delfina.jpg",
+    "price": "6158",
+    "description": "Quisque id justo sit amet sapien dignissim vestibulum. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla dapibus dolor vel est. Donec odio justo, sollicitudin ut, suscipit a, feugiat et, eros.\r\n\r\nVestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue. Aliquam erat volutpat.",
+    "ruta_producto": "/img/delfina.jpg",
     "image_slider": [
-      "/img/bon-jour.jpg",
-      "/img/coral.jpg",
-      "/img/slider_3.jpg"
+      null,
+      null,
+      null
     ],
-    "image_dimension": "/img/product_dimensions.jpg",
+    "main_image": "/img/delfina.jpg",
     "data_sheet": "/pdf/data-sheet-sample.pdf",
-    "install_sheet": "/pdf/install-sheet-sample.pdf"
+    "install_sheet": "/pdf/install-sheet-sample.pdf",
+    "image_dimension": "/img/product_dimensions.jpg"
   },
   {
     "id": 76,
@@ -3995,144 +4000,10 @@
     "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
-    "id": 101,
-    "category": "",
-    "name": "Hola ",
-    "qty": "",
-    "material": "",
-    "power": [
-      "",
-      "",
-      "",
-      ""
-    ],
-    "price": "2332",
-    "image_slider": [],
-    "main_image": "/img/1623731748210.jpg",
-    "optic": [],
-    "cct": [],
-    "dim": []
-  },
-  {
-    "id": 102,
-    "category": "Plafón",
-    "name": "test 5 ",
-    "qty": "1",
-    "source": "led",
-    "material": [
-      "",
-      "Aluminio"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      "",
-      "",
-      "",
-      "2W"
-    ],
-    "cct": [
-      "2700"
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": "1",
-    "ruta_producto": "/img/Plafón1624223842336.jpg",
-    "image_slider": [
-      null,
-      null,
-      null
-    ],
-    "main_image": "/img/Plafón1624223842336.jpg"
-  },
-  {
-    "id": 103,
-    "category": "Colgantes",
-    "name": "Chichita  ",
-    "qty": "1",
-    "source": "led",
-    "material": [
-      "",
-      "Aluminio",
-      "Madera"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      "",
-      "",
-      "",
-      "2W"
-    ],
-    "cct": [
-      "2700",
-      "3000"
-    ],
-    "dim": [
-      "Dimeable",
-      "Switch"
-    ],
-    "price": "6546546",
-    "ruta_producto": "/img/Colgantes1624224322370.jpg",
-    "image_slider": [
-      null,
-      null,
-      null
-    ],
-    "main_image": "/img/Colgantes1624224322370.jpg"
-  },
-  {
-    "id": 104,
-    "category": "Plafón",
-    "name": "test2  ",
-    "qty": "12",
-    "source": "led",
-    "material": [
-      "Aluminio"
-    ],
-    "optic": [
-      "Flood",
-      "Spot"
-    ],
-    "power": [
-      "",
-      "",
-      "1",
-      "1"
-    ],
-    "cct": [
-      "2700"
-    ],
-    "dim": [
-      "Switch"
-    ],
-    "price": "1",
-    "description": "1\"\"",
-    "ruta_producto": "/img/Plafón1624309501653.jpg",
-    "image_slider": [
-      "/img/Plafón1624309501657.jpg",
-      "/img/Plafón1624309501670.jpg",
-      "/img/Plafón1624309501675.jpg"
-    ],
-    "main_image": "/img/Plafón1624309501653.jpg",
-    "image_slider_1": "/img/Plafón1624309501657.jpg",
-    "image_slider_2": "/img/Plafón1624309501670.jpg",
-    "image_slider_3": "/img/Plafón1624309501675.jpg",
-    "data_sheet": "/pdf/Plafón1624309501677.pdf",
-    "install_sheet": "/pdf/Plafón1624309501678.pdf",
-    "image_dimension": "/img/Plafón1624309501654.jpg"
-  },
-  {
-    "id": 105,
-    "category": "Plafón",
-    "name": "Mars come trabas   ",
-    "qty": "1",
-    "source": "led",
+    "category": "Mesa",
+    "name": "Pablito se clavo un clavito",
+    "qty": "2",
+    "source": "LED",
     "material": [
       "Aluminio"
     ],
@@ -4140,31 +4011,31 @@
       "Flood"
     ],
     "power": [
+      "10",
       "",
-      "2",
-      "3W",
-      "6W"
+      "",
+      ""
     ],
     "cct": [
       "2700"
     ],
     "dim": [
-      "Switch"
+      "Dimeable"
     ],
-    "price": "1",
-    "description": "hola ",
-    "ruta_producto": "/img/1624311726725.jpg",
+    "price": "3500",
+    "description": "Grande Pablito",
+    "id": 101,
     "image_slider": [
-      "/img/1624311726726.jpg",
-      "/img/1624311726742.jpg",
-      "/img/1624311726748.jpg"
+      "/img/1624314304495.jpg",
+      "/img/1624314304497.jpg",
+      "/img/1624314304502.jpg"
     ],
-    "main_image": "/img/1624311726725.jpg",
-    "image_slider_1": "/img/1624311726726.jpg",
-    "image_slider_2": "/img/1624311726742.jpg",
-    "image_slider_3": "/img/1624311726748.jpg",
-    "data_sheet": "/pdf/1624311726750.pdf",
-    "install_sheet": "/pdf/1624311726751.pdf",
-    "image_dimension": "/img/1624311726726.png"
+    "main_image": "/img/1624314304494.jpg",
+    "image_dimension": "/img/1624314304494.png",
+    "image_slider_1": "/img/1624314304495.jpg",
+    "image_slider_2": "/img/1624314304497.jpg",
+    "image_slider_3": "/img/1624314304502.jpg",
+    "data_sheet": "/pdf/1624314304504.pdf",
+    "install_sheet": "/pdf/1624314304511.pdf"
   }
 ]

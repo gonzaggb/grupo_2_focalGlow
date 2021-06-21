@@ -47,10 +47,10 @@
                             <label class="" for="source">Fuente: </label>
 
                             <div>
-                                <input class="radio" type="radio" name="source" value="led"  <%= productFound.source == "led" ? 'checked' : '' %>>LED Incorporado
+                                <input class="radio" type="radio" name="source" value="LED"  <%= productFound.source == "LED" ? 'checked' : '' %>>LED Incorporado
                             </div>
                             <div>
-                                <input class="radio" type="radio" name="source" value="Lámpara"  <%= productFound.source == 'Lámpara' ? 'checked' : '' %>>Lampara
+                                <input class="radio" type="radio" name="source" value="Lámpara"  <%= productFound.source == 'Lámpara' ? 'checked' : '' %>>Lámpara
                             </div>
                     </div><span class="error_msg">
                         <%=locals.errors && errors.source ? errors.source.msg : '' %>
@@ -89,17 +89,17 @@
                                 <input class="check" type="checkbox" name="optic[]" value="Spot"  <%=  productFound.optic.includes("Spot") ? 'checked' : '' %>> Spot
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optic[]" value="Wideflood" <%=  productFound.optic.includes("Wideflood") ? 'checked' : ''%>> Wide Flood
+                                <input class="check" type="checkbox" name="optic[]" value="Wideflood" <%=  productFound.optic.includes("Wideflood") ? 'checked' : ''%>> Wideflood
                             </div>
                             <div>
-                                <input class="check" type="checkbox" name="optic[]" value="Oval"  <%=  productFound.optic.includes("Oval") ? 'checked' : ''%>> Oval
+                                <input class="check" type="checkbox" name="optic[]" value="Ovalflood"  <%=  productFound.optic.includes("Ovalflood") ? 'checked' : ''%>> Ovalflood
                             </div>
                         </div>
                         <span class="error_msg">
                             <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
                         </span><br>
                         <div class="first-">
-                            <label for="power">Potencia: </label>
+                            <label for="power">Potencia [W]: </label>
                             <% for(j=0;j<4;j++){ %>
                                 <select name="power" class="select">
                                     <option value="<%= productFound.power[j] %>"><%= productFound.power[j] %></option>
