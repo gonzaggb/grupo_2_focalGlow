@@ -38,7 +38,7 @@
                                 <div class="in-line-data">
                                     <label class="" for="qty">Cantidad: </label><br>
                                     <input class="box" type="number" name="qty" id="producto" min="0" value="<%= locals.old && old.qty ? old.qty : '' %>" >
-                                    <span>
+                                    <span class="error_msg">
                                         <%= locals.errors && errors.qty ? errors.qty.msg : null %>
                                     </span>
                                 </div>
@@ -73,7 +73,7 @@
                                     <div class="in-line-data">
                                         <label class="otros-materiales" for="otros-material">Otros materiales: </label><br>
                                         <input class="box-1" type="text" name="material[]" id="otros-material"
-                                            placeholder="Opcional">
+                                            placeholder="Opcional" value="">
                                     </div>
                                 </div>
                                 <span class="error_msg"><%=locals.errors && errors.material ? errors.material.msg : '' %></span>
@@ -95,7 +95,6 @@
                                 <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span>
 
                             </div>
-                            <span><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
                                 <label for="power">Potencia: </label>
                                 <% for(j=1;j<=4;j++){ %>

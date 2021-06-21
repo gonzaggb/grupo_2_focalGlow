@@ -13,6 +13,8 @@ const validateCreateForm = [
   body('optic').notEmpty().withMessage('Favor de seleccionar la óptica'),
   body('category').notEmpty().withMessage('Favor de seleccionar una categoría'),
   body('description').notEmpty().withMessage('Favor de incluir una descripción del producto'),
+  body('power').notEmpty().withMessage('Favor de incluir una potencia'),
+
 
   //Para las imagenes y pdf llamamos a una funcion auxiliadora
   body('main_image').custom((value, { req }) => {
