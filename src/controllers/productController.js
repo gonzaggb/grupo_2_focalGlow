@@ -18,7 +18,11 @@ const controller = {
     let id = req.params.id
     let productFound = product.findByPk(id)
     let category = productFound.category
-    let similarProducts = product.filterByCategory(category)
+    //Traigo todos los productos que están en la misma categoría
+    let productsCategory = product.filterByCategory(category)
+
+    //A los productos de la misma categoría le saco el que estoy viendo en detalle. Para que no me lo ponga como producto similar
+    let similarProducts = productsCategory.filter((e) => e.id != id)
     //utilizando una funcion auxiliar creo un array de numeros aleatorios con maximo 3 posiciones
     let indexArray = randomArray2(similarProducts.length, 3)
 
