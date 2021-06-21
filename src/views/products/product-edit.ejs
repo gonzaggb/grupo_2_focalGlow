@@ -129,6 +129,11 @@
                             <input class="price" type="number" name="price" id="precio" min="0"
                                 placeholder=" Ej 15235.35" value="<%=Number(productFound.price)%>" >
                         </div><br>
+                        <div class="description-container">
+                            <label class="title" for="description">Descripción del producto:</label><br> 
+                            <textarea class ="description" name="description" placeholder="Poné una descripción copada"><%=productFound.description%>"</textarea><br>
+                           
+                        </div>
                     </div>
                     <div class="form_right">
                         <div class="imagenes">
