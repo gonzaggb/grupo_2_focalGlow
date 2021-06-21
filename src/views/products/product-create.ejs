@@ -21,12 +21,13 @@
                                             <option value="<%=element.name%>"><%=element.name.charAt(0).toUpperCase() + element.name.slice(1)%></option>
                                         <% }) %>
                                      </select>
-                                     <span class="error_msg"><%= locals.errors && errors.category ? errors.category.msg : null  %></span>
+                                     
 
 
                                 </div>
                             </div>
-                            <span><%= locals.errors && errors.category ? errors.category.msg : null  %></span><br>
+                            <span class="error_msg"><%= locals.errors && errors.category ? errors.category.msg : null  %></span><br>
+                            
                             <div class="first">
                                 <div class="in-line-data">
                                     <label class="" for="name">Nombre del Producto: </label><br>
@@ -51,10 +52,9 @@
                                 </div>
                                 <div>
                                     <input class="radio" type="radio" name="source" value="Lampara" <%= (locals.old && old.source == 'Lampara') ? 'checked' : '' %>>Lampara
-                                </div>
-                                <span class="error_msg"><%=locals.errors && errors.source ? errors.source.msg : '' %></span>
-
-                            </div><br>
+                                </div>  
+                            </div>
+                            <span class="error_msg"><%=locals.errors && errors.source ? errors.source.msg : '' %></span><br>
                             <div>
                                 <div class="first-">
                                     <label class="" for="material">Material: </label>
@@ -70,14 +70,14 @@
                                     <div>
                                         <input class="check" type="checkbox" name="material[]" value="Hierro"<%= (locals.old && old.material && old.material.includes('Hierro')) ? 'checked' : '' %> > Hierro
                                     </div>
-                                    <div class="in-line-data">
-                                        <label class="otros-materiales" for="otros-material">Otros materiales: </label><br>
+                                    <div class="in-line-data"><br>
+                                        <label class="otros-materiales" for="otros-material">Otros materiales: </label>
                                         <input class="box-1" type="text" name="material[]" id="otros-material"
                                             placeholder="Opcional" value="">
                                     </div>
-                                </div>
-                                <span class="error_msg"><%=locals.errors && errors.material ? errors.material.msg : '' %></span>
-                            </div><br>
+                                </div>   
+                            </div>
+                            <span class="error_msg"><%=locals.errors && errors.material ? errors.material.msg : '' %></span><br>
                             <div class="first-">
                                 <label class="" for="optic">Optica: </label>
                                 <div>
@@ -92,9 +92,8 @@
                                 <div>
                                     <input class="check" type="checkbox" name="optic[]" value="Oval"<%= (locals.old && old.optic &&  old.optic.includes('Oval')) ? 'checked' : '' %>> Oval
                                 </div>
-                                <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span>
-
                             </div>
+                            <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
                                 <label for="power">Potencia: </label>
                                 <% for(j=1;j<=4;j++){ %>
@@ -106,10 +105,9 @@
                                             </option>
                                             <%}%>
                                     </select>
-                                    <%}%>
-                                    <span class="error_msg"><%=locals.errors && errors.power ? errors.power.msg : '' %></span>
-
-                            </div><br>
+                                    <%}%>        
+                            </div>
+                            <span class="error_msg"><%=locals.errors && errors.power ? errors.power.msg : '' %></span><br>
                             <div class="first-">
                                 <label class="" for="cct">CCT: </label>
                                 <div>
@@ -126,10 +124,9 @@
                                 
                                 <div>
                                     <input class="check" type="checkbox" name="cct[]" value="4000" <%= (locals.old && old.cct &&  (old.cct.includes(4000) || old.cct.includes('4000'))) ? 'checked' : '' %>>4000K
-                                </div>
-                                <span class="error_msg"><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span>
-                        
-                            </div><br>
+                                </div>                               
+                            </div>
+                            <span class="error_msg"><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span><br>
                             <div class="first-">
                                 <label class="" for="dim">Dim: </label>
                                 <div>
@@ -143,15 +140,15 @@
                                 </div>
                                 <div>
                                     <input class="check" type="checkbox" name="dim[]" value="Bluetooth" <%= (locals.old && old.dim && old.dim.includes('Bluetooth')) ? 'checked' : '' %>> Bluetooth
-                                </div>
-                                <span class="error_msg"><%=locals.errors && errors.dim ? errors.dim.msg : '' %></span>
-                            </div><br>
+                                </div>                                
+                            </div>
+                            <span class="error_msg"><%=locals.errors && errors.dim ? errors.dim.msg : '' %></span><br>
                             <div class="first-">
-                                <label class="price" for="price">Precio unitario base: </label><br>
+                                <label class="price" for="price">Precio unitario base: </label>
                                 <input class="price" type="number" name="price" id="precio" min="0" max="999999999999"
-                                    step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >
-                                    <span class="error_msg"><%=locals.errors && errors.price ? errors.price.msg : '' %></span>
-                            </div><br>
+                                    step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >                                   
+                            </div>
+                            <span class="error_msg"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>
                             <div class="description-container">
                                 <label class="title" for="description">Descripción del producto:</label><br> 
                                 <textarea class ="description" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>
@@ -164,7 +161,7 @@
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="title" for="main_image">Imagen Principal: </label><br>
-                                    <input type="file" name="main_image" onchange="loadFile(event)" accept=".jpg">
+                                    <input type="file" name="main_image" onchange="loadFile(event)" accept=".jpg"><br>
                                     <span class="error_msg"><%=locals.errors && errors.main_image ? errors.main_image.msg : '' %></span>
                                     <br>
                                     <p>Preview:</p>
@@ -181,32 +178,32 @@
                                 </div><br>
                                 <div class="imagen-input">
                                     <label class="title" for="image_dimension">Dimensiones del Producto: </label><br>
-                                    <input type="file" name="image_dimension" accept=".jpg , .png">
+                                    <input type="file" name="image_dimension" accept=".jpg , .png"><br>
                                     <span class="error_msg"><%=locals.errors && errors.image_dimension ? errors.image_dimension.msg : '' %></span>
                                 </div><br>
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="title" for="image_slider">Slider: </label><br>
-                                    <input type="file" name="image_slider_1" accept=".jpg , .png"> 
+                                    <input type="file" name="image_slider_1" accept=".jpg , .png"> <br>
                                     <span class="error_msg"><%=locals.errors && errors.image_slider_1? errors.image_slider_1.msg : '' %></span> <br>
-                                    <input type="file" name="image_slider_2" accept=".jpg , .png"> 
+                                    <input type="file" name="image_slider_2" accept=".jpg , .png"> <br>
                                     <span class="error_msg"><%=locals.errors && errors.image_slider_2? errors.image_slider_2.msg : '' %></span> <br>
-                                    <input type="file" name="image_slider_3" accept=".jpg , .png"> 
+                                    <input type="file" name="image_slider_3" accept=".jpg , .png"> <br>
                                     <span class="error_msg"><%=locals.errors && errors.image_slider_3? errors.image_slider_3.msg : '' %></span> <br>
                                 </div><br>
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="" for="data_sheet">Hoja Técnica: </label><br>
-                                    <input type="file" src="" alt="" name="data_sheet" accept=".pdf">
+                                    <input type="file" src="" alt="" name="data_sheet" accept=".pdf"><br>
                                     <span class="error_msg"><%=locals.errors && errors.data_sheet? errors.data_sheet.msg : '' %></span>
                                 </div>
                                 
                                 <br>
                                 <div class="imagen-input">
                                     <label class="" for="install_sheet">Manual de Instalación: </label><br>
-                                    <input type="file" src="" alt="" name="install_sheet" accept=".pdf">
+                                    <input type="file" src="" alt="" name="install_sheet" accept=".pdf"><br>
                                     <span class="error_msg"><%=locals.errors && errors.install_sheet? errors.install_sheet.msg : '' %></span>
                                 </div><br>
                             </div>
