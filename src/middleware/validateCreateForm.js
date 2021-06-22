@@ -15,7 +15,6 @@ const validateCreateForm = [
   body('description').notEmpty().withMessage('Favor de incluir una descripción del producto'),
   body('power').notEmpty().withMessage('Favor de incluir una potencia'),
 
-
   //Para las imagenes y pdf llamamos a una funcion auxiliadora
   body('main_image').custom((value, { req }) => {
     const { files } = req
@@ -29,21 +28,21 @@ const validateCreateForm = [
     return true
   }),
 
-  body('image_slider_1').custom((value, { req }) => {
+  body('image_slider1').custom((value, { req }) => {
     const { files } = req
-    checkFieldImage('image_slider_1', files)
+    checkFieldImage('image_slider1', files)
     return true
   }),
 
-  body('image_slider_2').custom((value, { req }) => {
+  body('image_slider2').custom((value, { req }) => {
     const { files } = req
-    checkFieldImage('image_slider_2', files)
+    checkFieldImage('image_slider2', files)
     return true
   }),
 
-  body('image_slider_3').custom((value, { req }) => {
+  body('image_slider3').custom((value, { req }) => {
     const { files } = req
-    checkFieldImage('image_slider_3', files)
+    checkFieldImage('image_slider3', files)
     return true
   }),
 

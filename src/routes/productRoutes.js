@@ -18,7 +18,6 @@ const storage = multer.diskStorage({
     }
   },
   filename: (req, file, cb) => {
-    
     cb(null, Date.now() + path.extname(file.originalname))
   },
 })
@@ -66,9 +65,9 @@ router.post(
     'image_dimension',
     'data_sheet',
     'install_sheet',
-    'image_slider_1',
-    'image_slider_2',
-    'image_slider_3'
+    'image_slider1',
+    'image_slider2',
+    'image_slider3'
   ),
   validateCreateForm,
   productController.create
@@ -84,9 +83,9 @@ router.put(
     'image_dimension',
     'data_sheet',
     'install_sheet',
-    'image_slider_1',
-    'image_slider_2',
-    'image_slider_3'
+    'image_slider1',
+    'image_slider2',
+    'image_slider3'
   ),
   validateEditForm,
   productController.update

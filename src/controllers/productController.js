@@ -8,6 +8,7 @@ const { randomArray2 } = require('../helpers/utilities')
 
 const fs = require('fs')
 const path = require('path')
+const { Console } = require('console')
 
 const controller = {
   list: (req, res) => {
@@ -17,6 +18,7 @@ const controller = {
   detail: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
+    console.log(productFound)
     let category = productFound.category
     //Traigo todos los productos que están en la misma categoría
     let productsCategory = product.filterByCategory(category)
@@ -59,8 +61,9 @@ const controller = {
     let id = req.params.id
     let productFound = product.findByPk(id)
     console.log(errors)
+    console.log('req.files:')
     console.log(req.files)
-    console.log(req.body.power)
+
     if (errors.isEmpty()) {
       let data = req.body
       let id = req.params.id
@@ -68,12 +71,12 @@ const controller = {
       let { files } = req
       data.image_slider = []
       data.main_image = productOriginal.main_image
-      data.image_slider_1 = productOriginal.image_slider_1
-      data.image_slider.push(productOriginal.image_slider_1)
-      data.image_slider_2 = productOriginal.image_slider_2
-      data.image_slider.push(productOriginal.image_slider_2)
-      data.image_slider_3 = productOriginal.image_slider_3
-      data.image_slider.push(productOriginal.image_slider_3)
+      data.image_slider1 = productOriginal.image_slider1
+      //data.image_slider.push(productOriginal.image_slider_1)
+      data.image_slider2 = productOriginal.image_slider2
+      // data.image_slider.push(productOriginal.image_slider_2)
+      data.image_slider3 = productOriginal.image_slider3
+      // data.image_slider.push(productOriginal.image_slider_3)
       data.data_sheet = productOriginal.data_sheet
       data.install_sheet = productOriginal.install_sheet
       data.image_dimension = productOriginal.image_dimension
@@ -87,17 +90,17 @@ const controller = {
           case 'main_image':
             data.main_image = '/img/' + files[i].filename
             break
-          case 'image_slider_1':
-            data.image_slider_1 = '/img/' + files[i].filename
-            data.image_slider[0] = data.image_slider_1
+          case 'image_slider1':
+            data.image_slider1 = '/img/' + files[i].filename
+            //data.image_slider[0] = data.image_slider_1
             break
-          case 'image_slider_2':
-            data.image_slider_2 = '/img/' + files[i].filename
-            data.image_slider[1] = data.image_slider_2
+          case 'image_slider2':
+            data.image_slider2 = '/img/' + files[i].filename
+            //data.image_slider[1] = data.image_slider_2
             break
-          case 'image_slider_3':
-            data.image_slider_3 = '/img/' + files[i].filename
-            data.image_slider[2] = data.image_slider_3
+          case 'image_slider3':
+            data.image_slider3 = '/img/' + files[i].filename
+            //data.image_slider[2] = data.image_slider_3
             break
           case 'data_sheet':
             data.data_sheet = '/pdf/' + files[i].filename
