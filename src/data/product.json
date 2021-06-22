@@ -9,7 +9,7 @@
     "optic": ["Flood", "Spot", "Wideflood"],
     "power": ["", "77", "88", "90"],
     "cct": ["3000", "3500", "4000"],
-    "dim": ["Switch", "Dimeable", "DALI"],
+    "dim": ["DALI", "Dimeable", "Switch"],
     "price": "50244",
     "description": "Duis bibendum, felis sed interdum venenatis, turpis enim blandit mi, in porttitor pede justo eu massa. Donec dapibus. Duis at velit eu est congue elementum.\r\n\r\nIn hac habitasse platea dictumst. Morbi vestibulum, velit id pretium iaculis, diam erat fermentum justo, nec condimentum neque sapien placerat ante. Nulla justo.\r\n\r\nAliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
     "ruta_producto": "/img/delfina.jpg",
@@ -18,8 +18,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf",
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf",
     "image_dimension": "/img/product_dimensions.jpg"
   },
   {
@@ -40,8 +40,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 3,
@@ -61,8 +61,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 4,
@@ -82,8 +82,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 5,
@@ -103,8 +103,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 6,
@@ -124,8 +124,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 7,
@@ -145,8 +145,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 8,
@@ -166,8 +166,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 9,
@@ -187,8 +187,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 10,
@@ -208,8 +208,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 11,
@@ -229,8 +229,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 12,
@@ -250,8 +250,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 13,
@@ -271,8 +271,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 14,
@@ -292,8 +292,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/coral.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 15,
@@ -313,8 +313,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 16,
@@ -334,8 +334,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 17,
@@ -355,8 +355,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 18,
@@ -376,8 +376,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 19,
@@ -397,8 +397,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 20,
@@ -418,8 +418,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/coral.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 21,
@@ -439,8 +439,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 22,
@@ -460,8 +460,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 23,
@@ -481,8 +481,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 24,
@@ -502,8 +502,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 25,
@@ -523,8 +523,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 26,
@@ -544,8 +544,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 27,
@@ -565,8 +565,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 28,
@@ -586,8 +586,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 29,
@@ -607,8 +607,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 30,
@@ -628,8 +628,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 31,
@@ -649,8 +649,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 32,
@@ -670,8 +670,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 33,
@@ -691,8 +691,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 34,
@@ -712,8 +712,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 35,
@@ -733,8 +733,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/coral.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 36,
@@ -754,8 +754,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 37,
@@ -775,8 +775,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 38,
@@ -796,8 +796,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 39,
@@ -817,8 +817,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 40,
@@ -838,8 +838,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 41,
@@ -859,8 +859,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 42,
@@ -880,8 +880,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/coral.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 43,
@@ -901,8 +901,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 44,
@@ -922,8 +922,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 45,
@@ -943,8 +943,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 46,
@@ -964,8 +964,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 47,
@@ -985,8 +985,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 48,
@@ -1006,8 +1006,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/coral.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 49,
@@ -1027,8 +1027,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 50,
@@ -1048,8 +1048,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 51,
@@ -1069,8 +1069,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 52,
@@ -1090,8 +1090,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 53,
@@ -1111,8 +1111,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 54,
@@ -1132,8 +1132,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 55,
@@ -1153,8 +1153,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 56,
@@ -1174,8 +1174,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 57,
@@ -1195,8 +1195,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 58,
@@ -1216,8 +1216,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 59,
@@ -1237,8 +1237,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 60,
@@ -1258,8 +1258,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 61,
@@ -1279,8 +1279,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 62,
@@ -1300,8 +1300,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 63,
@@ -1321,8 +1321,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 64,
@@ -1342,8 +1342,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 65,
@@ -1363,8 +1363,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 66,
@@ -1384,8 +1384,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 67,
@@ -1405,8 +1405,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/coral.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 68,
@@ -1426,8 +1426,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 69,
@@ -1447,8 +1447,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 70,
@@ -1468,8 +1468,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 71,
@@ -1489,8 +1489,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 72,
@@ -1510,8 +1510,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 73,
@@ -1531,8 +1531,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 74,
@@ -1552,8 +1552,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 75,
@@ -1573,8 +1573,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 76,
@@ -1594,8 +1594,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 77,
@@ -1615,8 +1615,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 78,
@@ -1636,8 +1636,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 79,
@@ -1657,8 +1657,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 80,
@@ -1678,8 +1678,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 81,
@@ -1699,8 +1699,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 82,
@@ -1720,8 +1720,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 83,
@@ -1741,8 +1741,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 84,
@@ -1762,8 +1762,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 85,
@@ -1783,8 +1783,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 86,
@@ -1804,8 +1804,8 @@
     "image_slider1": "/img/delfina.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/coral.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 87,
@@ -1825,8 +1825,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 88,
@@ -1846,8 +1846,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 89,
@@ -1867,8 +1867,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/coral.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 90,
@@ -1888,8 +1888,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/bon-jour.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 91,
@@ -1909,8 +1909,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 92,
@@ -1930,8 +1930,8 @@
     "image_slider1": "/img/slider_2.jpg",
     "image_slider2": "/img/slider_2.jpg",
     "image_slider3": "/img/slider_2.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 93,
@@ -1951,8 +1951,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 94,
@@ -1972,8 +1972,8 @@
     "image_slider1": "/img/product_main.jpg",
     "image_slider2": "/img/product_main.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 95,
@@ -1993,8 +1993,8 @@
     "image_slider1": "/img/slider_1.jpg",
     "image_slider2": "/img/slider_3.jpg",
     "image_slider3": "/img/slider_3.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 96,
@@ -2014,8 +2014,8 @@
     "image_slider1": "/img/bon-jour.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 97,
@@ -2035,8 +2035,8 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/bon-jour.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 98,
@@ -2056,8 +2056,8 @@
     "image_slider1": "/img/slider_3.jpg",
     "image_slider2": "/img/coral.jpg",
     "image_slider3": "/img/slider_1.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 99,
@@ -2077,28 +2077,30 @@
     "image_slider1": "/img/coral.jpg",
     "image_slider2": "/img/slider_1.jpg",
     "image_slider3": "/img/product_main.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf"
   },
   {
     "id": 100,
-    "name": "Flamingo, roseat",
     "category": "Colgantes",
-    "qty": 71,
+    "name": "Flamingo, roseat   ",
+    "qty": "71",
     "source": "LED",
-    "material": ["Hierro", "Madera"],
-    "optic": ["Flood", "Ovalflood", "Spot"],
-    "power": [12, 18, 58, 86],
-    "cct": [2700, 3000, 3500, 4000],
-    "dim": ["Bluetooth", "DALI", "Dimeable", "Switch"],
-    "price": 17339,
-    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\n\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\n\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
-    "main_image": "/img/coral.jpg",
-    "image_dimension": "/img/product_dimensions.jpg",
-    "image_slider1": "/img/slider_2.jpg",
+    "material": ["Madera"],
+    "optic": ["Flood", "Spot"],
+    "power": ["12", "18", "58", "86"],
+    "cct": ["2700", "3000", "4000"],
+    "dim": ["Switch", "Dimeable"],
+    "price": "17339",
+    "description": "Curabitur gravida nisi at nibh. In hac habitasse platea dictumst. Aliquam augue quam, sollicitudin vitae, consectetuer eget, rutrum at, lorem.\r\n\r\nInteger tincidunt ante vel ipsum. Praesent blandit lacinia erat. Vestibulum sed magna at nunc commodo placerat.\r\n\r\nPraesent blandit. Nam nulla. Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede.",
+    "ruta_producto": "/img/1624320542213.jpg",
+    "image_slider": [],
+    "main_image": "/img/1624320542213.jpg",
+    "image_slider1": "/img/1624320552945.jpg",
     "image_slider2": "/img/delfina.jpg",
     "image_slider3": "/img/delfina.jpg",
-    "data_sheet": "pdf/data-sheet-sample.pdf",
-    "install_sheet": "pdf/install-sheet-sample.pdf"
+    "data_sheet": "/pdf/data-sheet-sample.pdf",
+    "install_sheet": "/pdf/install-sheet-sample.pdf",
+    "image_dimension": "/img/product_dimensions.jpg"
   }
 ]
