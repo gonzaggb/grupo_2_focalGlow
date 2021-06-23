@@ -34,6 +34,15 @@ module.exports = {
     findAll() {
         return this.readFile()
     },
+    findByField(field, value) {
+        const users = this.readFile();
+        // Filtrar por el [field]
+
+        // [] los usamos para que sea dinámica el nombre de la propiedad
+        const userFound = users.find(user => user[field] == value);
+        // Devolvemos el user
+        return userFound;
+    },
 
     //busca si existe el usuario por mail
     findUser(user) {

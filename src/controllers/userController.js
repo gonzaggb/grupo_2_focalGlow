@@ -45,15 +45,14 @@ const controller = {
 
   //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
   loginUser: (req, res) => {
-    const session = req.body
-    const userStatus = user.validateUser(session) //valido el usuario
-    if (userStatus == 'Acceso concedido') {
+    const formValidation = validationResult(req)
+    const oldValues = req.body
 
-      res.redirect('/product/list')
-    } else {
-
-      res.render('users/login.ejs', { userStatus })
+    if (!formValidation.isEmpty()) {
+      return res.render('users/login', { oldValues, errors: formValidation.mapped() })
     }
+    res.redirect('/users')
+    
   },
   list: (req, res) => {
     const userList = user.findAll();

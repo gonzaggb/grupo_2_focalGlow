@@ -20,6 +20,8 @@
                         <br>
                         <input class="input-login" type="email" name="email" id="email">
                         <br>
+                        <span class="error-data"><%=locals.errors && errors.email ? errors.email.msg : '' %></span>
+                        <br>
                         <label for="password">Contraseña</label>
                         <br>
                         <input class="input-login" type="password" name="password" id=password>
@@ -38,7 +40,7 @@
                         <span><a href="#">Olvide mi contraseña</a></span>
                         <br>
 
-                        <span class="error-data"><%=userStatus%></span>
+                        <span class="error-data"><%=locals.errors && errors.password ? errors.password.msg : '' %></span>
 
                     </div>
 

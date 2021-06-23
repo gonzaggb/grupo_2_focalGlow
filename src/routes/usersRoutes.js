@@ -6,6 +6,8 @@ const multer = require('multer')
 const path = require('path')
 const validations = require('../middleware/validationNewUser')
 const files = require('../helpers/files')
+//validacion de login
+const validationLogin = require('../middleware/validateLogin')
 
 
 var storage = multer.diskStorage({
@@ -42,7 +44,7 @@ var upload = multer({ storage, fileFilter })
 //envia al usuario a la pagina de logueo
 router.get('/login', userController.login)
 //envia los datos de la pagina de logueo al controlador
-router.post('/login', userController.loginUser)
+router.post('/login', validationLogin, userController.loginUser)
 
 //envia al usuario a la pagina de registro
 router.get('/registro', userController.newUser)
