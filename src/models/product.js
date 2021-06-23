@@ -56,18 +56,18 @@ module.exports = {
         case 'main_image':
           product.main_image = '/img/' + files[i].filename
           break
-        case 'image_slider_1':
-          product.image_slider_1 = '/img/' + files[i].filename
-          product.image_slider.push(product.image_slider_1)
+        case 'image_slider1':
+          product.image_slider1 = '/img/' + files[i].filename
+          product.image_slider.push(product.image_slider1)
           break
-        case 'image_slider_2':
-          product.image_slider_2 = '/img/' + files[i].filename
-          product.image_slider.push(product.image_slider_2)
+        case 'image_slider2':
+          product.image_slider2 = '/img/' + files[i].filename
+          product.image_slider.push(product.image_slider2)
 
           break
-        case 'image_slider_3':
-          product.image_slider_3 = '/img/' + files[i].filename
-          product.image_slider.push(product.image_slider_3)
+        case 'image_slider3':
+          product.image_slider3 = '/img/' + files[i].filename
+          product.image_slider.push(product.image_slider3)
 
           break
         case 'image_dimension':

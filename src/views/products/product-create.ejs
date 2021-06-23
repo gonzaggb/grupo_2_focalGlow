@@ -48,10 +48,10 @@
                                 <label class="" for="source">Fuente: </label>
 
                                 <div>
-                                    <input class="radio" type="radio" name="source" value="led" <%= (locals.old && old.source == 'led') ? 'checked' : '' %>>LED Incorporado
+                                    <input class="radio" type="radio" name="source" value="LED" <%= (locals.old && old.source == 'LED') ? 'checked' : '' %>>LED Incorporado
                                 </div>
                                 <div>
-                                    <input class="radio" type="radio" name="source" value="Lampara" <%= (locals.old && old.source == 'Lampara') ? 'checked' : '' %>>Lampara
+                                    <input class="radio" type="radio" name="source" value="Lámpara" <%= (locals.old && old.source == 'Lámpara') ? 'checked' : '' %>>Lámpara
                                 </div>  
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.source ? errors.source.msg : '' %></span><br>
@@ -83,7 +83,7 @@
                                     <input class="check" type="checkbox" name="optic[]" value="Spot"<%= (locals.old && old.optic &&  old.optic.includes('Spot')) ? 'checked' : '' %>> Spot
                                 </div>
                                 <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Wideflood"<%= (locals.old && old.optic &&  old.optic.includes('Wideflood')) ? 'checked' : '' %>> Wide Flood
+                                    <input class="check" type="checkbox" name="optic[]" value="Wideflood"<%= (locals.old && old.optic &&  old.optic.includes('Wideflood')) ? 'checked' : '' %>> Wideflood
                                 </div>
                                 <div>
                                     <input class="check" type="checkbox" name="optic[]" value="Ovalflood"<%= (locals.old && old.optic &&  old.optic.includes('Ovalflood')) ? 'checked' : '' %>> Ovalflood
@@ -181,12 +181,12 @@
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="title" for="image_slider">Slider: </label><br>
-                                    <input type="file" name="image_slider_1" accept=".jpg , .png"> <br>
-                                    <span class="error_msg"><%=locals.errors && errors.image_slider_1? errors.image_slider_1.msg : '' %></span> <br>
-                                    <input type="file" name="image_slider_2" accept=".jpg , .png"> <br>
-                                    <span class="error_msg"><%=locals.errors && errors.image_slider_2? errors.image_slider_2.msg : '' %></span> <br>
-                                    <input type="file" name="image_slider_3" accept=".jpg , .png"> <br>
-                                    <span class="error_msg"><%=locals.errors && errors.image_slider_3? errors.image_slider_3.msg : '' %></span> <br>
+                                    <input type="file" name="image_slider1" accept=".jpg , .png"> <br>
+                                    <span class="error_msg"><%=locals.errors && errors.image_slider1? errors.image_slider1.msg : '' %></span> <br>
+                                    <input type="file" name="image_slider2" accept=".jpg , .png"> <br>
+                                    <span class="error_msg"><%=locals.errors && errors.image_slider2? errors.image_slider2.msg : '' %></span> <br>
+                                    <input type="file" name="image_slider3" accept=".jpg , .png"> <br>
+                                    <span class="error_msg"><%=locals.errors && errors.image_slider3? errors.image_slider3.msg : '' %></span> <br>
                                 </div><br>
                             </div>
                             <div class="imagenes">
