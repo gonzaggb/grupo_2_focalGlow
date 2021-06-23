@@ -806,5 +806,13 @@
     "password": "123456",
     "profileImg": "/img/profile-pictures/1624310871330.png",
     "id": 101
+  },
+  {
+    "first_name": "cosme",
+    "last_name": "fulanito",
+    "email": "hola@hola.com",
+    "password": "$2a$10$NLKfGRWfRx8x5A.65YHJRev/VNZ1huYeoiVt/3Ts4aKX.JswauCIy",
+    "profileImg": "/img/profile-pictures/1624411788805.jpg",
+    "id": 102
   }
 ]

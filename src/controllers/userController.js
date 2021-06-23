@@ -2,6 +2,7 @@ const user = require('../models/user')
 const { validationResult } = require('express-validator')
 const { isFileImage } = require('../helpers/files')
 const fs = require('fs')
+const bcrypt = require('bcryptjs')
 
 
 const controller = {
@@ -34,10 +35,10 @@ const controller = {
       first_name,
       last_name,
       email,
-      password,
+      password : bcrypt.hashSync(password , 10),
       profileImg: '/img/profile-pictures/' + req.file.filename
     }
-
+    
     user.create(newUser)
     res.redirect('/')
   },
