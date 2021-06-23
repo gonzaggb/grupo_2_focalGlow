@@ -6,6 +6,10 @@ const path = require('path') //requiere el modulo nativo path de node
 publicPath = path.join(__dirname, '../public')
 app.use(express.static(publicPath))
 
+//requerimos y usamos express-session
+const session = require('express-session')
+app.use(session({secret:'shhhhh'}))
+
 /*Configuracion del template engine*/
 app.set('views', path.join(__dirname, 'views')) // indica al template engine donde buscar las vistas//
 app.set('view engine', 'ejs')
