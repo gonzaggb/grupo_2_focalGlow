@@ -822,5 +822,13 @@
     "password": "$2a$10$AJXWvLFKmlg9noXKVqc42eWROelLfWacojPNdOwyHi4tLfVOEav.e",
     "profileImg": "/img/profile-pictures/1624412692226.jpg",
     "id": 103
+  },
+  {
+    "first_name": "Pablo",
+    "last_name": "Armando",
+    "email": "pabloar24.7@gmail.com",
+    "password": "$2a$10$5yVIO49lna1XbqSn688xMOpGWKRB96dYle24tCW60ZDexeOSjEEO2",
+    "profileImg": "/img/profile-pictures/1624452291470.png",
+    "id": 104
   }
 ]
