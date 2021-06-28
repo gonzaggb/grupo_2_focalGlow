@@ -1,5 +1,9 @@
 # Focal Glow
 
+SPRINT 4:
+ATENCIÓN: Al borrar un producto se borran las imágenes del mismo.
+Como es un sample, varios productos pierden su imagen.
+
 ![kes_sey__15_](https://user-images.githubusercontent.com/81274078/116142254-10213a00-a6b0-11eb-95e3-36ea919f33c3.png)
 
 # Digital House - Proyecto Integrador Fullstack Developer
