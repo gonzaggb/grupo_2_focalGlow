@@ -117,7 +117,7 @@ const controller = {
         }
       }
       product.update(data, id)
-      res.redirect('/product/list')
+      res.redirect('/product/')
     } else {
       res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound: productFound })
     }
@@ -125,8 +125,9 @@ const controller = {
 
   delete: (req, res) => {
     let id = req.params.id
-    res.redirect('/product/list')
     product.delete(id)
+    res.redirect('/product/')
+    
   },
 }
 

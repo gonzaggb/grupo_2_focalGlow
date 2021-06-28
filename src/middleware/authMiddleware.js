@@ -3,6 +3,7 @@ module.exports = (req, res, next) => {
     if (!userSession) {
         console.log('aca estoy')
         res.redirect('/users/login')
+        return
     }
     next()
 }

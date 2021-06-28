@@ -12,8 +12,8 @@ const { validateCreateForm } = require('../middleware/validateCreateForm')
 const { validateEditForm } = require('../middleware/validateEditForm')
 //authMiddleware
 const authMiddleware = require('../middleware/authMiddleware')
-// guestMiddleware
-const guestMiddleware = require('../middleware/guestMiddleware')
+/* // guestMiddleware
+const guestMiddleware = require('../middleware/guestMiddleware') */
 
 
 //aplicacion de multer
@@ -58,7 +58,7 @@ const upload = multer({ storage, fileFilter })
 
 
 //Asigno a cada ruta la propiedad del controlador
-
+router.get('/',authMiddleware, productController.list)
 //View
 router.delete('/:id', authMiddleware, productController.delete)
 router.get('/detail/:id', productController.detail)
@@ -97,7 +97,7 @@ router.put(
   validateEditForm,
   productController.update
 )
-router.get('/',authMiddleware, productController.list)
+
 //Delete
 
 
