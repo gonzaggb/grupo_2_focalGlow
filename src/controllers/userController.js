@@ -21,9 +21,12 @@ const controller = {
     if (!formValidation.isEmpty()) {
       return res.render('users/login', { oldValues, errors: formValidation.mapped() })
     }
-    const {email} = req.body
+    const {email,remember} = req.body
     const user = usersModel.findByField('email', email)
     req.session.logged = user.id
+     if (remember){
+       res.cookie ('userId',user.id ,{maxAge : 6000000, signed:true})
+     }
     // tiene que mandar al profile del usuario
     res.redirect('/users')
     

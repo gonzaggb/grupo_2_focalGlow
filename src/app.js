@@ -11,11 +11,14 @@ const session = require('express-session')
 app.use(session({secret:'shhhhh'}))
 //requerimos  e implementamos  cookie-parser
 const cookieParser = require('cookie-parser')
-app.use(cookieParser())
-
+app.use(cookieParser('secreto'))
+// requerimos e implementamos cookiesessionMiddleware
+const cookieSession  = require('./middleware/cookieSessionMiddleware')
+app.use(cookieSession)
 //implementamos middleware de sessionToLocal
 const sessionToLocal = require('./middleware/sessionToLocal')
 app.use(sessionToLocal)
+
 
 
 /*Configuracion del template engine*/
