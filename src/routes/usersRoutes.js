@@ -8,6 +8,10 @@ const validations = require('../middleware/validationNewUser')
 const files = require('../helpers/files')
 //validacion de login
 const validationLogin = require('../middleware/validateLogin')
+// guestMiddleware
+const guestMiddleware = require('../middleware/guestMiddleware')
+//authMiddleware
+const authMiddleware = require('../middleware/authMiddleware')
 
 
 var storage = multer.diskStorage({
@@ -42,7 +46,7 @@ const fileFilter = (req, file, cb) => {
 var upload = multer({ storage, fileFilter })
 
 //envia al usuario a la pagina de logueo
-router.get('/login', userController.login)
+router.get('/login',guestMiddleware, userController.login)
 //envia los datos de la pagina de logueo al controlador
 router.post('/login', validationLogin, userController.loginUser)
 
@@ -53,6 +57,9 @@ router.post('/registro', upload.single('profileImg'), validations, userControlle
 
 //envia al usuario admin al listado de usuarios
 router.get('/', userController.list) // la barra sola equivale a /users porque del app.js vengo con /users
+
+// ruta de profile
+router.get('/profile', authMiddleware,userController.profile)
 
 //elimina usuario de la lista
 router.get('/:id/edit', userController.edit)

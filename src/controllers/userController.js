@@ -98,6 +98,9 @@ const controller = {
 
     user.update(userUpdate, id)
     res.redirect("/users")
+  },
+  profile : ( req,res) =>{
+    res.render('users/profile.ejs')
   }
 }
 

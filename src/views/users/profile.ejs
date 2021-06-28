@@ -1,0 +1,60 @@
+<!-- Partial head -->
+<%- include('../partials/head.ejs')%>
+    <title>Login | Focal Glow</title>
+    <link rel="stylesheet" href="/css/styles-user-list.css">
+
+
+
+
+    </head>
+    <script>
+        function cambiar() {
+            var pdrs = document.getElementById('file-upload').files[0].name;
+            document.getElementById('info').innerHTML = pdrs;
+        }
+    </script>
+
+    <body>
+        <%- include('../partials/header.ejs')%>
+            <form class="registry-form2" method="POST" action="/users/<%=locals.user.id%>/edit?_method=PUT"
+                enctype="multipart/form-data">
+
+                <div class="registry-container2">
+                    <div class="user-container">
+                        <label for="file-upload" class="subir">
+                            <img class="img-redonda" for="profileImg"
+                                src="<%=locals.user.profileImg ? locals.user.profileImg : '/img/profile-pictures/profile.jpg' %>"><br>
+                        </label>
+
+
+                        <label for="id">ID</label>
+                        <input class="input-login" type="text" name="id" id="id" value=<%=locals.user.id%>><br>
+                        <label for="first_name">Nombre</label>
+                        <input class="input-login" type="text" name="first_name" id="first_name"
+                            value="<%=locals.user.first_name%>" required><br>
+                        <label for="last_name">Apellido</label>
+                        <input class="input-login" type="text" name="last_name" id="last_name"
+                            value="<%=locals.user.last_name%>" required><br>
+                        <label for="email">Email</label>
+                        <input class="input-login" type="email" name="email" id="email" value="<%=locals.user.email%>"
+                            required><br>
+                        <label for="password">Contraseña</label>
+                        <input class="input-login" type="password" name="password" id="password"
+                            value="<%=locals.user.password%>" required><br>
+                    </div>
+
+                </div>
+                <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
+                <div class="button-container">
+                    <div class="button-container">
+                        <button type="submit" class="edit-button">Editar</button>
+
+                    </div>
+                    </section>
+            </form>
+            <form action="/users/<%=locals.user.id%>?_method=DELETE" method="POST">
+                <button type="submit"><i class="far fa-trash-alt"></i></button>
+            </form>
+    </body>
+
+    </html>
