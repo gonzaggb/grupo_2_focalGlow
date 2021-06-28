@@ -3,14 +3,30 @@ const { validationResult } = require('express-validator')
 const { isFileImage } = require('../helpers/files')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
+const usersModel = require ('../models/user')
 
 
 const controller = {
   //envia al usuario a la pagina de login
   login: (req, res) => {
-    const userStatus = ''
-    res.render('users/login.ejs', { userStatus })
+    
+    res.render('users/login.ejs')
 
+  },
+  //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
+  loginUser: (req, res) => {
+    const formValidation = validationResult(req)
+    const oldValues = req.body
+
+    if (!formValidation.isEmpty()) {
+      return res.render('users/login', { oldValues, errors: formValidation.mapped() })
+    }
+    const {email} = req.body
+    const user = usersModel.findByField('email', email)
+    req.session.logged = user.id
+    // tiene que mandar al profile del usuario
+    res.redirect('/users')
+    
   },
   //envia al usuario a la pagina de registro
   newUser: (req, res) => {
@@ -43,17 +59,7 @@ const controller = {
     res.redirect('/')
   },
 
-  //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
-  loginUser: (req, res) => {
-    const formValidation = validationResult(req)
-    const oldValues = req.body
 
-    if (!formValidation.isEmpty()) {
-      return res.render('users/login', { oldValues, errors: formValidation.mapped() })
-    }
-    res.redirect('/users')
-    
-  },
   list: (req, res) => {
     const userList = user.findAll();
     res.render('users/usersList.ejs', { userList })
