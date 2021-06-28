@@ -131,10 +131,9 @@ header a{
     position: absolute;
     text-align: center;
     left: 55%;
-    bottom: 130px;
+    bottom: 100px;
     display: flex;
     align-items: center;
-    color: #ffde59;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }

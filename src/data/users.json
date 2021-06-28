@@ -830,5 +830,13 @@
     "password": "$2a$10$5yVIO49lna1XbqSn688xMOpGWKRB96dYle24tCW60ZDexeOSjEEO2",
     "profileImg": "/img/profile-pictures/1624452291470.png",
     "id": 104
+  },
+  {
+    "first_name": "Pablito",
+    "last_name": "UnClavito ",
+    "email": "pablo@pablo.com",
+    "password": "$2a$10$acpGUZPmc3L9p1OPvrp8aOY8SVK7O6lkUrBfLbExYvw2mrIIw3TOy",
+    "profileImg": "/img/profile-pictures/1624904135689.jpg",
+    "id": 105
   }
 ]
