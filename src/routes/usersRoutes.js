@@ -56,7 +56,7 @@ router.get('/registro', userController.newUser)
 router.post('/registro', upload.single('profileImg'), validations, userController.create)
 
 //envia al usuario admin al listado de usuarios
-router.get('/', userController.list) // la barra sola equivale a /users porque del app.js vengo con /users
+router.get('/', authMiddleware, userController.list) // la barra sola equivale a /users porque del app.js vengo con /users
 
 // ruta de profile
 router.get('/profile', authMiddleware,userController.profile)

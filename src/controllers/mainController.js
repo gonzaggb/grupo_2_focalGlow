@@ -10,7 +10,7 @@ const SALEIMAGES = 4 // cantidad de imagenes que se muestran en la parte de SALE
 const controller = {
   home: (req, res) => {
     const randomArray = random.randomArray(SALEIMAGES, agregarProducto.findAll().length)
-    
+    console.log('pase por aca')
     let products = agregarProducto.findAll()
     let categoryList = categories.findAll()
     let homeData = { products, categoryList }

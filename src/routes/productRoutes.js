@@ -1,6 +1,8 @@
 //Requiero express y ejecuto la propiedad Router()
 const express = require('express')
 const router = express.Router()
+//requiero el controlador de main
+const productController = require('../controllers/productController')
 //requerir multer
 const multer = require('multer')
 //requerir path
@@ -8,6 +10,12 @@ const path = require('path')
 //requerir express-validator
 const { validateCreateForm } = require('../middleware/validateCreateForm')
 const { validateEditForm } = require('../middleware/validateEditForm')
+//authMiddleware
+const authMiddleware = require('../middleware/authMiddleware')
+// guestMiddleware
+const guestMiddleware = require('../middleware/guestMiddleware')
+
+
 //aplicacion de multer
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -47,17 +55,16 @@ const fileFilter = (req, file, cb) => {
 }
 const upload = multer({ storage, fileFilter })
 
-//requiero el controlador de main
-const productController = require('../controllers/productController')
+
 
 //Asigno a cada ruta la propiedad del controlador
 
 //View
-router.get('/list', productController.list)
+router.delete('/:id', authMiddleware, productController.delete)
 router.get('/detail/:id', productController.detail)
 
 //Create
-router.get('/add', productController.formNew) //formulario de creacion de producto
+router.get('/add', authMiddleware, productController.formNew) //formulario de creacion de producto
 router.post(
   '/add',
   upload.any(
@@ -75,7 +82,7 @@ router.post(
 // a donde va el producto creado
 
 //Update
-router.get('/:id/edit', productController.edit) //formulario de edicion de producto
+router.get('/:id/edit', authMiddleware, productController.edit) //formulario de edicion de producto
 router.put(
   '/:id/edit',
   upload.any(
@@ -90,8 +97,8 @@ router.put(
   validateEditForm,
   productController.update
 )
-
+router.get('/',authMiddleware, productController.list)
 //Delete
-router.delete('/:id', productController.delete)
+
 
 module.exports = router
