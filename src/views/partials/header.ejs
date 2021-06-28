@@ -32,13 +32,15 @@
         </li>
         <li><a href="/us">Nosotros</a></li>
         <li>
-          <a href="#">Usuario</a>
+          <a href="#"><%= locals.user? locals.user.first_name : 'Usuario'%></a>
           <ul class="desplegable">
+            <% if (locals.user) { %>
+                <li><a href="/product/list">Product list </a></li>
+                <li><a href="/users">User list </a></li>
+            <% } else { %> 
             <li><a href="/users/login">Iniciar Sesión</a></li>
             <li><a href="/users/registro">Registrate</a></li>
-            <li><a href="/product/list">Product list </a></li>
-            <li><a href="/users">User list </a></li>
-
+            <% } %>
           </ul>
         </li>
         <li>

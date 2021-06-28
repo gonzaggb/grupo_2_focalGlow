@@ -9,6 +9,14 @@ app.use(express.static(publicPath))
 //requerimos y usamos express-session
 const session = require('express-session')
 app.use(session({secret:'shhhhh'}))
+//requerimos  e implementamos  cookie-parser
+const cookieParser = require('cookie-parser')
+app.use(cookieParser())
+
+//implementamos middleware de sessionToLocal
+const sessionToLocal = require('./middleware/sessionToLocal')
+app.use(sessionToLocal)
+
 
 /*Configuracion del template engine*/
 app.set('views', path.join(__dirname, 'views')) // indica al template engine donde buscar las vistas//
@@ -34,6 +42,7 @@ const mainRoutes = require('./routes/mainRoutes')
 const categoryRoutes = require('./routes/categoryRoutes')
 const productRoutes = require('./routes/productRoutes')
 const userRoutes = require('./routes/usersRoutes')
+
 
 //Rutas
 app.use('/', mainRoutes)
