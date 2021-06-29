@@ -101,6 +101,11 @@ const controller = {
   },
   profile : ( req,res) =>{
     res.render('users/profile.ejs')
+  },
+  logout : (req,res) =>{
+    req.session.destroy()
+    res.clearCookie('userId')
+    res.redirect('/')
   }
 }
 

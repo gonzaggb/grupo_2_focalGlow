@@ -12,6 +12,7 @@ const validationLogin = require('../middleware/validateLogin')
 const guestMiddleware = require('../middleware/guestMiddleware')
 //authMiddleware
 const authMiddleware = require('../middleware/authMiddleware')
+const { Router } = require('express')
 
 
 var storage = multer.diskStorage({
@@ -65,6 +66,8 @@ router.get('/profile', authMiddleware,userController.profile)
 router.get('/:id/edit', userController.edit)
 router.delete('/:id', userController.delete)
 router.put('/:id/edit',upload.single('profileImg'), userController.update)
+//ruta de deslogueo
+router.get('/logout', authMiddleware, userController.logout )
 
 
 module.exports = router
