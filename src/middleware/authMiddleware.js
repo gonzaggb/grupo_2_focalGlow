@@ -1,9 +1,8 @@
 module.exports = (req, res, next) => {
     const userSession = req.session.logged
+    //valida que no exista sesion
     if (!userSession) {
-        console.log('aca estoy')
-        res.redirect('/users/login')
-        return
+        return res.redirect('/users/login')        
     }
     next()
 }

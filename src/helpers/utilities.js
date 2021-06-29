@@ -3,7 +3,6 @@ function getRandomInt(min, max) {
 }
 
 function randomArray(arrayLength, max) {
-  console.log(`el arrayLength es ${arrayLength}`)
   const randomArray = [getRandomInt(0, max)] //defino un array random
   while (randomArray.length < arrayLength) {
     const randomNumber = getRandomInt(0, max) // defino el numero random a evaluar

@@ -27,8 +27,14 @@ const controller = {
     if (remember) {
       res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
     }
-    // tiene que mandar al profile del usuario
-    res.redirect('/users')
+    console.log(user)
+
+    //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
+    if (user.category == 'admin') {
+      res.redirect('/product')
+    } else {
+      res.redirect('/users/profile')
+    }
 
   },
   //envia al usuario a la pagina de registro
@@ -55,7 +61,8 @@ const controller = {
       last_name,
       email,
       password: bcrypt.hashSync(password, 10),
-      profileImg: '/img/profile-pictures/' + req.file.filename
+      profileImg: '/img/profile-pictures/' + req.file.filename,
+      category: 'normal'
     }
 
     user.create(newUser)
@@ -105,8 +112,14 @@ const controller = {
   profileId: (req, res) => {
     const id = req.params.id
     const userToView = user.findByPk(id)
-    res.render('users/profile.ejs', { userToView })
+    res.render('users/profile.ejs', { userToView }),
+  },
+  logout: (req, res) => {
+    req.session.destroy()
+    res.clearCookie('userId')
+    res.redirect('/')
   }
+
 }
 
 module.exports = controller
