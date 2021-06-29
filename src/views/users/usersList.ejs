@@ -18,6 +18,7 @@
                         <th class ="left">Apellido</th>
                         <th class ="left">Mail</th>
                         <th class="profile center">Imagen de Perfil</th>
+                        <th class="center">Ver</th>
                         <th class="center">Editar</th>
                         <th class ="center">Borrar</th>
                     </tr>
@@ -39,6 +40,9 @@
                                 <img class = "img-round" src=
                                 <%=e.profileImg ? e.profileImg : '/img/profile-pictures/profile.jpg'%>>
                                  
+                            </td>
+                            <td class="center"> 
+                                <a href="/users/<%=e.id%>/detail"><i class="fas fa-search"></i></a>
                             </td>
                             <td class="center"> 
                                 <a href="/users/<%=e.id%>/edit"><i class="far fa-edit"></i></a>

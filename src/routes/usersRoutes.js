@@ -29,7 +29,7 @@ var storage = multer.diskStorage({
 })
 
 const fileFilter = (req, file, cb) => {
-    
+
     if (!files.isFileImage(file.originalname)) { //evalua que el archivo sea una imagen
         req.file = file
         cb(null, false)
@@ -46,7 +46,7 @@ const fileFilter = (req, file, cb) => {
 var upload = multer({ storage, fileFilter })
 
 //envia al usuario a la pagina de logueo
-router.get('/login',guestMiddleware, userController.login)
+router.get('/login', guestMiddleware, userController.login)
 //envia los datos de la pagina de logueo al controlador
 router.post('/login', validationLogin, userController.loginUser)
 
@@ -59,12 +59,13 @@ router.post('/registro', upload.single('profileImg'), validations, userControlle
 router.get('/', authMiddleware, userController.list) // la barra sola equivale a /users porque del app.js vengo con /users
 
 // ruta de profile
-router.get('/profile', authMiddleware,userController.profile)
+router.get('/:id/detail', userController.profile)
+router.get('/profile', authMiddleware, userController.profileId)
 
 //elimina usuario de la lista
 router.get('/:id/edit', userController.edit)
 router.delete('/:id', userController.delete)
-router.put('/:id/edit',upload.single('profileImg'), userController.update)
+router.put('/:id/edit', upload.single('profileImg'), userController.update)
 
 
 module.exports = router
