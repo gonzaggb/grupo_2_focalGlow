@@ -62,6 +62,8 @@ const controller = {
       email,
       password: bcrypt.hashSync(password, 10),
       profileImg: '/img/profile-pictures/' + req.file.filename,
+      address,
+      phone,
       category: 'normal'
     }
 
@@ -85,6 +87,16 @@ const controller = {
     const userToEdit = user.findByPk(id)
     res.render('users/user-edit.ejs', { userToEdit })
   },
+
+  editProfile: (req, res) => {
+    const id = res.locals.user.id
+    const userToEdit = user.findByPk(id)
+    res.render('users/user-edit.ejs', { userToEdit })
+  },
+
+
+
+
   update: (req, res) => {
 
     const { first_name, last_name, email, password } = req.body
@@ -95,7 +107,9 @@ const controller = {
       first_name,
       last_name,
       email,
-      password
+      password,
+      address,
+      phone
     }
     if (!file) {
       userUpdate.profileImg = profileImg
@@ -107,13 +121,17 @@ const controller = {
     res.redirect("/users")
   },
   profile: (req, res) => {
-    res.render('users/profile.ejs')
+    const id = res.locals.user.id
+    const userToView = user.findByPk(id)
+    res.render('users/profile.ejs', { userToView })
   },
+
   profileId: (req, res) => {
     const id = req.params.id
     const userToView = user.findByPk(id)
-    res.render('users/profile.ejs', { userToView }),
+    res.render('users/profile.ejs', { userToView })
   },
+
   logout: (req, res) => {
     req.session.destroy()
     res.clearCookie('userId')

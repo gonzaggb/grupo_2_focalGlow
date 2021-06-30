@@ -1,61 +1,56 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
-    <title>Login | Focal Glow</title>
+    <title>Perfil | Focal Glow</title>
     <link rel="stylesheet" href="/css/styles-user-profile.css">
 
 
 
 
-  </head>
-    <script>
-        function cambiar() {
-            var pdrs = document.getElementById('file-upload').files[0].name;
-            document.getElementById('info').innerHTML = pdrs;
-        }
-    </script>
+</head>
+   
 
 <body>
         <%- include('../partials/header.ejs')%>
   <main>
     <aside class="column-1">  	
-      <img class="img-redonda" class="profileImg"
-            src="<%=locals.user.profileImg ? locals.user.profileImg : '/img/profile-pictures/profile.jpg' %>">
+      <img class="profileImg"
+            src="<%=userToView.profileImg ? userToView.profileImg : '/img/profile-pictures/profile.jpg' %>">
       <ul class="client-links">
         <li>Últimos Pedidos</li>
         <li>Tarjetas Asociadas</li>
       </ul>      
     </aside>
-
+   
 		<section class="data">
       <div class="title">
-        <h2><%=`${locals.user.first_name} ${locals.user.last_name}`%></h2>
-        <p class="edit-button">Editar Perfil</p>
+        <h2><%=`${userToView.first_name} ${userToView.last_name}`%></h2>
+        <a href="/users/profile/edit"><p class="edit-button">Editar Perfil</p> </a>
       </div>
 
       <article class="profile-info">
 			  <div class = "row">
 				  <label>User Id</label>
-          <p><%=locals.user.id%></p>
+          <p><%=userToView.id%></p>
 			  </div>
 			  <div class = "row">
 			  <label>Nombre</label>
-          <p><%=locals.user.first_name%></p>
+          <p><%=userToView.first_name%></p>
 			  </div>
 			  <div class = "row">
 				  <label>Apellido</label>
-          <p><%=locals.user.last_name%></p>
+          <p><%=userToView.last_name%></p>
 			  </div>
 			  <div class = "row">
 				  <label>Email</label>
-          <p><%=locals.user.email%></p>
+          <p><%=userToView.email%></p>
 			  </div>
 			  <div class = "row">
 				  <label>Teléfono</label>
-          <p><%=locals.user.email%></p>
+          <p><%=userToView.phone%></p>
 			  </div>
 			  <div class = "row">
 				  <label>Dirección</label>
-          <p><%=locals.user.email%></p>
+          <p><%=userToView.address%></p>
 			  </div>
       </article>        
     </section>
@@ -68,6 +63,7 @@
                
             
   </main>
+  <%- include('../partials/footer.ejs')%>
 </body>
 
 </html>

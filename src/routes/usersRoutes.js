@@ -64,12 +64,14 @@ router.post('/registro', upload.single('profileImg'), validations, userControlle
 
 
 // ruta de profile
-router.get('/:id/detail', userController.profile)
-router.get('/profile', authMiddleware, userController.profileId)
+router.get('/:id/detail', userController.profileId)
+router.get('/profile', authMiddleware, userController.profile)
+router.get('/profile/edit', userController.editProfile)
 //router.get('/profile',authMiddleware, userController.profile)
 
 //elimina usuario de la lista
 router.get('/:id/edit', userController.edit)
+
 router.delete('/:id', userController.delete)
 router.put('/:id/edit', upload.single('profileImg'), userController.update)
 //ruta de deslogueo

@@ -21,9 +21,14 @@ main {
 }
 
 main img {
-  width: 100%;
-  height: auto;
+  width: 150px;
+  height: 150px;
   max-height: 150px;
+  border-radius: 50%;
+}
+
+a {
+  text-decoration: none;
 }
 
 .column-1 {
@@ -37,8 +42,10 @@ main img {
 .title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   height: 150px;
 }
+
 .row {
   display: flex;
   gap: 33.33%;
@@ -51,10 +58,15 @@ main img {
 }
 
 .profile-info {
-  width: 66.66%;
+  width: 80%;
 }
 
 .row p {
+  font-size: 1.4rem;
+  width: 33.33%;
+}
+
+.row .edit {
   font-size: 1.4rem;
   width: 33.33%;
 }
@@ -64,6 +76,7 @@ main img {
   font-weight: bold;
   color: rgba(68, 67, 67, 0.856);
   transition: 0.5s;
+  cursor: pointer;
 }
 
 .edit-button:hover {
@@ -73,8 +86,40 @@ main img {
 ul.client-links {
   margin-top: 1.2rem;
   list-style-type: none;
+  cursor: pointer;
 }
 
 ul {
   margin-top: 0;
+}
+
+.btn {
+  width: 20%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  font-family: 'Roboto';
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffde59;
+  opacity: 0.9;
+  color: black;
+}
+
+.edit {
+  color: darkblue;
+  font-size: 1.4rem;
+  border: none;
+  background-color: transparent;
+}
+
+.profileImg {
+  cursor: pointer;
 }
