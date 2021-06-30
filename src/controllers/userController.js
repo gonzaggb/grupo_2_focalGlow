@@ -99,7 +99,7 @@ const controller = {
 
   update: (req, res) => {
 
-    const { first_name, last_name, email, password } = req.body
+    const { first_name, last_name, email, password, phone, address } = req.body
     const { id } = req.params
     const { file } = req
     const { profileImg } = user.findByPk(id)
@@ -108,8 +108,8 @@ const controller = {
       last_name,
       email,
       password,
-      address,
-      phone
+      phone,
+      address
     }
     if (!file) {
       userUpdate.profileImg = profileImg

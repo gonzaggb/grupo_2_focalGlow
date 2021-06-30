@@ -64,10 +64,10 @@ router.post('/registro', upload.single('profileImg'), validations, userControlle
 
 
 // ruta de profile
-router.get('/:id/detail', userController.profileId)
-router.get('/profile', authMiddleware, userController.profile)
-router.get('/profile/edit', userController.editProfile)
-//router.get('/profile',authMiddleware, userController.profile)
+router.get('/:id/detail', userController.profileId) // por el listado de users
+router.get('/profile', authMiddleware, userController.profile) // por el link al perfil del usuario
+//router.get('/profile/edit', userController.editProfile)
+
 
 //elimina usuario de la lista
 router.get('/:id/edit', userController.edit)

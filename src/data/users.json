@@ -1,14 +1,13 @@
 [
   {
-    "id": 1,
-    "first_name": "Lonni",
+    "id": "1",
+    "first_name": "Lonni2",
     "last_name": "Sunner",
-    "email": "lsunner0@blogger.com",
+    "email": "lsunner@blogger.com",
     "password": "m3EeNFq",
-    "profileImg": "/img/profile-pictures/Pablito.jpg",
-    "address": "27 Forest Dale Street",
     "phone": "444 104 7496",
-    "category": "normal"
+    "address": "33 Forest Dale Street",
+    "profileImg": "/img/profile-pictures/Pablito.jpg"
   },
   {
     "id": 2,
@@ -1099,7 +1098,6 @@
     "phone": "988 386 4102",
     "category": "normal"
   },
-
   {
     "first_name": "Pablo ",
     "last_name": "Armando",
@@ -1150,10 +1148,9 @@
     "last_name": "UnClavito ",
     "email": "pablo@pablo.com",
     "password": "$2a$10$acpGUZPmc3L9p1OPvrp8aOY8SVK7O6lkUrBfLbExYvw2mrIIw3TOy",
-    "profileImg": "/img/profile-pictures/1624904135689.jpg",
-    "address": "5 Katie Park",
     "phone": "697 712 0322",
-    "category": "admin"
+    "address": "Tedin 159",
+    "profileImg": "/img/profile-pictures/1624904135689.jpg"
   },
   {
     "first_name": "Pol",

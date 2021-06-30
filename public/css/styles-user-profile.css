@@ -7,11 +7,11 @@
 }
 
 body {
-  background-color: #ffde59;
+  background: -webkit-linear-gradient(left, #e5e5e5, #ffde59);
 }
 
 main {
-  background-color: #e5e5e5;
+  background-color: #fff;
   width: 85vw;
   margin: 5vw auto;
   padding: 2.5vw 5vw;
@@ -25,6 +25,35 @@ main img {
   height: 150px;
   max-height: 150px;
   border-radius: 50%;
+}
+
+.column-1 {
+  text-align: center;
+}
+
+.file-btn {
+  width: 80%;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #fff;
+  background: #000;
+  transition: 0.5s;
+}
+
+.file-btn:hover {
+  background-color: #ffde59;
+  color: black;
+}
+
+.file-btn input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer;
 }
 
 a {
@@ -48,13 +77,13 @@ a {
 
 .row {
   display: flex;
-  gap: 33.33%;
+  gap: 20%;
   margin: 1.2rem 0px;
 }
 .row label {
   font-weight: bold;
   font-size: 1.4rem;
-  width: 33.33%;
+  width: 20%;
 }
 
 .profile-info {
@@ -63,12 +92,12 @@ a {
 
 .row p {
   font-size: 1.4rem;
-  width: 33.33%;
+  width: 60%;
 }
 
 .row .edit {
   font-size: 1.4rem;
-  width: 33.33%;
+  width: 60%;
 }
 
 .edit-button {

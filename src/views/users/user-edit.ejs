@@ -21,10 +21,14 @@
     <form class="registry-form2" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
 			<main>
 			<aside class="column-1">  	
-				<label for="file-upload" class="subir">
+				<label for="profileImg">
 					<img class="profileImg" for="profileImg" src="<%=userToEdit.profileImg ? userToEdit.profileImg : '/img/profile-pictures/profile.jpg' %>">
 				</label>
-				<p>Clickéa en la imágen para cambiarla</p>
+				<div class="file-btn">
+					Cambiar imagen
+				<input type="file" name="profileImg" accept="jpg">
+			</div>
+			
 			</aside>
 
 			<section class="data">
@@ -59,7 +63,7 @@
 					</div>
 					<div class = "row">
 						<label for="address">Dirección</label>
-            <textarea class="edit" type="text" name="address" id="address" col= "10" row="10" value="<%=userToEdit.email%>"><%=userToEdit.address%></textarea>
+            <textarea class="edit" type="text" name="address" id="address" col= "10" row="10" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
 					</div>
                 
          
@@ -69,6 +73,7 @@
       </section>
 		</main>
     </form> 
+		<%- include('../partials/footer.ejs')%>
 	
 </body>
 

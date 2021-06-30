@@ -24,7 +24,7 @@
 		<section class="data">
       <div class="title">
         <h2><%=`${userToView.first_name} ${userToView.last_name}`%></h2>
-        <a href="/users/profile/edit"><p class="edit-button">Editar Perfil</p> </a>
+        <a href="/users/<%=userToView.id%>/edit"><p class="edit-button">Editar Perfil</p> </a>
       </div>
 
       <article class="profile-info">
