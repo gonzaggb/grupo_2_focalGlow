@@ -107,7 +107,7 @@ const controller = {
       first_name,
       last_name,
       email,
-      password,
+      password: bcrypt.hashSync(password, 10),
       phone,
       address
     }

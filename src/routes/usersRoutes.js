@@ -58,19 +58,21 @@ router.get('/login', guestMiddleware, userController.login)
 router.post('/login', validationLogin, userController.loginUser)
 
 //envia al usuario a la pagina de registro
-router.get('/registro', userController.newUser)
+router.get('/registro', guestMiddleware, userController.newUser)
 //envia los datos de la pagina de registro al controlador
 router.post('/registro', upload.single('profileImg'), validations, userController.create)
 
 
 // ruta de profile
-router.get('/:id/detail', userController.profileId) // por el listado de users
+router.get('/:id/detail', authMiddleware, adminMiddleware, userController.profileId) // si soy admin
+router.get('/:id/edit', authMiddleware, adminMiddleware, userController.edit) // si soy admin
+
 router.get('/profile', authMiddleware, userController.profile) // por el link al perfil del usuario
-//router.get('/profile/edit', userController.editProfile)
+router.get('/profile/edit', authMiddleware, userController.editProfile) // por el link al perfil del usuario
 
 
 //elimina usuario de la lista
-router.get('/:id/edit', userController.edit)
+
 
 router.delete('/:id', userController.delete)
 router.put('/:id/edit', upload.single('profileImg'), userController.update)
