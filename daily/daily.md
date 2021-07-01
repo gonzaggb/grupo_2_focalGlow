@@ -1,3 +1,4 @@
+![Daily7](./Daily_20210630.jpg)
 ![Daily6](./Daily_20210619.jpg)
 ![Daily5](./Daily_20210615.jpg)
 ![Daily4](./Daily_20210611.jpg)
