@@ -57,13 +57,12 @@ const upload = multer({ storage, fileFilter })
 
 
 //Asigno a cada ruta la propiedad del controlador
-router.get('/',authMiddleware, adminMiddleware, productController.list)
+router.get('/', authMiddleware, adminMiddleware, productController.list)
 //View
-router.delete('/:id',authMiddleware, adminMiddleware, productController.delete)
-router.get('/detail/:id',authMiddleware,   productController.detail)
+router.get('/detail/:id', authMiddleware, productController.detail)
 
 //Create
-router.get('/add',authMiddleware, adminMiddleware, productController.formNew) //formulario de creacion de producto
+router.get('/add', authMiddleware, adminMiddleware, productController.formNew) //formulario de creacion de producto
 router.post(
   '/add',
   upload.any(
@@ -81,7 +80,7 @@ router.post(
 // a donde va el producto creado
 
 //Update
-router.get('/:id/edit',authMiddleware, adminMiddleware, productController.edit) //formulario de edicion de producto
+router.get('/:id/edit', authMiddleware, adminMiddleware, productController.edit) //formulario de edicion de producto
 router.put(
   '/:id/edit',
   upload.any(
@@ -98,6 +97,7 @@ router.put(
 )
 
 //Delete
+router.delete('/:id', authMiddleware, adminMiddleware, productController.delete)
 
 
 module.exports = router

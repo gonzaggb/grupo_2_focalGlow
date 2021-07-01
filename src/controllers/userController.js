@@ -27,13 +27,13 @@ const controller = {
     if (remember) {
       res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
     }
-    console.log(user)
+
 
     //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
     if (user.category == 'admin') {
       res.redirect('/product')
     } else {
-      res.redirect('/users/profile')
+      res.redirect('/')
     }
 
   },
