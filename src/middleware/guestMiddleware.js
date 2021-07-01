@@ -1,8 +1,8 @@
-module.exports = (req,res,next)=>{
-    const userSession =req.session.logged 
+module.exports = (req, res, next) => {
+    const userSession = req.session.logged
     //valida que exista session
-    if (userSession){
-       return  res.redirect ('/')
+    if (userSession) {
+        return res.redirect('/users/profile')
     }
     next()
-}    
+}
