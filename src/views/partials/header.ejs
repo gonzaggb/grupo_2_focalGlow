@@ -13,7 +13,7 @@
             <a href="/us">Nosotros</a>
             <!-- <a href="#">Usuario</a> -->
             <a href="/users/login">Iniciar Sesión</a>
-            <a href="/users/registro">Registrate</a>
+            <a href="/users/register">Registrate</a>
 
             <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
           </div>
@@ -32,7 +32,7 @@
         </li>
         <li><a href="/us">Nosotros</a></li>
         <li>
-          <a href="#"><%= locals.user? locals.user.first_name : 'Usuario'%></a>
+          <a href="#"><%= locals.user? 'Bienvenido ' + locals.user.first_name : 'Usuario'%></a>
           <ul class="desplegable">
             <%if(locals.user){%>
             <% if (locals.user.category == 'admin') { %>
@@ -55,7 +55,7 @@
               <%}%>
               <%} else {%>
             <li><a href="/users/login">Iniciar Sesión</a></li>
-            <li><a href="/users/registro">Registrate</a></li>
+            <li><a href="/users/register">Registrate</a></li>
           </ul>
 
             <li>
