@@ -90,8 +90,13 @@ const controller = {
   },
 
   update: (req, res) => {
-    //MARS: Tuve que modificar const por var al redefinirle password si el usuario no quiere modificarlo
-    var { first_name, last_name, email, password, phone, address } = req.body
+    const validationStatus = validationResult(req) // trae los resultados del middleware
+    if (validationStatus.errors.length > 0) {
+      //Si hay errores que pasa
+      return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+    }
+    //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
+    let { first_name, last_name, email, password, phone, address } = req.body
     const { id } = req.params
     const { file } = req
     const { profileImg } = user.findByPk(id)
