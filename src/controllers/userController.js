@@ -120,13 +120,9 @@ const controller = {
     user.update(userUpdate, id)
     res.redirect("/users")
   },
-  profile: (req, res) => {
-    const id = res.locals.user.id
-    const userToView = user.findByPk(id)
-    res.render('users/profile.ejs', { userToView })
-  },
 
-  profileId: (req, res) => {
+
+  profile: (req, res) => {
     const id = req.params.id
     const userToView = user.findByPk(id)
     res.render('users/profile.ejs', { userToView })
