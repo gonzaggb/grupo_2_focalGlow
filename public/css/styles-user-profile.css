@@ -152,3 +152,8 @@ ul {
 .profileImg {
   cursor: pointer;
 }
+
+.row input[type='password'] {
+  font-size: 0.65rem;
+  font-style: italic;
+}

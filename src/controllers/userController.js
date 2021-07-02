@@ -90,19 +90,19 @@ const controller = {
   },
 
   update: (req, res) => {
-
-    const { first_name, last_name, email, password, phone, address } = req.body
+    //MARS: Tuve que modificar const por var al redefinirle password si el usuario no quiere modificarlo
+    var { first_name, last_name, email, password, phone, address } = req.body
     const { id } = req.params
     const { file } = req
     const { profileImg } = user.findByPk(id)
-    if (password == '') {
-      password = user.findByPk(id).password
-    }
+    //Si el usuario no lleno el campo password que me tome la anterior, sino que hashee la nueva contraseña
+    password == '' ? password = user.findByPk(id).password : password = bcrypt.hashSync(password, 10)
+
     const userUpdate = {
       first_name,
       last_name,
       email,
-      password: bcrypt.hashSync(password, 10),
+      password,
       phone,
       address
     }
