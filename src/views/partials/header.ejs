@@ -38,7 +38,7 @@
             <% if (locals.user.category == 'admin') { %>
                 <li><a href="/product/">Product list </a></li>
                 <li><a href="/users">User list </a></li>
-                <li><a href="/users/profile">Perfil </a></li>
+                <li><a href="/users/<%=locals.user.id%>/detail">Perfil </a></li>
                 <li><a href="/users/logout">Salir</a></li>
               </ul>
 
@@ -46,7 +46,7 @@
                   <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
                 </li>
             <% } else { %> 
-              <li><a href="/users/profile">Perfil </a></li>
+              <li><a href="/users/<%=locals.user.id%>/detail">Perfil </a></li>
               <li><a href="/users/logout">Salir</a></li>
             </ul>
               <li>

@@ -67,13 +67,13 @@ router.post('/register', upload.single('profileImg'), validations, userControlle
 // ruta de profile
 router.get('/:id/detail', authMiddleware, profileAccessMiddleware, userController.profile)
 router.get('/:id/edit', authMiddleware, profileAccessMiddleware, userController.edit)
-
+router.put('/:id/edit', upload.single('profileImg'), userController.update)
 
 //elimina usuario de la lista
 
 
 router.delete('/:id', userController.delete)
-router.put('/:id/edit', upload.single('profileImg'), userController.update)
+
 //ruta de deslogueo
 router.get('/logout', authMiddleware, userController.logout)
 

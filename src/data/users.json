@@ -1173,5 +1173,15 @@
     "category": "admin",
     "address": "5 Katie Park",
     "phone": "697 712 0322"
+  },
+  {
+    "id": "1071",
+    "first_name": "MARTINIANO",
+    "last_name": "LEGUIZAMON",
+    "email": "martinianol@outlook.com",
+    "password": "$2a$10$sAW4UoJINlUtmhscOQ2V5.J3HqhBSISbVJRSe7AiZK22ml9FoSaKW",
+    "phone": "01140847023",
+    "address": "GENERAL PAZ 367 1A",
+    "profileImg": "/img/profile-pictures/1625189106542.jpg"
   }
 ]
