@@ -113,9 +113,8 @@ const controller = {
     }
 
     user.update(userUpdate, id)
-    //MARS: tuve que cambiar el redireccionamiento porque rompia WTF? estaba en '/users'
-    //Como el perfil no es admin se iba al 404.
-    res.redirect('/')
+
+    res.redirect('/users')
   },
 
 

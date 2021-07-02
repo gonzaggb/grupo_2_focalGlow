@@ -1,10 +1,10 @@
 [
   {
     "id": "1",
-    "first_name": "Lonni2",
+    "first_name": "Lonni",
     "last_name": "Sunner",
     "email": "lsunner@blogger.com",
-    "password": "m3EeNFq",
+    "password": "$2a$10$KO1w2WEck18gZql6E7BO3O/c7q7//SsKZSDIo5osDfY.U1VNra2Py",
     "phone": "444 104 7496",
     "address": "33 Forest Dale Street",
     "profileImg": "/img/profile-pictures/Pablito.jpg"
@@ -1099,15 +1099,14 @@
     "category": "normal"
   },
   {
+    "id": "101",
     "first_name": "Pablo ",
     "last_name": "Armando",
     "email": "pabloar24.7@gmail.com",
-    "password": "123456",
-    "profileImg": "/img/profile-pictures/1624310871330.png",
-    "id": 101,
-    "category": "normal",
+    "password": "$2a$10$v1mk8g9My3gBLBRHWy21l.vzOgJbIZRLmWzNLLZ9W/xJWS7y/u2lC",
+    "phone": "988 386 4102",
     "address": "78 Blaine Plaza",
-    "phone": "988 386 4102"
+    "profileImg": "/img/profile-pictures/1625235089402.jpg"
   },
   {
     "first_name": "cosme",
@@ -1176,10 +1175,10 @@
   },
   {
     "id": "1071",
-    "first_name": "MARTINIANO",
+    "first_name": "MARTINIANO2",
     "last_name": "LEGUIZAMON",
     "email": "martinianol@outlook.com",
-    "password": "$2a$10$sAW4UoJINlUtmhscOQ2V5.J3HqhBSISbVJRSe7AiZK22ml9FoSaKW",
+    "password": "$2a$10$4NvvRceXsuHgbc6baDYoxOQx.lvg7xKzOTDM/LEaHcCXbCSJ0Phvm",
     "phone": "01140847023",
     "address": "GENERAL PAZ 367 1A",
     "profileImg": "/img/profile-pictures/1625189106542.jpg"
