@@ -62,7 +62,7 @@ const controller = {
       last_name,
       email,
       password: bcrypt.hashSync(password, 10),
-      profileImg: '/img/profile-pictures/' + req.file.filename,
+      profileImg: req.file ? '/img/profile-pictures/' + req.file.filename : '/img/profile-pictures/profile.jpg',
       address,
       phone,
       category: 'normal'

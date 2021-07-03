@@ -20,7 +20,7 @@ module.exports = {
     //crea el nuevo id
     generateId() {
         console.log('Ingrese a generate ID')
-        const newId = this.readFile().pop().id + 1
+        const newId = Number(this.readFile().pop().id) + 1
         return newId
     },
     //crea un nuevo usuario
