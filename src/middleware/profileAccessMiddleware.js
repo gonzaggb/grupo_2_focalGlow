@@ -19,3 +19,13 @@ module.exports = (req, res, next) => {
     }
     next()
 }
+
+
+/*CODIGO SUGERIDO*/
+/*
+if((userSession && category == 'admin') || id ==req.params.id){
+    return next()
+}
+return res.redirect('/')
+
+*/
