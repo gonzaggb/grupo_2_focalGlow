@@ -17,14 +17,11 @@ const validations = [
     body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña'),
     body('profileImg').custom((value, { req }) => {
         const file = req.file
-        if (!file) {
-            throw new Error('Debes subir una imagen')
-        } else if (!files.isFileImage(file.originalname)) {
-            throw new Error(`Ingrese un archivo que sea una imagen`)
+        if (file && !files.isFileImage(file.originalname)) {
+            throw new Error(`Ingrese un archivo que sea una imagen`)  
         }
         return true
     })
-
 ]
 
 module.exports = validations
