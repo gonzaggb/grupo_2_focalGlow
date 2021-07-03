@@ -69,7 +69,7 @@ const controller = {
     }
 
     user.create(newUser)
-    res.redirect('/')
+    res.redirect('/users/login')
   },
 
 
