@@ -1182,5 +1182,14 @@
     "phone": "01140847023",
     "address": "GENERAL PAZ 367 1A",
     "profileImg": "/img/profile-pictures/1625189106542.jpg"
+  },
+  {
+    "first_name": "pablito",
+    "last_name": "pablito",
+    "email": "pablito@pablito.com",
+    "password": "$2a$10$v.GFNPMaLeXa4.79rzzK9urwlET.rxAwJ8lhMuYT3Z3QsTkizPblm",
+    "profileImg": "/img/profile-pictures/profile.jpg",
+    "category": "admin",
+    "id": 1072
   }
 ]
