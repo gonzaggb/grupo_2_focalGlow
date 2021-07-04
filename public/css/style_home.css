@@ -521,7 +521,7 @@ header a{
         text-align: center;
         background-color: black;
         color: white; 
-        animation: logged 5s ; 
+        animation: logged 3s ; 
         animation-iteration-count: 1;
     }
     @keyframes  logged {

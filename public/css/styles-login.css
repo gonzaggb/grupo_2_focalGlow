@@ -149,7 +149,10 @@ ancho (% de pantalla que ocupa), el tamaño máximo que quiero ocupe y los marge
     width: 50%;
     padding: 0px;
 } */
-
+button a {
+    text-decoration: none;
+    color: white;
+}
 
 
 @media (min-width: 768px){
