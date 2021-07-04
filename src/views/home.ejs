@@ -9,7 +9,11 @@
     <!-- HEADER -->
     <%- include('partials/header.ejs')%>
       <!-- HEADER -->
-      
+      <%if(locals.user){%>
+      <div class="logged">
+        <h2>Bienvenido <%=locals.user.first_name %></h2>
+      </div>
+      <% } %> 
         <div>
           <div class="header-video">
               <video autoplay="autoplay" loop="loop" muted defaultMuted playsinline oncontextmenu="return false;" preload="auto"id="miVideo">

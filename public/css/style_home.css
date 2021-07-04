@@ -390,7 +390,9 @@ header a{
 .fa-instagram:before {
     content: "\f16d";
     margin-right: 7px;
-}    
+}
+.logged{height: 0;} 
+ 
 @media (max-width: 952px){
     .banner {
     display: flex;
@@ -401,7 +403,8 @@ header a{
     }  
     .header-video{
         display: inline-block;
-    }  
+    }
+    
 }
 @media (max-width: 576px){
     .banner-box{
@@ -512,6 +515,19 @@ header a{
     .links{
         display: none;
     }  
+    .logged{
+        width: 100%;
+        height: 0px;       
+        text-align: center;
+        background-color: black;
+        color: white; 
+        animation: logged 10s ; 
+    }
+    @keyframes  logged {
+        0% { height: 25px;}
+        50% {height: 25px;}
+        75% {height: 0;}
+    }
 }    
 @media (max-width: 576px){
     .logo-nav-container{
@@ -564,6 +580,19 @@ header a{
     }
     .links{
         display: none;
+    }
+    .logged{
+        width: 100%;
+        height: 0px;       
+        text-align: center;
+        background-color: black;
+        color: white; 
+        animation: logged 10s ; 
+    }
+    @keyframes  logged {
+        0% { height: 25px;}
+        50% {height: 25px;}
+        75% {height: 0;}
     }
 }
 
