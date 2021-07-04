@@ -12,9 +12,20 @@
             <a href="/#main-categori">Shop</a>
             <a href="/us">Nosotros</a>
             <!-- <a href="#">Usuario</a> -->
+            <%if(locals.user){%>  
+              <% if (locals.user.category=='admin' ) { %>
+                <a href="/product/">Product list </a>
+                <a href="/users">User list </a>
+                <a href="/users/<%=locals.user.id%>/detail">Perfil </a>
+                <a href="/users/logout">Salir</a>
+               <% } else{ %>  
+              <a href="/users/<%=locals.user.id%>/detail">Perfil </a>
+              <a href="/users/logout">Salir</a>
+              <% } %> 
+             <% } else{ %>  
             <a href="/users/login">Iniciar Sesión</a>
             <a href="/users/register">Registrate</a>
-
+              <% } %> 
             <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
           </div>
         </div>
