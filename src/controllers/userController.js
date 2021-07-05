@@ -90,14 +90,16 @@ const controller = {
   },
 
   update: (req, res) => {
+    const { id } = req.params
+    const userToEdit = user.findByPk(id);
     const validationStatus = validationResult(req) // trae los resultados del middleware
     if (validationStatus.errors.length > 0) {
       //Si hay errores que pasa
-      return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+      return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
     }
     //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
     let { first_name, last_name, email, password, phone, address } = req.body
-    const { id } = req.params
+
     const { file } = req
     const { profileImg } = user.findByPk(id)
     //Si el usuario no lleno el campo password que me tome la anterior, sino que hashee la nueva contraseña

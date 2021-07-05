@@ -77,13 +77,13 @@ a {
 
 .row {
   display: flex;
-  gap: 20%;
+  gap: 15%;
   margin: 1.2rem 0px;
 }
 .row label {
   font-weight: bold;
   font-size: 1.4rem;
-  width: 20%;
+  width: 25%;
 }
 
 .profile-info {
@@ -98,6 +98,11 @@ a {
 .row .edit {
   font-size: 1.4rem;
   width: 60%;
+}
+
+.error::placeholder {
+  color: red !important;
+  font-weight: bold;
 }
 
 .edit-button {
@@ -158,20 +163,20 @@ ul {
   font-style: italic;
 }
 @media (max-width: 576px) {
-    main{
-      display: flex;
-      flex-direction: column;
-    }
-    .column-1{
-      width: 100%;
-    }
-    .data{
-      width: 100%;
-    }
-    .btn{
-      width: 40%;
-    }
-    .profile-info{
-      width: 100%;
-    }
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .column-1 {
+    width: 100%;
+  }
+  .data {
+    width: 100%;
+  }
+  .btn {
+    width: 40%;
+  }
+  .profile-info {
+    width: 100%;
+  }
 }

@@ -1,64 +1,73 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
-    <title>Registro | Focal Glow</title>
-    <link rel="stylesheet" href="/css/styles-registro.css">
+<title>Registro | Focal Glow</title>
+<link rel="stylesheet" href="/css/styles-registro.css">
 
-    </head>
-    <script>
-        function cambiar() {
-            var pdrs = document.getElementById('file-upload').files[0].name;
-            document.getElementById('info').innerHTML = pdrs;
-        }
-    </script>
+</head>
+<script>
+  function cambiar() {
+  	var pdrs = document.getElementById('file-upload').files[0].name;
+  	document.getElementById('info').innerHTML = pdrs;
+  }
+</script>
 
-    <body>
-        <%- include('../partials/header.ejs')%>
-
-
-            <main class="main-container2">
-                <form class="registry-form2" method="POST" action="/users/register" enctype="multipart/form-data">
-                    <div class="registry-container2">
-                        <label for="first_name">Nombre</label>
-                            <input class="<%=locals.errors && errors.first_name ? 'error' : 'input-login'%>" type="text"
-                            name="first_name" id="first_name" <% if (locals.errors && errors.first_name) { %> placeholder="<%=errors.first_name.msg%>"
-                            <% }else if(locals.oldData){ %>
-                                value = "<%=oldData.first_name%>"
-                            <%}%>>
-                        <label for="last_name">Apellido</label>
-                            <input class="<%=locals.errors && errors.last_name ? 'error' : 'input-login'%>" type="text" 
-                            name="last_name" id="last_name" <% if (locals.errors && errors.last_name) { %> placeholder="<%=errors.last_name.msg%>"
-                            <% }else if(locals.oldData){ %> value = "<%=oldData.last_name%>"
-                            <%}%>>
-                        <label for="email">Email</label>
-                            <input class="<%=locals.errors && errors.email ? 'error' : 'input-login'%>" type="text" 
-                            name="email" id="email" <% if (locals.errors && errors.email) { %> placeholder=" <%=errors.email.msg%>"
-                            <% }else if(locals.oldData){%>
-                                value = "<%=oldData.email%>"
-                            <%}%>>
-                        <label for="password">Contraseña</label>
-                            <input class="<%=locals.errors && errors.password ? 'error' : 'input-login'%>" type="password" 
-                            name="password" id="password"
-                            <% if (locals.errors && errors.password) { %> placeholder=" <%=errors.password.msg%>"
-                            <%}%>>
-                        <label for="rePassword">Confirmar contraseña</label>
-                            <input class="<%=locals.errors && errors.rePassword ? 'error' : 'input-login'%>" type="password"
-                            name="rePassword" id="rePassword"
-                            <% if (locals.errors&& errors.rePassword) { %> placeholder="<%=errors.rePassword.msg%>"
-                            <%}%>>
-                        <label for="file-upload" class="subir">
-                            <span><i class="far fa-user-circle"></i> Subir foto de perfil</span>
-                        </label>
-                            <%if(locals.errors && errors.profileImg){%>
-                                <span class="error-message"> <%=errors.profileImg.msg%> </span>
-                                     <%}%>
-                        <div id="info"></div>
-                            <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
-                        <div class="button-container">
-                            <button type="submit" class="login-button">Continuar</button>
-                        </div>
+  <body>
+    <%- include('../partials/header.ejs')%>
 
 
-            </main>
-    </body>
+    <main class="main-container2">
+      <form class="registry-form2" method="POST" action="/users/register" enctype="multipart/form-data">
+        <div class="registry-container2">
 
-    </html>
+          <label for="first_name">Nombre</label>
+          <input class="<%=locals.errors && errors.first_name ? 'error' : 'input-login'%>" type="text" name="first_name" id="first_name"
+					 <% if (locals.errors && errors.first_name) {%> placeholder="<%=errors.first_name.msg%>"
+          <% } else if (locals.oldData) {%>
+              value = "<%=oldData.first_name%>"
+          <%}%>>
+
+          <label for="last_name">Apellido</label>
+          <input class="<%=locals.errors && errors.last_name ? 'error' : 'input-login'%>" type="text" name="last_name" id="last_name" 
+						<% if (locals.errors && errors.last_name) { %> placeholder="<%=errors.last_name.msg%>"
+            <% } else if (locals.oldData) {%>
+							 value = "<%=oldData.last_name%>"
+            <%}%>>
+
+          <label for="email">Email</label>
+          <input class="<%=locals.errors && errors.email ? 'error' : 'input-login'%>" type="text" name="email" id="email" 
+					<% if (locals.errors && errors.email) { %>
+						 placeholder=" <%=errors.email.msg%>"
+          <% } else if(locals.oldData) {%>
+                value = "<%=oldData.email%>"
+          <%}%>>
+                        
+					<label for="password">Contraseña</label>
+          <input class="<%=locals.errors && errors.password ? 'error' : 'input-login'%>" type="password" name="password" id="password"
+            <% if (locals.errors && errors.password) { %> 
+							placeholder=" <%=errors.password.msg%>"
+            <%}%>>
+					
+          <label for="rePassword">Confirmar contraseña</label>
+          <input class="<%=locals.errors && errors.rePassword ? 'error' : 'input-login'%>" type="password" name="rePassword" id="rePassword"
+            <% if (locals.errors&& errors.rePassword) { %> placeholder="<%=errors.rePassword.msg%>"
+            <%}%>>
+
+          <label for="file-upload" class="subir">
+          	<span><i class="far fa-user-circle"></i> Subir foto de perfil</span>
+          </label>
+          <%if(locals.errors && errors.profileImg){%>
+              <span class="error-message"> <%=errors.profileImg.msg%> </span>
+          <%}%>
+
+          <div id="info"></div>
+          <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
+          
+					<div class="button-container">
+            <button type="submit" class="login-button">Continuar</button>
+          </div>
+
+
+    </main>
+  </body>
+
+</html>
