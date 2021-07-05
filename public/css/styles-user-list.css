@@ -81,3 +81,18 @@ form button {
 .left {
   text-align: left;
 }
+.up-button {
+  background-color: #ffde59;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 30px;
+  position: fixed;
+  text-align: center;
+  left: 80%;
+  bottom: 20px;
+}
+.up-button i {
+  color: black;
+  padding: 10px;
+}

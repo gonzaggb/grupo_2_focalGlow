@@ -8,12 +8,11 @@ module.exports = (req, res, next) => {
     const { id, category } = userModel.findByPk(userSession)
 
 
+
     if ((userSession && category == 'admin') || (id == req.params.id)) {
-        //Si es un administrador puede entrar a cualquier perfil
         return next()
     }
 
     return res.redirect('/')
-
 
 }

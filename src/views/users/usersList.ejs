@@ -9,7 +9,7 @@
         <%- include('../partials/header.ejs')%>
 
             <main>
-                <h3 class="titulo">Listado de Usuarios</h3>
+                <h3 class="titulo" id="title">Listado de Usuarios</h3>
 
                 <table id="customers">
                     <tr>
@@ -54,7 +54,10 @@
                             </td>
                         </tr>
                         <%})%>
-                </table>        
+                </table> 
+                <div class="up-button">
+                    <a href="#title"><i class="fas fa-chevron-up"></i></a>
+                </div>
             </main>
     </body>
 

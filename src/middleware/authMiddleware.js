@@ -3,6 +3,7 @@ module.exports = (req, res, next) => {
 
     //valida que no exista sesion
     if (!userSession) {
+
         return res.redirect('/users/login')
     }
     next()
