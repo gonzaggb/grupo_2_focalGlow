@@ -13,12 +13,20 @@ const validations = [
             return true
         }).withMessage('el usuario ya existe'),
 
-    body('password').notEmpty().withMessage('Debes poner una contraseña'),
-    body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña'),
+    body('password').notEmpty().withMessage('Debes poner una contraseña').bail(),
+    body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña').bail(),
+    body('rePassword').custom((val, { req }) => {
+        let password = req.password
+        if (val != password) {
+            throw new Error(`Las contraseñas deben coincidir`)
+        }
+        return true
+    }),
+
     body('profileImg').custom((value, { req }) => {
         const file = req.file
         if (file && !files.isFileImage(file.originalname)) {
-            throw new Error(`Ingrese un archivo que sea una imagen`)  
+            throw new Error(`Ingrese un archivo que sea una imagen`)
         }
         return true
     })
