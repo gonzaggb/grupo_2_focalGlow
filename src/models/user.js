@@ -19,7 +19,7 @@ module.exports = {
     },
     //crea el nuevo id
     generateId() {
-        console.log('Ingrese a generate ID')
+
         const newId = Number(this.readFile().pop().id) + 1
         return newId
     },
@@ -69,9 +69,9 @@ module.exports = {
                     id,
                     ...userUpdate
                 }
-            }   
-                return usersEdit
-            })
+            }
+            return usersEdit
+        })
         this.writeFile(modifiedUsers)
         return modifiedUsers
 
@@ -81,7 +81,7 @@ module.exports = {
     //valida si existe el usuario y devuelvo algo, según corresponda
     validateUser(user) {
         const findUser = this.findUser(user)
-        
+
         if (findUser === undefined) {
             return 'El usuario no existe'
         } else if (findUser.password == user.password) {

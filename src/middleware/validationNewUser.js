@@ -16,7 +16,8 @@ const validations = [
     body('password').notEmpty().withMessage('Debes poner una contraseña').bail(),
     body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña').bail(),
     body('rePassword').custom((val, { req }) => {
-        let password = req.password
+        let password = req.body.password
+
         if (val != password) {
             throw new Error(`Las contraseñas deben coincidir`)
         }
