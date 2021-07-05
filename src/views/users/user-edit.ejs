@@ -45,6 +45,7 @@
 					<h2><%=`${userToEdit.first_name} ${userToEdit.last_name}`%></h2>
 					<button type="submit" class="btn">Actualizar</button>
 				</div>
+
 				<article class="profile-info">        
 					<div class = "row">    
 						<label for="id">User Id</label>
@@ -85,17 +86,29 @@
 					</div>
 					
 					<div class = "row">
-						<label for="passwordBtn">Contraseña</label>
-            <button>Modificar Contraseña</button>			
-					</div>
+						<label for="passwordBtn">¿Modificar contraseña?</label>
+						<input type="radio" name='passModify' value="yes"> Sí
+						<input type="radio" name='passModify' value="no" checked> No
+          </div>
+
 					<div class = "row hidden">
 						<label for="password">Nueva contraseña</label>
-						<input class="edit" type="password" name="password" id="password" value="">
+						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="password" id="password"
+							<% if (locals.errors && errors.password) {%>
+								placeholder = "<%=errors.password.msg%>"
+							<%}%>
+						>
 					</div>
+
 					<div class="row hidden">
 						<label for="rePassword">Confirmar contraseña</label>
-						<input class="edit" type="password" name="rePassword" id="rePassword" value=""> 
+						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="rePassword" id="rePassword"
+							<% if (locals.errors && errors.rePassword) {%>
+								placeholder = "<%=errors.rePassword.msg%>"
+							<%}%>
+						>			
 					</div>
+
 					<div class = "row">
 						<label for="phone">Teléfono</label>
             <input class="edit" type="tel" name="phone" id="phone" value="<%=userToEdit.phone%>">
@@ -104,11 +117,10 @@
 						<label for="address">Dirección</label>
             <textarea class="edit" type="text" name="address" id="address" col= "10" row="10" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
 					</div>
-                
          
-            <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
-            <div class="button-container">
-            
+          <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
+          <div class="button-container">
+				</article>    
       </section>
 		</main>
     </form> 
