@@ -92,9 +92,9 @@
                             <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
                                 <label for="power">Potencia: </label>
-                                <% for(j=1;j<=4;j++){ %>
+                                <% for(j=0;j<4;j++){ %>
                                     <select name="power" class="select">
-                                        <option value="<%=locals.old && old.power[j] ? old.power[j] : ''%>"><%=locals.old && old.power[j] ? old.power[j] : 'Seleccionar'%></option>
+                                        <option value="<%=locals.old && old.power[j] ? old.power[j] : ''%>"><%=locals.old && old.power[j] ? old.power[j]+"W" : 'Seleccionar'%></option>
                                         <% for(i=1;i<=100;i++){ %>
                                             <option value="<%=[i]%>">
                                                 <%=[i]%>W

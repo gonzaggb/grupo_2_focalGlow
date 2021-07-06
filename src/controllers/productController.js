@@ -38,12 +38,10 @@ const controller = {
   },
   create: (req, res) => {
     let errors = validationResult(req)
-    console.log(req.body)
 
     if (errors.isEmpty()) {
       const productNew = req.body
       const files = req.files
-      console.log(files)
       product.create(productNew, files)
       res.redirect('/product')
     } else {
@@ -54,19 +52,16 @@ const controller = {
   edit: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
+    let errors = validationResult(req)
     res.render('products/product-edit.ejs', { productFound: productFound })
   },
   update: (req, res) => {
     let errors = validationResult(req)
     let id = req.params.id
     let productFound = product.findByPk(id)
-    console.log(errors)
-    console.log('req.files:')
-    console.log(req.files)
-
     if (errors.isEmpty()) {
-      let data = req.body
       let id = req.params.id
+      let data = req.body
       let productOriginal = product.findByPk(id)
       let { files } = req
       data.image_slider = []
@@ -119,7 +114,7 @@ const controller = {
       product.update(data, id)
       res.redirect('/product/')
     } else {
-      res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound: productFound })
+      res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound })
     }
   },
 
