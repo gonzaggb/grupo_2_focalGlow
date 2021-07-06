@@ -16,41 +16,13 @@ const guestMiddleware = require('../middleware/guestMiddleware')
 const authMiddleware = require('../middleware/authMiddleware')
 const adminMiddleware = require('../middleware/adminMiddleware')
 const profileAccessMiddleware = require('../middleware/profileAccessMiddleware')
+//multer
+const uploadRegister = require('../middleware/registryMulter')
 
 
 const userModel = require('../models/user')
 
 
-var storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null, path.join(__dirname, '../../public/img/profile-pictures'))
-
-    },
-    filename: (req, file, cb) => {
-        const extensionFile = path.extname(file.originalname)
-        cb(null, `${Date.now()}${extensionFile}`)
-
-
-    }
-
-})
-
-const fileFilter = (req, file, cb) => {
-
-    if (!files.isFileImage(file.originalname)) { //evalua que el archivo sea una imagen
-        req.file = file
-        cb(null, false)
-        return
-    } else {
-        // Si aceptamos el archivo
-        cb(null, true)
-        return
-
-    }
-}
-
-
-var upload = multer({ storage, fileFilter })
 
 //envia al usuario admin al listado de usuarios
 router.get('/', authMiddleware, adminMiddleware, userController.list) // la barra sola equivale a /users porque del app.js vengo con /users
@@ -64,13 +36,13 @@ router.post('/login', validationLogin, userController.loginUser)
 //envia al usuario a la pagina de registro
 router.get('/register', guestMiddleware, userController.newUser)
 //envia los datos de la pagina de registro al controlador
-router.post('/register', upload.single('profileImg'), validations, userController.create)
+router.post('/register', uploadRegister.single('profileImg'), validations, userController.create)
 
 
 // ruta de profile
 router.get('/:id/detail', authMiddleware, profileAccessMiddleware, userController.profile)
 router.get('/:id/edit', authMiddleware, profileAccessMiddleware, userController.edit)
-router.put('/:id/edit', upload.single('profileImg'), validateEditUser, profileAccessMiddleware, userController.update)
+router.put('/:id/edit', uploadRegister.single('profileImg'), validateEditUser, profileAccessMiddleware, userController.update)
 
 //elimina usuario de la lista
 

@@ -45,7 +45,7 @@ const controller = {
       const files = req.files
       console.log(files)
       product.create(productNew, files)
-      res.redirect('/product/list')
+      res.redirect('/product')
     } else {
       res.render('products/product-create.ejs', { errors: errors.mapped(), old: req.body })
     }
