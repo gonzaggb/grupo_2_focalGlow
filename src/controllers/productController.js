@@ -6,6 +6,7 @@ const { validationResult } = require('express-validator')
 //const { isFileImage, isPdf } = require('../helpers/files')
 const { randomArray2 } = require('../helpers/utilities')
 
+
 const fs = require('fs')
 const path = require('path')
 const { Console } = require('console')
@@ -38,13 +39,16 @@ const controller = {
   },
   create: (req, res) => {
     let errors = validationResult(req)
-
+    const productNew = req.body
+    const { files } = req
     if (errors.isEmpty()) {
-      const productNew = req.body
-      const files = req.files
       product.create(productNew, files)
       res.redirect('/product')
     } else {
+      /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la creación del producto*/
+      files.forEach(e => {
+        fs.unlinkSync(e.path)
+      })
       res.render('products/product-create.ejs', { errors: errors.mapped(), old: req.body })
     }
   },
@@ -59,11 +63,12 @@ const controller = {
     let errors = validationResult(req)
     let id = req.params.id
     let productFound = product.findByPk(id)
+    let { files } = req
+
     if (errors.isEmpty()) {
       let id = req.params.id
       let data = req.body
       let productOriginal = product.findByPk(id)
-      let { files } = req
       data.image_slider = []
       data.main_image = productOriginal.main_image
       data.image_slider1 = productOriginal.image_slider1
@@ -114,15 +119,29 @@ const controller = {
       product.update(data, id)
       res.redirect('/product/')
     } else {
+      /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la edicion del producto*/
+      files.forEach(e => {
+        fs.unlinkSync(e.path)
+      })
       res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound })
     }
   },
 
   delete: (req, res) => {
     let id = req.params.id
+    productToDelete = product.findByPk(id)
     product.delete(id)
-    res.redirect('/product/')
-    
+    /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
+    /*CODIGO COMENTADO PARA EVITAR CONFLICTOS, YA QUE LAS IMAGENES ESTAN COMPARTIDAS ACTUALMENTE ENTRE PRODUCTOS*/
+    /*         const resourcesPath = path.join(__dirname, '../../public')
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.main_image))  // borra main_image
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider1))
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider2))
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider3))
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet))  // borra data sheet
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.install_sheet))  // borra install sheet */
+    res.redirect('/product')
+
   },
 }
 
