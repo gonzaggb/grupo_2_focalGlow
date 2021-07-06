@@ -74,6 +74,21 @@
 						<label for="address">Dirección</label>
             <textarea class="edit" type="text" name="address" id="address" col= "10" row="10" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
 					</div>
+					<%/*si existe session y es un usuario administrador se le muestra un select para modificar al categoría del usuario*/%>
+						<% if (locals.user && locals.user.category == 'admin' ) { %>
+							<div class = "row"></div>
+							<label for="category">Category</label>
+							<select id="category" name="category">
+							<option value="<%=userToEdit.category%>" selected><%=userToEdit.category%></option>
+							<% if (userToEdit.category == "admin" ) { %>
+								<option value="normal">normal</option>
+							<% }else{ %>
+								<option value="admin">admin</option> %> 
+							<% } %>
+						</select>
+						</div>						 
+						<% } %>
+
                 
          
             <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>

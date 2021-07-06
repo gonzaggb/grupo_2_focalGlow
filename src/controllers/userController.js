@@ -86,7 +86,7 @@ const controller = {
   edit: (req, res) => {
     const id = req.params.id
     const userToEdit = user.findByPk(id)
-    res.render('users/user-edit.ejs', { userToEdit })
+    res.render('users/user-edit.ejs', {userToEdit})
   },
 
   update: (req, res) => {
@@ -96,7 +96,7 @@ const controller = {
       return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
     }
     //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
-    let { first_name, last_name, email, password, phone, address } = req.body
+    let { first_name, last_name, email, password, phone, address, category } = req.body
     const { id } = req.params
     const { file } = req
     const { profileImg } = user.findByPk(id)
@@ -109,7 +109,8 @@ const controller = {
       email,
       password,
       phone,
-      address
+      address,
+      category
     }
     if (!file) {
       userUpdate.profileImg = profileImg
