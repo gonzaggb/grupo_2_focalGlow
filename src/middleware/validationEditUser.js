@@ -16,7 +16,7 @@ const validations = [
 		}).withMessage('El usuario ya existe'),
 
 	//MARS: Le doy la opcion de que si NO desea modificar la contraseña pase el middleware	
-	oneOf([body('passModify').equals('no'),
+	oneOf([body('passModify').equals('No'),
 	[
 		body('password').notEmpty().withMessage('Debes poner una contraseña').bail(),
 		body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña').bail(),

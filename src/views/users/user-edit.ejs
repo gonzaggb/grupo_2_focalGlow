@@ -24,21 +24,24 @@
 				<label for="profileImg">
 					<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg ? userToEdit.profileImg : '/img/profile-pictures/profile.jpg' %>">
 				</label>
+
 				<div class="file-btn">
 					Cambiar imagen
-				<input onchange="loadFile(event)" type="file" name="profileImg" accept="jpg">
-				<script>
-          var loadFile = function (event) {
-            var output = document.getElementById('output');
-            output.src = URL.createObjectURL(event.target.files[0]);
-            output.onload = function () {
-              URL.revokeObjectURL(output.src) // free memory
-            }
-          };
-      	</script>
-			</div>
+					<input onchange="loadFile(event)" type="file" name="profileImg" accept="jpg">
+					<script>
+          	var loadFile = function (event) {
+            	var output = document.getElementById('output');
+            	output.src = URL.createObjectURL(event.target.files[0]);
+            	output.onload = function () {
+              	URL.revokeObjectURL(output.src) // free memory
+            	}
+          	};
+      		</script>
+				</div>
 			
 			</aside>
+
+			
 
 			<section class="data">
         <div class="title">
@@ -84,30 +87,6 @@
 								value="<%=userToEdit.email%>"<%}%>
 						>
 					</div>
-					
-					<div class = "row">
-						<label for="passwordBtn">¿Modificar contraseña?</label>
-						<input type="radio" name='passModify' value="yes"> Sí
-						<input type="radio" name='passModify' value="no" checked> No
-          </div>
-
-					<div class = "row hidden">
-						<label for="password">Nueva contraseña</label>
-						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="password" id="password"
-							<% if (locals.errors && errors.password) {%>
-								placeholder = "<%=errors.password.msg%>"
-							<%}%>
-						>
-					</div>
-
-					<div class="row hidden">
-						<label for="rePassword">Confirmar contraseña</label>
-						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="rePassword" id="rePassword"
-							<% if (locals.errors && errors.rePassword) {%>
-								placeholder = "<%=errors.rePassword.msg%>"
-							<%}%>
-						>			
-					</div>
 
 					<div class = "row">
 						<label for="phone">Teléfono</label>
@@ -117,6 +96,35 @@
 						<label for="address">Dirección</label>
             <textarea class="edit" type="text" name="address" id="address" col= "10" row="10" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
 					</div>
+					
+
+					
+					<label for="expand-toggle" id="expand-btn">¿Modificar contraseña?</label>
+					
+					<input type="radio" name="passModify" value="Sí" id="expand-toggle">
+					<input type="radio" name="passModify" value="No" checked>
+					
+					
+
+					<div class = "row expandable">
+						<label for="password">Nueva contraseña</label>
+						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="password" id="password"
+							<% if (locals.errors && errors.password) {%>
+								placeholder = "<%=errors.password.msg%>"
+							<%}%>
+						>
+					</div>
+
+					<div class="row expandable">
+						<label for="rePassword">Confirmar contraseña</label>
+						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="rePassword" id="rePassword"
+							<% if (locals.errors && errors.rePassword) {%>
+								placeholder = "<%=errors.rePassword.msg%>"
+							<%}%>
+						>			
+					</div>
+				
+				
          
           <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
           <div class="button-container">

@@ -159,9 +159,35 @@ ul {
 }
 
 .row input[type='password'] {
-  font-size: 0.65rem;
+  font-size: 1.4rem;
   font-style: italic;
 }
+
+section article input {
+  display: visible;
+}
+/* Hide expandable content by default */
+.expandable {
+  opacity: 0;
+  font-size: 1px;
+  transition: all 1s;
+}
+
+/* Style the button */
+#expand-btn {
+  display: block;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Show hidden content when the checkbox is checked */
+#expand-toggle:checked ~ .expandable {
+  opacity: 1;
+  font-size: 1.4rem;
+}
+
+/* Style the button when the checkbox is checked */
+
 @media (max-width: 576px) {
   main {
     display: flex;
