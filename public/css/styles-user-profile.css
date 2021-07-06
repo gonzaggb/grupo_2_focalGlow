@@ -90,6 +90,11 @@ a {
   width: 80%;
 }
 
+input:focus,
+textarea:focus {
+  background-color: #ffde59;
+  padding-left: 10px;
+}
 .row p {
   font-size: 1.4rem;
   width: 60%;
@@ -163,26 +168,28 @@ ul {
   font-style: italic;
 }
 
-section article input {
-  display: visible;
-}
 /* Hide expandable content by default */
 .expandable {
   opacity: 0;
+
   font-size: 1px;
   transition: all 1s;
+}
+/* Show hidden content when the checkbox is checked */
+#expand-toggle:checked ~ .expandable,
+input[name='password'] {
+  opacity: 1;
+  font-size: 1.4rem;
+}
+#expand-toggle:checked ~ .expandable input {
+  background-color: #ffde59;
+  padding-left: 10px;
 }
 
 /* Style the button */
 #expand-btn {
   display: block;
   font-weight: bold;
-  font-size: 1.4rem;
-}
-
-/* Show hidden content when the checkbox is checked */
-#expand-toggle:checked ~ .expandable {
-  opacity: 1;
   font-size: 1.4rem;
 }
 
