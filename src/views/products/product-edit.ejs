@@ -102,7 +102,7 @@
                             <label for="power">Potencia [W]: </label>
                             <% for(j=0;j<4;j++){ %>
                                 <select name="power" class="select">
-                                    <option value="<%= productFound.power[j] %>"><%= productFound.power[j] %></option>
+                                        <option value="<%=productFound && productFound.power ? productFound.power[j] : ''%>"><%=productFound && productFound.power ? productFound.power[j]+"W" : 'Seleccionar'%></option>
                                     <% for(i=1;i<=100;i++){ %>     
                                         <option value="<%=[i]%>">
                                             <%=[i]%>W
