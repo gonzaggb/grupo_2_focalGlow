@@ -28,6 +28,7 @@
 				<div class="file-btn">
 					Cambiar imagen
 					<input onchange="loadFile(event)" type="file" name="profileImg" accept="jpg">
+				
 					<script>
           	var loadFile = function (event) {
             	var output = document.getElementById('output');
@@ -101,8 +102,8 @@
 					
 					<label for="expand-toggle" id="expand-btn">¿Modificar contraseña?</label>
 					
-					<input type="radio" name="passModify" value="Sí" id="expand-toggle"><span> Sí</span>
-					<input type="radio" name="passModify" value="No" checked><span> No</span>
+					<input type="radio" name="passModify" value="yes" id="expand-toggle" <%=(locals.errors && (errors.password || errors.rePassword))?'checked':''%>><span> Sí</span>
+					<input type="radio" name="passModify" value="no" <%=(locals.errors && (errors.password || errors.rePassword))?'':'checked'%>><span> No</span>
 					
 					
 

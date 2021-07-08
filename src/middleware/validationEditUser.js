@@ -15,34 +15,37 @@ const validations = [
 			return true
 		}).withMessage('El usuario ya existe'),
 
-	//MARS: Le doy la opcion de que si NO desea modificar la contraseña pase el middleware	
-	oneOf([body('passModify').equals('No'),
-	[
-		body('password').notEmpty().withMessage('Debes poner una contraseña').bail(),
-		body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña').bail(),
-		/*	body('rePassword').custom((val, { req }) => {
-				let password = req.body.password
-				if (val != password) {
-					throw new Error(`Las contraseñas deben coincidir`)
-				}
-				return true
-			})*/
-	]], 'Debes ingresar una contraseña y que coincidan')
+	//MARS: Le doy la opcion de que si desea modificar la contraseña entonces debe ser validado por el middleware. Ver el metodo .if(body...) que trae express validator
+
+
+	body('password').if(body('passModify').equals('yes')).notEmpty().withMessage(`Debes introducir una contraseña`),
+
+	body('rePassword').if(body('passModify').equals('yes')).notEmpty().withMessage('Debes confirmar la contraseña'),
+
+	body('rePassword').custom((val, { req }) => {
+		let password = req.body.password
+		if (val != password) {
+			throw new Error(`Las contraseñas deben coincidir`)
+		}
+		return true
+	}),
+
+	/*body('profileImg').custom((value, { req }) => {
+		const file = req.file
+		if (!file) {
+			throw new Error('Debes subir una imagen')
+		} else if (!files.isFileImage(file.originalname)) {
+			throw new Error(`Ingrese un archivo que sea una imagen`)
+		}
+		return true
+	})*/
 
 ]
 
 
 
 
-/*body('profileImg').custom((value, { req }) => {
-		const file = req.file
-		if (!file) {
-				throw new Error('Debes subir una imagen')
-		} else if (!files.isFileImage(file.originalname)) {
-				throw new Error(`Ingrese un archivo que sea una imagen`)
-		}
-		return true
-})*/
+
 
 
 

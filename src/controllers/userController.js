@@ -92,9 +92,9 @@ const controller = {
   update: (req, res) => {
     const { id } = req.params
     const userToEdit = user.findByPk(id);
-    const validationStatus = validationResult(req)
-    console.log(validationStatus.mapped())// trae los resultados del middleware
-    if (validationStatus.errors.length > 0) {
+    const validationStatus = validationResult(req) // trae los resultados del middleware
+
+    if (!validationStatus.isEmpty()) {
       //Si hay errores que pasa
 
       return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
