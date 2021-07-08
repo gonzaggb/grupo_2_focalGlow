@@ -1,4 +1,4 @@
-const { body, oneOf } = require('express-validator')
+const { body } = require('express-validator')
 const files = require('../helpers/files')
 const userModel = require('../models/user')
 const validations = [
