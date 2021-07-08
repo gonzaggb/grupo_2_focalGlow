@@ -118,7 +118,7 @@
 
 					<div class="row expandable">
 						<label for="rePassword">Confirmar contraseña</label>
-						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="rePassword" id="rePassword"
+						<input class="<%=(locals.errors && errors.rePassword) ? 'error edit' : 'edit'%>" type="password" name="rePassword" id="rePassword"
 							<% if (locals.errors && errors.rePassword) {%>
 								placeholder = "<%=errors.rePassword.msg%>"
 							<%}%>

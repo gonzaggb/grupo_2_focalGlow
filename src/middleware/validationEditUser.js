@@ -7,7 +7,8 @@ const validations = [
 	body('email').notEmpty().withMessage('Debes poner tu email').bail().isEmail().withMessage("El email ingresado no es valido").bail()
 		.custom((val, { req }) => {
 			const userFound = userModel.findByField('email', val)
-			if (userFound && userFound.id == req.session.logged) {
+			const userAdmin = userModel.findByPk(req.session.logged)
+			if (userFound && (userFound.id == req.session.logged || userAdmin.category == 'admin')) {
 				return true
 			} else if (userFound) {
 				return false
