@@ -10,6 +10,11 @@
 
     <main>
       <h3 class="titulo" id="title">Listado de Categorías</h3>
+			<div class="add-container">
+      	<a href="/category/add"><button id="product-create" class="add-product">Agregar Categoría</button></a>
+    	</div>
+
+    	<h4 class='form-lista-productos'>Cantidad de Categorías : <%= categoryList.length %> </h4>
 
       <table id="customers">
         <tr>
@@ -34,7 +39,7 @@
                                  
           </td>
           <td class="center"> 
-            <a href="/category/<%=e.id%>/detail"><i class="fas fa-search"></i></a>
+            <a href="/category/detail/<%=e.id%>"><i class="fas fa-search"></i></a>
           </td>
           <td class="center"> 
               <a href="/category/<%=e.id%>/edit"><i class="far fa-edit"></i></a>

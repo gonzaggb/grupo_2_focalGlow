@@ -1,0 +1,46 @@
+<!-- Partial head -->
+<%- include('../partials/head.ejs')%>
+    <title>Perfil | Focal Glow</title>
+    <link rel="stylesheet" href="/css/styles-user-profile.css">
+
+</head>
+   
+
+<body>
+    <%- include('../partials/header.ejs')%>
+  <main>
+    <aside class="column-1">  	
+      <img class="profileImg"
+            src="<%=category.imageCover%>">
+     </aside>
+   
+		<section class="data">
+      <div class="title">
+        <h2><%=category.name%></h2>
+        <a href="/category/<%=category.id%>/edit"><p class="edit-button">Editar</p> </a>
+      </div>
+
+      <article class="profile-info">
+			  <div class = "row">
+				  <label>User Id</label>
+          <p><%=category.id%></p>
+			  </div>
+			  <div class = "row">
+			  <label>Nombre</label>
+          <p><%=category.name%></p>
+			  </div>
+			      </article>        
+    </section>
+        
+		       
+
+  
+                
+     
+               
+            
+  </main>
+
+</body>
+
+</html>

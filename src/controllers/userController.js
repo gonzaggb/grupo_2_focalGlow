@@ -75,7 +75,7 @@ const controller = {
 
   list: (req, res) => {
     const userList = user.findAll();
-    res.render('users/usersList.ejs', { userList })
+    res.render('users/users-list.ejs', { userList })
   },
   delete: (req, res) => {
     const id = req.params.id

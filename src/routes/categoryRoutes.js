@@ -9,11 +9,11 @@ const adminMiddleware = require('../middleware/adminMiddleware');
 const categoryController = require('../controllers/categoryController')
 
 //Asigno a cada ruta la propiedad del controlador
-router.get('/:categoryName/:id', categoryController.category)
+router.get('/:categoryName/:id', categoryController.landing)
 
 
-//envia al usuario admin al listado de usuarios
+//Rutas para Admin únicamente
 router.get('/', authMiddleware, adminMiddleware, categoryController.list)
-router.get('/:id/detail', authMiddleware, adminMiddleware, categoryController.detail)
+router.get('/detail/:id', authMiddleware, adminMiddleware, categoryController.detail)
 
 module.exports = router
