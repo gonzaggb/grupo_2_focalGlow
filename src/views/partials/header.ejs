@@ -36,7 +36,7 @@
           <a href="/#main-categori">Shop</a>
           <ul class="desplegable">
             <%locals.categories.forEach(e =>{%>
-              <li><a href="/categorias/<%=e.name%>/<%=e.id%>"><%=e.name.charAt(0).toUpperCase() + e.name.slice(1)%></a></li>
+              <li><a href="/category/<%=e.name%>/<%=e.id%>"><%=e.name.charAt(0).toUpperCase() + e.name.slice(1)%></a></li>
             <%})%>             
 
           </ul>
