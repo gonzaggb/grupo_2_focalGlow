@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataTypes) => {
-    const alias = 'Products'
+    const alias = 'Product'
     const columns = {
         id: {
             autoIncrement: true,
@@ -15,23 +15,23 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DECIMAL,
         },
         description: {
-            type : DataTypes.STRING,
-            allowNull : false
+            type: DataTypes.STRING,
+            allowNull: false
         },
         category_id: {
             type: DataTypes.INTEGER
         }
     }
-    const config ={
-        tablename : 'products',
-        timestamps : false
+    const config = {
+        tablename: 'products',
+        timestamps: false
     }
     const Product = sequelize.define(alias, columns, config);
-    
+
     Product.associate = function (models) {
-        Product.belongsTo(models.Category,{
+        Product.belongsTo(models.Category, {
             as: 'categoryes',
-            foreignKey : 'category_id'
+            foreignKey: 'category_id'
         });
         Product.belongsToMany(models.Feature, {
             as: 'features',
@@ -40,8 +40,8 @@ module.exports = (sequelize, DataTypes) => {
             otherKey: 'feature_id',
             timestamps: false
         });
-        
+
     }
-    
+
     return Product;
-}    
+}
