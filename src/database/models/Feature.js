@@ -24,14 +24,14 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
     const Feature = sequelize.define(alias, columns, config);
-    Files.associate = function (models) {
-        Files.belongsToMany(models.Product, {
+    /*Feature.associate = function (models) {
+        Feature.belongsToMany(models.Product, {
             as: 'products',
-            through :'product_feature',
+            through: 'product_feature',
             foreignKey: 'feature_id',
-            otherKey:  'product_id',
-            timestamps : false
+            otherKey: 'product_id',
+            timestamps: false
         });
-    }
+    }*/
     return Feature;
 }

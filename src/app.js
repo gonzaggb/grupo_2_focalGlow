@@ -8,12 +8,12 @@ app.use(express.static(publicPath))
 
 //requerimos y usamos express-session
 const session = require('express-session')
-app.use(session({secret:'shhhhh'}))
+app.use(session({ secret: 'shhhhh' }))
 //requerimos  e implementamos  cookie-parser
 const cookieParser = require('cookie-parser')
 app.use(cookieParser('secreto'))
 // requerimos e implementamos cookiesessionMiddleware
-const cookieSession  = require('./middleware/cookieSessionMiddleware')
+const cookieSession = require('./middleware/cookieSessionMiddleware')
 app.use(cookieSession)
 //implementamos middleware de sessionToLocal
 const sessionToLocal = require('./middleware/sessionToLocal')
@@ -54,6 +54,6 @@ app.use('/categorias', categoryRoutes)
 app.use('/users', userRoutes)
 
 // Ruta 404
-app.use((req,res,next)=>{
+app.use((req, res, next) => {
   res.status(404).render('404.ejs')
 })
