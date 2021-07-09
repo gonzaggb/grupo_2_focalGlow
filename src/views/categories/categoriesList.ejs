@@ -1,0 +1,57 @@
+<!-- Partial head -->
+<%- include('../partials/head.ejs')%>
+
+	<title>Focal Glow | Listado de Categorías </title>
+  <link rel="stylesheet" href="/css/styles-user-list.css">
+</head>
+
+  <body>
+    <%- include('../partials/header.ejs')%>
+
+    <main>
+      <h3 class="titulo" id="title">Listado de Categorías</h3>
+
+      <table id="customers">
+        <tr>
+          <th class="id center">ID</th>
+          <th class ="left">Nombre</th>
+          <th class="profile center">Imagen de Categoría</th>
+          <th class="center">Ver</th>
+          <th class="center">Editar</th>
+          <th class ="center">Borrar</th>
+        </tr>
+      <% categoryList.forEach(e=> { %>
+        <tr>
+          <td class="id center">
+            <%= e.id%>
+          </td>
+          <td>
+            <%= e.name%>
+          </td>
+          <td class="center">
+            <img class = "img-round" src=
+            <%=e.imageCover ?e.imageCover : '/img/profile-pictures/profile.jpg'%>>
+                                 
+          </td>
+          <td class="center"> 
+            <a href="/category/<%=e.id%>/detail"><i class="fas fa-search"></i></a>
+          </td>
+          <td class="center"> 
+              <a href="/category/<%=e.id%>/edit"><i class="far fa-edit"></i></a>
+          </td>
+          <td class="center">
+              <form action="/category/<%=e.id%>?_method=DELETE" method="POST">
+                  <button type="submit"><i class="far fa-trash-alt"></i></button>
+              </form>
+          </td>
+      	</tr>
+      <%})%>
+      </table> 
+                
+			<div class="up-button">
+        <a href="#title"><i class="fas fa-chevron-up"></i></a>
+      </div>
+    </main>
+  </body>
+
+</html>

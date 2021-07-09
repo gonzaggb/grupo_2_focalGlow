@@ -9,6 +9,16 @@ const controller = {
     let dataCategory = { category, product }
     res.render('category.ejs', { dataCategory })
   },
+
+  list: (req, res) => {
+    const categoryList = categories.findAll();
+    res.render('categories/categoriesList.ejs', { categoryList })
+  },
+
+  detail: (req, res) => {
+
+    res.render('categoryDetail.ejs', { category })
+  }
 }
 
 module.exports = controller
