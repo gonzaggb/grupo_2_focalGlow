@@ -19,7 +19,6 @@ const controller = {
   detail: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
-    console.log(productFound)
     let category = productFound.category
     //Traigo todos los productos que están en la misma categoría
     let productsCategory = product.filterByCategory(category)

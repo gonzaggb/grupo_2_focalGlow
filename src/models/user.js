@@ -19,7 +19,6 @@ module.exports = {
     },
     //crea el nuevo id
     generateId() {
-        console.log('Ingrese a generate ID')
         const newId = Number(this.readFile().pop().id) + 1
         return newId
     },
@@ -61,7 +60,7 @@ module.exports = {
         return usersUpdate
     },
     update(userUpdate, id) {
-        console.log(id)
+        
         const users = this.readFile()
         const modifiedUsers = users.map(usersEdit => {
             if (usersEdit.id == id) {
