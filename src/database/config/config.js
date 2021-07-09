@@ -2,7 +2,8 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "database_development",
+    "database": "focal_glow_db",
+    "port": 3306,
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
