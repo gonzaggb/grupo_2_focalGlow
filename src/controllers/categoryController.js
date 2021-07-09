@@ -3,8 +3,8 @@ const products = require('../models/product')
 
 const controller = {
   landing: (req, res) => {
-    const id = req.params.id
-    let category = categories.findByPk(id)
+    const name = req.params.categoryName
+    let category = categories.findByName(name)
     let product = products.filterByCategory(category.name)
     let dataCategory = { category, product }
     res.render('category.ejs', { dataCategory })
@@ -19,6 +19,15 @@ const controller = {
     let category = categories.findByPk(req.params.id)
 
     res.render('categories/category-detail.ejs', { category })
+  },
+
+  edit: (req, res) => {
+    let category = categories.findByPk(req.params.id)
+    res.render('categories/category-edit.ejs', { category })
+  },
+
+  update: (req, res) => {
+
   }
 }
 

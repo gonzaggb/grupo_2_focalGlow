@@ -9,11 +9,13 @@ const adminMiddleware = require('../middleware/adminMiddleware');
 const categoryController = require('../controllers/categoryController')
 
 //Asigno a cada ruta la propiedad del controlador
-router.get('/:categoryName/:id', categoryController.landing)
+router.get('/:categoryName', categoryController.landing)
 
 
 //Rutas para Admin únicamente
 router.get('/', authMiddleware, adminMiddleware, categoryController.list)
 router.get('/detail/:id', authMiddleware, adminMiddleware, categoryController.detail)
+router.get('/edit/:id', authMiddleware, adminMiddleware, categoryController.edit)
+router.put('/edit/:id', uploadRegister.single('imageCover'), authMiddleware, adminMiddleware, categoryController.update)
 
 module.exports = router
