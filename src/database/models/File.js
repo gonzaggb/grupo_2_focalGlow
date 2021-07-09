@@ -21,5 +21,12 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     }
     const Files = sequelize.define(alias, columns, config);
+    
+    Files.associate = function (models) {
+        Files.hasMany(models.Category, {
+            as: 'products',
+            foreignKey: 'product_id'
+        });
+    }
     return Files;
 }
