@@ -21,11 +21,21 @@ const controller = {
     res.render('categories/category-detail.ejs', { category })
   },
 
+  formNew: (req, res) => {
+    res.render('categories/category-create.ejs')
+  },
+
   edit: (req, res) => {
     let category = categories.findByPk(req.params.id)
     res.render('categories/category-edit.ejs', { category })
   },
 
+  delete: (req, res) => {
+    let category = categories.delete(req.params.id)
+
+
+    return res.redirect('/category')
+  },
   update: (req, res) => {
 
   }

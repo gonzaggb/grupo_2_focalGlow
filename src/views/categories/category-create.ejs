@@ -1,0 +1,86 @@
+<!-- Partial head -->
+<%- include('../partials/head.ejs')%>
+<title>Editar Categoría | Focal Glow</title>
+<link rel="stylesheet" href="/css/styles-category-detail.css">
+    
+
+
+
+</head>
+<script>
+  function cambiar() {
+    var pdrs = document.getElementById('file-upload').files[0].name;
+    document.getElementById('info').innerHTML = pdrs;
+  }
+</script>
+
+<body>
+  <%- include('../partials/header.ejs')%>
+
+  
+    <form class="registry-form2" method="POST" action="/category/<%=category.id%>/edit?_method=PUT" enctype="multipart/form-data">
+			<main>
+			<aside class="column-1">  	
+				<label for="profileImg">
+					<img id="output" class="profileImg" for="profileImg" src="<%=category.imageCover ? category.imageCover : '/img/profile-pictures/profile.jpg' %>">
+				</label>
+
+				<div class="file-btn">
+					Cambiar imagen
+					<input onchange="loadFile(event)" type="file" name="profileImg" accept="jpg">
+				
+					<script>
+          	var loadFile = function (event) {
+            	var output = document.getElementById('output');
+            	output.src = URL.createObjectURL(event.target.files[0]);
+            	output.onload = function () {
+              	URL.revokeObjectURL(output.src) // free memory
+            	}
+          	};
+      		</script>
+				</div>
+			
+			</aside>
+
+			
+
+			<section class="data">
+        <div class="title">
+					<h2><%=category.name%></h2>
+					<button type="submit" class="btn">Actualizar</button>
+				</div>
+
+				<article class="profile-info">        
+					<div class = "row">    
+						<label for="id">Category Id</label>
+            <p class="no-edit"><%=category.id%></p>
+					</div>
+
+					<div class = "row">
+						<label for="first_name">Nombre</label>
+            <input class="<%=(locals.errors && errors.name) ? 'error edit' : 'edit'%>" type="text" name="name" id="name"
+							<% if (locals.errors && errors.name) {%>
+								placeholder = "<%=errors.name.msg%>"
+							<%} else if (locals.oldData) { %>
+								value="<%=oldData.name%>" <%} else {%>
+								value="<%=category.name%>"<%}%>
+						>
+					</div>
+
+					
+
+					
+				
+				
+         
+          <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
+          <div class="button-container">
+				</article>    
+      </section>
+		</main>
+    </form> 
+	
+	
+</body>
+
+</html>

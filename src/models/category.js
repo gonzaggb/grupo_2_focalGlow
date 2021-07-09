@@ -14,6 +14,11 @@ module.exports = {
     return categories
   },
 
+  writeFile(data) {
+    let dataJson = JSON.stringify(data, null, 2)
+    fs.writeFileSync(this.filename, dataJson);
+  },
+
   findAll() {
     const categories = this.readFile()
     return categories
@@ -28,4 +33,14 @@ module.exports = {
     const categories = this.readFile()
     return categories.find((e) => e.name == name)
   },
+
+  delete(id) {
+    const categories = this.readFile()
+    const categoriesUpdate = categories.filter(e => e.id != id)
+    this.writeFile(categoriesUpdate)
+    return categoriesUpdate
+
+  },
+
 }
+
