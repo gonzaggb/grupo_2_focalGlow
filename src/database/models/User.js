@@ -25,13 +25,13 @@ module.exports = (sequelize, DataTypes) => {
         },
         phone: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         adress: {
             type: DataTypes.STRING,
-            allowNull: false
+            allowNull: true
         },
-        image: {
+        profileImg: {
             type: DataTypes.STRING,
             allowNull: false
         },
@@ -42,7 +42,8 @@ module.exports = (sequelize, DataTypes) => {
     }
     const config = {
         tablename: 'users',
-        timestamps: false
+        timestamps: false,
+        underscored: true
     }
     const Users = sequelize.define(alias, columns, config);
     return Users;

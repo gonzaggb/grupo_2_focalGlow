@@ -4,6 +4,7 @@ const { isFileImage } = require('../helpers/files')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const userModel = require('../models/user')
+const {User} = require('../database/models')
 
 
 
@@ -59,25 +60,32 @@ const controller = {
       }
     }
     let { first_name, last_name, email, password, address, phone } = req.body
+    //FIXME VER DONDE SE USABA LA RUTA DE LA IMAGEN PARA ARREGLARLO
     let newUser = {
       first_name,
       last_name,
       email,
       password: bcrypt.hashSync(password, 10),
-      profileImg: req.file ? '/img/profile-pictures/' + req.file.filename : '/img/profile-pictures/profile.jpg',
+      profileImg: req.file ?  req.file.filename : 'profile.jpg',
       address,
       phone,
-      category: 'normal'
+      role: 'user'
     }
 
-    user.create(newUser)
-    res.redirect('/users/login')
+    User.create(newUser)
+      .then(()=>{
+        res.redirect('/users/login')
+      })
+    
   },
 
   //FIXME USER FINDALL
   list: (req, res) => {
-    const userList = user.findAll();
-    res.render('users/usersList.ejs', { userList })
+    User.findAll()
+      .then(()=>{
+        res.render('users/usersList.ejs', { userList })
+      })
+    
   },
   //FIXME USER DESTROY
   delete: (req, res) => {
