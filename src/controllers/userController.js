@@ -16,7 +16,7 @@ const controller = {
 
   },
   //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
-  //FIXME USER FINDONE()
+
   loginUser: (req, res) => {
     const formValidation = validationResult(req)
     const oldValues = req.body
@@ -88,7 +88,7 @@ const controller = {
 
   },
 
-  //FIXME USER FINDALL
+
   list: (req, res) => {
     User.findAll()
       .then((userList) => {
@@ -96,17 +96,25 @@ const controller = {
       })
 
   },
-  //FIXME USER DESTROY
+  //FIXME USER DESTROY ( revisar)
   delete: (req, res) => {
     const id = req.params.id
-    user.delete(id)
-    res.redirect('/users')
+    User.destroy({
+      where : {id}
+    })
+      .then(()=>{
+        res.redirect('/users')
+      })
+    
   },
-  //FIXME USER 
+  //FIXME USER (revisar)
   edit: (req, res) => {
     const id = req.params.id
-    const userToEdit = user.findByPk(id)
-    res.render('users/user-edit.ejs', { userToEdit })
+    User.findByPk(id)
+      .then ((userToEdit) =>{
+        res.render('users/user-edit.ejs', { userToEdit })
+      })
+    
   },
   //FIXME USER UPDATE
   update: (req, res) => {
@@ -146,11 +154,14 @@ const controller = {
     res.redirect('/users')
   },
 
-  //FIXME USER 
+  //FIXME USER (revisar)
   profile: (req, res) => {
     const id = req.params.id
-    const userToView = user.findByPk(id)
-    res.render('users/profile.ejs', { userToView })
+    User.findByPk(id)
+      .then ((userToView)=>{
+         res.render('users/profile.ejs', { userToView })
+      })
+   
   },
 
   logout: (req, res) => {
