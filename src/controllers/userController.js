@@ -15,6 +15,7 @@ const controller = {
 
   },
   //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
+  //FIXME USER FINDONE()
   loginUser: (req, res) => {
     const formValidation = validationResult(req)
     const oldValues = req.body
@@ -44,6 +45,7 @@ const controller = {
   },
 
   //captura y envia los datos enviados por post al modelo
+  //FIXME USER CREATE
   create: (req, res) => {
     const validationStatus = validationResult(req) // trae los resultados del middleware
     if (validationStatus.errors.length > 0) {
@@ -72,23 +74,24 @@ const controller = {
     res.redirect('/users/login')
   },
 
-
+  //FIXME USER FINDALL
   list: (req, res) => {
     const userList = user.findAll();
     res.render('users/usersList.ejs', { userList })
   },
+  //FIXME USER DESTROY
   delete: (req, res) => {
     const id = req.params.id
     user.delete(id)
     res.redirect('/users')
   },
-
+  //FIXME USER 
   edit: (req, res) => {
     const id = req.params.id
     const userToEdit = user.findByPk(id)
     res.render('users/user-edit.ejs', { userToEdit })
   },
-
+  //FIXME USER UPDATE
   update: (req, res) => {
     const { id } = req.params
     const userToEdit = user.findByPk(id);
@@ -126,7 +129,7 @@ const controller = {
     res.redirect('/users')
   },
 
-
+  //FIXME USER 
   profile: (req, res) => {
     const id = req.params.id
     const userToView = user.findByPk(id)

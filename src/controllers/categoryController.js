@@ -3,6 +3,7 @@ const products = require('../models/product')
 const db = require('../database/models')
 
 const controller = {
+  //FIXME PRODUCT 
   category: (req, res) => {
     const name = req.params.id
     let category = categories.findByPk(name)

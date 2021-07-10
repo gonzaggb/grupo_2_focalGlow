@@ -12,10 +12,12 @@ const path = require('path')
 const { Console } = require('console')
 
 const controller = {
+  //FIXME READ
   list: (req, res) => {
     let products = product.findAll()
     res.render('products/product-list.ejs', { products: products })
   },
+  //FIXME  READ
   detail: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
@@ -36,6 +38,7 @@ const controller = {
   formNew: (req, res) => {
     res.render('products/product-create.ejs')
   },
+  //FIXME CREATE PRODUCT 
   create: (req, res) => {
     let errors = validationResult(req)
     const productNew = req.body
@@ -51,13 +54,14 @@ const controller = {
       res.render('products/product-create.ejs', { errors: errors.mapped(), old: req.body })
     }
   },
-
+  //FIXME FORM UPDATE
   edit: (req, res) => {
     let id = req.params.id
     let productFound = product.findByPk(id)
     let errors = validationResult(req)
     res.render('products/product-edit.ejs', { productFound: productFound })
   },
+  //FIXME UPDATE PRODUCT
   update: (req, res) => {
     let errors = validationResult(req)
     let id = req.params.id
@@ -125,7 +129,7 @@ const controller = {
       res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound })
     }
   },
-
+  //FIXME DESTROY PRODUCT
   delete: (req, res) => {
     let id = req.params.id
     productToDelete = product.findByPk(id)

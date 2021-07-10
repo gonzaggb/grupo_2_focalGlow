@@ -8,6 +8,7 @@ const random = require('../helpers/utilities')
 const SALEIMAGES = 4 // cantidad de imagenes que se muestran en la parte de SALE
 
 const controller = {
+  //FIXME CATEGORIE 
   home: (req, res) => {
     const randomArray = random.randomArray(SALEIMAGES, agregarProducto.findAll().length)
     let products = agregarProducto.findAll()

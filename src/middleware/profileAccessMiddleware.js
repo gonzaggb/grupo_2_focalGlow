@@ -3,6 +3,7 @@
 const userModel = require('../models/user')
 
 module.exports = (req, res, next) => {
+    //FIXME
     const userSession = req.session.logged
 
     const { id, category } = userModel.findByPk(userSession)
