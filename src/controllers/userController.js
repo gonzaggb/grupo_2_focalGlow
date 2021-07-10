@@ -4,7 +4,7 @@ const { isFileImage } = require('../helpers/files')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const userModel = require('../models/user')
-const {User} = require('../database/models')
+const { User } = require('../database/models')
 
 
 
@@ -25,19 +25,28 @@ const controller = {
       return res.render('users/login', { oldValues, errors: formValidation.mapped() })
     }
     const { email, remember } = req.body
-    const user = userModel.findByField('email', email)
-    req.session.logged = user.id
-    if (remember) {
-      res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
-    }
+    User.findOne(
+      {
+        where:
+          { email }
+      })
+      .then((user) => {
 
+        req.session.logged = user.id
+        if (remember) {
+          res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
+        }
 
-    //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
-    if (user.category == 'admin') {
-      res.redirect('/product')
-    } else {
-      res.redirect('/')
-    }
+        //FIXME AGREGAR UN CONSOLE.LOG DE USER
+        //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
+        if (user.role == 'admin') {
+          res.redirect('/product')
+        } else {
+          res.redirect('/')
+        }
+
+      })
+
 
   },
   //envia al usuario a la pagina de registro
@@ -46,7 +55,7 @@ const controller = {
   },
 
   //captura y envia los datos enviados por post al modelo
-  //FIXME USER CREATE
+
   create: (req, res) => {
     const validationStatus = validationResult(req) // trae los resultados del middleware
     if (validationStatus.errors.length > 0) {
@@ -66,26 +75,26 @@ const controller = {
       last_name,
       email,
       password: bcrypt.hashSync(password, 10),
-      profileImg: req.file ?  req.file.filename : 'profile.jpg',
+      profileImg: req.file ? req.file.filename : 'profile.jpg',
       address,
       phone,
       role: 'user'
     }
 
     User.create(newUser)
-      .then(()=>{
+      .then(() => {
         res.redirect('/users/login')
       })
-    
+
   },
 
   //FIXME USER FINDALL
   list: (req, res) => {
     User.findAll()
-      .then(()=>{
+      .then((userList) => {
         res.render('users/usersList.ejs', { userList })
       })
-    
+
   },
   //FIXME USER DESTROY
   delete: (req, res) => {
