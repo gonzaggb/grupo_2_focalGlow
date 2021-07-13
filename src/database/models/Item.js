@@ -1,4 +1,3 @@
-
 module.exports = (sequelize, DataTypes) => {
     const alias = 'Item'
     const columns = {
@@ -8,21 +7,21 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         productName: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         productPrice: {
             type: DataTypes.DECIMAL,
         },
         productDescription: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         productFeatures: {
-            type: DataTypes.STRING
+            type: DataTypes.STRING(50)
         },
-        productImages: {
-            type: DataTypes.STRING
+        productImage: {
+            type: DataTypes.STRING(50)
         },
         quantity: {
             type: DataTypes.INTEGER
@@ -32,11 +31,19 @@ module.exports = (sequelize, DataTypes) => {
         },
         orderId: {
             type: DataTypes.INTEGER
+        },
+        userId: {
+            type: DataTypes.INTEGER
+        },
+        productId: {
+            type: DataTypes.INTEGER
         }
     }
     const config = {
-        tablename: 'products',
-        timestamps: false
+        tablename: 'items',
+        timestamps: false,
+        underscored: true
+
     }
     const Item = sequelize.define(alias, columns, config);
 
