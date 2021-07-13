@@ -45,6 +45,6 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
         underscored: true
     }
-    const Users = sequelize.define(alias, columns, config);
-    return Users;
+    const User = sequelize.define(alias, columns, config);
+    return User;
 }
