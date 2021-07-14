@@ -1,6 +1,6 @@
 const categories = require('../models/category')
 const products = require('../models/product')
-const db = require('../database/models')
+
 
 const controller = {
   //FIXME PRODUCT 
