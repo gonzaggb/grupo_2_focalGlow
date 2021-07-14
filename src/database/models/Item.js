@@ -52,6 +52,7 @@ module.exports = (sequelize, DataTypes) => {
                 as: 'items',
                 foreignKey: 'userId'
             })
+            
     }
 
     return Item;

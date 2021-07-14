@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         role: {
-            type: DataTypes.ENUM('user','admin'),
+            type: DataTypes.ENUM('user', 'admin'),
             allowNull: false
         },
     }
@@ -46,8 +46,14 @@ module.exports = (sequelize, DataTypes) => {
         underscored: true
     }
     const User = sequelize.define(alias, columns, config);
-    User.associate = function(model){
+    User.associate = function (model) {
         User.hasMany(model.Item,
+            {
+                as: 'user',
+                foreignKey: 'userId'
+
+            })
+        User.hasMany(model.Order,
             {
                 as: 'user',
                 foreignKey: 'userId'
