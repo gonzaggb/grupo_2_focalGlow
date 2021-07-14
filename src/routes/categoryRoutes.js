@@ -7,7 +7,7 @@ const categoryController = require('../controllers/categoryController')
 
 //Asigno a cada ruta la propiedad del controlador
 
-//router.get('/:categoryName/:id', categoryController.category)
+router.get('/:categoryName/:id', categoryController.landing)
 
 
 module.exports = router
