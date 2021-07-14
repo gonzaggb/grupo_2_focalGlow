@@ -25,13 +25,18 @@ module.exports = (sequelize, DataTypes) => {
         underscored: true
     }
     const Order = sequelize.define(alias, columns, config);
-    Order.associate = function (model){
-        Order.belongTo(model.User,
+    Order.associate = function (model) {
+        Order.belongsTo(model.User,
             {
                 as: 'orders',
                 foreignKey: 'userId'
             })
-            
+        Order.belongsTo(model.Item,
+            {
+                as: 'items',
+                foreignKey: 'orderId'
+            })
+
     }
     return Order;
 }

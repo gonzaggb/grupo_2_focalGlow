@@ -46,13 +46,18 @@ module.exports = (sequelize, DataTypes) => {
 
     }
     const Item = sequelize.define(alias, columns, config);
-    Item.associate = function (model){
-        Item.belongTo(model.User,
+    Item.associate = function (model) {
+        Item.belongsTo(model.User,
             {
-                as: 'items',
+                as: 'item',
                 foreignKey: 'userId'
             })
-            
+        Item.hasMany(model.Order,
+            {
+                as: 'order',
+                foreignKey: 'orderId'
+            })
+
     }
 
     return Item;
