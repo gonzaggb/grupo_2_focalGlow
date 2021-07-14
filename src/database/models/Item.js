@@ -46,6 +46,13 @@ module.exports = (sequelize, DataTypes) => {
 
     }
     const Item = sequelize.define(alias, columns, config);
+    Item.associate = function (model){
+        Item.belongTo(model.User,
+            {
+                as: 'items',
+                foreignKey: 'userId'
+            })
+    }
 
     return Item;
 
