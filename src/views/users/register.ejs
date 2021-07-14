@@ -19,18 +19,18 @@
       <form class="registry-form2" method="POST" action="/users/register" enctype="multipart/form-data">
         <div class="registry-container2">
 
-          <label for="first_name">Nombre</label>
-          <input class="<%=locals.errors && errors.first_name ? 'error' : 'input-login'%>" type="text" name="first_name" id="first_name"
-					 <% if (locals.errors && errors.first_name) {%> placeholder="<%=errors.first_name.msg%>"
+          <label for="firstName">Nombre</label>
+          <input class="<%=locals.errors && errors.firstName ? 'error' : 'input-login'%>" type="text" name="firstName" id="firstName"
+					 <% if (locals.errors && errors.firstName) {%> placeholder="<%=errors.firstName.msg%>"
           <% } else if (locals.oldData) {%>
-              value = "<%=oldData.first_name%>"
+              value = "<%=oldData.firstName%>"
           <%}%>>
 
-          <label for="last_name">Apellido</label>
-          <input class="<%=locals.errors && errors.last_name ? 'error' : 'input-login'%>" type="text" name="last_name" id="last_name" 
-						<% if (locals.errors && errors.last_name) { %> placeholder="<%=errors.last_name.msg%>"
+          <label for="lastName">Apellido</label>
+          <input class="<%=locals.errors && errors.lastName ? 'error' : 'input-login'%>" type="text" name="lastName" id="lastName" 
+						<% if (locals.errors && errors.lastName) { %> placeholder="<%=errors.lastName.msg%>"
             <% } else if (locals.oldData) {%>
-							 value = "<%=oldData.last_name%>"
+							 value = "<%=oldData.lastName%>"
             <%}%>>
 
           <label for="email">Email</label>

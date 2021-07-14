@@ -7,28 +7,28 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        first_name: {
-            type: DataTypes.STRING,
+        firstName: {
+            type: DataTypes.STRING(50),
             allowNull: false
         },
-        last_name: {
-            type: DataTypes.STRING,
+        lastName: {
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         email: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         password: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: false
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.INTEGER(50),
             allowNull: true
         },
         address: {
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(50),
             allowNull: true
         },
         profileImg: {
@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         role: {
-            type: DataTypes.STRING,
+            type: DataTypes.ENUM('user','admin'),
             allowNull: false
         },
     }
