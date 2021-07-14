@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false
         },
         role: {
-            type: DataTypes.ENUM('user','admin'),
+            type: DataTypes.ENUM('user', 'admin'),
             allowNull: false
         },
     }
@@ -45,6 +45,20 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false,
         underscored: true
     }
-    const Users = sequelize.define(alias, columns, config);
-    return Users;
+    const User = sequelize.define(alias, columns, config);
+    User.associate = function (model) {
+        User.hasMany(model.Item,
+            {
+                as: 'user',
+                foreignKey: 'userId'
+
+            })
+        User.hasMany(model.Order,
+            {
+                as: 'user',
+                foreignKey: 'userId'
+
+            })
+    }
+    return User;
 }
