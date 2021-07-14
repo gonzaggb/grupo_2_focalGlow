@@ -1,6 +1,6 @@
 
 module.exports = (sequelize, DataTypes) => {
-    const alias = 'Features'
+    const alias = 'Feature'
     const columns = {
         id: {
             autoIncrement: true,
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     const Feature = sequelize.define(alias, columns, config);
     Feature.associate = function (models) {
         Feature.belongsToMany(models.Product, {
-            as: 'features',
+            as: 'products',
             through: 'product_feature',
             foreignKey: 'feature_id',
             otherKey: 'product_id',
