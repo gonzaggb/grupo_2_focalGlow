@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             type: DataTypes.INTEGER
         },
-        image: {
+        name: {
             type: DataTypes.STRING,
             allowNull: false
         },
