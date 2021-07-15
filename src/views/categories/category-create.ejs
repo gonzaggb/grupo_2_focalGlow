@@ -18,11 +18,11 @@
   <%- include('../partials/header.ejs')%>
 
   
-    <form class="registry-form2" method="POST" action="/category/<%=category.id%>/edit?_method=PUT" enctype="multipart/form-data">
+    <form class="registry-form2" method="POST" action="/category/add" enctype="multipart/form-data">
 			<main>
 			<aside class="column-1">  	
 				<label for="profileImg">
-					<img id="output" class="profileImg" for="profileImg" src="<%=category.imageCover ? category.imageCover : '/img/profile-pictures/profile.jpg' %>">
+					<img id="output" class="profileImg" for="profileImg" src="">
 				</label>
 
 				<div class="file-btn">
@@ -46,16 +46,11 @@
 
 			<section class="data">
         <div class="title">
-					<h2><%=category.name%></h2>
-					<button type="submit" class="btn">Actualizar</button>
+					<h2>Formulario para la creación de Categoría</h2>
+					<button type="submit" class="btn">Crear</button>
 				</div>
 
 				<article class="profile-info">        
-					<div class = "row">    
-						<label for="id">Category Id</label>
-            <p class="no-edit"><%=category.id%></p>
-					</div>
-
 					<div class = "row">
 						<label for="first_name">Nombre</label>
             <input class="<%=(locals.errors && errors.name) ? 'error edit' : 'edit'%>" type="text" name="name" id="name"
@@ -63,15 +58,10 @@
 								placeholder = "<%=errors.name.msg%>"
 							<%} else if (locals.oldData) { %>
 								value="<%=oldData.name%>" <%} else {%>
-								value="<%=category.name%>"<%}%>
+								value=""<%}%>
 						>
 					</div>
 
-					
-
-					
-				
-				
          
           <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
           <div class="button-container">

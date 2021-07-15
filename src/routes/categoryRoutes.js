@@ -10,15 +10,21 @@ const uploadRegister = require('../middleware/registryMulterCategory')
 const categoryController = require('../controllers/categoryController')
 
 
-//Asigno a cada ruta la propiedad del controlador
-router.get('/:categoryName', categoryController.landing);
 
 //Rutas para Admin únicamente
 router.get('/', authMiddleware, adminMiddleware, categoryController.list)
 router.get('/detail/:id', authMiddleware, adminMiddleware, categoryController.detail)
+
 router.get('/add', authMiddleware, adminMiddleware, categoryController.formNew)
+router.post('/add', authMiddleware, adminMiddleware, categoryController.formNew)
+
 router.get('/edit/:id', authMiddleware, adminMiddleware, categoryController.edit)
 router.put('/edit/:id', uploadRegister.single('imageCover'), authMiddleware, adminMiddleware, categoryController.update)
+
 router.delete('/:id', authMiddleware, adminMiddleware, categoryController.delete)
+
+//Asigno a cada ruta la propiedad del controlador
+router.get('/:name/:id', categoryController.landing);
+
 
 module.exports = router

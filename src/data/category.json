@@ -2,49 +2,49 @@
   {
     "id": 1,
     "name": "Plafón",
-    "imageCover": "/img/cover/cover-plafon.jpg",
-    "homeImage": "/img/plafon.png"
+    "imageCover": "/img/categories/cover-plafon.jpg",
+    "homeImage": "/img/categories/home-plafon.png"
   },
   {
     "id": 2,
     "name": "Apliques",
-    "imageCover": "/img/cover/cover-aplique.jpg",
-    "homeImage": "/img/Aplique.png"
+    "imageCover": "/img/categories/cover-aplique.jpg",
+    "homeImage": "/img/categories/home-aplique.png"
   },
   {
     "id": 3,
     "name": "Pie",
-    "imageCover": "/img/cover/cover-pie.jpg",
-    "homeImage": "/img/Pie.png"
+    "imageCover": "/img/categories/cover-pie.jpg",
+    "homeImage": "/img/categories/home-pie.png"
   },
   {
     "id": 4,
     "name": "Colgantes",
-    "imageCover": "/img/cover/cover-colgante.jpg",
-    "homeImage": "/img/Colgante.png"
+    "imageCover": "/img/categories/cover-colgante.jpg",
+    "homeImage": "/img/categories/home-colgante.png"
   },
   {
     "id": 5,
     "name": "Spots",
-    "imageCover": "/img/cover/cover-spot.jpg",
-    "homeImage": "/img/Spot.png"
+    "imageCover": "/img/categories/cover-spot.jpg",
+    "homeImage": "/img/categories/home-spot.png"
   },
   {
     "id": 6,
     "name": "Sistemas",
-    "imageCover": "/img/cover/cover-sistemas.jpg",
-    "homeImage": "/img/Sistemas.png"
+    "imageCover": "/img/categories/cover-sistemas.jpg",
+    "homeImage": "/img/categories/home-sistemas.png"
   },
   {
     "id": 7,
     "name": "Mesa",
-    "imageCover": "/img/cover/cover-mesa.jpg",
-    "homeImage": "/img/Mesa.png"
+    "imageCover": "/img/categories/cover-mesa.jpg",
+    "homeImage": "/img/categories/home-mesa.png"
   },
   {
     "id": 8,
     "name": "Exterior",
-    "imageCover": "/img/cover/cover-outdoor.jpg",
-    "homeImage": "/img/Exterior.png"
+    "imageCover": "/img/categories/cover-outdoor.jpg",
+    "homeImage": "/img/categories/home-exterior.png"
   }
 ]
