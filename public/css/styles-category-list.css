@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+main h3 {
+  margin: 30px auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+.add-container a {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.add-product {
+  width: 80%;
+  height: 4vh;
+  transition: 0.3s;
+  margin: 15px 0;
+}
+.add-product:hover {
+  background-color: #ffde59;
+  color: black;
+}
+
+#customers {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+#customers td,
+#customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+  background-color: #ffde59;
+}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #04aa6d;
+  color: white;
+}
+
+#customers .id {
+  width: 10px;
+}
+
+#customers th.profile {
+  width: 150px;
+  text-align: center;
+}
+
+td img {
+  width: 90%;
+  height: auto;
+ 
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+form button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.center {
+  text-align: center;
+}
+.left {
+  text-align: left;
+}
+.up-button {
+  background-color: #ffde59;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  font-size: 30px;
+  position: fixed;
+  text-align: center;
+  left: 80%;
+  bottom: 20px;
+}
+.up-button i {
+  color: black;
+  padding: 10px;
+}
