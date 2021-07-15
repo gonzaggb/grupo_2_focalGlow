@@ -9,6 +9,17 @@
 <body>
     <%- include('../partials/header.ejs')%>
   <main>
+
+    <section class="images">  
+      <div class="cover-img">
+        <img src="<%=category.imageCover%>">
+        <p>Cover Image</p>
+      </div>	
+      <div class="home-img">
+        <img  src="<%= category.homeImage %>">
+        <p>Home Image</p>
+      </div> 
+     </section>
       
 		<section class="data">
       <div class="title">
@@ -16,20 +27,19 @@
         <a href="/category/edit/<%=category.id%>"><p class="edit-button">Editar</p> </a>
       </div>
 
-      <article class="profile-info">
+      <article class="details">
 			  <div class = "row">
 				  <label>Category Id</label>
           <p><%=category.id%></p>
 			  </div>
 			  <div class = "row">
-			  <label>Nombre</label>
+			    <label>Nombre de la categoría</label>
           <p><%=category.name%></p>
 			  </div>
 			</article>        
     </section>
-    <section class="image">  	
-      <img class="profileImg" src="<%=category.imageCover%>">
-     </section>
+   
+
         
   </main>
 

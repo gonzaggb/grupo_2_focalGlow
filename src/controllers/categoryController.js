@@ -31,7 +31,7 @@ const controller = {
   },
 
   delete: (req, res) => {
-    let category = categories.delete(req.params.id)
+    categories.delete(req.params.id)
 
 
     return res.redirect('/category')

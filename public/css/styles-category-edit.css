@@ -60,10 +60,6 @@ a {
   margin: 20px 0px 40px 0px;
 }
 
-.row {
-  display: flex;
-  margin: 1.2rem 0px;
-}
 
 article.details {
   width: 80%;
@@ -73,18 +69,41 @@ article.details {
 .row {
   display: flex;
   justify-content: space-between;
+  margin: 1.2rem 0px;
 }
 .row label {
   font-weight: bold;
   
 }
 
+.images-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+}
 
+.file-btn {
+  width: 30%;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #fff;
+  background: #000;
+  transition: 0.5s;
+}
+.file-btn:hover {
+  background-color: #ffde59;
+  color: black;
+}
 
-/*
-.row .edit {
-  font-size: 1.4rem;
-  width: 60%;
+.file-btn input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer;
 }
 
 .error::placeholder {
@@ -102,16 +121,6 @@ article.details {
 
 .edit-button:hover {
   color: #ffde59;
-}
-
-ul.client-links {
-  margin-top: 1.2rem;
-  list-style-type: none;
-  cursor: pointer;
-}
-
-ul {
-  margin-top: 0;
 }
 
 .btn {
@@ -140,11 +149,6 @@ ul {
   border: none;
   background-color: transparent;
 }
-
-.profileImg {
-  cursor: pointer;
-}
-
 
 
 
