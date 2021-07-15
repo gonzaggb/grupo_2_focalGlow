@@ -25,7 +25,7 @@
   {
     "id": 2,
     "name": "Stone sheep",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 28,
     "source": "Lámpara",
     "material": ["Chapa", "Hierro"],
@@ -151,7 +151,7 @@
   {
     "id": 8,
     "name": "Pig-tailed macaque",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 19,
     "source": "Lámpara",
     "material": ["Aluminio", "Chapa", "Hierro", "Hierro", "Madera", "Polimero"],
@@ -172,7 +172,7 @@
   {
     "id": 9,
     "name": "American bighorn sheep",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 70,
     "source": "LED",
     "material": ["Aluminio", "Chapa", "Hierro", "Madera", "Polimero"],
@@ -235,7 +235,7 @@
   {
     "id": 12,
     "name": "Stilt, black-winged",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 0,
     "source": "LED",
     "material": ["Aluminio", "Chapa", "Madera"],
@@ -634,7 +634,7 @@
   {
     "id": 31,
     "name": "African porcupine",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 7,
     "source": "LED",
     "material": ["Aluminio", "Madera"],
@@ -655,7 +655,7 @@
   {
     "id": 32,
     "name": "Crested porcupine",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 52,
     "source": "LED",
     "material": ["Aluminio", "Chapa", "Chapa", "Hierro", "Madera", "Polimero"],
@@ -676,7 +676,7 @@
   {
     "id": 33,
     "name": "Thrasher, curve-billed",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 20,
     "source": "Lámpara",
     "material": ["Chapa"],
@@ -928,7 +928,7 @@
   {
     "id": 45,
     "name": "Pied cormorant",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 28,
     "source": "LED",
     "material": ["Aluminio", "Chapa", "Madera", "Polimero"],
@@ -949,7 +949,7 @@
   {
     "id": 46,
     "name": "Boa, cook's tree",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 59,
     "source": "LED",
     "material": ["Hierro", "Polimero"],
@@ -1180,7 +1180,7 @@
   {
     "id": 57,
     "name": "Ibex",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 3,
     "source": "Lámpara",
     "material": ["Aluminio", "Chapa", "Polimero"],
@@ -1222,7 +1222,7 @@
   {
     "id": 59,
     "name": "Yellow-headed caracara",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 36,
     "source": "LED",
     "material": ["Aluminio", "Chapa", "Hierro", "Madera", "Polimero", "Polimero"],
@@ -1285,7 +1285,7 @@
   {
     "id": 62,
     "name": "Woodpecker, red-headed",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 56,
     "source": "Lámpara",
     "material": ["Aluminio", "Chapa", "Hierro", "Madera", "Polimero"],
@@ -1684,7 +1684,7 @@
   {
     "id": 81,
     "name": "Crane, blue",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 60,
     "source": "LED",
     "material": ["Madera"],
@@ -1705,7 +1705,7 @@
   {
     "id": 82,
     "name": "Langur, gray",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 24,
     "source": "Lámpara",
     "material": ["Aluminio", "Chapa", "Polimero"],
@@ -1894,7 +1894,7 @@
   {
     "id": 91,
     "name": "European wild cat",
-    "category": "Aplique",
+    "category": "Apliques",
     "qty": 27,
     "source": "LED",
     "material": ["Aluminio", "Chapa", "Hierro", "Madera", "Polimero"],

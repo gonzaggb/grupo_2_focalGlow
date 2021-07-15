@@ -42,12 +42,10 @@ const controller = {
 
 
     const resourcesPath = path.join(__dirname, '../../public')
-    fs.unlinkSync(path.join(resourcesPath, productToDelete.main_image))  // borra main_image
-    fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider1))
-    fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider2))
-    fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider3))
-    fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet))  // borra data sheet
-    fs.unlinkSync(path.join(resourcesPath, productToDelete.install_sheet))  // borra install sheet */
+
+    fs.unlinkSync(path.join(resourcesPath, categoryToDelete.imageCover))  // borra image Cover
+    fs.unlinkSync(path.join(resourcesPath, categoryToDelete.homeImage))
+    // borra home image
 
     categories.delete(req.params.id)
     return res.redirect('/category')
