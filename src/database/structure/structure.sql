@@ -6,15 +6,15 @@ CREATE TABLE products (
 	id INT  AUTO_INCREMENT NOT NULL,
     name VARCHAR(50) NOT NULL,
     quantity INT NOT NULL,
-    price INT NOT NULL,
+    price DECIMAL NOT NULL,
     description TEXT NOT NULL,
     category_id INT NOT NULL,
-     CONSTRAINT id PRIMARY KEY (id)
+	CONSTRAINT id PRIMARY KEY (id)
 	);
 CREATE TABLE images ( 
 	id INT  AUTO_INCREMENT NOT NULL,
-    image VARCHAR(100) NOT NULL,
-    type ENUM ('main','slider','product_dimension'),
+    name VARCHAR(100) NOT NULL,
+    type ENUM ('main','slider','dimension'),
     product_id INT NOT NULL,
     CONSTRAINT id PRIMARY KEY (id),
     FOREIGN KEY (product_id) REFERENCES products(id)
@@ -24,20 +24,22 @@ CREATE TABLE features (
 	id INT  AUTO_INCREMENT NOT NULL,
 	name VARCHAR(50) NOT NULL,
     type VARCHAR(100) NOT NULL,
-    price INT NOT NULL,
+    price DECIMAL NOT NULL,
     CONSTRAINT id PRIMARY KEY (id)
     );
 
 CREATE TABLE categories (
 	id INT  AUTO_INCREMENT NOT NULL,
 	name VARCHAR(50) NOT NULL,
-    image VARCHAR(100) NOT NULL,
+    image_cover VARCHAR(100) NOT NULL,
+    image_home VARCHAR(100) NOT NULL,
     CONSTRAINT id PRIMARY KEY (id)
     );
 
 CREATE TABLE files (
 	id INT  AUTO_INCREMENT NOT NULL,
-	type ENUM ('spec_sheet','install_sheet'),
+    name VARCHAR(50) NOT NULL,
+	type ENUM ('data_sheet','install_sheet'),
     product_id INT NOT NULL,
     CONSTRAINT id PRIMARY KEY (id),
 	FOREIGN KEY (product_id) REFERENCES products(id)
@@ -58,9 +60,9 @@ CREATE TABLE files (
     last_name VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
     password VARCHAR(50) NOT NULL,
-    phone VARCHAR(50) NOT NULL,
-    address VARCHAR(50) NOT NULL,
-    image VARCHAR(50) NOT NULL,
+    phone VARCHAR(50) ,
+    address VARCHAR(50) ,
+    profile_img VARCHAR(50) NOT NULL,
     role ENUM ('user','admin'),
     CONSTRAINT id PRIMARY KEY (id)
 	);
@@ -68,7 +70,7 @@ CREATE TABLE files (
 CREATE TABLE orders (
 	id INT  AUTO_INCREMENT NOT NULL,
     order_number INT NOT NULL,
-    total INT NOT NULL,
+    total DECIMAL NOT NULL,
     user_id INT NOT NULL,
     CONSTRAINT id PRIMARY KEY (id)
 	);
@@ -76,12 +78,12 @@ CREATE TABLE orders (
 CREATE TABLE items(
 	id INT  AUTO_INCREMENT NOT NULL,
     product_name VARCHAR(50) NOT NULL,
-    product_price VARCHAR(50) NOT NULL,
+    product_price DECIMAL NOT NULL,
     product_description VARCHAR(200) NOT NULL,
     product_features VARCHAR(50) NOT NULL,
     product_image VARCHAR(50) NOT NULL,
     quantity INT NOT NULL,
-    subtotal INT NOT NULL,
+    subtotal DECIMAL NOT NULL,
     order_id INT,
     user_id INT NOT NULL,
     product_id INT NOT NULL,
