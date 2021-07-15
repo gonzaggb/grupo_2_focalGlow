@@ -130,7 +130,7 @@ const controller = {
   profile: (req, res) => {
     const id = req.params.id
     const userToView = user.findByPk(id)
-    res.render('users/profile.ejs', { userToView })
+    res.render('users/user-detail.ejs', { userToView })
   },
 
   logout: (req, res) => {
