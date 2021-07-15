@@ -25,6 +25,9 @@ main {
 section.images {
   width: 45%;
   font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 section.images img{
@@ -83,11 +86,8 @@ article.details {
 }
 
 .file-btn {
-  width: 30%;
+  width: 40%;
   position: relative;
-  text-align: center;
-  justify-content: center;
-  margin: 0 auto;
   font-size: 15px;
   color: #fff;
   background: #000;
@@ -124,7 +124,7 @@ article.details {
 }
 
 .btn {
-  width: 20%;
+  width: 25%;
   background-color: black;
   color: white;
   text-align: center;
@@ -150,7 +150,13 @@ article.details {
   background-color: transparent;
 }
 
-
+.info{
+  width: 80%;
+}
+.row input {
+  text-align: right;
+  background-color: #e5e5e5;
+}
 
 /* Style the button when the checkbox is checked */
 

@@ -79,19 +79,6 @@ article.details {
   
 }
 
-
-
-/*
-.row .edit {
-  font-size: 1.4rem;
-  width: 60%;
-}
-
-.error::placeholder {
-  color: red !important;
-  font-weight: bold;
-}
-
 .edit-button {
   font-size: 1.4rem;
   font-weight: bold;
@@ -103,6 +90,19 @@ article.details {
 .edit-button:hover {
   color: #ffde59;
 }
+
+/*
+.row .edit {
+  font-size: 1.4rem;
+  width: 60%;
+}
+
+.error::placeholder {
+  color: red !important;
+  font-weight: bold;
+}
+/
+
 
 ul.client-links {
   margin-top: 1.2rem;

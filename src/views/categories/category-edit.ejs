@@ -21,16 +21,15 @@
     <form class="registry-form2" method="POST" action="/category/<%=category.id%>/edit?_method=PUT" enctype="multipart/form-data">
 			<main>
 				<section class="images">
-					<div class="images-container">
-					<label for="coverImg">
-						<img id="output" class="profileImg" for="coverImg" src="<%=category.imageCover%>">
-					</label>
+					
+						<label for="cover-img">
+							<img id="output" class="cover-img" for="cover-img" src="<%=category.imageCover%>">
+						</label>
 
-					<div class="file-btn">
-						Cambiar imagen
-						<input onchange="loadFile(event)" type="file" name="coverImg" accept="jpg">
-				
-						<script>
+						<div class="file-btn">
+							Cambiar imagen Cover
+							<input onchange="loadFile(event)" type="file" name="cover-img" accept="jpg">			
+							<script>
           		var loadFile = function (event) {
             		var output = document.getElementById('output');
             		output.src = URL.createObjectURL(event.target.files[0]);
@@ -38,15 +37,15 @@
               		URL.revokeObjectURL(output.src) // free memory
             		}
           		};
-      			</script>
-					</div>
-				</div>  	
+      				</script>
+						</div>
+					  	
 					<label class="home-img" for="home-img">
 						<img id="output" class="profileImg" for="home-img" src="<%=category.homeImage%>">
 					</label>
 
 					<div class="file-btn">
-						Cambiar imagen
+						Cambiar imagen Home
 						<input onchange="loadFile(event)" type="file" name="home-img" accept="jpg">
 				
 						<script>
@@ -67,7 +66,7 @@
 						<button type="submit" class="btn">Actualizar</button>
 					</div>
 
-					<article class="profile-info">        
+					<article class="info">        
 						<div class = "row">    
 							<label for="id">Category Id</label>
             	<p class="no-edit"><%=category.id%></p>
