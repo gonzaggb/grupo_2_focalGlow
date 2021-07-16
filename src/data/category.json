@@ -2,8 +2,8 @@
   {
     "id": 1,
     "name": "Plafón",
-    "imageCover": "/img/categories/cover-plafon.jpg",
-    "homeImage": "/img/categories/home-plafon.png"
+    "image_cover": "/img/categories/cover-plafon.jpg",
+    "image_home": "/img/categories/home-plafon.png"
   },
   {
     "id": 2,
@@ -14,37 +14,37 @@
   {
     "id": 3,
     "name": "Pie",
-    "imageCover": "/img/categories/cover-pie.jpg",
-    "homeImage": "/img/categories/home-pie.png"
+    "image_cover": "/img/categories/cover-pie.jpg",
+    "image_home": "/img/categories/home-pie.png"
   },
   {
     "id": 4,
     "name": "Colgantes",
-    "imageCover": "/img/categories/cover-colgante.jpg",
-    "homeImage": "/img/categories/home-colgante.png"
+    "image_cover": "/img/categories/cover-colgante.jpg",
+    "image_home": "/img/categories/home-colgante.png"
   },
   {
     "id": 5,
     "name": "Spots",
-    "imageCover": "/img/categories/cover-spot.jpg",
-    "homeImage": "/img/categories/home-spot.png"
+    "image_cover": "/img/categories/cover-spot.jpg",
+    "image_home": "/img/categories/home-spot.png"
   },
   {
     "id": 6,
     "name": "Sistemas",
-    "imageCover": "/img/categories/cover-sistemas.jpg",
-    "homeImage": "/img/categories/home-sistemas.png"
+    "image_cover": "/img/categories/cover-sistemas.jpg",
+    "image_home": "/img/categories/home-sistemas.png"
   },
   {
     "id": 7,
     "name": "Mesa",
-    "imageCover": "/img/categories/cover-mesa.jpg",
-    "homeImage": "/img/categories/home-mesa.png"
+    "image_cover": "/img/categories/cover-mesa.jpg",
+    "image_home": "/img/categories/home-mesa.png"
   },
   {
     "id": 8,
     "name": "Exterior",
-    "imageCover": "/img/categories/cover-outdoor.jpg",
-    "homeImage": "/img/categories/home-exterior.png"
+    "image_cover": "/img/categories/cover-outdoor.jpg",
+    "image_home": "/img/categories/home-exterior.png"
   }
 ]
