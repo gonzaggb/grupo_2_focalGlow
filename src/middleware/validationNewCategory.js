@@ -25,7 +25,7 @@ const validations = [
 	}),
 	body('image_home').custom((value, { req }) => {
 		const { files } = req
-		checkFieldImage('image_cover', files)
+		checkFieldImage('image_home', files)
 		return true
 	}),
 
