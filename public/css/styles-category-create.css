@@ -28,6 +28,10 @@ h2 {
   margin: 20px 0px;
 }
 
+input {
+  width: 50%;
+}
+
 section.images-container {
   display: flex;
   justify-content: space-around;
