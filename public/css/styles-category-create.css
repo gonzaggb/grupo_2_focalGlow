@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: -webkit-linear-gradient(left, #e5e5e5, #ffde59);
+}
+
+main {
+  background-color: #fff;
+  width: 65vw;
+  margin: 5vw auto;
+  padding: 2.5vw 5vw;
+  border-radius: 20px;
+  text-align: left;
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+h2 {
+  margin: 20px 0px;
+}
+
+
+.btn {
+  width: 20%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  font-family: 'Roboto';
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffde59;
+  opacity: 0.9;
+  color: black;
+}
+
+.file-btn {
+  width: 30%;
+  text-align: left;
+  font-size: 15px;
+  padding: 5px 15px;
+  color: #fff;
+  background: #000;
+  transition: 0.5s;
+  margin: 10px 0px;
+}
+.file-btn:hover {
+  background-color: #ffde59;
+  color: black;
+}
+
+.file-btn input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.error::placeholder {
+  color: red !important;
+  font-weight: bold;
+}
+
+
+
+/* Style the button when the checkbox is checked */
+
+@media (max-width: 576px) {
+
+  body {
+    background: -webkit-linear-gradient(top, #e5e5e5, #ffde59);
+  }
+
+  main {
+    width: 100%;
+  }
+  .file-btn {
+    width: 60%;
+  }
+}

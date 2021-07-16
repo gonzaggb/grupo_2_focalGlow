@@ -8,8 +8,8 @@
   {
     "id": 2,
     "name": "Apliques",
-    "imageCover": "/img/categories/cover-aplique.jpg",
-    "homeImage": "/img/categories/home-aplique.png"
+    "image_cover": "/img/categories/cover-aplique.jpg",
+    "image_home": "/img/categories/home-aplique.png"
   },
   {
     "id": 3,
