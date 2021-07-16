@@ -93,7 +93,7 @@ const controller = {
   list: (req, res) => {
     User.findAll()
       .then((userList) => {
-        res.render('users/usersList.ejs', { userList })
+        res.render('users/user-list.ejs', { userList })
       })
 
   },
@@ -160,7 +160,7 @@ const controller = {
     const id = req.params.id
     User.findByPk(id)
       .then((userToView) => {
-        res.render('users/profile.ejs', { userToView })
+        res.render('users/user-detail.ejs', { userToView })
       })
 
   },
