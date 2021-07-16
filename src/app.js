@@ -50,11 +50,7 @@ const userRoutes = require('./routes/usersRoutes')
 //Rutas
 app.use('/', mainRoutes)
 app.use('/product', productRoutes)
-<<<<<<< HEAD
 app.use('/category', categoryRoutes)
-=======
-app.use('/categories', categoryRoutes)
->>>>>>> devV2
 app.use('/users', userRoutes)
 
 // Ruta 404
