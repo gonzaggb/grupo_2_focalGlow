@@ -7,12 +7,6 @@
 
 
 </head>
-<script>
-  function cambiar() {
-    var pdrs = document.getElementById('file-upload').files[0].name;
-    document.getElementById('info').innerHTML = pdrs;
-  }
-</script>
 
 <body>
   <%- include('../partials/header.ejs')%>
@@ -46,6 +40,7 @@
 					</figure>
 				</div>
 			</section>
+
 			<div class="btn-container">
 				<button type="submit" class="btn">Crear</button>
 			</div>

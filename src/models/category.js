@@ -42,5 +42,19 @@ module.exports = {
 
   },
 
+  //crea el nuevo id
+  generateId() {
+    const newId = Number(this.readFile().pop().id) + 1
+    return newId
+  },
+
+  create(newCategory) {
+    newCategory.id = this.generateId()
+    const categoryJson = this.readFile()
+    const categoryUpdated = [...categoryJson, newCategory]
+    this.writeFile(categoryUpdated)
+    return newCategory
+
+  },
 }
 

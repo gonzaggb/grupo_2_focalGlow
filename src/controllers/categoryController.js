@@ -1,5 +1,6 @@
 const categories = require('../models/category')
 const products = require('../models/product')
+const { validationResult } = require('express-validator')
 const fs = require('fs')
 const path = require('path')
 
@@ -29,7 +30,28 @@ const controller = {
   },
 
   create: (req, res) => {
+    //let errors = validationResult(req)
+    const categoryNew = req.body
+    const { files } = req
+    files.forEach(e => {
+      e.fieldname == 'image_cover' ? categoryNew.image_cover = '/img/categories/' + e.filename : categoryNew.image_home = '/img/categories/' + e.filename
+    })
 
+
+    categories.create(categoryNew)
+    return res.redirect('/category')
+
+
+    if (errors.isEmpty()) {
+      categories.create(categoryNew, files)
+      res.redirect('/category')
+    } else {
+      /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la creación del producto*/
+      files.forEach(e => {
+        fs.unlinkSync(e.path)
+      })
+      res.render('category/category-create.ejs', { errors: errors.mapped(), old: req.body })
+    }
   },
 
   edit: (req, res) => {
@@ -43,13 +65,14 @@ const controller = {
 
     const resourcesPath = path.join(__dirname, '../../public')
 
-    fs.unlinkSync(path.join(resourcesPath, categoryToDelete.imageCover))  // borra image Cover
-    fs.unlinkSync(path.join(resourcesPath, categoryToDelete.homeImage))
+    fs.unlinkSync(path.join(resourcesPath, categoryToDelete.image_cover))  // borra image Cover
+    fs.unlinkSync(path.join(resourcesPath, categoryToDelete.image_home))
     // borra home image
 
     categories.delete(req.params.id)
     return res.redirect('/category')
   },
+
   update: (req, res) => {
 
   }

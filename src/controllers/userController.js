@@ -46,7 +46,7 @@ const controller = {
   //captura y envia los datos enviados por post al modelo
   create: (req, res) => {
     const validationStatus = validationResult(req) // trae los resultados del middleware
-    if (validationStatus.errors.length > 0) {
+    if (validationStatus.isEmpty()) {
       if (!req.file) { //valido que exista un archivo, en caso de no existir retorno los errores
         return res.render('users/register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       } else {
