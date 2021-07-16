@@ -4,6 +4,7 @@ const { isFileImage } = require('../helpers/files')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const userModel = require('../models/user')
+const { User } = require('../database/models')
 
 
 
@@ -15,6 +16,7 @@ const controller = {
 
   },
   //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
+
   loginUser: (req, res) => {
     const formValidation = validationResult(req)
     const oldValues = req.body
@@ -23,19 +25,29 @@ const controller = {
       return res.render('users/login', { oldValues, errors: formValidation.mapped() })
     }
     const { email, remember } = req.body
-    const user = userModel.findByField('email', email)
-    req.session.logged = user.id
-    if (remember) {
-      res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
-    }
+    User.findOne(
+      {
+        where:
+          { email }
+      })
+      .then((user) => {
+        //FIXME AGREGAR UN CONSOLE.LOG DE USER (revisar)
+        console.log(user)
+        req.session.logged = user.id
+        if (remember) {
+          res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
+        }
 
 
-    //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
-    if (user.category == 'admin') {
-      res.redirect('/product')
-    } else {
-      res.redirect('/')
-    }
+        //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
+        if (user.role == 'admin') {
+          res.redirect('/product')
+        } else {
+          res.redirect('/')
+        }
+
+      })
+
 
   },
   //envia al usuario a la pagina de registro
@@ -44,6 +56,7 @@ const controller = {
   },
 
   //captura y envia los datos enviados por post al modelo
+
   create: (req, res) => {
     const validationStatus = validationResult(req) // trae los resultados del middleware
     if (validationStatus.isEmpty()) {
@@ -56,39 +69,55 @@ const controller = {
         return res.render('users/register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       }
     }
-    let { first_name, last_name, email, password, address, phone } = req.body
+    let { firstName, lastName, email, password, address, phone } = req.body
+    //FIXME VER DONDE SE USABA LA RUTA DE LA IMAGEN PARA ARREGLARLO
     let newUser = {
-      first_name,
-      last_name,
+      firstName,
+      lastName,
       email,
       password: bcrypt.hashSync(password, 10),
-      profileImg: req.file ? '/img/profile-pictures/' + req.file.filename : '/img/profile-pictures/profile.jpg',
+      profileImg: req.file ? req.file.filename : 'profile.jpg',
       address,
       phone,
-      category: 'normal'
+      role: 'user'
     }
 
-    user.create(newUser)
-    res.redirect('/users/login')
+    User.create(newUser)
+      .then(() => {
+        res.redirect('/users/login')
+      })
+
   },
 
 
   list: (req, res) => {
-    const userList = user.findAll();
-    res.render('users/users-list.ejs', { userList })
+    User.findAll()
+      .then((userList) => {
+        res.render('users/usersList.ejs', { userList })
+      })
+
   },
+  //FIXME USER DESTROY ( revisar)
   delete: (req, res) => {
     const id = req.params.id
-    user.delete(id)
-    res.redirect('/users')
-  },
+    User.destroy({
+      where: { id }
+    })
+      .then(() => {
+        res.redirect('/users')
+      })
 
+  },
+  //FIXME USER (revisar)
   edit: (req, res) => {
     const id = req.params.id
-    const userToEdit = user.findByPk(id)
-    res.render('users/user-edit.ejs', { userToEdit })
-  },
+    User.findByPk(id)
+      .then((userToEdit) => {
+        res.render('users/user-edit.ejs', { userToEdit })
+      })
 
+  },
+  //FIXME USER UPDATE
   update: (req, res) => {
     const { id } = req.params
     const userToEdit = user.findByPk(id);
@@ -126,11 +155,14 @@ const controller = {
     res.redirect('/users')
   },
 
-
+  //FIXME USER (revisar)
   profile: (req, res) => {
     const id = req.params.id
-    const userToView = user.findByPk(id)
-    res.render('users/user-detail.ejs', { userToView })
+    User.findByPk(id)
+      .then((userToView) => {
+        res.render('users/profile.ejs', { userToView })
+      })
+
   },
 
   logout: (req, res) => {

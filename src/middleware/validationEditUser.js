@@ -2,6 +2,7 @@ const { body } = require('express-validator')
 const files = require('../helpers/files')
 const userModel = require('../models/user')
 const validations = [
+	//FIXME
 	body('first_name').notEmpty().withMessage('El nombre no puede estar vacío'),
 	body('last_name').notEmpty().withMessage('El apellido no puede estar vacío'),
 	body('email').notEmpty().withMessage('Debes poner tu email').bail().isEmail().withMessage("El email ingresado no es valido").bail()

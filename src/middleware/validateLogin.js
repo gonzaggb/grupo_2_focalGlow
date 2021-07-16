@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs')
 const userModel = require('../models/user')
 
 const validationLoginUser = [
+    //FIXME
     body('email')
         .notEmpty()
         .withMessage('Por favor ingrese su e-mail')
