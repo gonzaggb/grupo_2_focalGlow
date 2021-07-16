@@ -34,16 +34,16 @@ section.images img{
   width: 100%;
 }
 
-section.images .home-img img {
+section.images .image_home img {
   width: 50%
 }
-.home-img {
+.image_home {
   display: flex;
   justify-content: space-between ;
   align-items: flex-end;
   margin-top: 20px;
 }
-.cover-img {
+.image_cover {
   text-align: right;
 }
 

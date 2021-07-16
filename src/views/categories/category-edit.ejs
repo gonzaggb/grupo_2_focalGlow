@@ -22,13 +22,13 @@
 			<main>
 				<section class="images">
 					
-						<label for="cover-img">
-							<img id="output" class="cover-img" for="cover-img" src="<%=category.imageCover%>">
+						<label for="image_cover">
+							<img id="output" class="image_cover" for="image_cover" src="<%=category.image_cover%>">
 						</label>
 
 						<div class="file-btn">
 							Cambiar imagen Cover
-							<input onchange="loadFile(event)" type="file" name="cover-img" accept="jpg">			
+							<input onchange="loadFile(event)" type="file" name="image_cover" accept="image/*">			
 							<script>
           		var loadFile = function (event) {
             		var output = document.getElementById('output');
@@ -40,13 +40,13 @@
       				</script>
 						</div>
 					  	
-					<label class="home-img" for="home-img">
-						<img id="output" class="profileImg" for="home-img" src="<%=category.homeImage%>">
+					<label class="image_home" for="image_home">
+						<img id="output" class="image_home" for="image_home" src="<%=category.image_home%>">
 					</label>
 
 					<div class="file-btn">
 						Cambiar imagen Home
-						<input onchange="loadFile(event)" type="file" name="home-img" accept="jpg">
+						<input onchange="loadFile(event)" type="file" name="image_home" accept="image/*">
 				
 						<script>
           		var loadFile = function (event) {
@@ -84,7 +84,8 @@
 						</div>
 
          
-          	<input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
+          	<input id="file-upload" name="image_cover" onchange='cambiar()' type="file" style='display: none'>
+						<input id="file-upload2" name="image_home" onchange='cambiar()' type="file" style='display: none'>
           </article>    
       	</section>
 			</main>
