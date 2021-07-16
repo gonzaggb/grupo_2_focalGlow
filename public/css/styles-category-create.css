@@ -12,7 +12,7 @@ body {
 
 main {
   background-color: #fff;
-  width: 65vw;
+  width: 80vw;
   margin: 5vw auto;
   padding: 2.5vw 5vw;
   border-radius: 20px;
@@ -28,6 +28,40 @@ h2 {
   margin: 20px 0px;
 }
 
+section.images-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px auto
+}
+
+.images {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  transition: 0.4s
+}
+
+.images:hover {
+  transform: scale(3)
+}
+
+.add-image label {
+  text-align: left;
+  font-size: 15px;
+  padding: 5px 15px;
+  color: #fff;
+  background: #000;
+  transition: 0.5s;
+  margin: 10px 0px;
+}
+.add-image label:hover {
+  background-color: #ffde59;
+  color: black;
+}
+
+.add-image input {
+  display: none;
+}
 
 .btn {
   width: 20%;
@@ -49,28 +83,11 @@ h2 {
   color: black;
 }
 
-.file-btn {
-  width: 30%;
-  text-align: left;
-  font-size: 15px;
-  padding: 5px 15px;
-  color: #fff;
-  background: #000;
-  transition: 0.5s;
-  margin: 10px 0px;
-}
-.file-btn:hover {
-  background-color: #ffde59;
-  color: black;
+.btn-container {
+  display: flex; justify-content: flex-end
 }
 
-.file-btn input {
-  position: absolute;
-  opacity: 0;
-  right: 0;
-  top: 0;
-  cursor: pointer;
-}
+
 
 .error::placeholder {
   color: red !important;

@@ -14,11 +14,12 @@
   }
 </script>
 
+
 <body>
   <%- include('../partials/header.ejs')%>
 
   
-    <form class="registry-form2" method="POST" action="/category/add" enctype="multipart/form-data">
+    <form method="POST" action="/category/add" enctype="multipart/form-data">
 			<main>
 				<section class="images">
 					
@@ -30,19 +31,19 @@
 							Cambiar imagen Cover
 							<input onchange="loadFile(event)" type="file" name="image_cover" accept="image/*">			
 							<script>
-          		var loadFile = function (event) {
-            		var output = document.getElementById('output');
-            		output.src = URL.createObjectURL(event.target.files[0]);
-            		output.onload = function () {
-              		URL.revokeObjectURL(output.src) // free memory
-            		}
-          		};
-      				</script>
+								var loadFile = function (event) {
+									var output = document.getElementById('output');
+									output.src = URL.createObjectURL(event.target.files[0]);
+									output.onload = function () {
+										URL.revokeObjectURL(output.src) // free memory
+									}
+								};
+							</script>
 						</div>
 					  	
-					<label class="image_home" for="image_home">
+					<!--<label class="image_home" for="image_home">
 						<img id="output" class="image_home" for="image_home" src="<%=category.image_home%>">
-					</label>
+					</label>-->
 
 					<div class="file-btn">
 						Cambiar imagen Home
@@ -51,7 +52,7 @@
 						<script>
           		var loadFile = function (event) {
             		var output = document.getElementById('output');
-            		output.src = URL.createObjectURL(event.target.files[0]);
+            		output.src = URL.createObjectURL(event.target.files[1]);
             		output.onload = function () {
               		URL.revokeObjectURL(output.src) // free memory
             		}
@@ -73,7 +74,7 @@
 						</div>
 
 						<div class = "row">
-							<label for="first_name">Nombre</label>
+							<label for="name">Nombre</label>
             	<input class="<%=(locals.errors && errors.name) ? 'error edit' : 'edit'%>" type="text" name="name" id="name"
 								<% if (locals.errors && errors.name) {%>
 									placeholder = "<%=errors.name.msg%>"
@@ -84,8 +85,8 @@
 						</div>
 
          
-          	<input id="file-upload" name="image_cover" onchange='cambiar()' type="file" style='display: none'>
-						<input id="file-upload2" name="image_home" onchange='cambiar()' type="file" style='display: none'>
+						<input id="file-upload" name="image_cover" onchange='cambiar()' type="file" style='display: none'>
+						<!--<input id="file-upload2" name="image_home" onchange='cambiar2()' type="file" style='display: none'> !-->
           </article>    
       	</section>
 			</main>
