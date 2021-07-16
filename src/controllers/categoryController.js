@@ -30,19 +30,16 @@ const controller = {
   },
 
   create: (req, res) => {
-    //let errors = validationResult(req)
+    let errors = validationResult(req)
+
     const categoryNew = req.body
     const { files } = req
-    files.forEach(e => {
-      e.fieldname == 'image_cover' ? categoryNew.image_cover = '/img/categories/' + e.filename : categoryNew.image_home = '/img/categories/' + e.filename
-    })
-
-
-    categories.create(categoryNew)
-    return res.redirect('/category')
 
 
     if (errors.isEmpty()) {
+      files.forEach(e => {
+        e.fieldname == 'image_cover' ? categoryNew.image_cover = '/img/categories/' + e.filename : categoryNew.image_home = '/img/categories/' + e.filename
+      })
       categories.create(categoryNew, files)
       res.redirect('/category')
     } else {
@@ -50,7 +47,7 @@ const controller = {
       files.forEach(e => {
         fs.unlinkSync(e.path)
       })
-      res.render('category/category-create.ejs', { errors: errors.mapped(), old: req.body })
+      res.render('categories/category-create.ejs', { errors: errors.mapped(), old: req.body })
     }
   },
 

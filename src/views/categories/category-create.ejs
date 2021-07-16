@@ -31,6 +31,9 @@
 					<figure>
 						<img id="image_cover_display" class="images"/>	
 					</figure>
+					<% if(locals.errors && errors.image_cover) {%>
+						<p class ="error"><%=errors.image_cover.msg%></p>
+					<%}%>
 				</div>
 				<div class="add-image">
 					<label for = "image_home">Imagen Home</label>
@@ -38,6 +41,9 @@
 					<figure>
 						<img id="image_home_display" class="images"/>
 					</figure>
+					<% if(locals.errors && errors.image_home) {%>
+						<p class ="error"><%=errors.image_home.msg%></p>
+					<%}%>
 				</div>
 			</section>
 
