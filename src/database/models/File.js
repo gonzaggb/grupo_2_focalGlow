@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        product_id: {
+        productId: {
             type: DataTypes.INTEGER,
             allowNull: false
         }
@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Files.associate = function (models) {
         Files.belongsTo(models.Product, {
-            as: 'file',
+            as: 'product',
             foreignKey: 'product_id'
         });
     }

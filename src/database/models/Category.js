@@ -11,11 +11,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        image_cover: {
+        imageCover: {
             type: DataTypes.STRING,
             allowNull: false
         },
-        image_home: {
+        imageHome: {
             type: DataTypes.STRING,
             allowNull: false
         }
@@ -28,9 +28,9 @@ module.exports = (sequelize, DataTypes) => {
 
     Category.associate = function (models) {
         Category.hasMany(models.Product, {
-            as: 'categoryProduct',
+            as: 'products',
             foreignKey: 'category_id'
         })
-    }    
+    }
     return Category;
 }

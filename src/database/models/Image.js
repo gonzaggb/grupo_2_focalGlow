@@ -14,18 +14,19 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        product_id: {
+        productId: {
             type: DataTypes.INTEGER
         }
     }
     const config = {
         tablename: 'images',
-        timestamps: false
+        timestamps: false,
+        underscored: true
     }
     const Image = sequelize.define(alias, columns, config);
     Image.associate = function (models) {
         Image.belongsTo(models.Product, {
-            as: 'images',
+            as: 'product',
             foreignKey: 'product_id'
         });
     }

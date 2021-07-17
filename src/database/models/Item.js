@@ -49,10 +49,10 @@ module.exports = (sequelize, DataTypes) => {
     Item.associate = function (model) {
         Item.belongsTo(model.User,
             {
-                as: 'item',
+                as: 'user',
                 foreignKey: 'userId'
             })
-        Item.hasMany(model.Order,
+        Item.belongsTo(model.Order,
             {
                 as: 'order',
                 foreignKey: 'orderId'
