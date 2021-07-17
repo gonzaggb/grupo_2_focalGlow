@@ -36,7 +36,7 @@ router.post('/login', validationLogin, userController.loginUser)
 //envia al usuario a la pagina de registro
 router.get('/register', guestMiddleware, userController.newUser)
 //envia los datos de la pagina de registro al controlador
-router.post('/register', uploadRegister.single('profileImg'), /* validations */ userController.create)
+router.post('/register', uploadRegister.single('profileImg'), validations, userController.create)
 
 
 // ruta de profile

@@ -59,7 +59,9 @@ const controller = {
 
   create: (req, res) => {
     const validationStatus = validationResult(req) // trae los resultados del middleware
-    if (validationStatus.isEmpty()) {
+
+    if (!validationStatus.isEmpty()) {
+
       if (!req.file) { //valido que exista un archivo, en caso de no existir retorno los errores
         return res.render('users/register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       } else {
@@ -84,19 +86,21 @@ const controller = {
 
     User.create(newUser)
       .then(() => {
+
         res.redirect('/users/login')
       })
+      .catch(err => console.log(err))
 
   },
 
 
-  list: (req, res) => {
-    User.findAll()
-      .then((userList) => {
-        res.render('users/user-list.ejs', { userList })
-      })
+  list: async (req, res) => {
+    const userList = await User.findAll()
 
+    res.render('users/user-list.ejs', { userList })
   },
+
+
   //FIXME USER DESTROY ( revisar)
   delete: (req, res) => {
     const id = req.params.id
