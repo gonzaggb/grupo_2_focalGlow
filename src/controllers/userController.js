@@ -3,11 +3,9 @@ const { validationResult } = require('express-validator')
 const { isFileImage } = require('../helpers/files')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
-const userModel = require('../models/user')
 const { User } = require('../database/models')
-const path = require('path')
-
-
+const profileImagePath = '/img/profile-pictures/'
+console.log(profileImagePath)
 const controller = {
   //envia al usuario a la pagina de login
   login: (req, res) => {
@@ -98,9 +96,14 @@ const controller = {
 
 
   list: async (req, res) => {
-    const userList = await User.findAll()
-
-    res.render('users/user-list.ejs', { userList })
+    try {
+      const userList = await User.findAll()
+      //FIXME la solución "rapida" fue pasar a la vista la ruta de la imagen de perfil, quizá podemos agregarla como un valor dentro del objeto
+      res.render('users/user-list.ejs', { userList, profileImagePath })
+    } catch (error) {
+      console.log(error)
+    }
+    
   },
 
 
@@ -168,8 +171,8 @@ const controller = {
     const userToView = await User.findByPk(id)
 
 
-
-    userToView.dataValues.profileImg = '/img/profile-pictures/' + userToView.dataValues.profileImg
+//FIXME => modifique la ruta directa por una varible declarada al principio del codigo @gonza
+    userToView.dataValues.profileImg = profileImagePath + userToView.dataValues.profileImg
 
 
     res.render('users/user-detail.ejs', { userToView })
