@@ -23,7 +23,7 @@ CREATE TABLE images (
 CREATE TABLE features (
 	id INT  AUTO_INCREMENT NOT NULL,
 	name VARCHAR(50) NOT NULL,
-    type VARCHAR(100) NOT NULL,
+    type ENUM ('cct','optic','power','material','source','dim') NOT NULL,
     price DECIMAL NOT NULL,
     CONSTRAINT id PRIMARY KEY (id)
     );
@@ -31,14 +31,14 @@ CREATE TABLE features (
 CREATE TABLE categories (
 	id INT  AUTO_INCREMENT NOT NULL,
 	name VARCHAR(50) NOT NULL,
-    image_cover VARCHAR(100) NOT NULL,
-    image_home VARCHAR(100) NOT NULL,
+    image_cover VARCHAR(255) NOT NULL,
+    image_home VARCHAR(255) NOT NULL,
     CONSTRAINT id PRIMARY KEY (id)
     );
 
 CREATE TABLE files (
 	id INT  AUTO_INCREMENT NOT NULL,
-    name VARCHAR(50) NOT NULL,
+    name VARCHAR(255) NOT NULL,
 	type ENUM ('data_sheet','install_sheet'),
     product_id INT NOT NULL,
     CONSTRAINT id PRIMARY KEY (id),
@@ -62,7 +62,7 @@ CREATE TABLE files (
     password VARCHAR(255) NOT NULL,
     phone VARCHAR(50) ,
     address VARCHAR(50) ,
-    profile_img VARCHAR(50) NOT NULL,
+    profile_img VARCHAR(255) NOT NULL,
     role ENUM ('user','admin'),
     CONSTRAINT id PRIMARY KEY (id)
 	);
@@ -79,9 +79,9 @@ CREATE TABLE items(
 	id INT  AUTO_INCREMENT NOT NULL,
     product_name VARCHAR(50) NOT NULL,
     product_price DECIMAL NOT NULL,
-    product_description VARCHAR(200) NOT NULL,
+    product_description VARCHAR(255) NOT NULL,
     product_features VARCHAR(50) NOT NULL,
-    product_image VARCHAR(50) NOT NULL,
+    product_image VARCHAR(255) NOT NULL,
     quantity INT NOT NULL,
     subtotal DECIMAL NOT NULL,
     order_id INT,

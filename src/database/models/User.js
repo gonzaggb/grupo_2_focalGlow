@@ -29,11 +29,11 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: true
 		},
 		address: {
-			type: DataTypes.STRING(50),
+			type: DataTypes.STRING(100),
 			allowNull: true
 		},
 		profileImg: {
-			type: DataTypes.STRING,
+			type: DataTypes.STRING(255),
 			allowNull: false
 		},
 		role: {

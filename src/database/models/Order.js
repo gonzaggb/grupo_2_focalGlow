@@ -8,7 +8,8 @@ module.exports = (sequelize, DataTypes) => {
 		},
 		orderNumber: {
 			type: DataTypes.INTEGER,
-			allowNull: false
+			allowNull: true,
+			unique: true
 		},
 		total: {
 			type: DataTypes.DECIMAL,
