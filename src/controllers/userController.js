@@ -5,6 +5,7 @@ const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const userModel = require('../models/user')
 const { User } = require('../database/models')
+const path = require('path')
 
 
 
@@ -71,14 +72,16 @@ const controller = {
         return res.render('users/register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       }
     }
+
     let { firstName, lastName, email, password, address, phone } = req.body
     //FIXME VER DONDE SE USABA LA RUTA DE LA IMAGEN PARA ARREGLARLO
+    let profilePath = path.join(__dirname, '../../public/img/profile-pictures/')
     let newUser = {
       firstName,
       lastName,
       email,
       password: bcrypt.hashSync(password, 10),
-      profileImg: req.file ? req.file.filename : 'profile.jpg',
+      profileImg: req.file ? profilePath + req.file.filename : profilePath + 'profile.jpg',
       address,
       phone,
       role: 'user'

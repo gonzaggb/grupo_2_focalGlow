@@ -9,7 +9,7 @@ const storage = multer.diskStorage({
     },
     filename: (req, file, cb) => {
         const extensionFile = path.extname(file.originalname)
-        cb(null, `${Date.now()}${extensionFile}`)
+        cb(null, `profile-${Date.now()}${extensionFile}`)
 
 
     }
@@ -28,6 +28,6 @@ const fileFilter = (req, file, cb) => {
     }
 }
 
-const uploadRegister = multer({storage, fileFilter})
+const uploadRegister = multer({ storage, fileFilter })
 
 module.exports = uploadRegister
