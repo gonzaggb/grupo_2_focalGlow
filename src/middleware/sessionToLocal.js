@@ -11,11 +11,11 @@ module.exports = async (req, res, next) => {
 				//delete userFound.password
 				
 				res.locals.user = userFound
-			}
-
-	next()
 	}
+	next()	
+}
 	
+
 
 
 /*

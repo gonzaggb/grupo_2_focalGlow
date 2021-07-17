@@ -164,13 +164,16 @@ const controller = {
   },
 
   //FIXME USER (revisar)
-  profile: (req, res) => {
+  profile: async (req, res) => {
     const id = req.params.id
-    User.findByPk(id)
-      .then((userToView) => {
-        res.render('users/user-detail.ejs', { userToView })
-      })
+    const userToView = await User.findByPk(id)
 
+
+
+    userToView.dataValues.profileImg = '/img/profile-pictures/' + userToView.dataValues.profileImg
+
+
+    res.render('users/user-detail.ejs', { userToView })
   },
 
   logout: (req, res) => {

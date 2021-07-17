@@ -23,7 +23,7 @@
    
 		<section class="data">
       <div class="title">
-        <h2><%=`${userToView.first_name} ${userToView.last_name}`%></h2>
+        <h2><%=`${userToView.firstName} ${userToView.lastName}`%></h2>
         <a href="/users/<%=userToView.id%>/edit"><p class="edit-button">Editar Perfil</p> </a>
       </div>
 
@@ -34,11 +34,11 @@
 			  </div>
 			  <div class = "row">
 			  <label>Nombre</label>
-          <p><%=userToView.first_name%></p>
+          <p><%=userToView.firstName%></p>
 			  </div>
 			  <div class = "row">
 				  <label>Apellido</label>
-          <p><%=userToView.last_name%></p>
+          <p><%=userToView.lastName%></p>
 			  </div>
 			  <div class = "row">
 				  <label>Email</label>

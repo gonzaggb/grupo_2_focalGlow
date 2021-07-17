@@ -43,10 +43,10 @@
         </li>
         <li><a href="/us">Nosotros</a></li>
         <li>
-          <a href="#"><%= locals.user? 'Bienvenido ' + locals.user.first_name : 'Usuario'%></a>
+          <a href="#"><%= locals.user? 'Bienvenido ' + locals.user.firstName : 'Usuario'%></a>
           <ul class="desplegable">
             <%if(locals.user){%>
-            <% if (locals.user.category == 'admin') { %>
+            <% if (locals.user.role == 'admin') { %>
                 <li><a href="/product/">Product list </a></li>
                 <li><a href="/users">User list </a></li>
                 <li><a href="/category">Category list</a></li>
