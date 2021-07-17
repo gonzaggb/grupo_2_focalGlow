@@ -20,9 +20,6 @@ const profileAccessMiddleware = require('../middleware/profileAccessMiddleware')
 const uploadRegister = require('../middleware/registryMulter')
 
 
-const userModel = require('../models/user')
-
-
 
 //envia al usuario admin al listado de usuarios
 router.get('/', authMiddleware, adminMiddleware, userController.list) // la barra sola equivale a /users porque del app.js vengo con /users

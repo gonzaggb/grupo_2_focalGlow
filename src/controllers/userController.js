@@ -7,7 +7,6 @@ const userModel = require('../models/user')
 const { User } = require('../database/models')
 const path = require('path')
 
-const profileFolderPath = path.join(__dirname, '../../public/img/profile-pictures/')
 
 const controller = {
   //envia al usuario a la pagina de login
