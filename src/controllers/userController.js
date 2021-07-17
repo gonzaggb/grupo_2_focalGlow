@@ -7,7 +7,7 @@ const userModel = require('../models/user')
 const { User } = require('../database/models')
 const path = require('path')
 
-
+const profileFolderPath = path.join(__dirname, '../../public/img/profile-pictures/')
 
 const controller = {
   //envia al usuario a la pagina de login
@@ -75,13 +75,14 @@ const controller = {
 
     let { firstName, lastName, email, password, address, phone } = req.body
     //FIXME VER DONDE SE USABA LA RUTA DE LA IMAGEN PARA ARREGLARLO
-    let profilePath = path.join(__dirname, '../../public/img/profile-pictures/')
+    //Solucion BOBA es poner todo en la carpeta img  . El nombre de cada imagen debe empezar por lo que es
+
     let newUser = {
       firstName,
       lastName,
       email,
       password: bcrypt.hashSync(password, 10),
-      profileImg: req.file ? profilePath + req.file.filename : profilePath + 'profile.jpg',
+      profileImg: req.file ? req.file.filename : 'profile.jpg',
       address,
       phone,
       role: 'user'

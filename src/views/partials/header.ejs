@@ -13,7 +13,7 @@
             <a href="/us">Nosotros</a>
             <!-- <a href="#">Usuario</a> -->
             <%if(locals.user){%>  
-              <% if (locals.user.category=='admin' ) { %>
+              <% if (locals.user.role=='admin' ) { %>
                 <a href="/product/">Product list </a>
                 <a href="/users">User list </a>
                 <a href="/users/<%=locals.user.id%>/detail">Perfil </a>
