@@ -5,14 +5,14 @@ const { User } = require('../database/models')
 
 module.exports = async (req, res, next) => {
 
-    const userSession = req.session.logged
+	const userSession = req.session.logged
 
-    const { id, role } = await User.findByPk(userSession)
+	const { id, role } = await User.findByPk(userSession)
 
-    if ((userSession && role == 'admin') || (id == req.params.id)) {
-        return next()
-    }
+	if ((userSession && role == 'admin') || (id == req.params.id)) {
+		return next()
+	}
 
-    return res.redirect('/')
+	return res.redirect('/')
 
 }

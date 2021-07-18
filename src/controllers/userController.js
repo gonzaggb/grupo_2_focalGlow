@@ -15,7 +15,7 @@ const controller = {
   },
   //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
 
-  loginUser: (req, res) => {
+  loginUser: async (req, res) => {
     const formValidation = validationResult(req)
     const oldValues = req.body
 
@@ -23,31 +23,25 @@ const controller = {
       return res.render('users/login', { oldValues, errors: formValidation.mapped() })
     }
     const { email, remember } = req.body
-    User.findOne(
+
+    const user = await User.findOne(
       {
-        where:
-          { email }
-      })
-      .then((user) => {
-        //FIXME AGREGAR UN CONSOLE.LOG DE USER (revisar)
-        console.log(user)
-        req.session.logged = user.id
-        if (remember) {
-          res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
-        }
-
-
-        //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
-        if (user.role == 'admin') {
-          res.redirect('/product')
-        } else {
-          res.redirect('/')
-        }
-
+        where: { email }
       })
 
+    req.session.logged = user.id
+    if (remember) {
+      res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
+    }
 
+    //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
+    if (user.role == 'admin') {
+      res.redirect('/product')
+    } else {
+      res.redirect('/')
+    }
   },
+
   //envia al usuario a la pagina de registro
   newUser: (req, res) => {
     res.render('users/register.ejs')
@@ -55,7 +49,7 @@ const controller = {
 
   //captura y envia los datos enviados por post al modelo
 
-  create: (req, res) => {
+  create: async (req, res) => {
     const validationStatus = validationResult(req) // trae los resultados del middleware
 
     if (!validationStatus.isEmpty()) {
@@ -85,13 +79,9 @@ const controller = {
       role: 'user'
     }
 
-    User.create(newUser)
-      .then(() => {
+    await User.create(newUser)
 
-        res.redirect('/users/login')
-      })
-      .catch(err => console.log(err))
-
+    res.redirect('/users/login')
   },
 
 
@@ -103,7 +93,7 @@ const controller = {
     } catch (error) {
       console.log(error)
     }
-    
+
   },
 
 
@@ -171,7 +161,7 @@ const controller = {
     const userToView = await User.findByPk(id)
 
 
-//FIXME => modifique la ruta directa por una varible declarada al principio del codigo @gonza
+    //FIXME => modifique la ruta directa por una varible declarada al principio del codigo @gonza
     userToView.dataValues.profileImg = profileImagePath + userToView.dataValues.profileImg
 
 
