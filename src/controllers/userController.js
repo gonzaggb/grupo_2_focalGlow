@@ -1,11 +1,13 @@
-const user = require('../models/user')
 const { validationResult } = require('express-validator')
 const { isFileImage } = require('../helpers/files')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const { User } = require('../database/models')
+const { unsubscribe } = require('../routes/usersRoutes')
 const profileImagePath = '/img/profile-pictures/'
-console.log(profileImagePath)
+const path = require('path')
+const { Console } = require('console')
+
 const controller = {
   //envia al usuario a la pagina de login
   login: (req, res) => {
@@ -98,16 +100,27 @@ const controller = {
 
 
   //FIXME USER DESTROY ( revisar)
-  delete: (req, res) => {
+  delete: async (req, res) => {
     const id = req.params.id
-    User.destroy({
+
+    try {
+      const userToDelete = await User.findByPk(id)
+
+      if (userToDelete.profileImg != 'profile.jpg') {
+        const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToDelete.profileImg)
+        fs.unlinkSync(imageToDelete)
+      }
+
+    } catch (error) {
+      console.log(error)
+    }
+
+    await User.destroy({
       where: { id }
     })
-      .then(() => {
-        res.redirect('/users')
-      })
-
+    res.redirect('/users')
   },
+
   //FIXME USER (revisar)
   edit: (req, res) => {
     const id = req.params.id
