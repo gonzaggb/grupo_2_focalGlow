@@ -15,12 +15,20 @@
     <main>
       <div class="product-detail">
         <div class="main-img">
-          <img src="<%=productFound.main_image%>" alt="luminaria" />
+          <%images.forEach(image => {%>
+            <% if (image.type == 'main') { %>
+              <img src="<%=productImagePath + image.name%>" alt="luminaria" />
+            <% } %>
+          <%})%>
         </div>
         <i class="fas fa-ruler"></i>
 
         <div class="product-dimensions">
-          <img src="<%=productFound.image_dimension%>" alt="dimensiones luminaria" />
+          <%images.forEach(image => {%>
+            <% if (image.type == 'dimension') { %>
+              <img src="<%=productImagePath + image.name%>" alt="dimensiones luminaria" />
+              <% } %>
+          <%})%>
         </div>
 
         <div class="slider-container">
@@ -28,17 +36,17 @@
             <input type="radio" id="trigger1" name="slider" checked autofocus>
             <label for="trigger1"></label>
             <div class="slide 1">
-              <img src ="<%=productFound.image_slider1%>">
+              <img src ="<%=productImagePath + images[0].name%>">
             </div>
             <input type="radio" id="trigger2" name="slider" checked autofocus>
             <label for="trigger2"></label>
             <div class="slide 2">
-              <img src ="<%=productFound.image_slider2%>">
+              <img src ="<%=productImagePath + images[1].name%>">
             </div> 
             <input type="radio" id="trigger3" name="slider" checked autofocus>
             <label for="trigger3"></label>
             <div class="slide 3">
-              <img src ="<%=productFound.image_slider3%>">
+              <img src ="<%=productImagePath + images[2].name%>">
             </div>   
          
         </div>
@@ -53,49 +61,53 @@
           <div class = "options">
             <div class="options-column">
               <select name="power" class="btn">
-                <%productFound.power.forEach(function (element) { 
-                  if (element != ""){%>
-                    <option value="<%=element%>"><%=element%>W</option>
-                  <% }}) %>
+                  <%features.forEach(function (element) {%> 
+                    <%if(element.type != '' && element.type == 'power'){%>
+              <option value="<%=element.id%>"><%=element.name%></option>
+                    <%}})%>
               </select>
               <select name="cct" class="btn">
-                <%productFound.cct.forEach(function (element) { 
-                  if (element != "") {%>
-                <option value="<%=element%>"><%=element%>K</option>
-                <% }}) %>
+                <%features.forEach(function (element) {%> 
+                  <%if(element.type != '' && element.type == 'cct'){%>
+            <option value="<%=element.id%>"><%=element.name%></option>
+                  <%}})%>
               </select>
             </div>
             <div class="options-column">
               <select name="optic" class="btn">
-                <%productFound.optic.forEach(function (element) { 
-                  if (element != "") {%>
-                <option value="<%=element%>"><%=element%></option>
-                <% }}) %>
+                  <%features.forEach(function (element) {%> 
+                    <%if(element.type != '' && element.type == 'optic'){%>
+              <option value="<%=element.id%>"><%=element.name%></option>
+                    <%}})%>
               </select>
-              <select name="dim" class="btn">
-                <%productFound.dim.forEach(function (element) { 
-                  switch (element) {
-                    case '':
-                      break
-                    case 'Switch':%>
-                      <option value="<%=element%>">&#xf011; <%=element%></option>
-                    <%  break
-                    case 'Bluetooth': %>
-                      <option value="<%=element%>">&#xf293; <%=element%></option>
-                    <% break
-                    default:%>
-                    <option value="<%=element%>"><%=element%></option>
-                  <%  break;
-                }}) %>
-              </select>
+              <select name="dim" class="btn">               
+                <%features.forEach(function (element) {%> 
+                  <%if(element.type != '' && element.type == 'dim' && element.name == 'Switch'){%>
+                    <option value="<%=element.id%>">&#xf011; <%=element.name%></option>
+                    <%}else if(element.type != '' && element.type == 'dim' && element.name == 'Bluetooth'){%>
+                      <option value="<%=element.id%>">&#xf293; <%=element.name%></option>
+                  <%}})%>
+            </select>
             </div>
           </div>
         
           <article class="technical-data">
             <h3>Características</h3>
             <ul>
-              <li>Fuente: <%=(productFound.source).toUpperCase()%></li>
-              <li>Material:  <%=productFound.material.join('-')%></li>
+              <li>Material:
+              <%features.forEach(element => {%>
+                <% if (element.type == 'material') { %>
+                  <%=element.name%>
+                <% } %>
+                <%})%>
+              </li>
+              <li>Fuente:
+                <%features.forEach(element => {%>
+                  <% if (element.type == 'source') { %>
+                    <%=element.name%>
+                  <% } %>
+                  <%})%>
+                </li>
             </ul>
             <p><strong>Descripción:</strong> <br>
               <%=productFound.description%></p>
@@ -133,7 +145,7 @@
             <input type="radio" id="trigger<%=index +3%>" name="slider2" checked autofocus >
             <label for="trigger<%=index + 3%>"></label>
             <div class="slide2 <%=index + 3%>">
-              <a href="/product/detail/<%=element.id%>"><img src ="<%=element.main_image%>"></a>
+              <a href="/product/detail/<%=element.id%>"><img src ="<%=productImagePath + element.images[0].name%>"></a>
             </div>  
           <%}) %>
         </div>

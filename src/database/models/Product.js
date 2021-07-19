@@ -22,13 +22,14 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING,
             allowNull: false
         },
-        category_id: {
+        categoryId: {
             type: DataTypes.INTEGER
         }
     }
     const config = {
         tablename: 'products',
-        timestamps: false
+        timestamps: false,
+        underscored: true,
     }
     const Product = sequelize.define(alias, columns, config);
 

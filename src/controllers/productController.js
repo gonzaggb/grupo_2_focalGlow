@@ -24,13 +24,25 @@ const controller = {
     res.render('products/product-list.ejs', { products, productImagePath })
   },
   //FIXME  READ
-  detail: (req, res) => {
+  detail: async (req, res) => {
     let id = req.params.id
-    let productFound = product.findByPk(id)
-    let category = productFound.category
-    //Traigo todos los productos que están en la misma categoría
-    let productsCategory = product.filterByCategory(category)
+    //busco el producto que viaja por parametro @gonza
+    //FIXME buscar explicación de porque busca category y category_id
 
+    let productFound = await Product.findByPk(id)
+    const features = await productFound.getFeatures() //uso magic method para traer las features
+    const images = await productFound.getImages() //uso magic method para traer las imagenes
+
+    //obtenro la categoría correspondiente al producto
+    let categoryId = productFound.categoryId
+    //Traigo todos los productos que están en la misma categoría por su id y los relaciono con la tabla feature
+    let productsCategory = await Product.findAll({
+      where: { categoryId },
+      include: [{
+        association: 'images',
+        where: { type: 'main' }
+      }]
+    })
     //A los productos de la misma categoría le saco el que estoy viendo en detalle. Para que no me lo ponga como producto similar
     let similarProducts = productsCategory.filter((e) => e.id != id)
     //utilizando una funcion auxiliar creo un array de numeros aleatorios con maximo 3 posiciones
@@ -39,7 +51,7 @@ const controller = {
     //filtro los Similar Products de forma aleatoria
     let similarProductsFiltered = similarProducts.filter((e, index) => indexArray.includes(index))
 
-    res.render('products/product-detail.ejs', { productFound, similarProductsFiltered })
+    res.render('products/product-detail.ejs', { productFound, features, images, similarProductsFiltered, productImagePath })
   },
   formNew: (req, res) => {
     res.render('products/product-create.ejs')
@@ -163,7 +175,6 @@ const controller = {
         where: { type: 'main' },
       }],
     })
-    console.log(productFound)
     return res.render('products/product-search.ejs', { productFound, productImagePath })
   }
 }

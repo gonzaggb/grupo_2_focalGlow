@@ -47,7 +47,11 @@
 						<%= e.qty%>
 					</td>
         	<td class="center">
-          	<img class = "img-redonda" src="<%=productImagePath + e.images[0].name%>">
+				<%for(i = 0 ; i < e.images.length; i++){%>
+					<% if (e.images[i].type == 'main') { %>
+						<img class = "img-redonda" src="<%=productImagePath + e.images[i].name%>">
+					<% } %>
+					<%}%>
         	</td>
         	<td class="center">
           	<a href='/product/detail/<%=e.id%>'><i class="fas fa-search"></i></a>
