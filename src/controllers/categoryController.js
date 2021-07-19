@@ -9,14 +9,15 @@ const path = require('path')
 const categoryImagePath = '/img/categories/'
 
 
+
 const controller = {
-  landing: (req, res) => {
-    const id = req.params.id
+  landing: async (req, res) => {
+
     const name = req.params.name
-    let category = categories.findByName(name)
-    let product = products.filterByCategory(category.name)
-    let dataCategory = { category, product }
-    res.render('category.ejs', { dataCategory })
+    let category = await Category.findOne({ where: { name: name } })
+    let product = await Product.findAll({ where: { categoryId: category.id } })
+
+    res.render('category.ejs', { category, product, categoryImagePath })
   },
 
   list: async (req, res) => {
