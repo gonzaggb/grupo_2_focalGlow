@@ -6,20 +6,22 @@ const { validationResult } = require('express-validator')
 //const { isFileImage, isPdf } = require('../helpers/files')
 const { randomArray2 } = require('../helpers/utilities')
 const { Product } = require('../database/models')
-const Sequelize =require('sequelize')
+const Sequelize = require('sequelize')
 const Op = Sequelize.Op;
-
-
-
 const fs = require('fs')
 const path = require('path')
-const { Console } = require('console')
+const productImagePath = '/img/'
+
 
 const controller = {
-  //FIXME READ
-  list: (req, res) => {
-    let products = product.findAll()
-    res.render('products/product-list.ejs', { products: products })
+  list: async (req, res) => {
+    const products = await Product.findAll({
+      include: [{
+        association: 'images',
+        where: { type: 'main' },
+      }],
+    })
+    res.render('products/product-list.ejs', { products, productImagePath })
   },
   //FIXME  READ
   detail: (req, res) => {
@@ -150,14 +152,19 @@ const controller = {
     res.redirect('/product')
 
   },
-  result: async (req,res) => {
-      
-      let productFound = await Product.findAll({
-        where :{
-          name: { [Op.like]: '%' + req.query.keyword +'%'}
-        } 
-      })
-      return res.render('products/product-search.ejs',{productFound})
+  result: async (req, res) => {
+
+    let productFound = await Product.findAll({
+      where: {
+        name: { [Op.like]: '%' + req.query.keyword + '%' }
+      },
+      include: [{
+        association: 'images',
+        where: { type: 'main' },
+      }],
+    })
+    console.log(productFound)
+    return res.render('products/product-search.ejs', { productFound, productImagePath })
   }
 }
 

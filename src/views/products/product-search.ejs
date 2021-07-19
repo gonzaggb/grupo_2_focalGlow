@@ -13,7 +13,7 @@
             <% if(productFound.length >0){ %>     
             <% productFound.forEach(element=> {%>
                 <article class="producto">
-                    <a href="/product/detail/<%=element.id%>"><img class="zoom" src="<%=element.main_image%>"
+                    <a href="/product/detail/<%=element.id%>"><img class="zoom" src="<%=productImagePath + element.images[0].name%>"
                             alt=""></a>
                     <div class="nombre-precio">
                         <p class="nombre">Nombre del producto: <%=element.name%>

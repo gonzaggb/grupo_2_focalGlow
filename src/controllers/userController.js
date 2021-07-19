@@ -3,10 +3,8 @@ const { isFileImage } = require('../helpers/files')
 const fs = require('fs')
 const bcrypt = require('bcryptjs')
 const { User } = require('../database/models')
-const { unsubscribe } = require('../routes/usersRoutes')
 const profileImagePath = '/img/profile-pictures/'
 const path = require('path')
-const { Console } = require('console')
 
 const controller = {
   //envia al usuario a la pagina de login
