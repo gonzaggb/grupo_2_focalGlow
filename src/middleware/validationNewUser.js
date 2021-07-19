@@ -12,7 +12,7 @@ const validations = [
                 { where: { email: val } })
 
             if (userFound) {
-                console.log(userFound)
+
                 return Promise.reject('El usuario ya existe')
             }
             return true

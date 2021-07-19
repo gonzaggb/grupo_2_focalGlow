@@ -67,8 +67,6 @@ const controller = {
     }
 
     let { firstName, lastName, email, password, address, phone } = req.body
-    //FIXME VER DONDE SE USABA LA RUTA DE LA IMAGEN PARA ARREGLARLO
-    //Solucion BOBA es poner todo en la carpeta img  . El nombre de cada imagen debe empezar por lo que es
 
     let newUser = {
       firstName,
@@ -99,7 +97,6 @@ const controller = {
   },
 
 
-  //FIXME USER DESTROY ( revisar)
   delete: async (req, res) => {
     const id = req.params.id
 
@@ -108,6 +105,7 @@ const controller = {
 
       if (userToDelete.profileImg != 'profile.jpg') {
         const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToDelete.profileImg)
+
         fs.unlinkSync(imageToDelete)
       }
 
@@ -118,27 +116,30 @@ const controller = {
     await User.destroy({
       where: { id }
     })
+
     res.redirect('/users')
   },
 
-  //FIXME USER (revisar)
+
   edit: async (req, res) => {
     const id = req.params.id
     const userToEdit = await User.findByPk(id)
     userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+
     res.render('users/user-edit.ejs', { userToEdit })
 
   },
 
-  //FIXME USER UPDATE
+
   update: async (req, res) => {
     const { id } = req.params
     const userToEdit = await User.findByPk(id);
+
     const validationStatus = validationResult(req) // trae los resultados del middleware
 
     if (!validationStatus.isEmpty()) {
       //Si hay errores que pasa
-
+      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
       return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
     }
     //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
@@ -176,15 +177,12 @@ const controller = {
 
   },
 
-  //FIXME USER (revisar)
+
   profile: async (req, res) => {
     const id = req.params.id
     const userToView = await User.findByPk(id)
 
-
-    //FIXME => modifique la ruta directa por una varible declarada al principio del codigo @gonza
     userToView.dataValues.profileImg = profileImagePath + userToView.dataValues.profileImg
-
 
     res.render('users/user-detail.ejs', { userToView })
   },

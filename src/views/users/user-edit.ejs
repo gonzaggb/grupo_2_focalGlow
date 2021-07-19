@@ -22,12 +22,13 @@
 			<main>
 			<aside class="column-1">  	
 				<label for="profileImg">
-					<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg ? userToEdit.profileImg : '/img/profile-pictures/profile.jpg' %>">
+					<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg%>">
 				</label>
 
 				<div class="file-btn">
 					Cambiar imagen
-					<input onchange="loadFile(event)" type="file" name="profileImg" accept="jpg">
+					
+					<input onchange="loadFile(event)" type="file" name="profileImg" accept="image/*">
 				
 					<script>
           	var loadFile = function (event) {
@@ -39,7 +40,7 @@
           	};
       		</script>
 				</div>
-			
+				<p class="error"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
 			</aside>
 
 			
@@ -53,7 +54,7 @@
 				<article class="profile-info">        
 					<div class = "row">    
 						<label for="id">User Id</label>
-            <p class="no-edit"><%=userToEdit.id%></p>
+            <input class="edit" name="id" value="<%=userToEdit.id%>" readonly>
 					</div>
 
 					<div class = "row">
