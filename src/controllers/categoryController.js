@@ -29,7 +29,7 @@ const controller = {
 
     let category = await Category.findByPk(req.params.id)
 
-    res.render('categories/category-detail.ejs', { category })
+    res.render('categories/category-detail.ejs', { category, categoryImagePath })
   },
 
   formNew: (req, res) => {
