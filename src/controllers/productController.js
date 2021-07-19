@@ -5,6 +5,10 @@ const { validationResult } = require('express-validator')
 //funciones Auxilliares
 //const { isFileImage, isPdf } = require('../helpers/files')
 const { randomArray2 } = require('../helpers/utilities')
+const { Product } = require('../database/models')
+const Sequelize =require('sequelize')
+const Op = Sequelize.Op;
+
 
 
 const fs = require('fs')
@@ -146,6 +150,16 @@ const controller = {
     res.redirect('/product')
 
   },
+  result: async (req,res) => {
+      
+      let productFound = await Product.findAll({
+        where :{
+          name: { [Op.like]: '%' + req.query.keyword +'%'}
+        } 
+      })
+      console.log(productFound)
+      return res.render('products/product-search.ejs',{productFound})
+  }
 }
 
 module.exports = controller

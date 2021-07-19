@@ -8,6 +8,7 @@
         <div class="dropdown">
           <button class="dropbtn"><i id="burguer" class="fas fa-bars"></i></button>
           <div class="dropdown-content">
+            
             <a href="/#mas-vendidos">Sale</a>
             <a href="/#main-categori">Shop</a>
             <a href="/us">Nosotros</a>
@@ -26,6 +27,7 @@
             <a href="/users/login">Iniciar Sesión</a>
             <a href="/users/register">Registrate</a>
               <% } %> 
+            <a href="/product/search/"><i class="fas fa-search"></i></a>  
             <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
           </div>
         </div>
@@ -53,7 +55,9 @@
                 <li><a href="/users/<%=locals.user.id%>/detail">Perfil </a></li>
                 <li><a href="/users/logout">Salir</a></li>
               </ul>
-
+                <li>
+                  <a href="/product/search/"><i class="fas fa-search"></i></a>
+                </li>
                 <li>
                   <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
                 </li>
@@ -61,6 +65,9 @@
               <li><a href="/users/<%=locals.user.id%>/detail">Perfil </a></li>
               <li><a href="/users/logout">Salir</a></li>
             </ul>
+            <li>
+              <a href="/product/search/"><i class="fas fa-search"></i></a>
+            </li>
               <li>
                 <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
               </li>
@@ -69,7 +76,9 @@
             <li><a href="/users/login">Iniciar Sesión</a></li>
             <li><a href="/users/register">Registrate</a></li>
           </ul>
-
+            <li>
+              <a href="/product/search/"><i class="fas fa-search"></i></a>
+            </li>
             <li>
               <a href="/checkout"><i class="fas fa-shopping-cart"></i></a>
             </li>
