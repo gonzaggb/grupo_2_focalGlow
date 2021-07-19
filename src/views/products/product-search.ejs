@@ -1,22 +1,27 @@
 <%- include ('../partials/head')%>
+    <link rel="stylesheet" href="/css/style_categories_general.css">
+    <link rel="stylesheet" href="/css/style-search.css">
     <body>
         <%- include('../partials/header.ejs')%>
-        <form action="/product/search/" method="get">
-            <input type="search" name="keyword" id="">
-            <button type="submit">Enviar</button>
-        </form>
-
-       
-        <% productFound.forEach(element=> {%>
-            <article class="producto">
-                <a href="/product/detail/<%=element.id%>"><img class="zoom" src="<%=element.main_image%>" alt=""></a>
-                <div class="nombre-precio">
-                    <p class="nombre">Nombre del producto: <%=element.name%>
-                    </p>
-                    <p class="precio">Desde: <%=element.price%>
-                    </p>
-                </div>
-            </article>
-            <%}) %>
-        <%- include('../partials/footer.ejs')%>
+            <form action="/product/search/" method="get">
+                <input type="search" name="keyword"  class= 'search'id="">
+                <button  id='button' type="submit"><i class="fas fa-search"></i></button>
+                
+            </form>
+            <h4>Cantidad de resultados : <%= productFound.length %> </h4>
+            <section class="item-list">
+            <% productFound.forEach(element=> {%>
+                <article class="producto">
+                    <a href="/product/detail/<%=element.id%>"><img class="zoom" src="<%=element.main_image%>"
+                            alt=""></a>
+                    <div class="nombre-precio">
+                        <p class="nombre">Nombre del producto: <%=element.name%>
+                        </p>
+                        <p class="precio">Desde: <%=element.price%>
+                        </p>
+                    </div>
+                </article>
+                <%}) %>
+            </section>
+                    <%- include('../partials/footer.ejs')%>
     </body>

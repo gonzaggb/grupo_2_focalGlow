@@ -135,6 +135,10 @@ body{
 .remember{
     font-size: 12px;
     color:black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
 }
 
 /*Define caracteristicas de los container

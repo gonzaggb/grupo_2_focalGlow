@@ -157,7 +157,6 @@ const controller = {
           name: { [Op.like]: '%' + req.query.keyword +'%'}
         } 
       })
-      console.log(productFound)
       return res.render('products/product-search.ejs',{productFound})
   }
 }
