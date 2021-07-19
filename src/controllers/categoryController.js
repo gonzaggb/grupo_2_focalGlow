@@ -7,6 +7,7 @@ const { validationResult } = require('express-validator')
 const fs = require('fs')
 const path = require('path')
 const categoryImagePath = '/img/categories/'
+const productImagePath = '/img/'
 
 
 
@@ -15,9 +16,13 @@ const controller = {
 
     const name = req.params.name
     let category = await Category.findOne({ where: { name: name } })
-    let product = await Product.findAll({ where: { categoryId: category.id } })
+    let product = await Product.findAll({
+      where: { categoryId: category.id },
+      include: [{ association: 'images' }]
 
-    res.render('category.ejs', { category, product, categoryImagePath })
+    })
+    //res.send(product)
+    res.render('category.ejs', { category, product, categoryImagePath, productImagePath })
   },
 
   list: async (req, res) => {
