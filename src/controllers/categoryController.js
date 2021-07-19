@@ -69,17 +69,19 @@ const controller = {
     res.render('categories/category-edit.ejs', { category })
   },
 
-  delete: (req, res) => {
-    let categoryToDelete = categories.findByPk(req.params.id)
+  delete: async (req, res) => {
+    let categoryToDelete = await Category.findByPk(req.params.id)
 
-
-    const resourcesPath = path.join(__dirname, '../../public')
-
-    fs.unlinkSync(path.join(resourcesPath, categoryToDelete.image_cover))  // borra image Cover
-    fs.unlinkSync(path.join(resourcesPath, categoryToDelete.image_home))
+    fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToDelete.imageCover))  // borra image Cover
+    fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToDelete.imageHome))
     // borra home image
+    try {
+      await Category.destroy(
+        { where: { id: req.params.id } })
+    } catch (error) {
+      console.log(error)
+    }
 
-    categories.delete(req.params.id)
     return res.redirect('/category')
   },
 
