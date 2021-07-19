@@ -1,8 +1,12 @@
 const categories = require('../models/category')
 const products = require('../models/product')
+const { Category } = require('../database/models')
+const { Product } = require('../database/models')
+
 const { validationResult } = require('express-validator')
 const fs = require('fs')
 const path = require('path')
+const categoryImagePath = '/img/categories/'
 
 
 const controller = {
@@ -15,13 +19,15 @@ const controller = {
     res.render('category.ejs', { dataCategory })
   },
 
-  list: (req, res) => {
-    const categoryList = categories.findAll();
-    res.render('categories/category-list.ejs', { categoryList })
+  list: async (req, res) => {
+    const categoryList = await Category.findAll();
+
+    res.render('categories/category-list.ejs', { categoryList, categoryImagePath })
   },
 
-  detail: (req, res) => {
-    let category = categories.findByPk(req.params.id)
+  detail: async (req, res) => {
+
+    let category = await Category.findByPk(req.params.id)
 
     res.render('categories/category-detail.ejs', { category })
   },
