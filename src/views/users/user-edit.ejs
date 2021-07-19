@@ -1,7 +1,7 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
 <title>Editar Perfil | Focal Glow</title>
-<link rel="stylesheet" href="/css/styles-user-profile.css">
+<link rel="stylesheet" href="/css/styles-user-detail.css">
     
 
 
@@ -46,7 +46,7 @@
 
 			<section class="data">
         <div class="title">
-					<h2><%=`${userToEdit.first_name} ${userToEdit.last_name}`%></h2>
+					<h2><%=`${userToEdit.firstName} ${userToEdit.lastName}`%></h2>
 					<button type="submit" class="btn">Actualizar</button>
 				</div>
 
@@ -58,23 +58,23 @@
 
 					<div class = "row">
 						<label for="first_name">Nombre</label>
-            <input class="<%=(locals.errors && errors.first_name) ? 'error edit' : 'edit'%>" type="text" name="first_name" id="first_name"
-							<% if (locals.errors && errors.first_name) {%>
-								placeholder = "<%=errors.first_name.msg%>"
+            <input class="<%=(locals.errors && errors.firstName) ? 'error edit' : 'edit'%>" type="text" name="firstName" id="first_name"
+							<% if (locals.errors && errors.firstName) {%>
+								placeholder = "<%=errors.firstName.msg%>"
 							<%} else if (locals.oldData) { %>
-								value="<%=oldData.first_name%>" <%} else {%>
-								value="<%=userToEdit.first_name%>"<%}%>
+								value="<%=oldData.firstName%>" <%} else {%>
+								value="<%=userToEdit.firstName%>"<%}%>
 						>
 					</div>
 
 					<div class = "row">
 						<label for="last_name">Apellido</label>
-						<input class="<%=(locals.errors && errors.last_name) ? 'error edit' : 'edit'%>" type="text" name="last_name" id="last_name"
-							<% if (locals.errors && errors.last_name) {%>
-								placeholder = "<%=errors.last_name.msg%>"
+						<input class="<%=(locals.errors && errors.lastName) ? 'error edit' : 'edit'%>" type="text" name="lastName" id="last_name"
+							<% if (locals.errors && errors.lastName) {%>
+								placeholder = "<%=errors.lastName.msg%>"
 							<%} else if (locals.oldData) { %>
-								value="<%=oldData.last_name%>" <%} else {%>
-								value="<%=userToEdit.last_name%>"<%}%>
+								value="<%=oldData.lastName%>" <%} else {%>
+								value="<%=userToEdit.lastName%>"<%}%>
 						>
 					</div>
 

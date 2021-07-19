@@ -1,21 +1,22 @@
 const { body } = require('express-validator')
 const files = require('../helpers/files')
-const userModel = require('../models/user')
+const { User } = require('../database/models')
+
 const validations = [
 	//FIXME
-	body('first_name').notEmpty().withMessage('El nombre no puede estar vacío'),
-	body('last_name').notEmpty().withMessage('El apellido no puede estar vacío'),
+	body('firstName').notEmpty().withMessage('El nombre no puede estar vacío'),
+	body('lastName').notEmpty().withMessage('El apellido no puede estar vacío'),
 	body('email').notEmpty().withMessage('Debes poner tu email').bail().isEmail().withMessage("El email ingresado no es valido").bail()
-		.custom((val, { req }) => {
-			const userFound = userModel.findByField('email', val)
-			const userAdmin = userModel.findByPk(req.session.logged)
-			if (userFound && (userFound.id == req.session.logged || userAdmin.category == 'admin')) {
+		.custom(async (val, { req }) => {
+			const userFound = await User.findOne({ where: { email: val } })
+			const userAdmin = await User.findByPk(req.session.logged)
+			if (userFound && (userFound.id == req.session.logged || userAdmin.role == 'admin')) {
 				return true
 			} else if (userFound) {
-				return false
+				return Promise.reject('El usuario ya existe')
 			}
 			return true
-		}).withMessage('El usuario ya existe'),
+		}),
 
 	//MARS: Le doy la opcion de que si desea modificar la contraseña entonces debe ser validado por el middleware. Ver el metodo .if(body...) que trae express validator
 

@@ -122,18 +122,18 @@ const controller = {
   },
 
   //FIXME USER (revisar)
-  edit: (req, res) => {
+  edit: async (req, res) => {
     const id = req.params.id
-    User.findByPk(id)
-      .then((userToEdit) => {
-        res.render('users/user-edit.ejs', { userToEdit })
-      })
+    const userToEdit = await User.findByPk(id)
+    userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+    res.render('users/user-edit.ejs', { userToEdit })
 
   },
+
   //FIXME USER UPDATE
-  update: (req, res) => {
+  update: async (req, res) => {
     const { id } = req.params
-    const userToEdit = user.findByPk(id);
+    const userToEdit = await User.findByPk(id);
     const validationStatus = validationResult(req) // trae los resultados del middleware
 
     if (!validationStatus.isEmpty()) {
@@ -142,30 +142,38 @@ const controller = {
       return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
     }
     //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
-    let { first_name, last_name, email, password, phone, address, category } = req.body
+    let { firstName, lastName, email, password, phone, address, role } = req.body
     const { file } = req
-    const { profileImg } = user.findByPk(id)
+
+
     //Si el usuario no lleno el campo password que me tome la anterior, sino que hashee la nueva contraseña
-    password == '' ? password = user.findByPk(id).password : password = bcrypt.hashSync(password, 10)
+    password == '' ? password = userToEdit.password : password = bcrypt.hashSync(password, 10)
 
     const userUpdate = {
-      first_name,
-      last_name,
+      firstName,
+      lastName,
       email,
       password,
       phone,
       address,
-      category
     }
+
     if (!file) {
-      userUpdate.profileImg = profileImg
+      userUpdate.profileImg = userToEdit.profileImg
     } else {
-      userUpdate.profileImg = '/img/profile-pictures/' + file.filename
+      userUpdate.profileImg = file.filename
+    }
+    try {
+      await User.update(
+        userUpdate
+        ,
+        { where: { id } }
+      )
+      res.redirect('/users')
+    } catch (error) {
+      console.log(error)
     }
 
-    user.update(userUpdate, id)
-
-    res.redirect('/users')
   },
 
   //FIXME USER (revisar)
