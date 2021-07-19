@@ -20,7 +20,10 @@
             border-bottom-right-radius: 10px;
             background-color: white;
             width: 4%;
-        }        
+        } 
+    .empty{
+        color: red;
+    }           
 
 @media (min-width: 1000px) {
     form{

@@ -10,6 +10,7 @@
             </form>
             <h4>Cantidad de resultados : <%= productFound.length %> </h4>
             <section class="item-list">
+            <% if(productFound.length >0){ %>     
             <% productFound.forEach(element=> {%>
                 <article class="producto">
                     <a href="/product/detail/<%=element.id%>"><img class="zoom" src="<%=element.main_image%>"
@@ -22,6 +23,9 @@
                     </div>
                 </article>
                 <%}) %>
+              <% } else { %>
+                    <h2 class="empty">No hay elementos para mostrar</h2>
+                <% } %> 
             </section>
                     <%- include('../partials/footer.ejs')%>
     </body>
