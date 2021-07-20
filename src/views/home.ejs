@@ -56,7 +56,11 @@
           <div class="category-box">
             <%for(i=0; i < categoryList.length; i++) { %>
               <a href="/category/<%=categoryList[i].name+"/"+categoryList[i].id%>"><img class="zoom" src="<%=categoryList[i].imageHome%>"
-                  alt="<%=categoryList[i].name%>"></a>
+                  alt="<%=categoryList[i].name%>">
+                <div class="nombre">
+                  <h2><%=categoryList[i].name%></h2>
+                </div>
+                </a>
               <%}%>
           </div>
           </div>
