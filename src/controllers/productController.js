@@ -6,8 +6,9 @@ const { validationResult } = require('express-validator')
 //const { isFileImage, isPdf } = require('../helpers/files')
 const { randomArray2 } = require('../helpers/utilities')
 const { Product } = require('../database/models')
+const { Feature } = require('../database/models')
 const Sequelize = require('sequelize')
-const Op = Sequelize.Op;
+const Op = Sequelize.Op
 const fs = require('fs')
 const path = require('path')
 const productImagePath = '/img/'
@@ -23,7 +24,6 @@ const controller = {
     })
     res.render('products/product-list.ejs', { products, productImagePath })
   },
-  //FIXME  READ
   detail: async (req, res) => {
     let id = req.params.id
     //busco el producto que viaja por parametro @gonza
@@ -50,7 +50,6 @@ const controller = {
 
     //filtro los Similar Products de forma aleatoria
     let similarProductsFiltered = similarProducts.filter((e, index) => indexArray.includes(index))
-
     res.render('products/product-detail.ejs', { productFound, features, images, similarProductsFiltered, productImagePath })
   },
   formNew: (req, res) => {
@@ -72,13 +71,20 @@ const controller = {
       res.render('products/product-create.ejs', { errors: errors.mapped(), old: req.body })
     }
   },
+
+
   //FIXME FORM UPDATE
-  edit: (req, res) => {
+  edit: async (req, res) => {
     let id = req.params.id
-    let productFound = product.findByPk(id)
-    let errors = validationResult(req)
-    res.render('products/product-edit.ejs', { productFound: productFound })
-  },
+    let productFound = await Product.findByPk(id)
+      const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
+      const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
+      const featuresList = await Feature.findAll() // listado de todas las features
+      res.render('products/product-edit.ejs', { productFound, images, features, featuresList, productImagePath })
+ 
+    },
+
+
   //FIXME UPDATE PRODUCT
   update: (req, res) => {
     let errors = validationResult(req)

@@ -1,7 +1,7 @@
-const categories = require('../models/category')
+const { Category } = require('../database/models')
 
-module.exports = (req, res, next) => {
+module.exports = async (req, res, next) => {
     //FIXME
-    res.locals.categories = categories.findAll()
+    res.locals.categories = await Category.findAll()
     next()
 }

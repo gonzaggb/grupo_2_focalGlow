@@ -45,13 +45,22 @@
                         </span><br>
                         <div class="first-">
                             <label class="" for="source">Fuente: </label>
+                            <%featuresList.forEach(source => {%> <!--Recorre la lista de TODAS las features-->
+                                <% if (source.type == 'source') { %> <!--Evalua las que son material-->
+                                    <div><input class="radio" type="radio" name="source" value="<%=source.id%>"
+                                        <%features.forEach(oldFeature => {%>
+                                            <%=source.name == oldFeature.name ? 'checked' : ''%>
+                                        <%})%>
+                                        > 
+                                            <%=source.name%>
+                                            <!--imprime el nombre de la lisa-->
 
-                            <div>
-                                <input class="radio" type="radio" name="source" value="LED"  <%= productFound.source == "LED" ? 'checked' : '' %>>LED Incorporado
+
+                                <% } %>
                             </div>
-                            <div>
-                                <input class="radio" type="radio" name="source" value="Lámpara"  <%= productFound.source == 'Lámpara' ? 'checked' : '' %>>Lámpara
-                            </div>
+                            <%})%>
+
+                    
                     </div><span class="error_msg">
                         <%=locals.errors && errors.source ? errors.source.msg : '' %>
                     </span><br>
@@ -59,18 +68,16 @@
                             <div class="first-">
                                 <label class="" for="material">Material: </label>
                                 <div>
-                                    <input class="check" type="checkbox" name="material[]" value="Aluminio"  <%= (productFound.material.includes("Aluminio") ? 'checked' : '')%>> Aluminio
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="material[]" value="Madera"  <%= (productFound.material.includes("Madera") ? 'checked' : '')%>> Madera
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="material[]" value="Chapa"  <%= (productFound.material.includes("Chapa") ? 'checked' : '') %>> Chapa
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="material[]" value="Hierro"  <%= (productFound.material.includes("Hierro") ? 'checked' : '')%>> Hierro
-                                </div>
-                            </div>
+                                    <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
+                                    <%featuresList.forEach(material => {%> <!--Recorre la lista de TODAS las features-->
+                                        <% if (material.type == 'material') { %> <!--Evalua las que son material-->
+                                            <div><input class="check" type="checkbox" name="material[]" value="<%=material.id%>" 
+                                                <%features.forEach(oldMaterial => {%> 
+                                                    <%=material.name == oldMaterial.name ? 'checked' : ''%>
+                                                    <%})%>><%=material.name%></div> <!--imprime el nombre de la lisa-->
+                                        <% } %>
+                                    <%})%>
+                             </div>
                             <!-- <div class="in-line-data">
                                 <label class="otros-materiales" for="otros-material">Otros materiales: </label><br>
                                 <input class="box-1" type="text" name="material" id="otros-material"
@@ -82,23 +89,21 @@
                         </span><br>
                         <div class="first-">
                             <label class="" for="optic">Optica: </label>
-                            <div>
-                                <input class="check" type="checkbox" name="optic[]" value="Flood"  <%= productFound.optic.includes("Flood") ? 'checked' : '' %>> Flood
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="optic[]" value="Spot"  <%=  productFound.optic.includes("Spot") ? 'checked' : '' %>> Spot
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="optic[]" value="Wideflood" <%=  productFound.optic.includes("Wideflood") ? 'checked' : ''%>> Wideflood
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="optic[]" value="Ovalflood"  <%=  productFound.optic.includes("Ovalflood") ? 'checked' : ''%>> Ovalflood
-                            </div>
+                                     <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
+                                     <%featuresList.forEach(optic => {%> <!--Recorre la lista de TODAS las features-->
+                                        <% if (optic.type == 'optic') { %> <!--Evalua las que son material-->
+                                            <div><input class="check" type="checkbox" name="optic[]" value="<%=optic.id%>" 
+                                                <%features.forEach(oldOptic => {%> 
+                                                    <%=optic.name == oldOptic.name ? 'checked' : ''%>
+                                                    <%})%>><%=optic.name%></div> <!--imprime el nombre de la lisa-->
+                                        <% } %>
+                                    <%})%>
                         </div>
                         <span class="error_msg">
                             <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
                         </span><br>
                         <div class="first-">
+                            <%//FIXME ACOMODAR ESTO @gonza%>
                             <label for="power">Potencia [W]: </label>
                             <% for(j=0;j<4;j++){ %>
                                 <select name="power" class="select">
@@ -116,36 +121,30 @@
                         </span><br>
                         <div class="first-">
                             <label class="" for="cct">CCT: </label>
-                            <div>
-                                <input class="check" type="checkbox" name="cct[]" value="2700"  <%=  (productFound.cct.includes(2700) || productFound.cct.includes('2700') ? 'checked' : '')%>> 2700K
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="cct[]" value="3000"  <%=  (productFound.cct.includes(3000) || productFound.cct.includes('3000') ? 'checked' : '')%>> 3000K
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="cct[]" value="3500"  <%=  (productFound.cct.includes(3500) || productFound.cct.includes('3500') ? 'checked' : '')%>> 3500K
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="cct[]" value="4000"  <%=  (productFound.cct.includes(4000) || productFound.cct.includes('4000') ? 'checked' : '')%>> 4000K
-                            </div>
+                                                               <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
+                                                               <%featuresList.forEach(cct => {%> <!--Recorre la lista de TODAS las features-->
+                                                                <% if (cct.type == 'cct') { %> <!--Evalua las que son material-->
+                                                                    <div><input class="check" type="checkbox" name="cct[]" value="<%=cct.id%>" 
+                                                                        <%features.forEach(oldCct => {%> 
+                                                                            <%=cct.name == oldCct.name ? 'checked' : ''%>
+                                                                            <%})%>><%=cct.name%></div> <!--imprime el nombre de la lisa-->
+                                                                <% } %>
+                                                            <%})%>
                         </div>
                         <span class="error_msg">
                             <%=locals.errors && errors.cct ? errors.cct.msg : '' %>
                         </span><br>
                         <div class="first-">
                             <label class="" for="dim">Dim: </label>
-                            <div>
-                                <input class="check" type="checkbox" name="dim[]" value="Switch"  <%=  (productFound.dim.includes("Switch") ? 'checked' : '')%>> Switch
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="dim[]" value="Dimeable"  <%= (productFound.dim.includes("Dimeable") ? 'checked' : '')%>> Dimeable
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="dim[]" value="DALI"  <%= (productFound.dim.includes("DALI") ? 'checked' : '')%>> DALI
-                            </div>
-                            <div>
-                                <input class="check" type="checkbox" name="dim[]" value="Bluetooth"  <%= (productFound.dim.includes("Bluetooth") ? 'checked' : '')%>> Bluetooth
-                            </div>
+                                    <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
+                                    <%featuresList.forEach(dim => {%> <!--Recorre la lista de TODAS las features-->
+                                        <% if (dim.type == 'dim') { %> <!--Evalua las que son material-->
+                                            <div><input class="check" type="checkbox" name="dim[]" value="<%=dim.id%>"
+                                                <%features.forEach(oldDim => {%> 
+                                                    <%=dim.name == oldDim.name ? 'checked' : ''%>
+                                                    <%})%>><%=dim.name%></div> <!--imprime el nombre de la lisa-->
+                                        <% } %>
+                                    <%})%>
                         </div>
                         <span class="error_msg">
                             <%=locals.errors && errors.dim ? errors.dim.msg : '' %>
