@@ -55,7 +55,7 @@
           <!--unifique las imagenes en una sola caja para mostrar mejor-->
           <div class="category-box">
             <%for(i=0; i < categoryList.length; i++) { %>
-              <a href="/categorias/<%=categoryList[i].name+"/"+categoryList[i].id%>"><img class="zoom" src="<%=categoryList[i].imageHome%>"
+              <a href="/category/<%=categoryList[i].name+"/"+categoryList[i].id%>"><img class="zoom" src="<%=categoryList[i].imageHome%>"
                   alt="<%=categoryList[i].name%>"></a>
               <%}%>
           </div>
