@@ -15,9 +15,9 @@ const storage = multer.diskStorage({
 		let name = ''
 
 		switch (file.fieldname) {
-			case 'image_cover': name = 'cover'
+			case 'imageCover': name = 'cover'
 				break
-			case 'image_home': name = 'home'
+			case 'imageHome': name = 'home'
 				break
 			default:
 		}

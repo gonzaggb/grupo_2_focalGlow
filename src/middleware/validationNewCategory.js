@@ -1,31 +1,31 @@
 const { body } = require('express-validator')
 const files = require('../helpers/files')
-const categoryModel = require('../models/category')
+const { Category } = require('../database/models')
 const { checkFieldImage } = require('../helpers/checkFiles')
 
 const validations = [
 	body('name')
 		.notEmpty().withMessage('Debes ingresar el nombre de la categoría').bail()
-		.isLength({ min: 5 }).withMessage('El nombre debe ser más largo')
+		.isLength({ min: 3 }).withMessage('El nombre debe ser más largo')
 
-		.custom((val) => {
-			const categoryFound = categoryModel.findByName(val)
-
+		.custom(async (val) => {
+			const categoryFound = await Category.findOne({ where: { name: val } })
+			console.log(categoryFound)
 			if (categoryFound) {
-				return false
+				throw new Error('La categoría ya existe')
 			}
 			return true
-		}).withMessage('La categoría ya existe'),
+		}),
 
 	//Para las imagenes y pdf llamamos a una funcion auxiliadora
-	body('image_cover').custom((value, { req }) => {
+	body('imageCover').custom((value, { req }) => {
 		const { files } = req
-		checkFieldImage('image_cover', files)
+		checkFieldImage('imageCover', files)
 		return true
 	}),
-	body('image_home').custom((value, { req }) => {
+	body('imageHome').custom((value, { req }) => {
 		const { files } = req
-		checkFieldImage('image_home', files)
+		checkFieldImage('imageHome', files)
 		return true
 	}),
 

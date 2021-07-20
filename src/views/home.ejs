@@ -54,9 +54,9 @@
         <section id="categorias">
           <!--unifique las imagenes en una sola caja para mostrar mejor-->
           <div class="category-box">
-            <%for(i=0; i < homeData.categoryList.length; i++) { %>
-              <a href="/categorias/<%=homeData.categoryList[i].name+"/"+homeData.categoryList[i].id%>"><img class="zoom" src="<%=homeData.categoryList[i].image_home%>"
-                  alt="<%=homeData.categoryList[i].name%>"></a>
+            <%for(i=0; i < categoryList.length; i++) { %>
+              <a href="/categorias/<%=categoryList[i].name+"/"+categoryList[i].id%>"><img class="zoom" src="<%=categoryList[i].imageHome%>"
+                  alt="<%=categoryList[i].name%>"></a>
               <%}%>
           </div>
           </div>
@@ -67,12 +67,12 @@
         <div class="elementos">
             <%for(i=0; i < 4; i++){%>
               <div id="first-box" class="box">
-                <img src="<%=homeData.products[randomArray[i]].main_image%>" alt="<%=homeData.products[randomArray[i]].name%>">
-                <a href="/product/detail/<%=homeData.products[randomArray[i]].id%>">
+                <img src="<%=products[randomArray[i]].main_image%>" alt="<%=products[randomArray[i]].name%>">
+                <a href="/product/detail/<%=products[randomArray[i]].id%>">
                   <div class="capa">
                     <h2>
-                      <%= homeData.products[randomArray[i]].name %> <br><br>
-                        $<%= homeData.products[randomArray[i]].price %>
+                      <%= products[randomArray[i]].name %> <br><br>
+                        $<%= products[randomArray[i]].price %>
                     </h2>
                   </div>
                 </a>

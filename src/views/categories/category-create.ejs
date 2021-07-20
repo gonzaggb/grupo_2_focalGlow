@@ -26,23 +26,23 @@
 			
 			<section class="images-container">
 				<div class="add-image">
-					<label for ="image_cover" class="file-btn">Imagen Cover</label>
-					<input type="file" id="image_cover" name="image_cover" accept="image/*" onchange="document.getElementById('image_cover_display').src = window.URL.createObjectURL(this.files[0])">
+					<label for ="imageCover" class="file-btn">Imagen Cover</label>
+					<input type="file" id="imageCover" name="imageCover" accept="image/*" onchange="document.getElementById('image_cover_display').src = window.URL.createObjectURL(this.files[0])">
 					<figure>
 						<img id="image_cover_display" class="images"/>	
 					</figure>
-					<% if(locals.errors && errors.image_cover) {%>
-						<p class ="error"><%=errors.image_cover.msg%></p>
+					<% if(locals.errors && errors.imageCover) {%>
+						<p class ="error"><%=errors.imageCover.msg%></p>
 					<%}%>
 				</div>
 				<div class="add-image">
-					<label for = "image_home">Imagen Home</label>
-					<input type="file" id="image_home" name="image_home" accept="image/*" onchange="document.getElementById('image_home_display').src = window.URL.createObjectURL(this.files[0])">
+					<label for = "imageHome">Imagen Home</label>
+					<input type="file" id="imageHome" name="imageHome" accept="image/*" onchange="document.getElementById('image_home_display').src = window.URL.createObjectURL(this.files[0])">
 					<figure>
 						<img id="image_home_display" class="images"/>
 					</figure>
-					<% if(locals.errors && errors.image_home) {%>
-						<p class ="error"><%=errors.image_home.msg%></p>
+					<% if(locals.errors && errors.imageHome) {%>
+						<p class ="error"><%=errors.imageHome.msg%></p>
 					<%}%>
 				</div>
 			</section>

@@ -1,6 +1,8 @@
 const agregarProducto = require('../models/product')
 const categories = require('../models/category')
+const { Category } = require('../database/models')
 const random = require('../helpers/utilities')
+const path = require('path')
 
 
 
@@ -9,12 +11,16 @@ const SALEIMAGES = 4 // cantidad de imagenes que se muestran en la parte de SALE
 
 const controller = {
   //FIXME CATEGORIE 
-  home: (req, res) => {
+  home: async (req, res) => {
     const randomArray = random.randomArray(SALEIMAGES, agregarProducto.findAll().length)
     let products = agregarProducto.findAll()
-    let categoryList = categories.findAll()
-    let homeData = { products, categoryList }
-    res.render('home.ejs', { homeData,randomArray }) // paso al html el array
+    let categoryList = await Category.findAll()
+    categoryList.forEach(element => {
+      element.dataValues.imageCover = path.join('/img/categories/', element.imageCover)
+      element.dataValues.imageHome = path.join('/img/categories/', element.imageHome)
+    });
+
+    res.render('home.ejs', { products, categoryList, randomArray }) // paso al html el array
   },
   checkout: (req, res) => {
     //Esto esta aca como para tener unos datos que enviar al checkout. NO va aca.
