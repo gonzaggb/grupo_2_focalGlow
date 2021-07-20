@@ -13,26 +13,46 @@ const controller = {
 
     const name = req.params.name
     let category = await Category.findOne({ where: { name: name } })
+
+    category.dataValues.imageCover = categoryImagePath + category.imageCover
+
     let product = await Product.findAll({
       where: { categoryId: category.id },
       include: [{ association: 'images' }]
 
     })
-    //res.send(product)
-    res.render('category.ejs', { category, product, categoryImagePath, productImagePath })
+
+    product.forEach(e => {
+      e.images.forEach(e => {
+        e.dataValues.name = productImagePath + e.name
+      })
+    })
+
+    res.render('category.ejs', { category, product })
   },
 
   list: async (req, res) => {
     const categoryList = await Category.findAll();
 
-    res.render('categories/category-list.ejs', { categoryList, categoryImagePath })
+    try {
+      categoryList.forEach(e => {
+        e.dataValues.imageCover = categoryImagePath + e.imageCover
+        e.dataValues.imageHome = categoryImagePath + e.imageHome
+      })
+      res.render('categories/category-list.ejs', { categoryList })
+
+    } catch (error) {
+      console.log(error)
+    }
   },
 
   detail: async (req, res) => {
 
     let category = await Category.findByPk(req.params.id)
+    category.dataValues.imageCover = categoryImagePath + category.imageCover
+    category.dataValues.imageHome = categoryImagePath + category.imageHome
 
-    res.render('categories/category-detail.ejs', { category, categoryImagePath })
+    res.render('categories/category-detail.ejs', { category })
   },
 
   formNew: (req, res) => {
