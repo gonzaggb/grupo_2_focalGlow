@@ -15,10 +15,10 @@
                             <div class="first">
                                 <div class="cateogry-selector">
                                     <label class="" for="category">Categoria: </label><br>
-                                    <select name="category" class="select">
+                                    <select name="categoryId" class="select">
                                         <option value="<%= locals.old && old.category ? old.category : ''%>"><%=locals.old && old.category ? old.category : 'Seleccionar'%></option>
                                         <% locals.categories.forEach(element => { %>
-                                            <option value="<%=element.name%>"><%=element.name.charAt(0).toUpperCase() + element.name.slice(1)%></option>
+                                            <option value="<%=element.id%>"><%=element.name.charAt(0).toUpperCase() + element.name.slice(1)%></option>
                                         <% }) %>
                                      </select>
                                      
@@ -37,8 +37,8 @@
                             </div><br>
                             <div class="first">
                                 <div class="in-line-data">
-                                    <label class="" for="qty">Cantidad: </label><br>
-                                    <input class="box" type="number" name="qty" id="producto" min="0" value="<%= locals.old && old.qty ? old.qty : '' %>" >
+                                    <label class="" for="quantity">Cantidad: </label><br>
+                                    <input class="box" type="number" name="quantity" id="producto" min="0" value="<%= locals.old && old.qty ? old.qty : '' %>" >
                                     <span class="error_msg">
                                         <%= locals.errors && errors.qty ? errors.qty.msg : null %>
                                     </span>
@@ -46,97 +46,75 @@
                             </div><br>
                             <div class="first-">
                                 <label class="" for="source">Fuente: </label>
-
-                                <div>
-                                    <input class="radio" type="radio" name="source" value="LED" <%= (locals.old && old.source == 'LED') ? 'checked' : '' %>>LED Incorporado
+                                <%featuresList.forEach(source => {%> <!--Recorre la lista de TODAS las features-->
+                                    <% if (source.type == 'source') { %> <!--Evalua las que son material-->
+                                        <div><input class="radio" type="radio" name="source" 
+                                            value="<%=source.id%>"><%=source.name%>
                                 </div>
-                                <div>
-                                    <input class="radio" type="radio" name="source" value="Lámpara" <%= (locals.old && old.source == 'Lámpara') ? 'checked' : '' %>>Lámpara
-                                </div>  
+                                <%}})%>
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.source ? errors.source.msg : '' %></span><br>
                             <div>
-                                <div class="first-">
-                                    <label class="" for="material">Material: </label>
-                                    <div>
-                                        <input class="check" type="checkbox" name="material[]" value="Aluminio"<%= (locals.old && old.material && old.material.includes('Aluminio')) ? 'checked' : '' %> > Aluminio
-                                    </div>
-                                    <div>
-                                        <input class="check" type="checkbox" name="material[]" value="Madera"<%= (locals.old && old.material && old.material.includes('Madera')) ? 'checked' : '' %> > Madera
-                                    </div>
-                                    <div>
-                                        <input class="check" type="checkbox" name="material[]" value="Chapa"<%= (locals.old && old.material &&old.material.includes('Chapa')) ? 'checked' : '' %> > Chapa
-                                    </div>
-                                    <div>
-                                        <input class="check" type="checkbox" name="material[]" value="Hierro"<%= (locals.old && old.material && old.material.includes('Hierro')) ? 'checked' : '' %> > Hierro
-                                    </div>
-                                   
-                                </div>   
+                            <div class="first-">
+                                <label class="" for="material">Material: </label>
+                                    <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
+                                    <%featuresList.forEach(material => {%> <!--Recorre la lista de TODAS las features-->
+                                        <% if (material.type == 'material') { %> <!--Evalua las que son material-->
+                                            <div><input class="check" type="checkbox" name="material[]" value="<%=material.id%>" > <%=material.name%>
+                                            </div>
+                                                <% } %>
+                                            
+                                    <%})%>
+                             </div>
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.material ? errors.material.msg : '' %></span><br>
                             <div class="first-">
                                 <label class="" for="optic">Optica: </label>
-                                <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Flood" <%= (locals.old && old.optic && old.optic.includes('Flood')) ? 'checked' : '' %>> Flood
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Spot"<%= (locals.old && old.optic &&  old.optic.includes('Spot')) ? 'checked' : '' %>> Spot
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Wideflood"<%= (locals.old && old.optic &&  old.optic.includes('Wideflood')) ? 'checked' : '' %>> Wideflood
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="optic[]" value="Ovalflood"<%= (locals.old && old.optic &&  old.optic.includes('Ovalflood')) ? 'checked' : '' %>> Ovalflood
-                                </div>
+                                    <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
+                                    <%featuresList.forEach(optic => {%> <!--Recorre la lista de TODAS las features-->
+                                        <% if (optic.type == 'optic') { %> <!--Evalua las que son material-->
+                                            <div><input class="check" type="checkbox" name="optic[]" value="<%=optic.id%>" > <%=optic.name%>
+                                            </div>
+                                                <% } %>
+                                            
+                                    <%})%>
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
                                 <label for="power">Potencia: </label>
                                 <% for(j=0;j<4;j++){ %>
                                     <select name="power" class="select">
-                                        <option value="<%=locals.old && old.power[j] ? old.power[j] : ''%>"><%=locals.old && old.power[j] ? old.power[j]+"W" : 'Seleccionar'%></option>
-                                        <% for(i=1;i<=100;i++){ %>
-                                            <option value="<%=[i]%>">
-                                                <%=[i]%>W
-                                            </option>
-                                            <%}%>
-                                    </select>
-                                    <%}%>        
+                                        <option value="">Seleccionar</option>
+                                        <%featuresList.forEach(power => {%>
+                                            <%if(power.type == 'power'){%>
+                                                <option value="<%=power.id%>"><%=power.name%></option>
+                                            <%}})%>                                   
+                                        </select>
+                                        <%}%>                                        
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.power ? errors.power.msg : '' %></span><br>
                             <div class="first-">
                                 <label class="" for="cct">CCT: </label>
-                                <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="2700" <%= (locals.old && old.cct && (old.cct.includes(2700) || old.cct.includes('2700'))) ? 'checked' : '' %>>2700K
-                                </div>
-                                
-                                <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="3000" <%= (locals.old && old.cct &&  (old.cct.includes(3000) || old.cct.includes('3000'))) ? 'checked' : '' %>>3000K
-                                </div>
-                                
-                                <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="3500" <%= (locals.old && old.cct &&  (old.cct.includes(3500) || old.cct.includes('3500')))? 'checked' : '' %>>3500K
-                                </div>
-                                
-                                <div>
-                                    <input class="check" type="checkbox" name="cct[]" value="4000" <%= (locals.old && old.cct &&  (old.cct.includes(4000) || old.cct.includes('4000'))) ? 'checked' : '' %>>4000K
-                                </div>                               
+                                    <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
+                                    <%featuresList.forEach(cct => {%> <!--Recorre la lista de TODAS las features-->
+                                        <% if (cct.type == 'cct') { %> <!--Evalua las que son material-->
+                                            <div><input class="check" type="checkbox" name="cct[]" value="<%=cct.id%>" > <%=cct.name%>
+                                            </div>
+                                                <% } %>
+                                            
+                                    <%})%>
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span><br>
                             <div class="first-">
                                 <label class="" for="dim">Dim: </label>
-                                <div>
-                                    <input class="check" type="checkbox" name="dim[]" value="Switch" <%= (locals.old && old.dim &&  old.dim.includes('Switch')) ? 'checked' : '' %>> Switch
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="dim[]" value="Dimeable" <%= (locals.old && old.dim && old.dim.includes('Dimeable')) ? 'checked' : '' %>> Dimeable
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="dim[]" value="DALI" <%= (locals.old && old.dim && old.dim.includes('DALI')) ? 'checked' : '' %>> DALI
-                                </div>
-                                <div>
-                                    <input class="check" type="checkbox" name="dim[]" value="Bluetooth" <%= (locals.old && old.dim && old.dim.includes('Bluetooth')) ? 'checked' : '' %>> Bluetooth
-                                </div>                                
+                                    <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
+                                    <%featuresList.forEach(dim => {%> <!--Recorre la lista de TODAS las features-->
+                                        <% if (dim.type == 'dim') { %> <!--Evalua las que son material-->
+                                            <div><input class="check" type="checkbox" name="dim[]" value="<%=dim.id%>" > <%=dim.name%>
+                                            </div>
+                                                <% } %>
+                                            
+                                    <%})%>
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.dim ? errors.dim.msg : '' %></span><br>
                             <div class="first-">
@@ -156,8 +134,8 @@
                             
                             <div class="imagenes">
                                 <div class="imagen-input">
-                                    <label class="title" for="main_image">Imagen Principal: </label><br>
-                                    <input type="file" name="main_image" onchange="loadFile(event)" accept=".jpg"><br>
+                                    <label class="title" for="main">Imagen Principal: </label><br>
+                                    <input type="file" name="main" onchange="loadFile(event)" accept=".jpg"><br>
                                     <span class="error_msg"><%=locals.errors && errors.main_image ? errors.main_image.msg : '' %></span>
                                     <br>
                                     <p>Preview:</p>
@@ -173,19 +151,19 @@
                                     </script>
                                 </div><br>
                                 <div class="imagen-input">
-                                    <label class="title" for="image_dimension">Dimensiones del Producto: </label><br>
-                                    <input type="file" name="image_dimension" accept=".jpg , .png"><br>
+                                    <label class="title" for="dimension">Dimensiones del Producto: </label><br>
+                                    <input type="file" name="dimension" accept=".jpg , .png"><br>
                                     <span class="error_msg"><%=locals.errors && errors.image_dimension ? errors.image_dimension.msg : '' %></span>
                                 </div><br>
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="title" for="image_slider">Slider: </label><br>
-                                    <input type="file" name="image_slider1" accept=".jpg , .png"> <br>
+                                    <input type="file" name="slider" accept=".jpg , .png"> <br>
                                     <span class="error_msg"><%=locals.errors && errors.image_slider1? errors.image_slider1.msg : '' %></span> <br>
-                                    <input type="file" name="image_slider2" accept=".jpg , .png"> <br>
+                                    <input type="file" name="slider" accept=".jpg , .png"> <br>
                                     <span class="error_msg"><%=locals.errors && errors.image_slider2? errors.image_slider2.msg : '' %></span> <br>
-                                    <input type="file" name="image_slider3" accept=".jpg , .png"> <br>
+                                    <input type="file" name="slider" accept=".jpg , .png"> <br>
                                     <span class="error_msg"><%=locals.errors && errors.image_slider3? errors.image_slider3.msg : '' %></span> <br>
                                 </div><br>
                             </div>

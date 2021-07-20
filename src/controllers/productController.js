@@ -52,16 +52,22 @@ const controller = {
     let similarProductsFiltered = similarProducts.filter((e, index) => indexArray.includes(index))
     res.render('products/product-detail.ejs', { productFound, features, images, similarProductsFiltered, productImagePath })
   },
-  formNew: (req, res) => {
-    res.render('products/product-create.ejs')
+  formNew: async (req, res) => {
+    const featuresList = await Feature.findAll() // listado de todas las features
+    res.render('products/product-create.ejs', {featuresList})
   },
+
   //FIXME CREATE PRODUCT 
-  create: (req, res) => {
+  create: async (req, res) => {
     let errors = validationResult(req)
     const productNew = req.body
     const { files } = req
+    await Product.create(productNew)
+    /*puede que el camino sea guardar el await de arriba en una variable, destructurar lo que viaja en el body, guardar lo que corresponde al producto con el create y usar magic method de set para completar los datos de la tablas intermedia*/
+    res.redirect('/')
+    return 
     if (errors.isEmpty()) {
-      product.create(productNew, files)
+      product.Create(productNew, files)
       res.redirect('/product')
     } else {
       /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la creación del producto*/
