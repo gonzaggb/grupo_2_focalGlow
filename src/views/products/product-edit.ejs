@@ -14,9 +14,9 @@
                             <div class="cateogry-selector">
                                 <label class="" for="category">Categoria: </label><br>
                                     <select name="category" class="select">
-                                        <option value="<%= productFound.category %>"><%= productFound.category %></option>
+                                        <option value="<%= category.id %>"><%= category.name %></option>
                                         <% locals.categories.forEach(categorie => { %>
-                                            <option value="<%=categorie.name%>"><%=categorie.name.charAt(0).toUpperCase() + categorie.name.slice(1)%></option>
+                                            <option value="<%=categorie.id%>"><%=categorie.name.charAt(0).toUpperCase() + categorie.name.slice(1)%></option>
                                         <% }) %>
                                      </select>
                             </div>
@@ -36,7 +36,7 @@
                         <div class="first">
                             <div class="in-line-data">
                                 <label class="" for="qty">Cantidad: </label><br>
-                                <input class="box" type="number" name="qty" id="producto" min="0" value="<%= Number(productFound.qty) %>" >
+                                <input class="box" type="number" name="qty" id="producto" min="0" value="<%= productFound.quantity %>" >
                                 
                             </div>
                         </div>
@@ -67,7 +67,6 @@
                         <div>
                             <div class="first-">
                                 <label class="" for="material">Material: </label>
-                                <div>
                                     <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                     <%featuresList.forEach(material => {%> <!--Recorre la lista de TODAS las features-->
                                         <% if (material.type == 'material') { %> <!--Evalua las que son material-->
@@ -103,18 +102,30 @@
                             <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
                         </span><br>
                         <div class="first-">
-                            <%//FIXME ACOMODAR ESTO @gonza%>
-                            <label for="power">Potencia [W]: </label>
-                            <% for(j=0;j<4;j++){ %>
-                                <select name="power" class="select">
-                                        <option value="<%=productFound && productFound.power ? productFound.power[j] : ''%>"><%=productFound && productFound.power ? productFound.power[j]+"W" : 'Seleccionar'%></option>
-                                    <% for(i=1;i<=100;i++){ %>     
-                                        <option value="<%=[i]%>">
-                                            <%=[i]%>W
-                                        </option>
+                                <%/*powerIndex define donde está el primer power,*/%>
+                                    <%/*el for de las J genera los diferentes selects.*/%>
+                                    <%/*el for de las I, completa los valores del producto original*/%>
+                                    <%/*el siguiente forEach arma todos los select que hay*/%>
+                                <%let powerIndex = features.findIndex(power => power.type == 'power')%>
+                                <%let aux = powerIndex%>
+                                <% for(j=0;j<4;j++){ %>
+                                    <select name="power" class="select">
+                                        <% for(let i = powerIndex; i < powerIndex + 4; i++){%>
+                                            <%if(features[aux].id){%>
+                                            <option value="<%=features[aux].id%>"><%=features[aux].name%></option>
+                                            <%} else {%>
+                                                <option value="">Seleccionar</option>
+                                                <%}}%>
+   
+                                        <%featuresList.forEach(power => {%>
+                                            <%if(power.type == 'power'){%>
+                                                <option value="<%=power.id%>"><%=power.name%></option>
+                                            <%}})%>                                          
+                                                
+                                        </select>
+                                        <%aux++%>
+
                                         <%}%>
-                                </select>
-                                <%}%>
                         </div>
                         <span class="error_msg">
                             <%=locals.errors && errors.power ? errors.power.msg : '' %>
@@ -152,7 +163,7 @@
                         <div class="first-">
                             <label class="price" for="price">Precio unitario base: </label><br>
                             <input class="price" type="number" name="price" id="precio" min="0"
-                                placeholder=" Ej 15235.35" value="<%=Number(productFound.price)%>" >
+                                placeholder=" Ej 15235.35" value="<%=productFound.price%>" >
                         </div>
                         <span class="error_msg">
                             <%=locals.errors && errors.price ? errors.price.msg : '' %>
@@ -172,8 +183,7 @@
                                 <input type="file" name='main_image' accept=".jpg">
                                 <br>
                                 <p>Preview:</p>
-                                <img  id="output" src="<%= productFound.main_image %>" alt="" >
-                                <input type="text" value="<%= productFound.main_image %>" name="ruta_producto">
+                                <img  id="output" src="<%=productImagePath + images[0].name%>" alt="" >
                             </div><br>
                             <div class="imagen-input">
                                 <label class="title" for="image_dimension">Dimensiones del Producto: </label><br>

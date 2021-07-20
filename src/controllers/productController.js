@@ -79,8 +79,9 @@ const controller = {
     let productFound = await Product.findByPk(id)
       const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
       const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
+      const category = await productFound.getCategory()
       const featuresList = await Feature.findAll() // listado de todas las features
-      res.render('products/product-edit.ejs', { productFound, images, features, featuresList, productImagePath })
+      res.render('products/product-edit.ejs', { productFound, category, images, features, featuresList, productImagePath })
  
     },
 
