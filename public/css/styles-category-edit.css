@@ -110,6 +110,7 @@ article.details {
 .error::placeholder {
   color: red !important;
   font-weight: bold;
+  background-color: transparent;
 }
 
 .edit-button {

@@ -72,14 +72,15 @@ const controller = {
       })
 
       res.render('categories/category-create.ejs', { errors: errors.mapped(), old: req.body })
-    } else {
-      files.forEach(e => {
-        e.fieldname == 'imageCover' ? categoryNew.imageCover = e.filename : categoryNew.imageHome = e.filename
-      })
-
-      await Category.create(categoryNew)
-      return res.redirect('/category')
     }
+
+    files.forEach(e => {
+      e.fieldname == 'imageCover' ? categoryNew.imageCover = e.filename : categoryNew.imageHome = e.filename
+    })
+
+    await Category.create(categoryNew)
+    return res.redirect('/category')
+
   },
 
   edit: async (req, res) => {
@@ -93,15 +94,29 @@ const controller = {
 
   update: async (req, res) => {
 
+    let errors = validationResult(req)
+    //res.send(errors)
+
+    const category = await Category.findByPk(req.params.id)
+
+
+    if (!category) {
+      return res.send('Esa categoría no existe')
+    }
     const categoryNew = req.body
     const { files } = req
 
-    const categoryToUpdate = await Category.findByPk(req.params.id)
-    if (!categoryToUpdate) {
-      return res.send('Esa categoría no existe')
+    if (!errors.isEmpty()) {
+      /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la creación del producto*/
+      files.forEach(e => {
+        fs.unlinkSync(e.path)
+      })
+      category.dataValues.imageCover = categoryImagePath + category.imageCover
+      category.dataValues.imageHome = categoryImagePath + category.imageHome
+      res.render('categories/category-edit.ejs', { errors: errors.mapped(), old: req.body, category })
     }
 
-
+    const categoryToUpdate = await Category.findByPk(req.params.id)
 
     if (files.length > 0) {
       //Si vienen archivos de imagenes => borro las imagenes viejas del servidor y cambio el valor a la key

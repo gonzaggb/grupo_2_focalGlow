@@ -30,8 +30,8 @@
 							}
 						}
 					</script>
-					
 				</div>
+				<p><%=(locals.errors && errors.imageCover)? errors.imageCover.msg : '' %></p>
 					  	
 				<label for="imageHome">
 					<img id="imageHome" class="imageHome"  src="<%=category.imageHome%>">
@@ -50,7 +50,8 @@
             	}
           	}
       		</script>
-				</div>		
+				</div>
+				<p><%=(locals.errors && errors.imageHome)? errors.imageHome.msg : '' %></p>		
 			</section>
 
 			<section class="data">
@@ -67,12 +68,14 @@
 
 					<div class = "row">
 						<label for="name">Nombre</label>
-            <input class="edit" type="text" name="name"
+            <input type="text" name="name"
 							<% if (locals.errors && errors.name) {%>
-									class = "error edit"
+									class = "error"
 									placeholder = "<%=errors.name.msg%>"
 							<%} else if (locals.oldData) { %>
+									class="edit" 
 									value="<%=oldData.name%>" <%} else {%>
+									class="edit" 
 									value="<%=category.name%>"<%}%>
 						>
 					</div>

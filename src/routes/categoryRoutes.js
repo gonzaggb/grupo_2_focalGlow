@@ -6,7 +6,8 @@ const router = express.Router();
 const authMiddleware = require('../middleware/authMiddleware');
 const adminMiddleware = require('../middleware/adminMiddleware');
 const uploadRegister = require('../middleware/categoryMulter');
-const validateNewCategory = require('../middleware/validationNewCategory');
+const validateNewCategory = require('../middleware/validationNewCategory')
+const validateEditCategory = require('../middleware/validationEditCategory');
 //requiero el controlador de category
 const categoryController = require('../controllers/categoryController')
 
@@ -20,7 +21,7 @@ router.get('/add', authMiddleware, adminMiddleware, categoryController.formNew)
 router.post('/add', uploadRegister.any('imageCover', 'imageHome'), validateNewCategory, authMiddleware, adminMiddleware, categoryController.create)
 
 router.get('/edit/:id', authMiddleware, adminMiddleware, categoryController.edit)
-router.put('/edit/:id', uploadRegister.any('imageCover', 'imageHome'), authMiddleware, adminMiddleware, categoryController.update)
+router.put('/edit/:id', uploadRegister.any('imageCover', 'imageHome'), authMiddleware, adminMiddleware, validateEditCategory, categoryController.update)
 
 router.delete('/:id', authMiddleware, adminMiddleware, categoryController.delete)
 
