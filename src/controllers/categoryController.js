@@ -91,8 +91,30 @@ const controller = {
     res.render('categories/category-edit.ejs', { category })
   },
 
-  update: (req, res) => {
+  update: async (req, res) => {
 
+    const categoryNew = req.body
+    const { files } = req
+
+    let categoryToUpdate = await Category.findByPk(req.params.id)
+    if (!categoryToUpdate) {
+      return res.send('Esa categoría no existe')
+    }
+
+    if (files.length > 0) {
+      //Si vienen archivos de imagenes en el request entonces borro las imagenes viejas del servidor
+      fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToUpdate.imageCover))
+      fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToUpdate.imageHome))
+      //Le cambio el valor a la key para ser guardada en la base de datos.
+      files.forEach(e => {
+        e.fieldname == 'imageCover' ? categoryNew.imageCover = e.filename : categoryNew.imageHome = e.filename
+      })
+    }
+
+    await Category.update(categoryNew, {
+      where: { id: categoryToUpdate.id }
+    })
+    return res.redirect('category/detail/' + categoryNew.id)
   },
 
   delete: async (req, res) => {

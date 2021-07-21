@@ -11,7 +11,7 @@
 <body>
   <%- include('../partials/header.ejs')%>
 
-  <form method="POST" action="/category/add" enctype="multipart/form-data">
+  <form method="POST" action="/category/edit/<%=category.id%>?_method=PUT" enctype="multipart/form-data">
 		<main>
 			<section class="images">
 				
@@ -20,9 +20,9 @@
 				</label>
 				<div class="file-btn">
 					Cambiar imagen Cover
-					<input onchange="loadFile(event)" type="file" name="imageCover" accept="image/*">	
+					<input onchange="loadFile1(event)" type="file" name="imageCover" accept="image/*">	
 					<script>
-						var loadFile = function (event) {
+						var loadFile1 = function (event) {
 							var output = document.getElementById('imageCover');
 							output.src = URL.createObjectURL(event.target.files[0]);
 							output.onload = function () {
@@ -39,10 +39,10 @@
 
 				<div class="file-btn">
 					Cambiar imagen Home
-					<input onchange="loadFile(event)" type="file" name="imageHome" accept="image/*">
+					<input onchange="loadFile2(event)" type="file" name="imageHome" accept="image/*">
 				
 					<script>
-          	var loadFile = function (event) {
+          	var loadFile2 = function (event) {
             	var output = document.getElementById('imageHome');
             	output.src = URL.createObjectURL(event.target.files[0]);
             	output.onload = function () {
@@ -62,7 +62,7 @@
 				<article class="info">        
 					<div class = "row">    
 						<label for="id">Category Id</label>
-            <p class="no-edit"><%=category.id%></p>
+            <input class="edit" name="id" readonly value="<%=category.id%>">
 					</div>
 
 					<div class = "row">
