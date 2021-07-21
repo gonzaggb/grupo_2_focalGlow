@@ -4,95 +4,82 @@
 <link rel="stylesheet" href="/css/styles-category-edit.css">
     
 
-
-
 </head>
-<script>
-  function cambiar() {
-    var pdrs = document.getElementById('file-upload').files[0].name;
-    document.getElementById('info').innerHTML = pdrs;
-  }
-</script>
+
 
 
 <body>
   <%- include('../partials/header.ejs')%>
 
-  
-    <form method="POST" action="/category/add" enctype="multipart/form-data">
-			<main>
-				<section class="images">
-					
-						<label for="imageCover">
-							<img id="output" class="imageCover" for="image_cover" src="<%=category.imageCover%>">
-						</label>
-
-						<div class="file-btn">
-							Cambiar imagen Cover
-							<input onchange="loadFile(event)" type="file" name="imageCover" accept="image/*">			
-							<script>
-								var loadFile = function (event) {
-									var output = document.getElementById('output');
-									output.src = URL.createObjectURL(event.target.files[0]);
-									output.onload = function () {
-										URL.revokeObjectURL(output.src) // free memory
-									}
-								};
-							</script>
-						</div>
-					  	
-					<label class="imageHome" for="imageHome">
-						<img id="output" class="imageHome" for="imageHome" src="<%=category.imageHome%>">
-					</label>
-
-					<div class="file-btn">
-						Cambiar imagen Home
-						<input onchange="loadFile(event)" type="file" name="imageHome" accept="image/*">
+  <form method="POST" action="/category/add" enctype="multipart/form-data">
+		<main>
+			<section class="images">
 				
-						<script>
-          		var loadFile = function (event) {
-            		var output = document.getElementById('output');
-            		output.src = URL.createObjectURL(event.target.files[1]);
-            		output.onload = function () {
-              		URL.revokeObjectURL(output.src) // free memory
-            		}
-          		};
-      			</script>
-					</div>		
-				</section>
+				<label for="imageCover">
+					<img id="imageCover" class="imageCover" src="<%=category.imageCover%>">
+				</label>
+				<div class="file-btn">
+					Cambiar imagen Cover
+					<input onchange="loadFile(event)" type="file" name="imageCover" accept="image/*">	
+					<script>
+						var loadFile = function (event) {
+							var output = document.getElementById('imageCover');
+							output.src = URL.createObjectURL(event.target.files[0]);
+							output.onload = function () {
+							URL.revokeObjectURL(output.src) // free memory
+							}
+						}
+					</script>
+					
+				</div>
+					  	
+				<label for="imageHome">
+					<img id="imageHome" class="imageHome"  src="<%=category.imageHome%>">
+				</label>
 
-				<section class="data">
-        	<div class="title">
-						<h2><%=category.name%></h2>
-						<button type="submit" class="btn">Actualizar</button>
+				<div class="file-btn">
+					Cambiar imagen Home
+					<input onchange="loadFile(event)" type="file" name="imageHome" accept="image/*">
+				
+					<script>
+          	var loadFile = function (event) {
+            	var output = document.getElementById('imageHome');
+            	output.src = URL.createObjectURL(event.target.files[0]);
+            	output.onload = function () {
+              	URL.revokeObjectURL(output.src) // free memory
+            	}
+          	}
+      		</script>
+				</div>		
+			</section>
+
+			<section class="data">
+        <div class="title">
+					<h2><%=category.name%></h2>
+					<button type="submit" class="btn">Actualizar</button>
+				</div>
+
+				<article class="info">        
+					<div class = "row">    
+						<label for="id">Category Id</label>
+            <p class="no-edit"><%=category.id%></p>
 					</div>
 
-					<article class="info">        
-						<div class = "row">    
-							<label for="id">Category Id</label>
-            	<p class="no-edit"><%=category.id%></p>
-						</div>
-
-						<div class = "row">
-							<label for="name">Nombre</label>
-            	<input class="<%=(locals.errors && errors.name) ? 'error edit' : 'edit'%>" type="text" name="name" id="name"
-								<% if (locals.errors && errors.name) {%>
+					<div class = "row">
+						<label for="name">Nombre</label>
+            <input class="edit" type="text" name="name"
+							<% if (locals.errors && errors.name) {%>
+									class = "error edit"
 									placeholder = "<%=errors.name.msg%>"
-								<%} else if (locals.oldData) { %>
+							<%} else if (locals.oldData) { %>
 									value="<%=oldData.name%>" <%} else {%>
 									value="<%=category.name%>"<%}%>
-							>
-						</div>
+						>
+					</div>
 
-         
-						<input id="file-upload" name="image_cover" onchange='cambiar()' type="file" style='display: none'>
-						<!--<input id="file-upload2" name="image_home" onchange='cambiar2()' type="file" style='display: none'> !-->
-          </article>    
-      	</section>
-			</main>
-    </form> 
-	
-	
+        </article>    
+      </section>
+		</main>
+  </form> 
 </body>
-
 </html>
