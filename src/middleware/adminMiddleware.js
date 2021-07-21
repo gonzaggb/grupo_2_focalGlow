@@ -1,22 +1,16 @@
-//const userModel = require('../models/user')
 const { User } = require('../database/models')
-const { findUser } = require('../models/user')
 
-module.exports = (req, res, next) => {
-	//FIXME
+module.exports = async (req, res, next) => {
+
 	const userSession = req.session.logged
+	const user = await User.findByPk(userSession)
 
-
-	User.findByPk(userSession)
-		.then((user) => {
-			if (!userSession || user.role != 'admin') {
-				return res.redirect('/users/login')
-			}
-			return next()
-		})
-
+	if (!userSession || user.role != 'admin') {
+		return res.redirect('/users/login')
+	}
+	return next()
 
 }
 
 
-	//valida que no exista session y en caso de existir sea distinta a admin
+	//valida que haya un usuario en session y en caso de existir que sea admin

@@ -92,6 +92,7 @@ article.details {
   color: #fff;
   background: #000;
   transition: 0.5s;
+  margin-bottom: 15px;
 }
 .file-btn:hover {
   background-color: #ffde59;
@@ -109,6 +110,7 @@ article.details {
 .error::placeholder {
   color: red !important;
   font-weight: bold;
+  background-color: transparent;
 }
 
 .edit-button {

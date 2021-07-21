@@ -72,19 +72,74 @@ const controller = {
       })
 
       res.render('categories/category-create.ejs', { errors: errors.mapped(), old: req.body })
-    } else {
-      files.forEach(e => {
-        e.fieldname == 'imageCover' ? categoryNew.imageCover = e.filename : categoryNew.imageHome = e.filename
-      })
-
-      await Category.create(categoryNew)
-      return res.redirect('/category')
     }
+
+    files.forEach(e => {
+      e.fieldname == 'imageCover' ? categoryNew.imageCover = e.filename : categoryNew.imageHome = e.filename
+    })
+
+    await Category.create(categoryNew)
+    return res.redirect('/category')
+
   },
 
-  edit: (req, res) => {
-    let category = categories.findByPk(req.params.id)
+  edit: async (req, res) => {
+    const category = await Category.findByPk(req.params.id)
+
+    category.dataValues.imageCover = categoryImagePath + category.imageCover
+    category.dataValues.imageHome = categoryImagePath + category.imageHome
+
     res.render('categories/category-edit.ejs', { category })
+  },
+
+  update: async (req, res) => {
+
+    let errors = validationResult(req)
+    //res.send(errors)
+
+    const category = await Category.findByPk(req.params.id)
+
+
+    if (!category) {
+      return res.send('Esa categoría no existe')
+    }
+    const categoryNew = req.body
+    const { files } = req
+
+    if (!errors.isEmpty()) {
+      /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la creación del producto*/
+      files.forEach(e => {
+        fs.unlinkSync(e.path)
+      })
+      category.dataValues.imageCover = categoryImagePath + category.imageCover
+      category.dataValues.imageHome = categoryImagePath + category.imageHome
+      res.render('categories/category-edit.ejs', { errors: errors.mapped(), old: req.body, category })
+    }
+
+    const categoryToUpdate = await Category.findByPk(req.params.id)
+
+    if (files.length > 0) {
+      //Si vienen archivos de imagenes => borro las imagenes viejas del servidor y cambio el valor a la key
+      files.forEach(e => {
+        if (e.fieldname == 'imageCover') {
+          categoryNew.imageCover = e.filename
+          fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToUpdate.imageCover))
+        }
+        if (e.fieldname == 'imageHome') {
+          categoryNew.imageHome = e.filename
+          fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToUpdate.imageHome))
+        }
+      })
+    } else { //Como no llegó nada debo indicarle que tome las imagenes viejas como actuales
+      categoryNew.imageCover ? '' : categoryNew.imageCover = categoryToUpdate.imageCover
+      categoryNew.imageHome ? '' : categoryNew.imageHome = categoryToUpdate.imageHome
+    }
+
+    await Category.update(categoryNew, {
+      where: { id: categoryToUpdate.id }
+    })
+
+    return res.redirect('/category/detail/' + categoryNew.id)
   },
 
   delete: async (req, res) => {
@@ -101,11 +156,8 @@ const controller = {
     }
 
     return res.redirect('/category')
-  },
-
-  update: (req, res) => {
-
   }
+
 }
 
 module.exports = controller
