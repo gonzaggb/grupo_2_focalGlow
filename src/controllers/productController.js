@@ -7,6 +7,7 @@ const { validationResult } = require('express-validator')
 const { randomArray2 } = require('../helpers/utilities')
 const { Product } = require('../database/models')
 const { Feature } = require('../database/models')
+const { Image } = require('../database/models')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const fs = require('fs')
@@ -62,10 +63,21 @@ const controller = {
     let errors = validationResult(req)
     const productNew = req.body
     const { files } = req
-    await Product.create(productNew)
-    /*puede que el camino sea guardar el await de arriba en una variable, destructurar lo que viaja en el body, guardar lo que corresponde al producto con el create y usar magic method de set para completar los datos de la tablas intermedia*/
-    res.redirect('/')
-    return 
+    try {
+      const newProduct = await Product.create(productNew)    /*puede que el camino sea guardar el await de arriba en una variable, destructurar lo que viaja en el body, guardar lo que corresponde al producto con el create y usar magic method de set para completar los datos de la tablas intermedia*/
+      files.forEach( async images => {
+        if(images.fieldname == 'main' || images.fieldname == 'slider' || images.fieldname == 'dimension'){
+          await newProduct.createImage({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
+         // await Image.create({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
+
+        }
+      })
+res.send('done') 
+   } catch (error) {
+      console.log(error)
+    }
+
+    return //corta aca para que NO pase por las validaciones
     if (errors.isEmpty()) {
       product.Create(productNew, files)
       res.redirect('/product')
