@@ -82,9 +82,17 @@ const controller = {
     }
   },
 
-  edit: (req, res) => {
-    let category = categories.findByPk(req.params.id)
+  edit: async (req, res) => {
+    let category = await Category.findByPk(req.params.id)
+
+    category.dataValues.imageCover = categoryImagePath + category.imageCover
+    category.dataValues.imageHome = categoryImagePath + category.imageHome
+
     res.render('categories/category-edit.ejs', { category })
+  },
+
+  update: (req, res) => {
+
   },
 
   delete: async (req, res) => {
@@ -101,11 +109,8 @@ const controller = {
     }
 
     return res.redirect('/category')
-  },
-
-  update: (req, res) => {
-
   }
+
 }
 
 module.exports = controller

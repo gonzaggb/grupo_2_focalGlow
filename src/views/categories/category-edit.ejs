@@ -23,13 +23,13 @@
 			<main>
 				<section class="images">
 					
-						<label for="image_cover">
-							<img id="output" class="image_cover" for="image_cover" src="<%=category.image_cover%>">
+						<label for="imageCover">
+							<img id="output" class="imageCover" for="image_cover" src="<%=category.imageCover%>">
 						</label>
 
 						<div class="file-btn">
 							Cambiar imagen Cover
-							<input onchange="loadFile(event)" type="file" name="image_cover" accept="image/*">			
+							<input onchange="loadFile(event)" type="file" name="imageCover" accept="image/*">			
 							<script>
 								var loadFile = function (event) {
 									var output = document.getElementById('output');
@@ -41,13 +41,13 @@
 							</script>
 						</div>
 					  	
-					<!--<label class="image_home" for="image_home">
-						<img id="output" class="image_home" for="image_home" src="<%=category.image_home%>">
-					</label>-->
+					<label class="imageHome" for="imageHome">
+						<img id="output" class="imageHome" for="imageHome" src="<%=category.imageHome%>">
+					</label>
 
 					<div class="file-btn">
 						Cambiar imagen Home
-						<input onchange="loadFile(event)" type="file" name="image_home" accept="image/*">
+						<input onchange="loadFile(event)" type="file" name="imageHome" accept="image/*">
 				
 						<script>
           		var loadFile = function (event) {
