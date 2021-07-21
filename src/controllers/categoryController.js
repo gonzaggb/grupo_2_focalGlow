@@ -83,7 +83,7 @@ const controller = {
   },
 
   edit: async (req, res) => {
-    let category = await Category.findByPk(req.params.id)
+    const category = await Category.findByPk(req.params.id)
 
     category.dataValues.imageCover = categoryImagePath + category.imageCover
     category.dataValues.imageHome = categoryImagePath + category.imageHome
@@ -96,25 +96,35 @@ const controller = {
     const categoryNew = req.body
     const { files } = req
 
-    let categoryToUpdate = await Category.findByPk(req.params.id)
+    const categoryToUpdate = await Category.findByPk(req.params.id)
     if (!categoryToUpdate) {
       return res.send('Esa categoría no existe')
     }
 
+
+
     if (files.length > 0) {
-      //Si vienen archivos de imagenes en el request entonces borro las imagenes viejas del servidor
-      fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToUpdate.imageCover))
-      fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToUpdate.imageHome))
-      //Le cambio el valor a la key para ser guardada en la base de datos.
+      //Si vienen archivos de imagenes => borro las imagenes viejas del servidor y cambio el valor a la key
       files.forEach(e => {
-        e.fieldname == 'imageCover' ? categoryNew.imageCover = e.filename : categoryNew.imageHome = e.filename
+        if (e.fieldname == 'imageCover') {
+          categoryNew.imageCover = e.filename
+          fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToUpdate.imageCover))
+        }
+        if (e.fieldname == 'imageHome') {
+          categoryNew.imageHome = e.filename
+          fs.unlinkSync(path.join(__dirname, '../../public', categoryImagePath, categoryToUpdate.imageHome))
+        }
       })
+    } else { //Como no llegó nada debo indicarle que tome las imagenes viejas como actuales
+      categoryNew.imageCover ? '' : categoryNew.imageCover = categoryToUpdate.imageCover
+      categoryNew.imageHome ? '' : categoryNew.imageHome = categoryToUpdate.imageHome
     }
 
     await Category.update(categoryNew, {
       where: { id: categoryToUpdate.id }
     })
-    return res.redirect('category/detail/' + categoryNew.id)
+
+    return res.redirect('/category/detail/' + categoryNew.id)
   },
 
   delete: async (req, res) => {
