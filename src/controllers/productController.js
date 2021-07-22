@@ -62,6 +62,8 @@ const controller = {
   create: async (req, res) => {
     let errors = validationResult(req)
     const productNew = req.body
+    const {material , cct , dim , source, optic , power} = req.body
+    
     const { files } = req
     try {
       const newProduct = await Product.create(productNew)    /*puede que el camino sea guardar el await de arriba en una variable, destructurar lo que viaja en el body, guardar lo que corresponde al producto con el create y usar magic method de set para completar los datos de la tablas intermedia*/
@@ -71,8 +73,14 @@ const controller = {
          // await Image.create({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
 
         }
+       
       })
-res.send('done') 
+      await newProduct.addFeature(material)
+      await newProduct.addFeature(cct)
+      await newProduct.addFeature(source)
+      await newProduct.addFeature(optic)
+      await newProduct.addFeature(dim)
+      await newProduct.addFeature(power)
    } catch (error) {
       console.log(error)
     }
