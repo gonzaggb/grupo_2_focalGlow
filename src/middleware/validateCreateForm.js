@@ -9,7 +9,7 @@ const validateCreateForm = [
     .bail()
     .isLength({ min: 5 })
     .withMessage('Por favor un nombre más largo'),
-  body('qty')
+  body('quantity')
     .notEmpty()
     .withMessage('Favor de indicar la cantidad de productos'),
   body('price')
@@ -30,7 +30,7 @@ const validateCreateForm = [
   body('optic')
     .notEmpty()
     .withMessage('Favor de seleccionar la óptica'),
-  body('category')
+  body('categoryId')
     .notEmpty()
     .withMessage('Favor de seleccionar una categoría'),
   body('description')
@@ -44,45 +44,32 @@ const validateCreateForm = [
     .withMessage('Favor de incluir una potencia'),
 
   //Para las imagenes y pdf llamamos a una funcion auxiliadora
-  body('main_image').custom((value, { req }) => {
+  body('main').custom((value, { req }) => {
     const { files } = req
-    checkFieldImage('main_image', files)
+    checkFieldImage('main', files)
     return true
   }),
 
-  body('image_dimension').custom((value, { req }) => {
+  body('dimension').custom((value, { req }) => {
     const files = req.files
-    checkFieldImage('image_dimension', files)
+    checkFieldImage('dimension', files)
     return true
   }),
 
-  body('image_slider1').custom((value, { req }) => {
+  body('slider').custom((value, { req }) => {
     const { files } = req
-    checkFieldImage('image_slider1', files)
+    checkFieldImage('slider', files)
+    return true
+  }),
+  body('dataSheet').custom((value, { req }) => {
+    const { files } = req
+    checkFieldPdf('dataSheet', files)
     return true
   }),
 
-  body('image_slider2').custom((value, { req }) => {
+  body('installSheet').custom((value, { req }) => {
     const { files } = req
-    checkFieldImage('image_slider2', files)
-    return true
-  }),
-
-  body('image_slider3').custom((value, { req }) => {
-    const { files } = req
-    checkFieldImage('image_slider3', files)
-    return true
-  }),
-
-  body('data_sheet').custom((value, { req }) => {
-    const { files } = req
-    checkFieldPdf('data_sheet', files)
-    return true
-  }),
-
-  body('install_sheet').custom((value, { req }) => {
-    const { files } = req
-    checkFieldPdf('install_sheet', files)
+    checkFieldPdf('installSheet', files)
     return true
   }),
 ]

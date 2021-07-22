@@ -4,27 +4,28 @@ function checkFieldImage(fieldName, array) {
   let valuesFieldname = []
 
   array.forEach((element) => {
-    valuesFieldname.push(element.fieldname)
     if (element.fieldname == fieldName) {
+      valuesFieldname.push(element.fieldname)
       if (!isFileImage(element.originalname)) {
         throw new Error('El archivo debe tener formato imagen')
       }
     }
   })
 
-  if (!valuesFieldname.includes(fieldName)) {
-    throw new Error('Seleccione imagen para este campo')
-  }
-
+  if ((valuesFieldname.length < 1) && fieldName == 'slider') {
+    throw new Error('Seleccione al menos una imagen para el slider')
+    }
+    if(valuesFieldname.length < 1){
+        throw new Error('Seleccione una imagen ')
+    }
   return true
 }
 
 function checkFieldPdf(fieldName, array) {
   let valuesFieldname = []
-
   array.forEach((element) => {
-    valuesFieldname.push(element.fieldname)
     if (element.fieldname == fieldName) {
+      valuesFieldname.push(element.fieldname)
       if (!isPdf(element.originalname)) {
         throw new Error('Ingrese un archivo que sea formato PDF')
       }

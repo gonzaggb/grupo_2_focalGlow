@@ -56,55 +56,50 @@ const controller = {
   },
   formNew: async (req, res) => {
     const featuresList = await Feature.findAll() // listado de todas las features
-    res.render('products/product-create.ejs', {featuresList})
+    res.render('products/product-create.ejs', { featuresList })
   },
 
   //FIXME CREATE PRODUCT 
   create: async (req, res) => {
+    const featuresList = await Feature.findAll() // listado de todas las features
     let errors = validationResult(req)
     const productNew = req.body
-    const {material , cct , dim , source, optic , power} = req.body
-    
+    const { material, cct, dim, source, optic, power } = req.body
     const { files } = req
-    try {
-      const newProduct = await Product.create(productNew)    /*puede que el camino sea guardar el await de arriba en una variable, destructurar lo que viaja en el body, guardar lo que corresponde al producto con el create y usar magic method de set para completar los datos de la tablas intermedia*/
-      files.forEach( async file => {
-        if(file.fieldname == 'main' || file.fieldname == 'slider' || file.fieldname == 'dimension'){
-          await newProduct.createImage({'product_id': newProduct.id, 'type': file.fieldname, 'name': file.filename })
-         // await Image.create({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
-        }
-        try {
-          if(file.fieldname == 'installSheet' || file.fieldname == 'dataSheet'){
-            await File.create({'productId': newProduct.id, 'type': file.fieldname, 'name': file.filename})
+    /*Si mandan una sola potencia no llega como array, es por eso que la convierto*/
+    const powerId = Array.isArray(power) ? power : [power]
+    productNew.power = powerId
+    if (errors.isEmpty()) {
+      try {
+        const newProduct = await Product.create(productNew)
+        files.forEach(async file => {
+          if (file.fieldname == 'main' || file.fieldname == 'slider' || file.fieldname == 'dimension') {
+            await newProduct.createImage({ 'product_id': newProduct.id, 'type': file.fieldname, 'name': file.filename })
+            // await Image.create({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
+          }
+          /*Modificar en la base de datos los ENUM para que los tome la línea 81*/
+          if (file.fieldname == 'installSheet' || file.fieldname == 'dataSheet') {
+            await File.create({ 'productId': newProduct.id, 'type': file.fieldname, 'name': file.filename })
             /*MODIFIQUE EN EL CONFIG DE FILE.JS LA FOREING KEY, SACANDOLE EL '_' Y AGREGANDO EL UNDERSCORED TRUE AL CONFIG*/
           }
-        } catch (error) {
-          console.log(error)
-        }
-        
+        })
+        await newProduct.addFeature(material)
+        await newProduct.addFeature(cct)
+        await newProduct.addFeature(source)
+        await newProduct.addFeature(optic)
+        await newProduct.addFeature(dim)
+        await newProduct.addFeature(powerId)
+        res.redirect('/product')
 
-       
-      })
-      await newProduct.addFeature(material)
-      await newProduct.addFeature(cct)
-      await newProduct.addFeature(source)
-      await newProduct.addFeature(optic)
-      await newProduct.addFeature(dim)
-      await newProduct.addFeature(power)
-   } catch (error) {
-      console.log(error)
-    }
-
-    return //corta aca para que NO pase por las validaciones
-    if (errors.isEmpty()) {
-      product.Create(productNew, files)
-      res.redirect('/product')
+      } catch (error) {
+        console.log(error)
+      }
     } else {
       /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la creación del producto*/
       files.forEach(e => {
         fs.unlinkSync(e.path)
       })
-      res.render('products/product-create.ejs', { errors: errors.mapped(), old: req.body })
+      res.render('products/product-create.ejs', { errors: errors.mapped(), old: productNew, featuresList })
     }
   },
 
@@ -113,13 +108,13 @@ const controller = {
   edit: async (req, res) => {
     let id = req.params.id
     let productFound = await Product.findByPk(id)
-      const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
-      const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
-      const category = await productFound.getCategory()
-      const featuresList = await Feature.findAll() // listado de todas las features
-      res.render('products/product-edit.ejs', { productFound, category, images, features, featuresList, productImagePath })
- 
-    },
+    const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
+    const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
+    const category = await productFound.getCategory()
+    const featuresList = await Feature.findAll() // listado de todas las features
+    res.render('products/product-edit.ejs', { productFound, category, images, features, featuresList, productImagePath })
+
+  },
 
 
   //FIXME UPDATE PRODUCT
