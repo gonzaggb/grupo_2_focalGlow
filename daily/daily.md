@@ -1,3 +1,5 @@
+![Daily11](./Daily_20210721.jpg)
+![Daily10](./Daily_20210718.jpg)
 ![Daily9](./Daily_20210712.jpg)
 ![Daily8](./Daily_20210704.jpg)
 ![Daily7](./Daily_20210630.jpg)
