@@ -8,6 +8,7 @@ const { randomArray2 } = require('../helpers/utilities')
 const { Product } = require('../database/models')
 const { Feature } = require('../database/models')
 const { Image } = require('../database/models')
+const { File } = require('../database/models')
 const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const fs = require('fs')
@@ -67,12 +68,21 @@ const controller = {
     const { files } = req
     try {
       const newProduct = await Product.create(productNew)    /*puede que el camino sea guardar el await de arriba en una variable, destructurar lo que viaja en el body, guardar lo que corresponde al producto con el create y usar magic method de set para completar los datos de la tablas intermedia*/
-      files.forEach( async images => {
-        if(images.fieldname == 'main' || images.fieldname == 'slider' || images.fieldname == 'dimension'){
-          await newProduct.createImage({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
+      files.forEach( async file => {
+        if(file.fieldname == 'main' || file.fieldname == 'slider' || file.fieldname == 'dimension'){
+          await newProduct.createImage({'product_id': newProduct.id, 'type': file.fieldname, 'name': file.filename })
          // await Image.create({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
-
         }
+        try {
+          if(file.fieldname == 'installSheet' || file.fieldname == 'dataSheet'){
+            await File.create({'productId': newProduct.id, 'type': file.fieldname, 'name': file.filename})
+            /*MODIFIQUE EN EL CONFIG DE FILE.JS LA FOREING KEY, SACANDOLE EL '_' Y AGREGANDO EL UNDERSCORED TRUE AL CONFIG*/
+          }
+        } catch (error) {
+          console.log(error)
+        }
+        
+
        
       })
       await newProduct.addFeature(material)

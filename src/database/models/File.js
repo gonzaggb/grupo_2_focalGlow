@@ -22,14 +22,15 @@ module.exports = (sequelize, DataTypes) => {
     }
     const config = {
         tablename: 'files',
-        timestamps: false
+        timestamps: false,
+        underscored: true
     }
     const Files = sequelize.define(alias, columns, config);
 
     Files.associate = function (models) {
         Files.belongsTo(models.Product, {
             as: 'product',
-            foreignKey: 'product_id'
+            foreignKey: 'product_Id'
         });
     }
     return Files;
