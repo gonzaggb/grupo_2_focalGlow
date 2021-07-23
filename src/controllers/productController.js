@@ -26,8 +26,7 @@ const controller = {
         }
       ]
     })
-    //res.send(products[0].category.name)
-    //res.send(products)
+
     res.render('products/product-list.ejs', { products, productImagePath })
   },
   detail: async (req, res) => {

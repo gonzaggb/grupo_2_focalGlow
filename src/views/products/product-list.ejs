@@ -46,14 +46,12 @@
           	$<%= toThousand(product.price)%>
 					</td>
 					<td class="center">
-						<%=product.qty%>
+						<%=product.quantity%>
 					</td>
         	<td class="center">
-				<%for(i = 0 ; i < product.images.length; i++){%>
-					<% if (product.images[i].type == 'main') { %>
-						<img class = "img-redonda" src="<%=productImagePath + product.images[i].name%>">
-					<% } %>
-					<%}%>
+						<% product.images.forEach(image => {%>		
+						<img class = "img-redonda" src="<%=productImagePath + image.name%>">
+						<%})%>
         	</td>
         	<td class="center">
           	<a href='/product/detail/<%=product.id%>'><i class="fas fa-search"></i></a>
