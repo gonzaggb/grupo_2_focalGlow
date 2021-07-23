@@ -18,11 +18,16 @@ const productImagePath = '/img/'
 const controller = {
   list: async (req, res) => {
     const products = await Product.findAll({
-      include: [{
-        association: 'images',
-        where: { type: 'main' },
-      }],
+      include: [
+        { association: 'category' },
+        {
+          association: 'images',
+          where: { type: 'main' }
+        }
+      ]
     })
+    //res.send(products[0].category.name)
+    //res.send(products)
     res.render('products/product-list.ejs', { products, productImagePath })
   },
   detail: async (req, res) => {
@@ -210,14 +215,14 @@ const controller = {
       offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
       where: {
         name: { [Op.like]: '%' + req.query.keyword + '%' }
-      },  
+      },
       include: [{
         association: 'images',
         where: { type: 'main' },
       }],
-    }) 
+    })
     const nextButton = parseInt(productFound.length / 12)
-    return res.render('products/product-search.ejs', { productFound,product,keyword,nextButton, productImagePath })
+    return res.render('products/product-search.ejs', { productFound, product, keyword, nextButton, productImagePath })
   }
 }
 

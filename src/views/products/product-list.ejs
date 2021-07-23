@@ -28,39 +28,41 @@
 					<th class="center">Editar</th>
 					<th class="center">Borrar</th>
 				</tr>
-				<% products.forEach(e=> { %>
+
+			
+			<% products.forEach(product => {%>
       	<tr>
         	<td class="center id">
-          	<%= e.id%>
+          	<%=product.id%>
         	</td>
         	<td>
-          	<%= e.category%>
+						<%=product.category.name%>
         	</td>
         	<td>
-          	<%= e.name%>
+          	<%=product.name%>
         	</td>
         	<td>
 						<% const toThousand = (n) =>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
-          	$<%= toThousand(e.price)%>
+          	$<%= toThousand(product.price)%>
 					</td>
 					<td class="center">
-						<%= e.qty%>
+						<%=product.qty%>
 					</td>
         	<td class="center">
-				<%for(i = 0 ; i < e.images.length; i++){%>
-					<% if (e.images[i].type == 'main') { %>
-						<img class = "img-redonda" src="<%=productImagePath + e.images[i].name%>">
+				<%for(i = 0 ; i < product.images.length; i++){%>
+					<% if (product.images[i].type == 'main') { %>
+						<img class = "img-redonda" src="<%=productImagePath + product.images[i].name%>">
 					<% } %>
 					<%}%>
         	</td>
         	<td class="center">
-          	<a href='/product/detail/<%=e.id%>'><i class="fas fa-search"></i></a>
+          	<a href='/product/detail/<%=product.id%>'><i class="fas fa-search"></i></a>
         	</td>
         	<td class="center"> 
-          	<a href="/product/<%=e.id%>/edit"><i class="far fa-edit"></i></a>
+          	<a href="/product/<%=product.id%>/edit"><i class="far fa-edit"></i></a>
         	</td>
         	<td class="center">
-          	<form action="/product/<%=e.id%>?_method=DELETE" method="POST">
+          	<form action="/product/<%=product.id%>?_method=DELETE" method="POST">
             	<button type="submit" ><i class="far fa-trash-alt"></i></button>
           	</form>
         	</td>
