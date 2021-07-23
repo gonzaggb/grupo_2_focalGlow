@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     }
     const config = {
         tablename: 'features',
-        timestamps: false
+        timestamps: false,
+        underscored: true
+
     }
     const Feature = sequelize.define(alias, columns, config);
     Feature.associate = function (models) {

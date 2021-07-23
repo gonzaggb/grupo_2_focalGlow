@@ -22,7 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     }
     const config = {
         tablename: 'files',
-        timestamps: false
+        timestamps: false,
+        underscored: true
+
     }
     const Files = sequelize.define(alias, columns, config);
 
