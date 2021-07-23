@@ -4,15 +4,25 @@
             margin-top: 40px;
             padding-bottom: 20px;
             border-bottom: 1px solid black;
+            flex-direction: column;
+            
             
         }
+    .search-input{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            border-bottom: 1px solid;
+            padding-bottom: 20px;
+    }    
     .search{
-            width: 80%;
+            width: 60%;
             height: 40px;
             border-right: 0px;
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
             outline:none;
+            
         }
     #button{
             border-left: 0px;
@@ -23,8 +33,58 @@
         } 
     .empty{
         color: red;
-    }           
+    } 
+    #button{
+            border-left: 0px;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: white;
+            width: 4%;
+        }
+    .page{
+            display: flex;
+            width: 100%;
+            height: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 6px;
 
+    }
+    .page-number{
+        margin: 0;
+        border: 0;
+        
+    }
+    .offset{
+        cursor: pointer;
+    }
+    #order{
+        align-items: flex-end;
+    }   
+            
+@media (min-width: 767px) {
+    form{
+        flex-direction: column;
+    }
+    .search-input{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            border-bottom: 1px solid;
+            padding-bottom: 20px;
+    }    
+    .search{
+            width: 30%;
+            height: 40px;
+            border-right: 0px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            outline:none;
+        }
+
+}
 @media (min-width: 1000px) {
     form{
             display: flex;
@@ -34,6 +94,18 @@
             border-bottom: 1px solid black;
             
         }
+    .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+    }
+    .search-input{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            border-bottom: 1px solid;
+            padding-bottom: 20px;
+    }    
     .search{
             width: 30%;
             height: 40px;
@@ -49,4 +121,26 @@
             background-color: white;
             width: 4%;
         }
+    .page{
+            display: flex;
+            width: 100%;
+            height: 100px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 6px;
+
+    }
+    .page-number{
+        margin: 0;
+        border: 0;
+        
+    }
+    .offset{
+        cursor: pointer;
+    }
+    #order{
+        align-items: flex-end;
+    }    
 }        

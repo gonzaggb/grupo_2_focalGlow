@@ -65,4 +65,5 @@ router.delete('/:id', authMiddleware, adminMiddleware, productController.delete)
 router.get('/search',productController.result)
 
 
+
 module.exports = router

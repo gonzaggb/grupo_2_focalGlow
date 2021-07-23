@@ -1,31 +1,43 @@
 <%- include ('../partials/head')%>
     <link rel="stylesheet" href="/css/style_categories_general.css">
     <link rel="stylesheet" href="/css/style-search.css">
+
     <body>
         <%- include('../partials/header.ejs')%>
-            <form action="/product/search/" method="get">
-                <input type="search" name="keyword"  class= 'search'id="">
-                <button  id='button' type="submit"><i class="fas fa-search"></i></button>
+            <form action="/product/search/" class="form" method="get">
+                <div class="search-input">
+                    <input type="search" name="keyword" value="<%=keyword%>" class='search' id="">
+                    <button id='button' type="submit"><i class="fas fa-search"></i></button>
+                </div>
                 
+                <section class="item-list">     
+                    <% if(productFound.length>0){ %>
+                        <% product.forEach(element=> {%>
+                            <article class="producto">
+                                <a href="/product/detail/<%=element.id%>"><img class="zoom"
+                                        src="<%=productImagePath + element.images[0].name%>" alt=""></a>
+                                <div class="nombre-precio">
+                                    <p class="nombre">Nombre del producto: <%=element.name%>
+                                    </p>
+                                    <p class="precio">Desde: <%=element.price%>
+                                    </p>
+                                </div>
+                            </article>
+                            <%}) %>
+                                <% } else { %>
+                                    <h2 class="empty">No hay elementos para mostrar</h2>
+                                    <% } %>
+                </section>
+                <div class="page">
+                    <% for(let j=0; j < nextButton; j++) {%>
+                        <button type="submit" name="offset" class="offset" value="<%= 12*j %>">
+                            <%=j+1%>
+                        </button>
+
+                        <%}%>
+                </div>
+
             </form>
-            <h4>Cantidad de resultados : <%= productFound.length %> </h4>
-            <section class="item-list">
-            <% if(productFound.length >0){ %>     
-            <% productFound.forEach(element=> {%>
-                <article class="producto">
-                    <a href="/product/detail/<%=element.id%>"><img class="zoom" src="<%=productImagePath + element.images[0].name%>"
-                            alt=""></a>
-                    <div class="nombre-precio">
-                        <p class="nombre">Nombre del producto: <%=element.name%>
-                        </p>
-                        <p class="precio">Desde: <%=element.price%>
-                        </p>
-                    </div>
-                </article>
-                <%}) %>
-              <% } else { %>
-                    <h2 class="empty">No hay elementos para mostrar</h2>
-                <% } %> 
-            </section>
-                    <%- include('../partials/footer.ejs')%>
+
+            <%- include('../partials/footer.ejs')%>
     </body>

@@ -19,8 +19,8 @@ const productImagePath = '/img/'
 const controller = {
   list: async (req, res) => {
     const products = await Product.findAll({
-      include: [{
-        association: 'images',
+      include: [{association: 'category'},
+        {association: 'images',
         where: { type: 'main' },
       }],
     })
@@ -118,12 +118,21 @@ const controller = {
 
 
   //FIXME UPDATE PRODUCT
-  update: (req, res) => {
+  update: async (req, res) => {
     let errors = validationResult(req)
     let id = req.params.id
-    let productFound = product.findByPk(id)
+    let productFound = Product.findByPk(id)
     let { files } = req
-
+    const data = req.body
+    try {
+      await Product.update(
+        data,
+        {where: {id}}
+        )
+    } catch (error) {
+      console.log(error)
+    }
+return
     if (errors.isEmpty()) {
       let id = req.params.id
       let data = req.body
@@ -175,7 +184,7 @@ const controller = {
           default:
         }
       }
-      product.update(data, id)
+
       res.redirect('/product/')
     } else {
       /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la edicion del producto*/

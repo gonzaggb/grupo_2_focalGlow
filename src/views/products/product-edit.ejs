@@ -15,11 +15,9 @@
                                 <div class="cateogry-selector">
                                     <label class="" for="category">Categoria: </label><br>
                                     <select name="category" class="select">
-                                        <option value="<%= category.id %>">
-                                            <%= category.name %>
-                                        </option>
                                         <% locals.categories.forEach(categorie=> { %>
-                                            <option value="<%=categorie.id%>">
+                                            <option value="<%=categorie.id%>"
+                                                <%=productFound.categoryId == categorie.id ? 'selected' : ''%>>
                                                 <%=categorie.name.charAt(0).toUpperCase() + categorie.name.slice(1)%>
                                             </option>
                                             <% }) %>
@@ -41,8 +39,8 @@
                             </span><br>
                             <div class="first">
                                 <div class="in-line-data">
-                                    <label class="" for="qty">Cantidad: </label><br>
-                                    <input class="box" type="number" name="qty" id="producto" min="0"
+                                    <label class="" for="quantity">Cantidad: </label><br>
+                                    <input class="box" type="number" name="quantity" id="producto" min="0"
                                         value="<%= productFound.quantity %>">
 
                                 </div>
@@ -121,30 +119,17 @@
                                     <% /*el for de las J genera los diferentes selects.*/%>
                                         <% /*el for de las I, completa los valores del producto original*/%>
                                             <% /*el siguiente forEach arma todos los select que hay*/%>
-                                                <%let powerIndex=features.findIndex(power=> power.type == 'power')%>
-                                                    <%let aux=powerIndex%>
-                                                        <% for(j=0;j<4;j++){ %>
-                                                            <select name="power" class="select">
-                                                                <% for(let i=powerIndex; i < powerIndex + 4; i++){%>
-                                                                    <%if(features[aux].id){%>
-                                                                        <option value="<%=features[aux].id%>">
-                                                                            <%=features[aux].name%>
-                                                                        </option>
-                                                                        <%} else {%>
-                                                                            <option value="">Seleccionar</option>
-                                                                            <%}}%>
+                                <select multiple name="power" class="select">
+                                        <%featuresList.forEach(power => {%>
+                                            <%if(power.type == 'power'){%>
+                                                <option  value="<%=power.id%>"
+                                                    <%features.forEach(oldFeature =>{%>
+                                                       <%=oldFeature.type == 'power' && power.id == oldFeature.id ? 'selected' : ''%>
+                                                    <%})%>
+                                                    ><%=power.name%></option>
+                                                    <%}})%>                                   
+                                                </select>
 
-                                                                                <%featuresList.forEach(power=> {%>
-                                                                                    <%if(power.type=='power' ){%>
-                                                                                        <option value="<%=power.id%>">
-                                                                                            <%=power.name%>
-                                                                                        </option>
-                                                                                        <%}})%>
-
-                                                            </select>
-                                                            <%aux++%>
-
-                                                                <%}%>
                             </div>
                             <span class="error_msg">
                                 <%=locals.errors && errors.power ? errors.power.msg : '' %>
