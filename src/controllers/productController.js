@@ -19,8 +19,9 @@ const productImagePath = '/img/'
 const controller = {
   list: async (req, res) => {
     const products = await Product.findAll({
-      include: [{association: 'category'},
-        {association: 'images',
+      include: [{ association: 'category' },
+      {
+        association: 'images',
         where: { type: 'main' },
       }],
     })
@@ -121,18 +122,31 @@ const controller = {
   update: async (req, res) => {
     let errors = validationResult(req)
     let id = req.params.id
-    let productFound = Product.findByPk(id)
+    let productFound = await Product.findByPk(id)
     let { files } = req
+    const { material, cct, dim, source, optic, power } = req.body
     const data = req.body
+    const powerId = Array.isArray(power) ? power : [power]
+    productFound.power = powerId
+
     try {
+      /*Actualizo el producto en la tabla producto*/
       await Product.update(
         data,
-        {where: {id}}
-        )
+        { where: { id } }
+      )
+      /*Actualizo las features y creo la relación con las tablas intermedias*/
+      await newProduct.setFeature(material)
+      await newProduct.setFeature(cct)
+      await newProduct.setFeature(source)
+      await newProduct.setFeature(optic)
+      await newProduct.setFeature(dim)
+      await newProduct.setFeature(powerId)
+      /*Actualizo las imagens en la tabla correspondiente */
     } catch (error) {
       console.log(error)
     }
-return
+    return
     if (errors.isEmpty()) {
       let id = req.params.id
       let data = req.body
