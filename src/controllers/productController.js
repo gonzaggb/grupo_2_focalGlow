@@ -26,17 +26,28 @@ const controller = {
         }
       ]
     })
-
-    res.render('products/product-list.ejs', { products, productImagePath })
+    //le agrego la ruta donde estan alojada las imagenes
+    products.forEach(product => {
+      product.images.forEach(image => {
+        image.dataValues.name = productImagePath + image.name
+      })
+    })
+    res.render('products/product-list.ejs', { products })
   },
   detail: async (req, res) => {
     let id = req.params.id
     //busco el producto que viaja por parametro @gonza
-    //FIXME buscar explicación de porque busca category y category_id
+    //FIXME buscar explicación de porque busca category y category_id. 
+    // Para pasarle los similar products
 
     let productFound = await Product.findByPk(id)
     const features = await productFound.getFeatures() //uso magic method para traer las features
     const images = await productFound.getImages() //uso magic method para traer las imagenes
+
+    //Se agrega la ruta donde estan las imagenes
+    images.forEach(image => {
+      image.dataValues.name = productImagePath + image.name
+    })
 
     //obtenro la categoría correspondiente al producto
     let categoryId = productFound.categoryId
@@ -48,6 +59,14 @@ const controller = {
         where: { type: 'main' }
       }]
     })
+
+    //Se agrega la ruta donde estan las imagenes
+    productsCategory.forEach(product => {
+      product.images.forEach(image => {
+        image.dataValues.name = productImagePath + image.name
+      })
+    })
+
     //A los productos de la misma categoría le saco el que estoy viendo en detalle. Para que no me lo ponga como producto similar
     let similarProducts = productsCategory.filter((e) => e.id != id)
     //utilizando una funcion auxiliar creo un array de numeros aleatorios con maximo 3 posiciones
