@@ -55,25 +55,25 @@ const controller = {
   },
   formNew: async (req, res) => {
     const featuresList = await Feature.findAll() // listado de todas las features
-    res.render('products/product-create.ejs', {featuresList})
+    res.render('products/product-create.ejs', { featuresList })
   },
 
   //FIXME CREATE PRODUCT 
   create: async (req, res) => {
     let errors = validationResult(req)
     const productNew = req.body
-    const {material , cct , dim , source, optic , power} = req.body
-    
+    const { material, cct, dim, source, optic, power } = req.body
+
     const { files } = req
     try {
       const newProduct = await Product.create(productNew)    /*puede que el camino sea guardar el await de arriba en una variable, destructurar lo que viaja en el body, guardar lo que corresponde al producto con el create y usar magic method de set para completar los datos de la tablas intermedia*/
-      files.forEach( async images => {
-        if(images.fieldname == 'main' || images.fieldname == 'slider' || images.fieldname == 'dimension'){
-          await newProduct.createImage({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
-         // await Image.create({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
+      files.forEach(async images => {
+        if (images.fieldname == 'main' || images.fieldname == 'slider' || images.fieldname == 'dimension') {
+          await newProduct.createImage({ 'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
+          // await Image.create({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
 
         }
-       
+
       })
       await newProduct.addFeature(material)
       await newProduct.addFeature(cct)
@@ -81,7 +81,7 @@ const controller = {
       await newProduct.addFeature(optic)
       await newProduct.addFeature(dim)
       await newProduct.addFeature(power)
-   } catch (error) {
+    } catch (error) {
       console.log(error)
     }
 
@@ -103,13 +103,13 @@ const controller = {
   edit: async (req, res) => {
     let id = req.params.id
     let productFound = await Product.findByPk(id)
-      const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
-      const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
-      const category = await productFound.getCategory()
-      const featuresList = await Feature.findAll() // listado de todas las features
-      res.render('products/product-edit.ejs', { productFound, category, images, features, featuresList, productImagePath })
- 
-    },
+    const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
+    const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
+    const category = await productFound.getCategory()
+    const featuresList = await Feature.findAll() // listado de todas las features
+    res.render('products/product-edit.ejs', { productFound, category, images, features, featuresList, productImagePath })
+
+  },
 
 
   //FIXME UPDATE PRODUCT
@@ -198,17 +198,26 @@ const controller = {
 
   },
   result: async (req, res) => {
-
+    let keyword = req.query.keyword
+    let offset = req.query.offset
     let productFound = await Product.findAll({
       where: {
         name: { [Op.like]: '%' + req.query.keyword + '%' }
       },
+    })
+    let product = await Product.findAll({
+      limit: 12,
+      offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
+      where: {
+        name: { [Op.like]: '%' + req.query.keyword + '%' }
+      },  
       include: [{
         association: 'images',
         where: { type: 'main' },
       }],
-    })
-    return res.render('products/product-search.ejs', { productFound, productImagePath })
+    }) 
+    const nextButton = parseInt(productFound.length / 12)
+    return res.render('products/product-search.ejs', { productFound,product,keyword,nextButton, productImagePath })
   }
 }
 
