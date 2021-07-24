@@ -14,9 +14,14 @@ const Op = Sequelize.Op
 const fs = require('fs')
 const path = require('path')
 const productImagePath = '/img/'
+const productFilePath = '/pdf/'
 
 function addProductImagePath(element) {
   return element.dataValues.name = productImagePath + element.name
+}
+
+function addProductFilePath(element) {
+  return element.dataValues.name = productFilePath + element.name
 }
 
 const controller = {
@@ -56,10 +61,22 @@ const controller = {
       ]
     })
 
+    //AGREGO LA RUTA A LAS IMAGENES Y CREO EL ARRAY SLIDER
+    let arraySlider = []
+
     product.images.forEach(image => {
       addProductImagePath(image)
+      if (image.type == 'slider') {
+        arraySlider.push(image.name)
+      }
     })
-    res.send(product)
+
+    //AGREGO LA RUTA A LOS ARCHIVOS
+    product.files.forEach(file => {
+      addProductFilePath(file)
+    })
+
+    //res.send(product)
     const features = await product.getFeatures() //uso magic method para traer las features
     const images = await product.getImages() //uso magic method para traer las imagenes
     //obtenro la categoría correspondiente al producto
@@ -72,14 +89,24 @@ const controller = {
         where: { type: 'main' }
       }]
     })
+
+
     //A los productos de la misma categoría le saco el que estoy viendo en detalle. Para que no me lo ponga como producto similar
     let similarProducts = productsCategory.filter((e) => e.id != id)
+    //agrego la ruta a las imagenes
+    similarProducts.forEach(product => {
+      product.images.forEach(image => {
+        addProductImagePath(image)
+      })
+    })
+
     //utilizando una funcion auxiliar creo un array de numeros aleatorios con maximo 3 posiciones
     let indexArray = randomArray2(similarProducts.length, 3)
 
     //filtro los Similar Products de forma aleatoria
     let similarProductsFiltered = similarProducts.filter((e, index) => indexArray.includes(index))
-    res.render('products/product-detail.ejs', { product, features, images, similarProductsFiltered, productImagePath })
+
+    res.render('products/product-detail.ejs', { product, similarProductsFiltered, arraySlider })
   },
 
   formNew: async (req, res) => {

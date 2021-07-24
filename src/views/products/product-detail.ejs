@@ -24,32 +24,24 @@
         <i class="fas fa-ruler"></i>
 
         <div class="product-dimensions">
-          <%images.forEach(image => {%>
+          <%product.images.forEach(image => {%>
             <% if (image.type == 'dimension') { %>
-              <img src="<%=productImagePath + image.name%>" alt="dimensiones luminaria" />
+              <img src="<%=image.name%>" alt="dimensiones luminaria" />
               <% } %>
           <%})%>
         </div>
 
         <div class="slider-container">
-
-          <%/*Recorro las imagenes*/%>
-          <%images.forEach(image =>{%>
-                      <%/*si es type slider*/%>
-          <%if(image.type == 'slider'){%>
-                      <%/*la convierto en un array*/%>
-            <%const arraySlider = image.name.split(',')%>
-                      <%/*Recorro el array y creo tantos imputs como imagenes haya*/%>
-                      <%/*Esta conversión puede sea conveniente resolverla en el controlador y no en la vista - DEFINIR*/%>
-            <%arraySlider.forEach((sliderImage, index) =>{%>
+                                   
+          
+            <%arraySlider.forEach((image, index) =>{%>
               <input type="radio" id="trigger<%=index+1%>" name="slider" checked autofocus>
               <label for="trigger<%=index+1%>"></label>
               <div class="slide <%=index+1%>">
-                <img src ="<%=productImagePath + sliderImage%>">
+                <img src ="<%=image%>">
               </div>
-              <%})%>
-         
-            <%}})%>        
+              <%})%>    
+             
         </div>
       </div>
 
@@ -62,33 +54,33 @@
           <div class = "options">
             <div class="options-column">
               <select name="power" class="btn">
-                  <%features.forEach(function (element) {%> 
-                    <%if(element.type != '' && element.type == 'power'){%>
-              <option value="<%=element.id%>"><%=element.name%></option>
+                  <%product.features.forEach(function (feature) {%> 
+                    <%if(feature.type != '' && feature.type == 'power'){%>
+              <option value="<%=feature.id%>"><%=feature.name%></option>
                     <%}})%>
               </select>
               <select name="cct" class="btn">
-                <%features.forEach(function (element) {%> 
-                  <%if(element.type != '' && element.type == 'cct'){%>
-            <option value="<%=element.id%>"><%=element.name%></option>
+                <%product.features.forEach(function (feature) {%> 
+                  <%if(feature.type != '' && feature.type == 'cct'){%>
+            <option value="<%=feature.id%>"><%=feature.name%></option>
                   <%}})%>
               </select>
             </div>
             <div class="options-column">
               <select name="optic" class="btn">
-                  <%features.forEach(function (element) {%> 
-                    <%if(element.type != '' && element.type == 'optic'){%>
-              <option value="<%=element.id%>"><%=element.name%></option>
+                  <%product.features.forEach(function (feature) {%> 
+                    <%if(feature.type != '' && feature.type == 'optic'){%>
+              <option value="<%=feature.id%>"><%=feature.name%></option>
                     <%}})%>
               </select>
               <select name="dim" class="btn">               
-                <%features.forEach(function (element) {%> 
-                  <%if(element.type != '' && element.type == 'dim' && element.name == 'Switch'){%>
-                    <option value="<%=element.id%>">&#xf011; <%=element.name%></option>
-                    <%}else if(element.type != '' && element.type == 'dim' && element.name == 'Bluetooth'){%>
-                      <option value="<%=element.id%>">&#xf293; <%=element.name%></option>
-                      <%} else if(element.type != '' && element.type == 'dim') {%>
-                        <option value="<%=element.id%>"><%=element.name%></option>
+                <%product.features.forEach(function (feature) {%> 
+                  <%if(feature.type != '' && feature.type == 'dim' && feature.name == 'Switch'){%>
+                    <option value="<%=feature.id%>">&#xf011; <%=feature.name%></option>
+                    <%}else if(feature.type != '' && feature.type == 'dim' && feature.name == 'Bluetooth'){%>
+                      <option value="<%=feature.id%>">&#xf293; <%=feature.name%></option>
+                      <%} else if(feature.type != '' && feature.type == 'dim') {%>
+                        <option value="<%=feature.id%>"><%=feature.name%></option>
                   <%}})%>
             </select>
             </div>
@@ -98,16 +90,16 @@
             <h3>Características</h3>
             <ul>
               <li>Material:
-              <%features.forEach(element => {%>
-                <% if (element.type == 'material') { %>
-                  <%=element.name%>
+              <%product.features.forEach(feature => {%>
+                <% if (feature.type == 'material') { %>
+                  <%=feature.name%>
                 <% } %>
                 <%})%>
               </li>
               <li>Fuente:
-                <%features.forEach(element => {%>
-                  <% if (element.type == 'source') { %>
-                    <%=element.name%>
+                <%product.features.forEach(feature => {%>
+                  <% if (feature.type == 'source') { %>
+                    <%=feature.name%>
                   <% } %>
                   <%})%>
                 </li>
@@ -129,13 +121,22 @@
         </section>
 
         <div class="product-dimensions-info">
-          <img src="<%=product.imageDimension%>" alt="dimensiones luminaria" />
+          <% product.images.forEach(image => {
+            if (image.type == 'dimension') { %>
+              <img src="<%=image.name%>" alt="dimensiones luminaria" />
+            <%} })%>
+          
           <span>Dimensiones</span>
         </div>
 
         <section class="documents">
-          <a href="<%=product.specSheet%>" target="_blank"><span><i class="far fa-file-pdf"></i> Hoja Técnica</span></a>
-          <a href="<%=product.installSheet%>"target="_blank"><span><i class="far fa-file-pdf"></i> Manual de Instalación</span></a>
+          <% product.files.forEach(file => {
+            if (file.type == 'dataSheet') { %>
+              <a href="<%=file.name%>" target="_blank"><span><i class="far fa-file-pdf"></i> Hoja Técnica</span></a>
+            <% } else if (file.type == 'installSheet') { %>
+              <a href="<%=file.name%>"target="_blank"><span><i class="far fa-file-pdf"></i> Manual de Instalación</span></a>
+            <%}})%>
+         
         </section>
       </div>
     </main>
@@ -144,11 +145,11 @@
       <article class="similar-products">
         <h3>Productos Similares</h3>
         <div class="slider-container">
-          <% similarProductsFiltered.forEach((element, index) => { %>
+          <% similarProductsFiltered.forEach((product, index) => { %>
             <input type="radio" id="trigger<%=index +3%>" name="slider<%=index +3%>" checked autofocus >
             <label for="trigger<%=index + 3%>"></label>
             <div class="slide2 <%=index + 3%>">
-              <a href="/product/detail/<%=element.id%>"><img src ="<%=productImagePath + element.images[0].name%>"></a>
+              <a href="/product/detail/<%=product.id%>"><img src ="<%=product.images[0].name%>"></a>
             </div>  
           <%}) %>
         </div>
