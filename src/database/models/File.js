@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
     Files.associate = function (models) {
         Files.belongsTo(models.Product, {
             as: 'product',
-            foreignKey: 'product_Id'
+            foreignKey: 'productId'
         });
     }
     return Files;

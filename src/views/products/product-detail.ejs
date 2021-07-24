@@ -32,23 +32,24 @@
         </div>
 
         <div class="slider-container">
-          
-            <input type="radio" id="trigger1" name="slider" checked autofocus>
-            <label for="trigger1"></label>
-            <div class="slide 1">
-              <img src ="<%=productImagePath + images[0].name%>">
-            </div>
-            <input type="radio" id="trigger2" name="slider" checked autofocus>
-            <label for="trigger2"></label>
-            <div class="slide 2">
-              <img src ="<%=productImagePath + images[1].name%>">
-            </div> 
-            <input type="radio" id="trigger3" name="slider" checked autofocus>
-            <label for="trigger3"></label>
-            <div class="slide 3">
-              <img src ="<%=productImagePath + images[2].name%>">
-            </div>   
+
+          <%/*Recorro las imagenes*/%>
+          <%images.forEach(image =>{%>
+                      <%/*si es type slider*/%>
+          <%if(image.type == 'slider'){%>
+                      <%/*la convierto en un array*/%>
+            <%const arraySlider = image.name.split(',')%>
+                      <%/*Recorro el array y creo tantos imputs como imagenes haya*/%>
+                      <%/*Esta conversión puede sea conveniente resolverla en el controlador y no en la vista - DEFINIR*/%>
+            <%arraySlider.forEach((sliderImage, index) =>{%>
+              <input type="radio" id="trigger<%=index+1%>" name="slider" checked autofocus>
+              <label for="trigger<%=index+1%>"></label>
+              <div class="slide <%=index+1%>">
+                <img src ="<%=productImagePath + sliderImage%>">
+              </div>
+              <%})%>
          
+            <%}})%>        
         </div>
       </div>
 

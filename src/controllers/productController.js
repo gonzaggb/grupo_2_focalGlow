@@ -35,7 +35,6 @@ const controller = {
     let productFound = await Product.findByPk(id)
     const features = await productFound.getFeatures() //uso magic method para traer las features
     const images = await productFound.getImages() //uso magic method para traer las imagenes
-
     //obtenro la categoría correspondiente al producto
     let categoryId = productFound.categoryId
     //Traigo todos los productos que están en la misma categoría por su id y los relaciono con la tabla feature
@@ -67,6 +66,11 @@ const controller = {
     const productNew = req.body
     const { material, cct, dim, source, optic, power } = req.body
     const { files } = req
+
+
+    //creo array para completar guardar las imagenes juntas
+    let slider = []
+    const newProduct = await Product.create(productNew)
     /*Si mandan una sola potencia no llega como array, es por eso que la convierto*/
     const powerId = Array.isArray(power) ? power : [power]
     productNew.power = powerId
@@ -74,9 +78,13 @@ const controller = {
       try {
         const newProduct = await Product.create(productNew)
         files.forEach(async file => {
-          if (file.fieldname == 'main' || file.fieldname == 'slider' || file.fieldname == 'dimension') {
+          if (file.fieldname == 'main' || file.fieldname == 'dimension') {
             await newProduct.createImage({ 'product_id': newProduct.id, 'type': file.fieldname, 'name': file.filename })
             // await Image.create({'product_id': newProduct.id, 'type': images.fieldname, 'name': images.filename })
+          }
+          //creo un array con todas las imagenes que van al slider
+          if (file.fieldname == 'slider') {
+            slider = slider.concat(file.filename)
           }
           /*Modificar en la base de datos los ENUM para que los tome la línea 81*/
           if (file.fieldname == 'installSheet' || file.fieldname == 'dataSheet') {
@@ -84,6 +92,8 @@ const controller = {
             /*MODIFIQUE EN EL CONFIG DE FILE.JS LA FOREING KEY, SACANDOLE EL '_' Y AGREGANDO EL UNDERSCORED TRUE AL CONFIG*/
           }
         })
+        await newProduct.createImage({ 'product_id': newProduct.id, 'type': 'slider', 'name': slider.toString() })
+
         await newProduct.addFeature(material)
         await newProduct.addFeature(cct)
         await newProduct.addFeature(source)
@@ -136,16 +146,47 @@ const controller = {
         { where: { id } }
       )
       /*Actualizo las features y creo la relación con las tablas intermedias*/
-      await newProduct.setFeature(material)
-      await newProduct.setFeature(cct)
-      await newProduct.setFeature(source)
-      await newProduct.setFeature(optic)
-      await newProduct.setFeature(dim)
-      await newProduct.setFeature(powerId)
+      /**Para esto hago un array con todos los valores a modificar, ASEGURAR QUE LOS CAMPOS NO VIAJEN VACIOS */
+
+      const featuresUpdate = material.concat(dim, source, optic, powerId)
+      await productFound.setFeatures(featuresUpdate)
       /*Actualizo las imagens en la tabla correspondiente */
+      const productImages = await productFound.getImages({ where: { type: 'main' } }) // traigo la imagenes del producto
+
+
+
+
+
+
+
+
+
+      //RECORRO LOS ARCHIVOS QUE VIAJAN EN EL UPDATE PARA OBTENER LOS NOMBRES DE LOS ARCHIVOS
+      files.forEach(async images => {
+        //RECORRO LAS IMAGENES DEL PRODUCTO A MODIFICAR
+        productImages.forEach(async mainImage => {
+          //SI EL TIPO DE IMAGEN ES 'MAIN'
+          if (mainImage.type == 'main') {
+            //HAGO UN UPDATE DEL NOMBRE DEL ARCHIVO CUYO TIPO ES MAIN
+            await mainImage.update(
+              { name: images.filename },
+              { where: { type: 'main' } })
+          }
+        })
+      })
+
+
+
+      /*Modificar en la base de datos los ENUM para que los tome la línea 81*/
+      /*  if (file.fieldname == 'installSheet' || file.fieldname == 'dataSheet') {
+         await productFound.setFile({ 'productId': productFound.id, 'type': file.fieldname, 'name': file.filename }) */
+      /*MODIFIQUE EN EL CONFIG DE FILE.JS LA FOREING KEY, SACANDOLE EL '_' Y AGREGANDO EL UNDERSCORED TRUE AL CONFIG*/
+      /*    } */
+      /*     } ) */
     } catch (error) {
       console.log(error)
     }
+
     return
     if (errors.isEmpty()) {
       let id = req.params.id
