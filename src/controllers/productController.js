@@ -66,7 +66,6 @@ const controller = {
     const { material, cct, dim, source, optic, power } = req.body
     const { files } = req
 
-
     //creo array para guardar las imagenes juntas
     let slider = []
     const newProduct = await Product.create(productNew)
