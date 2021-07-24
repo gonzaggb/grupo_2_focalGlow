@@ -253,6 +253,9 @@ delete: async (req, res) => {
     await Image.destroy({
       where: {productId: id}
     })
+    await File.destroy({
+      where: {productId: id}
+    })
     // borra el producto
     await Product.destroy(
       {where: {id}}
