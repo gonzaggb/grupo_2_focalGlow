@@ -59,7 +59,6 @@ const controller = {
     res.render('products/product-create.ejs', { featuresList })
   },
 
-  //FIXME CREATE PRODUCT 
   create: async (req, res) => {
     const featuresList = await Feature.findAll() // listado de todas las features
     let errors = validationResult(req)
@@ -68,7 +67,7 @@ const controller = {
     const { files } = req
 
 
-    //creo array para completar guardar las imagenes juntas
+    //creo array para guardar las imagenes juntas
     let slider = []
     const newProduct = await Product.create(productNew)
     /*Si mandan una sola potencia no llega como array, es por eso que la convierto*/
@@ -115,7 +114,6 @@ const controller = {
   },
 
 
-  //FIXME FORM UPDATE
   edit: async (req, res) => {
     let id = req.params.id
     let productFound = await Product.findByPk(id)
@@ -128,7 +126,6 @@ const controller = {
   },
 
 
-  //FIXME UPDATE PRODUCT
   update: async (req, res) => {
     let errors = validationResult(req)
     let id = req.params.id
@@ -243,11 +240,27 @@ const controller = {
     res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound, featuresList, features, productImagePath, images })
   },
 
-//FIXME DESTROY PRODUCT
-delete: (req, res) => {
+delete: async (req, res) => {
   let id = req.params.id
-  productToDelete = product.findByPk(id)
-  product.delete(id)
+  productToDelete = await Product.findByPk(id)
+  featuresToDelete = await productToDelete.getFeatures()
+  imagesToDelete = await productToDelete.getImages()
+  try {
+    //borro las relaciones de tablas intermedias
+    await productToDelete.removeFeature(featuresToDelete)
+
+    // borra las imagenes asociadas al producto
+    await Image.destroy({
+      where: {productId: id}
+    })
+    // borra el producto
+    await Product.destroy(
+      {where: {id}}
+    )
+  } catch (error) {
+    console.log(error)
+  }
+
   /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
   /*CODIGO COMENTADO PARA EVITAR CONFLICTOS, YA QUE LAS IMAGENES ESTAN COMPARTIDAS ACTUALMENTE ENTRE PRODUCTOS*/
   /*         const resourcesPath = path.join(__dirname, '../../public')
