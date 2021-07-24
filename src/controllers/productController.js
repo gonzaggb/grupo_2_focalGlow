@@ -66,14 +66,13 @@ const controller = {
     const { material, cct, dim, source, optic, power } = req.body
     const { files } = req
 
-    //creo array para guardar las imagenes juntas
-    let slider = []
-    const newProduct = await Product.create(productNew)
     /*Si mandan una sola potencia no llega como array, es por eso que la convierto*/
     const powerId = Array.isArray(power) ? power : [power]
     productNew.power = powerId
     if (errors.isEmpty()) {
       try {
+        //creo array para guardar las imagenes juntas
+        let slider = []
         const newProduct = await Product.create(productNew)
         files.forEach(async file => {
           if (file.fieldname == 'main' || file.fieldname == 'dimension') {
@@ -239,42 +238,42 @@ const controller = {
     res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound, featuresList, features, productImagePath, images })
   },
 
-delete: async (req, res) => {
-  let id = req.params.id
-  productToDelete = await Product.findByPk(id)
-  featuresToDelete = await productToDelete.getFeatures()
-  imagesToDelete = await productToDelete.getImages()
-  try {
-    //borro las relaciones de tablas intermedias
-    await productToDelete.removeFeature(featuresToDelete)
+  delete: async (req, res) => {
+    let id = req.params.id
+    productToDelete = await Product.findByPk(id)
+    featuresToDelete = await productToDelete.getFeatures()
+    imagesToDelete = await productToDelete.getImages()
+    try {
+      //borro las relaciones de tablas intermedias
+      await productToDelete.removeFeature(featuresToDelete)
 
-    // borra las imagenes asociadas al producto
-    await Image.destroy({
-      where: {productId: id}
-    })
-    await File.destroy({
-      where: {productId: id}
-    })
-    // borra el producto
-    await Product.destroy(
-      {where: {id}}
-    )
-  } catch (error) {
-    console.log(error)
-  }
+      // borra las imagenes asociadas al producto
+      await Image.destroy({
+        where: { productId: id }
+      })
+      await File.destroy({
+        where: { productId: id }
+      })
+      // borra el producto
+      await Product.destroy(
+        { where: { id } }
+      )
+    } catch (error) {
+      console.log(error)
+    }
 
-  /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
-  /*CODIGO COMENTADO PARA EVITAR CONFLICTOS, YA QUE LAS IMAGENES ESTAN COMPARTIDAS ACTUALMENTE ENTRE PRODUCTOS*/
-  /*         const resourcesPath = path.join(__dirname, '../../public')
-          fs.unlinkSync(path.join(resourcesPath, productToDelete.main_image))  // borra main_image
-          fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider1))
-          fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider2))
-          fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider3))
-          fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet))  // borra data sheet
-          fs.unlinkSync(path.join(resourcesPath, productToDelete.install_sheet))  // borra install sheet */
-  res.redirect('/product')
+    /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
+    /*CODIGO COMENTADO PARA EVITAR CONFLICTOS, YA QUE LAS IMAGENES ESTAN COMPARTIDAS ACTUALMENTE ENTRE PRODUCTOS*/
+    /*         const resourcesPath = path.join(__dirname, '../../public')
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.main_image))  // borra main_image
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider1))
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider2))
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider3))
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet))  // borra data sheet
+            fs.unlinkSync(path.join(resourcesPath, productToDelete.install_sheet))  // borra install sheet */
+    res.redirect('/product')
 
-},
+  },
   result: async (req, res) => {
 
     let productFound = await Product.findAll({
