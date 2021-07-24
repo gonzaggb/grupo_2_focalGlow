@@ -1,5 +1,5 @@
 <%- include ('../partials/head')%>
-  <title>Focal Glow | <%=productFound.name%></title>            
+  <title>Focal Glow | <%=product.name%></title>            
   <link rel="stylesheet" href="/css/style-product-detail.css" />
   </head>
 
@@ -8,7 +8,7 @@
     <%- include ('../partials/header')%>
 
     <div class="product-name">
-      <h2><%=productFound.name%></h2>
+      <h2><%=product.name%></h2>
       <a href="#" onclick="history.go(-1)"><i id="x" class="fas fa-arrow-circle-left"></i></a>
     </div>
 
@@ -113,7 +113,7 @@
                 </li>
             </ul>
             <p><strong>Descripción:</strong> <br>
-              <%=productFound.description%></p>
+              <%=product.description%></p>
           </article>
         </section>
 
@@ -121,7 +121,7 @@
           <h3 class="price-title">$ 
             <% const toThousand = (n) =>
                 n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
-             <%= toThousand(productFound.price)%></h3>
+             <%= toThousand(product.price)%></h3>
           <div class="qtyadd">
             <input type="number" placeholder="1" min="0" />
             <button class="add">AÑADIR</button>
@@ -129,13 +129,13 @@
         </section>
 
         <div class="product-dimensions-info">
-          <img src="<%=productFound.image_dimension%>" alt="dimensiones luminaria" />
+          <img src="<%=product.imageDimension%>" alt="dimensiones luminaria" />
           <span>Dimensiones</span>
         </div>
 
         <section class="documents">
-          <a href="<%=productFound.data_sheet%>" target="_blank"><span><i class="far fa-file-pdf"></i> Hoja Técnica</span></a>
-          <a href="<%=productFound.install_sheet%>"target="_blank"><span><i class="far fa-file-pdf"></i> Manual de Instalación</span></a>
+          <a href="<%=product.specSheet%>" target="_blank"><span><i class="far fa-file-pdf"></i> Hoja Técnica</span></a>
+          <a href="<%=product.installSheet%>"target="_blank"><span><i class="far fa-file-pdf"></i> Manual de Instalación</span></a>
         </section>
       </div>
     </main>

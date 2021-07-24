@@ -97,6 +97,7 @@
                             <span class="error_msg"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
                                 <label for="power">Potencia: </label>
+																
                                     <select multiple name="power" class="select">
                                         <%featuresList.forEach(power => {%>
                                             <%if(power.type == 'power'){%>
@@ -109,6 +110,7 @@
                                                     ><%=power.name%></option>
                                             <%}})%>                                   
                                         </select>
+																				<p>Apretando CTRL podrás seleccionar más de una potencia</p>
                             </div>
                             <span class="error_msg"><%=locals.errors && errors.power ? errors.power.msg : '' %></span><br>
                             <div class="first-">

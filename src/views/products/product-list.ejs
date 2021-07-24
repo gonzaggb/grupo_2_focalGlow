@@ -51,7 +51,7 @@
         	<td class="center">
 				<%for(i = 0 ; i < product.images.length; i++){%>
 					<% if (product.images[i].type == 'main') { %>
-						<img class = "img-redonda" src="<%=productImagePath + product.images[i].name%>">
+						<img class = "img-redonda" src="<%=product.images[i].name%>">
 					<% } %>
 					<%}%>
         	</td>

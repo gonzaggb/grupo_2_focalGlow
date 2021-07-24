@@ -39,7 +39,7 @@ CREATE TABLE categories (
 CREATE TABLE files (
 	id INT  AUTO_INCREMENT NOT NULL,
     name VARCHAR(255) NOT NULL,
-	type ENUM ('data_sheet','install_sheet'),
+	type ENUM ('dataSheet','installSheet'),
     product_id INT NOT NULL,
     CONSTRAINT id PRIMARY KEY (id),
 	FOREIGN KEY (product_id) REFERENCES products(id)
