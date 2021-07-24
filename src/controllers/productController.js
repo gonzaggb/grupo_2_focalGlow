@@ -134,10 +134,11 @@ const controller = {
     let id = req.params.id
     let productFound = await Product.findByPk(id)
     let { files } = req
-    const { material, cct, dim, source, optic, power } = req.body
+    const { material, cct, dim, source, optic, power, sliderUpdate } = req.body
     const data = req.body
     const powerId = Array.isArray(power) ? power : [power]
     productFound.power = powerId
+
 
     try {
       /*Actualizo el producto en la tabla producto*/
@@ -148,33 +149,112 @@ const controller = {
       /*Actualizo las features y creo la relación con las tablas intermedias*/
       /**Para esto hago un array con todos los valores a modificar, ASEGURAR QUE LOS CAMPOS NO VIAJEN VACIOS */
 
-      const featuresUpdate = material.concat(dim, source, optic, powerId)
+      const featuresUpdate = material.concat(dim, source, cct, optic, powerId)
       await productFound.setFeatures(featuresUpdate)
       /*Actualizo las imagens en la tabla correspondiente */
-      const productImages = await productFound.getImages({ where: { type: 'main' } }) // traigo la imagenes del producto
+      const productImages = await productFound.getImages() // traigo la imagenes del producto
+      /*  DEPENDIENDO QUE BOTON DE SLIDER UPDATE ESTÉ SELECCIONADO DEBO PISAR EL NOMBRE ACTUAL CON TODOS DATOS NUEVOS O SUMAR UN DATO AL EXISTENTE */
+
+var slider = []
+var mainImage = ''
+var dimension = ''
+//recorro lo archivos que viajan en el update y los guardo en las variables creadas previamente según corresponda
+      files.forEach(file => {
+        switch (file.fieldname) {
+          case 'main':
+            mainImage = file.filename
+            break;
+          case 'dimension':
+            dimension = file.filename
+            break;
+          case 'slider':
+            //si el usuario quiere modificar todas las imagenes creo un array al cual voy pusheando las imagenes que vienen del files
+            if (sliderUpdate == 'modifyAll') { 
+              slider.push(file.filename)
+            }
+            var actualImage = ''
+            //si el usuario desea agregar una imagen, busco el nombre actual y le agrego el nombre de las nuevas imagenes
+            if (sliderUpdate == 'addImages') { 
+              productImages.forEach(image => {
+                if (image.type == 'slider') {
+                  actualImage = image.name
+                }
+              })
+              slider = actualImage +','+ file.filename
+            }
+            break;
+          default:
+        }
+      })
+//actualizo la main image en la DB
+      await Image.update(
+        {name: mainImage},
+        {where: {productId: id, type: 'main'}},
+      )
+//actualizo la image dimendion en la DB
+      await Image.update(
+        {name: dimension},
+        {where: {productId: id, type: 'dimension'}},
+      )
+//actualizo la image slider en la DB - AHORA SE GUARDA COMO UN ARRAY, POR LO QUE DEBEMOS MODIFICAR LA FORMA DE LEER LOS DATOS EN LOS EJS
+      await Image.update(
+        {name: slider},
+        {where: {productId: id, type: 'slider'}},
+      )
+
+return res.send('REVISA LA DBBBBB')
+
+
+   /*productImages.forEach(async image =>{
+    await image.update(
+      {name: mainImage},
+      {where : {type: 'main'}}
+    )
+    await image.update(
+      {name: dimension},
+      {where: {type: 'dimension'}}
+    )
+    await image.update(
+      {name: slider.isArray ? slider.toString() : slider},
+      {where: {type: 'slider'}}
+    )
+   })*/
+
+   
+        
+
+  
 
 
 
-
-
-
-
-
-
-      //RECORRO LOS ARCHIVOS QUE VIAJAN EN EL UPDATE PARA OBTENER LOS NOMBRES DE LOS ARCHIVOS
-      files.forEach(async images => {
         //RECORRO LAS IMAGENES DEL PRODUCTO A MODIFICAR
-        productImages.forEach(async mainImage => {
+        productImages.forEach(async image => {
           //SI EL TIPO DE IMAGEN ES 'MAIN'
-          if (mainImage.type == 'main') {
+          if (file.type == 'main') {
             //HAGO UN UPDATE DEL NOMBRE DEL ARCHIVO CUYO TIPO ES MAIN
-            await mainImage.update(
-              { name: images.filename },
+            await image.update(
+              { name: file.filename },
               { where: { type: 'main' } })
           }
+          if (file.type == 'dimension') {
+            await image.update(
+              { name: file.filename },
+              { where: { type: 'dimension' } })
+          }
+          if (file.type == 'slider' && sliderUpdate == 'modifyAll') {
+            await image.update(
+              { name: file.filename },
+              { where: { type: 'slider' } })
+          } else {
+            const newSliderImage = image.name.split(',')
+            newSliderImage.concat(file.filename)
+            console.log(newSliderImage)
+            await image.update(
+              { name: image.name.concat(newSliderImage.toString()) },
+              { where: { type: 'slider' } })
+          }
         })
-      })
-
+      
 
 
       /*Modificar en la base de datos los ENUM para que los tome la línea 81*/

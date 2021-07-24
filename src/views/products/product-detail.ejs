@@ -87,6 +87,8 @@
                     <option value="<%=element.id%>">&#xf011; <%=element.name%></option>
                     <%}else if(element.type != '' && element.type == 'dim' && element.name == 'Bluetooth'){%>
                       <option value="<%=element.id%>">&#xf293; <%=element.name%></option>
+                      <%} else if(element.type != '' && element.type == 'dim') {%>
+                        <option value="<%=element.id%>"><%=element.name%></option>
                   <%}})%>
             </select>
             </div>
@@ -143,7 +145,7 @@
         <h3>Productos Similares</h3>
         <div class="slider-container">
           <% similarProductsFiltered.forEach((element, index) => { %>
-            <input type="radio" id="trigger<%=index +3%>" name="slider2" checked autofocus >
+            <input type="radio" id="trigger<%=index +3%>" name="slider<%=index +3%>" checked autofocus >
             <label for="trigger<%=index + 3%>"></label>
             <div class="slide2 <%=index + 3%>">
               <a href="/product/detail/<%=element.id%>"><img src ="<%=productImagePath + element.images[0].name%>"></a>

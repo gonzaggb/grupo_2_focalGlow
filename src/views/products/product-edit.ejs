@@ -115,10 +115,6 @@
                                 <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <% /*powerIndex define donde está el primer power,*/%>
-                                    <% /*el for de las J genera los diferentes selects.*/%>
-                                        <% /*el for de las I, completa los valores del producto original*/%>
-                                            <% /*el siguiente forEach arma todos los select que hay*/%>
                                 <select multiple name="power" class="select">
                                         <%featuresList.forEach(power => {%>
                                             <%if(power.type == 'power'){%>
@@ -207,9 +203,13 @@
                             <div class="imagenes">
                                 <div class="imagen-input">
                                     <label class="title" for="slider">Slider: </label><br>
-                                    <input type="file" name="image_slider1" accept=".jpg , .png"> <br>
-                                    <input type="file" name="image_slider2" accept=".jpg , .png"><br>
-                                    <input type="file" name="image_slider3" accept=".jpg , .png">
+                                    <span>Cambiar todas las imagenes del slider</span>
+                                    <input class="radio" type="radio" name="sliderUpdate" value="modifyAll">
+                                    <br>
+                                    <span>Agregar una imagen al slider</span>
+                                    <input class="radio" type="radio" name="sliderUpdate" value="addImages">
+                                    <br>
+                                    <input multiple type="file" name="slider" accept=".jpg , .png">
                                 </div><br>
                             </div>
                             <div class="imagenes">
