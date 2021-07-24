@@ -1,5 +1,6 @@
 const { body } = require('express-validator')
 const { checkFieldImage, checkFieldPdf } = require('../helpers/checkFiles')
+const { Product } = require('../database/models')
 
 //agregar las validaciones
 const validateEditForm = [
@@ -9,7 +10,19 @@ const validateEditForm = [
         .bail()
         .isLength({ min: 5 })
         .withMessage('Por favor un nombre más largo'),
-    body('qty')
+    body('name').custom(async (value, { req })=>{
+        const product = await Product.findOne(
+            {where: {name: req.body.name}}
+        )
+        
+        const productName = await Product.findByPk(req.params.id)
+        if(product && product.name != productName.name){
+        return Promise.reject('El nombre del producto ya se encuentra en la lista')
+        }
+        
+        return true
+    }),
+    body('quantity')
         .notEmpty()
         .withMessage('Favor de indicar la cantidad de productos'),
     body('price')
@@ -39,7 +52,25 @@ const validateEditForm = [
         .bail()
         .isLength({ min: 20 })
         .withMessage('Por favor agregar una descripcion mas larga'),
-    /* body('power').notEmpty().withMessage('Favor de incluir una potencia'), */
+    body('power')
+        .notEmpty()
+        .withMessage('Favor de incluir una potencia'),
+    body('slider').custom((value, { req }) => {
+        const { files } = req
+        files.forEach(file => {
+            //si existe imagen para slider y no vino seleccionado el checkbox de carga, devuelve error
+            if (file.fieldname == 'slider' && !req.body.sliderUpdate)
+                throw new Error('Debes seleccionar una opcion')
+
+        })
+        if (req.body.sliderUpdate) {
+            checkFieldImage('slider', files)
+
+        }
+
+        return true
+    }),
+
 ]
 
 module.exports = { validateEditForm }

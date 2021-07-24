@@ -9,6 +9,18 @@ const validateCreateForm = [
     .bail()
     .isLength({ min: 5 })
     .withMessage('Por favor un nombre más largo'),
+    body('name').custom(async (value, { req })=>{
+      const product = await Product.findOne(
+          {where: {name: req.body.name}}
+      )
+      
+      const productName = await Product.findByPk(req.params.id)
+      if(product && product.name != productName.name){
+      return Promise.reject('El nombre del producto ya se encuentra en la lista')
+      }
+      
+      return true
+  }),
   body('quantity')
     .notEmpty()
     .withMessage('Favor de indicar la cantidad de productos'),

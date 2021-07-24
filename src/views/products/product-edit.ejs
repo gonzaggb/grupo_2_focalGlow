@@ -46,7 +46,7 @@
                                 </div>
                             </div>
                             <span class="error_msg">
-                                <%= locals.errors && errors.qty ? errors.qty.msg : null %>
+                                <%= locals.errors && errors.quantity ? errors.quantity.msg : null %>
                             </span><br>
                             <div class="first-">
                                 <label class="" for="source">Fuente: </label>
@@ -210,6 +210,11 @@
                                     <input class="radio" type="radio" name="sliderUpdate" value="addImages">
                                     <br>
                                     <input multiple type="file" name="slider" accept=".jpg , .png">
+                                    <br>
+                                    <span class="error_msg">
+                                    <%=locals.errors && errors.slider ? errors.slider.msg : '' %>
+                                    </span>
+
                                 </div><br>
                             </div>
                             <div class="imagenes">
