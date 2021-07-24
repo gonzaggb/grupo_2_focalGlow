@@ -1,5 +1,6 @@
 const { body } = require('express-validator')
 const { checkFieldImage, checkFieldPdf } = require('../helpers/checkFiles')
+const { Product } = require('../database/models')
 
 //agregar las validaciones
 const validateCreateForm = [
