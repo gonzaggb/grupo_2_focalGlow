@@ -90,18 +90,19 @@ const controller = {
   create: async (req, res) => {
     const featuresList = await Feature.findAll() // listado de todas las features
     let errors = validationResult(req)
-    const productNew = req.body
+    const productInfo = req.body
     const { material, cct, dim, source, optic, power } = req.body
     const { files } = req
 
     /*Si mandan una sola potencia no llega como array, es por eso que la convierto*/
     const powerId = Array.isArray(power) ? power : [power]
-    productNew.power = powerId
+    productInfo.power = powerId
     if (errors.isEmpty()) {
       try {
         //creo array para guardar las imagenes juntas
-        let slider = []
-        const newProduct = await Product.create(productNew)
+
+        const newProduct = await Product.create(productInfo)
+
         files.forEach(async file => {
           if (file.fieldname == 'main' || file.fieldname == 'dimension') {
             await newProduct.createImage({ 'product_id': newProduct.id, 'type': file.fieldname, 'name': file.filename })
@@ -109,7 +110,7 @@ const controller = {
           }
           //creo un array con todas las imagenes que van al slider
           if (file.fieldname == 'slider') {
-            slider = slider.concat(file.filename)
+            await newProduct.createImage({ 'product_id': newProduct.id, 'type': file.fieldname, 'name': file.filename })
           }
           /*Modificar en la base de datos los ENUM para que los tome la línea 81*/
           if (file.fieldname == 'installSheet' || file.fieldname == 'dataSheet') {
@@ -117,7 +118,7 @@ const controller = {
             /*MODIFIQUE EN EL CONFIG DE FILE.JS LA FOREING KEY, SACANDOLE EL '_' Y AGREGANDO EL UNDERSCORED TRUE AL CONFIG*/
           }
         })
-        await newProduct.createImage({ 'product_id': newProduct.id, 'type': 'slider', 'name': slider.toString() })
+
 
         await newProduct.addFeature(material)
         await newProduct.addFeature(cct)
@@ -125,6 +126,7 @@ const controller = {
         await newProduct.addFeature(optic)
         await newProduct.addFeature(dim)
         await newProduct.addFeature(powerId)
+
         res.redirect('/product')
 
       } catch (error) {
