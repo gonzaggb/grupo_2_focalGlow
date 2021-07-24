@@ -15,9 +15,9 @@
     <main>
       <div class="product-detail">
         <div class="main-img">
-          <%images.forEach(image => {%>
+          <%product.images.forEach(image => {%>
             <% if (image.type == 'main') { %>
-              <img src="<%=productImagePath + image.name%>" alt="luminaria" />
+              <img src="<%=image.name%>" alt="luminaria" />
             <% } %>
           <%})%>
         </div>

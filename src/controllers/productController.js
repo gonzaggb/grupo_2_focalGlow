@@ -15,6 +15,9 @@ const fs = require('fs')
 const path = require('path')
 const productImagePath = '/img/'
 
+function addProductImagePath(element) {
+  return element.dataValues.name = productImagePath + element.name
+}
 
 const controller = {
   list: async (req, res) => {
@@ -24,19 +27,43 @@ const controller = {
         association: 'images',
         where: { type: 'main' },
       }],
+      order: [
+        ['category', 'name']
+      ]
     })
-    res.render('products/product-list.ejs', { products, productImagePath })
+
+    //AGREGO RUTA A LAS IMAGENES
+    products.forEach(product => {
+      product.images.forEach(image => {
+        addProductImagePath(image)
+      })
+    })
+
+    res.render('products/product-list.ejs', { products })
   },
+
   detail: async (req, res) => {
     let id = req.params.id
     //busco el producto que viaja por parametro @gonza
     //FIXME buscar explicación de porque busca category y category_id
 
-    let productFound = await Product.findByPk(id)
-    const features = await productFound.getFeatures() //uso magic method para traer las features
-    const images = await productFound.getImages() //uso magic method para traer las imagenes
+    let product = await Product.findByPk(id, {
+      include: [
+        { association: 'images' },
+        { association: 'features' },
+        { association: 'files' },
+        { association: 'category' }
+      ]
+    })
+
+    product.images.forEach(image => {
+      addProductImagePath(image)
+    })
+    res.send(product)
+    const features = await product.getFeatures() //uso magic method para traer las features
+    const images = await product.getImages() //uso magic method para traer las imagenes
     //obtenro la categoría correspondiente al producto
-    let categoryId = productFound.categoryId
+    let categoryId = product.categoryId
     //Traigo todos los productos que están en la misma categoría por su id y los relaciono con la tabla feature
     let productsCategory = await Product.findAll({
       where: { categoryId },
@@ -52,8 +79,9 @@ const controller = {
 
     //filtro los Similar Products de forma aleatoria
     let similarProductsFiltered = similarProducts.filter((e, index) => indexArray.includes(index))
-    res.render('products/product-detail.ejs', { productFound, features, images, similarProductsFiltered, productImagePath })
+    res.render('products/product-detail.ejs', { product, features, images, similarProductsFiltered, productImagePath })
   },
+
   formNew: async (req, res) => {
     const featuresList = await Feature.findAll() // listado de todas las features
     res.render('products/product-create.ejs', { featuresList })
