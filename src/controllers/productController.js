@@ -297,9 +297,17 @@ const controller = {
 
   delete: async (req, res) => {
     let id = req.params.id
-    productToDelete = await Product.findByPk(id)
-    featuresToDelete = await productToDelete.getFeatures()
-    imagesToDelete = await productToDelete.getImages()
+    let productToDelete = await Product.findByPk(id, {
+
+    })
+
+
+    let featuresToDelete = await productToDelete.getFeatures()
+    let imagesToDelete = await productToDelete.getImages()
+    let filesToDelete = await productToDelete.getFiles()
+
+
+
     try {
       //borro las relaciones de tablas intermedias
       await productToDelete.removeFeature(featuresToDelete)
@@ -315,19 +323,21 @@ const controller = {
       await Product.destroy(
         { where: { id } }
       )
+      /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
+
+      const resourcesPath = path.join(__dirname, '../../public')
+      // borra todas las imagenes asociadas al producto del servidor
+      imagesToDelete.forEach(image => {
+        fs.unlinkSync(path.join(resourcesPath, '/img/', image.name))
+      })
+      // borra todoss los archivos asociados al producto del servidor
+      filesToDelete.forEach(file => {
+        fs.unlinkSync(path.join(resourcesPath, '/pdf/', file.name))
+      })
     } catch (error) {
       console.log(error)
     }
 
-    /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
-    /*CODIGO COMENTADO PARA EVITAR CONFLICTOS, YA QUE LAS IMAGENES ESTAN COMPARTIDAS ACTUALMENTE ENTRE PRODUCTOS*/
-    /*         const resourcesPath = path.join(__dirname, '../../public')
-            fs.unlinkSync(path.join(resourcesPath, productToDelete.main_image))  // borra main_image
-            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider1))
-            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider2))
-            fs.unlinkSync(path.join(resourcesPath, productToDelete.image_slider3))
-            fs.unlinkSync(path.join(resourcesPath, productToDelete.data_sheet))  // borra data sheet
-            fs.unlinkSync(path.join(resourcesPath, productToDelete.install_sheet))  // borra install sheet */
     res.redirect('/product')
 
   },
