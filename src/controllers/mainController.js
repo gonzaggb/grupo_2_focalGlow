@@ -2,7 +2,6 @@ const { Category } = require('../database/models')
 const { Product } = require('../database/models')
 const random = require('../helpers/utilities')
 const path = require('path')
-const product = require('../models/product')
 const pathImageCategories = '/img/categories/'
 const productImagePath = '/img/'
 
