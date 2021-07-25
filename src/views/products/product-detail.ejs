@@ -53,38 +53,52 @@
           </div>
           <div class = "options">
             <div class="options-column">
-              <select name="power" class="btn">
-                  <%product.features.forEach(function (feature) {%> 
-                    <%if(feature.type != '' && feature.type == 'power'){%>
-              <option value="<%=feature.id%>"><%=feature.name%></option>
+              <% if (product.features.some(feature => feature.type == 'power')) { %>
+                <select name="power" class="btn">
+                  <%product.features.forEach(feature => {%> 
+                    <%if(feature.type == 'power'){%>
+                      <option value="<%=feature.id%>"><%=feature.name%></option>
+                    <%}})%> 
+                </select>   
+              <%}%>
+              
+              
+              <% if (product.features.some(feature => feature.type == 'cct')) { %>
+                <select name="cct" class="btn">
+                  <%product.features.forEach(feature => {%> 
+                    <%if(feature.type == 'cct'){%>
+                      <option value="<%=feature.id%>"><%=feature.name%></option>
                     <%}})%>
-              </select>
-              <select name="cct" class="btn">
-                <%product.features.forEach(function (feature) {%> 
-                  <%if(feature.type != '' && feature.type == 'cct'){%>
-            <option value="<%=feature.id%>"><%=feature.name%></option>
-                  <%}})%>
-              </select>
+                </select>
+              <% } %>
             </div>
+
             <div class="options-column">
-              <select name="optic" class="btn">
-                  <%product.features.forEach(function (feature) {%> 
-                    <%if(feature.type != '' && feature.type == 'optic'){%>
-              <option value="<%=feature.id%>"><%=feature.name%></option>
+              <% if (product.features.some(feature => feature.type == 'optic')) { %>
+                <select name="optic" class="btn">
+                  <%product.features.forEach(feature => {%> 
+                    <%if(feature.type == 'optic'){%>
+                      <option value="<%=feature.id%>"><%=feature.name%></option>
                     <%}})%>
-              </select>
-              <select name="dim" class="btn">               
-                <%product.features.forEach(function (feature) {%> 
-                  <%if(feature.type != '' && feature.type == 'dim' && feature.name == 'Switch'){%>
-                    <option value="<%=feature.id%>">&#xf011; <%=feature.name%></option>
-                    <%}else if(feature.type != '' && feature.type == 'dim' && feature.name == 'Bluetooth'){%>
+                </select>
+              <% } %>
+
+              <% if (product.features.some(feature => feature.type == 'dim')) { %>
+                <select name="dim" class="btn">               
+                  <%product.features.forEach(feature => {%> 
+                    <%if(feature.type == 'dim' && feature.name == 'Switch'){%>
+                      <option value="<%=feature.id%>">&#xf011; <%=feature.name%></option>
+                    <%}else if (feature.type == 'dim' && feature.name == 'Bluetooth'){%>
                       <option value="<%=feature.id%>">&#xf293; <%=feature.name%></option>
-                      <%} else if(feature.type != '' && feature.type == 'dim') {%>
-                        <option value="<%=feature.id%>"><%=feature.name%></option>
+                      <%} else if (feature.type == 'dim') {%>
+                      <option value="<%=feature.id%>"><%=feature.name%></option>
                   <%}})%>
-            </select>
+                </select>
+                <% } %>
+              
             </div>
           </div>
+       
         
           <article class="technical-data">
             <h3>Características</h3>

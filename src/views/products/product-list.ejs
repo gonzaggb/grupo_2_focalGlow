@@ -49,11 +49,9 @@
 						<%=product.quantity%>
 					</td>
         	<td class="center">
-				<%for(i = 0 ; i < product.images.length; i++){%>
-					<% if (product.images[i].type == 'main') { %>
-						<img class = "img-redonda" src="<%=product.images[i].name%>">
-					<% } %>
-					<%}%>
+						<% product.images.forEach(image => {%>		
+						<img class = "img-redonda" src="<%=image.name%>">
+						<%})%>
         	</td>
         	<td class="center">
           	<a href='/product/detail/<%=product.id%>'><i class="fas fa-search"></i></a>
