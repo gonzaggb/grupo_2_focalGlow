@@ -165,7 +165,7 @@ const controller = {
       files.forEach(e => {
         fs.unlinkSync(e.path)
       })
-      res.render('products/product-create.ejs', { errors: errors.mapped(), old: productNew, featuresList })
+      res.render('products/product-create.ejs', { errors: errors.mapped(), old: productInfo, featuresList })
     }
   },
 
