@@ -1,9 +1,7 @@
-//Requiero el modelo product para poder usar todos sus metodos
-const product = require('../models/product')
 // se requiere express-validator, pero la parte de validation result
 const { validationResult } = require('express-validator')
 //funciones Auxilliares
-//const { isFileImage, isPdf } = require('../helpers/files')
+
 const { randomArray2 } = require('../helpers/utilities')
 const { Product } = require('../database/models')
 const { Feature } = require('../database/models')
@@ -17,6 +15,7 @@ const resourcesPath = path.join(__dirname, '../../public')
 const productImagePath = '/img/'
 const productFilePath = '/pdf/'
 
+//funciones auxiliares para no repetir en el codigo
 function addProductImagePath(element) {
   return element.dataValues.name = productImagePath + element.name
 }
@@ -76,9 +75,6 @@ const controller = {
       addProductFilePath(file)
     })
 
-    //res.send(product)
-    const features = await product.getFeatures() //uso magic method para traer las features
-    const images = await product.getImages() //uso magic method para traer las imagenes
     //obtenro la categoría correspondiente al producto
     let categoryId = product.categoryId
     //Traigo todos los productos que están en la misma categoría por su id y los relaciono con la tabla feature
@@ -358,6 +354,7 @@ const controller = {
         where: { type: 'main' },
       }],
     })
+
     return res.render('products/product-search.ejs', { productFound, productImagePath })
   }
 }
