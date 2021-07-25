@@ -343,9 +343,19 @@ const controller = {
     res.redirect('/product')
 
   },
+
   result: async (req, res) => {
 
+    let keyword = req.query.keyword
+    let offset = req.query.offset
     let productFound = await Product.findAll({
+      where: {
+        name: { [Op.like]: '%' + req.query.keyword + '%' }
+      },
+    })
+    let product = await Product.findAll({
+      limit: 12,
+      offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
       where: {
         name: { [Op.like]: '%' + req.query.keyword + '%' }
       },
@@ -354,9 +364,10 @@ const controller = {
         where: { type: 'main' },
       }],
     })
+    const nextButton = parseInt(productFound.length / 12)
+    return res.render('products/product-search.ejs', { productFound, product, keyword, nextButton, productImagePath })
+  },
 
-    return res.render('products/product-search.ejs', { productFound, productImagePath })
-  }
 }
 
 module.exports = controller
