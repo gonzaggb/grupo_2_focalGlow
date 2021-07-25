@@ -1,7 +1,6 @@
 const { body } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const { User } = require('../database/models')
-const userModel = require('../models/user')
 
 const validationLoginUser = [
 

@@ -1,8 +1,6 @@
-const userModel = require ('../models/user')
-
-module.exports = (req,res,next) =>{
+module.exports = (req, res, next) => {
     const userCookie = req.signedCookies.userId
-    if (userCookie){
+    if (userCookie) {
         req.session.logged = userCookie
     }
     next()
