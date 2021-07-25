@@ -139,6 +139,19 @@
     }
     .offset{
         cursor: pointer;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 0;
+        background-color: black;
+        color: white;
+        transition: 0.5s;
+
+    }
+    .offset:hover{
+        background-color: #ffde59;
+        color: black;
+        border: 1px solid black;
     }
     #order{
         align-items: flex-end;
