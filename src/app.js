@@ -8,7 +8,12 @@ app.use(express.static(publicPath))
 
 //requerimos y usamos express-session
 const session = require('express-session')
-app.use(session({ secret: 'shhhhh' }))
+app.use(session({
+  secret: 'shhhhh',
+  resave: true,
+  saveUninitialized: true
+}))
+
 //requerimos  e implementamos  cookie-parser
 const cookieParser = require('cookie-parser')
 app.use(cookieParser('secreto'))

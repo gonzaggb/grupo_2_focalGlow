@@ -193,7 +193,7 @@
                                     <input type="file" name='main' accept=".jpg">
                                     <br>
                                     <p>Preview:</p>
-                                    <img id="output" src="<%=productImagePath + images[0].name%>" alt="">
+                                    <img id="output" src="<%=images[0].name%>" alt="">
                                 </div><br>
                                 <div class="imagen-input">
                                     <label class="title" for="dimension">Dimensiones del Producto: </label><br>
@@ -209,6 +209,12 @@
                                     <span>Agregar una imagen al slider</span>
                                     <input class="radio" type="radio" name="sliderUpdate" value="addImages">
                                     <br>
+									<%images.forEach(image => { 
+										if (image.type == 'slider') { %>
+										<img class="image-slider" src="<%=image.name%>" alt="">
+										<%}%>
+									<% }) %>
+									
                                     <input multiple type="file" name="slider" accept=".jpg , .png">
                                     <br>
                                     <span class="error_msg">

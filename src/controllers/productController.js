@@ -13,6 +13,7 @@ const Sequelize = require('sequelize')
 const Op = Sequelize.Op
 const fs = require('fs')
 const path = require('path')
+const resourcesPath = path.join(__dirname, '../../public')
 const productImagePath = '/img/'
 const productFilePath = '/pdf/'
 
@@ -110,6 +111,7 @@ const controller = {
 
   formNew: async (req, res) => {
     const featuresList = await Feature.findAll() // listado de todas las features
+
     res.render('products/product-create.ejs', { featuresList })
   },
 
@@ -171,11 +173,16 @@ const controller = {
   edit: async (req, res) => {
     let id = req.params.id
     let productFound = await Product.findByPk(id)
-    const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
+    // traigo las imagenes por magic method del product encontrado y les añado el path correspondiente
+    const images = await productFound.getImages()
+    images.forEach(image => {
+      addProductImagePath(image)
+    })
+
     const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
     const category = await productFound.getCategory()
     const featuresList = await Feature.findAll() // listado de todas las features
-    res.render('products/product-edit.ejs', { productFound, category, images, features, featuresList, productImagePath })
+    res.render('products/product-edit.ejs', { productFound, category, images, features, featuresList })
 
   },
 
@@ -189,6 +196,7 @@ const controller = {
     const data = req.body
     const powerId = Array.isArray(power) ? power : [power]
     productFound.power = powerId
+
     if (errors.isEmpty()) {
       try {
         /*Actualizo el producto en la tabla producto*/
@@ -202,110 +210,110 @@ const controller = {
         const featuresUpdate = material.concat(dim, source, cct, optic, powerId)
         await productFound.setFeatures(featuresUpdate)
 
+        // traigo la imagenes y archivos del producto y les añado la ruta
+        const productFoundImages = await productFound.getImages()
+        productFoundImages.forEach(image => {
+          addProductImagePath(image)
+        })
+        const productFoundFiles = await productFound.getFiles()
+        productFoundFiles.forEach(file => {
+          addProductFilePath(file)
+        })
 
-        const productImages = await productFound.getImages() // traigo la imagenes del producto
-        var slider = []
-        var mainImage = ''
-        var dimension = ''
-        var installSheet = ''
-        var dataSheet = ''
+        //Antes de entrar a recorrer los archivos veo si el usuario quiere modificar todas las imagenes del slider o solo añadir. Si elije modificar todo debo borrar esas imagenes de la db para luego añadir las que vienen por el req. No updetear porque pueden ser distintas las cantidades 
+
+        if (sliderUpdate == 'modifyAll') {
+          await Image.destroy(
+            { where: { productId: id, type: 'slider' } }
+          )
+        }
+
+        //Funciones para que borren las imagenes o pdfs viejos del servidor
+        function deleteImagesfromServer(file) {
+          productFoundImages.forEach(image => {
+            if (image.type = file.fieldname) {
+              fs.unlinkSync(path.join(resourcesPath, image.name))
+            }
+          })
+        }
+        function deleteFilesfromServer(file) {
+          productFoundFiles.forEach(pdfFile => {
+            if (pdfFile.type = file.fieldname) {
+              fs.unlinkSync(path.join(resourcesPath, pdfFile.name))
+            }
+          })
+        }
+
         //recorro lo archivos que viajan en el update y los guardo en las variables creadas previamente según corresponda
-        files.forEach(file => {
+        files.forEach(async file => {
           switch (file.fieldname) {
             case 'main':
-              mainImage = file.filename
+              let mainImage = file.filename
+              //actualizo la mainImage en la DB
+              await Image.update(
+                { name: mainImage },
+                { where: { productId: id, type: 'main' } },
+              )
+              deleteImagesfromServer(file)
               break;
             case 'dimension':
-              dimension = file.filename
+              //actualizo la dimension en la DB
+              let dimension = file.filename
+              await Image.update(
+                { name: dimension },
+                { where: { productId: id, type: 'dimension' } },
+              )
+              deleteImagesfromServer(file)
               break;
             case 'slider':
-              //si el usuario quiere modificar todas las imagenes creo un array al cual voy pusheando las imagenes que vienen del files
-              if (sliderUpdate == 'modifyAll') {
-                slider.push(file.filename)
-              }
-              var actualImage = ''
-              //si el usuario desea agregar una imagen, busco el nombre actual y le agrego el nombre de las nuevas imagenes
-              if (sliderUpdate == 'addImages') {
-                productImages.forEach(image => {
-                  if (image.type == 'slider') {
-                    actualImage = image.name
-                  }
-                })
-                slider = actualImage + ',' + file.filename
-              }
+              //añado las imagenes slider a la DB
+              await productFound.createImage({ 'product_id': id, 'type': file.fieldname, 'name': file.filename })
               break;
             case 'installSheet':
               installSheet = file.filename
+              await File.update(
+                { name: installSheet },
+                { where: { productId: id, type: 'installSheet' } },
+              )
+              deleteFilesfromServer(file)
               break;
             case 'dataSheet':
               dataSheet = file.filename
+              await File.update(
+                { name: dataSheet },
+                { where: { productId: id, type: 'dataSheet' } },
+              )
+              deleteFilesfromServer(file)
               break;
             default:
           }
         })
-        //actualizo la main image en la DB
-        if (mainImage != '') {
-          await Image.update(
-            { name: mainImage },
-            { where: { productId: id, type: 'main' } },
-          )
-        }
-        //actualizo la image dimendion en la DB
-        if (dimension != '') {
-          await Image.update(
-            { name: dimension },
-            { where: { productId: id, type: 'dimension' } },
-          )
-        }
-        // FIXME @gonza actualizo la image slider en la DB - AHORA SE GUARDA COMO UN ARRAY, POR LO QUE DEBEMOS MODIFICAR LA FORMA DE LEER LOS DATOS EN LOS EJS y modificar la DB
-        if (slider.length > 0) {
-          await Image.update(
-            { name: slider },
-            { where: { productId: id, type: 'slider' } },
-          )
-        }
 
-        // FIXME @gonza actualizo la dataSheet en la DB - validar que los files tengan definido dataSheet en DB
-        if (dataSheet != '') {
-          await File.update(
-            { name: dataSheet }, //asegurarse que en el ejs se llame de este modo
-            { where: { productId: id, type: 'dataSheet' } },
-          )
-        }
-        // FIXME @gonza actualizo la dataSheet en la DB - validar que los files tengan definido instalSheet en DB
-        if (installSheet != '') {
-          await File.update(
-            { name: installSheet }, //asegurarse que en el ejs se llame de este modo
-            { where: { productId: id, type: 'installSheet' } },
-          )
-        }
-        res.redirect('/product')
+        return res.redirect('/product')
+
       } catch (error) {
         console.log(error)
       }
     }
     /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la edicion del producto*/
-    files.forEach(e => {
-      fs.unlinkSync(e.path)
+    files.forEach(file => {
+      fs.unlinkSync(file.path)
     })
     const featuresList = await Feature.findAll() // listado de todas las features
     const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
     const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
-    res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound, featuresList, features, productImagePath, images })
+    images.forEach(image => {
+      addProductImagePath(image)
+    })
+    res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound, featuresList, features, images })
   },
 
   delete: async (req, res) => {
     let id = req.params.id
-    let productToDelete = await Product.findByPk(id, {
-
-    })
-
-
+    let productToDelete = await Product.findByPk(id)
     let featuresToDelete = await productToDelete.getFeatures()
     let imagesToDelete = await productToDelete.getImages()
     let filesToDelete = await productToDelete.getFiles()
-
-
 
     try {
       //borro las relaciones de tablas intermedias
@@ -324,7 +332,6 @@ const controller = {
       )
       /*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
 
-      const resourcesPath = path.join(__dirname, '../../public')
       // borra todas las imagenes asociadas al producto del servidor
       imagesToDelete.forEach(image => {
         fs.unlinkSync(path.join(resourcesPath, '/img/', image.name))
