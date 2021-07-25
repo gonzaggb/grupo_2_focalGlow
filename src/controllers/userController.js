@@ -88,8 +88,12 @@ const controller = {
   list: async (req, res) => {
     try {
       const userList = await User.findAll()
-      //FIXME la solución "rapida" fue pasar a la vista la ruta de la imagen de perfil, quizá podemos agregarla como un valor dentro del objeto
-      res.render('users/user-list.ejs', { userList, profileImagePath })
+
+      userList.forEach(user => {
+        user.dataValues.profileImg = profileImagePath + user.profileImg
+
+      });
+      res.render('users/user-list.ejs', { userList })
     } catch (error) {
       console.log(error)
     }
