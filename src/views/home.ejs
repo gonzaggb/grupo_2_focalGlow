@@ -69,19 +69,19 @@
       <section id="mas-vendidos">
         <h2 id="sale">SALE</h2>
         <div class="elementos">
-            <%for(i=0; i < 4; i++){%>
+            <%randomArray.forEach(element => {%>
               <div id="first-box" class="box">
-                <img src="<%=products[randomArray[i]].main_image%>" alt="<%=products[randomArray[i]].name%>">
-                <a href="/product/detail/<%=products[randomArray[i]].id%>">
+                <img src="<%=products[element].images[0].name%>" alt="<%=products[element].name%>">
+                <a href="/product/detail/<%=products[element].id%>">
                   <div class="capa">
                     <h2>
-                      <%= products[randomArray[i]].name %> <br><br>
-                        $<%= products[randomArray[i]].price %>
+                      <%= products[element].name %> <br><br>
+                        $<%= products[element].price %>
                     </h2>
                   </div>
                 </a>
               </div>
-              <%}%>
+              <%})%>
           </div>
 
       </section>

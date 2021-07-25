@@ -226,13 +226,13 @@ insert into users (id, first_name, last_name, email, password, address, phone, p
 insert into users (id, first_name, last_name, email, password, address, phone, profile_img, role) values (100, 'Skipper', 'Verity', 'sverity2r@apache.org', 'ZCcoHY225TZ', null, null, 'profile.jpg', null);
 /*Categories Data*/
 insert into categories (id, name, image_cover, image_home) values (1, 'Plafón', 'cover-plafon.jpg', 'home-plafon.png');
-insert into categories (id, name, image_cover, image_home) values (2, 'Apliques', 'cover-aplique.jpg', 'home-aplique.png');
-insert into categories (id, name, image_cover, image_home) values (3, 'Pie', 'cover-pie.jpg', 'home-pie.png');
-insert into categories (id, name, image_cover, image_home) values (4, 'Colgantes', 'cover-colgantes.jpg', 'home-colgantes.png');
-insert into categories (id, name, image_cover, image_home) values (5, 'Spots', 'cover-spots.jpg', 'home-spots.png');
-insert into categories (id, name, image_cover, image_home) values (6, 'Sistemas', 'cover-sistemas.jpg', 'home-sistemas.png');
-insert into categories (id, name, image_cover, image_home) values (7, 'Mesa', 'cover-mesa.jpg', 'home-mesa.png');
-insert into categories (id, name, image_cover, image_home) values (8, 'Exterior', 'cover-exterior.jpg', 'home-exterior.png');
+insert into categories (id, name, image_cover, image_home) values (2, 'Apliques', 'cover-aplique.jpg', 'home-aplique.jpg');
+insert into categories (id, name, image_cover, image_home) values (3, 'Pie', 'cover-pie.jpg', 'home-pie.jpg');
+insert into categories (id, name, image_cover, image_home) values (4, 'Colgantes', 'cover-colgantes.jpg', 'home-colgantes.jpg');
+insert into categories (id, name, image_cover, image_home) values (5, 'Spots', 'cover-spots.jpg', 'home-spots.jpg');
+insert into categories (id, name, image_cover, image_home) values (6, 'Sistemas', 'cover-sistemas.jpg', 'home-sistemas.jpg');
+insert into categories (id, name, image_cover, image_home) values (7, 'Mesa', 'cover-mesa.jpg', 'home-mesa.jpg');
+insert into categories (id, name, image_cover, image_home) values (8, 'Exterior', 'cover-exterior.jpg', 'home-exterior.jpg');
 
 
 /*products data */

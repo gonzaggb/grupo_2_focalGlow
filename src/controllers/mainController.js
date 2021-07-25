@@ -1,24 +1,45 @@
-const agregarProducto = require('../models/product')
-const categories = require('../models/category')
 const { Category } = require('../database/models')
+const { Product } = require('../database/models')
 const random = require('../helpers/utilities')
 const path = require('path')
+const product = require('../models/product')
+const pathImageCategories = '/img/categories/'
+const productImagePath = '/img/'
 
-
+function addProductImagePath(element) {
+  return element.dataValues.name = productImagePath + element.name
+}
 
 
 const SALEIMAGES = 4 // cantidad de imagenes que se muestran en la parte de SALE
 
 const controller = {
-  //FIXME CATEGORIE 
+
   home: async (req, res) => {
-    const randomArray = random.randomArray(SALEIMAGES, agregarProducto.findAll().length)
-    let products = agregarProducto.findAll()
+
+    const products = await Product.findAll({
+      include: [{ association: 'category' },
+      {
+        association: 'images',
+        where: { type: 'main' },
+      }]
+    })
+
+    products.forEach(product => {
+      product.images.forEach(image => {
+        addProductImagePath(image)
+      })
+    })
+
+    let productsQty = products.length
+    const randomArray = random.randomArray(SALEIMAGES, productsQty)
+
     let categoryList = await Category.findAll()
-    categoryList.forEach(element => {
-      element.dataValues.imageCover = path.join('/img/categories/', element.imageCover)
-      element.dataValues.imageHome = path.join('/img/categories/', element.imageHome)
+    categoryList.forEach(category => {
+      category.dataValues.imageCover = path.join(pathImageCategories, category.imageCover)
+      category.dataValues.imageHome = path.join(pathImageCategories, category.imageHome)
     });
+
 
     res.render('home.ejs', { products, categoryList, randomArray }) // paso al html el array
   },
