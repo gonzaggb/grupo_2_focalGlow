@@ -3,7 +3,7 @@ const files = require('../helpers/files')
 const { User } = require('../database/models')
 
 const validations = [
-    //FIXME
+
     body('firstName').notEmpty().withMessage('Debes poner tu nombre'),
     body('lastName').notEmpty().withMessage('Debes poner tu apellido'),
     body('email').notEmpty().withMessage('Debes poner tu email').bail().isEmail().withMessage("El email ingresado no es valido").bail()

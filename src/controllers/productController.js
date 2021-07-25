@@ -50,8 +50,6 @@ const controller = {
   detail: async (req, res) => {
     let id = req.params.id
     //busco el producto que viaja por parametro @gonza
-    //FIXME buscar explicación de porque busca category y category_id. 
-    // Para pasarle los similar products
 
     let product = await Product.findByPk(id, {
       include: [
