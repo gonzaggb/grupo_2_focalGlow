@@ -29,6 +29,8 @@ const controller = {
         where: { email }
       })
 
+
+
     req.session.logged = user.id
     if (remember) {
       res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
