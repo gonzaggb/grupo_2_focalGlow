@@ -31,8 +31,7 @@ const validationLoginUser = [
             }
 
             throw new Error('El usuario o la contraseña son inválidas')
-        })
-        .withMessage('El usuario o la contraseña son inválidas'),
+        }),
 ]
 
 module.exports = validationLoginUser
