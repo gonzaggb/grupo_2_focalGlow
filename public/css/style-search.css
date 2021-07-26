@@ -50,6 +50,7 @@
             align-items: center;
             flex-direction: row;
             gap: 6px;
+            border-top: 1px solid black;
 
     }
     .page-number{
@@ -57,9 +58,15 @@
         border: 0;
         
     }
-    .offset{
+   .offset{
         cursor: pointer;
-    }
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 0;
+        background-color: black;
+        color: white;
+    }    
     #order{
         align-items: flex-end;
     }   
@@ -130,6 +137,7 @@
             align-items: center;
             flex-direction: row;
             gap: 6px;
+            border-top: 1px solid black;
 
     }
     .page-number{
