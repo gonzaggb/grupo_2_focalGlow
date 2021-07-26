@@ -224,6 +224,8 @@ insert into users (id, first_name, last_name, email, password, address, phone, p
 insert into users (id, first_name, last_name, email, password, address, phone, profile_img, role) values (98, 'Waly', 'Vaggers', 'wvaggers2p@phpbb.com', '5Cw7sWX', null, null, 'profile.jpg', null);
 insert into users (id, first_name, last_name, email, password, address, phone, profile_img, role) values (99, 'Obadias', 'Clemendet', 'oclemendet2q@altervista.org', 'aXosRRg', '4536 Summerview Center', '928 740 2408', 'profile.jpg', null);
 insert into users (id, first_name, last_name, email, password, address, phone, profile_img, role) values (100, 'Skipper', 'Verity', 'sverity2r@apache.org', 'ZCcoHY225TZ', null, null, 'profile.jpg', null);
+
+
 /*Categories Data*/
 insert into categories (id, name, image_cover, image_home) values (1, 'Plafón', 'cover-plafon.jpg', 'home-plafon.png');
 insert into categories (id, name, image_cover, image_home) values (2, 'Apliques', 'cover-aplique.jpg', 'home-aplique.jpg');
@@ -233,7 +235,7 @@ insert into categories (id, name, image_cover, image_home) values (5, 'Spots', '
 insert into categories (id, name, image_cover, image_home) values (6, 'Lineales', 'cover-sistemas.jpg', 'home-sistemas.jpg');
 insert into categories (id, name, image_cover, image_home) values (7, 'Mesa', 'cover-mesa.jpg', 'home-mesa.jpg');
 insert into categories (id, name, image_cover, image_home) values (8, 'Exterior', 'cover-exterior.jpg', 'home-exterior.jpg');
-
+insert into categories (id, name, image_cover, image_home) values (9, 'Downlights', 'cover-exterior.jpg', 'home-exterior.jpg');
 
 /*products data */
 
@@ -251,6 +253,11 @@ INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (21
 INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (220,'Compar para Riel',30,4500,'La combinación de raíles electrificados como infraestructura y luminarias Compar permite iluminar la arquitectura de oficinas y los puestos de trabajo de manera diferenciada, ergonómica y al mismo tiempo extremadamente flexible. Se utiliza la luminotecnia de la amplia familia Compar también en su versión de downlights para railes electrificados. Con su cuerpo plano, también están indicados para espacios con una escasa altura del techo',5);
 INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (221,'Palco ',40,3000,'Luminaria de interiores orientable y con adaptador para instalación sobre raíl de tensión de red.\r\nLuminaria realizada en aluminio fundido a presión.\r\nLa doble orientabilidad de la luminaria permite una rotación de 360° alrededor del eje vertical y una inclinación de 90° respecto al plano horizontal.\r\nBloqueos mecánicos del direccionamiento tanto para la rotación alrededor del eje vertical como respecto al plano horizontal.',5);
 INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (222,'Le Perroquet',70,12000,'Cuerpo óptico en aluminio fundición a presión y material termoplástico. Elevado confort visual.',5);
+INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (223,'Tesis',40,15000,'Un arquetipo innovador en la iluminación de espacios exteriores Tesis, desde hace tiempo un elemento integral del programa de exteriores, ha alcanzado un nuevo nivel de rendimiento fruto de un desarrollo intensivo. La luminotecnia convence con un grado máximo de brillo y eficiencia. Ya sea en la variante redonda o cuadrada, el nuevo diseño del cuerpo, sensiblemente más plano gracias a la tecnología LED, posibilita un montaje sumamente cómodo',8);
+INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (224,'Site Bañador',20,20000,'Bañadores de pared de luz rasante para acentuar texturas\r\nen muros y fachadas Site acentúa la textura de los materiales de la arquitectura: el bañador de pared de luz tenue hace claramente visibles incluso las texturas más sutiles de la madera, el hormigón o los ladrillos y de superficies rugosas como piedra natural, lo que hace posible la acentuación\r\nexpresiva de elementos históricos o materiales regionales.',8);
+INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (225,'Tesis Cuadrado',20,18000,'Un arquetipo innovador en la iluminación de espacios exteriores Tesis, desde hace tiempo un elemento integral del programa de exteriores, ha alcanzado un nuevo nivel de rendimiento fruto de un desarrollo intensivo. La luminotecnia convence con un grado máximo de brillo y eficiencia. Ya sea en la variante redonda o cuadrada, el nuevo diseño del cuerpo, sensiblemente más plano gracias a la tecnología LED, posibilita un montaje sumamente cómodo ',8);
+INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (226,'Midipoll baliza',25,10000,'La suave luz rasante sobre el marcado perfil en forma de cruz convierte a Midipoll en un elemento estructurador del espacio Con Midipoll se presenta una baliza que responde al concepto del confort visual eficiente. La innovadora luminotecnia con una lente prismática especial proyecta eficazmente el flujo luminoso sobre la superficie de destino, sin deslumbramiento, para cumplir los requisitos Dark Sky. De este modo, el cielo nocturno permanece oscuro y las estrellas visibles.',8);
+INSERT INTO products (id,name,quantity,price,description,category_id) VALUES (227,'Castor baliza',20,18000,'La baliza Castor crea en espacios exteriores un vínculo visual entre trayectos y plazas: dos distribuciones luminosas y tres tamaños permiten un diseño de iluminación diferenciado empleando una sola familia de luminarias. Por medio de una lente anular, un innovador sistema óptico genera alternativamente una distribución luminosa con un ángulo de irradiación de 180° dirigida hacia un lado para la iluminación de trayectos o una distribución luminosa de 360° para superficies libres',8);
 
 
 
@@ -284,84 +291,59 @@ INSERT INTO files (id,name,type,product_id) VALUES (441,'dataSheet-1627267293631
 INSERT INTO files (id,name,type,product_id) VALUES (442,'installSheet-1627267293648.pdf','installSheet',221);
 INSERT INTO files (id,name,type,product_id) VALUES (443,'dataSheet-1627268726039.pdf','dataSheet',222);
 INSERT INTO files (id,name,type,product_id) VALUES (444,'installSheet-1627268726043.pdf','installSheet',222);
+INSERT INTO files (id,name,type,product_id) VALUES (445,'dataSheet-1627336731370.pdf','dataSheet',223);
+INSERT INTO files (id,name,type,product_id) VALUES (446,'installSheet-1627336731376.pdf','installSheet',223);
+INSERT INTO files (id,name,type,product_id) VALUES (447,'dataSheet-1627337421582.pdf','dataSheet',224);
+INSERT INTO files (id,name,type,product_id) VALUES (448,'installSheet-1627337421597.pdf','installSheet',224);
+INSERT INTO files (id,name,type,product_id) VALUES (449,'dataSheet-1627337947273.pdf','dataSheet',225);
+INSERT INTO files (id,name,type,product_id) VALUES (450,'installSheet-1627337947288.pdf','installSheet',225);
+INSERT INTO files (id,name,type,product_id) VALUES (451,'installSheet-1627338316733.pdf','installSheet',226);
+INSERT INTO files (id,name,type,product_id) VALUES (452,'dataSheet-1627338316725.pdf','dataSheet',226);
+INSERT INTO files (id,name,type,product_id) VALUES (453,'dataSheet-1627338782790.pdf','dataSheet',227);
+INSERT INTO files (id,name,type,product_id) VALUES (454,'installSheet-1627338782796.pdf','installSheet',227);
+
 
 /*images data*/
 
-INSERT INTO images (id,name,type,product_id) VALUES (1056,'main-1627258894008.jpg','main',209);
-INSERT INTO images (id,name,type,product_id) VALUES (1057,'slider-1627258734083.jpg','slider',209);
-INSERT INTO images (id,name,type,product_id) VALUES (1058,'dimension-1627258734018.png','dimension',209);
-INSERT INTO images (id,name,type,product_id) VALUES (1059,'slider-1627258734023.jpg','slider',209);
-INSERT INTO images (id,name,type,product_id) VALUES (1060,'slider-1627258734042.jpg','slider',209);
-INSERT INTO images (id,name,type,product_id) VALUES (1061,'slider-1627258734067.jpg','slider',209);
-INSERT INTO images (id,name,type,product_id) VALUES (1062,'main-1627259404719.jpg','main',210);
-INSERT INTO images (id,name,type,product_id) VALUES (1063,'slider-1627259404750.jpg','slider',210);
-INSERT INTO images (id,name,type,product_id) VALUES (1064,'dimension-1627259404725.png','dimension',210);
-INSERT INTO images (id,name,type,product_id) VALUES (1065,'slider-1627259404728.jpg','slider',210);
-INSERT INTO images (id,name,type,product_id) VALUES (1066,'slider-1627259404767.jpg','slider',210);
-INSERT INTO images (id,name,type,product_id) VALUES (1067,'main-1627259852863.jpg','main',211);
-INSERT INTO images (id,name,type,product_id) VALUES (1068,'dimension-1627259852867.png','dimension',211);
-INSERT INTO images (id,name,type,product_id) VALUES (1069,'slider-1627259852871.jpg','slider',211);
-INSERT INTO images (id,name,type,product_id) VALUES (1070,'slider-1627259852884.jpg','slider',211);
-INSERT INTO images (id,name,type,product_id) VALUES (1071,'slider-1627259852892.jpg','slider',211);
-INSERT INTO images (id,name,type,product_id) VALUES (1072,'main-1627261291516.jpg','main',212);
-INSERT INTO images (id,name,type,product_id) VALUES (1073,'dimension-1627261291519.png','dimension',212);
-INSERT INTO images (id,name,type,product_id) VALUES (1074,'slider-1627261291522.jpg','slider',212);
-INSERT INTO images (id,name,type,product_id) VALUES (1075,'slider-1627261291533.jpg','slider',212);
-INSERT INTO images (id,name,type,product_id) VALUES (1076,'slider-1627261291542.jpg','slider',212);
-INSERT INTO images (id,name,type,product_id) VALUES (1077,'slider-1627261291550.jpg','slider',212);
-INSERT INTO images (id,name,type,product_id) VALUES (1078,'main-1627261738904.jpg','main',213);
-INSERT INTO images (id,name,type,product_id) VALUES (1079,'dimension-1627261738907.png','dimension',213);
-INSERT INTO images (id,name,type,product_id) VALUES (1080,'slider-1627261738910.jpg','slider',213);
-INSERT INTO images (id,name,type,product_id) VALUES (1081,'slider-1627261738949.jpg','slider',213);
-INSERT INTO images (id,name,type,product_id) VALUES (1082,'slider-1627261738955.jpg','slider',213);
-INSERT INTO images (id,name,type,product_id) VALUES (1083,'slider-1627261738992.jpg','slider',213);
-INSERT INTO images (id,name,type,product_id) VALUES (1084,'main-1627262346203.jpg','main',214);
-INSERT INTO images (id,name,type,product_id) VALUES (1085,'slider-1627262346210.jpg','slider',214);
-INSERT INTO images (id,name,type,product_id) VALUES (1086,'dimension-1627262346207.png','dimension',214);
-INSERT INTO images (id,name,type,product_id) VALUES (1087,'slider-1627262346225.jpg','slider',214);
-INSERT INTO images (id,name,type,product_id) VALUES (1088,'slider-1627262346236.jpg','slider',214);
-INSERT INTO images (id,name,type,product_id) VALUES (1089,'slider-1627262346245.jpg','slider',214);
-INSERT INTO images (id,name,type,product_id) VALUES (1090,'main-1627263618070.jpg','main',215);
-INSERT INTO images (id,name,type,product_id) VALUES (1091,'dimension-1627263618076.png','dimension',215);
-INSERT INTO images (id,name,type,product_id) VALUES (1092,'slider-1627263618079.jpg','slider',215);
-INSERT INTO images (id,name,type,product_id) VALUES (1093,'slider-1627263618094.jpg','slider',215);
-INSERT INTO images (id,name,type,product_id) VALUES (1094,'slider-1627263618134.jpg','slider',215);
-INSERT INTO images (id,name,type,product_id) VALUES (1095,'main-1627264584425.jpg','main',216);
-INSERT INTO images (id,name,type,product_id) VALUES (1096,'dimension-1627264584429.png','dimension',216);
-INSERT INTO images (id,name,type,product_id) VALUES (1097,'slider-1627264584433.jpg','slider',216);
-INSERT INTO images (id,name,type,product_id) VALUES (1098,'slider-1627264584472.jpg','slider',216);
-INSERT INTO images (id,name,type,product_id) VALUES (1099,'slider-1627264584452.jpg','slider',216);
-INSERT INTO images (id,name,type,product_id) VALUES (1100,'main-1627265294814.jpg','main',217);
-INSERT INTO images (id,name,type,product_id) VALUES (1101,'dimension-1627265294817.png','dimension',217);
-INSERT INTO images (id,name,type,product_id) VALUES (1102,'slider-1627265294820.jpg','slider',217);
-INSERT INTO images (id,name,type,product_id) VALUES (1103,'slider-1627265294832.jpg','slider',217);
-INSERT INTO images (id,name,type,product_id) VALUES (1104,'slider-1627265294849.jpg','slider',217);
-INSERT INTO images (id,name,type,product_id) VALUES (1105,'slider-1627265294861.jpg','slider',217);
-INSERT INTO images (id,name,type,product_id) VALUES (1106,'main-1627265637369.jpg','main',218);
-INSERT INTO images (id,name,type,product_id) VALUES (1107,'slider-1627265637390.jpg','slider',218);
-INSERT INTO images (id,name,type,product_id) VALUES (1108,'dimension-1627265637373.png','dimension',218);
-INSERT INTO images (id,name,type,product_id) VALUES (1109,'slider-1627265637398.jpg','slider',218);
-INSERT INTO images (id,name,type,product_id) VALUES (1110,'slider-1627265637376.jpg','slider',218);
-INSERT INTO images (id,name,type,product_id) VALUES (1111,'main-1627266245103.jpg','main',219);
-INSERT INTO images (id,name,type,product_id) VALUES (1112,'slider-1627266245159.jpg','slider',219);
-INSERT INTO images (id,name,type,product_id) VALUES (1113,'dimension-1627266245106.png','dimension',219);
-INSERT INTO images (id,name,type,product_id) VALUES (1114,'slider-1627266245111.jpg','slider',219);
-INSERT INTO images (id,name,type,product_id) VALUES (1115,'slider-1627266245125.jpg','slider',219);
-INSERT INTO images (id,name,type,product_id) VALUES (1116,'slider-1627266245153.jpg','slider',219);
-INSERT INTO images (id,name,type,product_id) VALUES (1117,'main-1627266693143.jpg','main',220);
-INSERT INTO images (id,name,type,product_id) VALUES (1118,'dimension-1627266693146.png','dimension',220);
-INSERT INTO images (id,name,type,product_id) VALUES (1119,'slider-1627266693152.jpg','slider',220);
-INSERT INTO images (id,name,type,product_id) VALUES (1120,'slider-1627266693157.jpg','slider',220);
-INSERT INTO images (id,name,type,product_id) VALUES (1121,'slider-1627266693177.jpg','slider',220);
-INSERT INTO images (id,name,type,product_id) VALUES (1122,'dimension-1627267293579.jpg','dimension',221);
-INSERT INTO images (id,name,type,product_id) VALUES (1123,'main-1627267351374.jpg','main',221);
-INSERT INTO images (id,name,type,product_id) VALUES (1124,'slider-1627267293588.jpg','slider',221);
-INSERT INTO images (id,name,type,product_id) VALUES (1125,'slider-1627267293584.jpg','slider',221);
-INSERT INTO images (id,name,type,product_id) VALUES (1126,'slider-1627267293596.jpg','slider',221);
-INSERT INTO images (id,name,type,product_id) VALUES (1127,'main-1627268726020.jpg','main',222);
-INSERT INTO images (id,name,type,product_id) VALUES (1128,'dimension-1627268726023.jpg','dimension',222);
-INSERT INTO images (id,name,type,product_id) VALUES (1129,'slider-1627268726026.jpg','slider',222);
-INSERT INTO images (id,name,type,product_id) VALUES (1130,'slider-1627268726032.jpg','slider',222);
+INSERT INTO images (id,name,type,product_id) VALUES (417,'dataSheet-1627258734095.pdf','dataSheet',209);
+INSERT INTO images (id,name,type,product_id) VALUES (418,'installSheet-1627258734105.pdf','installSheet',209);
+INSERT INTO images (id,name,type,product_id) VALUES (419,'dataSheet-1627259404782.pdf','dataSheet',210);
+INSERT INTO images (id,name,type,product_id) VALUES (420,'installSheet-1627259404789.pdf','installSheet',210);
+INSERT INTO images (id,name,type,product_id) VALUES (421,'dataSheet-1627259852902.pdf','dataSheet',211);
+INSERT INTO images (id,name,type,product_id) VALUES (422,'installSheet-1627259852910.pdf','installSheet',211);
+INSERT INTO images (id,name,type,product_id) VALUES (423,'dataSheet-1627261291562.pdf','dataSheet',212);
+INSERT INTO images (id,name,type,product_id) VALUES (424,'installSheet-1627261291572.pdf','installSheet',212);
+INSERT INTO images (id,name,type,product_id) VALUES (425,'dataSheet-1627261739011.pdf','dataSheet',213);
+INSERT INTO images (id,name,type,product_id) VALUES (426,'installSheet-1627261739034.pdf','installSheet',213);
+INSERT INTO images (id,name,type,product_id) VALUES (427,'dataSheet-1627262346253.pdf','dataSheet',214);
+INSERT INTO images (id,name,type,product_id) VALUES (428,'installSheet-1627262346260.pdf','installSheet',214);
+INSERT INTO images (id,name,type,product_id) VALUES (429,'dataSheet-1627263618165.pdf','dataSheet',215);
+INSERT INTO images (id,name,type,product_id) VALUES (430,'installSheet-1627263618179.pdf','installSheet',215);
+INSERT INTO images (id,name,type,product_id) VALUES (431,'dataSheet-1627264584482.pdf','dataSheet',216);
+INSERT INTO images (id,name,type,product_id) VALUES (432,'installSheet-1627264584498.pdf','installSheet',216);
+INSERT INTO images (id,name,type,product_id) VALUES (433,'dataSheet-1627265294870.pdf','dataSheet',217);
+INSERT INTO images (id,name,type,product_id) VALUES (434,'installSheet-1627265294877.pdf','installSheet',217);
+INSERT INTO images (id,name,type,product_id) VALUES (435,'dataSheet-1627265637408.pdf','dataSheet',218);
+INSERT INTO images (id,name,type,product_id) VALUES (436,'installSheet-1627265637415.pdf','installSheet',218);
+INSERT INTO images (id,name,type,product_id) VALUES (437,'dataSheet-1627266245167.pdf','dataSheet',219);
+INSERT INTO images (id,name,type,product_id) VALUES (438,'installSheet-1627266245174.pdf','installSheet',219);
+INSERT INTO images (id,name,type,product_id) VALUES (439,'dataSheet-1627266693206.pdf','dataSheet',220);
+INSERT INTO images (id,name,type,product_id) VALUES (440,'installSheet-1627266693212.pdf','installSheet',220);
+INSERT INTO images (id,name,type,product_id) VALUES (441,'dataSheet-1627267293631.pdf','dataSheet',221);
+INSERT INTO images (id,name,type,product_id) VALUES (442,'installSheet-1627267293648.pdf','installSheet',221);
+INSERT INTO images (id,name,type,product_id) VALUES (443,'dataSheet-1627268726039.pdf','dataSheet',222);
+INSERT INTO images (id,name,type,product_id) VALUES (444,'installSheet-1627268726043.pdf','installSheet',222);
+INSERT INTO images (id,name,type,product_id) VALUES (445,'dataSheet-1627336731370.pdf','dataSheet',223);
+INSERT INTO images (id,name,type,product_id) VALUES (446,'installSheet-1627336731376.pdf','installSheet',223);
+INSERT INTO images (id,name,type,product_id) VALUES (447,'dataSheet-1627337421582.pdf','dataSheet',224);
+INSERT INTO images (id,name,type,product_id) VALUES (448,'installSheet-1627337421597.pdf','installSheet',224);
+INSERT INTO images (id,name,type,product_id) VALUES (449,'dataSheet-1627337947273.pdf','dataSheet',225);
+INSERT INTO images (id,name,type,product_id) VALUES (450,'installSheet-1627337947288.pdf','installSheet',225);
+INSERT INTO images (id,name,type,product_id) VALUES (451,'installSheet-1627338316733.pdf','installSheet',226);
+INSERT INTO images (id,name,type,product_id) VALUES (452,'dataSheet-1627338316725.pdf','dataSheet',226);
+INSERT INTO images (id,name,type,product_id) VALUES (453,'dataSheet-1627338782790.pdf','dataSheet',227);
+INSERT INTO images (id,name,type,product_id) VALUES (454,'installSheet-1627338782796.pdf','installSheet',227);
+
 
 
 /*product_feature data*/
@@ -549,5 +531,57 @@ INSERT INTO product_feature (id,product_id,feature_id) VALUES (5190,222,6);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (5191,222,7);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (5192,222,41);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (5193,222,45);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5194,223,9);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5195,223,2);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5196,223,4);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5197,223,117);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5198,223,13);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5199,223,14);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5200,223,15);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5201,223,5);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5202,223,7);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5203,223,22);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5204,223,28);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5205,223,34);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5206,224,9);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5207,224,2);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5208,224,4);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5209,224,117);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5210,224,16);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5211,224,5);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5212,224,6);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5213,224,7);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5214,224,40);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5215,225,9);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5216,225,2);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5217,225,4);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5218,225,117);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5219,225,13);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5220,225,16);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5221,225,5);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5222,225,7);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5223,225,22);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5224,225,28);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5225,225,34);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5226,225,40);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5227,226,9);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5228,226,2);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5229,226,4);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5230,226,117);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5231,226,15);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5232,226,5);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5233,226,24);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5234,226,32);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5235,226,40);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5236,227,9);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5237,227,2);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5238,227,4);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5239,227,117);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5240,227,15);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5241,227,5);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5242,227,7);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5243,227,24);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (5244,227,32);
+
 
 
