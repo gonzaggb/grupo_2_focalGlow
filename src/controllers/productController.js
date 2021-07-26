@@ -178,7 +178,12 @@ const controller = {
     const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
     const category = await productFound.getCategory()
     const featuresList = await Feature.findAll() // listado de todas las features
-    res.render('products/product-edit.ejs', { productFound, category, images, features, featuresList })
+    const files = await productFound.getFiles()
+    files.forEach(file=>{
+      addProductFilePath(file)
+    })
+    console.log(files)
+    res.render('products/product-edit.ejs', { productFound, category, images, features,files, featuresList })
 
   },
 
