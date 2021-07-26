@@ -232,20 +232,21 @@ const controller = {
         //Funciones para que borren las imagenes o pdfs viejos del servidor
         function deleteImagesfromServer(file) {
           productFoundImages.forEach(image => {
-            if (image.type = file.fieldname) {
+            if (image.type == file.fieldname) {
               fs.unlinkSync(path.join(resourcesPath, image.name))
             }
           })
         }
         function deleteFilesfromServer(file) {
           productFoundFiles.forEach(pdfFile => {
-            if (pdfFile.type = file.fieldname) {
+            if (pdfFile.type == file.fieldname) {
               fs.unlinkSync(path.join(resourcesPath, pdfFile.name))
             }
           })
         }
 
         //recorro lo archivos que viajan en el update y los guardo en las variables creadas previamente según corresponda
+
         files.forEach(async file => {
           switch (file.fieldname) {
             case 'main':
@@ -295,19 +296,19 @@ const controller = {
       } catch (error) {
         console.log(error)
       }
+    } else {
+      /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la edicion del producto*/
+      files.forEach(file => {
+        fs.unlinkSync(file.path)
+      })
+      const featuresList = await Feature.findAll() // listado de todas las features
+      const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
+      const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
+      images.forEach(image => {
+        addProductImagePath(image)
+      })
+      res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound, featuresList, features, images })
     }
-    /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la edicion del producto*/
-    files.forEach(file => {
-      fs.unlinkSync(file.path)
-    })
-    const featuresList = await Feature.findAll() // listado de todas las features
-    const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
-    const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
-    images.forEach(image => {
-      addProductImagePath(image)
-    })
-    
-    res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound, featuresList, features, images })
   },
 
   delete: async (req, res) => {

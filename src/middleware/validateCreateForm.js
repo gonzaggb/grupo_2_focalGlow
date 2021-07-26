@@ -10,16 +10,14 @@ const validateCreateForm = [
     .bail()
     .isLength({ min: 5 })
     .withMessage('Por favor un nombre más largo'),
-    body('name').custom(async(value, {req})=>{
-      const product = await Product.findOne(
-        {where: {name: req.body.name}}
-      )
-      if(product){
-        return Promise.reject('El nombre del producto ya se encuentra en la lista')
-      }
-
-
-    }),
+  body('name').custom(async (value, { req }) => {
+    const product = await Product.findOne(
+      { where: { name: req.body.name } }
+    )
+    if (product) {
+      return Promise.reject('El nombre del producto ya se encuentra en la lista')
+    }
+  }),
 
   body('quantity')
     .notEmpty()

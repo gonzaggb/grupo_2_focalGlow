@@ -115,17 +115,18 @@
                                 <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
                             </span><br>
                             <div class="first-">
+                                <label class="" for="optic">Potencia: </label> 
                                 <select multiple name="power" class="select">
-                                    <%featuresList.forEach(power=> {%>
-                                        <%if(power.type=='power' ){%>
-                                            <option value="<%=power.id%>" <%features.forEach(oldFeature=>{%>
-                                                <%=oldFeature.type=='power' && power.id==oldFeature.id ? 'selected' : ''
-                                                    %>
-                                                    <%})%>
-                                                        ><%=power.name%>
-                                            </option>
-                                            <%}})%>
-                                </select>
+                                    <%featuresList.forEach(power => {%>
+                                        <%if(power.type == 'power'){%>
+                                            <option  value="<%=power.id%>"
+                                            <%features.forEach(oldFeature =>{%>
+                                                <%=oldFeature.type == 'power' && power.id == oldFeature.id ? 'selected' : ''%>
+                                            <%})%>
+                                            ><%=power.name%></option>
+                                        <%}})%>                                   
+                                    </select>
+                                                <span> Apretando CTRL puede seleccionar más de una</span>
 
                             </div>
                             <span class="error_msg">

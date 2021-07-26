@@ -1,7 +1,6 @@
 const { body } = require('express-validator')
 const bcrypt = require('bcryptjs')
 const { User } = require('../database/models')
-const userModel = require('../models/user')
 
 const validationLoginUser = [
 
@@ -32,8 +31,7 @@ const validationLoginUser = [
             }
 
             throw new Error('El usuario o la contraseña son inválidas')
-        })
-        .withMessage('El usuario o la contraseña son inválidas'),
+        }),
 ]
 
 module.exports = validationLoginUser
