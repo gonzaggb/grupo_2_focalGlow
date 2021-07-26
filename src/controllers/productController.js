@@ -178,12 +178,11 @@ const controller = {
     const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
     const category = await productFound.getCategory()
     const featuresList = await Feature.findAll() // listado de todas las features
-    const files = await productFound.getFiles()
-    files.forEach(file=>{
+    const filesPdf = await productFound.getFiles()
+    filesPdf.forEach(file=>{
       addProductFilePath(file)
     })
-    console.log(files)
-    res.render('products/product-edit.ejs', { productFound, category, images, features,files, featuresList })
+    res.render('products/product-edit.ejs', { productFound, category, images, features,filesPdf, featuresList })
 
   },
 
@@ -304,10 +303,12 @@ const controller = {
       const featuresList = await Feature.findAll() // listado de todas las features
       const features = await productFound.getFeatures() // traigo las features por magic method del product encontrado
       const images = await productFound.getImages() // traigo las imagenes por magic method del product encontrado
+      const filesPdf = await productFound.getFiles() // traigo las imagenes por magic method del product encontrado
+
       images.forEach(image => {
         addProductImagePath(image)
       })
-      res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound, featuresList, features, images })
+      res.render('products/product-edit.ejs', { errors: errors.mapped(), productFound, featuresList, features, images, filesPdf })
     }
   },
 
