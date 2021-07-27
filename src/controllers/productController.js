@@ -31,7 +31,7 @@ const controller = {
      
     })
     const products = await Product.findAll({
-      limit: 10,
+      limit: 15,
       offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
       include: [{ association: 'category' },
       {
@@ -39,7 +39,7 @@ const controller = {
         where: { type: 'main' },
       }],
       order: [
-        ['category', 'name']
+        ['id']
       ]
     })
 
@@ -190,6 +190,7 @@ const controller = {
     filesPdf.forEach(file=>{
       addProductFilePath(file)
     })
+    console.log(images)
     res.render('products/product-edit.ejs', { productFound, category, images, features,filesPdf, featuresList })
 
   },
