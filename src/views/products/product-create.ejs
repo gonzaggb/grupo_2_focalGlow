@@ -183,8 +183,20 @@
                                 </div><br>
                                 <div class="imagen-input">
                                     <label class="title" for="dimension">Dimensiones del Producto: </label><br>
-                                    <input type="file" name="dimension" accept=".jpg , .png"><br>
+                                    <input type="file" name="dimension" onchange="loadFiles(event)" accept=".jpg , .png"><br>
                                     <span class="error_msg"><%=locals.errors && errors.dimension ? errors.dimension.msg : '' %></span>
+                                    <br>
+                                    <p>Preview:</p>
+                                    <img id="outpu" />
+                                    <script>
+                                        var loadFiles = function (event) {
+                                            var output = document.getElementById('outpu');
+                                            output.src = URL.createObjectURL(event.target.files[0]);
+                                            output.onload = function () {
+                                                URL.revokeObjectURL(output.src) // free memory
+                                            }
+                                        };
+                                    </script>
                                 </div><br>
                             </div>
                             <div class="imagenes">
