@@ -42,6 +42,8 @@ const controller = {
 
     res.render('home.ejs', { products, categoryList, randomArray }) // paso al html el array
   },
+  
+
   checkout: (req, res) => {
     //Esto esta aca como para tener unos datos que enviar al checkout. NO va aca.
     let productCheckout = [
