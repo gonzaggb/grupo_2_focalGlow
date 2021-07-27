@@ -16,19 +16,18 @@ const controller = {
 
     category.dataValues.imageCover = categoryImagePath + category.imageCover
 
-    let product = await Product.findAll({
+    let products = await Product.findAll({
       where: { categoryId: category.id },
-      include: [{ association: 'images' }]
-
+      include: [{ association: 'images', where: {type: 'main'} }]
     })
 
-    product.forEach(e => {
-      e.images.forEach(e => {
-        e.dataValues.name = productImagePath + e.name
+    products.forEach(product => {
+      product.images.forEach(image => {
+        image.dataValues.name = productImagePath + image.name
       })
     })
 
-    res.render('category.ejs', { category, product })
+    res.render('category.ejs', { category, products })
   },
 
   list: async (req, res) => {
