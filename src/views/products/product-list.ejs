@@ -14,7 +14,7 @@
 					<a href="/product/add"><button id="product-create" class="add-product">Agregar producto</button></a>
 				</div>
 				<form action="/product" method="get">
-					<h4 class='form-lista-productos'>Cantidad de productos : <%= products.length %>
+					<h4 class='form-lista-productos'>Cantidad de productos : <%= productLenght.length %>
 					</h4>
 
 
@@ -71,7 +71,7 @@
 					</table>
 					<div class="page">
 						<% for(let j=0; j < nextButton; j++) {%>
-							<button type="submit" name="offset" class="offset" value="<%= 12*j %>">
+							<button type="submit" name="offset" class="offset" value="<%= 10*j %>">
 								<%=j+1%>
 							</button>
 
