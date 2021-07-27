@@ -115,18 +115,19 @@
                                 <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="optic">Potencia: </label> 
+                                <label class="" for="optic">Potencia: </label>
                                 <select multiple name="power" class="select">
-                                    <%featuresList.forEach(power => {%>
-                                        <%if(power.type == 'power'){%>
-                                            <option  value="<%=power.id%>"
-                                            <%features.forEach(oldFeature =>{%>
-                                                <%=oldFeature.type == 'power' && power.id == oldFeature.id ? 'selected' : ''%>
-                                            <%})%>
-                                            ><%=power.name%></option>
-                                        <%}})%>                                   
-                                    </select>
-                                                <span> Apretando CTRL puede seleccionar más de una</span>
+                                    <%featuresList.forEach(power=> {%>
+                                        <%if(power.type=='power' ){%>
+                                            <option value="<%=power.id%>" <%features.forEach(oldFeature=>{%>
+                                                <%=oldFeature.type=='power' && power.id==oldFeature.id ? 'selected' : ''
+                                                    %>
+                                                    <%})%>
+                                                        ><%=power.name%>
+                                            </option>
+                                            <%}})%>
+                                </select>
+                                <span> Apretando CTRL puede seleccionar más de una</span>
 
                             </div>
                             <span class="error_msg">
@@ -211,17 +212,23 @@
                                     <span>Agregar una imagen al slider</span>
                                     <input class="radio" type="radio" name="sliderUpdate" value="addImages">
                                     <br>
-                                    <%images.forEach(image=> {
-                                        if (image.type == 'slider') { %>
-                                        <img class="image-slider" src="<%=image.name%>" alt="">
-                                        <%}%>
-                                            <% }) %>
+                                    <section class="main-slider-mini">
+                                        <div class="slider-mini">
+                                            <ul>
+                                                <%images.forEach(image=> {%>
 
-                                                <input multiple type="file" name="slider" accept=".jpg , .png">
-                                                <br>
-                                                <span class="error_msg">
-                                                    <%=locals.errors && errors.slider ? errors.slider.msg : '' %>
-                                                </span>
+                                                    <% if (image.type=='slider' ) { %>
+                                                        <li><img class="image-slider" src="<%=image.name%>" alt=""></li>
+                                                        <%}%>
+                                                            <% }) %>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                    <input multiple type="file" name="slider" accept=".jpg , .png">
+                                    <br>
+                                    <span class="error_msg">
+                                        <%=locals.errors && errors.slider ? errors.slider.msg : '' %>
+                                    </span>
 
                                 </div><br>
                             </div>

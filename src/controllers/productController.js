@@ -26,16 +26,24 @@ function addProductFilePath(element) {
 
 const controller = {
   list: async (req, res) => {
+    const offset=req.query.offset
+    const productLenght = await Product.findAll({
+     
+    })
     const products = await Product.findAll({
+      limit: 15,
+      offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
       include: [{ association: 'category' },
       {
         association: 'images',
         where: { type: 'main' },
       }],
       order: [
-        ['category', 'name']
+        ['id']
       ]
     })
+
+
 
     //AGREGO RUTA A LAS IMAGENES
     products.forEach(product => {
@@ -43,8 +51,8 @@ const controller = {
         addProductImagePath(image)
       })
     })
-
-    res.render('products/product-list.ejs', { products })
+    const nextButton = parseInt(productLenght.length / 10)
+    res.render('products/product-list.ejs', {productLenght, products, nextButton})
   },
 
   detail: async (req, res) => {
@@ -182,6 +190,7 @@ const controller = {
     filesPdf.forEach(file=>{
       addProductFilePath(file)
     })
+    console.log(images)
     res.render('products/product-edit.ejs', { productFound, category, images, features,filesPdf, featuresList })
 
   },

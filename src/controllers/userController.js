@@ -86,14 +86,20 @@ const controller = {
 
 
   list: async (req, res) => {
+    const offset = req.query.offset
     try {
-      const userList = await User.findAll()
+      const userLength = await User.findAll()
+      const userList = await User.findAll({
+        limit: 10,
+        offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
+      })
 
       userList.forEach(user => {
         user.dataValues.profileImg = profileImagePath + user.profileImg
 
       });
-      res.render('users/user-list.ejs', { userList })
+      const nextButton = parseInt(userLength.length / 10)
+      res.render('users/user-list.ejs', { userList, nextButton })
     } catch (error) {
       console.log(error)
     }
