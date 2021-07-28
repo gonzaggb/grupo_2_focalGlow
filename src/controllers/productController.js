@@ -31,7 +31,7 @@ const controller = {
      
     })
     const products = await Product.findAll({
-      limit: 15,
+      limit: 10,
       offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
       include: [{ association: 'category' },
       {
