@@ -140,6 +140,12 @@ const controller = {
 
   },
 
+  editPassword: async (req, res) => {
+    const id = req.params.id
+    const userToEdit = await User.findByPk(id)
+    res.render('users/user-edit-password.ejs', { userToEdit })
+  },
+
 
   update: async (req, res) => {
     const { id } = req.params
@@ -153,12 +159,12 @@ const controller = {
       return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
     }
     //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
-    let { firstName, lastName, email, password, phone, address, role } = req.body
+    let { firstName, lastName, email, phone, address } = req.body
     const { file } = req
 
 
-    //Si el usuario no lleno el campo password que me tome la anterior, sino que hashee la nueva contraseña
-    password == '' ? password = userToEdit.password : password = bcrypt.hashSync(password, 10)
+    //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
+    password == userToEdit.password
 
     const userUpdate = {
       firstName,

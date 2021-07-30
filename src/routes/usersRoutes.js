@@ -39,6 +39,7 @@ router.post('/register', uploadRegister.single('profileImg'), validations, userC
 // ruta de profile
 router.get('/:id/detail', authMiddleware, profileAccessMiddleware, userController.profile)
 router.get('/:id/edit', authMiddleware, profileAccessMiddleware, userController.edit)
+router.get('/:id/editPassword', authMiddleware, profileAccessMiddleware, userController.editPassword)
 router.put('/:id/edit', uploadRegister.single('profileImg'), validateEditUserMiddleware, profileAccessMiddleware, userController.update)
 
 //elimina usuario de la lista
