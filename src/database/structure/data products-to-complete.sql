@@ -238,7 +238,7 @@ INSERT INTO categories (id, NAME, image_cover, image_home) VALUES (5, 'Spots', '
 INSERT INTO categories (id, NAME, image_cover, image_home) VALUES (6, 'Lineales', 'cover-sistemas.jpg', 'home-sistemas.jpg');
 INSERT INTO categories (id, NAME, image_cover, image_home) VALUES (7, 'Mesa', 'cover-mesa.jpg', 'home-mesa.jpg');
 INSERT INTO categories (id, NAME, image_cover, image_home) VALUES (8, 'Exterior', 'cover-exterior.jpg', 'home-exterior.jpg');
-INSERT INTO categories (id, NAME, image_cover, image_home) VALUES (9, 'Downlights', 'cover-exterior.jpg', 'home-exterior.jpg');
+INSERT INTO categories (id, NAME, image_cover, image_home) VALUES (9, 'Downlights', 'cover-downlight.jpg', 'home-downlight.jpg');
 
 /*products data */
 
