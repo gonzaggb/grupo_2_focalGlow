@@ -224,10 +224,12 @@ INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, p
 INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (98, 'Waly', 'Vaggers', 'wvaggers2p@phpbb.com', '5Cw7sWX', NULL, NULL, 'profile.jpg', NULL);
 INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (99, 'Obadias', 'Clemendet', 'oclemendet2q@altervista.org', 'aXosRRg', '4536 Summerview Center', '928 740 2408', 'profile.jpg', NULL);
 INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (100, 'Skipper', 'Verity', 'sverity2r@apache.org', 'ZCcoHY225TZ', NULL, NULL, 'profile.jpg', NULL);
-INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (101, 'MARTINIANO', 'LEGUIZAMON', 'martinianol@outlook.com', '$2a$10$FpF7NtiWDzz9mYAv7tBluuXsvAsU8vSqsLifi4pvFnK00rstu/0Mu', NULL, NULL, 'profile.jpg','admin');
+INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (101, 'MARTINIANO', 'LEGUIZAMON', 'mars@focalglow.com', '$2a$10$FpF7NtiWDzz9mYAv7tBluuXsvAsU8vSqsLifi4pvFnK00rstu/0Mu', NULL, NULL, 'profile.jpg','admin');
 INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (102, 'Gonzalo', 'Zevallos', 'gonza@dh.com', '$2a$10$FpF7NtiWDzz9mYAv7tBluuXsvAsU8vSqsLifi4pvFnK00rstu/0Mu', NULL, NULL, 'GonzaZ.jpg','admin');
 INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (103, 'pol', 'Barchetta', 'pol@dh.com', '$2a$10$FpF7NtiWDzz9mYAv7tBluuXsvAsU8vSqsLifi4pvFnK00rstu/0Mu', NULL, NULL, 'pol.jpg','admin');
-
+INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (104, 'Federico', 'Segura', 'fedu@focalglow.com', '$2a$10$FpF7NtiWDzz9mYAv7tBluuXsvAsU8vSqsLifi4pvFnK00rstu/0Mu', NULL, NULL, 'Fedu.jpg','admin');
+INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (105, 'Gonza', 'Gato Baigorria', 'gonza@focalglow.com', '$2a$10$FpF7NtiWDzz9mYAv7tBluuXsvAsU8vSqsLifi4pvFnK00rstu/0Mu', NULL, NULL, 'Gonza.jpg','admin');
+INSERT INTO users (id, first_name, last_name, email, PASSWORD, address, phone, profile_img, ROLE) VALUES (106, 'Pablo Daniel', 'Armando Martin', 'pablito@focalglow.com', '$2a$10$FpF7NtiWDzz9mYAv7tBluuXsvAsU8vSqsLifi4pvFnK00rstu/0Mu', NULL, NULL, 'Pablito.jpg','admin');
 
 /*Categories Data*/
 INSERT INTO categories (id, NAME, image_cover, image_home) VALUES (1, 'Plafón', 'cover-plafon.jpg', 'home-plafon.jpg');
