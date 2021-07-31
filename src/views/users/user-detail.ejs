@@ -1,8 +1,8 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
     <title>Perfil | Focal Glow</title>
+    
     <link rel="stylesheet" href="/css/styles-user-detail.css">
-    <link rel="stylesheet" href="/css/styles-registro.css">
 
 
 
@@ -11,56 +11,54 @@
    
 
 <body>
-        <%- include('../partials/header.ejs')%>
+  <%- include('../partials/header.ejs')%>
   <main>
-    <aside class="column-1">  	
-      <img class="profileImg"
-            src="<%=userToView.profileImg ? userToView.profileImg : '/img/profile-pictures/profile.jpg' %>">
-      <ul class="client-links">
-        <li>Últimos Pedidos</li>
-        <li>Tarjetas Asociadas</li>
-      </ul>      
-    </aside>
+    <div class = "registry-container">
+      <section class="profileImg-links">  	
+        <img class="profileImg" width="100px"src="<%=userToView.profileImg%>">
+        <ul class="client-links">
+          <li>Últimos Pedidos</li>
+          <li>Tarjetas Asociadas</li>
+        </ul>      
+      </section>
    
-		<section class="data">
-      <div class="title">
-        <h2><%=`${userToView.firstName} ${userToView.lastName}`%></h2>
-        <a href="/users/<%=userToView.id%>/edit"><p class="edit-button">Editar Perfil</p> </a>
-      </div>
-
-      <article class="profile-info">
-			  <div class = "row">
-			  <label>Nombre</label>
-          <p><%=userToView.firstName%></p>
-			  </div>
-			  <div class = "row">
-				  <label>Apellido</label>
-          <p><%=userToView.lastName%></p>
-			  </div>
-			  <div class = "row">
-				  <label>Email</label>
-          <p><%=userToView.email%></p>
-			  </div>
-			  <div class = "row">
-				  <label>Teléfono</label>
-          <p><%=userToView.phone%></p>
-			  </div>
-			  <div class = "row">
-				  <label>Dirección</label>
-          <p><%=userToView.address%></p>
-			  </div>
-      </article>        
-    </section>
+		  <section class="data">
         
-		       
+        <h2>Perfil del Usuario</h2>
+        
+        
+        <article class="profile-info">
+         
+          <label>Nombre</label>
+          <p class= "input-login"><%=userToView.firstName%></p>
+          
+          <label>Apellido</label>
+          <p><%=userToView.lastName%></p>
+          
+          <label>Email</label>
+          <p><%=userToView.email%></p>
+          
+          <label>Teléfono</label>
+          <p><%=userToView.phone%></p>
+          
+          <label>Dirección</label>
+          <p><%=userToView.address%></p>
 
-  
+        </article>        
+      </section>
+      <a href="/users/<%=userToView.id%>/edit"><p class="login-button">Editar Perfil</p> </a>
+    
+    
+    
+
+    </div>
+    
                 
      
                
             
   </main>
-  <%- include('../partials/footer.ejs')%>
+  
 </body>
 
 </html>
