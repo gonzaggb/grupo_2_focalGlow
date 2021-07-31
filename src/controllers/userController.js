@@ -141,7 +141,7 @@ const controller = {
   },
 
   editPassword: async (req, res) => {
-    const id = req.params.id
+    const { id } = req.params
     const userToEdit = await User.findByPk(id)
     res.render('users/user-edit-password.ejs', { userToEdit })
   },
@@ -164,7 +164,7 @@ const controller = {
 
 
     //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
-    password == userToEdit.password
+    let password = userToEdit.password
 
     const userUpdate = {
       firstName,
@@ -180,6 +180,7 @@ const controller = {
     } else {
       userUpdate.profileImg = file.filename
     }
+
     try {
       await User.update(
         userUpdate
@@ -191,6 +192,31 @@ const controller = {
       console.log(error)
     }
 
+  },
+
+  updatePassword: async (req, res) => {
+    const { id } = req.params
+    const userToEdit = await User.findByPk(id)
+
+    const validationStatus = validationResult(req) // trae los resultados del middleware
+
+    if (!validationStatus.isEmpty()) {
+
+      //Si hay errores que pasa
+      return res.render('users/user-edit-password.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+    }
+
+    let { password } = req.body
+
+    try {
+      await User.update(
+        { password: bcrypt.hashSync(password, 10) },
+        { where: { id } }
+      )
+      return res.redirect('/users/login')
+    } catch (error) {
+      console.log(error)
+    }
   },
 
 
