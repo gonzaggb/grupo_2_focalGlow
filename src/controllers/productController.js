@@ -27,6 +27,7 @@ function addProductFilePath(element) {
 const controller = {
   list: async (req, res) => {
     const offset=req.query.offset
+    /* const orden = req.query.order */
     const productLenght = await Product.findAll({
      
     })
