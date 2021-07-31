@@ -6,6 +6,7 @@ const multer = require('multer')
 const path = require('path')
 const validations = require('../middleware/validationNewUser')
 const validateEditUserMiddleware = require('../middleware/validationEditUser')
+const validateEditUserPasswordMiddleware = require('../middleware/validationEditUserPassword')
 const files = require('../helpers/files')
 //validacion de login
 const validationLogin = require('../middleware/validateLogin')
@@ -39,6 +40,8 @@ router.post('/register', uploadRegister.single('profileImg'), validations, userC
 // ruta de profile
 router.get('/:id/detail', authMiddleware, profileAccessMiddleware, userController.profile)
 router.get('/:id/edit', authMiddleware, profileAccessMiddleware, userController.edit)
+router.get('/:id/editPassword', authMiddleware, profileAccessMiddleware, userController.editPassword)
+router.put('/:id/editPassword', validateEditUserPasswordMiddleware, profileAccessMiddleware, userController.updatePassword)
 router.put('/:id/edit', uploadRegister.single('profileImg'), validateEditUserMiddleware, profileAccessMiddleware, userController.update)
 
 //elimina usuario de la lista

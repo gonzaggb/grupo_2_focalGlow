@@ -1,7 +1,7 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
 <title>Editar Perfil | Focal Glow</title>
-<link rel="stylesheet" href="/css/styles-user-detail.css">
+<link rel="stylesheet" href="/css/styles-user-edit.css">
     
 
 
@@ -18,8 +18,8 @@
   <%- include('../partials/header.ejs')%>
 
   
+	<main>
     <form class="registry-form2" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
-			<main>
 			<aside class="column-1">  	
 				<label for="profileImg">
 					<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg%>">
@@ -52,11 +52,6 @@
 				</div>
 
 				<article class="profile-info">        
-					<div class = "row">    
-						<label for="id">User Id</label>
-            <input class="edit" name="id" value="<%=userToEdit.id%>" readonly>
-					</div>
-
 					<div class = "row">
 						<label for="first_name">Nombre</label>
             <input class="<%=(locals.errors && errors.firstName) ? 'error edit' : 'edit'%>" type="text" name="firstName" id="first_name"
@@ -99,41 +94,18 @@
             <textarea class="edit" type="text" name="address" id="address" col= "10" row="10" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
 					</div>
 					
-
 					
-					<label for="expand-toggle" id="expand-btn">¿Modificar contraseña?</label>
-					
-					<input type="radio" name="passModify" value="yes" id="expand-toggle" <%=(locals.errors && (errors.password || errors.rePassword))?'checked':''%>><span> Sí</span>
-					<input type="radio" name="passModify" value="no" <%=(locals.errors && (errors.password || errors.rePassword))?'':'checked'%>><span> No</span>
-					
-					
-
-					<div class = "row expandable">
-						<label for="password">Nueva contraseña</label>
-						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="password" id="password"
-							<% if (locals.errors && errors.password) {%>
-								placeholder = "<%=errors.password.msg%>"
-							<%}%>
-						>
-					</div>
-
-					<div class="row expandable">
-						<label for="rePassword">Confirmar contraseña</label>
-						<input class="<%=(locals.errors && errors.rePassword) ? 'error edit' : 'edit'%>" type="password" name="rePassword" id="rePassword"
-							<% if (locals.errors && errors.rePassword) {%>
-								placeholder = "<%=errors.rePassword.msg%>"
-							<%}%>
-						>			
-					</div>
-				
-				
          
-          <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
-          <div class="button-container">
 				</article>    
+				
       </section>
-		</main>
-    </form> 
+		</form> 
+		<form method="GET" action="/users/<%=userToEdit.id%>/editPassword">
+			<button class="btn">¿Cambiar contraseña?</button>
+		</form>
+
+
+	</main>
 		<%- include('../partials/footer.ejs')%>
 	
 </body>

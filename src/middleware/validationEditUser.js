@@ -23,21 +23,6 @@ const validations = [
 			return true
 		}),
 
-	//MARS: Le doy la opcion de que si desea modificar la contraseña entonces debe ser validado por el middleware. Ver el metodo .if(body...) que trae express validator
-
-
-	body('password').if(body('passModify').equals('yes')).notEmpty().withMessage(`Debes introducir una contraseña`),
-
-	body('rePassword').if(body('passModify').equals('yes')).notEmpty().withMessage('Debes confirmar la contraseña'),
-
-	body('rePassword').custom((val, { req }) => {
-		let password = req.body.password
-		if (val != password) {
-			throw new Error(`Las contraseñas deben coincidir`)
-		}
-		return true
-	}),
-
 	body('profileImg').custom((value, { req }) => {
 		const file = req.file
 		if (file && !files.isFileImage(file.originalname)) {

@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: -webkit-linear-gradient(left, #e5e5e5, #ffde59);
+}
+
+main {
+  background-color: #fff;
+  width: 85vw;
+  margin: 5vw auto;
+  padding: 2.5vw 5vw;
+  border-radius: 20px;
+  
+}
+
+form {
+  display: flex;
+  gap: 10%;
+}
+
+main img {
+  width: 150px;
+  height: 150px;
+  max-height: 150px;
+  border-radius: 50%;
+}
+
+.column-1 {
+  text-align: center;
+}
+
+.file-btn {
+  width: 80%;
+  position: relative;
+  text-align: center;
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 15px;
+  color: #fff;
+  background: #000;
+  transition: 0.5s;
+}
+
+.file-btn:hover {
+  background-color: #ffde59;
+  color: black;
+}
+
+.file-btn input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+.column-1 {
+  width: 20%;
+}
+
+.data {
+  width: 70%;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 150px;
+}
+
+.row {
+  display: flex;
+  gap: 15%;
+  margin: 1.2rem 0px;
+}
+.row label {
+  font-weight: bold;
+  font-size: 1.4rem;
+  width: 25%;
+  padding: 10px;
+}
+
+.profile-info {
+  width: 80%;
+}
+
+
+
+input:focus,
+textarea:focus {
+  background-color: #ffde59;
+  padding-left: 10px;
+}
+.row p {
+  font-size: 1.4rem;
+  width: 60%;
+}
+
+.row .edit {
+  font-size: 1.4rem;
+  width: 60%;
+}
+
+.error::placeholder {
+  color: red !important;
+  font-weight: bold;
+}
+
+.edit-button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: rgba(68, 67, 67, 0.856);
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.edit-button:hover {
+  color: #ffde59;
+}
+
+ul.client-links {
+  margin-top: 1.2rem;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+ul {
+  margin-top: 0;
+}
+
+.btn {
+  width: 20%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  font-family: 'Roboto';
+  transition: all 0.5s linear;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ffde59;
+  opacity: 0.9;
+  color: black;
+}
+
+.edit {
+  color: darkblue;
+  font-size: 1.4rem;
+  border: none;
+  background-color: rgba(255, 220, 79, 0.493);
+  padding: 10px;
+}
+
+.profileImg {
+  cursor: pointer;
+}
+
+.row input[type='password'] {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+/* Hide expandable content by default */
+.expandable {
+  opacity: 0;
+
+  font-size: 1px;
+  transition: all 1s;
+}
+/* Show hidden content when the checkbox is checked */
+#expand-toggle:checked ~ .expandable,
+input[name='password'] {
+  opacity: 1;
+  font-size: 1.4rem;
+}
+#expand-toggle:checked ~ .expandable input {
+  background-color: #ffde59;
+  padding-left: 10px;
+}
+
+/* Style the button */
+#expand-btn {
+  display: block;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+/* Style the button when the checkbox is checked */
+
+@media (max-width: 576px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+  .column-1 {
+    width: 100%;
+  }
+  .data {
+    width: 100%;
+  }
+  .btn {
+    width: 40%;
+  }
+  .profile-info {
+    width: 100%;
+  }
+}
