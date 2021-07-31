@@ -23,7 +23,7 @@ body{
 }
 
 
-.main-container2{
+.main-container{
     text-align: center;
     width:100%;
     position:fixed;
@@ -31,7 +31,7 @@ body{
     top: 25%;
 
 }
-.registry-form2{
+.registry-form{
     display: flex;
     flex-direction: column;
     color:white;
@@ -51,10 +51,10 @@ body{
     color:#fff;
     background: #f7cb15;
 }
-.registry-container2{
+.registry-container{
     padding-top:5px;
 }
-.registry-container2 p{
+.registry-container p{
     display: block;
     text-align: left;
     width: 82%;
@@ -62,12 +62,12 @@ body{
     font-size: 15px;
 
 }
-.registry-container2 label{
+.registry-container label{
     display: block;
     text-align: left;
     margin-left: 15px;
 }
-.registry-container2 .subir{
+.registry-container .subir{
     text-align: center;
 }
 .subir{
@@ -176,7 +176,7 @@ body{
 }
 
 
-.registry-form2{
+.registry-form{
     color:white;
 /*     margin-top:5%;
  */
@@ -198,7 +198,7 @@ body{
 
 
 
-.main-container2{
+.main-container{
         text-align: center;
         width:80%;
         position:fixed;
@@ -208,7 +208,7 @@ body{
 
 
 @media (min-width: 992px){
-    .registry-form2{
+    .registry-form{
         justify-content: space-evenly;
         width: 300px;
 

@@ -10,7 +10,7 @@ const controller = {
   //envia al usuario a la pagina de login
   login: (req, res) => {
 
-    res.render('users/login.ejs')
+    res.render('users/user-login.ejs')
 
   },
   //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
@@ -20,7 +20,7 @@ const controller = {
     const oldValues = req.body
 
     if (!formValidation.isEmpty()) {
-      return res.render('users/login', { oldValues, errors: formValidation.mapped() })
+      return res.render('users/user-login', { oldValues, errors: formValidation.mapped() })
     }
     const { email, remember } = req.body
 
@@ -46,7 +46,7 @@ const controller = {
 
   //envia al usuario a la pagina de registro
   newUser: (req, res) => {
-    res.render('users/register.ejs')
+    res.render('users/user-register.ejs')
   },
 
   //captura y envia los datos enviados por post al modelo
@@ -62,7 +62,7 @@ const controller = {
         if (isFileImage(req.file.originalname)) { // si existe el archivo, valido la extension, si está dentro de las validas lo elimino del servidor, caso contrario no porque evite se guarde con el multer
           fs.unlinkSync(req.file.path)
         }
-        return res.render('users/register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+        return res.render('users/user-register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       }
     }
 
@@ -81,7 +81,7 @@ const controller = {
 
     await User.create(newUser)
 
-    res.redirect('/users/login')
+    res.redirect('/users/user-login')
   },
 
 
@@ -213,7 +213,7 @@ const controller = {
         { password: bcrypt.hashSync(password, 10) },
         { where: { id } }
       )
-      return res.redirect('/users/login')
+      return res.redirect('/users/user-login')
     } catch (error) {
       console.log(error)
     }
