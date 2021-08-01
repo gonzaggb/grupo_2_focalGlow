@@ -32,8 +32,8 @@ const controller = {
      
     })
     const products = await Product.findAll({
-      limit: 10,
-      offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
+      /* limit: 15,
+      offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset), */
       include: [{ association: 'category' },
       {
         association: 'images',
@@ -52,7 +52,7 @@ const controller = {
         addProductImagePath(image)
       })
     })
-    const nextButton = parseInt(productLenght.length / 10)
+    const nextButton = parseInt(productLenght.length / 15)
     res.render('products/product-list.ejs', {productLenght, products, nextButton})
   },
 
