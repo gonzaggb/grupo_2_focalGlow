@@ -7,10 +7,10 @@ const path = require('path')
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     console.log(file)
-    if (path.extname(file.originalname) == '.jpg' || path.extname(file.originalname) == '.png') {
-      cb(null, path.join(__dirname, '../../public/img'))
-    } else {
+    if (path.extname(file.originalname) == '.pdf') {
       cb(null, path.join(__dirname, '../../public/pdf'))
+    } else {
+      cb(null, path.join(__dirname, '../../public/img'))
     }
   },
   filename: (req, file, cb) => {

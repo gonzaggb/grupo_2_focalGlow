@@ -76,7 +76,7 @@ main {
   margin-top: 9px;
   font-weight: bold;
 }
-.registry-container .subir{
+.registry-container{
   text-align: center;
 }
 .subir{
@@ -98,21 +98,24 @@ main {
 
 }
 
-.input-login{
+.input{
   outline:none;
   border:none;
   border-bottom: white 1px solid; 
   background-color: rgba(0,0,0,0);
   color:white;
   font-size: 15px;
-  border-radius: 0%;
   transition: all 0.6s;
   display: block;
   text-align: left;
   font-size: 15px;
-  
+  width:100%;
 }
-.input-login:focus{
+
+textarea.input {
+  height: 70px;
+}
+.input:focus{
   border-bottom: 1px #ffde59 solid; 
 }
 .inner_nav{
@@ -127,7 +130,8 @@ main {
   font-size: 20px;
   margin-top:24px;
   border-radius: 15px;
-  transition: all 0.7s; 
+  transition: all 0.7s;
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
