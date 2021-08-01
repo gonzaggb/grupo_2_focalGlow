@@ -1,62 +1,42 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
-    <title>Perfil | Focal Glow</title>
+  <title>Perfil | Focal Glow</title>
     
-    <link rel="stylesheet" href="/css/styles-user-detail.css">
-
-
-
-
+  <link rel="stylesheet" href="/css/styles-user-detail.css">
 </head>
    
-
 <body>
   <%- include('../partials/header.ejs')%>
   <main>
     <div class = "registry-container">
-      <section class="profileImg-links">  	
-        <img class="profileImg" width="100px"src="<%=userToView.profileImg%>">
-        <ul class="client-links">
-          <li>Últimos Pedidos</li>
-          <li>Tarjetas Asociadas</li>
-        </ul>      
+      <section class="images-container">  	
+        <img class="profileImg" src="<%=userToView.profileImg%>">   
       </section>
+
+      <h2>Perfil de <%=userToView.firstName%></h2>
    
-		  <section class="data">
+		  <section class="profile-info">
         
-        <h2>Perfil del Usuario</h2>
-        
-        
-        <article class="profile-info">
-         
-          <label>Nombre</label>
-          <p class= "input-login"><%=userToView.firstName%></p>
+        <label>Nombre</label>
+        <p class= "input-login"><%=userToView.firstName%></p>
           
-          <label>Apellido</label>
-          <p><%=userToView.lastName%></p>
+        <label>Apellido</label>
+        <p class= "input-login"><%=userToView.lastName%></p>
           
-          <label>Email</label>
-          <p><%=userToView.email%></p>
+        <label>Email</label>
+        <p class= "input-login"><%=userToView.email%></p>
           
-          <label>Teléfono</label>
-          <p><%=userToView.phone%></p>
+        <label>Teléfono</label>
+        <p class= "input-login"><%=userToView.phone%></p>
           
-          <label>Dirección</label>
-          <p><%=userToView.address%></p>
-
-        </article>        
+        <label>Dirección</label>
+        <p class= "input-login"><%=userToView.address%></p>
+      
       </section>
-      <a href="/users/<%=userToView.id%>/edit"><p class="login-button">Editar Perfil</p> </a>
-    
-    
-    
 
+      <a href="/users/<%=userToView.id%>/edit"><p class="login-button">Editar Perfil</p></a>
     </div>
-    
-                
-     
-               
-            
+       
   </main>
   
 </body>
