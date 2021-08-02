@@ -1,85 +1,89 @@
 <%- include('../partials/head.ejs')%>
 	<title>Focal Glow | Listado de Productos</title>
 	<link rel="stylesheet" href="/css/styles-product-list.css">
-	<link rel="stylesheet" href="/css/style-search.css">
+	<link rel="stylesheet" href="/css/styles-search.css">
 	</head>
 
 	<body>
 		<!--HEADER-->
 		<%- include('../partials/header.ejs')%>
 
-			<main>
-				<h3 class="titulo">Listado de Productos</h3>
-				<div class="add-container">
-					<a href="/product/add"><button id="product-create" class="add-product">Agregar producto</button></a>
-				</div>
-				<form action="/product" method="get">
-					<h4 class='form-lista-productos'>Cantidad de productos : <%= productLenght.length %>
-					</h4>
-					<table id="products">
+		<main>
+			<h3 class="titulo">Listado de Productos</h3>
+			<div class="add-container">
+				<a href="/product/add"><button id="product-create" class="add-product">Agregar producto</button></a>
+			</div>
+			<form action="/product" method="get">
+				<h4 class='form-lista-productos'>Cantidad de productos : <%= productLenght.length %></h4>
+				<table id="products">
+					<tr>
+						<th class="center id">ID</th>
+						<th class="left">Categoría</th>
+						<th class="left">Nombre</th>
+						<th class="left">Precio</th>
+						<th class="center">Cantidad</th>
+						<th class="center">Imagen</th>
+						<th class="center">Detalle</th>
+						<th class="center">Editar</th>
+						<th class="center">Borrar</th>
+					</tr>
+
+					<% products.forEach(product=> {%>
 						<tr>
-							<th class="center id">ID</th>
-							<th class="left">Categoría</th>
-							<th class="left">Nombre</th>
-							<th class="left">Precio</th>
-							<th class="center">Cantidad</th>
-							<th class="center">Imagen</th>
-							<th class="center">Detalle</th>
-							<th class="center">Editar</th>
-							<th class="center">Borrar</th>
+							<td class="center id">
+								<%=product.id%>
+							</td>
+							<td>
+								<%=product.category.name%>
+							</td>
+							<td>
+								<%=product.name%>
+							</td>
+							<td>
+								<% const toThousand=(n)=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+								$<%= toThousand(product.price)%>
+							</td>
+							<td class="center">
+								<%=product.quantity%>
+							</td>
+							<td class="center">
+								<% product.images.forEach(image=> {%>
+									<img class="img-redonda" src="<%=image.name%>">
+								<%})%>
+							</td>
+							<td class="center">
+								<a href='/product/detail/<%=product.id%>'><i class="fas fa-search"></i></a>
+							</td>
+							<td class="center">
+								<a href="/product/<%=product.id%>/edit"><i class="far fa-edit"></i></a>
+							</td>
+							<td class="center">
+								<form action="/product/<%=product.id%>?_method=DELETE" method="POST">
+									<button type="submit"><i class="far fa-trash-alt"></i></button>
+								</form>
+							</td>
 						</tr>
-						<% products.forEach(product=> {%>
-							<tr>
-								<td class="center id">
-									<%=product.id%>
-								</td>
-								<td>
-									<%=product.category.name%>
-								</td>
-								<td>
-									<%=product.name%>
-								</td>
-								<td>
-									<% const toThousand=(n)=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
-										$<%= toThousand(product.price)%>
-								</td>
-								<td class="center">
-									<%=product.quantity%>
-								</td>
-								<td class="center">
-									<% product.images.forEach(image=> {%>
-										<img class="img-redonda" src="<%=image.name%>">
-										<%})%>
-								</td>
-								<td class="center">
-									<a href='/product/detail/<%=product.id%>'><i class="fas fa-search"></i></a>
-								</td>
-								<td class="center">
-									<a href="/product/<%=product.id%>/edit"><i class="far fa-edit"></i></a>
-								</td>
-								<td class="center">
-									<form action="/product/<%=product.id%>?_method=DELETE" method="POST">
-										<button type="submit"><i class="far fa-trash-alt"></i></button>
-									</form>
-								</td>
-							</tr>
-							<%})%>
-					</table>
-					<div class="page">
-						<% for(let j=0; j < nextButton; j++) {%>
-							<button type="submit" name="offset" class="offset" value="<%= 10*j %>">
-								<%=j+1%>
-							</button>
-							<%}%>
-					</div>
-				</form>
-			</main>
+					<%})%>
+				</table>
+
+				<div class="page">
+					<% for(let j=0; j < nextButton; j++) {%>
+						<button type="submit" name="offset" class="offset" value="<%= 10*j %>">
+							<%=j+1%>
+						</button>
+					<%}%>
+				</div>
+
+			</form>
+
 			<div class="up-button">
 				<a href="#product-create"><i class="fas fa-chevron-up"></i></a>
 			</div>
 
-			<!--FOOTER-->
-			<%- include('../partials/footer.ejs')%>
+		</main>
+
+		<!--FOOTER-->
+		<%- include('../partials/footer.ejs')%>
 	</body>
 
 	</html>

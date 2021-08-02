@@ -1,7 +1,7 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
 <title>Registro | Focal Glow</title>
-<link rel="stylesheet" href="/css/styles-registro.css">
+<link rel="stylesheet" href="/css/styles-user-register.css">
 
 </head>
 <script>
@@ -13,11 +13,9 @@
 
   <body>
     <%- include('../partials/header.ejs')%>
-
-
-    <main class="main-container2">
-      <form class="registry-form2" method="POST" action="/users/register" enctype="multipart/form-data">
-        <div class="registry-container2">
+    <main class="main-container">
+      <form class="registry-form" method="POST" action="/users/register" enctype="multipart/form-data">
+        <div class="registry-container">
 
           <label for="firstName">Nombre</label>
           <input class="<%=locals.errors && errors.firstName ? 'error' : 'input-login'%>" type="text" name="firstName" id="firstName"

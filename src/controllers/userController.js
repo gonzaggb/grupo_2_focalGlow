@@ -10,7 +10,7 @@ const controller = {
   //envia al usuario a la pagina de login
   login: (req, res) => {
 
-    res.render('users/login.ejs')
+    res.render('users/user-login.ejs')
 
   },
   //captura los datos de inicio de sesion al modelo y valida si el usuario puede o no acceder
@@ -20,7 +20,7 @@ const controller = {
     const oldValues = req.body
 
     if (!formValidation.isEmpty()) {
-      return res.render('users/login', { oldValues, errors: formValidation.mapped() })
+      return res.render('users/user-login', { oldValues, errors: formValidation.mapped() })
     }
     const { email, remember } = req.body
 
@@ -28,8 +28,6 @@ const controller = {
       {
         where: { email }
       })
-
-
 
     req.session.logged = user.id
     if (remember) {
@@ -46,7 +44,7 @@ const controller = {
 
   //envia al usuario a la pagina de registro
   newUser: (req, res) => {
-    res.render('users/register.ejs')
+    res.render('users/user-register.ejs')
   },
 
   //captura y envia los datos enviados por post al modelo
@@ -62,7 +60,7 @@ const controller = {
         if (isFileImage(req.file.originalname)) { // si existe el archivo, valido la extension, si está dentro de las validas lo elimino del servidor, caso contrario no porque evite se guarde con el multer
           fs.unlinkSync(req.file.path)
         }
-        return res.render('users/register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+        return res.render('users/user-register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       }
     }
 
@@ -115,7 +113,6 @@ const controller = {
 
       if (userToDelete.profileImg != 'profile.jpg') {
         const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToDelete.profileImg)
-
         fs.unlinkSync(imageToDelete)
       }
 
@@ -143,6 +140,7 @@ const controller = {
   editPassword: async (req, res) => {
     const { id } = req.params
     const userToEdit = await User.findByPk(id)
+    userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
     res.render('users/user-edit-password.ejs', { userToEdit })
   },
 
@@ -162,6 +160,12 @@ const controller = {
     let { firstName, lastName, email, phone, address } = req.body
     const { file } = req
 
+    //MARS: Si el usuario envia una imagen nueva debo borrar la anterior del servidor
+    if (file) {
+      const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToEdit.profileImg)
+
+      fs.unlinkSync(imageToDelete)
+    }
 
     //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
     let password = userToEdit.password
@@ -207,6 +211,30 @@ const controller = {
     }
 
     let { password } = req.body
+
+    /*NO ENTRABA EN LA QUERY CON EL SIGUIENTE CODIGO
+
+    console.log(userEdit)
+
+    userEdit.dataValues.password = password
+
+    let userUpdate = userEdit
+
+    console.log(userUpdate)
+
+    try {
+      await User.update(
+        userUpdate
+        ,
+        { where: { id } }
+      )
+      res.redirect('/users')
+    } catch (error) {
+      console.log(error)
+    }
+
+    TUVIMOS QUE HACER LO DE ABAJO*/
+
 
     try {
       await User.update(
