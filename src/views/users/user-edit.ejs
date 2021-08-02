@@ -32,7 +32,7 @@
 					<input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
 					
 				</div>
-				<p class="<%=(locals.errors && errors.profileImg) ? 'errors input' : ''%>""><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
+				<p class="<%=(locals.errors && errors.profileImg) ? 'error input' : ''%>"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
 			</section>
 
 			<h2>Perfil de <%=userToEdit.firstName%></h2>

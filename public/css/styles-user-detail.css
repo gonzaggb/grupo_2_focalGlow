@@ -139,7 +139,7 @@ textarea.input {
   border:none;
   border-bottom: white 1px solid;
   background-color: rgba(0,0,0,0);
-  color:white;
+  color:red;
   font-size: 15px;
   border-radius: 0%;
   transition: all 0.6s;

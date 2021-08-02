@@ -143,6 +143,7 @@ const controller = {
   editPassword: async (req, res) => {
     const { id } = req.params
     const userToEdit = await User.findByPk(id)
+    userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
     res.render('users/user-edit-password.ejs', { userToEdit })
   },
 
@@ -213,7 +214,7 @@ const controller = {
         { password: bcrypt.hashSync(password, 10) },
         { where: { id } }
       )
-      return res.redirect('/users/user-login')
+      return res.redirect('/users/login')
     } catch (error) {
       console.log(error)
     }
