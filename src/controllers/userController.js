@@ -163,6 +163,12 @@ const controller = {
     let { firstName, lastName, email, phone, address } = req.body
     const { file } = req
 
+    //MARS: Si el usuario envia una imagen nueva debo borrar la anterior del servidor
+    if (file) {
+      const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToEdit.profileImg)
+
+      fs.unlinkSync(imageToDelete)
+    }
 
     //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
     let password = userToEdit.password
@@ -208,6 +214,30 @@ const controller = {
     }
 
     let { password } = req.body
+
+    /*NO ENTRABA EN LA QUERY CON EL SIGUIENTE CODIGO
+
+    console.log(userEdit)
+
+    userEdit.dataValues.password = password
+
+    let userUpdate = userEdit
+
+    console.log(userUpdate)
+
+    try {
+      await User.update(
+        userUpdate
+        ,
+        { where: { id } }
+      )
+      res.redirect('/users')
+    } catch (error) {
+      console.log(error)
+    }
+
+    TUVIMOS QUE HACER LO DE ABAJO*/
+
 
     try {
       await User.update(
