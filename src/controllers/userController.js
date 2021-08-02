@@ -29,8 +29,6 @@ const controller = {
         where: { email }
       })
 
-
-
     req.session.logged = user.id
     if (remember) {
       res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
@@ -81,7 +79,7 @@ const controller = {
 
     await User.create(newUser)
 
-    res.redirect('/users/user-login')
+    res.redirect('/users/login')
   },
 
 
@@ -115,7 +113,6 @@ const controller = {
 
       if (userToDelete.profileImg != 'profile.jpg') {
         const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToDelete.profileImg)
-
         fs.unlinkSync(imageToDelete)
       }
 
