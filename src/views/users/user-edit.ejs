@@ -6,8 +6,12 @@
 </head>
 <script>
   function cambiar() {
-    var pdrs = document.getElementById('file-upload').files[0].name;
-    document.getElementById('info').innerHTML = pdrs;
+    var imageToLoad = document.getElementById('file-upload')
+		var output = document.getElementById('output')
+		output.src = URL.createObjectURL(imageToLoad.files[0])
+		output.onload = function () {
+      URL.revokeObjectURL(output.src) // free memory
+    } 
   }
 </script>
 
@@ -27,16 +31,6 @@
 
 					<input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
 					
-				
-					<script>
-          	var loadFile = function (event) {
-            	var output = document.getElementById('output');
-            	output.src = URL.createObjectURL(event.target.files[0]);
-            	output.onload = function () {
-              	URL.revokeObjectURL(output.src) // free memory
-            	}
-          	};
-      		</script>
 				</div>
 				<p class="<%=(locals.errors && errors.profileImg) ? 'errors input' : ''%>""><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
 			</section>
@@ -45,7 +39,7 @@
 
 			<section class="profile-info">
        	<label for="first_name">Nombre</label>
-        <input class="<%=(locals.errors && errors.firstName) ? 'errors input' : 'input'%>" type="text" name="firstName" id="first_name"
+        <input class="<%=(locals.errors && errors.firstName) ? 'error input' : 'input'%>" type="text" name="firstName" id="first_name"
 					<% if (locals.errors && errors.firstName) { %>
 							placeholder = "<%=errors.firstName.msg %>"
 								<% } else if (locals.oldData) { %>
@@ -57,7 +51,7 @@
 									
 								
 				<label for="last_name">Apellido</label>
-				<input class="<%=(locals.errors && errors.lastName) ? 'errors input' : 'input'%>" type="text" name="lastName" id="last_name"
+				<input class="<%=(locals.errors && errors.lastName) ? 'error input' : 'input'%>" type="text" name="lastName" id="last_name"
 					<% if (locals.errors && errors.lastName) {%>
 						placeholder = "<%=errors.lastName.msg%>"
 					<%} else if (locals.oldData) { %>

@@ -59,16 +59,8 @@ main {
 
 .registry-container h2 {
   margin: 9px 0px;
-}
-
-.subir span{
   text-align: center;
 }
-.subir:hover{
-  color:#fff;
-  background: #f7cb15;
-}
-
 
 .registry-container label{
   display: block;
@@ -76,10 +68,9 @@ main {
   margin-top: 9px;
   font-weight: bold;
 }
-.registry-container{
-  text-align: center;
-}
-.subir{
+
+
+label.subir{
   padding: 5px 5px;
   color:#fff;
   border:0px solid #fff;
@@ -95,7 +86,11 @@ main {
   margin: 5px;
   border-radius: 15px;
   transition: all 0.7s;  
-
+  
+}
+.subir:hover{
+  color:#fff;
+  background: #f7cb15;
 }
 
 .input{
@@ -141,12 +136,12 @@ textarea.input {
   background-color: #ffde59;
 
 }
-.error{
-  width: 90%;
+.error {
+ 
   outline:none;
   border:none;
   border-bottom: white 1px solid;
-  margin: 5px;
+
   background-color: rgba(0,0,0,0);
   color:white;
   font-size: 15px;
