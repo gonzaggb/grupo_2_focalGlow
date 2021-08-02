@@ -27,11 +27,12 @@ function addProductFilePath(element) {
 const controller = {
   list: async (req, res) => {
     const offset=req.query.offset
+    /* const orden = req.query.order */
     const productLenght = await Product.findAll({
      
     })
     const products = await Product.findAll({
-      limit: 10,
+      limit: 20,
       offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
       include: [{ association: 'category' },
       {
@@ -51,7 +52,7 @@ const controller = {
         addProductImagePath(image)
       })
     })
-    const nextButton = parseInt(productLenght.length / 10)
+    const nextButton = productLenght.length / 10
     res.render('products/product-list.ejs', {productLenght, products, nextButton})
   },
 

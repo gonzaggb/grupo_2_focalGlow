@@ -16,8 +16,6 @@
 				<form action="/product" method="get">
 					<h4 class='form-lista-productos'>Cantidad de productos : <%= productLenght.length %>
 					</h4>
-
-
 					<table id="products">
 						<tr>
 							<th class="center id">ID</th>
@@ -30,8 +28,6 @@
 							<th class="center">Editar</th>
 							<th class="center">Borrar</th>
 						</tr>
-
-
 						<% products.forEach(product=> {%>
 							<tr>
 								<td class="center id">
@@ -74,7 +70,6 @@
 							<button type="submit" name="offset" class="offset" value="<%= 10*j %>">
 								<%=j+1%>
 							</button>
-
 							<%}%>
 					</div>
 				</form>
