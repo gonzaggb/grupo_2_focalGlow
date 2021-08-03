@@ -29,6 +29,7 @@ main h2 {
   text-align: center;
   font-size: 2em;
   color: black;
+  margin: 20px 0px;
 }
 
 .main-wrapper {
@@ -49,6 +50,7 @@ main h2 {
 
 .aside-text {
   background-color: #ffde59;
+  opacity: 0.8;
   padding: 20px 10px;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
