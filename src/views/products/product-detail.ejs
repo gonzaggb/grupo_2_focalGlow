@@ -125,9 +125,9 @@
 
         <section class="price">
           <h3 class="price-title">$ 
-            <% const toThousand = (n) =>
-                n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
-             <%= toThousand(product.price)%></h3>
+            <% const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+             <%=toThousand(product.price)%>
+          </h3>
           <div class="qtyadd">
             <input type="number" placeholder="1" min="0" />
             <button class="add">AÑADIR</button>
@@ -135,23 +135,24 @@
         </section>
 
         <div class="product-dimensions-info">
-          <% product.images.forEach(image => {
-            if (image.type == 'dimension') { %>
-              <img src="<%=image.name%>" alt="dimensiones luminaria" />
-            <%} })%>
-          
+          <% product.images.forEach(image => {%>
+            <% if (image.type == 'dimension') { %>
+              <img src="<%=image.name%>" alt="dimensiones luminaria"/>
+            <%}%>
+          <%})%>
           <span>Dimensiones</span>
         </div>
-
+          
+            
         <section class="documents">
-          <% product.files.forEach(file => {
-            if (file.type == 'dataSheet') { %>
+          <% product.files.forEach(file => { %>
+            <% if (file.type == 'dataSheet') { %>
               <a href="<%=file.name%>" target="_blank"><span><i class="far fa-file-pdf"></i> Hoja Técnica</span></a>
             <% } else if (file.type == 'installSheet') { %>
               <a href="<%=file.name%>"target="_blank"><span><i class="far fa-file-pdf"></i> Manual de Instalación</span></a>
-            <%}})%>
-         
+            <%}})%>       
         </section>
+
       </div>
     </main>
 
