@@ -40,7 +40,7 @@
               <div class="slide <%=index+1%>">
                 <img src ="<%=image%>">
               </div>
-              <%})%>    
+            <%})%>    
              
         </div>
       </div>
@@ -159,10 +159,10 @@
       <article class="similar-products">
         <h3>Productos Similares</h3>
         <div class="slider-container">
-          <% similarProductsFiltered.forEach((product, index) => { %>
-            <input type="radio" id="trigger<%=index +3%>" name="slider<%=index +3%>" checked autofocus >
-            <label for="trigger<%=index + 3%>"></label>
-            <div class="slide2 <%=index + 3%>">
+          <%similarProductsFiltered.forEach((product, index) => { %>
+            <input type="radio" id="trigger<%=index + 1 + arraySlider.length%>" name="slider2" checked autofocus >
+            <label for="trigger<%=index + 1 + arraySlider.length%>"></label>
+            <div class="slide2 <%=index + 1 + arraySlider.length%>">
               <a href="/product/detail/<%=product.id%>"><img src ="<%=product.images[0].name%>"></a>
             </div>  
           <%}) %>

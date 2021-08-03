@@ -26,10 +26,10 @@ function addProductFilePath(element) {
 
 const controller = {
   list: async (req, res) => {
-    const offset=req.query.offset
+    const offset = req.query.offset
     /* const orden = req.query.order */
     const productLenght = await Product.findAll({
-     
+
     })
     const products = await Product.findAll({
       limit: 20,
@@ -53,7 +53,7 @@ const controller = {
       })
     })
     const nextButton = productLenght.length / 10
-    res.render('products/product-list.ejs', {productLenght, products, nextButton})
+    res.render('products/product-list.ejs', { productLenght, products, nextButton })
   },
 
   detail: async (req, res) => {
@@ -79,6 +79,8 @@ const controller = {
       }
     })
 
+
+
     //AGREGO LA RUTA A LOS ARCHIVOS
     product.files.forEach(file => {
       addProductFilePath(file)
@@ -97,7 +99,7 @@ const controller = {
 
 
     //A los productos de la misma categoría le saco el que estoy viendo en detalle. Para que no me lo ponga como producto similar
-    let similarProducts = productsCategory.filter((e) => e.id != id)
+    let similarProducts = productsCategory.filter((product) => product.id != id)
     //agrego la ruta a las imagenes
     similarProducts.forEach(product => {
       product.images.forEach(image => {
@@ -188,11 +190,11 @@ const controller = {
     const category = await productFound.getCategory()
     const featuresList = await Feature.findAll() // listado de todas las features
     const filesPdf = await productFound.getFiles()
-    filesPdf.forEach(file=>{
+    filesPdf.forEach(file => {
       addProductFilePath(file)
     })
     console.log(images)
-    res.render('products/product-edit.ejs', { productFound, category, images, features,filesPdf, featuresList })
+    res.render('products/product-edit.ejs', { productFound, category, images, features, filesPdf, featuresList })
 
   },
 
