@@ -100,6 +100,7 @@ const controller = {
       res.render('users/user-list.ejs', { userList, nextButton })
     } catch (error) {
       console.log(error)
+      res.status(404).render('404.ejs')
     }
 
   },
@@ -118,6 +119,7 @@ const controller = {
 
     } catch (error) {
       console.log(error)
+      res.status(404).render('404.ejs')
     }
 
     await User.destroy({
@@ -194,6 +196,7 @@ const controller = {
       res.redirect('/users')
     } catch (error) {
       console.log(error)
+      res.status(404).render('404.ejs')
     }
 
   },
@@ -212,30 +215,6 @@ const controller = {
 
     let { password } = req.body
 
-    /*NO ENTRABA EN LA QUERY CON EL SIGUIENTE CODIGO
-
-    console.log(userEdit)
-
-    userEdit.dataValues.password = password
-
-    let userUpdate = userEdit
-
-    console.log(userUpdate)
-
-    try {
-      await User.update(
-        userUpdate
-        ,
-        { where: { id } }
-      )
-      res.redirect('/users')
-    } catch (error) {
-      console.log(error)
-    }
-
-    TUVIMOS QUE HACER LO DE ABAJO*/
-
-
     try {
       await User.update(
         { password: bcrypt.hashSync(password, 10) },
@@ -244,6 +223,7 @@ const controller = {
       return res.redirect('/users/login')
     } catch (error) {
       console.log(error)
+      res.status(404).render('404.ejs')
     }
   },
 

@@ -44,8 +44,6 @@ const controller = {
       ]
     })
 
-
-
     //AGREGO RUTA A LAS IMAGENES
     products.forEach(product => {
       product.images.forEach(image => {
@@ -166,6 +164,7 @@ const controller = {
 
       } catch (error) {
         console.log(error)
+        res.status(404).render('404.ejs')
       }
     } else {
       /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la creación del producto*/
@@ -306,6 +305,7 @@ const controller = {
 
       } catch (error) {
         console.log(error)
+        res.status(404).render('404.ejs')
       }
     } else {
       /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la edicion del producto*/
@@ -358,6 +358,7 @@ const controller = {
       })
     } catch (error) {
       console.log(error)
+      res.status(404).render('404.ejs')
     }
 
     res.redirect('/product')
