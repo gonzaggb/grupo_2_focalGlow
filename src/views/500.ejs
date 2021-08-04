@@ -2,11 +2,16 @@
 <link rel="stylesheet" href = "">
 </head>
 
-    <body>
+  <body>
         <!-- HEADER -->
             <%- include('partials/header.ejs')%>
         <!-- HEADER -->
     <h1>Hubo un problema con la base de datos</h1>
     <h2>Seguro que fue Baigorria</h2>
-    </body>     
+    <h3>Posibles causas:</h3>
+  	<ul>
+    	<li>¿Está la base de datos activa? XAMP-MySQL</li>
+			<li>Es posible que la entidad buscada haya sido eliminada de forma manual de la BD antes de ejecutar la acción</li>
+  	</ul>
+  </body>     
 </html>

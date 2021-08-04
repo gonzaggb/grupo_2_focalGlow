@@ -15,7 +15,7 @@ const validations = [
 
 			if (userFound && userFound.id == userLogged.id) {
 				return true
-			} else if (userLogged.role == 'admin' && userFound.id == req.body.id) {
+			} else if (userLogged.role == 'admin' || userFound.id == req.body.id) {
 				return true
 			} else if (userFound) {
 				return Promise.reject('El usuario ya existe')

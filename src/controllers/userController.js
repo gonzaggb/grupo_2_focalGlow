@@ -151,10 +151,15 @@ const controller = {
 
   edit: async (req, res) => {
     const id = req.params.id
-    const userToEdit = await User.findByPk(id)
-    userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+    try {
+      const userToEdit = await User.findByPk(id)
+      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+      res.render('users/user-edit.ejs', { userToEdit })
 
-    res.render('users/user-edit.ejs', { userToEdit })
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
+    }
 
   },
 
@@ -165,7 +170,9 @@ const controller = {
       const userToEdit = await User.findByPk(id)
       userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
       res.render('users/user-edit-password.ejs', { userToEdit })
+
     } catch (error) {
+
       console.log(error)
       return res.redirect('/500')
     }
@@ -186,48 +193,47 @@ const controller = {
         userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
         return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       }
-    } catch (error) {
-      console.log(error)
-      return res.redirect('/500')
-    }
 
-    //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
-    let { firstName, lastName, email, phone, address } = req.body
-    const { file } = req
 
-    //MARS: Si el usuario envia una imagen nueva debo borrar la anterior del servidor
-    if (file) {
-      const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToEdit.profileImg)
+      //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
+      let { firstName, lastName, email, phone, address } = req.body
+      const { file } = req
 
-      fs.unlinkSync(imageToDelete)
-    }
+      //MARS: Si el usuario envia una imagen nueva debo borrar la anterior del servidor
+      if (file) {
+        const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToEdit.profileImg)
 
-    //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
-    let password = userToEdit.password
+        fs.unlinkSync(imageToDelete)
+      }
 
-    const userUpdate = {
-      firstName,
-      lastName,
-      email,
-      password,
-      phone,
-      address,
-    }
+      //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
+      let password = userToEdit.password
 
-    if (!file) {
-      userUpdate.profileImg = userToEdit.profileImg
-    } else {
-      userUpdate.profileImg = file.filename
-    }
+      const userUpdate = {
+        firstName,
+        lastName,
+        email,
+        password,
+        phone,
+        address,
+      }
 
-    try {
+      if (!file) {
+        userUpdate.profileImg = userToEdit.profileImg
+      } else {
+        userUpdate.profileImg = file.filename
+      }
+
+
       await User.update(
         userUpdate
         ,
         { where: { id } }
       )
       res.redirect('/users')
+
     } catch (error) {
+
       console.log(error)
       return res.redirect('/500')
     }
@@ -247,6 +253,7 @@ const controller = {
         return res.render('users/user-edit-password.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       }
     } catch (error) {
+
       console.log(error)
       return res.redirect('/500')
     }
@@ -259,6 +266,7 @@ const controller = {
         { where: { id } }
       )
       return res.redirect('/users/login')
+
     } catch (error) {
       console.log(error)
       return res.redirect('/500')
