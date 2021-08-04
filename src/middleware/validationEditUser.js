@@ -11,17 +11,27 @@ const validations = [
 		.custom(async (val, { req }) => {
 			const userFound = await User.findOne({ where: { email: val } })
 			const userLogged = await User.findByPk(req.session.logged)
+			//VALIDAR: 
+			//1. Un usuario pueda cambiar su mail pero que no este repetido en la BD
+			//2. El administrador pueda cambiar el mail de un usuario pero que no este repetido en la BD
 
+			//1. 
+			const userToEdit = await User.findByPk(req.params.id) // datos del usuario a editar
 
-			if (userFound && userFound.id == userLogged.id) {
+			//Si el usuario CAMBIA el mail
+			if (!userFound) {
 				return true
-			} else if (userLogged.role == 'admin' || userFound.id == req.body.id) {
-				return true
-			} else if (userFound) {
-				return Promise.reject('El usuario ya existe')
 			}
-			return true
-		}),
+			//Si el usuario NO cambia el mail
+			if (userToEdit.email == userFound.email) {
+				return true
+			}
+
+
+
+			return Promise.reject('El usuario ya existe')
+		})
+	,
 
 	body('profileImg').custom((value, { req }) => {
 		const file = req.file

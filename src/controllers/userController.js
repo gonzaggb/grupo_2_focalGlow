@@ -99,7 +99,7 @@ const controller = {
     try {
       const userLength = await User.findAll()
       const userList = await User.findAll({
-        limit: 10,
+        limit: 20,
         offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
       })
 
@@ -124,7 +124,7 @@ const controller = {
 
     try {
       const userToDelete = await User.findByPk(id)
-
+      console.log(userToDelete)
       if (userToDelete.profileImg != 'profile.jpg') {
         const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToDelete.profileImg)
         fs.unlinkSync(imageToDelete)
@@ -199,12 +199,15 @@ const controller = {
       let { firstName, lastName, email, phone, address } = req.body
       const { file } = req
 
+      console.log(userToEdit.profileImg)
       //MARS: Si el usuario envia una imagen nueva debo borrar la anterior del servidor
-      if (file) {
-        const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToEdit.profileImg)
+      if (file && userToEdit.profileImg != 'profile.jpg') {
 
+        const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToEdit.profileImg)
         fs.unlinkSync(imageToDelete)
+        console.log(imageToDelete)
       }
+
 
       //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
       let password = userToEdit.password
