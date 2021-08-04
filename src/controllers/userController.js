@@ -24,21 +24,26 @@ const controller = {
     }
     const { email, remember } = req.body
 
-    const user = await User.findOne(
-      {
-        where: { email }
-      })
+    try {
+      const user = await User.findOne(
+        {
+          where: { email }
+        })
 
-    req.session.logged = user.id
-    if (remember) {
-      res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
-    }
+      req.session.logged = user.id
+      if (remember) {
+        res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
+      }
 
-    //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
-    if (user.role == 'admin') {
-      res.redirect('/product')
-    } else {
-      res.redirect('/')
+      //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
+      if (user.role == 'admin') {
+        res.redirect('/product')
+      } else {
+        res.redirect('/')
+      }
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
     }
   },
 
@@ -76,10 +81,16 @@ const controller = {
       phone,
       role: 'user'
     }
+    try {
+      await User.create(newUser)
 
-    await User.create(newUser)
+      res.redirect('/users/login')
 
-    res.redirect('/users/login')
+    } catch (error) {
+      console.log(error)
+
+      return res.redirect('/500')
+    }
   },
 
 
@@ -98,9 +109,11 @@ const controller = {
       });
       const nextButton = parseInt(userLength.length / 10)
       res.render('users/user-list.ejs', { userList, nextButton })
+
     } catch (error) {
       console.log(error)
-      res.status(404).render('404.ejs')
+
+      return res.redirect('/500')
     }
 
   },
@@ -119,12 +132,18 @@ const controller = {
 
     } catch (error) {
       console.log(error)
-      return res.status(404).render('404.ejs')
+      return res.redirect('/500')
     }
 
-    await User.destroy({
-      where: { id }
-    })
+    try {
+      await User.destroy({
+        where: { id }
+      })
+
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
+    }
 
     res.redirect('/users')
   },
@@ -141,23 +160,37 @@ const controller = {
 
   editPassword: async (req, res) => {
     const { id } = req.params
-    const userToEdit = await User.findByPk(id)
-    userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
-    res.render('users/user-edit-password.ejs', { userToEdit })
+
+    try {
+      const userToEdit = await User.findByPk(id)
+      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+      res.render('users/user-edit-password.ejs', { userToEdit })
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
+    }
   },
 
 
   update: async (req, res) => {
     const { id } = req.params
-    const userToEdit = await User.findByPk(id);
 
-    const validationStatus = validationResult(req) // trae los resultados del middleware
+    try {
 
-    if (!validationStatus.isEmpty()) {
-      //Si hay errores que pasa
-      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
-      return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+      const userToEdit = await User.findByPk(id);
+
+      const validationStatus = validationResult(req) // trae los resultados del middleware
+
+      if (!validationStatus.isEmpty()) {
+        //Si hay errores que pasa
+        userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+        return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+      }
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
     }
+
     //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
     let { firstName, lastName, email, phone, address } = req.body
     const { file } = req
@@ -196,21 +229,26 @@ const controller = {
       res.redirect('/users')
     } catch (error) {
       console.log(error)
-      res.status(404).render('404.ejs')
+      return res.redirect('/500')
     }
 
   },
 
   updatePassword: async (req, res) => {
     const { id } = req.params
-    const userToEdit = await User.findByPk(id)
 
-    const validationStatus = validationResult(req) // trae los resultados del middleware
+    try {
+      const userToEdit = await User.findByPk(id)
+      const validationStatus = validationResult(req) // trae los resultados del middleware
 
-    if (!validationStatus.isEmpty()) {
+      if (!validationStatus.isEmpty()) {
 
-      //Si hay errores que pasa
-      return res.render('users/user-edit-password.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+        //Si hay errores que pasa
+        return res.render('users/user-edit-password.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+      }
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
     }
 
     let { password } = req.body
@@ -223,18 +261,24 @@ const controller = {
       return res.redirect('/users/login')
     } catch (error) {
       console.log(error)
-      res.status(404).render('404.ejs')
+      return res.redirect('/500')
     }
   },
 
 
   profile: async (req, res) => {
     const id = req.params.id
-    const userToView = await User.findByPk(id)
 
-    userToView.dataValues.profileImg = profileImagePath + userToView.dataValues.profileImg
+    try {
+      const userToView = await User.findByPk(id)
+      userToView.dataValues.profileImg = profileImagePath + userToView.profileImg
 
-    res.render('users/user-detail.ejs', { userToView })
+      res.render('users/user-detail.ejs', { userToView })
+
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
+    }
   },
 
   logout: (req, res) => {
