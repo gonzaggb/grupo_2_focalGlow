@@ -18,7 +18,7 @@ const controller = {
 
     let products = await Product.findAll({
       where: { categoryId: category.id },
-      include: [{ association: 'images', where: {type: 'main'} }]
+      include: [{ association: 'images', where: { type: 'main' } }]
     })
 
     products.forEach(product => {
@@ -42,6 +42,7 @@ const controller = {
 
     } catch (error) {
       console.log(error)
+      res.status(404).render('404.ejs')
     }
   },
 
@@ -152,6 +153,7 @@ const controller = {
         { where: { id: req.params.id } })
     } catch (error) {
       console.log(error)
+      res.status(404).render('404.ejs')
     }
 
     return res.redirect('/category')
