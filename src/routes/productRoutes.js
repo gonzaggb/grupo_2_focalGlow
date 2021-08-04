@@ -31,6 +31,9 @@ router.post('/add', upload.any(), validateCreateForm, productController.create)/
 router.get('/:id/edit', authMiddleware, adminMiddleware, productController.edit) //formulario de edicion de producto
 router.put('/:id/edit', upload.any(), validateEditForm, productController.update)
 
+//checkout
+router.post('/checkout', productController.checkout)
+
 //Delete
 router.delete('/:id', authMiddleware, adminMiddleware, productController.delete)
 

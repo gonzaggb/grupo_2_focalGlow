@@ -197,6 +197,9 @@ const controller = {
     res.render('products/product-edit.ejs', { productFound, category, images, features, filesPdf, featuresList })
 
   },
+  checkout: async (req, res) => {
+    res.send(req.body)
+  },
 
 
   update: async (req, res) => {
