@@ -58,6 +58,10 @@ app.use('/product', productRoutes)
 app.use('/category', categoryRoutes)
 app.use('/users', userRoutes)
 
+//Ruta 500 por si falla la base de datos
+app.use((req, res, next) => {
+  res.status(500).render('500.ejs')
+})
 // Ruta 404
 app.use((req, res, next) => {
   res.status(404).render('404.ejs')

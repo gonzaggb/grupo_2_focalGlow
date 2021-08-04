@@ -78,18 +78,31 @@ const controller = {
       e.fieldname == 'imageCover' ? categoryNew.imageCover = e.filename : categoryNew.imageHome = e.filename
     })
 
-    await Category.create(categoryNew)
-    return res.redirect('/category')
+    try {
+      await Category.create(categoryNew)
+      return res.redirect('/category')
+
+    } catch (error) {
+      console.log(error)
+      res.status(404).render('404.ejs')
+    }
 
   },
 
   edit: async (req, res) => {
-    const category = await Category.findByPk(req.params.id)
 
-    category.dataValues.imageCover = categoryImagePath + category.imageCover
-    category.dataValues.imageHome = categoryImagePath + category.imageHome
+    try {
+      const category = await Category.findByPk(req.params.id)
 
-    res.render('categories/category-edit.ejs', { category })
+      category.dataValues.imageCover = categoryImagePath + category.imageCover
+      category.dataValues.imageHome = categoryImagePath + category.imageHome
+
+      res.render('categories/category-edit.ejs', { category })
+    }
+    catch (error) {
+      console.log(error)
+      res.status(404).render('404.ejs')
+    }
   },
 
   update: async (req, res) => {
