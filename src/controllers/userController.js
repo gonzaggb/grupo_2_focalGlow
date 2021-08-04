@@ -99,6 +99,7 @@ const controller = {
       const nextButton = parseInt(userLength.length / 10)
       res.render('users/user-list.ejs', { userList, nextButton })
     } catch (error) {
+      res.status(400).render('404.ejs')
       console.log(error)
     }
 
@@ -130,10 +131,16 @@ const controller = {
 
   edit: async (req, res) => {
     const id = req.params.id
-    const userToEdit = await User.findByPk(id)
-    userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+    try {
+      const userToEdit = await User.findByPk(id)
+      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+      res.render('users/user-edit.ejs', { userToEdit })
+    } catch (error) {
+      res.redirect('/error-page')
+      console.log(error)
 
-    res.render('users/user-edit.ejs', { userToEdit })
+    }
+
 
   },
 
