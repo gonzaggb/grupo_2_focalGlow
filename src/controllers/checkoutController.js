@@ -2,7 +2,7 @@ const session = require('express-session')
 const {Product} = require('../database/models')
 
 const controller = {
-    add: async(req,res)=>{
+    add: async function (req,res){
         const product = await Product.findByPk(req.body.id)
         const {cct , dim, optic, power}= req.body
         const productImage = await product.getImages()
@@ -13,18 +13,21 @@ const controller = {
                
             }
         });
+        const productPrice = Number(product.price) //FIXME actualmente toma el precio del produco, tenemos que hacer que el precio se 
+        //actualice en el front en base a las diferentes features y mandarlo por el body
+         
+        const quantity = Number(req.body.quantity)
         const item = {
             productName: product.name,
-            productPrice: Number(product.price),//FIXME agregar js front para mandar por body
+            productPrice,
             productDescription: product.description,
             productFeatures:[cct , dim , optic , power],
             productImage: mainImage,
-            quantity: Number(req.body.quantity),
-            //subTotal: ,//FIXME falta arreglar el tema de la multiplicacion 
-           userId: req.session.id,
+            quantity,
+            subTotal: quantity * productPrice,
+            userId: req.session.id,
         }
         
-        console.log(item.productPrice * item.quantity)
     }
 
 }
