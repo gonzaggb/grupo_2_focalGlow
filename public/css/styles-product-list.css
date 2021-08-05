@@ -92,7 +92,7 @@ a {
   height: 50px;
 }
 
-form button {
+.trash {
   border: none;
   background-color: transparent;
   cursor: pointer;
