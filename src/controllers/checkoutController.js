@@ -1,5 +1,8 @@
 const session = require('express-session')
 const {Product} = require('../database/models')
+const {Item}= require('../database/models')
+const {Feature}= require('../database/models')
+const Op= require('sequelize')
 
 const controller = {
     add: async function (req,res){
@@ -13,22 +16,46 @@ const controller = {
                
             }
         });
+        const productFeatureAux= await Feature.findAll({
+            attributes:['name'],
+            where: {
+                id: [cct, dim, optic, power]
+            },
+            
+            
+        })
+        let productFeatures = []
+        productFeatureAux.forEach(e=>{
+            productFeatures.push(e.name)
+        })
+         
+        
         const productPrice = Number(product.price) //FIXME actualmente toma el precio del produco, tenemos que hacer que el precio se 
         //actualice en el front en base a las diferentes features y mandarlo por el body
-         
         const quantity = Number(req.body.quantity)
+        /* const productFeatures = [cct , dim , optic , power].toString() */
+        const userId = res.locals.user.id
         const item = {
             productName: product.name,
             productPrice,
             productDescription: product.description,
-            productFeatures:[cct , dim , optic , power],
+            productFeatures: productFeatures.toString(),
             productImage: mainImage,
             quantity,
             subTotal: quantity * productPrice,
-            userId: req.session.id,
+            userId
         }
         
+        await Item.create(item)
+        res.redirect('/checkout')
+    },
+    list: async (req,res)=>{
+        res.render('checkout.ejs')
     }
+    // validar que el usuario no pueda agregar dos productos iguales en items diferentes
+    //tomar el precio de la db y no del front 
+    //validar que todo lo que se mande del front corresponda con los que esta en la db 
+    
 
 }
 

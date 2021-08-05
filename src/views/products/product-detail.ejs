@@ -7,7 +7,7 @@
   <body>
     <!--HEADER-->
     <%- include ('../partials/header')%>
-      <form action="/productCart/add" method="POST">
+      <form action="/checkout/add" method="POST">
         <div class="product-name">
           <h2>
             <%=product.name%>
@@ -143,7 +143,7 @@
                   <%=toThousand(product.price)%>
               </h3>
               <div class="qtyadd">
-                <input type="number" name='quantity' placeholder="0" min="0" />
+                <input type="number" name='quantity' placeholder="1" min="1" />
                 <button class="add" type="submit">AÑADIR</button>
               </div>
             </section>

@@ -57,7 +57,7 @@ app.use('/', mainRoutes)
 app.use('/product', productRoutes)
 app.use('/category', categoryRoutes)
 app.use('/users', userRoutes)
-app.use('/productCart' , checkoutRoutes)
+app.use('/checkout' ,checkoutRoutes)
 
 //Ruta 500 por si falla la base de datos
 app.use('/500', (req, res, next) => {
