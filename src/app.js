@@ -50,13 +50,14 @@ const mainRoutes = require('./routes/mainRoutes')
 const categoryRoutes = require('./routes/categoryRoutes')
 const productRoutes = require('./routes/productRoutes')
 const userRoutes = require('./routes/usersRoutes')
-
+const checkoutRoutes = require('./routes/checkoutRoutes')
 
 //Rutas
 app.use('/', mainRoutes)
 app.use('/product', productRoutes)
 app.use('/category', categoryRoutes)
 app.use('/users', userRoutes)
+app.use('/productCart' , checkoutRoutes)
 
 //Ruta 500 por si falla la base de datos
 app.use('/500', (req, res, next) => {
