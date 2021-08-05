@@ -24,21 +24,26 @@ const controller = {
     }
     const { email, remember } = req.body
 
-    const user = await User.findOne(
-      {
-        where: { email }
-      })
+    try {
+      const user = await User.findOne(
+        {
+          where: { email }
+        })
 
-    req.session.logged = user.id
-    if (remember) {
-      res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
-    }
+      req.session.logged = user.id
+      if (remember) {
+        res.cookie('userId', user.id, { maxAge: 6000000, signed: true })
+      }
 
-    //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
-    if (user.role == 'admin') {
-      res.redirect('/product')
-    } else {
-      res.redirect('/')
+      //EVALUA EL TIPO DE USUARIO Y EN CASO DE SER ADMIN LO ENVIA A LISTADO DE PRODUCTO, CASO CONTRARIO A PERFIL
+      if (user.role == 'admin') {
+        res.redirect('/product')
+      } else {
+        res.redirect('/')
+      }
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
     }
   },
 
@@ -76,10 +81,16 @@ const controller = {
       phone,
       role: 'user'
     }
+    try {
+      await User.create(newUser)
 
-    await User.create(newUser)
+      res.redirect('/users/login')
 
-    res.redirect('/users/login')
+    } catch (error) {
+      console.log(error)
+
+      return res.redirect('/500')
+    }
   },
 
 
@@ -88,7 +99,7 @@ const controller = {
     try {
       const userLength = await User.findAll()
       const userList = await User.findAll({
-        limit: 10,
+        limit: 20,
         offset: (typeof (offset) == 'undefined') ? Number(0) : Number(offset),
       })
 
@@ -98,9 +109,11 @@ const controller = {
       });
       const nextButton = parseInt(userLength.length / 10)
       res.render('users/user-list.ejs', { userList, nextButton })
+
     } catch (error) {
       console.log(error)
-      res.status(404).render('404.ejs')
+
+      return res.redirect('/500')
     }
 
   },
@@ -111,7 +124,7 @@ const controller = {
 
     try {
       const userToDelete = await User.findByPk(id)
-
+      console.log(userToDelete)
       if (userToDelete.profileImg != 'profile.jpg') {
         const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToDelete.profileImg)
         fs.unlinkSync(imageToDelete)
@@ -119,12 +132,18 @@ const controller = {
 
     } catch (error) {
       console.log(error)
-      res.status(404).render('404.ejs')
+      return res.redirect('/500')
     }
 
-    await User.destroy({
-      where: { id }
-    })
+    try {
+      await User.destroy({
+        where: { id }
+      })
+
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
+    }
 
     res.redirect('/users')
   },
@@ -132,85 +151,114 @@ const controller = {
 
   edit: async (req, res) => {
     const id = req.params.id
-    const userToEdit = await User.findByPk(id)
-    userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+    try {
+      const userToEdit = await User.findByPk(id)
+      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+      res.render('users/user-edit.ejs', { userToEdit })
 
-    res.render('users/user-edit.ejs', { userToEdit })
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
+    }
 
   },
 
   editPassword: async (req, res) => {
     const { id } = req.params
-    const userToEdit = await User.findByPk(id)
-    userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
-    res.render('users/user-edit-password.ejs', { userToEdit })
+
+    try {
+      const userToEdit = await User.findByPk(id)
+      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+      res.render('users/user-edit-password.ejs', { userToEdit })
+
+    } catch (error) {
+
+      console.log(error)
+      return res.redirect('/500')
+    }
   },
 
 
   update: async (req, res) => {
     const { id } = req.params
-    const userToEdit = await User.findByPk(id);
-
-    const validationStatus = validationResult(req) // trae los resultados del middleware
-
-    if (!validationStatus.isEmpty()) {
-      //Si hay errores que pasa
-      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
-      return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
-    }
-    //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
-    let { firstName, lastName, email, phone, address } = req.body
-    const { file } = req
-
-    //MARS: Si el usuario envia una imagen nueva debo borrar la anterior del servidor
-    if (file) {
-      const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToEdit.profileImg)
-
-      fs.unlinkSync(imageToDelete)
-    }
-
-    //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
-    let password = userToEdit.password
-
-    const userUpdate = {
-      firstName,
-      lastName,
-      email,
-      password,
-      phone,
-      address,
-    }
-
-    if (!file) {
-      userUpdate.profileImg = userToEdit.profileImg
-    } else {
-      userUpdate.profileImg = file.filename
-    }
 
     try {
+
+      const userToEdit = await User.findByPk(id);
+
+      const validationStatus = validationResult(req) // trae los resultados del middleware
+
+      if (!validationStatus.isEmpty()) {
+        //Si hay errores que pasa
+        userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+        return res.render('users/user-edit.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+      }
+
+
+      //MARS: Tuve que modificar const por let al redefinirle password si el usuario no quiere modificarlo
+      let { firstName, lastName, email, phone, address } = req.body
+      const { file } = req
+
+      console.log(userToEdit.profileImg)
+      //MARS: Si el usuario envia una imagen nueva debo borrar la anterior del servidor
+      if (file && userToEdit.profileImg != 'profile.jpg') {
+
+        const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToEdit.profileImg)
+        fs.unlinkSync(imageToDelete)
+        console.log(imageToDelete)
+      }
+
+
+      //El password es el anterior. Para modificar el password es otro formulario/otra parte del controlador
+      let password = userToEdit.password
+
+      const userUpdate = {
+        firstName,
+        lastName,
+        email,
+        password,
+        phone,
+        address,
+      }
+
+      if (!file) {
+        userUpdate.profileImg = userToEdit.profileImg
+      } else {
+        userUpdate.profileImg = file.filename
+      }
+
+
       await User.update(
         userUpdate
         ,
         { where: { id } }
       )
       res.redirect('/users')
+
     } catch (error) {
+
       console.log(error)
-      res.status(404).render('404.ejs')
+      return res.redirect('/500')
     }
 
   },
 
   updatePassword: async (req, res) => {
     const { id } = req.params
-    const userToEdit = await User.findByPk(id)
 
-    const validationStatus = validationResult(req) // trae los resultados del middleware
+    try {
+      const userToEdit = await User.findByPk(id)
+      const validationStatus = validationResult(req) // trae los resultados del middleware
 
-    if (!validationStatus.isEmpty()) {
+      if (!validationStatus.isEmpty()) {
 
-      //Si hay errores que pasa
-      return res.render('users/user-edit-password.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+        //Si hay errores que pasa
+        return res.render('users/user-edit-password.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+      }
+    } catch (error) {
+
+      console.log(error)
+      return res.redirect('/500')
     }
 
     let { password } = req.body
@@ -221,20 +269,27 @@ const controller = {
         { where: { id } }
       )
       return res.redirect('/users/login')
+
     } catch (error) {
       console.log(error)
-      res.status(404).render('404.ejs')
+      return res.redirect('/500')
     }
   },
 
 
   profile: async (req, res) => {
     const id = req.params.id
-    const userToView = await User.findByPk(id)
 
-    userToView.dataValues.profileImg = profileImagePath + userToView.dataValues.profileImg
+    try {
+      const userToView = await User.findByPk(id)
+      userToView.dataValues.profileImg = profileImagePath + userToView.profileImg
 
-    res.render('users/user-detail.ejs', { userToView })
+      res.render('users/user-detail.ejs', { userToView })
+
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
+    }
   },
 
   logout: (req, res) => {

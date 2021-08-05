@@ -9,6 +9,7 @@ const authMiddleware = require('../middleware/authMiddleware')
 //Asigno a cada ruta la propiedad del controlador
 router.get('/', mainController.home)
 router.get('/checkout',authMiddleware, mainController.checkout)
+
 router.get('/us', mainController.us)
 
 module.exports = router

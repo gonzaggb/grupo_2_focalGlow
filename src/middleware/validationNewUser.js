@@ -33,6 +33,7 @@ const validations = [
         if (file && !files.isFileImage(file.originalname)) {
             throw new Error(`Ingrese un archivo que sea una imagen`)
         }
+
         return true
     })
 ]
