@@ -19,37 +19,34 @@
 
                 <article class="checkout-product">
                 <div class="name-category">
-                    <h3><%= productCheckout[i].nombre %></h3>
-                    <h4><%= productCheckout[i].categoria %></h4>
+                    <h3><%= productCheckout[i].productName %></h3>
+                   
                 </div>
 
                 <div class="product-detail">
                     <div class="separador"></div>
                     <div class="img-detail">
                         <div class="product-image">
-                            <img src="/img/Barcelona.jpg">
+                            <img src="/img/<%=productCheckout[i].productImage%>">
 
                         </div>
                         <div class="detail">
                             <div class="item-left">
                                 <div class="left-side">
-                                    <span>Marca: <%= productCheckout[i].marca %></span>
-                                    <br>
-                                    <span>Potencia: <%= productCheckout[i].potencia %></span>
-                                    <br>
-                                    <span>CCT: <%= productCheckout[i].cct %></span>
-                                    <br>
-                                    <span>DIM: <%= productCheckout[i].dim %></span>
-
+                                    <%features[i].forEach(feature=>{ %> 
+                                            <span><%= feature %></span>
+                                            <br>                                  
+                                    <%})%>
+                                    
                                 </div>
                             </div>
                             <div class="item-right">
                                 <div class="left-side">
-                                    <span>Precio: $<%= productCheckout[i].precio %></span>
+                                    <span>Precio: $<%= productCheckout[i].productPrice %></span>
                                     <br>
-                                    <span>Cantidad: <input type="text" name="quantity" value="<%= productCheckout[i].cantidad %>"></span>
+                                    <span>Cantidad: <input type="text" name="quantity" value="<%= productCheckout[i].quantity %>"></span>
                                     <br>
-                                    <span>Total: $<%= productCheckout[i].precio * productCheckout[i].cantidad %></span>
+                                    <span>Total: $<%= productCheckout[i].subtotal %></span>
                                 </div>
 
                             </div>

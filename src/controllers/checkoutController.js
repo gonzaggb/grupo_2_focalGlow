@@ -3,6 +3,8 @@ const {Product} = require('../database/models')
 const {Item}= require('../database/models')
 const {Feature}= require('../database/models')
 const Op= require('sequelize')
+const { checkout } = require('./mainController')
+
 
 const controller = {
     add: async function (req,res){
@@ -44,18 +46,31 @@ const controller = {
             quantity,
             subTotal: quantity * productPrice,
             userId
+
         }
         
         await Item.create(item)
         res.redirect('/checkout')
     },
     list: async (req,res)=>{
-        res.render('checkout.ejs')
+        const productCheckout = await Item.findAll({
+            where:{
+                userId: res.locals.user.id
+            }
+
+           
+        })
+        let features = [] 
+        const featuresaux =  productCheckout.forEach(e=>{
+            features.push(e.productFeatures.split(','))
+        }) 
+        //preguntar como hacer para que viaje con el nombre 
+        res.render('checkout.ejs', {productCheckout, features})
     }
     // validar que el usuario no pueda agregar dos productos iguales en items diferentes
     //tomar el precio de la db y no del front 
     //validar que todo lo que se mande del front corresponda con los que esta en la db 
-    
+
 
 }
 
