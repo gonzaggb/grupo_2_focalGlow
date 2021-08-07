@@ -80,7 +80,7 @@ CREATE TABLE items(
     product_name VARCHAR(50) NOT NULL,
     product_price DECIMAL NOT NULL,
     product_description VARCHAR(255) NOT NULL,
-    product_features VARCHAR(50) NOT NULL,
+    product_features VARCHAR(250) NOT NULL,
     product_image VARCHAR(255) NOT NULL,
     quantity INT NOT NULL,
     subtotal DECIMAL NOT NULL,
