@@ -26,11 +26,17 @@ const controller = {
             
             
         })
-        let productFeatures = []
+        let productFeatures2 = []
         productFeatureAux.forEach(e=>{
-            productFeatures.push(e.name)
+            productFeatures2.push(e.name)
         })
-         
+        let productFeatures = {
+            CCT :  'CCT: ' +productFeatures2[0],
+            DIM : 'DIM: '+ productFeatures2[1],
+            OPTIC : 'OPTIC: '+productFeatures2[2],
+            POWER : 'POWER: '+productFeatures2[3]
+        } 
+        
         
         const productPrice = Number(product.price) //FIXME actualmente toma el precio del produco, tenemos que hacer que el precio se 
         //actualice en el front en base a las diferentes features y mandarlo por el body
@@ -41,13 +47,14 @@ const controller = {
             productName: product.name,
             productPrice,
             productDescription: product.description,
-            productFeatures: productFeatures.toString(),
+            productFeatures: JSON.stringify(productFeatures),
             productImage: mainImage,
             quantity,
             subTotal: quantity * productPrice,
             userId
 
         }
+        
         
         await Item.create(item)
         res.redirect('/checkout')
@@ -60,10 +67,15 @@ const controller = {
 
            
         })
+        console.log(productCheckout)
+        
         let features = [] 
+        
         const featuresaux =  productCheckout.forEach(e=>{
-            features.push(e.productFeatures.split(','))
-        }) 
+           features.push(JSON.parse(e.productFeatures))
+        })
+         
+          
         //preguntar como hacer para que viaje con el nombre 
         res.render('checkout.ejs', {productCheckout, features})
     }
