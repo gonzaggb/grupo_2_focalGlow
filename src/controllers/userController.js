@@ -124,7 +124,7 @@ const controller = {
 
     try {
       const userToDelete = await User.findByPk(id)
-      console.log(userToDelete)
+
       if (userToDelete.profileImg != 'profile.jpg') {
         const imageToDelete = path.join(__dirname, '../../public' + profileImagePath + userToDelete.profileImg)
         fs.unlinkSync(imageToDelete)
