@@ -9,6 +9,7 @@ a {
 
 html{
   scroll-behavior: smooth;
+  overflow:scroll
 }
 
 /*Define las caracteristicas del body
@@ -43,10 +44,14 @@ main {
   border: solid white 1px;
   background-color: rgba(0,0,0,0.4);
   border-radius: 5px; 
-  position: fixed;
+  /* position: fixed; */
   left: 15%;
   top: 25%;
-  padding: 18px
+  padding: 18px;
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 5%;
+  min-width: 300px;
 
 }
 
@@ -163,8 +168,6 @@ textarea.input {
 
 @media (min-width: 768px){
 
-
-
 body{
 
   color:black;
@@ -178,8 +181,6 @@ body{
 
 .registry-form{
   color:white;
-/*     margin-top:5%;
-*/
 }
 .right{
   z-index:1;
@@ -189,10 +190,7 @@ body{
 
 }
 .button-container{
-/*     margin-bottom: 10px;
-*/    width: 100%;
-
-
+  width: 100%;
 }
 
 
@@ -200,8 +198,10 @@ body{
 
 main{
       text-align: center;
-      position:fixed;
-  
+      width: 25%;
+      margin-left: 5%;
+      margin-top: 5%;
+      min-width: 300px;
 }
 }
 
@@ -209,9 +209,7 @@ main{
 @media (min-width: 992px){
   .registry-container{
       justify-content: space-evenly;
-      width: 300px;
-
-      
+     
   }
   .login-button{
       height: 40px;
