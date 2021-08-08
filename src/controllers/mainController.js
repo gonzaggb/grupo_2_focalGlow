@@ -15,34 +15,39 @@ const SALEIMAGES = 4 // cantidad de imagenes que se muestran en la parte de SALE
 const controller = {
 
   home: async (req, res) => {
-
-    const products = await Product.findAll({
-      include: [{ association: 'category' },
-      {
-        association: 'images',
-        where: { type: 'main' },
-      }]
-    })
-
-    products.forEach(product => {
-      product.images.forEach(image => {
-        addProductImagePath(image)
+    try {
+      const products = await Product.findAll({
+        include: [{ association: 'category' },
+        {
+          association: 'images',
+          where: { type: 'main' },
+        }]
       })
-    })
 
-    let productsQty = products.length
-    const randomArray = random.randomArray(SALEIMAGES, productsQty)
+      products.forEach(product => {
+        product.images.forEach(image => {
+          addProductImagePath(image)
+        })
+      })
 
-    let categoryList = await Category.findAll()
-    categoryList.forEach(category => {
-      category.dataValues.imageCover = path.join(pathImageCategories, category.imageCover)
-      category.dataValues.imageHome = path.join(pathImageCategories, category.imageHome)
-    });
+      let productsQty = products.length
+      const randomArray = random.randomArray(SALEIMAGES, productsQty)
+
+      let categoryList = await Category.findAll()
+      categoryList.forEach(category => {
+        category.dataValues.imageCover = path.join(pathImageCategories, category.imageCover)
+        category.dataValues.imageHome = path.join(pathImageCategories, category.imageHome)
+      });
 
 
-    res.render('home.ejs', { products, categoryList, randomArray }) // paso al html el array
+      res.render('home.ejs', { products, categoryList, randomArray }) // paso al html el array
+
+    } catch (error) {
+      console.log(error)
+      return res.redirect('/500')
+    }
   },
-  
+
 
   checkout: (req, res) => {
     //Esto esta aca como para tener unos datos que enviar al checkout. NO va aca.

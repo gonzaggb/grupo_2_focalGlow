@@ -139,7 +139,7 @@ const controller = {
   },
 
   create: async (req, res) => {
-    const featuresList = await Feature.findAll() // listado de todas las features
+
     let errors = validationResult(req)
     const productInfo = req.body
     const { material, cct, dim, source, optic, power } = req.body
@@ -149,13 +149,22 @@ const controller = {
     const powerId = Array.isArray(power) ? power : [power]
     productInfo.power = powerId
 
+
+
     if (!errors.isEmpty()) {
       /*borra los archivos que se guardaron en el servidor pero no se registraron por haber un error en la creación del producto*/
       files.forEach(file => {
         fs.unlinkSync(file.path)
       })
-      //retorno a la vista con los errores
-      res.render('products/product-create.ejs', { errors: errors.mapped(), old: productInfo, featuresList })
+      try {
+        const featuresList = await Feature.findAll() // listado de todas las features
+        //retorno a la vista con los errores
+        res.render('products/product-create.ejs', { errors: errors.mapped(), old: productInfo, featuresList })
+
+      } catch (error) {
+        console.log(error)
+        return res.redirect('/500')
+      }
     }
 
     try {
