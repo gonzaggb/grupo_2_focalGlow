@@ -85,6 +85,7 @@
                         <div class="separador"></div>
                         <span>Cantidad: <%= productCheckout.length %>
                                 <br>
+                                <form action="" method="post">    
                                 <span>Total:
                                     <% let total=0; for (i=0; i < productCheckout.length; i++) { %>
                                         <% total=total + productCheckout[i].cantidad * productCheckout[i].precio %>
@@ -92,12 +93,20 @@
                                                 <%=total %>
                                 </span>
                                 <br>
-                                <div class="separador"></div>
+                                <div class="separador">
+                                <div class="input">
+                                <label for="address">Dirección de entrega</label><br>
+                                <input type="text" name="address" id="" value="<%= user.address %>"><br>
+                                <label for="phone">Teléfono de contacto</label><br>
+                                <input type="text" name="phone" id="" value="<%= user.phone %>"><br>
+                                </div>
                                 <p>Revise bien todos los datos
                                     antes de contfirmar la compra
                                 </p>
                                 <div class="separador"></div>
+                                
                                 <button class="final-button">FINALIZAR</button>
+                                </form>
                     </div>
                     <div>
                         <div class="similar-interests">

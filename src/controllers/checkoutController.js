@@ -2,6 +2,7 @@ const session = require('express-session')
 const { Product } = require('../database/models')
 const { Item } = require('../database/models')
 const { Feature } = require('../database/models')
+const { User } = require('../database/models')
 const Op = require('sequelize')
 const { checkout } = require('./mainController')
 
@@ -64,10 +65,11 @@ const controller = {
             where: {
                 userId: res.locals.user.id
             }
-
-
         })
-
+        const  id  = res.locals.user.id
+        const user = await User.findByPk(id)
+        
+        
         let features = []
         const featuresaux = productCheckout.forEach(e => {
             features.push(JSON.parse(e.productFeatures))//aca paso a objeto los strings de los features
@@ -75,7 +77,7 @@ const controller = {
 
 
         //preguntar como hacer para que viaje con el nombre 
-        res.render('checkout.ejs', { productCheckout, features })
+        res.render('checkout.ejs', { productCheckout, features, user })
     },
     // validar que el usuario no pueda agregar dos productos iguales en items diferentes
     //tomar el precio de la db y no del front 
@@ -85,7 +87,11 @@ const controller = {
         const itemToDelete = await Item.findByPk(id)
         itemToDelete.destroy()
         res.redirect('/checkout')
+    },
+    purchase : async (req,res)=>{
+
     }
+
 
 }
 
