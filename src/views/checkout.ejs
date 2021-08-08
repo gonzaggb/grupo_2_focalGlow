@@ -85,7 +85,7 @@
                         <div class="separador"></div>
                         <span>Cantidad: <%= productCheckout.length %>
                                 <br>
-                                <form action="" method="post">    
+                                <form action="/checkout/purchase" method="POST">    
                                 <span>Total: $
                                    <% let total = 0
                                     productCheckout.forEach(product => {
@@ -94,6 +94,7 @@
                                     <%=total%>
                                     
                                 </span>
+                                <input name="total" type="number" value="<%=total%>" hidden>
                                 <br>
                                 <div class="separador">
                                 <div class="input">
@@ -110,6 +111,7 @@
                                 <button class="final-button">FINALIZAR</button>
                                 </form>
                     </div>
+                </div>
                     <div>
                         <div class="similar-interests">
                             <h3>Productos que también te pueden interesar</h3>
@@ -119,7 +121,6 @@
                                         <li><img src="/img/colgante.jpg" alt=""></li>
                                         <li><img src="/img/coral.jpg" alt=""></li>
                                         <li><img src="/img/delfina.jpg" alt=""></li>
-
                                     </ul>
 
                                 </div>

@@ -69,7 +69,6 @@ CREATE TABLE files (
 
 CREATE TABLE orders (
 	id INT  AUTO_INCREMENT NOT NULL,
-    order_number INT NOT NULL,
     total DECIMAL NOT NULL,
     created_at DATE NOT NULL,
     user_id INT NOT NULL,
