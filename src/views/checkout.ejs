@@ -16,7 +16,7 @@
                 <section class="checkout-articles">
                     <% for (i=0; i < productCheckout.length; i++) { %>
                         <!-- PRODUCTO <%- i %> -->
-
+                        
                         <article class="checkout-product">
                             <div class="name-category">
                                 <h3>
@@ -71,7 +71,9 @@
                                 <div class="separador"></div>
 
                                 <div id="item-eliminar">
-                                    <span><a href="#"><i class="far fa-trash-alt"></i></a></span>
+                                    <form action="/checkout/<%=productCheckout[i].id%>?_method=DELETE"" method="POST">
+                                    <span><button type="submit"><i class="far fa-trash-alt"></i></button></span>
+                                    </form>
                                 </div>
                             </div>
                         </article>

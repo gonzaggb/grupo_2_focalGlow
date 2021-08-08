@@ -76,11 +76,16 @@ const controller = {
 
         //preguntar como hacer para que viaje con el nombre 
         res.render('checkout.ejs', { productCheckout, features })
-    }
+    },
     // validar que el usuario no pueda agregar dos productos iguales en items diferentes
     //tomar el precio de la db y no del front 
     //validar que todo lo que se mande del front corresponda con los que esta en la db 
-
+    destroy : async (req, res) =>{
+        let {id} = req.params
+        const itemToDelete = await Item.findByPk(id)
+        itemToDelete.destroy()
+        res.redirect('/checkout')
+    }
 
 }
 
