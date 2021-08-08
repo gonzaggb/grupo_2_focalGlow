@@ -56,11 +56,11 @@
 								<td class="center">
 									<a href="/product/<%=product.id%>/edit"><i class="far fa-edit"></i></a>
 								</td>
-								<td class="center">
-									<form action="/product/<%=product.id%>?_method=DELETE" method="POST">
-										<button type="submit"><i class="far fa-trash-alt"></i></button>
-									</form>
-								</td>
+								<form action="/product/<%=product.id%>?_method=DELETE" method="POST">
+									<td class="center">
+										<button class="trash" type="submit"><i class="far fa-trash-alt"></i></button>
+									</td>
+								</form>
 							</tr>
 							<%})%>
 						</table>
