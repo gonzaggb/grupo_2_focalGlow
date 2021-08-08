@@ -86,11 +86,13 @@
                         <span>Cantidad: <%= productCheckout.length %>
                                 <br>
                                 <form action="" method="post">    
-                                <span>Total:
-                                    <% let total=0; for (i=0; i < productCheckout.length; i++) { %>
-                                        <% total=total + productCheckout[i].cantidad * productCheckout[i].precio %>
-                                            <% }%>
-                                                <%=total %>
+                                <span>Total: $
+                                   <% let total = 0
+                                    productCheckout.forEach(product => {
+                                        total += product.quantity * product.productPrice
+                                    })%>
+                                    <%=total%>
+                                    
                                 </span>
                                 <br>
                                 <div class="separador">

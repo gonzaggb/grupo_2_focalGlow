@@ -79,7 +79,7 @@ CREATE TABLE orders (
 CREATE TABLE items(
 	id INT  AUTO_INCREMENT NOT NULL,
     product_name VARCHAR(50) NOT NULL,
-    product_price DECIMAL NOT NULL,
+    product_price INT NOT NULL,
     product_description VARCHAR(255) NOT NULL,
     product_features VARCHAR(250) NOT NULL,
     product_image VARCHAR(255) NOT NULL,

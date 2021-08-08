@@ -39,7 +39,9 @@ const controller = {
         }
 
 
-        const productPrice = Number(product.price) //FIXME actualmente toma el precio del produco, tenemos que hacer que el precio se 
+        const productPrice = Number(product.price)
+        console.log(productPrice)
+        //FIXME actualmente toma el precio del produco, tenemos que hacer que el precio se 
         //actualice en el front en base a las diferentes features y mandarlo por el body
         const quantity = Number(req.body.quantity)
         /* const productFeatures = [cct , dim , optic , power].toString() */
@@ -55,7 +57,7 @@ const controller = {
             userId
 
         }
-
+        console.log(item.productPrice)
 
         await Item.create(item)
         res.redirect('/checkout')
@@ -66,15 +68,17 @@ const controller = {
                 userId: res.locals.user.id
             }
         })
-        const  id  = res.locals.user.id
+        const id = res.locals.user.id
         const user = await User.findByPk(id)
-        
-        
+
+        /*  productCheckout.forEach(product => {
+             product.productPrice.dataValues = Number(product.productPrice)
+         })
+         console.log(productCheckout) */
         let features = []
         const featuresaux = productCheckout.forEach(e => {
             features.push(JSON.parse(e.productFeatures))//aca paso a objeto los strings de los features
         })
-
 
         //preguntar como hacer para que viaje con el nombre 
         res.render('checkout.ejs', { productCheckout, features, user })
@@ -82,13 +86,13 @@ const controller = {
     // validar que el usuario no pueda agregar dos productos iguales en items diferentes
     //tomar el precio de la db y no del front 
     //validar que todo lo que se mande del front corresponda con los que esta en la db 
-    destroy : async (req, res) =>{
-        let {id} = req.params
+    destroy: async (req, res) => {
+        let { id } = req.params
         const itemToDelete = await Item.findByPk(id)
         itemToDelete.destroy()
         res.redirect('/checkout')
     },
-    purchase : async (req,res)=>{
+    purchase: async (req, res) => {
 
     }
 
