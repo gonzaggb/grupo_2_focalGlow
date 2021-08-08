@@ -1879,3 +1879,5 @@ INSERT INTO product_feature (id,product_id,feature_id) VALUES (7776,358,9);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (7777,358,1);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (7778,358,118);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (7779,358,13);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (7780,359,13);
+INSERT INTO product_feature (id,product_id,feature_id) VALUES (7781,359,13);
