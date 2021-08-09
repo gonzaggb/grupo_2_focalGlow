@@ -54,7 +54,7 @@ const controller = {
 			productFeatures: JSON.stringify(productFeatures),//aca paso el objeto a string para que lo tome la DB
 			productImage: mainImage,
 			quantity,
-			subTotal: quantity * productPrice,
+			subtotal: quantity * productPrice,
 			userId
 
 		}
