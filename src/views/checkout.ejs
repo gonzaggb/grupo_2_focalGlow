@@ -59,7 +59,7 @@
                                                 <span>Precio: $<%= productCheckout[i].productPrice %></span>
                                                 <br>
                                                 <span>Cantidad: <input type="text" name="quantity"
-                                                        value="<%= productCheckout[i].quantity %>"></span>
+                                                        value="<%= productCheckout[i].quantity === 0? productCheckout[i].quantity = 1 : productCheckout[i].quantity %>"></span>
                                                 <br>
                                                 <span>Total: $<%= productCheckout[i].productPrice *
                                                         productCheckout[i].quantity %></span>
