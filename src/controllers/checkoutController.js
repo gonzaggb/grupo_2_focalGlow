@@ -4,7 +4,7 @@ const { Item } = require('../database/models')
 const { Feature } = require('../database/models')
 const { User } = require('../database/models')
 const { Order } = require('../database/models')
-const Op = require('sequelize')
+const { Op } = require('sequelize')
 const { checkout } = require('./mainController')
 
 
