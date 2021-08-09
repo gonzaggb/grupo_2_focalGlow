@@ -118,9 +118,10 @@
                             <section class="main-slider-mini">
                                 <div class="slider-mini">
                                     <ul>
-                                        <li><img src="/img/colgante.jpg" alt=""></li>
-                                        <li><img src="/img/coral.jpg" alt=""></li>
-                                        <li><img src="/img/delfina.jpg" alt=""></li>
+                                        <%sliderProducts.forEach(product =>{%>
+                                             <li><a href="/product/detail/<%=product.id%>"><img src="<%=product.images[0].name%>" alt=""></a></li>
+                                            <%})%>
+
                                     </ul>
 
                                 </div>
