@@ -31,7 +31,7 @@ const controller = {
 		let featuresAcumulatedPrice = 0
 		productFeatureAux.forEach(e => {
 			productFeatures2.push(e.name)
-			featuresAcumulatedPrice += Number(e.price)
+			featuresAcumulatedPrice += Number(e.price) //sumariza el precio de las features del producto elegido por el usuario
 		})
 		let productFeatures = {
 			CCT: 'CCT: ' + productFeatures2[0],
@@ -39,16 +39,22 @@ const controller = {
 			OPTIC: 'OPTIC: ' + productFeatures2[2],
 			POWER: 'POWER: ' + productFeatures2[3]
 		}
-
-
 		const productPrice = Number(product.price)
-		console.log(productPrice)
 		//FIXME actualmente toma el precio del produco, tenemos que hacer que el precio se 
 		//actualice en el front en base a las diferentes features y mandarlo por el body
 		const quantity = Number(req.body.quantity)
 		/* const productFeatures = [cct , dim , optic , power].toString() */
 		const userId = res.locals.user.id
-		const item = {
+
+		
+		const userItem = await Item.findAll({
+			where: {
+				productId: product.id,
+				orderId: null
+			}
+		})
+
+		const newItem = {
 			productName: product.name,
 			productPrice,
 			productDescription: product.description,
@@ -56,13 +62,27 @@ const controller = {
 			productImage: mainImage,
 			quantity,
 			subtotal: quantity * productPrice + quantity * featuresAcumulatedPrice,
-			userId
+			userId,
+			productId: product.id
 
 		}
-
-		await Item.create(item)
+		if (userItem.length > 0) {
+			await Item.update({ quantity: Number(userItem[0].quantity) + Number(req.body.quantity) },
+				{
+					where: {
+						id: userItem[0].id,
+						orderId: null
+					}
+				})
+		} else {
+			await Item.create(newItem)
+		}
 		res.redirect('/checkout')
+
+
 	},
+
+
 	list: async (req, res) => {
 		const productCheckout = await Item.findAll({
 			where: {
