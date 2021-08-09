@@ -115,7 +115,7 @@ const controller = {
 			}
 
 		)
-		return res.send(itemUpdate)
+		res.render('succes-purchase.ejs')
 
 	}
 
