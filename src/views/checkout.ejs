@@ -56,12 +56,12 @@
                                         </div>
                                         <div class="item-right">
                                             <div class="left-side">
-                                                <span>Precio: $<%= productCheckout[i].productPrice %></span>
+                                                <span>Precio: $<%= productCheckout[i].subtotal %></span>
                                                 <br>
                                                 <span>Cantidad: <input type="text" name="quantity"
                                                         value="<%= productCheckout[i].quantity === 0? productCheckout[i].quantity = 1 : productCheckout[i].quantity %>"></span>
                                                 <br>
-                                                <span>Total: $<%= productCheckout[i].productPrice *
+                                                <span>Subtotal: $<%= productCheckout[i].subtotal *
                                                         productCheckout[i].quantity %></span>
                                             </div>
 
@@ -89,7 +89,7 @@
                                 <span>Total: $
                                    <% let total = 0
                                     productCheckout.forEach(product => {
-                                        total += product.quantity * product.productPrice
+                                        total += Number(product.subtotal) * product.quantity
                                     })%>
                                     <%=total%>
                                     

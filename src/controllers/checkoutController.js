@@ -48,7 +48,7 @@ const controller = {
 			POWER: 'POWER: ' + productFeatures2[3]
 		}
 		const productPrice = Number(product.price)
-		//FIXME actualmente toma el precio del produco, tenemos que hacer que el precio se 
+		//FIXME actualmente toma el precio del producto, tenemos que hacer que el precio se 
 		//actualice en el front en base a las diferentes features y mandarlo por el body
 		const quantity = Number(req.body.quantity)
 		/* const productFeatures = [cct , dim , optic , power].toString() */
@@ -61,7 +61,6 @@ const controller = {
 				orderId: null
 			}
 		})
-
 		const newItem = {
 			productName: product.name,
 			productPrice,
@@ -69,7 +68,7 @@ const controller = {
 			productFeatures: JSON.stringify(productFeatures),//aca paso el objeto a string para que lo tome la DB
 			productImage: mainImage,
 			quantity,
-			subtotal: quantity * productPrice + quantity * featuresAcumulatedPrice,
+			subtotal: quantity * (productPrice +  featuresAcumulatedPrice),
 			userId,
 			productId: product.id
 
@@ -77,7 +76,7 @@ const controller = {
 		if (userItem.length > 0) {
 			await Item.update({
 				quantity: Number(userItem[0].quantity) + Number(req.body.quantity),
-				subtotal: quantity * productPrice + quantity * featuresAcumulatedPrice
+				subtotal: quantity * (productPrice + featuresAcumulatedPrice)
 
 			},
 				{
@@ -96,11 +95,16 @@ const controller = {
 
 
 	list: async (req, res) => {
+		const { cct, dim, optic, power } = req.body
+
 		const productCheckout = await Item.findAll({
 			where: {
-				userId: res.locals.user.id
+				userId: res.locals.user.id,
+				orderId: null
 			}
 		})
+
+		//ARMO ARRAY CON LOS ID PRODUCTO QUE ESTAN EN EL CARRITO
 		const productsToCheckout = []
 		productCheckout.forEach(e => {
 			productsToCheckout.push(e.productId)
@@ -108,10 +112,6 @@ const controller = {
 		const id = res.locals.user.id
 		const user = await User.findByPk(id)
 
-		/*  productCheckout.forEach(product => {
-				 product.productPrice.dataValues = Number(product.productPrice)
-		 })
-		 console.log(productCheckout) */
 		let features = []
 		const featuresaux = productCheckout.forEach(e => {
 			features.push(JSON.parse(e.productFeatures))//aca paso a objeto los strings de los features
@@ -163,6 +163,7 @@ const controller = {
 				addProductImagePath(image)
 			})
 		})
+
 
 		//preguntar como hacer para que viaje con el nombre 
 		res.render('checkout.ejs', { productCheckout, features, user, sliderProducts })
