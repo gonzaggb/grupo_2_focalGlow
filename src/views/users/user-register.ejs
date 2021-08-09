@@ -1,0 +1,71 @@
+<!-- Partial head -->
+<%- include('../partials/head.ejs')%>
+<title>Registro | Focal Glow</title>
+<link rel="stylesheet" href="/css/styles-user-register.css">
+
+</head>
+<script>
+  function cambiar() {
+  	var pdrs = document.getElementById('file-upload').files[0].name;
+  	document.getElementById('info').innerHTML = pdrs;
+  }
+</script>
+
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <main class="main-container">
+      <form class="registry-form" method="POST" action="/users/register" enctype="multipart/form-data">
+        <div class="registry-container">
+
+          <label for="firstName">Nombre</label>
+          <input class="<%=locals.errors && errors.firstName ? 'error' : 'input-login'%>" type="text" name="firstName" id="firstName"
+					 <% if (locals.errors && errors.firstName) {%> placeholder="<%=errors.firstName.msg%>"
+          <% } else if (locals.oldData) {%>
+              value = "<%=oldData.firstName%>"
+          <%}%>>
+
+          <label for="lastName">Apellido</label>
+          <input class="<%=locals.errors && errors.lastName ? 'error' : 'input-login'%>" type="text" name="lastName" id="lastName" 
+						<% if (locals.errors && errors.lastName) { %> placeholder="<%=errors.lastName.msg%>"
+            <% } else if (locals.oldData) {%>
+							 value = "<%=oldData.lastName%>"
+            <%}%>>
+
+          <label for="email">Email</label>
+          <input class="<%=locals.errors && errors.email ? 'error' : 'input-login'%>" type="text" name="email" id="email" 
+					<% if (locals.errors && errors.email) { %>
+						 placeholder=" <%=errors.email.msg%>"
+          <% } else if(locals.oldData) {%>
+                value = "<%=oldData.email%>"
+          <%}%>>
+                        
+					<label for="password">Contraseña</label>
+          <input class="<%=locals.errors && errors.password ? 'error' : 'input-login'%>" type="password" name="password" id="password"
+            <% if (locals.errors && errors.password) { %> 
+							placeholder=" <%=errors.password.msg%>"
+            <%}%>>
+					
+          <label for="rePassword">Confirmar contraseña</label>
+          <input class="<%=locals.errors && errors.rePassword ? 'error' : 'input-login'%>" type="password" name="rePassword" id="rePassword"
+            <% if (locals.errors&& errors.rePassword) { %> placeholder="<%=errors.rePassword.msg%>"
+            <%}%>>
+
+          <label for="file-upload" class="subir">
+          	<span><i class="far fa-user-circle"></i> Subir foto de perfil</span>
+          </label>
+          <%if(locals.errors && errors.profileImg){%>
+              <span class="error-message"> <%=errors.profileImg.msg%> </span>
+          <%}%>
+
+          <div id="info"></div>
+          <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
+          
+					<div class="button-container">
+            <button type="submit" class="login-button">Continuar</button>
+          </div>
+
+
+    </main>
+  </body>
+
+</html>

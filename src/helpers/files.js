@@ -1,7 +1,7 @@
 const path = require('path')
 
 function isFileImage(fileName) {
-  const validExtension = ['.jpg', '.png', '.jpeg', '.gif', 'tiff', 'bmp', 'svg']
+  const validExtension = ['.jpg', '.JPG','JPEG','.png', '.jpeg', '.gif', 'tiff', 'bmp', 'svg']
   if (validExtension.includes(path.extname(fileName))) {
     return true
   } else {

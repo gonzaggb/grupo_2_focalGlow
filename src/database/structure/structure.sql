@@ -69,8 +69,8 @@ CREATE TABLE files (
 
 CREATE TABLE orders (
 	id INT  AUTO_INCREMENT NOT NULL,
-    order_number INT NOT NULL,
     total DECIMAL NOT NULL,
+    created_at INT NOT NULL,
     user_id INT NOT NULL,
     CONSTRAINT id PRIMARY KEY (id)
 	);
@@ -78,9 +78,9 @@ CREATE TABLE orders (
 CREATE TABLE items(
 	id INT  AUTO_INCREMENT NOT NULL,
     product_name VARCHAR(50) NOT NULL,
-    product_price DECIMAL NOT NULL,
+    product_price INT NOT NULL,
     product_description VARCHAR(255) NOT NULL,
-    product_features VARCHAR(50) NOT NULL,
+    product_features VARCHAR(250) NOT NULL,
     product_image VARCHAR(255) NOT NULL,
     quantity INT NOT NULL,
     subtotal DECIMAL NOT NULL,

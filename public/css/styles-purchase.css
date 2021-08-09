@@ -1,0 +1,19 @@
+.apu{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    height: 80vh;
+    align-items: center;
+    
+}
+.apu a img{
+    animation: gracias 5s infinite   normal ;
+}
+@keyframes gracias {
+    0%{width: 100%;}
+   
+    50%{width: 50%}
+    
+    100%{width: 100%}
+
+}

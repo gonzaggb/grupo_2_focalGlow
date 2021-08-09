@@ -69,7 +69,7 @@ a {
   color: black;
 }
 
-form button {
+.trash {
   background-color: transparent;
   border: none;
   cursor: pointer;

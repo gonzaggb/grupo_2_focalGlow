@@ -1,4 +1,4 @@
-const express = require('express') // trae el modulo de express para poder montar el servidor
+  const express = require('express') // trae el modulo de express para poder montar el servidor
 const app = express() //declaramos la variable app que va utilizar todos los metodos de express.
 const categoriesMiddleware = require('./middleware/categoriesList')
 // Coonfiguracion de la ruta que contiene los recursos estaticos para consumir de manera sencilla
@@ -50,14 +50,19 @@ const mainRoutes = require('./routes/mainRoutes')
 const categoryRoutes = require('./routes/categoryRoutes')
 const productRoutes = require('./routes/productRoutes')
 const userRoutes = require('./routes/usersRoutes')
-
+const checkoutRoutes = require('./routes/checkoutRoutes')
 
 //Rutas
 app.use('/', mainRoutes)
 app.use('/product', productRoutes)
 app.use('/category', categoryRoutes)
 app.use('/users', userRoutes)
+app.use('/checkout' ,checkoutRoutes)
 
+//Ruta 500 por si falla la base de datos
+app.use('/500', (req, res, next) => {
+  res.status(500).render('500.ejs')
+})
 // Ruta 404
 app.use((req, res, next) => {
   res.status(404).render('404.ejs')

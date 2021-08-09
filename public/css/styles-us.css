@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*Define las caracteristicas del body
+fuente / tamaño / interlineado y margenes*/
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6em;
+  margin: 0;
+  background-image: url(/img/fondo2.jpg);
+}
+
+/*aca empieza el main*/
+main {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+main h2 {
+  text-align: center;
+  font-size: 2em;
+  color: black;
+  margin: 20px 0px;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-bottom: 40px;
+}
+
+.aside-image {
+  display: flex;
+}
+
+.aside-image img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.aside-text {
+  background-color: #ffde59;
+  opacity: 0.8;
+  padding: 20px 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.aside-text p {
+  text-align: justify;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 64px;
+  }
+
+  .aside-text {
+    margin: 0;
+    border-radius: 30px;
+  }
+
+  .aside-image img {
+    margin-top: 32px;
+    border-radius: 30px;
+  }
+
+  .aside-text p {
+    padding: 20px;
+  }
+}

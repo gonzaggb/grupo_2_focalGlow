@@ -1,0 +1,422 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #e5e5e5;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.product-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.product-name i,
+.product-name h2 {
+  margin: 20px 0px;
+  color: black;
+  font-size: 1.5rem;
+}
+
+.main-img {
+  margin-bottom: 10px;
+  z-index: 0;
+  opacity: 1;
+  transition: all 1s;
+}
+
+/*Product Dimensions appear*/
+
+.product-detail {
+  position: relative;
+}
+
+.product-detail i {
+  position: absolute;
+  top: 2.5%;
+  right: 5%;
+  font-size: 24px;
+  color: black;
+  z-index: 9999;
+  transition: all 1s;
+}
+.product-detail i:hover {
+  color: #ffde59;
+}
+
+.product-dimensions {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  z-index: 1000;
+  transition: all 1s;
+}
+.product-detail i:hover ~ .product-dimensions {
+  opacity: 1;
+}
+
+.product-detail i:hover ~ .main-img {
+  opacity: 0.1;
+}
+
+/*SLIDERS*/
+
+.slider-container {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 250px;
+  text-align: center;
+  overflow: hidden;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.price input {
+  position: initial;
+  opacity: initial;
+  cursor: initial;
+}
+
+label {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border:#ffde59 solid 0.5px;
+  background-color: #fff;
+  transition: background-color 0.6s ease;
+  z-index: 2;
+  cursor: pointer;
+  transition-duration: 0.6s;
+  position: relative;
+  top: 225px;
+}
+
+input:checked + label {
+  background-color: #ffde59;
+}
+
+.slide,
+.slide2 {
+  position: absolute;
+  width: 100%;
+  height: 250px;
+  top: 0;
+  left: 0; 
+  transform: translateX(-100%);
+  transition-duration: 0.6s;
+  opacity: 1;
+}
+
+.slide img {
+  height: inherit;
+  object-fit: cover;
+}
+.slide2 img {
+  height: inherit;
+  object-fit: scale-down;
+}
+
+input:checked ~ .slide,
+input:checked ~ .slide2 {
+  transform: translateX(100%);
+}
+
+input:checked + label + .slide,
+input:checked + label + .slide2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  max-height: 900px;
+}
+
+.technical-info-title {
+  margin: 5px auto;
+}
+
+.technical-info-title h3,
+.technical-info-title p {
+  text-align: left;
+}
+
+/*BOTON OPCIONES*/
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn {
+  color: white;
+  background-color: black;
+  font-size: 1rem;
+  text-align: center;
+  text-align-last: center;
+  border: solid white 1px;
+  padding: 5px 0px;
+  width: 100%;
+  transition: all 0.5s linear;
+  font-family: 'FontAwesome', 'Roboto';
+}
+
+.btn option {
+  font-family: 'FontAwesome', 'Roboto';
+}
+
+.btn:hover {
+  background-color: #ffde59;
+  opacity: 0.9;
+  color: black;
+}
+
+.technical-data {
+  background-color: white;
+  border-radius: 15px;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  margin: 10px auto;
+}
+
+.technical-data h3,
+.technical-data p {
+  margin: 9px 25px;
+  padding-top: 10px;
+}
+.technical-data li {
+  margin-left: 25px;
+}
+
+.price {
+  display: flex;
+  justify-content: right;
+  flex-direction: column;
+}
+
+.qtyadd {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+input {
+  width: 16.66%;
+  border: none;
+  text-align: center;
+  font-weight: bold;
+}
+
+.qtyadd .add {
+  width: 50%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  font-family: 'Roboto';
+  transition: all 0.5s linear;
+}
+
+.add:hover {
+  background-color: #ffde59;
+  opacity: 0.9;
+  color: black;
+}
+
+.price-title {
+  text-align: right;
+  font-size: 24px;
+  margin: 16px 0px;
+}
+
+.product-dimensions-info {
+  display: none;
+  font-size: 16px;
+}
+
+.documents {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 5px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.documents a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.similar-products-container {
+  margin: 30px auto;
+  text-align: center;
+  width: 66.66%;
+}
+.similar-products {
+  align-content: flex-end;
+}
+
+/*media query Tablet*/
+
+@media (min-width: 576px) {
+  main {
+    display: flex;
+    flex-direction: row;
+    width: 85%;
+  }
+  .product-name {
+    width: 85%;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+  .product-detail {
+    width: 50%;
+    margin-right: 5px;
+    position: sticky;
+  }
+
+  .technical-data {
+    max-height: 250px;
+    overflow-y: scroll;
+  }
+
+  .technical-info-title {
+    margin: 0 auto;
+  }
+  .options {
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0;
+    margin: 0;
+  }
+  .options-column {
+    width: 50%;
+  }
+
+  .product-info {
+    width: 50%;
+    margin-left: 5px;
+    margin-top: 0px;
+    position: relative;
+  }
+
+  .documents {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .similar-products {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .similar-products .slider-container {
+    width: 100%;
+    margin-top: 10px;
+    height: initial;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .similar-products input,
+  .similar-products label {
+    display: none;
+  }
+
+  .slide2 {
+    position: initial;
+    width: 23.5%;
+    height: auto;
+    top: 0;
+    left: 0;
+    z-index: initial;
+    transform: none;
+    opacity: 1;
+  }
+
+  .slide2 img {
+    max-height: 250px;
+    object-fit: scale-down;
+  }
+}
+
+/*Media Query Laptop*/
+@media (min-width: 768px) {
+  .product-name,
+  main {
+    width: 80%;
+  }
+
+  .product-name h2 {
+    font-size: 28px;
+  }
+
+  .documents {
+    font-size: 16px;
+  }
+}
+
+/*Media Query Desktop*/
+@media (min-width: 1024px) {
+  .product-name,
+  main {
+    width: 75%;
+    max-width: 1500px;
+    max-height: 1500px;
+  }
+}
+
+/*Media Query Desktop*/
+@media (min-width: 1200px) {
+  .product-dimensions-info {
+    display: initial;
+    position: relative;
+    margin-top: 40px;
+    margin-left: 50%;
+    width: 50%;
+    margin-top: 40px;
+    z-index: 10;
+  }
+
+  .product-dimensions-info img:hover {
+    transform: scale(1.75);
+    transform-origin: right top;
+  }
+  .product-detail i {
+    display: none;
+  }
+}

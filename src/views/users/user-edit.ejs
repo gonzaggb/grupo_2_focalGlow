@@ -2,15 +2,16 @@
 <%- include('../partials/head.ejs')%>
 <title>Editar Perfil | Focal Glow</title>
 <link rel="stylesheet" href="/css/styles-user-detail.css">
-    
-
-
 
 </head>
 <script>
   function cambiar() {
-    var pdrs = document.getElementById('file-upload').files[0].name;
-    document.getElementById('info').innerHTML = pdrs;
+    var imageToLoad = document.getElementById('file-upload')
+		var output = document.getElementById('output')
+		output.src = URL.createObjectURL(imageToLoad.files[0])
+		output.onload = function () {
+      URL.revokeObjectURL(output.src) // free memory
+    } 
   }
 </script>
 
@@ -18,124 +19,77 @@
   <%- include('../partials/header.ejs')%>
 
   
-    <form class="registry-form2" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
-			<main>
-			<aside class="column-1">  	
-				<label for="profileImg">
+	<main>
+    <form class="registry-container" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
+			<section class="images-container">  	
+				
 					<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg%>">
-				</label>
+				
 
 				<div class="file-btn">
-					Cambiar imagen
-					
-					<input onchange="loadFile(event)" type="file" name="profileImg" accept="image/*">
-				
-					<script>
-          	var loadFile = function (event) {
-            	var output = document.getElementById('output');
-            	output.src = URL.createObjectURL(event.target.files[0]);
-            	output.onload = function () {
-              	URL.revokeObjectURL(output.src) // free memory
-            	}
-          	};
-      		</script>
-				</div>
-				<p class="error"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
-			</aside>
+					<label for="file-upload" class="subir">Cambiar imagen</label>
 
+					<input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
+					
+				</div>
+				<p class="<%=(locals.errors && errors.profileImg) ? 'error input' : ''%>"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
+			</section>
+
+			<h2>Perfil de <%=userToEdit.firstName%></h2>
+
+			<section class="profile-info">
+       	<label for="first_name">Nombre</label>
+        <input class="<%=(locals.errors && errors.firstName) ? 'error input' : 'input'%>" type="text" name="firstName" id="first_name"
+					<% if (locals.errors && errors.firstName) { %>
+							placeholder = "<%=errors.firstName.msg %>"
+								<% } else if (locals.oldData) { %>
+									value="<%=oldData.firstName%>" <%}							else { %>
+											value="<%=userToEdit.firstName%>"
+										<% } %>
+				>
+									
+									
+								
+				<label for="last_name">Apellido</label>
+				<input class="<%=(locals.errors && errors.lastName) ? 'error input' : 'input'%>" type="text" name="lastName" id="last_name"
+					<% if (locals.errors && errors.lastName) {%>
+						placeholder = "<%=errors.lastName.msg%>"
+					<%} else if (locals.oldData) { %>
+							value="<%=oldData.lastName%>" <%} else { %>
+							value ="<%=userToEdit.lastName%>"
+					<%}%>
+				>
+							
+								
+								
+				<label for="email">Email</label>
+				<input class="<%=(locals.errors && errors.email) ? 'error input' : 'input'%>" type="email" name="email" id="email"
+					<% if (locals.errors && errors.email) {%>
+						placeholder = "<%=errors.email.msg%>"
+					<%} else if (locals.oldData) { %>
+						value="<%=oldData.email%>" <%} else {%>
+						value="<%=userToEdit.email%>"
+					<%}%>
+				>
+												
+											
+											
+				<label for="phone">Teléfono</label>
+				<input class="input" type="tel" name="phone" id="phone" value="<%=userToEdit.phone%>">
+											
+											
+				<label for="address">Dirección</label>
+				<textarea class="input" type="text" name="address" id="address" col= "10" row="20" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
+							
+			</section>
 			
+			<button type="submit" class="login-button">Actualizar</button>
 
-			<section class="data">
-        <div class="title">
-					<h2><%=`${userToEdit.firstName} ${userToEdit.lastName}`%></h2>
-					<button type="submit" class="btn">Actualizar</button>
-				</div>
+			<a href="/users/<%=userToEdit.id%>/editPassword"><p class="login-button">Cambiar contraseña</p></a>
 
-				<article class="profile-info">        
-					<div class = "row">    
-						<label for="id">User Id</label>
-            <input class="edit" name="id" value="<%=userToEdit.id%>" readonly>
-					</div>
-
-					<div class = "row">
-						<label for="first_name">Nombre</label>
-            <input class="<%=(locals.errors && errors.firstName) ? 'error edit' : 'edit'%>" type="text" name="firstName" id="first_name"
-							<% if (locals.errors && errors.firstName) {%>
-								placeholder = "<%=errors.firstName.msg%>"
-							<%} else if (locals.oldData) { %>
-								value="<%=oldData.firstName%>" <%} else {%>
-								value="<%=userToEdit.firstName%>"<%}%>
-						>
-					</div>
-
-					<div class = "row">
-						<label for="last_name">Apellido</label>
-						<input class="<%=(locals.errors && errors.lastName) ? 'error edit' : 'edit'%>" type="text" name="lastName" id="last_name"
-							<% if (locals.errors && errors.lastName) {%>
-								placeholder = "<%=errors.lastName.msg%>"
-							<%} else if (locals.oldData) { %>
-								value="<%=oldData.lastName%>" <%} else {%>
-								value="<%=userToEdit.lastName%>"<%}%>
-						>
-					</div>
-
-					<div class = "row">
-						<label for="email">Email</label>
-						<input class="<%=(locals.errors && errors.email) ? 'error edit' : 'edit'%>" type="email" name="email" id="email"
-							<% if (locals.errors && errors.email) {%>
-								placeholder = "<%=errors.email.msg%>"
-							<%} else if (locals.oldData) { %>
-								value="<%=oldData.email%>" <%} else {%>
-								value="<%=userToEdit.email%>"<%}%>
-						>
-					</div>
-
-					<div class = "row">
-						<label for="phone">Teléfono</label>
-            <input class="edit" type="tel" name="phone" id="phone" value="<%=userToEdit.phone%>">
-					</div>
-					<div class = "row">
-						<label for="address">Dirección</label>
-            <textarea class="edit" type="text" name="address" id="address" col= "10" row="10" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
-					</div>
-					
-
-					
-					<label for="expand-toggle" id="expand-btn">¿Modificar contraseña?</label>
-					
-					<input type="radio" name="passModify" value="yes" id="expand-toggle" <%=(locals.errors && (errors.password || errors.rePassword))?'checked':''%>><span> Sí</span>
-					<input type="radio" name="passModify" value="no" <%=(locals.errors && (errors.password || errors.rePassword))?'':'checked'%>><span> No</span>
-					
-					
-
-					<div class = "row expandable">
-						<label for="password">Nueva contraseña</label>
-						<input class="<%=(locals.errors && errors.password) ? 'error edit' : 'edit'%>" type="password" name="password" id="password"
-							<% if (locals.errors && errors.password) {%>
-								placeholder = "<%=errors.password.msg%>"
-							<%}%>
-						>
-					</div>
-
-					<div class="row expandable">
-						<label for="rePassword">Confirmar contraseña</label>
-						<input class="<%=(locals.errors && errors.rePassword) ? 'error edit' : 'edit'%>" type="password" name="rePassword" id="rePassword"
-							<% if (locals.errors && errors.rePassword) {%>
-								placeholder = "<%=errors.rePassword.msg%>"
-							<%}%>
-						>			
-					</div>
-				
-				
-         
-          <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none'>
-          <div class="button-container">
-				</article>    
-      </section>
-		</main>
-    </form> 
-		<%- include('../partials/footer.ejs')%>
-	
+		</form> 		
+	</main>
+		
 </body>
 
 </html>

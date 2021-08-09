@@ -1,75 +1,74 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
 
-    <title>Focal Glow | Listado de Usuarios </title>
-    <link rel="stylesheet" href="/css/styles-user-list.css">
-    <link rel="stylesheet" href="/css/style-search.css">
-    </head>
+  <title>Focal Glow | Listado de Usuarios </title>
+  <link rel="stylesheet" href="/css/styles-user-list.css">
+  <link rel="stylesheet" href="/css/styles-search.css">
+  </head>
 
-    <body>
-        <%- include('../partials/header.ejs')%>
+  <body>
+    <%- include('../partials/header.ejs')%>
 
-            <main>
-                <form action="/users" method="get">
-                    <h3 class="titulo" id="title">Listado de Usuarios</h3>
+    <main>
+      <h3 class="titulo" id="title">Listado de Usuarios</h3>
 
-                    <table id="customers">
-                        <tr>
-                            <th class="id center">ID</th>
-                            <th class="left">Nombre</th>
-                            <th class="left">Apellido</th>
-                            <th class="left">Mail</th>
-                            <th class="profile center">Imagen de Perfil</th>
-                            <th class="center">Ver</th>
-                            <th class="center">Editar</th>
-                            <th class="center">Borrar</th>
-                        </tr>
-                        <% userList.forEach(user=> { %>
-                            <tr>
-                                <td class="id center">
-                                    <%= user.id%>
-                                </td>
-                                <td>
-                                    <%= user.firstName%>
-                                </td>
-                                <td>
-                                    <%= user.lastName%>
-                                </td>
-                                <td>
-                                    <%= user.email%>
-                                </td>
-                                <td class="center">
-                                    <img class="img-round" src=<%=user.profileImg%>>
+      <table id="customers">
+        <tr>
+          <th class="id center">ID</th>
+          <th class="left">Nombre</th>
+          <th class="left">Apellido</th>
+          <th class="left">Mail</th>
+          <th class="profile center">Imagen de Perfil</th>
+          <th class="center">Ver</th>
+          <th class="center">Editar</th>
+          <th class="center">Borrar</th>
+        </tr>
 
-                                </td>
-                                <td class="center">
-                                    <a href="/users/<%=user.id%>/detail"><i class="fas fa-search"></i></a>
-                                </td>
-                                <td class="center">
-                                    <a href="/users/<%=user.id%>/edit"><i class="far fa-edit"></i></a>
-                                </td>
-                                <td class="center">
-                                    <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
-                                        <button type="submit"><i class="far fa-trash-alt"></i></button>
-                                    </form>
-                                </td>
-                            </tr>
-                            <%})%>
-                    </table>
-                    <div class="page">
-                        <% for(let j=0; j < nextButton; j++) {%>
-                            <button type="submit" name="offset" class="offset" value="<%= 10*j %>">
-                                <%=j+1%>
-                            </button>
+        <% userList.forEach(user=> { %>
+          <tr>
+            <td class="id center">
+              <%= user.id%>
+            </td>
+            <td>
+              <%= user.firstName%>
+            </td>
+            <td>
+              <%= user.lastName%>
+            </td>
+            <td>
+              <%= user.email%>
+            </td>
+            <td class="center">
+              <img class="img-round" src=<%=user.profileImg%>>
+            </td>
+            <td class="center">
+              <a href="/users/<%=user.id%>/detail"><i class="fas fa-search"></i></a>
+            </td>
+            <td class="center">
+              <a href="/users/<%=user.id%>/edit"><i class="far fa-edit"></i></a>
+            </td>
+            <form action="/users/<%=user.id%>?_method=DELETE" method="POST">
+              <td class="center">
+                <button class="trash" type="submit"><i class="far fa-trash-alt"></i></button>
+              </td>
+            </form>
+          </tr>
+        <%})%>
+      </table>
 
-                            <%}%>
-                    </div>
-                </form>
-                <div class="up-button">
-                    <a href="#title"><i class="fas fa-chevron-up"></i></a>
-                </div>
+      <form action="/users" method="GET">
+      <div class="page">
+        <% for(let j=0; j < nextButton; j++) {%>
+          <button type="submit" name="offset" class="offset" value="<%= 10*j %>">
+            <%=j+1%>
+          </button>
+        <%}%>
+      </div>
+    </form>
 
-            </main>
-    </body>
-
-    </html>
+      <div class="up-button">
+        <a href="#title"><i class="fas fa-chevron-up"></i></a>
+      </div>
+    </main>
+  </body>
+</html>

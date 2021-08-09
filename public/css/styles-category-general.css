@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /*background-image: url(/img/fondo2.jpg)*/
+  background-color: #E5E5E5;
+}
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+figure {
+  margin: 0px;
+  padding: 0px;
+}
+
+figure img {
+  width: 100%;
+}
+
+main h2 {
+  color: black;
+  text-align: center;
+  font-size: 30px;
+  text-transform: capitalize;
+  margin: 25px auto;
+}
+
+.nombre-precio {
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  bottom: 0;
+  padding-left: 5%;
+  padding-bottom: 5%;
+  padding-top: 2.5%;
+  line-height: 18px;
+}
+
+.nombre {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0;
+}
+.precio {
+  display: none;
+  margin: 0;
+}
+
+.producto {
+  z-index: 10;
+  margin: 10px 0px;
+  line-height: 11px;
+  box-shadow: 8px 8px 13px grey;
+  position: relative;
+}
+
+.item-list img {
+  width: 100%;
+  max-height: 240px;
+}
+
+/*media Query*/
+@media (min-width: 576px) {
+  .item-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1%;
+    margin-right: 10%;
+    margin-left: 10%;
+    margin-bottom: 10%;
+    padding: 0;
+    justify-content: center;
+    gap: 8px;
+  }
+  .producto {
+    width: 49%;
+    margin: 2px 0px;
+  }
+
+  .nombre {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 768px) {
+  .producto {
+    width: 32%;
+    transition: transform 0.05s;
+  }
+
+  .producto:hover {
+    transform: scale(1.1);
+    z-index: 100;
+  }
+
+  .producto:hover .nombre-precio {
+    background-color: #ffde59;
+  }
+
+  .nombre-precio {
+    display: block;
+    position: static;
+    transition: all 1s;
+  }
+  .precio {
+    display: initial;
+    font-size: 12px;
+  }
+  .nombre {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    width: 100%;
+  }
+  .producto {
+    width: 24%;
+  }
+}
+
+/*Para que la imagen principal de la categoria no sea tan grande*/
+@media (min-width: 1200px) {
+  figure {
+    text-align: center;
+    overflow: hidden;
+    max-height: 80vh;
+  }
+
+  .item-list img {
+    width: 100%;
+    
+  }
+}
