@@ -229,6 +229,9 @@ const controller = {
       return res.redirect('/500')
     }
   },
+  checkout: async (req, res) => {
+    res.send(req.body)
+  },
 
 
   update: async (req, res) => {

@@ -111,6 +111,7 @@ const controller = {
       res.render('users/user-list.ejs', { userList, nextButton })
 
     } catch (error) {
+      res.status(400).render('404.ejs')
       console.log(error)
 
       return res.redirect('/500')
