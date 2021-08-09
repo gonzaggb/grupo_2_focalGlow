@@ -105,22 +105,17 @@ const controller = {
 
 		const orderCreated = await Order.create(order)
 
-		/* 	const newItem = await Item.update(
-				{ orderId: orderCreated.id },
-				{ where: { orderId: null } },
-	
-			) */
-		//return res.send(newItem)
-
-		const newItem = await Item.update(
+		const itemUpdate = await Item.update(
 			{ orderId: orderCreated.id },
 			{
 				where: {
-					userId: orderCreated.userId
+					userId: orderCreated.userId,
+					orderId: null
 				}
 			}
+
 		)
-		return res.send(newItem)
+		return res.send(itemUpdate)
 
 	}
 
