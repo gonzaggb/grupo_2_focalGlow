@@ -70,7 +70,7 @@ CREATE TABLE files (
 CREATE TABLE orders (
 	id INT  AUTO_INCREMENT NOT NULL,
     total DECIMAL NOT NULL,
-    created_at DATE NOT NULL,
+    created_at INT NOT NULL,
     user_id INT NOT NULL,
     CONSTRAINT id PRIMARY KEY (id)
 	);
