@@ -1,120 +1,138 @@
-    <%- include('partials/head.ejs')%>
+<%- include('partials/head.ejs')%>
     <link rel="stylesheet" href="/css/styles-checkout.css">
     <title>Checkout | Focal Glow</title>
 
-</head>
+    </head>
 
-<body>
-    <!-- HEADER -->
-    <%- include('partials/header.ejs')%>
-    <!-- HEADER -->
-    
-    <main class="checkout">
-        <h2>DETALLE DEL PEDIDO</h2>
-        <br>
+    <body>
+        <!-- HEADER -->
+        <%- include('partials/header.ejs')%>
+            <!-- HEADER -->
 
-        <section class="checkout-articles">
-            <% for (i =0; i < productCheckout.length; i++) { %>
-            <!-- PRODUCTO <%- i %> -->
+            <main class="checkout">
+                <h2>DETALLE DEL PEDIDO</h2>
+                <br>
 
-                <article class="checkout-product">
-                <div class="name-category">
-                    <h3><%= productCheckout[i].nombre %></h3>
-                    <h4><%= productCheckout[i].categoria %></h4>
-                </div>
-
-                <div class="product-detail">
-                    <div class="separador"></div>
-                    <div class="img-detail">
-                        <div class="product-image">
-                            <img src="/img/Barcelona.jpg">
-
-                        </div>
-                        <div class="detail">
-                            <div class="item-left">
-                                <div class="left-side">
-                                    <span>Marca: <%= productCheckout[i].marca %></span>
-                                    <br>
-                                    <span>Potencia: <%= productCheckout[i].potencia %></span>
-                                    <br>
-                                    <span>CCT: <%= productCheckout[i].cct %></span>
-                                    <br>
-                                    <span>DIM: <%= productCheckout[i].dim %></span>
-
-                                </div>
-                            </div>
-                            <div class="item-right">
-                                <div class="left-side">
-                                    <span>Precio: $<%= productCheckout[i].precio %></span>
-                                    <br>
-                                    <span>Cantidad: <input type="text" name="quantity" value="<%= productCheckout[i].cantidad %>"></span>
-                                    <br>
-                                    <span>Total: $<%= productCheckout[i].precio * productCheckout[i].cantidad %></span>
-                                </div>
+                <section class="checkout-articles">
+                    <% for (i=0; i < productCheckout.length; i++) { %>
+                        <!-- PRODUCTO <%- i %> -->
+                        
+                        <article class="checkout-product">
+                            <div class="name-category">
+                                <h3>
+                                    <%= productCheckout[i].productName %>
+                                </h3>
 
                             </div>
-                        </div>
-                    </div>
-                    <div class="separador"></div>
 
-                    <div id="item-eliminar">
-                        <span><a href="#"><i class="far fa-trash-alt"></i></a></span>
+                            <div class="product-detail">
+                                <div class="separador"></div>
+                                <div class="img-detail">
+                                    <div class="product-image">
+                                        <img src="/img/<%=productCheckout[i].productImage%>">
+
+                                    </div>
+                                    <div class="detail">
+                                        <div class="item-left">
+                                            <div class="left-side">
+                                                <span>
+                                                    <%=features[i].CCT%>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    <%=features[i].DIM%>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    <%=features[i].OPTIC%>
+                                                </span>
+                                                <br>
+                                                <span>
+                                                    <%=features[i].POWER%>
+                                                </span>
+                                                <br>
+
+                                            </div>
+                                        </div>
+                                        <div class="item-right">
+                                            <div class="left-side">
+                                                <span>Precio: $<%= productCheckout[i].productPrice %></span>
+                                                <br>
+                                                <span>Cantidad: <input type="text" name="quantity"
+                                                        value="<%= productCheckout[i].quantity === 0? productCheckout[i].quantity = 1 : productCheckout[i].quantity %>"></span>
+                                                <br>
+                                                <span>Total: $<%= productCheckout[i].productPrice *
+                                                        productCheckout[i].quantity %></span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="separador"></div>
+
+                                <div id="item-eliminar">
+                                    <form action="/checkout/<%=productCheckout[i].id%>?_method=DELETE"" method="POST">
+                                    <span><button type="submit"><i class="far fa-trash-alt"></i></button></span>
+                                    </form>
+                                </div>
+                            </div>
+                        </article>
+                        <% } %>
+                </section>
+                <section class="total-checkout">
+                    <div class="total-checkout-border">
+                        <h1>CHECKOUT</h1>
+                        <div class="separador"></div>
+                        <span>Cantidad: <%= productCheckout.length %>
+                                <br>
+                                <form action="/checkout/purchase" method="POST">    
+                                <span>Total: $
+                                   <% let total = 0
+                                    productCheckout.forEach(product => {
+                                        total += product.quantity * product.productPrice
+                                    })%>
+                                    <%=total%>
+                                    
+                                </span>
+                                <input name="total" type="number" value="<%=total%>" hidden>
+                                <br>
+                                <div class="separador">
+                                <div class="input-data">
+                                <label for="address">Dirección de entrega</label><br>
+                                <input type="text" name="address" id="" value="<%= user.address %>"><br>
+                                <label for="phone">Teléfono de contacto</label><br>
+                                <input type="text" name="phone" id="" value="<%= user.phone %>"><br>
+                                </div>
+                                <p>Revise bien todos los datos
+                                    antes de contfirmar la compra
+                                </p>
+                                <div class="separador"></div>
+                                
+                                <button class="final-button">FINALIZAR</button>
+                                </form>
                     </div>
                 </div>
-            </article>
-            <% } %>
-        </section>
-        <section class="total-checkout">
-            <div class="total-checkout-border">
-                <h1>CHECKOUT</h1>
-                <div class="separador"></div>
-                
+                    <div>
+                        <div class="similar-interests">
+                            <h3>Productos que también te pueden interesar</h3>
+                            <section class="main-slider-mini">
+                                <div class="slider-mini">
+                                    <ul>
+                                        <li><img src="/img/colgante.jpg" alt=""></li>
+                                        <li><img src="/img/coral.jpg" alt=""></li>
+                                        <li><img src="/img/delfina.jpg" alt=""></li>
+                                    </ul>
 
-                <span>Cantidad: <%
-                    let cantidad = 0; 
-                    for (i =0; i < productCheckout.length; i++) { %>
-                    <% cantidad = cantidad + productCheckout[i].cantidad %> 
-                    <% }%>
-                    <%=cantidad %> </span>
-                <br>
-                <span>Total:
-                    <%
-                    let total = 0; 
-                    for (i =0; i < productCheckout.length; i++) { %>
-                    <% total = total + productCheckout[i].cantidad * productCheckout[i].precio  %> 
-                    <% }%>
-                    <%=total %>
-                </span>
-                <br>
-                <div class="separador"></div>
-                <p>Revise bien todos los datos
-                    antes de contfirmar la compra
-                </p>
-                <div class="separador"></div>
-                <button class="final-button">FINALIZAR</button>
-            </div>
-            <div>
-                <div class="similar-interests">
-                    <h3>Productos que también te pueden interesar</h3>
-                    <section class="main-slider-mini">
-                        <div class="slider-mini">
-                            <ul>
-                                <li><img src="/img/colgante.jpg" alt=""></li>
-                                <li><img src="/img/coral.jpg" alt=""></li>
-                                <li><img src="/img/delfina.jpg" alt=""></li>
+                                </div>
 
-                            </ul>
-
+                            </section>
                         </div>
+                    </div>
+                </section>
+            </main>
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs')%>
+                <!-- FOOTER -->
+    </body>
 
-                    </section>
-                </div>
-            </div>
-        </section>
-    </main>
-<!-- FOOTER -->
-<%- include('partials/footer.ejs')%>
-<!-- FOOTER -->
-</body>
-
-</html>
+    </html>

@@ -13,10 +13,9 @@
 			<div class="add-container">
 				<a href="/product/add"><button id="product-create" class="add-product">Agregar producto</button></a>
 			</div>
-			<form action="/product" method="get">
-				<h4 class='form-lista-productos'>Cantidad de productos : <%= productLenght.length %></h4>
-				<table id="products">
-					<tr>
+			<h4 class='form-lista-productos'>Cantidad de productos : <%= productLenght.length %></h4>
+			<table id="products">
+				<tr>
 						<th class="center id">ID</th>
 						<th class="left">Categoría</th>
 						<th class="left">Nombre</th>
@@ -27,7 +26,7 @@
 						<th class="center">Editar</th>
 						<th class="center">Borrar</th>
 					</tr>
-
+					
 					<% products.forEach(product=> {%>
 						<tr>
 							<td class="center id">
@@ -49,41 +48,42 @@
 							<td class="center">
 								<% product.images.forEach(image=> {%>
 									<img class="img-redonda" src="<%=image.name%>">
-								<%})%>
-							</td>
-							<td class="center">
-								<a href='/product/detail/<%=product.id%>'><i class="fas fa-search"></i></a>
-							</td>
-							<td class="center">
-								<a href="/product/<%=product.id%>/edit"><i class="far fa-edit"></i></a>
-							</td>
-							<td class="center">
+									<%})%>
+								</td>
+								<td class="center">
+									<a href='/product/detail/<%=product.id%>'><i class="fas fa-search"></i></a>
+								</td>
+								<td class="center">
+									<a href="/product/<%=product.id%>/edit"><i class="far fa-edit"></i></a>
+								</td>
 								<form action="/product/<%=product.id%>?_method=DELETE" method="POST">
-									<button type="submit"><i class="far fa-trash-alt"></i></button>
+									<td class="center">
+										<button class="trash" type="submit"><i class="far fa-trash-alt"></i></button>
+									</td>
 								</form>
-							</td>
-						</tr>
-					<%})%>
-				</table>
-
-				<div class="page">
-					<% for(let j=0; j < nextButton; j++) {%>
-						<button type="submit" name="offset" class="offset" value="<%= 10*j %>">
-							<%=j+1%>
-						</button>
-					<%}%>
-				</div>
-
-			</form>
-
-			<div class="up-button">
-				<a href="#product-create"><i class="fas fa-chevron-up"></i></a>
-			</div>
-
-		</main>
-
-		<!--FOOTER-->
-		<%- include('../partials/footer.ejs')%>
-	</body>
-
-	</html>
+							</tr>
+							<%})%>
+						</table>
+						
+					<form action="/product" method="GET">
+						<div class="page">
+							<% for(let j=0; j < nextButton; j++) {%>
+								<button type="submit" name="offset" class="offset" value="<%= 10*j %>">
+									<%=j+1%>
+								</button>
+								<%}%>
+							</div>
+							
+					</form>
+						
+						<div class="up-button">
+							<a href="#product-create"><i class="fas fa-chevron-up"></i></a>
+						</div>
+						
+					</main>
+					
+					<!--FOOTER-->
+					<%- include('../partials/footer.ejs')%>
+				</body>
+				
+				</html>

@@ -9,7 +9,6 @@ const checkoutController = require('../controllers/checkoutController')
 
 //Asigno a cada ruta la propiedad del controlador
 router.get('/', mainController.home)
-router.get('/checkout',authMiddleware, checkoutController.checkout)
 router.get('/us', mainController.us)
 
 module.exports = router

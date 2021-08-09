@@ -1,91 +1,127 @@
-const { Category } = require('../database/models')
+const session = require('express-session')
 const { Product } = require('../database/models')
-const random = require('../helpers/utilities')
-const path = require('path')
-const pathImageCategories = '/img/categories/'
-const productImagePath = '/img/'
+const { Item } = require('../database/models')
+const { Feature } = require('../database/models')
+const { User } = require('../database/models')
+const { Order } = require('../database/models')
+const Op = require('sequelize')
+const { checkout } = require('./mainController')
 
-function addProductImagePath(element) {
-  return element.dataValues.name = productImagePath + element.name
-}
-
-
-const SALEIMAGES = 4 // cantidad de imagenes que se muestran en la parte de SALE
 
 const controller = {
+	add: async function (req, res) {
+		const product = await Product.findByPk(req.body.id)
+		const { cct, dim, optic, power } = req.body
+		const productImage = await product.getImages()
+		let mainImage = ''
+		productImage.forEach(e => {
+			if (e.type == 'main') {
+				mainImage = e.name
 
-  home: async (req, res) => {
+			}
+		});
+		const productFeatureAux = await Feature.findAll({
+			attributes: ['name', 'price'],
+			where: {
+				id: [cct, dim, optic, power]
+			},
+		})
 
-    const products = await Product.findAll({
-      include: [{ association: 'category' },
-      {
-        association: 'images',
-        where: { type: 'main' },
-      }]
-    })
-
-    products.forEach(product => {
-      product.images.forEach(image => {
-        addProductImagePath(image)
-      })
-    })
-
-    let productsQty = products.length
-    const randomArray = random.randomArray(SALEIMAGES, productsQty)
-
-    let categoryList = await Category.findAll()
-    categoryList.forEach(category => {
-      category.dataValues.imageCover = path.join(pathImageCategories, category.imageCover)
-      category.dataValues.imageHome = path.join(pathImageCategories, category.imageHome)
-    });
+		let productFeatures2 = []
+		let featuresAcumulatedPrice = 0
+		productFeatureAux.forEach(e => {
+			productFeatures2.push(e.name)
+			featuresAcumulatedPrice += Number(e.price)
+		})
+		let productFeatures = {
+			CCT: 'CCT: ' + productFeatures2[0],
+			DIM: 'DIM: ' + productFeatures2[1],
+			OPTIC: 'OPTIC: ' + productFeatures2[2],
+			POWER: 'POWER: ' + productFeatures2[3]
+		}
 
 
-    res.render('home.ejs', { products, categoryList, randomArray }) // paso al html el array
-  },
-  
+		const productPrice = Number(product.price)
+		console.log(productPrice)
+		//FIXME actualmente toma el precio del produco, tenemos que hacer que el precio se 
+		//actualice en el front en base a las diferentes features y mandarlo por el body
+		const quantity = Number(req.body.quantity)
+		/* const productFeatures = [cct , dim , optic , power].toString() */
+		const userId = res.locals.user.id
+		const item = {
+			productName: product.name,
+			productPrice,
+			productDescription: product.description,
+			productFeatures: JSON.stringify(productFeatures),//aca paso el objeto a string para que lo tome la DB
+			productImage: mainImage,
+			quantity,
+			subtotal: quantity * productPrice + quantity * featuresAcumulatedPrice,
+			userId
 
-  checkout: (req, res) => {
-    //Esto esta aca como para tener unos datos que enviar al checkout. NO va aca.
-    let productCheckout = [
-      {
-        id: 1,
-        nombre: 'Lampara',
-        categoria: 'Plafon',
-        marca: 'Focal Glow',
-        potencia: '20W',
-        cct: '3000K',
-        precio: 1000,
-        dim: 'bluetooth',
-        cantidad: 2,
-      },
-      {
-        id: 2,
-        nombre: 'Reflector',
-        categoria: 'Exterior',
-        marca: 'Disney',
-        potencia: '100W',
-        cct: '2000K',
-        precio: 1000,
-        dim: 'click',
-        cantidad: 1,
-      },
-      {
-        id: 3,
-        nombre: 'Velador',
-        categoria: 'Interior',
-        marca: 'Focal Glow',
-        potencia: '100W',
-        cct: '2000K',
-        precio: 1500,
-        dim: 'click',
-        cantidad: 5,
-      },
-    ]
-    res.render('checkout.ejs', { productCheckout })
-  },
-  us: (req, res) => {
-    res.render('us.ejs')
-  },
+		}
+
+		await Item.create(item)
+		res.redirect('/checkout')
+	},
+	list: async (req, res) => {
+		const productCheckout = await Item.findAll({
+			where: {
+				userId: res.locals.user.id
+			}
+		})
+		const id = res.locals.user.id
+		const user = await User.findByPk(id)
+
+		/*  productCheckout.forEach(product => {
+				 product.productPrice.dataValues = Number(product.productPrice)
+		 })
+		 console.log(productCheckout) */
+		let features = []
+		const featuresaux = productCheckout.forEach(e => {
+			features.push(JSON.parse(e.productFeatures))//aca paso a objeto los strings de los features
+		})
+
+		//preguntar como hacer para que viaje con el nombre 
+		res.render('checkout.ejs', { productCheckout, features, user })
+	},
+	// validar que el usuario no pueda agregar dos productos iguales en items diferentes
+	//tomar el precio de la db y no del front 
+	//validar que todo lo que se mande del front corresponda con los que esta en la db 
+	destroy: async (req, res) => {
+		let { id } = req.params
+		const itemToDelete = await Item.findByPk(id)
+		itemToDelete.destroy()
+		res.redirect('/checkout')
+	},
+	purchase: async (req, res) => {
+		//Crear el objeto ORDER en la tabla ORDER
+		//Modificar el objeto ITEM, la parte de ORDER ID, una vez creado ORDER
+
+		const order = {
+			total: req.body.total,
+			createdAt: Date.now(),
+			userId: res.locals.user.id
+		}
+
+		const orderCreated = await Order.create(order)
+
+		const itemUpdate = await Item.update(
+			{ orderId: orderCreated.id },
+			{
+				where: {
+					userId: orderCreated.userId,
+					orderId: null
+				}
+			}
+
+		)
+		res.render('succes-purchase.ejs')
+
+	}
+
+
+
 }
+
 
 module.exports = controller

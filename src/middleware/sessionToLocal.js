@@ -4,12 +4,15 @@ module.exports = async (req, res, next) => {
 
 
 	if (req.session.logged) {
-		const userFound = await User.findByPk(req.session.logged)
+		try {
+			const userFound = await User.findByPk(req.session.logged)
+			delete userFound.password
+			res.locals.user = userFound
 
-
-		delete userFound.password
-
-		res.locals.user = userFound
+		} catch (error) {
+			console.log(error)
+			return res.redirect('/500')
+		}
 	}
 	next()
 }

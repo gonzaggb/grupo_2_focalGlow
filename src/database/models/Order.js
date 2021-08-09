@@ -6,13 +6,12 @@ module.exports = (sequelize, DataTypes) => {
 			primaryKey: true,
 			type: DataTypes.INTEGER
 		},
-		orderNumber: {
-			type: DataTypes.INTEGER,
-			allowNull: true,
-			unique: true
-		},
 		total: {
 			type: DataTypes.DECIMAL,
+			allowNull: false
+		},
+		createdAt: {
+			type: DataTypes.INTEGER,
 			allowNull: false
 		},
 		userId: {

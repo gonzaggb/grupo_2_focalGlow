@@ -1,183 +1,200 @@
 <%- include ('../partials/head')%>
-  <title>Focal Glow | <%=product.name%></title>            
+  <title>Focal Glow | <%=product.name%>
+  </title>
   <link rel="stylesheet" href="/css/styles-product-detail.css" />
   </head>
 
   <body>
     <!--HEADER-->
     <%- include ('../partials/header')%>
-<form action="/product/checkout" method="POST">
-    <div class="product-name">
-      <h2><%=product.name%></h2>
-      <a href="#" onclick="history.go(-1)"><i id="x" class="fas fa-arrow-circle-left"></i></a>
-    </div>
-
-    <main>
-      <div class="product-detail">
-        <div class="main-img">
-          <%product.images.forEach(image => {%>
-            <% if (image.type == 'main') { %>
-              <img src="<%=image.name%>" alt="luminaria" />
-              <input name="mainImage" value="<%=image.name%>" display="none">
-            <% } %>
-          <%})%>
+      <form action="/checkout/add" method="POST">
+        <div class="product-name">
+          <h2>
+            <%=product.name%>
+          </h2>
+          <a href="#" onclick="history.go(-1)"><i id="x" class="fas fa-arrow-circle-left"></i></a>
         </div>
-        <i class="fas fa-ruler"></i>
-
-        <div class="product-dimensions">
-          <%product.images.forEach(image => {%>
-            <% if (image.type == 'dimension') { %>
-              <img src="<%=image.name%>" alt="dimensiones luminaria" />
-              <input name="productDimension" value="<%=image.name%>" display="none">
-
-              <% } %>
-          <%})%>
-        </div>
-
-        <div class="slider-container">
-                                   
-          
-            <%arraySlider.forEach((image, index) =>{%>
-              <input type="radio" id="trigger<%=index+1%>" name="slider" checked autofocus>
-              <label for="trigger<%=index+1%>"></label>
-              <div class="slide <%=index+1%>">
-                <img src ="<%=image%>">
-              </div>
-            <%})%>    
-             
-        </div>
-      </div>
-
-      <div class="product-info">
-        <section class="technical-info">
-          <div class = "technical-info-title">
-            <h3>Configure su producto</h3>
-            <p>Potencia, Temperatura de Color, Óptica & Control</p>
-          </div>
-          <div class = "options">
-            <div class="options-column">
-              <% if (product.features.some(feature => feature.type == 'power')) { %>
-                <select name="power" class="btn">
-                  <%product.features.forEach(feature => {%> 
-                    <%if(feature.type == 'power'){%>
-                      <option value="<%=feature.id%>"><%=feature.name%></option>
-                    <%}})%> 
-                </select>   
-              <%}%>
-              
-              
-              <% if (product.features.some(feature => feature.type == 'cct')) { %>
-                <select name="cct" class="btn">
-                  <%product.features.forEach(feature => {%> 
-                    <%if(feature.type == 'cct'){%>
-                      <option value="<%=feature.id%>"><%=feature.name%></option>
-                    <%}})%>
-                </select>
-              <% } %>
-            </div>
-
-            <div class="options-column">
-              <% if (product.features.some(feature => feature.type == 'optic')) { %>
-                <select name="optic" class="btn">
-                  <%product.features.forEach(feature => {%> 
-                    <%if(feature.type == 'optic'){%>
-                      <option value="<%=feature.id%>"><%=feature.name%></option>
-                    <%}})%>
-                </select>
-              <% } %>
-
-              <% if (product.features.some(feature => feature.type == 'dim')) { %>
-                <select name="dim" class="btn">               
-                  <%product.features.forEach(feature => {%> 
-                    <%if(feature.type == 'dim' && feature.name == 'Switch'){%>
-                      <option value="<%=feature.id%>">&#xf011; <%=feature.name%></option>
-                    <%}else if (feature.type == 'dim' && feature.name == 'Bluetooth'){%>
-                      <option value="<%=feature.id%>">&#xf293; <%=feature.name%></option>
-                      <%} else if (feature.type == 'dim') {%>
-                      <option value="<%=feature.id%>"><%=feature.name%></option>
-                  <%}})%>
-                </select>
-                <% } %>
-              
-            </div>
-          </div>
-       
-        
-          <article class="technical-data">
-            <h3>Características</h3>
-            <ul>
-              <li>Material:
-              <%product.features.forEach(feature => {%>
-                <% if (feature.type == 'material') { %>
-                  <%=feature.name%>
-                <% } %>
-                <%})%>
-              </li>
-              <li>Fuente:
-                <%product.features.forEach(feature => {%>
-                  <% if (feature.type == 'source') { %>
-                    <%=feature.name%>
+        <input type="hidden" name="id" value='<%= product.id %>'>
+        <main>
+          <div class="product-detail">
+            <div class="main-img">
+              <%product.images.forEach(image=> {%>
+                <% if (image.type=='main' ) { %>
+                  <img src="<%=image.name%>" alt="luminaria" />
                   <% } %>
-                  <%})%>
-                </li>
-            </ul>
-            <p><strong>Descripción:</strong> <br>
-              <%=product.description%></p>
-          </article>
-        </section>
+                    <%})%>
+            </div>
+            <i class="fas fa-ruler"></i>
 
-        <section class="price">
-          <h3 class="price-title">$ 
-            <% const toThousand = (n) => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
-             <%=toThousand(product.price)%>
-          </h3>
-          <div class="qtyadd">
-            <input type="number" placeholder="1" min="0" />
-            <button class="add">AÑADIR</button>
+            <div class="product-dimensions">
+              <%product.images.forEach(image=> {%>
+                <% if (image.type=='dimension' ) { %>
+                  <img src="<%=image.name%>" alt="dimensiones luminaria" />
+                  <% } %>
+                    <%})%>
+            </div>
+
+            <div class="slider-container">
+
+
+              <%arraySlider.forEach((image, index)=>{%>
+                <input type="radio" id="trigger<%=index+1%>" name="slider" checked autofocus>
+                <label for="trigger<%=index+1%>"></label>
+                <div class="slide <%=index+1%>">
+                  <img src="<%=image%>">
+                </div>
+                <%})%>
+
+            </div>
           </div>
-        </section>
-      </form>
 
-        <div class="product-dimensions-info">
-          <% product.images.forEach(image => {%>
-            <% if (image.type == 'dimension') { %>
-              <img src="<%=image.name%>" alt="dimensiones luminaria"/>
-            <%}%>
-          <%})%>
-          <span>Dimensiones</span>
-        </div>
-          
+          <div class="product-info">
+            <section class="technical-info">
+              <div class="technical-info-title">
+                <h3>Configure su producto</h3>
+                <p>Potencia, Temperatura de Color, Óptica & Control</p>
+              </div>
+              <div class="options">
+                <div class="options-column">
+                  <% if (product.features.some(feature=> feature.type == 'power')) { %>
+                    <select name="power" class="btn">
+                      <%product.features.forEach(feature=> {%>
+                        <%if(feature.type=='power' ){%>
+                          <option value="<%=feature.id%>">
+                            <%=feature.name%>
+                          </option>
+                          <%}})%>
+                    </select>
+                    <%}%>
+
+
+                      <% if (product.features.some(feature=> feature.type == 'cct')) { %>
+                        <select name="cct" class="btn">
+                          <%product.features.forEach(feature=> {%>
+                            <%if(feature.type=='cct' ){%>
+                              <option value="<%=feature.id%>">
+                                <%=feature.name%>
+                              </option>
+                              <%}})%>
+                        </select>
+                        <% } %>
+                </div>
+
+                <div class="options-column">
+                  <% if (product.features.some(feature=> feature.type == 'optic')) { %>
+                    <select name="optic" class="btn">
+                      <%product.features.forEach(feature=> {%>
+                        <%if(feature.type=='optic' ){%>
+                          <option value="<%=feature.id%>">
+                            <%=feature.name%>
+                          </option>
+                          <%}})%>
+                    </select>
+                    <% } %>
+
+                      <% if (product.features.some(feature=> feature.type == 'dim')) { %>
+                        <select name="dim" class="btn">
+                          <%product.features.forEach(feature=> {%>
+                            <%if(feature.type=='dim' && feature.name=='Switch' ){%>
+                              <option value="<%=feature.id%>">&#xf011; <%=feature.name%>
+                              </option>
+                              <%}else if (feature.type=='dim' && feature.name=='Bluetooth' ){%>
+                                <option value="<%=feature.id%>">&#xf293; <%=feature.name%>
+                                </option>
+                                <%} else if (feature.type=='dim' ) {%>
+                                  <option value="<%=feature.id%>">
+                                    <%=feature.name%>
+                                  </option>
+                                  <%}})%>
+                        </select>
+                        <% } %>
+
+                </div>
+              </div>
+
+
+              <article class="technical-data">
+                <h3>Características</h3>
+                <ul>
+                  <li>Material:
+                    <%product.features.forEach(feature=> {%>
+                      <% if (feature.type=='material' ) { %>
+                        <%=feature.name%>
+                          <% } %>
+                            <%})%>
+                  </li>
+                  <li>Fuente:
+                    <%product.features.forEach(feature=> {%>
+                      <% if (feature.type=='source' ) { %>
+                        <%=feature.name%>
+                          <% } %>
+                            <%})%>
+                  </li>
+                </ul>
+                <p><strong>Descripción:</strong> <br>
+                  <%=product.description%>
+                </p>
+              </article>
+            </section>
+
+            <section class="price">
+              <h3 class="price-title">$
+                <% const toThousand=(n)=> n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+                  <%=toThousand(product.price)%>
+              </h3>
+              <div class="qtyadd">
+                <input type="number" name='quantity' placeholder="1" min="1" />
+                <%if(locals.user){%>
+                <button class="add" type="submit">AÑADIR</button>
+                <%}else{%>
+                <a class="add" href="/users/login">Iniciar Sesión</a>
+                <%}%>
+              </div>
+            </section>
             
-        <section class="documents">
-          <% product.files.forEach(file => { %>
-            <% if (file.type == 'dataSheet') { %>
-              <a href="<%=file.name%>" target="_blank"><span><i class="far fa-file-pdf"></i> Hoja Técnica</span></a>
-            <% } else if (file.type == 'installSheet') { %>
-              <a href="<%=file.name%>"target="_blank"><span><i class="far fa-file-pdf"></i> Manual de Instalación</span></a>
-            <%}})%>       
-        </section>
+      </form>
+      <div class="product-dimensions-info">
+        <% product.images.forEach(image=> {%>
+          <% if (image.type=='dimension' ) { %>
+            <img src="<%=image.name%>" alt="dimensiones luminaria" />
+            <%}%>
+              <%})%>
+                <span>Dimensiones</span>
+      </div>
+
+
+      <section class="documents">
+        <% product.files.forEach(file=> { %>
+          <% if (file.type=='dataSheet' ) { %>
+            <a href="<%=file.name%>" target="_blank"><span><i class="far fa-file-pdf"></i> Hoja Técnica</span></a>
+            <% } else if (file.type=='installSheet' ) { %>
+              <a href="<%=file.name%>" target="_blank"><span><i class="far fa-file-pdf"></i> Manual de
+                  Instalación</span></a>
+              <%}})%>
+      </section>
 
       </div>
-    </main>
+      </main>
 
-    <section class="similar-products-container">
-      <article class="similar-products">
-        <h3>Productos Similares</h3>
-        <div class="slider-container">
-          <%similarProductsFiltered.forEach((product, index) => { %>
-            <input type="radio" id="trigger<%=index + 1 + arraySlider.length%>" name="slider2" checked autofocus >
-            <label for="trigger<%=index + 1 + arraySlider.length%>"></label>
-            <div class="slide2 <%=index + 1 + arraySlider.length%>">
-              <a href="/product/detail/<%=product.id%>"><img src ="<%=product.images[0].name%>"></a>
-            </div>  
-          <%}) %>
-        </div>
-      </article>
-    </section>
+      <section class="similar-products-container">
+        <article class="similar-products">
+          <h3>Productos Similares</h3>
+          <div class="slider-container">
+            <%similarProductsFiltered.forEach((product, index)=> { %>
+              <input type="radio" id="trigger<%=index + 1 + arraySlider.length%>" name="slider2" checked autofocus>
+              <label for="trigger<%=index + 1 + arraySlider.length%>"></label>
+              <div class="slide2 <%=index + 1 + arraySlider.length%>">
+                <a href="/product/detail/<%=product.id%>"><img src="<%=product.images[0].name%>"></a>
+              </div>
+              <%}) %>
+          </div>
+        </article>
+      </section>
 
-    
 
-    <!--FOOTER-->
-    <%- include('../partials/footer') %>
+
+      <!--FOOTER-->
+      <%- include('../partials/footer') %>
   </body>
-</html>
+
+  </html>
