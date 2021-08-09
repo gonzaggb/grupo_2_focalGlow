@@ -15,7 +15,7 @@
                             <div class="first">
                                 <div class="cateogry-selector">
                                     <label class="" for="category">Categoria: </label><br>
-                                    <select name="categoryId" class="select">
+                                    <select name="categoryId" class="select" id="categoryId">
                                         <option value="">Seleccionar</option>
                                         <% locals.categories.forEach(element => { %>
                                             <option value="<%=element.id%>"
@@ -33,14 +33,14 @@
                             <div class="first">
                                 <div class="in-line-data">
                                     <label class="" for="name">Nombre del Producto: </label><br>
-                                    <input class="box" type="text" name="name" id="producto" value="<%= locals.old && old.name ? old.name : '' %>">
+                                    <input class="box" type="text" name="name" id="productName" value="<%= locals.old && old.name ? old.name : '' %>">
                                     <span class="error_msg"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                                 </div>
                             </div><br>
                             <div class="first">
                                 <div class="in-line-data">
                                     <label class="" for="quantity">Cantidad: </label><br>
-                                    <input class="box" type="number" name="quantity" id="producto" min="0" value="<%= locals.old && old.quantity ? old.quantity : '' %>" >
+                                    <input class="box" type="number" name="quantity" id="productQuantity" min="0" value="<%= locals.old && old.quantity ? old.quantity : '' %>" >
                                     <span class="error_msg">
                                         <%= locals.errors && errors.qty ? errors.qty.msg : null %>
                                     </span>
@@ -50,7 +50,7 @@
                                 <label class="" for="source">Fuente: </label>
                                 <%featuresList.forEach(source => {%> <!--Recorre la lista de TODAS las features-->
                                     <% if (source.type == 'source') { %> <!--Evalua las que son material-->
-                                        <div><input class="radio" type="radio" name="source" 
+                                        <div><input class="radio" type="radio" id="productSource" name="source" 
                                             value="<%=source.id%>"
                                             <%=locals.old && old.source && old.source == source.id ? 'checked' : ''%>>
                                             <%=source.name%>
@@ -64,7 +64,7 @@
                                     <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                     <%featuresList.forEach(material => {%> <!--Recorre la lista de TODAS las features-->
                                         <% if (material.type == 'material') { %> <!--Evalua las que son material-->
-                                            <div><input class="check" type="checkbox" name="material[]" value="<%=material.id%>" 
+                                            <div><input class="check" type="checkbox" id="productMaterial" name="material[]" value="<%=material.id%>" 
                                                 <%if(locals.old && old.material){%>
                                                     <%old.material.forEach(oldmaterial => {%>
                                                         <%=oldmaterial == material.id ? 'checked' : '' %>
@@ -82,7 +82,7 @@
                                     <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                     <%featuresList.forEach(optic => {%> <!--Recorre la lista de TODAS las features-->
                                         <% if (optic.type == 'optic') { %> <!--Evalua las que son material-->
-                                            <div><input class="check" type="checkbox" name="optic[]" value="<%=optic.id%>"
+                                            <div><input class="check" type="checkbox" id="productOptics" name="optic[]" value="<%=optic.id%>"
                                                 <%if(locals.old && old.optic){%>
                                                     <%old.optic.forEach(oldOptic => {%>
                                                         <%=oldOptic == optic.id ? 'checked' : '' %>
@@ -98,7 +98,7 @@
                             <div class="first-">
                                 <label for="power">Potencia: </label>
 																
-                                    <select multiple name="power" class="select">
+                                    <select multiple name="power" id="productPower" class="select">
                                         <%featuresList.forEach(power => {%>
                                             <%if(power.type == 'power'){%>
                                                 <option  value="<%=power.id%>"
@@ -118,7 +118,7 @@
                                     <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                     <%featuresList.forEach(cct => {%> <!--Recorre la lista de TODAS las features-->
                                         <% if (cct.type == 'cct') { %> <!--Evalua las que son material-->
-                                            <div><input class="check" type="checkbox" name="cct[]" value="<%=cct.id%>" 
+                                            <div><input class="check" type="checkbox" id="productCCT" name="cct[]" value="<%=cct.id%>" 
                                                 <%if(locals.old && old.cct){%>
                                                     <%old.cct.forEach(oldCct => {%>
                                                         <%=oldCct == cct.id ? 'checked' : '' %>
@@ -135,7 +135,7 @@
                                     <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                     <%featuresList.forEach(dim => {%> <!--Recorre la lista de TODAS las features-->
                                         <% if (dim.type == 'dim') { %> <!--Evalua las que son material-->
-                                            <div><input class="check" type="checkbox" name="dim[]"
+                                            <div><input class="check" type="checkbox" id="productDim" name="dim[]"
                                                 value="<%=dim.id%>" 
                                                 <%if(locals.old && old.dim){%>
                                                     <%old.dim.forEach(oldDim => {%>
@@ -156,7 +156,7 @@
                             <span class="error_msg"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>
                             <div class="description-container">
                                 <label class="title" for="description">Descripción del producto:</label><br> 
-                                <textarea class ="description" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>
+                                <textarea class ="description" id="textArea" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>
                                 <span class="error_msg"><%=locals.errors && errors.description ? errors.description.msg : '' %></span> 
                             </div>
                         </div>
@@ -228,6 +228,7 @@
                     </form>
                 </div>
             </main>
+            <script src='/js/validationCreateProductForm.js'></script>
             <%- include('../partials/footer.ejs')%>
     </body>
 
