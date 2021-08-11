@@ -2,7 +2,9 @@ const {User} = require('../../database/models')
 
 const controller = {
     list: async(req,res)=> {
-        let users = await User.findAll()       
+        let users = await User.findAll({
+            attributes: ['id', 'firstName', 'lastName','lastName',]
+        }) 
         let response = {
             count: {
                 total: users.length
@@ -18,7 +20,7 @@ const controller = {
             id,
             firstName,
             lastName,
-            email,
+            lastName,
             profileImg
         }
         
