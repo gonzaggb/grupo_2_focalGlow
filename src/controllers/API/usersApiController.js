@@ -2,21 +2,12 @@ const {User} = require('../../database/models')
 
 const controller = {
     list: async(req,res)=> {
-        let total = await User.findAll()
-        
-        total.forEach(element => {
-            user.push([id,name,email])
-        });
-        console.log(user)
-        
+        let users = await User.findAll()       
         let response = {
             count: {
-                total : total.length
+                total: users.length
             },
-            users: total
-            
-                
-            
+            users: users
         }
         res.json(response)
     },
