@@ -44,6 +44,7 @@ app.listen(port, () =>
   console.log('Servidor corriendo en el puerto ' + port + '\n' + 'Focal Glow es el mejor grupo!!!')
 )
 
+
 // Requiriendo todos los routers
 app.use(categoriesMiddleware)
 const mainRoutes = require('./routes/mainRoutes')
@@ -58,6 +59,12 @@ app.use('/product', productRoutes)
 app.use('/category', categoryRoutes)
 app.use('/users', userRoutes)
 app.use('/checkout' ,checkoutRoutes)
+
+//requerimos las Api routes
+const usersApiroutes = require('./routes/APIroutes/usersApiRoutes')
+/* const productsApiroutes = require('./routes/APIroutes/productsApiRoutes') */
+//Api routes
+app.use('/api/users',usersApiroutes)
 
 //Ruta 500 por si falla la base de datos
 app.use('/500', (req, res, next) => {
