@@ -25,7 +25,6 @@ const controller = {
                 { association: 'category' }
             ]
         })
-        console.log(product)
         let response = {
             meta: {
                 status: 200,
