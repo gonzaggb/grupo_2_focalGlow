@@ -4,6 +4,8 @@ const SHORT_TEXT = 3
 
 const category = document.querySelectorAll('#category')
 const categoryError = document.querySelector('#category-error')
+const categorySelect = document.querySelectorAll('#category-select')
+const categoryLabel = document.querySelectorAll('#category-label')
 
 const product = document.querySelector('#input-product-name')
 const productError = document.querySelector('#error-product-name')
@@ -20,18 +22,34 @@ const descriptionLabel = document.querySelector('#description-label')
 const price = document.querySelector('#price-input')
 const priceLabel = document.querySelector('#price-label')
 const priceError = document.querySelector('#price-error')
+
 const source = document.querySelectorAll('#source')
 const sourceError = document.querySelector('#source-error')
+const sourceLabel = document.querySelector('#source-label')
+
 const material = document.querySelectorAll('#material')
 const materialError = document.querySelector('#material-error')
+const materialLabel = document.querySelector("#material-label")
+
 const optic = document.querySelectorAll('#optic')
 const opticError = document.querySelector('#optic-error')
+const opticLabel = document.querySelector('#optic-label')
+
+
 const power = document.querySelectorAll('#power')
 const powerError = document.querySelector('#power-error')
+const powerLabel = document.querySelector('#power-label')
+
+
 const cct = document.querySelectorAll('#cct')
 const cctError = document.querySelector('#cct-error')
+const cctLabel = document.querySelector('#cct-label')
+
 const dim = document.querySelectorAll('#dim')
 const dimError = document.querySelector('#dim-error')
+const dimLabel = document.querySelector('#dim-label')
+
+
 const mainImage = document.querySelector('#main-image-input')
 const mainImageLabel = document.querySelector('#main-image-label')
 const mainImageError = document.querySelector('#main-image-error')
@@ -39,7 +57,6 @@ const dimensionImage = document.querySelector('#dimension-image-input')
 const dimensionImageLabel = document.querySelector('#dimension-image-label')
 const dimensionImageError = document.querySelector('#dimension-image-error')
 
-//FIXME ver como capturar todas las imagenes del slider
 const sliderImages = document.querySelector('#slider-image-input')
 const sliderError = document.querySelector('#slider-image-error')
 const sliderLabel = document.querySelector('#slider-image-label')
@@ -48,6 +65,7 @@ const sliderLabel = document.querySelector('#slider-image-label')
 const dataSheetLabel = document.querySelector('#label-data-sheet')
 const dataSheet = document.querySelector('#input-data-sheet')
 const dataSheetError = document.querySelector('#error-data-sheet')
+
 const installSheet = document.querySelector('#input-install-sheet')
 const installSheetLabel = document.querySelector('#label-install-sheet')
 const installSheetError = document.querySelector('#error-install-sheet')
@@ -126,37 +144,23 @@ function isPdf(fileName) {
 function clearErrorAtCheck(checkList, error) {
     checkList.forEach(e => {
         e.addEventListener('click', event => {
-            console.log('click')
             clearErrors([error])
         })
     })
 }
-//Borra los errors cuando se selecciona un campo
-function clearErrorAtSelect(checkList, error) {
-    checkList.forEach(e => {
-        e.addEventListener('focus', event => {
-            clearErrors([error])
-        })
-    })
-}
+
+
 //Borra los errores de los campos pasados
 function clearErrors([...fieldError]) {
     fieldError.forEach(e => {
         e.innerHTML = ''
     })
 }
-//Valida que los checkobx o select estén marcados, el callback que recibe es isChecked o isSelected
-function validateCheckFields(list, errorField, callback, event) {
-    if (callback(list) === 0) {
-        errorField.innerHTML = 'Debes seleccionar al menos una opcion'
-        return event.preventDefault()
-    }
-    clearErrors(errorField)
-}
+
 
 
 //Valida que los inputs o select estén marcados, el callback que recibe es isChecked o isSelected
-function validateInput(input, errorField, label, type, event) {
+function validate(input, errorField, label, type, event, callback) {
     if (!isEmpty(input)) {
         errorField.innerHTML = `${label.innerHTML} no puede estar vacio`
         event.preventDefault()
@@ -210,56 +214,70 @@ function validateInput(input, errorField, label, type, event) {
                 event.preventDefault()
             }
             break;
+        case 'check':
+            if (callback(input) === 0) {
+                errorField.innerHTML = 'Debes seleccionar al menos una opcion'
+                return event.preventDefault()
+            }
+            break;
+        case 'select':
+            if (callback(input) === 0) {
+                errorField.innerHTML = 'Debes seleccionar al menos una opcion'
+                return event.preventDefault()
+            }
+            break;
+
         default:
     }
     clearErrors([errorField])
 
 }
 
+function blurValidation(input, errorField, label, type, callback) {
+    clearErrors([errorField])
+    input.addEventListener('blur', event => {
+        validate(input, errorField, label, type, event, callback)
+    })
+}
+
+/*Validacion con blur de los campos validables*/
+blurValidation(mainImage, mainImageError, mainImageLabel, 'image')
+blurValidation(price, priceError, priceLabel, 'number')
+blurValidation(description, descriptionError, descriptionLabel, 'longText')
+blurValidation(quantity, quantityError, quantityLabel, 'integer')
+blurValidation(product, productError, productLabel, 'text')
+blurValidation(dimensionImage, dimensionImageError, dimensionImageLabel, 'image')
+blurValidation(sliderImages, sliderError, sliderLabel, 'slider')
+blurValidation(dataSheet, dataSheetError, dataSheetLabel, 'pdf')
+blurValidation(installSheet, installSheetError, installSheetLabel, 'pdf')
 
 
-product.addEventListener('blur', event => {
-    validateInput(product, productError, productLabel, 'text', event)
-})
-
-// [0].innerHTML label | [2].value INPUT | [3].innerHTML ERROR MSG
-quantity.addEventListener('blur', event => {
-    validateInput(quantity, quantityError, quantityLabel, 'integer', event)
-})
-
-description.addEventListener('blur', event => {
-    validateInput(description, descriptionError, descriptionLabel, 'longText', event)
-})
-
-price.addEventListener('blur', event => {
-    validateInput(price, priceError, priceLabel, 'number', event)
-})
-
-clearErrorAtSelect(category, categoryError)
+/*Borrado de los errores de los campos checkeables*/
+clearErrorAtCheck(categorySelect, categoryError)
 clearErrorAtCheck(material, materialError)
-clearErrorAtSelect(power, powerError)
+clearErrorAtCheck(power, powerError)
 clearErrorAtCheck(source, sourceError)
 clearErrorAtCheck(optic, opticError)
 clearErrorAtCheck(cct, cctError)
 clearErrorAtCheck(dim, dimError)
 
-
+/*Validación de errores contra el botón crear*/
 createButton.addEventListener('click', event => {
     clearErrors(allErrors)
-    validateCheckFields(category, categoryError, isSelected, event)
-    validateCheckFields(power, powerError, isSelected, event)
-    validateCheckFields(source, sourceError, isChecked, event)
-    validateCheckFields(material, materialError, isChecked, event)
-    validateCheckFields(optic, opticError, isChecked, event)
-    validateCheckFields(cct, cctError, isChecked, event)
-    validateCheckFields(dim, dimError, isChecked, event)
-    validateInput(product, productError, productLabel, 'text', event)
-    validateInput(quantity, quantityError, quantityLabel, 'integer', event)
-    validateInput(price, priceError, priceLabel, 'number', event)
-    validateInput(description, descriptionError, descriptionLabel, 'longText', event)
-    validateInput(mainImage, mainImageError, mainImageLabel, 'image', event)
-    validateInput(dimensionImage, dimensionImageError, dimensionImageLabel, 'image', event)
-    validateInput(sliderImages, sliderError, sliderLabel, 'slider', event)
-    validateInput(dataSheet, dataSheetError, dataSheetLabel, 'pdf', event)
-    validateInput(installSheet, installSheetError, installSheetLabel, 'pdf', event)
+    validate(category, categoryError, categoryLabel, 'select', event, isSelected)
+    validate(power, powerError, powerLabel, 'select', event, isSelected,)
+    validate(source, sourceError, sourceLabel, 'check', event, isChecked)
+    validate(material, materialError, materialLabel, 'check', event, isChecked)
+    validate(optic, opticError, opticLabel, 'check', event, isChecked)
+    validate(cct, cctError, cctLabel, 'check', event, isChecked)
+    validate(dim, dimError, dimLabel, 'check', event, isChecked)
+    validate(product, productError, productLabel, 'text', event, isChecked)
+    validate(quantity, quantityError, quantityLabel, 'integer', event)
+    validate(price, priceError, priceLabel, 'number', event)
+    validate(description, descriptionError, descriptionLabel, 'longText', event)
+    validate(mainImage, mainImageError, mainImageLabel, 'image', event)
+    validate(dimensionImage, dimensionImageError, dimensionImageLabel, 'image', event)
+    validate(sliderImages, sliderError, sliderLabel, 'slider', event)
+    validate(dataSheet, dataSheetError, dataSheetLabel, 'pdf', event)
+    validate(installSheet, installSheetError, installSheetLabel, 'pdf', event)
 })

@@ -14,9 +14,9 @@
                         
                             <div class="first">
                                 <div class="cateogry-selector">
-                                    <label class="" for="category" id="label-category">Categoria: </label><br>
-                                    <select name="categoryId" class="select" >
-                                        <option value="">Seleccionar</option>
+                                    <label class="" for="category" id="category-label">Categoria: </label><br>
+                                    <select name="categoryId" class="select" id="category-select" >
+                                        <option value="" >Seleccionar</option>
                                         <% locals.categories.forEach(element => { %>
                                             <option id="category" value="<%=element.id%>"
                                                 <%=locals.old && old.categoryId && old.categoryId == element.id ? 'selected' : ''%>
@@ -47,7 +47,7 @@
                                 </div>
                             </div><br>
                             <div class="first-">
-                                <label class="" for="source">Fuente: </label>
+                                <label class="" for="source" id="source-label">Fuente: </label>
                                 <%featuresList.forEach(source => {%> 
                                     <% if (source.type == 'source') { %> 
                                         <div><input class="radio" type="radio" name="source" id="source" 
@@ -60,7 +60,7 @@
                             <span class="error_msg" id="source-error"><%=locals.errors && errors.source ? errors.source.msg : '' %></span><br>
                             <div>
                             <div class="first-">
-                                <label class="" for="material">Material: </label>
+                                <label class="" for="material" id="material-label">Material: </label>
                                     <%featuresList.forEach(material => {%>
                                         <% if (material.type == 'material') { %> 
                                             <div><input class="check" type="checkbox" name="material[]" id="material" value="<%=material.id%>" 
@@ -77,7 +77,7 @@
                             </div>
                             <span class="error_msg" id="material-error"><%=locals.errors && errors.material ? errors.material.msg : '' %></span><br>
                             <div class="first-">
-                                <label class="" for="optic">Optica: </label>
+                                <label class="" for="optic" id="optic-label">Optica: </label>
                                     <%featuresList.forEach(optic => {%> 
                                         <% if (optic.type == 'optic') { %> 
                                             <div><input class="check" type="checkbox" name="optic[]" id="optic" value="<%=optic.id%>"
@@ -94,7 +94,7 @@
                             </div>
                             <span class="error_msg" id="optic-error"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
-                                <label for="power id="power-label">Potencia: </label>
+                                <label for="power" id="power-label">Potencia: </label>
 																
                                     <select multiple name="power" class="select">
                                         <%featuresList.forEach(power => {%>
@@ -112,7 +112,7 @@
                             </div>
                             <span class="error_msg" id="power-error"><%=locals.errors && errors.power ? errors.power.msg : '' %></span><br>
                             <div class="first-">
-                                <label class="" for="cct">CCT: </label>
+                                <label class="" for="cct" id="cct-label">CCT: </label>
                                     <%featuresList.forEach(cct => {%> 
                                         <% if (cct.type == 'cct') { %> 
                                             <div><input class="check" type="checkbox" name="cct[]" id="cct" value="<%=cct.id%>" 
@@ -128,7 +128,7 @@
                             </div>
                             <span class="error_msg" id="cct-error"><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span><br>
                             <div class="first-">
-                                <label class="" for="dim">Dim: </label>
+                                <label class="" for="dim" id="dim-label">Dim: </label>
                                     <%featuresList.forEach(dim => {%> 
                                         <% if (dim.type == 'dim') { %> 
                                             <div><input class="check" type="checkbox" id="dim" name="dim[]"
