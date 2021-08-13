@@ -4,8 +4,12 @@ const errorEmail = document.querySelector('#errorEmail')
 const password = document.querySelector('#password')
 const errorPassword = document.querySelector('#errorPassword')
 
-console.log(password)
-console.log(errorPassword)
+const form = document.querySelector('#form')
+const buttonSubmit = document.querySelector('#buttonSubmit')
+console.log(buttonSubmit)
+console.log(form)
+
+let errors = []
 
 //FUNCION AUXILIAR PARA VALIDAR EMAIL
 function validateEmail(email) {
@@ -21,6 +25,7 @@ email.addEventListener('blur', function (event) {
 	if (!validateEmail(email.value)) {
 		errorEmail.classList.add('show')
 		errorEmail.innerHTML = 'Ingrese un email válido'
+		errors.push(errorEmail)
 		return
 	}
 
@@ -45,10 +50,28 @@ password.addEventListener('blur', function (event) {
 	errorPassword.innerHTML = ''
 
 	if (password.value == '') {
-		console.log('entré!!!')
 		errorPassword.classList.add('show')
 		errorPassword.innerHTML = 'Ingrese su contraseña'
+		errors.push(errorPassword)
 		return
+	}
+})
+
+form.addEventListener('submit', function (event) {
+	if (email.value == '') {
+		console.log('entre en email error')
+		errorEmail.classList.add('show')
+		errorEmail.innerHTML = 'Ingrese su email'
+		event.preventDefault()
+	}
+
+	if (password.value == '') {
+		errorPassword.classList.add('show')
+		errorPassword.innerHTML = 'Ingrese su contraseña'
+		event.preventDefault()
+	}
+	if (errors.length > 0) {
+		event.preventDefault()
 	}
 })
 

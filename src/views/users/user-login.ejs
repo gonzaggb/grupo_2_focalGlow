@@ -11,7 +11,7 @@
   <%- include('../partials/header.ejs')%>
 
   <main class="container-login">
-  	<form class="login-form" action="/users/login" method="POST">
+  	<form class="login-form" action="/users/login" method="POST" id="form">
 			<div class="form-container">
         <label for="email">Email</label>
         <br>
@@ -35,7 +35,7 @@
       <div class="button-container">
         <button type="submit" class="login-button">Ingresar</button>
         <br>
-        <button type="submit" class="login-button"><a href="/users/register">Crear Cuenta</a></button>
+        <button id='buttonSubmit' type="submit" class="login-button"><a href="/users/register">Crear Cuenta</a></button>
         <br>
       </div>
       <div class="forgotten-button">
