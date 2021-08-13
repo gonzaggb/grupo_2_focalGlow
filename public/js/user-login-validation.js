@@ -1,6 +1,11 @@
 const apiUrl = 'http://localhost:3000/api/users/email/'
 const email = document.querySelector('#email')
 const errorEmail = document.querySelector('#errorEmail')
+const password = document.querySelector('#password')
+const errorPassword = document.querySelector('#errorPassword')
+
+console.log(password)
+console.log(errorPassword)
 
 //FUNCION AUXILIAR PARA VALIDAR EMAIL
 function validateEmail(email) {
@@ -30,9 +35,21 @@ email.addEventListener('blur', function (event) {
 
 			if (response.meta.status == '204') {
 				errorEmail.classList.add('show')
-				errorEmail.innerHTML = 'El email ingresado no se ecuentra en nuestra base de datos'
+				errorEmail.innerHTML = 'El email ingresado no se ecuentra en nuestra base de datos. Favor de registrarse'
 			}
 		})
+})
+
+password.addEventListener('blur', function (event) {
+	errorPassword.classList.remove('show')
+	errorPassword.innerHTML = ''
+
+	if (password.value == '') {
+		console.log('entré!!!')
+		errorPassword.classList.add('show')
+		errorPassword.innerHTML = 'Ingrese su contraseña'
+		return
+	}
 })
 
 
