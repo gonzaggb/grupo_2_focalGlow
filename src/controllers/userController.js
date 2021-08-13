@@ -60,7 +60,7 @@ const controller = {
     if (!validationStatus.isEmpty()) {
 
       if (!req.file) { //valido que exista un archivo, en caso de no existir retorno los errores
-        return res.render('users/register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
+        return res.render('users/user-register.ejs', { errors: validationStatus.mapped(), oldData: req.body }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       } else {
         if (isFileImage(req.file.originalname)) { // si existe el archivo, valido la extension, si está dentro de las validas lo elimino del servidor, caso contrario no porque evite se guarde con el multer
           fs.unlinkSync(req.file.path)
@@ -84,7 +84,7 @@ const controller = {
     try {
       await User.create(newUser)
 
-      res.redirect('/users/login')
+      res.redirect('/users/user-login.ejs')
 
     } catch (error) {
       console.log(error)
