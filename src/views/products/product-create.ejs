@@ -14,7 +14,7 @@
                         
                             <div class="first">
                                 <div class="cateogry-selector">
-                                    <label class="" for="category">Categoria: </label><br>
+                                    <label class="" for="category" id="label-category">Categoria: </label><br>
                                     <select name="categoryId" class="select" >
                                         <option value="">Seleccionar</option>
                                         <% locals.categories.forEach(element => { %>
@@ -94,7 +94,7 @@
                             </div>
                             <span class="error_msg" id="optic-error"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
-                                <label for="power">Potencia: </label>
+                                <label for="power id="power-label">Potencia: </label>
 																
                                     <select multiple name="power" class="select">
                                         <%featuresList.forEach(power => {%>
