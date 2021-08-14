@@ -14,8 +14,8 @@
   <body>
     <%- include('../partials/header.ejs')%>
     <main class="main-container">
-      <form class="registry-form" method="POST" action="/users/register" enctype="multipart/form-data">
-        <div class="registry-container">
+      <form class="registry" method="POST" action="/users/register" enctype="multipart/form-data">
+       
 
           <label for="firstName">Nombre</label>
           <input class="login" type="text" name="firstName" id="firstName"
@@ -63,14 +63,14 @@
               <span class="error-message"> <%=errors.profileImg.msg%> </span>
           <%}%>
 
-          <div id="info"></div>
+         
           <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
           
 					<div class="button-container">
             <button type="submit" class="login-button">Continuar</button>
           </div>
 
-
+      </form>
     </main>
     <script src="/js/user-register-validation.js"></script>
   </body>
