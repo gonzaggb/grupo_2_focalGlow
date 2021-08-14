@@ -18,7 +18,8 @@ const validations = [
             return true
         }),
 
-    body('password').notEmpty().withMessage('Debes poner una contraseña').bail(),
+    body('password').notEmpty().withMessage('Debes poner una contraseña').bail()
+    .isStrongPassword().withMessage('Tu contraseña es poco segura, por favor incluye caracteres especiales, mayusculas y números'),
     body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña').bail(),
     body('rePassword').custom((val, { req }) => {
         let password = req.body.password

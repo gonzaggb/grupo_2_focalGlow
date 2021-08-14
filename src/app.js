@@ -63,9 +63,11 @@ app.use('/checkout' ,checkoutRoutes)
 //requerimos las Api routes
 const usersApiroutes = require('./routes/APIroutes/usersApiRoutes')
 const productsApiroutes = require('./routes/APIroutes/productsApiRoutes')
+const categoryApiroutes = require('./routes/APIroutes/categoryApiRoutes')
 //Api routes
 app.use('/api/users',usersApiroutes)
 app.use('/api/products', productsApiroutes)
+app.use('/api/category', categoryApiroutes)
 
 //Ruta 500 por si falla la base de datos
 app.use('/500', (req, res, next) => {

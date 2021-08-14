@@ -1,56 +1,58 @@
 <!-- Partial head -->
 <%- include('../partials/head.ejs')%>
 
-    <title>Login | Focal Glow</title>
-    <link rel="stylesheet" href="/css/styles-user-login.css">
+<title>Login | Focal Glow</title>
+<link rel="stylesheet" href="/css/styles-user-login.css">
 
 
-    </head>
+</head>
 
-    <body>
-        <%- include('../partials/header.ejs')%>
+<body>
+  <%- include('../partials/header.ejs')%>
+
+  <main class="container-login">
+  	<form class="login-form" action="/users/login" method="POST" id="form">
+			<div class="form-container">
+        <label for="email">Email</label>
+        <br>
+        <input class="input-login" type="email" name="email" id="email">
+        <br>          
+        <span class="error-data hidden" id="errorEmail">
+          <%if(locals.errors && errors.email) {%>
+            <%=errors.email.msg%>
+          <% } %>
+        </span> 
+        <br>
+        <label for="password">Contraseña</label>
+        <br>
+        <input class="input-login" type="password" name="password" id="password">
+        <br>
+        <span class="error-data hidden" id="errorPassword">
+          <%if(locals.errors && errors.password) {%>
+            <%=errors.password.msg%>
+          <% } %>
+        </span> 
+      </div>
+      <label class="remember" value="remember">
+        <input type="checkbox" name="remember">Recordar mi usuario y contraseña
+      </label>
+      <div class="button-container">
+        <button type="submit" class="login-button">Ingresar</button>
+        <br>
+        <button id='buttonSubmit' type="submit" class="login-button"><a href="/users/register">Crear Cuenta</a></button>
+        <br>
+      </div>
+      <div class="forgotten-button">
+        <span><a href="#">Olvidé mi usuario |</a></span>
+        <span><a href="#">Olvide mi contraseña</a></span>
+        
+       
+      </div>
+		</form>
 
 
+  </main>
+  <script src="/js/user-login-validation.js"></script>
+</body>
 
-            <main class="container-login">
-                <form class="login-form" action="/users/login" method="POST">
-
-                    <div class="form-container">
-                        <label for="email">Email</label>
-                        <br>
-                        <input class="input-login" type="email" name="email" id="email">
-                        <br>
-                        <%if(locals.errors && errors.email){%>
-                            <span class="error-data"> <%= errors.email.msg%> </span> 
-                            <%}%>
-                        <br>
-                        <label for="password">Contraseña</label>
-                        <br>
-                        <input class="input-login" type="password" name="password" id=password>
-                    </div>
-                    <label class="remember" value="remember">
-                        <input type="checkbox" name="remember">Recordar mi usuario y contraseña
-                    </label>
-                    <div class="button-container">
-                        <button type="submit" class="login-button">Ingresar</button>
-                        <br>
-                        <button type="submit" class="login-button"><a href="/users/register">Crear Cuenta</a></button>
-                        <br>
-                    </div>
-                    <div class="forgotten-button">
-                        <span><a href="#">Olvidé mi usuario |</a></span>
-                        <span><a href="#">Olvide mi contraseña</a></span>
-                        <br>
-                        <%if(locals.errors && errors.password){%>
-                            <span class="error-data"> <%=errors.password.msg%> </span> 
-                            <%}%>
-                    </div>
-
-                </form>
-
-
-                </div>
-                <script src="/js/login-Api-validation-Mars.js"></script>
-    </body>
-
-    </html>
+</html>
