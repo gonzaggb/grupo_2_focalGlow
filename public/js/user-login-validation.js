@@ -11,14 +11,17 @@ const buttonSubmit = document.querySelector('#buttonSubmit')
 let errors = []
 
 //CHEQUEO SI VINIERON ERRORES DEL BACKEND
-console.log(errorEmail.innerText)
-if (errorEmail.innerText != '') {
+console.log(errorEmail)
+console.log(errorEmail.innerHTML)
+if (errorEmail.innerHTML != "\n          \n        ") {
 	console.log('entre al if')
+	errorEmail.classList.remove('hidden')
 	errorEmail.classList.add('show')
 }
 
-if (errorPassword.innerHTML !== '') {
-	errorPassword.classList.add('show')
+if (errorPassword.innerHTML !== "\n          \n        ") {
+	errorEmail.classList.remove('hidden')
+	errorEmail.classList.add('show')
 }
 
 console.log(errorPassword.innerHTML)
