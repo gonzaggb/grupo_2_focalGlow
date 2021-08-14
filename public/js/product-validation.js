@@ -170,7 +170,7 @@ function validate(input, errorField, label, type, event, callback) {
     switch (type) {
         case 'integer':
             if (!isInteger(input)) {
-                errorField.innerHTML = `${label.innerHTML} debe ser un número entero mayor`
+                errorField.innerHTML = `${label.innerHTML} debe ser un número entero positivo`
                 event.preventDefault()
             }
             break;
@@ -230,7 +230,6 @@ function validate(input, errorField, label, type, event, callback) {
         default:
     }
     clearErrors([errorField])
-
 }
 
 function blurValidation(input, errorField, label, type, callback) {
