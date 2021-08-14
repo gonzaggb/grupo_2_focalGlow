@@ -6,10 +6,22 @@ const errorPassword = document.querySelector('#errorPassword')
 
 const form = document.querySelector('#form')
 const buttonSubmit = document.querySelector('#buttonSubmit')
-console.log(buttonSubmit)
-console.log(form)
+
 
 let errors = []
+
+//CHEQUEO SI VINIERON ERRORES DEL BACKEND
+console.log(errorEmail.innerText)
+if (errorEmail.innerText != '') {
+	console.log('entre al if')
+	errorEmail.classList.add('show')
+}
+
+if (errorPassword.innerHTML !== '') {
+	errorPassword.classList.add('show')
+}
+
+console.log(errorPassword.innerHTML)
 
 //FUNCION AUXILIAR PARA VALIDAR EMAIL
 function validateEmail(email) {

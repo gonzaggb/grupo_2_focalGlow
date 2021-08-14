@@ -17,16 +17,20 @@
         <br>
         <input class="input-login" type="email" name="email" id="email">
         <br>          
-        <span class="error-data " id="errorEmail"><%if(locals.errors && errors.email){%> <%= errors.email.msg%> <%}%> 
+        <span class="error-data hidden" id="errorEmail">
+          <%if(locals.errors && errors.email) {%>
+            <%=errors.email.msg%>
+          <% } %>
         </span> 
         <br>
         <label for="password">Contraseña</label>
         <br>
         <input class="input-login" type="password" name="password" id="password">
         <br>
-        <span class="error-data " id="errorPassword">
-          <%if(locals.errors && errors.password){%>
-           <%=errors.password.msg%> <%}%> 
+        <span class="error-data hidden" id="errorPassword">
+          <%if(locals.errors && errors.password) {%>
+            <%=errors.password.msg%>
+          <% } %>
         </span> 
       </div>
       <label class="remember" value="remember">
