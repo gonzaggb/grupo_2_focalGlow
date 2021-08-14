@@ -4,9 +4,9 @@ const { User } = require('../database/models')
 
 const validations = [
 
-    body('firstName').notEmpty().withMessage('Debes poner tu nombre'),
-    body('lastName').notEmpty().withMessage('Debes poner tu apellido'),
-    body('email').notEmpty().withMessage('Debes poner tu email').bail().isEmail().withMessage("El email ingresado no es valido").bail()
+    body('firstName').notEmpty().withMessage('Ingresá tu nombre'),
+    body('lastName').notEmpty().withMessage('Ingresá tu apellido'),
+    body('email').notEmpty().withMessage('Ingresá tu email').bail().isEmail().withMessage("El email ingresado no es válido").bail()
         .custom(async (val) => {
             const userFound = await User.findOne(
                 { where: { email: val } })
@@ -18,9 +18,9 @@ const validations = [
             return true
         }),
 
-    body('password').notEmpty().withMessage('Debes poner una contraseña').bail()
-    .isStrongPassword().withMessage('Tu contraseña es poco segura, por favor incluye caracteres especiales, mayusculas y números'),
-    body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña').bail(),
+    body('password').notEmpty().withMessage('Ingresá una contraseña').bail()
+        .isStrongPassword().withMessage('Tu contraseña es poco segura, por favor incluye caracteres especiales, mayusculas y números'),
+    body('rePassword').notEmpty().withMessage('Confirmá la contraseña').bail(),
     body('rePassword').custom((val, { req }) => {
         let password = req.body.password
         if (val != password) {

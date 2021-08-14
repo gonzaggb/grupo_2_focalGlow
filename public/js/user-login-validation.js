@@ -24,8 +24,6 @@ if (errorPassword.innerHTML !== "\n          \n        ") {
 	errorEmail.classList.add('show')
 }
 
-console.log(errorPassword.innerHTML)
-
 //FUNCION AUXILIAR PARA VALIDAR EMAIL
 function validateEmail(email) {
 	var re = /\S+@\S+\.\S+/;
@@ -74,7 +72,6 @@ password.addEventListener('blur', function (event) {
 
 form.addEventListener('submit', function (event) {
 	if (email.value == '') {
-		console.log('entre en email error')
 		errorEmail.classList.add('show')
 		errorEmail.innerHTML = 'Ingrese su email'
 		event.preventDefault()

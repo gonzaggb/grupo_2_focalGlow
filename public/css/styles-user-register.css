@@ -36,7 +36,7 @@ body{
     flex-direction: column;
     color:white;
     text-align: center;
-    width: 240px;
+    width: 360px;
     border: solid white 1px;
     background-color: rgba(0,0,0,0.4);
     border-radius: 5px; 
@@ -66,6 +66,7 @@ body{
     display: block;
     text-align: left;
     margin-left: 15px;
+    margin-top:5px;
 }
 .registry-container .subir{
     text-align: center;
@@ -89,7 +90,7 @@ body{
 
 }
 
-.input-login{
+input.login{
     width: 90%;
     outline:none;
     border:none;
@@ -103,7 +104,7 @@ body{
     height: 20px;
     
 }
-.input-login:focus{
+input.login:focus{
     border-bottom: 1px #ffde59 solid; 
 }
 .inner_nav{
@@ -125,7 +126,7 @@ body{
     background-color: #ffde59;
 
 }
-.error{
+/* .error{
     width: 90%;
     outline:none;
     border:none;
@@ -137,11 +138,18 @@ body{
     border-radius: 0%;
     transition: all 0.6s;
     height: 20px;
-}
-.error::placeholder{
+} */
+
+
+span.error{
+    display: block;
     color: red;
     opacity: 90%;
-    transition: all 0.7s; 
+    transition: all 0.7s;
+    text-align: left; 
+    height: 20px;
+    margin-left: 15px;
+    margin-bottom: 15px
 }
 
 .error-message{
