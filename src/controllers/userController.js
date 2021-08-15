@@ -84,7 +84,7 @@ const controller = {
     try {
       await User.create(newUser)
 
-      res.redirect('/users/user-login.ejs')
+      res.redirect('/users/login')
 
     } catch (error) {
       console.log(error)

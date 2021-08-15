@@ -27,9 +27,6 @@ const errorProfileImg = document.querySelector('#errorProfileImg')
 
 let errorsVariables = [errorFirstName, errorLastName, errorEmail, errorPassword, errorRePassword, errorProfileImg]
 
-let errors = []
-
-
 
 //HELPER FUNCTION TO VALIDATE EMAIL
 function validateEmail(email) {
@@ -59,13 +56,11 @@ firstName.addEventListener('blur', function (event) {
   if (firstName.value == "") {
     errorFirstName.classList.remove('hidden')
     errorFirstName.innerText = 'Ingresá tu nombre'
-    errors.push(firstName)
     return
   }
   if (firstName.value.length < 2) {
     errorFirstName.classList.remove('hidden')
     errorFirstName.innerText = 'Tu nombre debe tener al menos 2 caracateres'
-    errors.push(firstName)
     return
   }
 })
@@ -76,13 +71,11 @@ lastName.addEventListener('blur', function (event) {
   if (lastName.value == "") {
     errorLastName.classList.remove('hidden')
     errorLastName.innerText = 'Ingresá tu apellido'
-    errors.push(lastName)
     return
   }
   if (lastName.value.length < 2) {
     errorLastName.classList.remove('hidden')
     errorLastName.innerText = 'Tu apellido debe tener al menos 2 caracateres'
-    errors.push(lastName)
     return
   }
 })
@@ -94,7 +87,6 @@ email.addEventListener('blur', function (event) {
   if (!validateEmail(email.value)) {
     errorEmail.classList.remove('hidden')
     errorEmail.innerText = 'Ingresá un email válido'
-    errors.push(errorEmail)
     return
   }
 
@@ -122,7 +114,6 @@ password.addEventListener('blur', function (event) {
   if (password.value == "") {
     errorPassword.classList.remove('hidden')
     errorPassword.innerText = 'Ingresá una contraseña'
-    errors.push(errorEmail)
     return
   }
 
@@ -148,14 +139,12 @@ rePassword.addEventListener('blur', function (event) {
   if (rePassword.value == "") {
     errorRePassword.classList.remove('hidden')
     errorRePassword.innerText = 'Favor de confirmar la contraseña'
-    errors.push(rePassword)
     return
   }
 
   if (rePassword.value != password.value) {
     errorRePassword.classList.remove('hidden')
     errorRePassword.innerText = 'Las contraseñas no coinciden'
-    errors.push(rePassword)
     return
   }
 
@@ -189,12 +178,9 @@ profileImg.addEventListener('change', function (event) {
   }
 })
 
-
-
-
-
-
 form.addEventListener('submit', function (event) {
+  let errors = []
+
   if (firstName.value == "") {
     errorFirstName.classList.remove('hidden')
     errorFirstName.innerText = 'Ingresá tu nombre'
