@@ -16,7 +16,6 @@ const password = document.querySelector('#password')
 const rePassword = document.querySelector('#rePassword')
 const profileImg = document.querySelector('#profileImg')
 const form = document.querySelector('form.registry')
-console.log(profileImg)
 
 
 const errorFirstName = document.querySelector('#errorFirstName')
@@ -25,6 +24,7 @@ const errorEmail = document.querySelector('#errorEmail')
 const errorPassword = document.querySelector('#errorPassword')
 const errorRePassword = document.querySelector('#errorRePassword')
 const errorProfileImg = document.querySelector('#errorProfileImg')
+
 let errorsVariables = [errorFirstName, errorLastName, errorEmail, errorPassword, errorRePassword, errorProfileImg]
 
 let errors = []
@@ -132,7 +132,6 @@ password.addEventListener('blur', function (event) {
     errorPassword.innerText = 'Buen password!'
 
   } else if (mediumPassword.test(password.value)) {
-    console.log('entre al if medio')
     errorPassword.classList.remove('hidden')
     errorPassword.style.color = '#ffde59'
     errorPassword.innerHTML = 'El password debe tener al menos: <br />8 caracteres<br /> 1 Mayúscula & 1 minúscula<br /> 1 dígito & 1  caracater especial'
@@ -162,11 +161,35 @@ rePassword.addEventListener('blur', function (event) {
 
 })
 
-profileImg.addEventListener('blur', function (event) {
+profileImg.addEventListener('change', function (event) {
   errorProfileImg.classList.add('hidden')
-  console.log(profileImg)
 
+  // Allowing file type
+  var allowedExtensions =
+    /(\.jpg|\.jpeg|\.png|\.gif)$/i;
+
+  if (!allowedExtensions.exec(profileImg.value)) {
+    profileImg.value = '';
+    errorProfileImg.classList.remove('hidden')
+    errorProfileImg.innerText = "Favor de subir un archivo de imagen (jpg, jpeg, png o gif)"
+    return
+  }
+
+  // Image preview
+  if (profileImg.files && profileImg.files[0]) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+      document.getElementById(
+        'imagePreview').innerHTML =
+        '<img width="90%" src="' + e.target.result
+        + '"/>';
+    };
+
+    reader.readAsDataURL(profileImg.files[0]);
+  }
 })
+
+
 
 
 
