@@ -1,4 +1,4 @@
-//API PARA CHEQUEAR QUE EL USUARIO NO EXISTA
+//API TO CHECK IF THE USER ALREADY EXIST IN THE DB
 const apiUrl = 'http://localhost:3000/api/users/email/'
 
 //REGULAR EXPRESSION TO CHECK IF THE EMAIL IS STRONG
@@ -7,14 +7,16 @@ const mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za
 
 
 
-//CAPTURO LOS ELEMENTOS DEL DOM
+//CAPTURE DOM ELEMENTS
 
 const firstName = document.querySelector('#firstName')
 const lastName = document.querySelector('#lastName')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const rePassword = document.querySelector('#rePassword')
+const profileImg = document.querySelector('#profileImg')
 const form = document.querySelector('form.registry')
+console.log(profileImg)
 
 
 const errorFirstName = document.querySelector('#errorFirstName')
@@ -29,18 +31,28 @@ let errors = []
 
 
 
-//FUNCION AUXILIAR PARA VALIDAR EMAIL
+//HELPER FUNCTION TO VALIDATE EMAIL
 function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
 }
 
-//CHEQUEO SI VINIERON ERRORES DEL BACK Y SI VINIERON LOS MUESTRO
+//HELPER FUNCTOIN TO VALIDATE FILE IS IMAGE
+function isFileImage(fileName) {
+  const validExtension = ['.jpg', '.JPG', 'JPEG', '.png', '.jpeg', '.gif', 'tiff', 'bmp', 'svg']
+  if (validExtension.includes(path.extname(fileName))) {
+    return true
+  } else {
+    return false
+  }
+}
+
+//CHECK IF THERE ARE ANY BACKEND ERRORS
 errorsVariables.forEach(element => {
   element.innerText !== '' ? element.classList.remove('hidden') : ''
 })
 
-//CHEQUEO CADA UNO DE LOS INPUTS
+//CHECK EACH ONE OF THE INPUTS
 firstName.addEventListener('blur', function (event) {
   errorFirstName.classList.add('hidden')
 
@@ -78,7 +90,7 @@ lastName.addEventListener('blur', function (event) {
 email.addEventListener('blur', function (event) {
   errorEmail.classList.add('hidden')
 
-  //PRIMERO CHEQUEO QUE SEA UN EMAIL EL INPUT
+  //CHECK IF THE EMAIL VALUE IS ACCEPTED
   if (!validateEmail(email.value)) {
     errorEmail.classList.remove('hidden')
     errorEmail.innerText = 'Ingresá un email válido'
@@ -86,7 +98,7 @@ email.addEventListener('blur', function (event) {
     return
   }
 
-  //CHEQUEO QUE NO ESTE EN LA BASE DE DATOS
+  //CHECK IF THE USER IS ALREADY IN THE DB
 
   const userToFindUrl = apiUrl + email.value
 
@@ -149,6 +161,14 @@ rePassword.addEventListener('blur', function (event) {
   }
 
 })
+
+profileImg.addEventListener('blur', function (event) {
+  errorProfileImg.classList.add('hidden')
+  console.log(profileImg)
+
+})
+
+
 
 
 form.addEventListener('submit', function (event) {

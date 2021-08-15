@@ -44,15 +44,12 @@
         <span class="error hidden" id="errorRePassword"><%=(locals.errors && errors.rePassword)?errors.rePassword.msg:''%></span>
         
 
-        <label for="file-upload" class="subir">
+        <label for="profileImg" class="subir">
           <span><i class="far fa-user-circle"></i> Subir foto de perfil</span>
         </label>        
-        <span class="error-message hidden" id="errorProfileImg"><%=(locals.errors && errors.profileImg)? errors.profileImg.msg:''%> </span>
-      
-
-        <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
-        
-         
+        <input id="profileImg" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
+        <span class="error-message hidden" id="errorProfileImg"><%=(locals.errors && errors.profileImg)? errors.profileImg.msg:''%> </span>      
+           
 				<div class="button-container">
           <button type="submit" class="login-button">Continuar</button>
         </div>

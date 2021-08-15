@@ -152,35 +152,22 @@ span.hidden {
 
 @media (min-width: 768px){
 
-
-
 body{
-
     color:black;
 }
-
-
-.file-upload{
+.profileImg{
     text-align: center;
 }
-
-
 .registry{
     color:white;
-/*     margin-top:5%;
- */
 }
 
 .button-container{
-/*     margin-bottom: 10px;
- */    width: 100%;
-
-
+  width: 100%;
 }
 
 .registry{
-        margin-left:15%
-    
+    margin-left:15%   
 }
 }
 
