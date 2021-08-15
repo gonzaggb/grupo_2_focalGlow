@@ -11,7 +11,9 @@ const errorLastName = document.querySelector('#errorLastName')
 const errorEmail = document.querySelector('#errorEmail')
 const errorPassword = document.querySelector('#errorPassword')
 const errorRePassword = document.querySelector('#errorRePassword')
-let errorsVariables = [errorFirstName, errorLastName, errorEmail, errorPassword, errorRePassword]
+const errorProfileImg = document.querySelector('#errorProfileImg')
+let errorsVariables = [errorFirstName, errorLastName, errorEmail, errorPassword, errorRePassword, errorProfileImg]
+
 let errors = []
 
 //FUNCION AUXILIAR PARA VALIDAR EMAIL
@@ -21,74 +23,47 @@ function validateEmail(email) {
 }
 
 
-//CHEQUEO SI VINIERON ERRORES DEL BACK
-console.log(errorsVariables)
+//CHEQUEO SI VINIERON ERRORES DEL BACK Y SI VINIERON LOS MUESTRO
 errorsVariables.forEach(element => {
-  console.log(element)
-  console.log(element.innerText)
   element.innerText !== '' ? element.classList.remove('hidden') : ''
 })
 
 
 firstName.addEventListener('blur', function (event) {
-  firstName.classList.remove('error')
-  firstName.placeholder = ""
+  errorFirstName.classList.add('hidden')
 
   if (firstName.value == "") {
-    firstName.classList.add('error')
-    firstName.placeholder = 'Ingrese su nombre'
+    errorFirstName.classList.remove('hidden')
+    errorFirstName.innerText = 'Ingresá tu nombre'
     errors.push(firstName)
     return
   }
   if (firstName.value.length < 2) {
-    firstName.classList.add('error')
-    firstName.value = ""
-    firstName.innerHTML = ""
-    firstName.placeholder = 'El nombre debe tener al menos 2 caracateres'
+    errorFirstName.classList.remove('hidden')
+    errorFirstName.innerText = 'Tu nombre debe tener al menos 2 caracateres'
     errors.push(firstName)
     return
   }
 })
 
 lastName.addEventListener('blur', function (event) {
-  lastName.classList.remove('error')
-  lastName.placeholder = ""
+  errorLastName.classList.add('hidden')
 
   if (lastName.value == "") {
-    lastName.classList.add('error')
-    lastName.placeholder = 'Ingrese su apellido'
+    errorLastName.classList.remove('hidden')
+    errorLastName.innerText = 'Ingresá tu apellido'
     errors.push(lastName)
     return
   }
   if (lastName.value.length < 2) {
-    lastName.classList.add('error')
-    lastName.value = ""
-    lastName.innerHTML = ""
-    lastName.placeholder = 'El apellido debe tener al menos 2 caracateres'
+    errorLastName.classList.remove('hidden')
+    errorLastName.innerText = 'Tu apellido debe tener al menos 2 caracateres'
     errors.push(lastName)
     return
   }
 })
 
-email.addEventListener('blur', function (event) {
-  email.classList.remove('error')
-  email.placeholder = ""
 
-  if (email.value == "") {
-    email.classList.add('error')
-    email.placeholder = 'Ingrese su email'
-    errors.push(email)
-    return
-  }
-  if (email.value.length < 2) {
-    email.classList.add('error')
-    email.value = ""
-    email.innerHTML = ""
-    email.placeholder = 'El apellido debe tener al menos 2 caracateres'
-    errors.push(email)
-    return
-  }
-})
 
 email.addEventListener('blur', function (event) {
   errorEmail.classList.remove('error')

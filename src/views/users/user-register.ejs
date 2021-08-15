@@ -17,30 +17,20 @@
       <form class="registry" method="POST" action="/users/register" enctype="multipart/form-data">
         <label for="firstName">Nombre</label>
         <input class="login" type="text" name="firstName" id="firstName"
-					<% if (locals.oldData) {%>
-            value = "<%=oldData.firstName%>"
-          <%}%>
-        >
-        
+					<%= locals.oldData? `value = ${oldData.firstName}`:''%>
+        >       
         <span class="error hidden" id="errorFirstName"><%=(locals.errors && errors.firstName)?errors.firstName.msg:''%></span>
         
-
         <label for="lastName">Apellido</label>
         <input class="login" type="text" name="lastName" id="lastName" 
-          <% if (locals.oldData) {%>
-						value = "<%=oldData.lastName%>"
-          <%}%>
-        >
-        
-        <span class="error hidden" id="errorLastName"><%=(locals.errors && errors.firstName)?errors.lastName.msg:''%></span>
+          <%=locals.oldData? `value = ${oldData.lastName}`:''%>
+        >      
+        <span class="error hidden" id="errorLastName"><%=(locals.errors && errors.lastName)?errors.lastName.msg:''%></span>
         
         <label for="email">Email</label>
         <input class="login" type="text" name="email" id="email" 
-        <% if (locals.oldData) {%>
-          value = "<%=oldData.email%>"
-        <%}%>
+        <%locals.oldData? `value = ${oldData.email}`:''%>
         >
-        
         <span class="error hidden" id="errorEmail"><%=(locals.errors && errors.email)?errors.email.msg:''%></span>
         
                         
@@ -56,10 +46,9 @@
 
         <label for="file-upload" class="subir">
           <span><i class="far fa-user-circle"></i> Subir foto de perfil</span>
-        </label>
-        <%if(locals.errors && errors.profileImg){%>
-          <span class="error-message" id="errorProfileImg"> <%=errors.profileImg.msg%> </span>
-        <%}%>
+        </label>        
+        <span class="error-message hidden" id="errorProfileImg"><%=(locals.errors && errors.profileImg)? errors.profileImg.msg:''%> </span>
+      
 
         <input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
         
