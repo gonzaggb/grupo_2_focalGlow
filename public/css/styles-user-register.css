@@ -43,6 +43,7 @@ body{
 
 }
 
+
  
 .subir span{
     text-align: center;
@@ -144,6 +145,11 @@ span.error{
     margin-right: 15px;
     font-size: 0.8rem;
 }
+
+span.hidden {
+    display:none
+}
+
 
 @media (min-width: 768px){
 

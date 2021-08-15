@@ -1,8 +1,17 @@
+//CAPTURO LOS ELEMENTOS DEL DOM
+
 const firstName = document.querySelector('#firstName')
 const lastName = document.querySelector('#lastName')
 const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const rePassword = document.querySelector('#rePassword')
+
+const errorFirstName = document.querySelector('#errorFirstName')
+const errorLastName = document.querySelector('#errorLastName')
+const errorEmail = document.querySelector('#errorEmail')
+const errorPassword = document.querySelector('#errorPassword')
+const errorRePassword = document.querySelector('#errorRePassword')
+let errorsVariables = [errorFirstName, errorLastName, errorEmail, errorPassword, errorRePassword]
 let errors = []
 
 //FUNCION AUXILIAR PARA VALIDAR EMAIL
@@ -10,6 +19,16 @@ function validateEmail(email) {
   var re = /\S+@\S+\.\S+/;
   return re.test(email);
 }
+
+
+//CHEQUEO SI VINIERON ERRORES DEL BACK
+console.log(errorsVariables)
+errorsVariables.forEach(element => {
+  console.log(element)
+  console.log(element.innerText)
+  element.innerText !== '' ? element.classList.remove('hidden') : ''
+})
+
 
 firstName.addEventListener('blur', function (event) {
   firstName.classList.remove('error')
