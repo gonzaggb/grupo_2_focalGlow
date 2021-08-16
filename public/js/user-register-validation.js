@@ -5,6 +5,11 @@ const apiUrl = 'http://localhost:3000/api/users/email/'
 const strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
 const mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))')
 
+const passwordLength = new RegExp('(?=,{8,})') //PASSWORD MUST BE 8 CHARACTERS LONG
+const passwordUpper = new RegExp('(?=.*[A-Z])') //PASSWORD MUST CONTAIN 1 UPPERCASE
+const passwordLower = new RegExp('(?=.*[a-z])') //PASSWORD MUST CONTAIN 1 LOWERCASE
+const passwordNumber = new RegExp('(?=.*[0-9])') //PASSWORD MUST CONTAIN 1 NUMBER
+const passwordSpecialCharacter = new RegExp('(?=.*[!@#$%^&*])') //PASSWORD MUST CONTAIN 1 SPECIAL CHARACTER
 
 
 //CAPTURE DOM ELEMENTS
@@ -15,6 +20,7 @@ const email = document.querySelector('#email')
 const password = document.querySelector('#password')
 const rePassword = document.querySelector('#rePassword')
 const profileImg = document.querySelector('#profileImg')
+let imagePreview = document.querySelector('#imagePreview') // DECLARED AS LET BECAUSE IT'S GOING TO CHANGE
 const form = document.querySelector('form.registry')
 
 
@@ -34,15 +40,6 @@ function validateEmail(email) {
   return re.test(email);
 }
 
-//HELPER FUNCTOIN TO VALIDATE FILE IS IMAGE
-function isFileImage(fileName) {
-  const validExtension = ['.jpg', '.JPG', 'JPEG', '.png', '.jpeg', '.gif', 'tiff', 'bmp', 'svg']
-  if (validExtension.includes(path.extname(fileName))) {
-    return true
-  } else {
-    return false
-  }
-}
 
 //CHECK IF THERE ARE ANY BACKEND ERRORS
 errorsVariables.forEach(element => {
@@ -167,13 +164,9 @@ profileImg.addEventListener('change', function (event) {
   // Image preview
   if (profileImg.files && profileImg.files[0]) {
     var reader = new FileReader();
-    reader.onload = function (e) {
-      document.getElementById(
-        'imagePreview').innerHTML =
-        '<img width="90%" src="' + e.target.result
-        + '"/>';
+    reader.onload = function (event) {
+      imagePreview.innerHTML = '<img src="' + event.target.result + '"/>';
     };
-
     reader.readAsDataURL(profileImg.files[0]);
   }
 })

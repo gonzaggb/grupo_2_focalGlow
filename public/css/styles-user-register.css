@@ -149,6 +149,10 @@ span.hidden {
     display:none
 }
 
+figure img {
+    width:90%
+}
+
 
 @media (min-width: 768px){
 
