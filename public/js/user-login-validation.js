@@ -38,7 +38,6 @@ email.addEventListener('blur', function (event) {
 	if (!validateEmail(email.value)) {
 		errorEmail.classList.add('show')
 		errorEmail.innerHTML = 'Ingrese un email válido'
-		errors.push(errorEmail)
 		return
 	}
 
@@ -65,7 +64,6 @@ password.addEventListener('blur', function (event) {
 	if (password.value == '') {
 		errorPassword.classList.add('show')
 		errorPassword.innerHTML = 'Ingrese su contraseña'
-		errors.push(errorPassword)
 		return
 	}
 })
@@ -77,14 +75,18 @@ form.addEventListener('submit', function (event) {
 		event.preventDefault()
 	}
 
+	if (!validateEmail(email.value)) {
+		errorEmail.classList.add('show')
+		errorEmail.innerHTML = 'Ingrese un email válido'
+		event.preventDefault()
+	}
+
 	if (password.value == '') {
 		errorPassword.classList.add('show')
 		errorPassword.innerHTML = 'Ingrese su contraseña'
 		event.preventDefault()
 	}
-	if (errors.length > 0) {
-		event.preventDefault()
-	}
+
 })
 
 
