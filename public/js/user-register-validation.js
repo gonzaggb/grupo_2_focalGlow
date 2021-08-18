@@ -118,51 +118,57 @@ password.addEventListener('blur', function (event) {
     errorPassword.innerText = 'Ingresá una contraseña'
     return
   }
+})
 
-  let passwordLengthTest = passwordLength.test(password.value)
-  let passwordUpperTest = passwordUpper.test(password.value)
-  let passwordLowerTest = passwordLower.test(password.value)
-  let passwordNumberTest = passwordNumber.test(password.value)
-  let passwordSpecialCharacterTest = passwordSpecialCharacter.test(password.value)
+password.addEventListener('keyup', function (event) {
 
-  console.log('Length: ' + passwordLengthTest)
+  if (this.value.length > 3) {
+    if (strongPassword.test(password.value)) {
+      errorPassword.classList.remove('hidden')
+      errorPassword.style.color = 'green'
+      errorPassword.innerText = 'Buen password!'
+      errorPasswordLength.classList.add('hidden')
+      errorPasswordUpperLower.classList.add('hidden')
+      errorPasswordNumberSpecial.classList.add('hidden')
+      return
+    }
 
-  if (strongPassword.test(password.value)) {
+    let passwordLengthTest = passwordLength.test(password.value)
+    let passwordUpperTest = passwordUpper.test(password.value)
+    let passwordLowerTest = passwordLower.test(password.value)
+    let passwordNumberTest = passwordNumber.test(password.value)
+    let passwordSpecialCharacterTest = passwordSpecialCharacter.test(password.value)
+
+
     errorPassword.classList.remove('hidden')
-    errorPassword.style.color = 'green'
-    errorPassword.innerText = 'Buen password!'
-    errorPasswordLength.classList.add('hidden')
-    errorPasswordUpperLower.classList.add('hidden')
-    errorPasswordNumberSpecial.classList.add('hidden')
-    return
+    errorPassword.innerHTML = 'El password debe tener al menos:'
+    errorPasswordLength.classList.remove('hidden')
+    errorPasswordLength.innerHTML = '8 caracteres'
+    errorPasswordUpperLower.classList.remove('hidden')
+    errorPasswordUpperLower.innerHTML = '1 Mayúscula & 1 minúscula'
+    errorPasswordNumberSpecial.classList.remove('hidden')
+    errorPasswordNumberSpecial.innerHTML = '1 dígito & 1  caracater especial'
+
+    passwordLengthTest ? errorPasswordLength.style.color = 'green' : errorPasswordLength.style.color = 'red'
+
+    if (passwordUpperTest && passwordLowerTest) {
+      errorPasswordUpperLower.style.color = 'green'
+    } else if (passwordUpperTest || passwordLowerTest) {
+      errorPasswordUpperLower.style.color = '#ffde59'
+    } else {
+      errorPasswordUpperLower.style.color = 'red'
+    }
+
+    if (passwordNumberTest && passwordSpecialCharacterTest) {
+      errorPasswordNumberSpecial.style.color = 'green'
+    } else if (passwordNumberTest || passwordSpecialCharacterTest) {
+      errorPasswordNumberSpecial.style.color = '#ffde59'
+    } else {
+      errorPasswordNumberSpecial.style.color = 'red'
+    }
+
   }
 
-  errorPassword.classList.remove('hidden')
-  errorPassword.innerHTML = 'El password debe tener al menos:'
-  errorPasswordLength.classList.remove('hidden')
-  errorPasswordLength.innerHTML = '8 caracteres'
-  errorPasswordUpperLower.classList.remove('hidden')
-  errorPasswordUpperLower.innerHTML = '1 Mayúscula & 1 minúscula'
-  errorPasswordNumberSpecial.classList.remove('hidden')
-  errorPasswordNumberSpecial.innerHTML = '1 dígito & 1  caracater especial'
-
-  passwordLengthTest ? errorPasswordLength.style.color = 'green' : errorPassword.style.color = 'red'
-
-  if (passwordUpperTest && passwordLowerTest) {
-    errorPasswordUpperLower.style.color = 'green'
-  } else if (passwordUpperTest || passwordLowerTest) {
-    errorPasswordUpperLower.style.color = '#ffde59'
-  } else {
-    errorPasswordUpperLower.style.color = 'red'
-  }
-
-  if (passwordNumberTest && passwordSpecialCharacterTest) {
-    errorPasswordNumberSpecial.style.color = 'green'
-  } else if (passwordNumberTest || passwordSpecialCharacterTest) {
-    errorPasswordNumberSpecial.style.color = '#ffde59'
-  } else {
-    errorPasswordNumberSpecial.style.color = 'red'
-  }
 
 
 })
