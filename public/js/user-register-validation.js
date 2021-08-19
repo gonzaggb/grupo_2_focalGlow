@@ -5,7 +5,7 @@ const apiUrl = 'http://localhost:3000/api/users/email/'
 const strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
 const mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))')
 
-const passwordLength = new RegExp('(?=,{8,})') //PASSWORD MUST BE 8 CHARACTERS LONG
+const passwordLength = new RegExp('(?=.{8,})') //PASSWORD MUST BE 8 CHARACTERS LONG
 const passwordUpper = new RegExp('(?=.*[A-Z])') //PASSWORD MUST CONTAIN 1 UPPERCASE
 const passwordLower = new RegExp('(?=.*[a-z])') //PASSWORD MUST CONTAIN 1 LOWERCASE
 const passwordNumber = new RegExp('(?=.*[0-9])') //PASSWORD MUST CONTAIN 1 NUMBER
@@ -28,6 +28,11 @@ const errorFirstName = document.querySelector('#errorFirstName')
 const errorLastName = document.querySelector('#errorLastName')
 const errorEmail = document.querySelector('#errorEmail')
 const errorPassword = document.querySelector('#errorPassword')
+
+const errorPasswordLength = document.querySelector('#errorPasswordLength')
+const errorPasswordUpperLower = document.querySelector('#errorPasswordUpperLower')
+const errorPasswordNumberSpecial = document.querySelector('#errorPasswordNumberSpecial')
+
 const errorRePassword = document.querySelector('#errorRePassword')
 const errorProfileImg = document.querySelector('#errorProfileImg')
 
@@ -99,7 +104,7 @@ email.addEventListener('blur', function (event) {
 
       if (response.meta.status == '200') {
         errorEmail.classList.remove('hidden')
-        errorEmail.innerText = 'El email ingresado ya está registrado.'
+        errorEmail.innerText = 'El email ingresado ya está registrado'
       }
     })
 })
@@ -113,21 +118,59 @@ password.addEventListener('blur', function (event) {
     errorPassword.innerText = 'Ingresá una contraseña'
     return
   }
+})
 
-  if (strongPassword.test(password.value)) {
-    errorPassword.classList.remove('hidden')
-    errorPassword.style.color = 'green'
-    errorPassword.innerText = 'Buen password!'
+password.addEventListener('keyup', function (event) {
 
-  } else if (mediumPassword.test(password.value)) {
+  if (this.value.length > 3) {
+    if (strongPassword.test(password.value)) {
+      errorPassword.classList.remove('hidden')
+      errorPassword.style.color = 'green'
+      errorPassword.innerText = 'Buen password!'
+      errorPasswordLength.classList.add('hidden')
+      errorPasswordUpperLower.classList.add('hidden')
+      errorPasswordNumberSpecial.classList.add('hidden')
+      return
+    }
+
+    let passwordLengthTest = passwordLength.test(password.value)
+    let passwordUpperTest = passwordUpper.test(password.value)
+    let passwordLowerTest = passwordLower.test(password.value)
+    let passwordNumberTest = passwordNumber.test(password.value)
+    let passwordSpecialCharacterTest = passwordSpecialCharacter.test(password.value)
+
+
     errorPassword.classList.remove('hidden')
-    errorPassword.style.color = '#ffde59'
-    errorPassword.innerHTML = 'El password debe tener al menos: <br />8 caracteres<br /> 1 Mayúscula & 1 minúscula<br /> 1 dígito & 1  caracater especial'
-  } else {
-    errorPassword.classList.remove('hidden')
-    errorPassword.style.color = 'red'
-    errorPassword.innerHTML = 'El password debe tener al menos: <br />8 caracteres<br /> 1 Mayúscula & 1 minúscula<br /> 1 dígito & 1  caracater especial'
+    errorPassword.innerHTML = 'El password debe tener al menos:'
+    errorPasswordLength.classList.remove('hidden')
+    errorPasswordLength.innerHTML = '8 caracteres'
+    errorPasswordUpperLower.classList.remove('hidden')
+    errorPasswordUpperLower.innerHTML = '1 Mayúscula & 1 minúscula'
+    errorPasswordNumberSpecial.classList.remove('hidden')
+    errorPasswordNumberSpecial.innerHTML = '1 dígito & 1  caracater especial'
+
+    passwordLengthTest ? errorPasswordLength.style.color = 'green' : errorPasswordLength.style.color = 'red'
+
+    if (passwordUpperTest && passwordLowerTest) {
+      errorPasswordUpperLower.style.color = 'green'
+    } else if (passwordUpperTest || passwordLowerTest) {
+      errorPasswordUpperLower.style.color = '#ffde59'
+    } else {
+      errorPasswordUpperLower.style.color = 'red'
+    }
+
+    if (passwordNumberTest && passwordSpecialCharacterTest) {
+      errorPasswordNumberSpecial.style.color = 'green'
+    } else if (passwordNumberTest || passwordSpecialCharacterTest) {
+      errorPasswordNumberSpecial.style.color = '#ffde59'
+    } else {
+      errorPasswordNumberSpecial.style.color = 'red'
+    }
+
   }
+
+
+
 })
 
 rePassword.addEventListener('blur', function (event) {

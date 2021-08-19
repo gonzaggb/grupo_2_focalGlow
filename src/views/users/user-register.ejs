@@ -30,6 +30,9 @@
 				<label for="password">Contraseña</label>
         <input class="login" type="password" name="password" id="password">
         <span class="error hidden" id="errorPassword"><%=(locals.errors && errors.password)?errors.password.msg:''%></span>
+        <span class="error hidden" id="errorPasswordLength"></span>
+        <span class="error hidden" id="errorPasswordUpperLower"></span>
+        <span class="error hidden" id="errorPasswordNumberSpecial"></span>
         
 					
         <label for="rePassword">Confirmar contraseña</label>
