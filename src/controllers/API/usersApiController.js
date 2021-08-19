@@ -62,6 +62,29 @@ const controller = {
 
 		}
 		res.json(response)
+	},
+	lastUser: async (req,res)=> {
+		let users = await User.findAll({
+			attributes: ['id', 'firstName', 'lastName', 'email',]
+		})
+		 let lastUser = users[users.length-1] 
+		 
+		let response = {
+			count: {
+				id: lastUser.id
+			},
+			users: lastUser
+		}
+		res.json(response)
+	},
+	qty:async (req,res)=>{
+		let users = await User.findAll()
+		let totalUSers = users.length
+		let response = {
+			
+			users: totalUSers
+		}
+		res.json(response)
 	}
 
 
