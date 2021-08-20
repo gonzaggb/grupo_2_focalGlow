@@ -5,11 +5,19 @@ const controller = {
 		let users = await User.findAll({
 			attributes: ['id', 'firstName', 'lastName', 'email',]
 		})
+		let url= 'http://localhost:3000/api/users/'
+		let usersToShow = users.map(e=>{
+			e.setDataValue('detail', url+e.id)
+				
+			return e
+		})
+		
+		 
 		let response = {
 			count: {
 				total: users.length
 			},
-			users: users
+			users: usersToShow
 		}
 		res.json(response)
 	},
