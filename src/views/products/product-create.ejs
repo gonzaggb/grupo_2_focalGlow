@@ -147,9 +147,10 @@
                             <div class="first-" id='price-div'>
                                 <label class="price" id="price-label" for="price">Precio unitario base: </label>
                                 <input class="price" type="number" name="price" id="price-input" min="0" max="999999999999"
-                                    step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >   
-                                    <span class="error_msg" id="price-error"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>                           
+                                    step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >
                             </div>
+                            <span class="error_msg" id="price-error"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>                           
+
                             <div class="description-container" id="description-div">
                                 <label class="title" for="description" id="description-label">Descripción del producto:</label><br> 
                                 <textarea class ="description" id="description-input" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>

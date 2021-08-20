@@ -71,7 +71,7 @@
                             </span><br>
 
                             <div class="first-">
-                                <label class="" id="material-label for="material">Material: </label>
+                                <label class="" id="material-label" for="material">Material: </label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(material=> {%>
                                     <!--Recorre la lista de TODAS las features-->
@@ -243,6 +243,7 @@
                                     <a href="<%=filesPdf[1].name%>" target="_blank">
                                         <%=filesPdf[1].name%>
                                     </a>
+                                    <br>
                                     <span class="error_msg" id="error-data-sheet"></span>
 
                                 </div><br>
@@ -252,6 +253,7 @@
                                     <a href="<%=filesPdf[0].name%>" target="_blank">
                                         <%=filesPdf[0].name%>
                                     </a>
+                                    <br>
                                     <span class="error_msg" id="error-install-sheet"></span>
 
                                 </div><br>
