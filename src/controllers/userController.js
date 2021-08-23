@@ -249,10 +249,12 @@ const controller = {
 
     try {
       const userToEdit = await User.findByPk(id)
+      userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
+
       const validationStatus = validationResult(req) // trae los resultados del middleware
 
       if (!validationStatus.isEmpty()) {
-
+        //return res.send({ errors: validationStatus.mapped() })
         //Si hay errores que pasa
         return res.render('users/user-edit-password.ejs', { errors: validationStatus.mapped(), oldData: req.body, userToEdit }) // se mapea para que devuelva como un objeto literal con sus respectivas propiedades
       }

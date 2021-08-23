@@ -8,7 +8,7 @@ const validations = [
 
 	body('oldPassword')
 		.notEmpty()
-		.withMessage('Por favor ingrese su password')
+		.withMessage('Por favor ingrese su password actual')
 		.bail()
 		.custom(async (value, { req }) => {
 			const { id } = req.params

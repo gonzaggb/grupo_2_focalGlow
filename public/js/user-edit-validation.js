@@ -99,7 +99,7 @@ email.addEventListener('blur', function (event) {
       }
     })
 })
-//REGULAR EXPRESSION TO CHECK IF IT IS PHONE
+//REGULAR EXPRESSION TO CHECK IF IT IS A PHONE NUMBER
 const myPhoneRegex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/;
 
 phone.addEventListener('blur', function (event) {
