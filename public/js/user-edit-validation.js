@@ -99,6 +99,24 @@ email.addEventListener('blur', function (event) {
       }
     })
 })
+//REGULAR EXPRESSION TO CHECK IF IT IS PHONE
+const myPhoneRegex = /^([+]?[\s0-9]+)?(\d{3}|[(]?[0-9]+[)])?([-]?[\s]?[0-9])+$/;
+
+phone.addEventListener('blur', function (event) {
+  errorPhone.classList.add('hidden')
+  console.log(phone.value)
+  console.log(myPhoneRegex.test(phone.value))
+  if (phone.value == "") {
+    return
+  } else if (myPhoneRegex.test(phone.value)) {
+    return
+  } else {
+    errorPhone.classList.remove('hidden')
+    errorPhone.innerText = 'Ingresar un teléfono válido'
+  }
+
+})
+
 
 profileImg.addEventListener('change', function (event) {
   errorProfileImg.classList.add('hidden')

@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="/css/styles-user-detail.css">
 
 </head>
-<script>
+<!-- <script>
   function cambiar() {
     var imageToLoad = document.getElementById('file-upload')
 		var output = document.getElementById('output')
@@ -13,7 +13,7 @@
       URL.revokeObjectURL(output.src) // free memory
     } 
   }
-</script>
+</script> -->
 
 <body>
   <%- include('../partials/header.ejs')%>
@@ -21,16 +21,17 @@
   
 	<main>
     <form class="registry" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
-			<section class="images-container">  					
-				<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg%>">
+			<section class="images-container">  									
+
+				<figure id="imagePreview"><img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg%>"></figure>
 				
 				<div class="file-btn">
 					<label for="profileImg" class="subir">Cambiar imagen</label>
 
-					<input id="profileImg" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
+					<input id="profileImg" name="profileImg" type="file" style='display: none' accept = "image/*">
 					
 				</div>
-				<span id="errorProfileImg" class="<%=(locals.errors && errors.profileImg) ? 'error' : ''%>"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></span>
+				<span id="errorProfileImg" class="error hidden"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></span>
 			</section>
 
 			<h2>Perfil de <%=userToEdit.firstName%></h2>
