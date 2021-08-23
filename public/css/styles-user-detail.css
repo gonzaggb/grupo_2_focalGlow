@@ -26,16 +26,6 @@ body{
   color:white;
 }
 
-/*
-.main-container{
-  text-align: center;
-  width:100%;
-  position:fixed;
-  left: 15%;
-  top: 25%;
-
-}*/
-
 main {
   display: flex;
   flex-direction: column;
@@ -62,12 +52,12 @@ main {
   border-radius: 50%;
 }
 
-.registry-container h2 {
+.registry h2 {
   margin: 9px 0px;
   text-align: center;
 }
 
-.registry-container label{
+.registry label {
   display: block;
   text-align: left;
   margin-top: 9px;
@@ -98,7 +88,7 @@ label.subir{
   background: #f7cb15;
 }
 
-.input{
+input, .input{
   outline:none;
   border:none;
   border-bottom: white 1px solid; 
@@ -112,10 +102,21 @@ label.subir{
   width:100%;
 }
 
-textarea.input {
+textarea {
+  outline:none;
+  border:none;
+  border-bottom: white 1px solid; 
+  background-color: rgba(0,0,0,0);
+  color:white;
+  font-size: 15px;
+  transition: all 0.6s;
+  display: block;
+  text-align: left;
+  font-size: 15px;
+  width:100%;
   height: 70px;
 }
-.input:focus{
+input:focus{
   border-bottom: 1px #ffde59 solid; 
 }
 
@@ -142,28 +143,14 @@ textarea.input {
 .error {
   outline:none;
   border:none;
-  border-bottom: white 1px solid;
-  background-color: rgba(0,0,0,0);
   color:red;
   font-size: 15px;
-  border-radius: 0%;
   transition: all 0.6s;
-  height: 20px;
-}
-.error::placeholder{
-  color: red;
-  opacity: 90%;
-  transition: all 0.7s; 
-}
-
-.error-message{
-  color:red;
-  width: 100%;
-  font-size: 10px;
-  text-align: left;
   display: block;
-  margin: 0 auto;
-  text-align: center;
+  text-align: left;
+}
+.hidden {
+  display: none;
 }
 
 @media (min-width: 768px){
@@ -179,7 +166,7 @@ body{
 }
 
 
-.registry-form{
+.registry{
   color:white;
 }
 .right{
@@ -207,7 +194,7 @@ main{
 
 
 @media (min-width: 992px){
-  .registry-container{
+  .registry{
       justify-content: space-evenly;
      
   }

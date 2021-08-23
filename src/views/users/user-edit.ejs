@@ -20,67 +20,54 @@
 
   
 	<main>
-    <form class="registry-container" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
-			<section class="images-container">  	
+    <form class="registry" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
+			<section class="images-container">  					
+				<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg%>">
 				
-					<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg%>">
-				
-
 				<div class="file-btn">
-					<label for="file-upload" class="subir">Cambiar imagen</label>
+					<label for="profileImg" class="subir">Cambiar imagen</label>
 
-					<input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
+					<input id="profileImg" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
 					
 				</div>
-				<p class="<%=(locals.errors && errors.profileImg) ? 'error input' : ''%>"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
+				<span id="errorProfileImg" class="<%=(locals.errors && errors.profileImg) ? 'error' : ''%>"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></span>
 			</section>
 
 			<h2>Perfil de <%=userToEdit.firstName%></h2>
 
 			<section class="profile-info">
-       	<label for="first_name">Nombre</label>
-        <input class="<%=(locals.errors && errors.firstName) ? 'error input' : 'input'%>" type="text" name="firstName" id="first_name"
-					<% if (locals.errors && errors.firstName) { %>
-							placeholder = "<%=errors.firstName.msg %>"
-								<% } else if (locals.oldData) { %>
-									value="<%=oldData.firstName%>" <%}							else { %>
-											value="<%=userToEdit.firstName%>"
-										<% } %>
+       	<label for="firstName">Nombre</label>
+        <input type="text" name="firstName" id="firstName"			
+					<%= (locals.oldData)? `value=${oldData.firstName}`:`value=${userToEdit.firstName}`%>
 				>
-									
-									
-								
-				<label for="last_name">Apellido</label>
-				<input class="<%=(locals.errors && errors.lastName) ? 'error input' : 'input'%>" type="text" name="lastName" id="last_name"
-					<% if (locals.errors && errors.lastName) {%>
-						placeholder = "<%=errors.lastName.msg%>"
-					<%} else if (locals.oldData) { %>
-							value="<%=oldData.lastName%>" <%} else { %>
-							value ="<%=userToEdit.lastName%>"
-					<%}%>
+				<span class="error hidden" id="errorFirstName"><%=(locals.errors && errors.firstName)?errors.firstName.msg:''%></span>					
+																	
+				<label for="lastName">Apellido</label>
+				<input type="text" name="lastName" id="lastName"
+				<%= (locals.oldData)? `value=${oldData.lastName}`:`value=${userToEdit.lastName}`%>
 				>
-							
-								
-								
+				<span class="error hidden" id="errorLastName"><%=(locals.errors && errors.lastName)?errors.lastName.msg:''%></span>
+															
 				<label for="email">Email</label>
-				<input class="<%=(locals.errors && errors.email) ? 'error input' : 'input'%>" type="email" name="email" id="email"
-					<% if (locals.errors && errors.email) {%>
-						placeholder = "<%=errors.email.msg%>"
-					<%} else if (locals.oldData) { %>
-						value="<%=oldData.email%>" <%} else {%>
-						value="<%=userToEdit.email%>"
-					<%}%>
+				<input type="email" name="email" id="email"
+				<%=(locals.oldData)? `value=${oldData.email}`:`value=${userToEdit.email}`%>
 				>
-												
-											
-											
+				<span class="error hidden" id="errorEmail"><%=(locals.errors && errors.email)?errors.email.msg:''%></span>
+																							
 				<label for="phone">Teléfono</label>
-				<input class="input" type="tel" name="phone" id="phone" value="<%=userToEdit.phone%>">
-											
-											
+				<input type="tel" name="phone" id="phone" <%=(locals.oldData && oldData.phone)? `value=${oldData.phone}`:`value=${userToEdit.phone}`%>
+				>
+				<span class="error hidden" id="errorPhone"><%=(locals.errors && errors.phone)?errors.phone.msg:''%></span>
+																						
 				<label for="address">Dirección</label>
-				<textarea class="input" type="text" name="address" id="address" col= "10" row="20" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
-							
+				<textarea  type="text" name="address" id="address" col= "10" row="20" 
+				<% if (locals.oldData && oldData.address) {%>
+					<%=`value=${oldData.address}`%>><%=oldData.address%></textarea>
+				<%} else {%>
+					<%=`value=${userToEdit.address}`%>><%=userToEdit.address%></textarea>
+				<%}%>
+				
+				<span class="error hidden" id="errorAddress"><%=(locals.errors && errors.address)?errors.address.msg:''%></span>			
 			</section>
 			
 			<button type="submit" class="login-button">Actualizar</button>
@@ -89,6 +76,7 @@
 
 		</form> 		
 	</main>
+	<script src="/js/user-edit-validation.js"></script>
 		
 </body>
 
