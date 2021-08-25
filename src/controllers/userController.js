@@ -155,7 +155,7 @@ const controller = {
     try {
       const userToEdit = await User.findByPk(id)
       userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
-      res.render('users/user-edit.ejs', { userToEdit })
+      res.render('users/user-edit.ejs', { userToEdit})
 
     } catch (error) {
       console.log(error)

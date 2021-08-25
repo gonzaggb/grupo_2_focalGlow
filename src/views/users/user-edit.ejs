@@ -8,6 +8,7 @@
   function cambiar() {
     var imageToLoad = document.getElementById('file-upload')
 		var output = document.getElementById('output')
+		console.log(output)
 		output.src = URL.createObjectURL(imageToLoad.files[0])
 		output.onload = function () {
       URL.revokeObjectURL(output.src) // free memory
@@ -32,6 +33,7 @@
 					<input id="file-upload" name="profileImg" onchange='cambiar()' type="file" style='display: none' accept = "image/*">
 					
 				</div>
+				<span id='file-upload-error'></span>
 				<p class="<%=(locals.errors && errors.profileImg) ? 'error input' : ''%>"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
 			</section>
 
@@ -42,11 +44,13 @@
         <input class="<%=(locals.errors && errors.firstName) ? 'error input' : 'input'%>" type="text" name="firstName" id="first_name"
 					<% if (locals.errors && errors.firstName) { %>
 							placeholder = "<%=errors.firstName.msg %>"
-								<% } else if (locals.oldData) { %>
-									value="<%=oldData.firstName%>" <%}							else { %>
-											value="<%=userToEdit.firstName%>"
-										<% } %>
+					<% } else if (locals.oldData) { %>
+							value="<%=oldData.firstName%>"
+					<%}	else { %>
+							value="<%=userToEdit.firstName%>"
+					<% } %>
 				>
+			<span id='first-name-error'>asd</span>
 									
 									
 								
@@ -60,7 +64,7 @@
 					<%}%>
 				>
 							
-								
+			<span id='last-name-error'></span>				
 								
 				<label for="email">Email</label>
 				<input class="<%=(locals.errors && errors.email) ? 'error input' : 'input'%>" type="email" name="email" id="email"
@@ -72,15 +76,15 @@
 					<%}%>
 				>
 												
-											
+			<span id='email-error'></span>								
 											
 				<label for="phone">Teléfono</label>
 				<input class="input" type="tel" name="phone" id="phone" value="<%=userToEdit.phone%>">
-											
+				<span id='phone-error'></span>							
 											
 				<label for="address">Dirección</label>
 				<textarea class="input" type="text" name="address" id="address" col= "10" row="20" value="<%=userToEdit.address%>"><%=userToEdit.address%></textarea>
-							
+				<span id='address-error'></span>			
 			</section>
 			
 			<button type="submit" class="login-button">Actualizar</button>
@@ -89,7 +93,7 @@
 
 		</form> 		
 	</main>
-		
+	<script src="/js/user-edit-validation.js"></script>	
 </body>
 
 </html>
