@@ -21,7 +21,7 @@
 
   
 	<main>
-    <form class="registry-container" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
+    <form id= 'form-edit' class="registry-container" method="POST" action="/users/<%=userToEdit.id%>/edit?_method=PUT" enctype="multipart/form-data">
 			<section class="images-container">  	
 				
 					<img id="output" class="profileImg" for="profileImg" src="<%=userToEdit.profileImg%>">
@@ -50,7 +50,7 @@
 							value="<%=userToEdit.firstName%>"
 					<% } %>
 				>
-			<span id='first-name-error'>asd</span>
+			<span id='first-name-error'></span>
 									
 									
 								
@@ -87,7 +87,7 @@
 				<span id='address-error'></span>			
 			</section>
 			
-			<button type="submit" class="login-button">Actualizar</button>
+			<button type="submit" class="login-button" id= 'form-submit' >Actualizar</button>
 
 			<a href="/users/<%=userToEdit.id%>/editPassword"><p class="login-button">Cambiar contraseña</p></a>
 

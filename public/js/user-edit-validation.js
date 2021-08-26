@@ -1,7 +1,14 @@
+//API TO CHECK IF THE USER ALREADY EXIST IN THE DB
+const apiUrl = 'http://localhost:3000/api/users/email/'
 
+//VARIABLES DE AYUDA
 const LONG_TEXT = 20
 const SHORT_TEXT = 3
+let hasErrors = false
+let errorsBitField = 0 //(1<<5)-1  //00011111
 
+//CAPTURING DOM ELEMENTS
+const form = document.querySelector('#form-edit')
 const fileUpload = document.querySelector('#file-upload')
 const fileUploadError = document.querySelector('#file-upload-error')
 const firstName = document.querySelector('#first_name')
@@ -14,11 +21,148 @@ const phone = document.querySelector('#phone')
 const phoneError = document.querySelector('#phone-error')
 const address = document.querySelector('#address')
 const addressError = document.querySelector('#address-error')
+const submitButton = document.querySelector('#form-submit')
+
+//HELPER FUNCTIONS
+function isEmpty(input) {
+    if (input.value == '') {
+        return true
+    }
+    return false
+}
+
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+
+function isNumber(input) {
+    const decimal = /(\d*\.)?\d+/
+    return (decimal.test(input.value))
+}
+
+//FUNCION PARA SETEAR UN BIT ESPECIFICO DE UN ENTERO
+function setErrors (bitField, bit) {
+    bitField = bitField|(1 << bit)  //Hago un OR para agregar errores 
+    //bitField |= (1 << bit)
+    return bitField
+}
+
+function unSetErrors (bitField, bit) {
+    bitField &= ~(1 << bit)
+    //bitField = bitField & ~(1 << bit)
+    return bitField
+}
+
+//EVENT LISTENERS
+firstName.addEventListener('click', e => {
+        errorsBitField = unSetErrors(errorsBitField, 0)  //PODRE PASAR UN PUNTERO A LA VARIABLE??????
+        firstName.classList.remove('error')
+        console.log(firstName.classList)
+})
+
+firstName.addEventListener('blur', e => {
+    if (isEmpty(firstName)) {
+        firstName.classList.add('error')
+        firstName.placeholder = 'Debes completar tu nombre'
+        hasErrors = true
+        errorsBitField = setErrors(errorsBitField, 0)
+    }
+})
+
+lastName.addEventListener('click', e => {
+    errorsBitField = unSetErrors(errorsBitField, 1)
+    lastName.classList.remove('error')
+    console.log(lastName.classList)
+})
+
+lastName.addEventListener('blur', e => {
+    if (isEmpty(lastName)) {
+        lastName.placeholder = 'Debes completar tu apellido'
+        hasErrors = true
+        errorsBitField = setErrors(errorsBitField, 1)
+    }
+})
+
+email.addEventListener('click', e => {   //ESTO NO ME GUSTA< TENGO QUE MEJORARLO
+    emailError.innerText = ''
+    errorsBitField = unSetErrors(errorsBitField, 2)
+})
+
+email.addEventListener('blur', e => {
+    
+    console.log(email.value)
+    if (isEmpty(email)) {
+        email.placeholder = 'Debes completar tu email'
+        hasErrors = true
+        errorsBitField = setErrors(errorsBitField, 2)
+    } 
+    if (!validateEmail(email.value) && !isEmpty(email)) {
+        console.log(email)
+        emailError.innerText = 'Debes completar con un e-mail valido'  
+        hasErrors = true  
+        errorsBitField = setErrors(errorsBitField, 2)               
+    }
+    //TODO CHECKEAR CON API QUE NO EXISTA EN LA BD
+    // const userToFindUrl = apiUrl + email.value
+
+	// fetch(userToFindUrl)
+	// 	.then(function (response) {
+	// 		return response.json()
+	// 	})
+	// 	.then(function (response) {
+
+	// 		if (response.meta.status == '204') {
+	// 			errorEmail.classList.add('show')
+	// 			errorEmail.innerHTML = 'El email ingresado ya se ecuentra en nuestra base de datos.'
+	// 		}
+	// 	})
+})
+
+phone.addEventListener('click', e => {
+    phoneError.innerText = ''
+    errorsBitField = unSetErrors(errorsBitField, 3)
+})
+
+phone.addEventListener('blur', e => {
+    phoneError.innerHTML = ''
+    if (isEmpty(phone)) {
+        phone.placeholder = 'Debes completar tu telefono'
+        hasErrors = true
+        errorsBitField = setErrors(errorsBitField, 3) 
+    }
+    if (!isNumber(phone) && !isEmpty(phone)) {
+        phoneError.innerHTML = 'Debes completar tu telefono sin guiones ni espacios'
+        hasErrors = true
+        errorsBitField = setErrors(errorsBitField, 3) 
+    }
+})
+
+address.addEventListener('click', e => {
+    errorsBitField = unSetErrors(errorsBitField, 4)
+})
+
+address.addEventListener('blur', e => {
+    if (isEmpty(address)) {
+        address.placeholder = 'Debes completar tu direccion'
+        hasErrors = true
+        errorsBitField = setErrors(errorsBitField, 4) 
+    }
+})
+
+submitButton.addEventListener('click', e => {
+    console.log(errorsBitField)
+    if (errorsBitField !== 0) {
+        e.preventDefault()
+        hasErrors = false
+    }
+})
+
+
+{/*FUNCIONES AUXILIARES
 
 
 
-
-/*FUNCIONES AUXILIARES*/
 //Valida si un campo es entero
 function isInteger(input) {
     const numeric = /^\d+$/
@@ -181,4 +325,4 @@ function blurValidation(input, errorField, label, type, callback) {
 }
 
 //Chequeo que el nombre sea Texto
-blurValidation(firstName, firstNameError, 0, 'text', 0)
+blurValidation(firstName, firstNameError, 0, 'text', 0)*/}
