@@ -4,8 +4,7 @@ const apiUrl = 'http://localhost:3000/api/users/email/'
 //VARIABLES DE AYUDA
 const LONG_TEXT = 20
 const SHORT_TEXT = 3
-let hasErrors = false
-let errorsBitField = 0 //(1<<5)-1  //00011111
+let errorsBitField = 0 //(1<<5)-1  00011111  Para quitar todos los errores lo igualo a cero y para agregarlos lo igualo a (1<<'cantidad de errores')-1
 
 //CAPTURING DOM ELEMENTS
 const form = document.querySelector('#form-edit')
@@ -47,10 +46,10 @@ function setErrors (bitField, bit) {
     //bitField |= (1 << bit)
     return bitField
 }
-
+//FUNCION PARA DESSETEAR UN BIT ESPECIFICO
 function unSetErrors (bitField, bit) {
     bitField &= ~(1 << bit)
-    //bitField = bitField & ~(1 << bit)
+    //bitField = bitField & ~(1 << bit) //Niego los bits y hago un and con bitField para quitar errores
     return bitField
 }
 
@@ -65,7 +64,6 @@ firstName.addEventListener('blur', e => {
     if (isEmpty(firstName)) {
         firstName.classList.add('error')
         firstName.placeholder = 'Debes completar tu nombre'
-        hasErrors = true
         errorsBitField = setErrors(errorsBitField, 0)
     }
 })
@@ -79,7 +77,6 @@ lastName.addEventListener('click', e => {
 lastName.addEventListener('blur', e => {
     if (isEmpty(lastName)) {
         lastName.placeholder = 'Debes completar tu apellido'
-        hasErrors = true
         errorsBitField = setErrors(errorsBitField, 1)
     }
 })
@@ -94,13 +91,11 @@ email.addEventListener('blur', e => {
     console.log(email.value)
     if (isEmpty(email)) {
         email.placeholder = 'Debes completar tu email'
-        hasErrors = true
         errorsBitField = setErrors(errorsBitField, 2)
     } 
     if (!validateEmail(email.value) && !isEmpty(email)) {
         console.log(email)
-        emailError.innerText = 'Debes completar con un e-mail valido'  
-        hasErrors = true  
+        emailError.innerText = 'Debes completar con un e-mail valido'   
         errorsBitField = setErrors(errorsBitField, 2)               
     }
     //TODO CHECKEAR CON API QUE NO EXISTA EN LA BD
@@ -128,12 +123,10 @@ phone.addEventListener('blur', e => {
     phoneError.innerHTML = ''
     if (isEmpty(phone)) {
         phone.placeholder = 'Debes completar tu telefono'
-        hasErrors = true
         errorsBitField = setErrors(errorsBitField, 3) 
     }
     if (!isNumber(phone) && !isEmpty(phone)) {
         phoneError.innerHTML = 'Debes completar tu telefono sin guiones ni espacios'
-        hasErrors = true
         errorsBitField = setErrors(errorsBitField, 3) 
     }
 })
@@ -145,7 +138,6 @@ address.addEventListener('click', e => {
 address.addEventListener('blur', e => {
     if (isEmpty(address)) {
         address.placeholder = 'Debes completar tu direccion'
-        hasErrors = true
         errorsBitField = setErrors(errorsBitField, 4) 
     }
 })
@@ -154,7 +146,6 @@ submitButton.addEventListener('click', e => {
     console.log(errorsBitField)
     if (errorsBitField !== 0) {
         e.preventDefault()
-        hasErrors = false
     }
 })
 
