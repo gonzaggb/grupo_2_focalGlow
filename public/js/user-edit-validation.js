@@ -8,8 +8,8 @@ let errorsBitField = 0 //(1<<5)-1  00011111  Para quitar todos los errores lo ig
 
 //CAPTURING DOM ELEMENTS
 const form = document.querySelector('#form-edit')
-const fileUpload = document.querySelector('#file-upload')
-const fileUploadError = document.querySelector('#file-upload-error')
+const profileImage = document.querySelector('#file-upload')
+const profileImageError = document.querySelector('#file-upload-error')
 const firstName = document.querySelector('#first_name')
 const firstNameError = document.querySelector('#first-name-error')
 const lastName = document.querySelector('#last_name')
@@ -76,45 +76,48 @@ lastName.addEventListener('click', e => {
 
 lastName.addEventListener('blur', e => {
     if (isEmpty(lastName)) {
+        lastName.classList.add('error')
         lastName.placeholder = 'Debes completar tu apellido'
         errorsBitField = setErrors(errorsBitField, 1)
     }
 })
 
 email.addEventListener('click', e => {   //ESTO NO ME GUSTA< TENGO QUE MEJORARLO
+    email.classList.remove('error')
     emailError.innerText = ''
     errorsBitField = unSetErrors(errorsBitField, 2)
 })
 
 email.addEventListener('blur', e => {
     
-    console.log(email.value)
     if (isEmpty(email)) {
+        email.classList.add('error')
         email.placeholder = 'Debes completar tu email'
         errorsBitField = setErrors(errorsBitField, 2)
     } 
     if (!validateEmail(email.value) && !isEmpty(email)) {
-        console.log(email)
+        email.classList.add('error')
         emailError.innerText = 'Debes completar con un e-mail valido'   
         errorsBitField = setErrors(errorsBitField, 2)               
     }
-    //TODO CHECKEAR CON API QUE NO EXISTA EN LA BD
-    // const userToFindUrl = apiUrl + email.value
+    
+    let emailToFindUrl = apiUrl + email.value
 
-	// fetch(userToFindUrl)
-	// 	.then(function (response) {
-	// 		return response.json()
-	// 	})
-	// 	.then(function (response) {
-
-	// 		if (response.meta.status == '204') {
-	// 			errorEmail.classList.add('show')
-	// 			errorEmail.innerHTML = 'El email ingresado ya se ecuentra en nuestra base de datos.'
-	// 		}
-	// 	})
+	fetch(emailToFindUrl)
+		.then(function (response) {
+			return response.json()
+		})
+		.then(function (response) {
+            email.classList.add('error')
+			if (response.meta.status !== '204') {  //COMO HAGO PARA TENER EL EMAIL DEL USUARIO 
+				emailError.innerHTML = 'El email ingresado ya tiene una cuenta relacionada'
+                errorsBitField = setErrors(errorsBitField, 2)
+			}
+		})
 })
 
 phone.addEventListener('click', e => {
+    phone.classList.remove('error')
     phoneError.innerText = ''
     errorsBitField = unSetErrors(errorsBitField, 3)
 })
@@ -122,21 +125,25 @@ phone.addEventListener('click', e => {
 phone.addEventListener('blur', e => {
     phoneError.innerHTML = ''
     if (isEmpty(phone)) {
+        phone.classList.add('error')
         phone.placeholder = 'Debes completar tu telefono'
         errorsBitField = setErrors(errorsBitField, 3) 
     }
     if (!isNumber(phone) && !isEmpty(phone)) {
+        phone.classList.add('error')
         phoneError.innerHTML = 'Debes completar tu telefono sin guiones ni espacios'
         errorsBitField = setErrors(errorsBitField, 3) 
     }
 })
 
 address.addEventListener('click', e => {
+    address.classList.remove('error')
     errorsBitField = unSetErrors(errorsBitField, 4)
 })
 
 address.addEventListener('blur', e => {
     if (isEmpty(address)) {
+        address.classList.add('error')
         address.placeholder = 'Debes completar tu direccion'
         errorsBitField = setErrors(errorsBitField, 4) 
     }
