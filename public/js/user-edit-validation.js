@@ -9,7 +9,7 @@ let errorsBitField = 0 //(1<<5)-1  00011111  Para quitar todos los errores lo ig
 //CAPTURING DOM ELEMENTS
 const form = document.querySelector('#form-edit')
 const profileImage = document.querySelector('#file-upload')
-const profileImageError = document.querySelector('#file-upload-error')
+const profileImageError = document.querySelector('#image-error')
 const firstName = document.querySelector('#first_name')
 const firstNameError = document.querySelector('#first-name-error')
 const lastName = document.querySelector('#last_name')
@@ -57,7 +57,6 @@ function unSetErrors (bitField, bit) {
 firstName.addEventListener('click', e => {
         errorsBitField = unSetErrors(errorsBitField, 0)  //PODRE PASAR UN PUNTERO A LA VARIABLE??????
         firstName.classList.remove('error')
-        console.log(firstName.classList)
 })
 
 firstName.addEventListener('blur', e => {
@@ -71,7 +70,6 @@ firstName.addEventListener('blur', e => {
 lastName.addEventListener('click', e => {
     errorsBitField = unSetErrors(errorsBitField, 1)
     lastName.classList.remove('error')
-    console.log(lastName.classList)
 })
 
 lastName.addEventListener('blur', e => {
@@ -90,6 +88,20 @@ email.addEventListener('click', e => {   //ESTO NO ME GUSTA< TENGO QUE MEJORARLO
 
 email.addEventListener('blur', e => {
     
+    let emailToFindUrl = apiUrl + email.value
+
+	fetch(emailToFindUrl)
+		.then(function (response) {
+			return response.json()
+		})
+		.then(function (response) {
+			if (response.meta.status == '200') {  //COMO HAGO PARA TENER EL EMAIL DEL USUARIO 
+                email.classList.add('error')
+				emailError.innerHTML = 'El email ingresado ya tiene una cuenta relacionada'
+                errorsBitField = setErrors(errorsBitField, 2)
+			}
+		})
+
     if (isEmpty(email)) {
         email.classList.add('error')
         email.placeholder = 'Debes completar tu email'
@@ -101,19 +113,6 @@ email.addEventListener('blur', e => {
         errorsBitField = setErrors(errorsBitField, 2)               
     }
     
-    let emailToFindUrl = apiUrl + email.value
-
-	fetch(emailToFindUrl)
-		.then(function (response) {
-			return response.json()
-		})
-		.then(function (response) {
-            email.classList.add('error')
-			if (response.meta.status !== '204') {  //COMO HAGO PARA TENER EL EMAIL DEL USUARIO 
-				emailError.innerHTML = 'El email ingresado ya tiene una cuenta relacionada'
-                errorsBitField = setErrors(errorsBitField, 2)
-			}
-		})
 })
 
 phone.addEventListener('click', e => {
@@ -148,13 +147,28 @@ address.addEventListener('blur', e => {
         errorsBitField = setErrors(errorsBitField, 4) 
     }
 })
+//CHECKING IMAGE FILE EXTENTION
+
+profileImage.addEventListener('click', e => {
+    errorsBitField = unSetErrors(errorsBitField, 5)  //PODRE PASAR UN PUNTERO A LA VARIABLE??????
+    profileImage.classList.remove('error input')
+})
+
+profileImage.addEventListener('blur', e => {
+if (isEmpty(profileImage)) {
+    profileImageError.classList.add('error input')
+    profileImage.placeholder = 'Debes completar tu nombre'
+    errorsBitField = setErrors(errorsBitField, 5)
+}
+})
 
 submitButton.addEventListener('click', e => {
-    console.log(errorsBitField)
     if (errorsBitField !== 0) {
         e.preventDefault()
     }
 })
+
+
 
 
 {/*FUNCIONES AUXILIARES

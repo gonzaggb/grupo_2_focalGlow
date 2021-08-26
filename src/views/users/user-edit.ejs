@@ -34,7 +34,7 @@
 					
 				</div>
 				<span id='file-upload-error'></span>
-				<p class="<%=(locals.errors && errors.profileImg) ? 'error input' : ''%>"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
+				<p id= 'image-error' class="<%=(locals.errors && errors.profileImg) ? 'error input' : ''%>"><%=(locals.errors && errors.profileImg) ? errors.profileImg.msg : ''%></p>
 			</section>
 
 			<h2>Perfil de <%=userToEdit.firstName%></h2>
