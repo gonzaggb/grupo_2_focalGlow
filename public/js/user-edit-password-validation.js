@@ -61,13 +61,18 @@ password.addEventListener('blur', e => {
     }
 })
 
-password.addEventListener('blur', e => {
+password.addEventListener('change', e => {
     if(isEmpty(password)) {
         password.classList.add('error')
         passwordError.innerHTML = 'Debes completar tu nueva contraseña'
     }
+    if(mediumPassword.test(password.value)) {
+        password.style.color = 'yellow'
+    }
+    if(strongPassword.test(password.value)) {
+        password.style.color = 'green'
+    }
 })
-
 
     //RE-PASSWORD
 rePassword.addEventListener('click', e => {
