@@ -28,12 +28,6 @@ function isEmpty(input) {
 const strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})')
 const mediumPassword = new RegExp('((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{6,}))|((?=.*[a-z])(?=.*[A-Z])(?=.*[^A-Za-z0-9])(?=.{8,}))')
 
-const passwordLength = new RegExp('(?=.{8,})') //PASSWORD MUST BE 8 CHARACTERS LONG
-const passwordUpper = new RegExp('(?=.*[A-Z])') //PASSWORD MUST CONTAIN 1 UPPERCASE
-const passwordLower = new RegExp('(?=.*[a-z])') //PASSWORD MUST CONTAIN 1 LOWERCASE
-const passwordNumber = new RegExp('(?=.*[0-9])') //PASSWORD MUST CONTAIN 1 NUMBER
-const passwordSpecialCharacter = new RegExp('(?=.*[!@#$%^&*])') //PASSWORD MUST CONTAIN 1 SPECIAL CHARACTER
-
 //VALIDATIONS
     //OLD PASSWORD
 oldPassword.addEventListener('click', e => {
