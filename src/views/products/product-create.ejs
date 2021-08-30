@@ -28,7 +28,7 @@
 
                                 </div>
                             </div>
-                            <span class="error_msg" id="category-error"><%= locals.errors && error  s.category ? errors.category.msg : null  %></span><br>
+                            <span class="error_msg" id="category-error"><%= locals.errors && errors.category ? errors.category.msg : null  %></span><br>
                             
                             <div class="first">
                                 <div class="in-line-data" id="product-name-div">
@@ -96,7 +96,7 @@
                             <div class="first-">
                                 <label for="power" id="power-label">Potencia: </label>
 																
-                                    <select multiple name="power" id="productPower" class="select">
+                                    <select multiple name="power" class="select">
                                         <%featuresList.forEach(power => {%>
                                             <%if(power.type == 'power'){%>
                                                 <option  value="<%=power.id%>" id="power"
@@ -149,23 +149,12 @@
                                 <input class="price" type="number" name="price" id="price-input" min="0" max="999999999999"
                                     step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >
                             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                            <span class="error_msg"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>
-                            <div class="description-container">
-                                <label class="title" for="description">Descripción del producto:</label><br> 
-                                <textarea class ="description" id="textArea" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>
-                                <span class="error_msg"><%=locals.errors && errors.description ? errors.description.msg : '' %></span> 
-=======
-=======
                             <span class="error_msg" id="price-error"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>                           
 
->>>>>>> DevV2
                             <div class="description-container" id="description-div">
                                 <label class="title" for="description" id="description-label">Descripción del producto:</label><br> 
                                 <textarea class ="description" id="description-input" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>
                                 <span class="error_msg" id="description-error"><%=locals.errors && errors.description ? errors.description.msg : '' %></span> 
->>>>>>> 5cc374e017c594a8c16f093455f70d79ec7c1a60
                             </div>
                         </div>
 
@@ -236,7 +225,6 @@
                     </form>
                 </div>
             </main>
-            <script src='/js/validationCreateProductForm.js'></script>
             <%- include('../partials/footer.ejs')%>
             <script src='/js/product-validation.js'></script>
     </body>
