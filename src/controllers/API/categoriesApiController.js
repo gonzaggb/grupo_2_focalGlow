@@ -1,4 +1,6 @@
 const { Category } = require('../../database/models')
+const { Product } = require('../../database/models')
+
 
 const controller = {
     list: async (req, res) => {
@@ -7,7 +9,7 @@ const controller = {
             count: {
                 total: categoryes.length
             },
-            users: categoryes
+            data: categoryes
         }
         res.json(response)
     },
@@ -23,7 +25,9 @@ const controller = {
 
         }
         res.json(response)
-    }
+    },
+    
+    
 }
 
 module.exports = controller

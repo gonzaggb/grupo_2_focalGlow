@@ -24,8 +24,6 @@ if (errorPassword.innerHTML !== "\n          \n        ") {
 	errorEmail.classList.add('show')
 }
 
-console.log(errorPassword.innerHTML)
-
 //FUNCION AUXILIAR PARA VALIDAR EMAIL
 function validateEmail(email) {
 	var re = /\S+@\S+\.\S+/;
@@ -40,7 +38,6 @@ email.addEventListener('blur', function (event) {
 	if (!validateEmail(email.value)) {
 		errorEmail.classList.add('show')
 		errorEmail.innerHTML = 'Ingrese un email válido'
-		errors.push(errorEmail)
 		return
 	}
 
@@ -67,16 +64,20 @@ password.addEventListener('blur', function (event) {
 	if (password.value == '') {
 		errorPassword.classList.add('show')
 		errorPassword.innerHTML = 'Ingrese su contraseña'
-		errors.push(errorPassword)
 		return
 	}
 })
 
 form.addEventListener('submit', function (event) {
 	if (email.value == '') {
-		console.log('entre en email error')
 		errorEmail.classList.add('show')
 		errorEmail.innerHTML = 'Ingrese su email'
+		event.preventDefault()
+	}
+
+	if (!validateEmail(email.value)) {
+		errorEmail.classList.add('show')
+		errorEmail.innerHTML = 'Ingrese un email válido'
 		event.preventDefault()
 	}
 
@@ -85,9 +86,7 @@ form.addEventListener('submit', function (event) {
 		errorPassword.innerHTML = 'Ingrese su contraseña'
 		event.preventDefault()
 	}
-	if (errors.length > 0) {
-		event.preventDefault()
-	}
+
 })
 
 

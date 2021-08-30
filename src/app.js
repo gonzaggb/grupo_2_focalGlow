@@ -1,6 +1,7 @@
-  const express = require('express') // trae el modulo de express para poder montar el servidor
+const express = require('express') // trae el modulo de express para poder montar el servidor
 const app = express() //declaramos la variable app que va utilizar todos los metodos de express.
 const categoriesMiddleware = require('./middleware/categoriesList')
+
 // Coonfiguracion de la ruta que contiene los recursos estaticos para consumir de manera sencilla
 const path = require('path') //requiere el modulo nativo path de node
 publicPath = path.join(__dirname, '../public')
@@ -13,7 +14,8 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }))
-
+const cors = require('cors')
+app.use(cors())
 //requerimos  e implementamos  cookie-parser
 const cookieParser = require('cookie-parser')
 app.use(cookieParser('secreto'))
@@ -39,7 +41,7 @@ const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 
 //Levantamos el Servidor
-const port = process.env.PORT || 3000 // use port 3000 unless there exists a preconfigured port (e.g. Heroku)//
+const port = process.env.PORT || 3000// use port 3000 unless there exists a preconfigured port (e.g. Heroku)//
 app.listen(port, () =>
   console.log('Servidor corriendo en el puerto ' + port + '\n' + 'Focal Glow es el mejor grupo!!!')
 )
@@ -58,14 +60,14 @@ app.use('/', mainRoutes)
 app.use('/product', productRoutes)
 app.use('/category', categoryRoutes)
 app.use('/users', userRoutes)
-app.use('/checkout' ,checkoutRoutes)
+app.use('/checkout', checkoutRoutes)
 
 //requerimos las Api routes
 const usersApiroutes = require('./routes/APIroutes/usersApiRoutes')
 const productsApiroutes = require('./routes/APIroutes/productsApiRoutes')
 const categoryApiroutes = require('./routes/APIroutes/categoryApiRoutes')
 //Api routes
-app.use('/api/users',usersApiroutes)
+app.use('/api/users', usersApiroutes)
 app.use('/api/products', productsApiroutes)
 app.use('/api/category', categoryApiroutes)
 

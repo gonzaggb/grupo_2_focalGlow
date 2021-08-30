@@ -10,8 +10,6 @@ const storage = multer.diskStorage({
     filename: (req, file, cb) => {
         const extensionFile = path.extname(file.originalname)
         cb(null, `profile-${Date.now()}${extensionFile}`)
-
-
     }
 
 })
