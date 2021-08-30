@@ -5,7 +5,7 @@ const productsApiController = require('../../controllers/API/productsApiControll
 //ruta para traer todos los usuarios
 router.get('/', productsApiController.list)
 router.get('/last',productsApiController.lastProduct)
-router.get('/category/:category', productsApiController.filterByCategory)
+router.get('/productsByCategory/:category', productsApiController.filterByCategory)
 router.get('/qty', productsApiController.qty)
 router.get('/:id', productsApiController.detail)
 

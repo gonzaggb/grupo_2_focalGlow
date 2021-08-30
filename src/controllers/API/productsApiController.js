@@ -64,7 +64,7 @@ const controller = {
         let totalProducts = products.length
         let response = {
 
-            totalProducts
+           data: totalProducts
         }
         res.json(response)
     },

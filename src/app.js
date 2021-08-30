@@ -13,7 +13,8 @@ app.use(session({
   resave: true,
   saveUninitialized: true
 }))
-
+const cors = require('cors')
+app.use(cors())
 //requerimos  e implementamos  cookie-parser
 const cookieParser = require('cookie-parser')
 app.use(cookieParser('secreto'))
@@ -39,7 +40,7 @@ const methodOverride = require('method-override')
 app.use(methodOverride('_method'))
 
 //Levantamos el Servidor
-const port = process.env.PORT || 3000 // use port 3000 unless there exists a preconfigured port (e.g. Heroku)//
+const port = process.env.PORT || 3000// use port 3000 unless there exists a preconfigured port (e.g. Heroku)//
 app.listen(port, () =>
   console.log('Servidor corriendo en el puerto ' + port + '\n' + 'Focal Glow es el mejor grupo!!!')
 )
