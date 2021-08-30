@@ -128,18 +128,10 @@
                             </div>
                             <span class="error_msg" id="cct-error"><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span><br>
                             <div class="first-">
-<<<<<<< HEAD
-                                <label class="" for="dim">Dim: </label>
-                                    <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
-                                    <%featuresList.forEach(dim => {%> <!--Recorre la lista de TODAS las features-->
-                                        <% if (dim.type == 'dim') { %> <!--Evalua las que son material-->
-                                            <div><input class="check" type="checkbox" id="productDim" name="dim[]"
-=======
                                 <label class="" for="dim" id="dim-label">Dim: </label>
                                     <%featuresList.forEach(dim => {%> 
                                         <% if (dim.type == 'dim') { %> 
                                             <div><input class="check" type="checkbox" id="dim" name="dim[]"
->>>>>>> 5cc374e017c594a8c16f093455f70d79ec7c1a60
                                                 value="<%=dim.id%>" 
                                                 <%if(locals.old && old.dim){%>
                                                     <%old.dim.forEach(oldDim => {%>
@@ -155,9 +147,9 @@
                             <div class="first-" id='price-div'>
                                 <label class="price" id="price-label" for="price">Precio unitario base: </label>
                                 <input class="price" type="number" name="price" id="price-input" min="0" max="999999999999"
-                                    step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >   
-                                    <span class="error_msg" id="price-error"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>                           
+                                    step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >
                             </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
                             <span class="error_msg"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>
                             <div class="description-container">
@@ -165,6 +157,10 @@
                                 <textarea class ="description" id="textArea" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>
                                 <span class="error_msg"><%=locals.errors && errors.description ? errors.description.msg : '' %></span> 
 =======
+=======
+                            <span class="error_msg" id="price-error"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>                           
+
+>>>>>>> DevV2
                             <div class="description-container" id="description-div">
                                 <label class="title" for="description" id="description-label">Descripción del producto:</label><br> 
                                 <textarea class ="description" id="description-input" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>

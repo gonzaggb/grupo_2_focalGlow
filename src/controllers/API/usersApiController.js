@@ -73,7 +73,7 @@ const controller = {
 	},
 	lastUser: async (req,res)=> {
 		let users = await User.findAll({
-			attributes: ['id', 'firstName', 'lastName', 'email',]
+			attributes: ['id', 'firstName', 'lastName', 'email','profileImg']
 		})
 		 let lastUser = users[users.length-1] 
 		 

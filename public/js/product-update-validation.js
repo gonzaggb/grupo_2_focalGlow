@@ -1,6 +1,8 @@
 //VARIABLES PARA DEFINIR EL LARGO DE LAS DIFERENTES VALIDACIONES
 const LONG_TEXT = 20
 const SHORT_TEXT = 5
+const ACCEPTED_IMAGE_FORMATS = ['jpg', 'png', 'jpeg']
+const ACCEPTED_ARCHIVE_FORMATS = ['pdf']
 
 const category = document.querySelectorAll('#category')
 const categoryError = document.querySelector('#category-error')
@@ -30,6 +32,8 @@ const sourceLabel = document.querySelector('#source-label')
 const material = document.querySelectorAll('#material')
 const materialError = document.querySelector('#material-error')
 const materialLabel = document.querySelector("#material-label")
+console.log(materialLabel)
+
 
 const optic = document.querySelectorAll('#optic')
 const opticError = document.querySelector('#optic-error')
@@ -53,6 +57,7 @@ const dimLabel = document.querySelector('#dim-label')
 const mainImage = document.querySelector('#main-image-input')
 const mainImageLabel = document.querySelector('#main-image-label')
 const mainImageError = document.querySelector('#main-image-error')
+
 const dimensionImage = document.querySelector('#dimension-image-input')
 const dimensionImageLabel = document.querySelector('#dimension-image-label')
 const dimensionImageError = document.querySelector('#dimension-image-error')
@@ -60,6 +65,8 @@ const dimensionImageError = document.querySelector('#dimension-image-error')
 const sliderImages = document.querySelector('#slider-image-input')
 const sliderError = document.querySelector('#slider-image-error')
 const sliderLabel = document.querySelector('#slider-image-label')
+const checkSliderType = document.querySelectorAll('#slider-image-check')
+const clearSliderCheck = document.querySelector('#clear-slider-check')
 
 
 const dataSheetLabel = document.querySelector('#label-data-sheet')
@@ -76,8 +83,7 @@ const allErrors = [categoryError, productError, quantityError, sourceError,
 
 
 
-const createButton = document.querySelector('#button-enviar')
-
+const editButton = document.querySelector('#button-enviar')
 
 
 /*FUNCIONES AUXILIARES*/
@@ -131,13 +137,11 @@ function fileExtension(fileName) {
 }
 //Valida que sea una imagen aceptada
 function isImage(fileName) {
-    const ACCEPTED_FORMATS = ['jpg', 'png', 'jpeg']
-    return ACCEPTED_FORMATS.includes(fileExtension(fileName))
+    return ACCEPTED_IMAGE_FORMATS.includes(fileExtension(fileName))
 }
 //Valida que sea un archivo pdf
 function isPdf(fileName) {
-    const ACCEPTED_FORMATS = ['pdf']
-    return ACCEPTED_FORMATS.includes(fileExtension(fileName))
+    return ACCEPTED_ARCHIVE_FORMATS.includes(fileExtension(fileName))
 }
 
 //Borra los errors cuando se selecciona un campo
@@ -157,7 +161,26 @@ function clearErrors([...fieldError]) {
     })
 }
 
+/*Borra el check en caso de no querer modificar el slider y deshabilita el botón de cargar slider*/
+clearSliderCheck.addEventListener('click', event => {
+    checkSliderType.forEach(e => {
+        e.checked = false
+    })
+    sliderImages.disabled = true
 
+})
+/*Activa el botón de carga de slider cuando se selecciona una opcion*/
+checkSliderType.forEach(e => {
+    e.addEventListener('click', event => {
+        sliderImages.disabled = false
+    })
+})
+
+clearErrors([mainImageError])
+mainImage.addEventListener('click', event => {
+    clearErrors([mainImageError])
+
+})
 
 //Valida que los inputs o select estén marcados, el callback que recibe es isChecked o isSelected
 function validate(input, errorField, label, type, event, callback) {
@@ -165,9 +188,7 @@ function validate(input, errorField, label, type, event, callback) {
     if (isEmpty(input)) {
         errorField.innerHTML = `${label.innerHTML} no puede estar vacio`
         return event.preventDefault()
-
-
-    }
+        }
 
     switch (type) {
         case 'integer':
@@ -235,25 +256,6 @@ function validate(input, errorField, label, type, event, callback) {
     clearErrors([allErrors])
 }
 
-function blurValidation(input, errorField, label, type, callback) {    
-    input.addEventListener('blur', event => {
-        clearErrors([errorField])
-        validate(input, errorField, label, type, event, callback)
-    })
-}
-
-/*Validacion con blur de los campos validables*/
-blurValidation(mainImage, mainImageError, mainImageLabel, 'image')
-blurValidation(price, priceError, priceLabel, 'number')
-blurValidation(description, descriptionError, descriptionLabel, 'longText')
-blurValidation(quantity, quantityError, quantityLabel, 'integer')
-blurValidation(product, productError, productLabel, 'text')
-blurValidation(dimensionImage, dimensionImageError, dimensionImageLabel, 'image')
-blurValidation(sliderImages, sliderError, sliderLabel, 'slider')
-blurValidation(dataSheet, dataSheetError, dataSheetLabel, 'pdf')
-blurValidation(installSheet, installSheetError, installSheetLabel, 'pdf')
-
-
 /*Borrado de los errores de los campos checkeables*/
 clearErrorAtCheck(categorySelect, categoryError)
 clearErrorAtCheck(material, materialError)
@@ -264,8 +266,8 @@ clearErrorAtCheck(cct, cctError)
 clearErrorAtCheck(dim, dimError)
 
 /*Validación de errores contra el botón crear*/
-createButton.addEventListener('click', event => {
-    clearErrors(allErrors)
+editButton.addEventListener('click', event => {
+
     validate(category, categoryError, categoryLabel, 'select', event, isSelected)
     validate(power, powerError, powerLabel, 'select', event, isSelected,)
     validate(source, sourceError, sourceLabel, 'check', event, isChecked)
@@ -277,9 +279,39 @@ createButton.addEventListener('click', event => {
     validate(quantity, quantityError, quantityLabel, 'integer', event)
     validate(price, priceError, priceLabel, 'number', event)
     validate(description, descriptionError, descriptionLabel, 'longText', event)
-    validate(mainImage, mainImageError, mainImageLabel, 'image', event)
-    validate(dimensionImage, dimensionImageError, dimensionImageLabel, 'image', event)
-    validate(sliderImages, sliderError, sliderLabel, 'slider', event)
-    validate(dataSheet, dataSheetError, dataSheetLabel, 'pdf', event)
-    validate(installSheet, installSheetError, installSheetLabel, 'pdf', event)
+    //Valida que si se carga algo para imagen principal la misma sea un formato válido
+    if (!isEmpty(mainImage) && !isImage(mainImage.value)) {
+        mainImageError.innerHTML = "Los formatos admitidos son .jpg, .png, .jpeg"
+        event.preventDefault()
+    }
+    //Valida que si se carga algo para imagen de dimensiones la misma sea un formato válido
+    if (!isEmpty(dimensionImage) && !isImage(dimensionImage.value)) {
+        dimensionImageError.innerHTML = "Los formatos admitidos son .jpg, .png, .jpeg"
+        event.preventDefault()
+    }
+    //Valida que si está checkeado el campo del slider se cargue una imagen, y en caso de que haya  algo cargado que sean imagenes
+    if (isChecked(checkSliderType) > 0 && isEmpty(sliderImages)) {
+        sliderError.innerHTML = "Debes seleccionar al menos una imagen"
+        event.preventDefault()
+
+    } else if (!isEmpty(sliderImages)) {
+        for (let i = 0; i < sliderImages.files.length; i++) {
+            if (!isImage(sliderImages.files[i].name)) {
+                sliderError.innerHTML = "Los formatos admitidos son .jpg, .png, .jpeg"
+                event.preventDefault()
+            }
+        }
+    }
+    if (!isEmpty(dataSheet) && !isPdf(dataSheet.value)) {
+        dataSheetError.innerHTML = "El archivo debe ser un PDF"
+        event.preventDefault()
+    }
+    if (!isEmpty(installSheet) && !isPdf(installSheet.value)) {
+        installSheetError.innerHTML = "El archivo debe ser un PDF"
+        event.preventDefault()
+    }
+
+
+
+
 })
