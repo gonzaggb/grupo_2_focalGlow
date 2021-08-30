@@ -20,7 +20,7 @@ const controller = {
     const oldValues = req.body
 
     if (!formValidation.isEmpty()) {
-      return res.render('users/user-login', { oldValues, errors: formValidation.mapped() })
+      return res.render('users/user-login.ejs', { oldValues, errors: formValidation.mapped() })
     }
     const { email, remember } = req.body
 
