@@ -2,6 +2,7 @@ const { User } = require('../database/models')
 
 module.exports = async (req, res, next) => {
 
+	//TODO ACA HAY QUE CACHEAR PARA QUE NO VAYA TODO EL TIEMPO A BUSCAR A LA BASE DE DATOS
 
 	if (req.session.logged) {
 		try {
