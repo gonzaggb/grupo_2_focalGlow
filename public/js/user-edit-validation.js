@@ -1,3 +1,5 @@
+//terminar ver imagenes, 2 caracteres nombre y apellido y pegarle a la API de productos (trello)
+
 //API TO CHECK IF THE USER ALREADY EXIST IN THE DB
 const apiUrl = 'http://localhost:3000/api/users/email/'
 
@@ -22,9 +24,12 @@ const address = document.querySelector('#address')
 const addressError = document.querySelector('#address-error')
 const submitButton = document.querySelector('#form-submit')
 
+//Variable que almacena el mail previo al cambio
+let lastEmail = email.value
+console.log(lastEmail)
 //FUNCION PARA SETEAR UN BIT ESPECIFICO DE UN ENTERO
 function setErrors (bitField, bit) {
-    bitField = bitField|(1 << bit)  //Hago un OR para agregar errores 
+    bitField = bitField|(1 << bit)  //Hago un OR para agregar errores
     //bitField |= (1 << bit)
     return bitField
 }
@@ -52,11 +57,18 @@ function isNumber(input) {
     return (decimal.test(input.value))
 }
 
+function isLongerThan(input, length) {
+    if (input.value.length >= length) {
+        return true
+    }
+    return false
+}
 
 
 //EVENT LISTENERS
 firstName.addEventListener('click', e => {
         errorsBitField = unSetErrors(errorsBitField, 0)  //PODRE PASAR UN PUNTERO A LA VARIABLE??????
+        firstNameError.innerText = ''
         firstName.classList.remove('error')
 })
 
@@ -66,10 +78,16 @@ firstName.addEventListener('blur', e => {
         firstName.placeholder = 'Debes completar tu nombre'
         errorsBitField = setErrors(errorsBitField, 0)
     }
+    if (!isLongerThan(firstName, SHORT_TEXT) && !isEmpty(firstName)) {
+        firstName.classList.add('error')
+        firstNameError.innerText = 'Tu nombre debe ser mas largo'
+        errorsBitField = setErrors(errorsBitField, 0)
+    }
 })
 
 lastName.addEventListener('click', e => {
     errorsBitField = unSetErrors(errorsBitField, 1)
+    lastNameError.innerText = ''
     lastName.classList.remove('error')
 })
 
@@ -79,24 +97,31 @@ lastName.addEventListener('blur', e => {
         lastName.placeholder = 'Debes completar tu apellido'
         errorsBitField = setErrors(errorsBitField, 1)
     }
+    if (!isLongerThan(lastName, SHORT_TEXT) && !isEmpty(lastName)) {
+        lastName.classList.add('error')
+        lastNameError.innerText = 'Tu apellido debe ser mas largo'
+        errorsBitField = setErrors(errorsBitField, 1)
+    }
 })
 
-email.addEventListener('click', e => {   //ESTO NO ME GUSTA< TENGO QUE MEJORARLO
+email.addEventListener('click', e => {   //se puede accerder a esta variable desde afuera?
     email.classList.remove('error')
     emailError.innerText = ''
     errorsBitField = unSetErrors(errorsBitField, 2)
+    console.log (lastEmail)
 })
 
 email.addEventListener('blur', e => {
     
     let emailToFindUrl = apiUrl + email.value
-
+    
 	fetch(emailToFindUrl)
 		.then(function (response) {
 			return response.json()
+            console.log(response)
 		})
 		.then(function (response) {
-			if (response.meta.status == '200') {  //COMO HAGO PARA TENER EL EMAIL DEL USUARIO 
+			if (response.meta.status == '200' && email.value !== lastEmail) {  //COMO HAGO PARA TENER EL EMAIL DEL USUARIO 
                 email.classList.add('error')
 				emailError.innerHTML = 'El email ingresado ya tiene una cuenta relacionada'
                 errorsBitField = setErrors(errorsBitField, 2)
@@ -124,11 +149,7 @@ phone.addEventListener('click', e => {
 
 phone.addEventListener('blur', e => {
     phoneError.innerHTML = ''
-    if (isEmpty(phone)) {
-        phone.classList.add('error')
-        phone.placeholder = 'Debes completar tu telefono'
-        errorsBitField = setErrors(errorsBitField, 3) 
-    }
+    
     if (!isNumber(phone) && !isEmpty(phone)) {
         phone.classList.add('error')
         phoneError.innerHTML = 'Debes completar tu telefono sin guiones ni espacios'
@@ -136,18 +157,6 @@ phone.addEventListener('blur', e => {
     }
 })
 
-address.addEventListener('click', e => {
-    address.classList.remove('error')
-    errorsBitField = unSetErrors(errorsBitField, 4)
-})
-
-address.addEventListener('blur', e => {
-    if (isEmpty(address)) {
-        address.classList.add('error')
-        address.placeholder = 'Debes completar tu direccion'
-        errorsBitField = setErrors(errorsBitField, 4) 
-    }
-})
 //CHECKING IMAGE FILE EXTENTION
 
 profileImage.addEventListener('click', e => {
@@ -158,7 +167,7 @@ profileImage.addEventListener('click', e => {
 profileImage.addEventListener('blur', e => {
 if (isEmpty(profileImage)) {
     profileImageError.classList.add('error input')
-    profileImage.placeholder = 'Debes completar tu nombre'
+    profileImage.placeholder = 'Debes cargar una imagen'
     errorsBitField = setErrors(errorsBitField, 5)
 }
 })
@@ -168,4 +177,6 @@ submitButton.addEventListener('click', e => {
         e.preventDefault()
     }
 })
+
+
 
