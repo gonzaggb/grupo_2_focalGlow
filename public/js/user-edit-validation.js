@@ -1,12 +1,13 @@
-//terminar ver imagenes, 2 caracteres nombre y apellido y pegarle a la API de productos (trello)
+//terminar ver imagenes y pegarle a la API de productos (trello)
 
 //API TO CHECK IF THE USER ALREADY EXIST IN THE DB
 const apiUrl = 'http://localhost:3000/api/users/email/'
 
 //VARIABLES DE AYUDA
-const LONG_TEXT = 20
-const SHORT_TEXT = 3
+
 let errorsBitField = 0 //(1<<5)-1  00011111  Para quitar todos los errores lo igualo a cero y para agregarlos lo igualo a (1<<'cantidad de errores')-1
+const ACCEPTED_ARCHIVE_FORMATS = ['pdf']
+const SHORT_TEXT = 3
 
 //CAPTURING DOM ELEMENTS
 const form = document.querySelector('#form-edit')
@@ -62,6 +63,10 @@ function isLongerThan(input, length) {
         return true
     }
     return false
+}
+
+function isImage(fileName) {
+    return ACCEPTED_IMAGE_FORMATS.includes(fileExtension(fileName))
 }
 
 
@@ -165,11 +170,16 @@ profileImage.addEventListener('click', e => {
 })
 
 profileImage.addEventListener('blur', e => {
-if (isEmpty(profileImage)) {
-    profileImageError.classList.add('error input')
-    profileImage.placeholder = 'Debes cargar una imagen'
-    errorsBitField = setErrors(errorsBitField, 5)
-}
+    if (isEmpty(profileImage)) {
+        profileImageError.classList.add('error input')
+        profileImage.placeholder = 'Debes cargar una imagen'
+        errorsBitField = setErrors(errorsBitField, 5)
+    }
+    if (isImage(profileImage.value)) {
+        profileImageError.classList.add('error input')
+        profileImage.placeholder = 'Debes cargar una imagen con extension valida'
+        errorsBitField = setErrors(errorsBitField, 5)
+    }
 })
 
 submitButton.addEventListener('click', e => {
