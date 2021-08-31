@@ -13,7 +13,7 @@
                         <div class="form_left">
                             <div class="first">
                                 <div class="cateogry-selector">
-                                    <label class="" for="category"  id="category-label">Categoria: </label><br>
+                                    <label class="" for="category"  id="category-label">Categoria</label><br>
                                     <select name="category" class="select"  id="category-select" >
                                         <% locals.categories.forEach(categorie=> { %>
                                             <option id="category" value="<%=categorie.id%>" <%=productFound.categoryId==categorie.id
@@ -29,7 +29,7 @@
                             </span><br>
                             <div class="first">
                                 <div class="in-line-data">
-                                    <label class="" for="name" id="label-product-name">Nombre del Producto: </label><br>
+                                    <label class="" for="name" id="label-product-name">Nombre del Producto</label><br>
                                     <input class="box" type="text" name="name" id="input-product-name"
                                         value="<%= productFound.name %> ">
                                 </div>
@@ -39,7 +39,7 @@
                             </span><br>
                             <div class="first">
                                 <div class="in-line-data">
-                                    <label class="" for="quantity" id="label-quantity">Cantidad: </label><br>
+                                    <label class="" for="quantity" id="label-quantity">Cantidad</label><br>
                                     <input class="box" type="number" name="quantity" id="input-quantity" min="0"
                                         value="<%= productFound.quantity %>">
 
@@ -49,7 +49,7 @@
                                 <%= locals.errors && errors.quantity ? errors.quantity.msg : null %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="source" id="source-label">Fuente: </label>
+                                <label class="" for="source" id="source-label">Fuente</label>
                                 <%featuresList.forEach(source=> {%>
                                     <!--Recorre la lista de TODAS las features-->
                                     <% if (source.type=='source' ) { %>
@@ -71,7 +71,7 @@
                             </span><br>
 
                             <div class="first-">
-                                <label class="" id="material-label" for="material">Material: </label>
+                                <label class="" id="material-label" for="material">Material</label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(material=> {%>
                                     <!--Recorre la lista de TODAS las features-->
@@ -96,7 +96,7 @@
                                 <%=locals.errors && errors.material ? errors.material.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="optic" id="optic-label">Optica: </label>
+                                <label class="" for="optic" id="optic-label">Optica</label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(optic=> {%>
                                     <!--Recorre la lista de TODAS las features-->
@@ -115,7 +115,7 @@
                                 <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="optic" id="power-label">Potencia: </label>
+                                <label class="" for="optic" id="power-label">Potencia</label>
                                 <select multiple name="power" class="select">
                                     <%featuresList.forEach(power=> {%>
                                         <%if(power.type=='power' ){%>
@@ -134,7 +134,7 @@
                                 <%=locals.errors && errors.power ? errors.power.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" id="cct-label" for="cct">CCT: </label>
+                                <label class="" id="cct-label" for="cct">CCT</label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(cct=> {%>
                                     <!--Recorre la lista de TODAS las features-->
@@ -153,7 +153,7 @@
                                 <%=locals.errors && errors.cct ? errors.cct.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="dim" id="dim-label">Dim: </label>
+                                <label class="" for="dim" id="dim-label">Dim</label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(dim=> {%>
                                     <!--Recorre la lista de TODAS las features-->
@@ -172,7 +172,7 @@
                                 <%=locals.errors && errors.dim ? errors.dim.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="price" id="price-label" for="price">Precio unitario base: </label><br>
+                                <label class="price" id="price-label" for="price">Precio unitario base</label><br>
                                 <input class="price" type="number" name="price" id="price-input" min="0"
                                     placeholder=" Ej 15235.35" value="<%=productFound.price%>">
                             </div>
@@ -180,7 +180,7 @@
                                 <%=locals.errors && errors.price ? errors.price.msg : '' %>
                             </span><br>
                             <div class="description-container">
-                                <label class="title" for="description" id="description-label">Descripción del producto:</label><br>
+                                <label class="title" for="description" id="description-label">Descripción del producto</label><br>
                                 <textarea class="description" id="description-input" name="description"
                                     placeholder="Poné una descripción copada"><%=productFound.description%></textarea><br>
                                 <span class="error_msg" id="description-error">
@@ -192,7 +192,7 @@
                         <div class="form_right">
                             <div class="imagenes">
                                 <div class="imagen-input">
-                                    <label class="title" for="main"  id="main-image-label">Imagen Principal: </label><br>
+                                    <label class="title" for="main"  id="main-image-label">Imagen Principal</label><br>
                                     <input type="file" name='main' id="main-image-input" accept=".jpg">
                                     <span class="error_msg" id="main-image-error"></span>
                                     <br>
@@ -200,14 +200,14 @@
                                     <img id="output" src="<%=images[0].name%>" alt="">
                                 </div><br>
                                 <div class="imagen-input">
-                                    <label class="title" for="dimension" id="dimension-image-label">Dimensiones del Producto: </label><br>
+                                    <label class="title" for="dimension" id="dimension-image-label">Dimensiones del Producto</label><br>
                                     <input type="file" name="dimension" id="dimension-image-input" accept=".jpg , .png">
                                     <span class="error_msg" id="dimension-image-error"><%=locals.errors && errors.dimension ? errors.dimension.msg : '' %></span>
                                 </div><br>
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
-                                    <label class="title" for="slider" id="slider-image-label">Slider: </label><br>
+                                    <label class="title" for="slider" id="slider-image-label">Slider</label><br>
                                     <span>Cambiar todas las imagenes del slider</span>
                                     <input class="radio" type="radio" name="sliderUpdate" id='slider-image-check'  value="modifyAll">
                                     <br>
@@ -238,7 +238,7 @@
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
-                                    <label class="" for="data_sheet" id="label-data-sheet">Hoja Técnica: </label><br>
+                                    <label class="" for="data_sheet" id="label-data-sheet">Hoja Técnica</label><br>
                                     <input type="file" src="" alt="" name="dataSheet" id= "input-data-sheet"accept=".pdf"><br>
                                     <a href="<%=filesPdf[1].name%>" target="_blank">
                                         <%=filesPdf[1].name%>
@@ -248,7 +248,7 @@
 
                                 </div><br>
                                 <div class="imagen-input">
-                                    <label class="" for="install_sheet" id="label-install-sheet">Manual de Instalación: </label><br>
+                                    <label class="" for="install_sheet" id="label-install-sheet">Manual de Instalación</label><br>
                                     <input type="file" src="" alt="" name="installSheet" id="input-install-sheet" accept=".pdf"><br>
                                     <a href="<%=filesPdf[0].name%>" target="_blank">
                                         <%=filesPdf[0].name%>
