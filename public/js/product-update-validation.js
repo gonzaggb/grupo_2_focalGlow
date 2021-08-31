@@ -1,7 +1,7 @@
 //VARIABLES PARA DEFINIR EL LARGO DE LAS DIFERENTES VALIDACIONES
 const LONG_TEXT = 20
 const SHORT_TEXT = 5
-const ACCEPTED_IMAGE_FORMATS = ['jpg', 'png', 'jpeg']
+const ACCEPTED_IMAGE_FORMATS = ['jpg', 'png', 'jpeg', 'gif']
 const ACCEPTED_ARCHIVE_FORMATS = ['pdf']
 
 const category = document.querySelectorAll('#category')
@@ -137,11 +137,13 @@ function fileExtension(fileName) {
 }
 //Valida que sea una imagen aceptada
 function isImage(fileName) {
-    return ACCEPTED_IMAGE_FORMATS.includes(fileExtension(fileName))
+    console.log('--------------------------------')
+    console.log(fileExtension(fileName).toLowerCase())
+    return ACCEPTED_IMAGE_FORMATS.includes(fileExtension(fileName).toLowerCase())
 }
 //Valida que sea un archivo pdf
 function isPdf(fileName) {
-    return ACCEPTED_ARCHIVE_FORMATS.includes(fileExtension(fileName))
+    return ACCEPTED_ARCHIVE_FORMATS.includes(fileExtension(fileName).toLowerCase())
 }
 
 //Borra los errors cuando se selecciona un campo
@@ -256,6 +258,25 @@ function validate(input, errorField, label, type, event, callback) {
     clearErrors([allErrors])
 }
 
+function blurValidation(input, errorField, label, type, callback) {    
+    input.addEventListener('blur', event => {
+        clearErrors([errorField])
+        validate(input, errorField, label, type, event, callback)
+    })
+}
+
+/*Validacion con blur de los campos validables*/
+blurValidation(mainImage, mainImageError, mainImageLabel, 'image')
+blurValidation(price, priceError, priceLabel, 'number')
+blurValidation(description, descriptionError, descriptionLabel, 'longText')
+blurValidation(quantity, quantityError, quantityLabel, 'integer')
+blurValidation(product, productError, productLabel, 'text')
+blurValidation(dimensionImage, dimensionImageError, dimensionImageLabel, 'image')
+blurValidation(sliderImages, sliderError, sliderLabel, 'slider')
+blurValidation(dataSheet, dataSheetError, dataSheetLabel, 'pdf')
+blurValidation(installSheet, installSheetError, installSheetLabel, 'pdf')
+
+
 /*Borrado de los errores de los campos checkeables*/
 clearErrorAtCheck(categorySelect, categoryError)
 clearErrorAtCheck(material, materialError)
@@ -310,6 +331,8 @@ editButton.addEventListener('click', event => {
         installSheetError.innerHTML = "El archivo debe ser un PDF"
         event.preventDefault()
     }
+    product.focus()
+
 
 
 

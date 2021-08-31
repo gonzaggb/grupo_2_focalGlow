@@ -1,6 +1,8 @@
 //VARIABLES PARA DEFINIR EL LARGO DE LAS DIFERENTES VALIDACIONES
 const LONG_TEXT = 20
 const SHORT_TEXT = 5
+const ACCEPTED_IMAGE_FORMATS = ['jpg', 'png', 'jpeg', 'gif']
+const ACCEPTED_ARCHIVE_FORMATS = ['pdf']
 
 const category = document.querySelectorAll('#category')
 const categoryError = document.querySelector('#category-error')
@@ -131,13 +133,13 @@ function fileExtension(fileName) {
 }
 //Valida que sea una imagen aceptada
 function isImage(fileName) {
-    const ACCEPTED_FORMATS = ['jpg', 'png', 'jpeg']
-    return ACCEPTED_FORMATS.includes(fileExtension(fileName))
+    console.log('--------------------------------')
+    console.log(fileExtension(fileName).toLowerCase())
+    return ACCEPTED_IMAGE_FORMATS.includes(fileExtension(fileName).toLowerCase())
 }
 //Valida que sea un archivo pdf
 function isPdf(fileName) {
-    const ACCEPTED_FORMATS = ['pdf']
-    return ACCEPTED_FORMATS.includes(fileExtension(fileName))
+    return ACCEPTED_ARCHIVE_FORMATS.includes(fileExtension(fileName))
 }
 
 //Borra los errors cuando se selecciona un campo
@@ -184,7 +186,8 @@ function validate(input, errorField, label, type, event, callback) {
             break;
         case 'text':
             if (!isLongerThan(input, SHORT_TEXT)) {
-
+                console.log(input)
+                input.focus()
                 errorField.innerHTML = `${label.innerHTML} debe ser más largo de ${SHORT_TEXT} caracteres`
                 return event.preventDefault()
             }
@@ -282,4 +285,5 @@ createButton.addEventListener('click', event => {
     validate(sliderImages, sliderError, sliderLabel, 'slider', event)
     validate(dataSheet, dataSheetError, dataSheetLabel, 'pdf', event)
     validate(installSheet, installSheetError, installSheetLabel, 'pdf', event)
+    product.focus()
 })
