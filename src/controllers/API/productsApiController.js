@@ -81,8 +81,8 @@ const controller = {
         })
         
         let response = {
-            meta :{ products : products.length},
-            data: { products }
+            data :{ products : products.length}
+            
            
         }
         res.json(response)

@@ -4,6 +4,8 @@ const categoriesApiController = require('../../controllers/API/categoriesApiCont
 
 //ruta para traer todos los usuarios
 router.get('/', categoriesApiController.list)
+router.get('/category/qty', categoriesApiController.listAndQty)
 router.get('/:id', categoriesApiController.detail)
+
 
 module.exports = router
