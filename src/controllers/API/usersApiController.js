@@ -5,14 +5,14 @@ const controller = {
 		let users = await User.findAll({
 			attributes: ['id', 'firstName', 'lastName', 'email',]
 		})
-		let url= 'http://localhost:3000/api/users/'
-		let usersToShow = users.map(e=>{
-			e.setDataValue('detail', url+e.id)
-				
+		let url = 'http://localhost:3000/api/users/'
+		let usersToShow = users.map(e => {
+			e.setDataValue('detail', url + e.id)
+
 			return e
 		})
-		
-		 
+
+
 		let response = {
 			count: {
 				total: users.length
@@ -71,12 +71,12 @@ const controller = {
 		}
 		res.json(response)
 	},
-	lastUser: async (req,res)=> {
+	lastUser: async (req, res) => {
 		let users = await User.findAll({
-			attributes: ['id', 'firstName', 'lastName', 'email','profileImg']
+			attributes: ['id', 'firstName', 'lastName', 'email', 'profileImg']
 		})
-		 let lastUser = users[users.length-1] 
-		 
+		let lastUser = users[users.length - 1]
+
 		let response = {
 			count: {
 				id: lastUser.id
@@ -85,11 +85,11 @@ const controller = {
 		}
 		res.json(response)
 	},
-	qty:async (req,res)=>{
+	qty: async (req, res) => {
 		let users = await User.findAll()
 		let totalUSers = users.length
 		let response = {
-			
+
 			users: totalUSers
 		}
 		res.json(response)
