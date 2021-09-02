@@ -3,6 +3,9 @@ const LONG_TEXT = 20
 const SHORT_TEXT = 5
 const ACCEPTED_IMAGE_FORMATS = ['jpg', 'png', 'jpeg']
 const ACCEPTED_ARCHIVE_FORMATS = ['pdf']
+//FEDE
+const apiUrl = 'http://localhost:3000/api/products/'
+
 
 const category = document.querySelectorAll('#category')
 const categoryError = document.querySelector('#category-error')
@@ -12,6 +15,8 @@ const categoryLabel = document.querySelector('#category-label')
 const product = document.querySelector('#input-product-name')
 const productError = document.querySelector('#error-product-name')
 const productLabel = document.querySelector('#label-product-name')
+//VARIABLE QUE ALMACENA EL NOMBRE ACTUAL DEL PRODUCTO FEDE
+let lastProductName = product.value
 
 const quantity = document.querySelector('#input-quantity')
 const quantityError = document.querySelector('#error-quantity')
@@ -264,6 +269,20 @@ clearErrorAtCheck(source, sourceError)
 clearErrorAtCheck(optic, opticError)
 clearErrorAtCheck(cct, cctError)
 clearErrorAtCheck(dim, dimError)
+//FEDE
+product.addEventListener('blur', () => {
+    let productToFind = apiUrl + product.value
+    console.log(lastProductName)
+    console.log(product.value)
+    fetch(productToFind)
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
+            if (res.meta.status == 200 && product.value !== lastProductName ) {
+                productError.innerHTML = 'Ese nombre ya existe en la base de datos'
+            }
+        })
+})
 
 /*Validación de errores contra el botón crear*/
 editButton.addEventListener('click', event => {

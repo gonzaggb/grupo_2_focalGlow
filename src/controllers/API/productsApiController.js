@@ -1,3 +1,4 @@
+const { name } = require('ejs')
 const { Product, Category } = require('../../database/models')
 
 
@@ -86,6 +87,18 @@ const controller = {
         }
         res.json(response)
 
+    },
+    //FEDE hice esto para llamarlo desde la validacion del nombre
+    findByName: async (req, res) => {
+        let productToFind = req.params.byName
+        let product = await Product.findOne({ where: { name: productToFind } });
+        let response = {
+            meta: {
+                status: 200,
+                url: 'api/products/' + product
+            },
+        }
+        res.json(response)
     }
 
 

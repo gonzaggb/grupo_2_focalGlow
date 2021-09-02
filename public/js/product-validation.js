@@ -1,6 +1,8 @@
 //VARIABLES PARA DEFINIR EL LARGO DE LAS DIFERENTES VALIDACIONES
 const LONG_TEXT = 20
 const SHORT_TEXT = 5
+//FEDE
+const apiUrl = 'http://localhost:3000/api/products/'
 
 const category = document.querySelectorAll('#category')
 const categoryError = document.querySelector('#category-error')
@@ -252,7 +254,21 @@ blurValidation(dimensionImage, dimensionImageError, dimensionImageLabel, 'image'
 blurValidation(sliderImages, sliderError, sliderLabel, 'slider')
 blurValidation(dataSheet, dataSheetError, dataSheetLabel, 'pdf')
 blurValidation(installSheet, installSheetError, installSheetLabel, 'pdf')
-
+//FEDE FALTA INTEGRAR ESTAS VALIDACIONES AL CODIGO DE GONZA
+product.addEventListener('click', ()=> {
+    productError.innerHTML = ''
+})
+product.addEventListener('blur', () => {
+    let productToFind = apiUrl + product.value
+    fetch(productToFind)
+        .then(res => res.json())
+        .then(res => {
+            console.log(res)
+            if (res.meta.status == 200 ) {
+                productError.innerHTML = 'Ese nombre ya existe en la base de datos'
+            }
+        })
+})
 
 /*Borrado de los errores de los campos checkeables*/
 clearErrorAtCheck(categorySelect, categoryError)
