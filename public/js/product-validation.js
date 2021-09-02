@@ -2,7 +2,7 @@
 const LONG_TEXT = 20
 const SHORT_TEXT = 5
 //FEDE
-const apiUrl = 'http://localhost:3000/api/products/'
+const apiUrl = 'http://localhost:3000/api/products/byName/'
 const ACCEPTED_IMAGE_FORMATS = ['jpg', 'png', 'jpeg', 'gif']
 const ACCEPTED_ARCHIVE_FORMATS = ['pdf']
 
@@ -263,11 +263,12 @@ product.addEventListener('click', ()=> {
 })
 product.addEventListener('blur', () => {
     let productToFind = apiUrl + product.value
+    console.log(productToFind)
     fetch(productToFind)
         .then(res => res.json())
         .then(res => {
             console.log(res)
-            if (res.meta.status !== 204 ) {
+            if (res.meta.status === 200 ) {
                 productError.innerHTML = 'Ese nombre ya existe en la base de datos'
             }
         })

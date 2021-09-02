@@ -90,16 +90,19 @@ const controller = {
     },
     //FEDE hice esto para llamarlo desde la validacion del nombre
     findByName: async (req, res) => {
-        let productToFind = req.params.byName
+        let productToFind = req.params.name
         let product = await Product.findOne({ where: { name: productToFind } });
-        if (product === null) {
+        
+        if (product !== null) {
             let response = {
                 meta: {
-                    status: 204,
-                    url: 'api/products/' + product
+                    status: 200,
+                    url: 'api/products/byName/' + product
                 },
             }
+            console.log(response)
             res.json(response)
+            
         }
         
     }

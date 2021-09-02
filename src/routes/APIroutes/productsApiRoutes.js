@@ -7,7 +7,7 @@ router.get('/', productsApiController.list)
 router.get('/last',productsApiController.lastProduct)
 router.get('/productsByCategory/:category', productsApiController.filterByCategory)
 router.get('/qty', productsApiController.qty)
-router.get('/:byName', productsApiController.findByName) //FEDE 
+router.get('/byName/:name', productsApiController.findByName) //FEDE 
 router.get('/:id', productsApiController.detail)
 
 
