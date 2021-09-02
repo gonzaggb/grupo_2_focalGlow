@@ -26,8 +26,23 @@ const controller = {
         }
         res.json(response)
     },
-    
-    
+    listAndQty: async (req, res) => {
+        let category = await Category.findAll({
+            attributes: ['id']
+        })
+        let product = await category.forEach((e, index) => {
+            Product.findOne({
+                where: {
+                    category_id: category[index].id
+                }
+            })
+        });
+
+        
+        
+        res.json(product)
+    }
+
 }
 
 module.exports = controller
