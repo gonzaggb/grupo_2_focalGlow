@@ -92,13 +92,16 @@ const controller = {
     findByName: async (req, res) => {
         let productToFind = req.params.byName
         let product = await Product.findOne({ where: { name: productToFind } });
-        let response = {
-            meta: {
-                status: 200,
-                url: 'api/products/' + product
-            },
+        if (product === null) {
+            let response = {
+                meta: {
+                    status: 204,
+                    url: 'api/products/' + product
+                },
+            }
+            res.json(response)
         }
-        res.json(response)
+        
     }
 
 

@@ -299,7 +299,7 @@ product.addEventListener('blur', () => {
         .then(res => res.json())
         .then(res => {
             console.log(res)
-            if (res.meta.status == 200 && product.value !== lastProductName ) {
+            if (res.meta.status !== 204 && product.value !== lastProductName ) {
                 productError.innerHTML = 'Ese nombre ya existe en la base de datos'
             }
         })
