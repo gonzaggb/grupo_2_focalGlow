@@ -214,6 +214,8 @@ profileImg.addEventListener('change', function (event) {
   }
 })
 
+//CHECK ERROR ON SUBMIT
+
 form.addEventListener('submit', function (event) {
   let errors = []
 
