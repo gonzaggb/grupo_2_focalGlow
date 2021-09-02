@@ -326,5 +326,14 @@ text-align: left;
         .item-left{
             justify-content: flex-start;
         }
+        .product-image img{
+            border: black 1px solid;
+            margin-right: 10em;
+        }
+
+        .img-detail{
+            align-items: none;
+
+        }
 
 }

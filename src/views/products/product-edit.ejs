@@ -13,10 +13,10 @@
                         <div class="form_left">
                             <div class="first">
                                 <div class="cateogry-selector">
-                                    <label class="" for="category">Categoria: </label><br>
-                                    <select name="category" class="select">
+                                    <label class="" for="category"  id="category-label">Categoria</label><br>
+                                    <select name="category" class="select"  id="category-select" >
                                         <% locals.categories.forEach(categorie=> { %>
-                                            <option value="<%=categorie.id%>" <%=productFound.categoryId==categorie.id
+                                            <option id="category" value="<%=categorie.id%>" <%=productFound.categoryId==categorie.id
                                                 ? 'selected' : '' %>>
                                                 <%=categorie.name.charAt(0).toUpperCase() + categorie.name.slice(1)%>
                                             </option>
@@ -24,37 +24,37 @@
                                     </select>
                                 </div>
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg" id="category-error">
                                 <%= locals.errors && errors.category ? errors.category.msg : null %>
                             </span><br>
                             <div class="first">
                                 <div class="in-line-data">
-                                    <label class="" for="name">Nombre del Producto: </label><br>
-                                    <input class="box" type="text" name="name" id="producto"
+                                    <label class="" for="name" id="label-product-name">Nombre del Producto</label><br>
+                                    <input class="box" type="text" name="name" id="input-product-name"
                                         value="<%= productFound.name %> ">
                                 </div>
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg" id="error-product-name">
                                 <%= locals.errors && errors.name ? errors.name.msg : null %>
                             </span><br>
                             <div class="first">
                                 <div class="in-line-data">
-                                    <label class="" for="quantity">Cantidad: </label><br>
-                                    <input class="box" type="number" name="quantity" id="producto" min="0"
+                                    <label class="" for="quantity" id="label-quantity">Cantidad</label><br>
+                                    <input class="box" type="number" name="quantity" id="input-quantity" min="0"
                                         value="<%= productFound.quantity %>">
 
                                 </div>
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg" id="error-quantity">
                                 <%= locals.errors && errors.quantity ? errors.quantity.msg : null %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="source">Fuente: </label>
+                                <label class="" for="source" id="source-label">Fuente</label>
                                 <%featuresList.forEach(source=> {%>
                                     <!--Recorre la lista de TODAS las features-->
                                     <% if (source.type=='source' ) { %>
                                         <!--Evalua las que son material-->
-                                        <input class="radio" type="radio" name="source" value="<%=source.id%>"
+                                        <input class="radio" type="radio" name="source" id="source" value="<%=source.id%>"
                                             <%features.forEach(oldFeature=> {%>
                                         <%=source.name==oldFeature.name ? 'checked' : '' %>
                                             <%})%>
@@ -66,18 +66,18 @@
 
 
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg" id="source-error">
                                 <%=locals.errors && errors.source ? errors.source.msg : '' %>
                             </span><br>
 
                             <div class="first-">
-                                <label class="" for="material">Material: </label>
+                                <label class="" id="material-label" for="material">Material</label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(material=> {%>
                                     <!--Recorre la lista de TODAS las features-->
                                     <% if (material.type=='material' ) { %>
                                         <!--Evalua las que son material-->
-                                        <div><input class="check" type="checkbox" name="material[]"
+                                        <div><input class="check" type="checkbox" id="material" name="material[]"
                                                 value="<%=material.id%>" <%features.forEach(oldMaterial=> {%>
                                             <%=material.name==oldMaterial.name ? 'checked' : '' %>
                                                 <%})%>><%=material.name%>
@@ -92,17 +92,17 @@
                                     placeholder="Opcional">
                             </div> -->
 
-                            <span class="error_msg">
+                            <span class="error_msg" id="material-error">
                                 <%=locals.errors && errors.material ? errors.material.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="optic">Optica: </label>
+                                <label class="" for="optic" id="optic-label">Optica</label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(optic=> {%>
                                     <!--Recorre la lista de TODAS las features-->
                                     <% if (optic.type=='optic' ) { %>
                                         <!--Evalua las que son material-->
-                                        <div><input class="check" type="checkbox" name="optic[]" value="<%=optic.id%>"
+                                        <div><input class="check" type="checkbox" id="optic" name="optic[]" value="<%=optic.id%>"
                                                 <%features.forEach(oldOptic=> {%>
                                             <%=optic.name==oldOptic.name ? 'checked' : '' %>
                                                 <%})%>><%=optic.name%>
@@ -111,15 +111,15 @@
                                         <% } %>
                                             <%})%>
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg" id="optic-error">
                                 <%=locals.errors && errors.optic ? errors.optic.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="optic">Potencia: </label>
+                                <label class="" for="optic" id="power-label">Potencia</label>
                                 <select multiple name="power" class="select">
                                     <%featuresList.forEach(power=> {%>
                                         <%if(power.type=='power' ){%>
-                                            <option value="<%=power.id%>" <%features.forEach(oldFeature=>{%>
+                                            <option value="<%=power.id%>" id="power" <%features.forEach(oldFeature=>{%>
                                                 <%=oldFeature.type=='power' && power.id==oldFeature.id ? 'selected' : ''
                                                     %>
                                                     <%})%>
@@ -130,17 +130,17 @@
                                 <span> Apretando CTRL puede seleccionar más de una</span>
 
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg" id="power-error">
                                 <%=locals.errors && errors.power ? errors.power.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="cct">CCT: </label>
+                                <label class="" id="cct-label" for="cct">CCT</label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(cct=> {%>
                                     <!--Recorre la lista de TODAS las features-->
                                     <% if (cct.type=='cct' ) { %>
                                         <!--Evalua las que son material-->
-                                        <div><input class="check" type="checkbox" name="cct[]" value="<%=cct.id%>"
+                                        <div><input class="check" type="checkbox" id="cct" name="cct[]" value="<%=cct.id%>"
                                                 <%features.forEach(oldCct=> {%>
                                             <%=cct.name==oldCct.name ? 'checked' : '' %>
                                                 <%})%>><%=cct.name%>
@@ -149,17 +149,17 @@
                                         <% } %>
                                             <%})%>
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg" id="cct-error">
                                 <%=locals.errors && errors.cct ? errors.cct.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="" for="dim">Dim: </label>
+                                <label class="" for="dim" id="dim-label">Dim</label>
                                 <!--DONE, recorre los materiales, arma la lista y si existe el material lo completa @gonza-->
                                 <%featuresList.forEach(dim=> {%>
                                     <!--Recorre la lista de TODAS las features-->
                                     <% if (dim.type=='dim' ) { %>
                                         <!--Evalua las que son material-->
-                                        <div><input class="check" type="checkbox" name="dim[]" value="<%=dim.id%>"
+                                        <div><input class="check" type="checkbox" id="dim" name="dim[]" value="<%=dim.id%>"
                                                 <%features.forEach(oldDim=> {%>
                                             <%=dim.name==oldDim.name ? 'checked' : '' %>
                                                 <%})%>><%=dim.name%>
@@ -168,22 +168,22 @@
                                         <% } %>
                                             <%})%>
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg"  id="dim-error">
                                 <%=locals.errors && errors.dim ? errors.dim.msg : '' %>
                             </span><br>
                             <div class="first-">
-                                <label class="price" for="price">Precio unitario base: </label><br>
-                                <input class="price" type="number" name="price" id="precio" min="0"
+                                <label class="price" id="price-label" for="price">Precio unitario base</label><br>
+                                <input class="price" type="number" name="price" id="price-input" min="0"
                                     placeholder=" Ej 15235.35" value="<%=productFound.price%>">
                             </div>
-                            <span class="error_msg">
+                            <span class="error_msg" id="price-error">
                                 <%=locals.errors && errors.price ? errors.price.msg : '' %>
                             </span><br>
                             <div class="description-container">
-                                <label class="title" for="description">Descripción del producto:</label><br>
-                                <textarea class="description" name="description"
+                                <label class="title" for="description" id="description-label">Descripción del producto</label><br>
+                                <textarea class="description" id="description-input" name="description"
                                     placeholder="Poné una descripción copada"><%=productFound.description%></textarea><br>
-                                <span class="error_msg">
+                                <span class="error_msg" id="description-error">
                                     <%=locals.errors && errors.description ? errors.description.msg : '' %>
                                 </span>
 
@@ -192,25 +192,29 @@
                         <div class="form_right">
                             <div class="imagenes">
                                 <div class="imagen-input">
-                                    <label class="title" for="main">Imagen Principal: </label><br>
-                                    <input type="file" name='main' accept=".jpg">
+                                    <label class="title" for="main"  id="main-image-label">Imagen Principal</label><br>
+                                    <input type="file" name='main' id="main-image-input" accept=".jpg">
+                                    <span class="error_msg" id="main-image-error"></span>
                                     <br>
                                     <p>Preview:</p>
                                     <img id="output" src="<%=images[0].name%>" alt="">
                                 </div><br>
                                 <div class="imagen-input">
-                                    <label class="title" for="dimension">Dimensiones del Producto: </label><br>
-                                    <input type="file" name="dimension" accept=".jpg , .png">
+                                    <label class="title" for="dimension" id="dimension-image-label">Dimensiones del Producto</label><br>
+                                    <input type="file" name="dimension" id="dimension-image-input" accept=".jpg , .png">
+                                    <span class="error_msg" id="dimension-image-error"><%=locals.errors && errors.dimension ? errors.dimension.msg : '' %></span>
                                 </div><br>
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
-                                    <label class="title" for="slider">Slider: </label><br>
+                                    <label class="title" for="slider" id="slider-image-label">Slider</label><br>
                                     <span>Cambiar todas las imagenes del slider</span>
-                                    <input class="radio" type="radio" name="sliderUpdate" value="modifyAll">
+                                    <input class="radio" type="radio" name="sliderUpdate" id='slider-image-check'  value="modifyAll">
                                     <br>
                                     <span>Agregar una imagen al slider</span>
-                                    <input class="radio" type="radio" name="sliderUpdate" value="addImages">
+                                    <input class="radio" type="radio" name="sliderUpdate" id='slider-image-check' value="addImages">
+                                    <br>
+                                    <button id="clear-slider-check" type="button">Borrar check</button>
                                     <br>
                                     <section class="main-slider-mini">
                                         <div class="slider-mini">
@@ -224,9 +228,9 @@
                                             </ul>
                                         </div>
                                     </section>
-                                    <input multiple type="file" name="slider" accept=".jpg , .png">
+                                    <input multiple type="file" name="slider" id="slider-image-input" accept=".jpg , .png" disabled="true">
                                     <br>
-                                    <span class="error_msg">
+                                    <span class="error_msg" id="slider-image-error">
                                         <%=locals.errors && errors.slider ? errors.slider.msg : '' %>
                                     </span>
 
@@ -234,20 +238,24 @@
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
-                                    <label class="" for="data_sheet">Hoja Técnica: </label><br>
-                                    <input type="file" src="" alt="" name="dataSheet" accept=".pdf"><br>
+                                    <label class="" for="data_sheet" id="label-data-sheet">Hoja Técnica</label><br>
+                                    <input type="file" src="" alt="" name="dataSheet" id= "input-data-sheet"accept=".pdf"><br>
                                     <a href="<%=filesPdf[1].name%>" target="_blank">
                                         <%=filesPdf[1].name%>
                                     </a>
-
+                                    <br>
+                                    <span class="error_msg" id="error-data-sheet"></span>
 
                                 </div><br>
                                 <div class="imagen-input">
-                                    <label class="" for="install_sheet">Manual de Instalación: </label><br>
-                                    <input type="file" src="" alt="" name="installSheet" accept=".pdf"><br>
+                                    <label class="" for="install_sheet" id="label-install-sheet">Manual de Instalación</label><br>
+                                    <input type="file" src="" alt="" name="installSheet" id="input-install-sheet" accept=".pdf"><br>
                                     <a href="<%=filesPdf[0].name%>" target="_blank">
                                         <%=filesPdf[0].name%>
                                     </a>
+                                    <br>
+                                    <span class="error_msg" id="error-install-sheet"></span>
+
                                 </div><br>
                             </div>
                         </div>
@@ -260,6 +268,8 @@
                 </div>
 
             </main>
+            <script src='/js/product-update-validation.js'></script>
+
             <%- include('../partials/footer.ejs')%>
     </body>
 

@@ -20,7 +20,7 @@ const controller = {
     const oldValues = req.body
 
     if (!formValidation.isEmpty()) {
-      return res.render('users/user-login', { oldValues, errors: formValidation.mapped() })
+      return res.render('users/user-login.ejs', { oldValues, errors: formValidation.mapped() })
     }
     const { email, remember } = req.body
 
@@ -155,7 +155,7 @@ const controller = {
     try {
       const userToEdit = await User.findByPk(id)
       userToEdit.dataValues.profileImg = profileImagePath + userToEdit.profileImg
-      res.render('users/user-edit.ejs', { userToEdit })
+      res.render('users/user-edit.ejs', { userToEdit})
 
     } catch (error) {
       console.log(error)

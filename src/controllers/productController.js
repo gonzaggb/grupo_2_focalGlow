@@ -222,7 +222,6 @@ const controller = {
       filesPdf.forEach(file => {
         addProductFilePath(file)
       })
-      console.log(images)
       res.render('products/product-edit.ejs', { productFound, category, images, features, filesPdf, featuresList })
     } catch (error) {
       console.log(error)

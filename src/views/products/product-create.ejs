@@ -14,7 +14,7 @@
                         
                             <div class="first">
                                 <div class="cateogry-selector">
-                                    <label class="" for="category" id="category-label">Categoria: </label><br>
+                                    <label class="" for="category" id="category-label">Categoria</label><br>
                                     <select name="categoryId" class="select" id="category-select" >
                                         <option value="" >Seleccionar</option>
                                         <% locals.categories.forEach(element => { %>
@@ -32,14 +32,14 @@
                             
                             <div class="first">
                                 <div class="in-line-data" id="product-name-div">
-                                    <label class="" for="name" id="label-product-name">Nombre del Producto: </label><br>
+                                    <label class="" for="name" id="label-product-name">Nombre del Producto</label><br>
                                     <input class="box" type="text" name="name" id="input-product-name" value="<%= locals.old && old.name ? old.name : '' %>">
                                     <span class="error_msg" id="error-product-name"><%= locals.errors && errors.name ? errors.name.msg : null  %></span>
                                 </div>
                             </div><br>
                             <div class="first">
                                 <div class="in-line-data" id="quantity-div">
-                                    <label class="" for="quantity" id="label-quantity">Cantidad: </label><br>
+                                    <label class="" for="quantity" id="label-quantity">Cantidad</label><br>
                                     <input class="box" type="number" name="quantity" id="input-quantity" min="0" value="<%= locals.old && old.quantity ? old.quantity : '' %>" >
                                     <span class="error_msg" id="error-quantity">
                                         <%= locals.errors && errors.qty ? errors.qty.msg : null %>
@@ -47,7 +47,7 @@
                                 </div>
                             </div><br>
                             <div class="first-">
-                                <label class="" for="source" id="source-label">Fuente: </label>
+                                <label class="" for="source" id="source-label">Fuente</label>
                                 <%featuresList.forEach(source => {%> 
                                     <% if (source.type == 'source') { %> 
                                         <div><input class="radio" type="radio" name="source" id="source" 
@@ -60,7 +60,7 @@
                             <span class="error_msg" id="source-error"><%=locals.errors && errors.source ? errors.source.msg : '' %></span><br>
                             <div>
                             <div class="first-">
-                                <label class="" for="material" id="material-label">Material: </label>
+                                <label class="" for="material" id="material-label">Material</label>
                                     <%featuresList.forEach(material => {%>
                                         <% if (material.type == 'material') { %> 
                                             <div><input class="check" type="checkbox" name="material[]" id="material" value="<%=material.id%>" 
@@ -77,7 +77,7 @@
                             </div>
                             <span class="error_msg" id="material-error"><%=locals.errors && errors.material ? errors.material.msg : '' %></span><br>
                             <div class="first-">
-                                <label class="" for="optic" id="optic-label">Optica: </label>
+                                <label class="" for="optic" id="optic-label">Optica</label>
                                     <%featuresList.forEach(optic => {%> 
                                         <% if (optic.type == 'optic') { %> 
                                             <div><input class="check" type="checkbox" name="optic[]" id="optic" value="<%=optic.id%>"
@@ -94,7 +94,7 @@
                             </div>
                             <span class="error_msg" id="optic-error"><%=locals.errors && errors.optic ? errors.optic.msg : '' %></span><br>
                             <div class="first-">
-                                <label for="power" id="power-label">Potencia: </label>
+                                <label for="power" id="power-label">Potencia</label>
 																
                                     <select multiple name="power" class="select">
                                         <%featuresList.forEach(power => {%>
@@ -128,7 +128,7 @@
                             </div>
                             <span class="error_msg" id="cct-error"><%=locals.errors && errors.cct ? errors.cct.msg : '' %></span><br>
                             <div class="first-">
-                                <label class="" for="dim" id="dim-label">Dim: </label>
+                                <label class="" for="dim" id="dim-label">Dim</label>
                                     <%featuresList.forEach(dim => {%> 
                                         <% if (dim.type == 'dim') { %> 
                                             <div><input class="check" type="checkbox" id="dim" name="dim[]"
@@ -145,13 +145,14 @@
                             </div>
                             <span class="error_msg" id="dim-error"><%=locals.errors && errors.dim ? errors.dim.msg : '' %></span><br>
                             <div class="first-" id='price-div'>
-                                <label class="price" id="price-label" for="price">Precio unitario base: </label>
+                                <label class="price" id="price-label" for="price">Precio unitario base</label>
                                 <input class="price" type="number" name="price" id="price-input" min="0" max="999999999999"
-                                    step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >   
-                                    <span class="error_msg" id="price-error"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>                           
+                                    step="0.01" placeholder=" Ej 1525.35" value="<%= locals.old && old.price ? old.price : '' %>" >
                             </div>
+                            <span class="error_msg" id="price-error"><%=locals.errors && errors.price ? errors.price.msg : '' %></span><br>                           
+
                             <div class="description-container" id="description-div">
-                                <label class="title" for="description" id="description-label">Descripción del producto:</label><br> 
+                                <label class="title" for="description" id="description-label">Descripción del producto</label><br> 
                                 <textarea class ="description" id="description-input" name="description" placeholder="Poné una descripción copada" value=><%=locals.old && old.description ? old.description : '' %></textarea><br>
                                 <span class="error_msg" id="description-error"><%=locals.errors && errors.description ? errors.description.msg : '' %></span> 
                             </div>
@@ -161,11 +162,11 @@
                             
                             <div class="imagenes">
                                 <div class="imagen-input" id="div-main-image">
-                                    <label class="title" for="main" id="main-image-label">Imagen Principal: </label><br>
+                                    <label class="title" for="main" id="main-image-label">Imagen Principal</label><br>
                                     <input type="file" name="main" id="main-image-input" onchange="loadFile(event)" accept=".jpg"><br>
                                     <span class="error_msg" id="main-image-error"><%=locals.errors && errors.main ? errors.main.msg : '' %></span>
                                     <br>
-                                    <p>Preview:</p>
+                                    <p>Preview</p>
                                     <img id="output" />
                                     <script>
                                         var loadFile = function (event) {
@@ -178,7 +179,7 @@
                                     </script>
                                 </div><br>
                                 <div class="imagen-input" id="dimension-image-div">
-                                    <label class="title" for="dimension" id="dimension-image-label">Dimensiones del Producto: </label><br>
+                                    <label class="title" for="dimension" id="dimension-image-label">Dimensiones del Producto</label><br>
                                     <input type="file" name="dimension" id="dimension-image-input" onchange="loadFiles(event)" accept=".jpg , .png"><br>
                                     <span class="error_msg" id="dimension-image-error"><%=locals.errors && errors.dimension ? errors.dimension.msg : '' %></span>
                                     <br>
@@ -197,21 +198,21 @@
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input" id="slider-image-div">
-                                    <label class="title" for="image_slider" id="slider-image-label">Slider: </label><br>
+                                    <label class="title" for="image_slider" id="slider-image-label">Slider</label><br>
                                     <input type="file" multiple name="slider" id="slider-image-input" accept=".jpg , .png"> <br>
                                     <span class="error_msg" id="slider-image-error"><%=locals.errors && errors.slider? errors.slider.msg : '' %></span> <br>
                                 </div><br>
                             </div>
                             <div class="imagenes">
                                 <div class="imagen-input">
-                                    <label class="" for="data_sheet" id="label-data-sheet">Hoja Técnica: </label><br>
+                                    <label class="" for="data_sheet" id="label-data-sheet">Hoja Técnica</label><br>
                                     <input type="file" src="" alt="" name="dataSheet" id="input-data-sheet" accept=".pdf"><br>
                                     <span class="error_msg" id="error-data-sheet"><%=locals.errors && errors.dataSheet ? errors.dataSheet.msg : '' %></span>
                                 </div>
                                 
                                 <br>
                                 <div class="imagen-input">
-                                    <label class="" for="install_sheet" id="label-install-sheet">Manual de Instalación: </label><br>
+                                    <label class="" for="install_sheet" id="label-install-sheet">Manual de Instalación</label><br>
                                     <input type="file" src="" alt="" name="installSheet" id="input-install-sheet" accept=".pdf"><br>
                                     <span class="error_msg" id="error-install-sheet"><%=locals.errors && errors.installSheet? errors.installSheet.msg : '' %></span>
                                 </div><br>
