@@ -27,7 +27,7 @@ const submitButton = document.querySelector('#form-submit')
 
 //Variable que almacena el mail previo al cambio
 let lastEmail = email.value
-console.log(lastEmail)
+
 //FUNCION PARA SETEAR UN BIT ESPECIFICO DE UN ENTERO
 function setErrors (bitField, bit) {
     bitField = bitField|(1 << bit)  //Hago un OR para agregar errores

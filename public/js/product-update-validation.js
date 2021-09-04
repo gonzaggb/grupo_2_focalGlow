@@ -3,6 +3,9 @@ const LONG_TEXT = 20
 const SHORT_TEXT = 5
 const ACCEPTED_IMAGE_FORMATS = ['jpg', 'png', 'jpeg', 'gif']
 const ACCEPTED_ARCHIVE_FORMATS = ['pdf']
+//FEDE
+const apiUrl = 'http://localhost:3000/api/products/byName/'
+
 
 const category = document.querySelectorAll('#category')
 const categoryError = document.querySelector('#category-error')
@@ -12,6 +15,8 @@ const categoryLabel = document.querySelector('#category-label')
 const product = document.querySelector('#input-product-name')
 const productError = document.querySelector('#error-product-name')
 const productLabel = document.querySelector('#label-product-name')
+//VARIABLE QUE ALMACENA EL NOMBRE ACTUAL DEL PRODUCTO FEDE
+let lastProductName = product.value.trim()
 
 const quantity = document.querySelector('#input-quantity')
 const quantityError = document.querySelector('#error-quantity')
@@ -32,7 +37,7 @@ const sourceLabel = document.querySelector('#source-label')
 const material = document.querySelectorAll('#material')
 const materialError = document.querySelector('#material-error')
 const materialLabel = document.querySelector("#material-label")
-console.log(materialLabel)
+
 
 
 const optic = document.querySelectorAll('#optic')
@@ -137,8 +142,6 @@ function fileExtension(fileName) {
 }
 //Valida que sea una imagen aceptada
 function isImage(fileName) {
-    console.log('--------------------------------')
-    console.log(fileExtension(fileName).toLowerCase())
     return ACCEPTED_IMAGE_FORMATS.includes(fileExtension(fileName).toLowerCase())
 }
 //Valida que sea un archivo pdf
@@ -285,6 +288,19 @@ clearErrorAtCheck(source, sourceError)
 clearErrorAtCheck(optic, opticError)
 clearErrorAtCheck(cct, cctError)
 clearErrorAtCheck(dim, dimError)
+//FEDE
+product.addEventListener('blur', () => {
+    console.log('entre')
+    let productToFind = apiUrl + product.value.trim()
+    fetch(productToFind)
+        .then(res => res.json())
+        .then(response => {
+            console.log(response.meta.status === 204)
+            if (response.meta.status == 200 && product.value.trim() !== lastProductName ) {
+                productError.innerHTML = 'Ese nombre ya existe en la base de datos'
+            }
+        })
+})
 
 /*Validación de errores contra el botón crear*/
 editButton.addEventListener('click', event => {
