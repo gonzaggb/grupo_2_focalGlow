@@ -4,12 +4,12 @@ const { Product } = require('../../database/models')
 
 const controller = {
     list: async (req, res) => {
-        let categoryes = await Category.findAll()
+        let categories = await Category.findAll()
         let response = {
             count: {
-                total: categoryes.length
+                total: categories.length
             },
-            data: categoryes
+            data: categories
         }
         res.json(response)
     },

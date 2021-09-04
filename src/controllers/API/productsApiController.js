@@ -27,6 +27,11 @@ const controller = {
                 { association: 'category' }
             ]
         })
+        let url = 'http://localhost:3000/img/'
+        
+            product.setDataValue('image', url + product.images[0].name)
+
+            
         let response = {
             meta: {
                 status: 200,
