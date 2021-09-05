@@ -57,10 +57,10 @@
               <div class="options">
                 <div class="options-column">
                   <% if (product.features.some(feature=> feature.type == 'power')) { %>
-                    <select name="power" class="btn">
+                    <select name="power" id="power-select" class="btn">
                       <%product.features.forEach(feature=> {%>
                         <%if(feature.type=='power' ){%>
-                          <option value="<%=feature.id%>">
+                          <option id="power" value="<%=feature.id%>">
                             <%=feature.name%>
                           </option>
                           <%}})%>
@@ -72,7 +72,7 @@
                         <select name="cct" class="btn">
                           <%product.features.forEach(feature=> {%>
                             <%if(feature.type=='cct' ){%>
-                              <option value="<%=feature.id%>">
+                              <option id="cct" value="<%=feature.id%>">
                                 <%=feature.name%>
                               </option>
                               <%}})%>
@@ -85,7 +85,7 @@
                     <select name="optic" class="btn">
                       <%product.features.forEach(feature=> {%>
                         <%if(feature.type=='optic' ){%>
-                          <option value="<%=feature.id%>">
+                          <option id="optic" value="<%=feature.id%>">
                             <%=feature.name%>
                           </option>
                           <%}})%>
@@ -96,13 +96,13 @@
                         <select name="dim" class="btn">
                           <%product.features.forEach(feature=> {%>
                             <%if(feature.type=='dim' && feature.name=='Switch' ){%>
-                              <option value="<%=feature.id%>">&#xf011; <%=feature.name%>
+                              <option id="dim" value="<%=feature.id%>">&#xf011; <%=feature.name%>
                               </option>
                               <%}else if (feature.type=='dim' && feature.name=='Bluetooth' ){%>
-                                <option value="<%=feature.id%>">&#xf293; <%=feature.name%>
+                                <option  id="dim" value="<%=feature.id%>">&#xf293; <%=feature.name%>
                                 </option>
                                 <%} else if (feature.type=='dim' ) {%>
-                                  <option value="<%=feature.id%>">
+                                  <option id="dim" value="<%=feature.id%>">
                                     <%=feature.name%>
                                   </option>
                                   <%}})%>
@@ -138,7 +138,7 @@
             </section>
 
             <section class="price">
-              <h3 class="price-title">$
+              <h3 class="price-title" id="product-price">$
                 <% const toThousand=(n)=> n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
                   <%=toThousand(product.price)%>
               </h3>
