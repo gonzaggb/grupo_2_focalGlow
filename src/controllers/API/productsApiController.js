@@ -11,7 +11,7 @@ const controller = {
                     { association: 'features' },
                     { association: 'category', attributes: ['name'] }
                 ],
-                
+
             })
         let countByCategory = {}
 
@@ -53,7 +53,7 @@ const controller = {
         let id = req.params.id
         let product = await Product.findByPk(id, {
             include: [
-                { association: 'images' },
+                { association: 'images', attributes: ['name', 'id', 'type'] },
                 { association: 'features' },
                 { association: 'files' },
                 { association: 'category' }
