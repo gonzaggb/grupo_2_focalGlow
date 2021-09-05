@@ -25,7 +25,8 @@
           </a>
           <div class="name-price">       
             <p class ="name"><%=product.name%></p>
-            <p class ="price">Desde: $ <%=product.price%></p>       
+            <% const toThousand=(n)=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+            <p class ="price">Desde: $<%=toThousand(product.price)%></p>       
           </div>
         </article>
       <%}) %>
