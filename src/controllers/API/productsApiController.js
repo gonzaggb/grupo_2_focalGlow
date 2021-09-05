@@ -11,7 +11,7 @@ const controller = {
                     { association: 'features' },
                     { association: 'category', attributes: ['name'] }
                 ],
-                
+
             })
         let countByCategory = {}
 
@@ -60,18 +60,27 @@ const controller = {
             ]
         })
         let url = 'http://localhost:3000/img/'
+        if (product) {
+            product.setDataValue('image', url + product.images[0].name)
+            let response = {
+                meta: {
+                    status: 200,
+                    url: 'api/products/' + id
+                },
+                data: product
+            }
+            res.json(response)
 
-        product.setDataValue('image', url + product.images[0].name)
-
-
-        let response = {
-            meta: {
-                status: 200,
-                url: 'api/products/' + id
-            },
-            data: product
+        } else {
+            let response = {
+                meta: {
+                    status: 204,
+                    detail: `El producto ${id} no existe `
+                }            }
+            res.json(response)
         }
-        res.json(response)
+
+
     },
     lastProduct: async (req, res) => {
         let products = await Product.findAll()
