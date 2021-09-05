@@ -69,7 +69,7 @@
 
 
                       <% if (product.features.some(feature=> feature.type == 'cct')) { %>
-                        <select name="cct" class="btn">
+                        <select id="cct-select" name="cct" class="btn">
                           <%product.features.forEach(feature=> {%>
                             <%if(feature.type=='cct' ){%>
                               <option id="cct" value="<%=feature.id%>">
@@ -82,7 +82,7 @@
 
                 <div class="options-column">
                   <% if (product.features.some(feature=> feature.type == 'optic')) { %>
-                    <select name="optic" class="btn">
+                    <select  id="optic-select" name="optic" class="btn">
                       <%product.features.forEach(feature=> {%>
                         <%if(feature.type=='optic' ){%>
                           <option id="optic" value="<%=feature.id%>">
@@ -93,7 +93,7 @@
                     <% } %>
 
                       <% if (product.features.some(feature=> feature.type == 'dim')) { %>
-                        <select name="dim" class="btn">
+                        <select id="dim-select" name="dim" class="btn">
                           <%product.features.forEach(feature=> {%>
                             <%if(feature.type=='dim' && feature.name=='Switch' ){%>
                               <option id="dim" value="<%=feature.id%>">&#xf011; <%=feature.name%>
