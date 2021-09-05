@@ -4,7 +4,35 @@ const { Product, Category } = require('../../database/models')
 
 const controller = {
     list: async (req, res) => {
-        let products = await Product.findAll()
+        let products = await Product.findAll(
+            {
+                include: [
+                    { association: 'images' },
+                    { association: 'features' },
+                    { association: 'category', attributes: ['name'] }
+                ],
+
+            })
+        let countByCategory = {}
+
+        let categories = await Category.findAll({
+            include: [
+                { association: 'products', attributes: ['id'] }
+            ]
+        })
+
+        categories.forEach(category => {
+            countByCategory[category.name] = category.products.length
+
+        });
+
+
+        let url = 'http://localhost:3000/api/products/'
+        let productsToShow = products.map(e => {
+            e.setDataValue('detail', url + e.id)
+
+            return e
+        })
         let response = {
             meta: {
                 status: 200,
@@ -12,7 +40,11 @@ const controller = {
                 url: 'api/products'
 
             },
-            data: products
+            data: {
+                count: products.length,
+                countByCategory,
+                products: products
+            }
 
         }
         res.json(response)
@@ -27,16 +59,30 @@ const controller = {
                 { association: 'category' }
             ]
         })
-        let response = {
-            meta: {
-                status: 200,
-                url: 'api/products/' + id
-            },
-            data: product
+        let url = 'http://localhost:3000/img/'
+        if (product) {
+            product.setDataValue('image', url + product.images[0].name)
+            let response = {
+                meta: {
+                    status: 200,
+                    url: 'api/products/' + id
+                },
+                data: product
+            }
+            res.json(response)
+
+        } else {
+            let response = {
+                meta: {
+                    status: 204,
+                    detail: `El producto ${id} no existe `
+                }            }
+            res.json(response)
         }
-        res.json(response)
+
+
     },
-    lastProduct: async (req,res)=>{
+    lastProduct: async (req, res) => {
         let products = await Product.findAll()
         let last = products[products.length - 1]
         let productToShow = await Product.findByPk(last.id,
@@ -65,40 +111,46 @@ const controller = {
         let totalProducts = products.length
         let response = {
 
-           data: totalProducts
+            data: totalProducts
         }
         res.json(response)
     },
-    filterByCategory: async(req,res)=>{
+    filterByCategory: async (req, res) => {
         let categoryToFind = req.params.category
         let category = await Category.findOne({
-            where : {name : categoryToFind}
+            where: { name: categoryToFind }
         })
         let products = await Product.findAll({
-            where :{
+            where: {
                 category_id: category.id
             }
         })
-        
+
         let response = {
-            data :{ products : products.length}
-            
-           
+            data: { products: products.length }
+
+
         }
         res.json(response)
 
     },
     //FEDE hice esto para llamarlo desde la validacion del nombre
     findByName: async (req, res) => {
-        let productToFind = req.params.byName
+        let productToFind = req.params.name
         let product = await Product.findOne({ where: { name: productToFind } });
-        let response = {
-            meta: {
-                status: 200,
-                url: 'api/products/' + product
-            },
+
+        if (product !== null) {
+            let response = {
+                meta: {
+                    status: 200,
+                    url: 'api/products/byName/' + product
+                },
+            }
+            console.log(response)
+            res.json(response)
+
         }
-        res.json(response)
+
     }
 
 

@@ -35,7 +35,7 @@ main h2 {
   margin: 25px auto;
 }
 
-.nombre-precio {
+.name-price {
   background-color: rgba(255, 255, 255, 0.8);
   position: absolute;
   width: 100%;
@@ -48,17 +48,17 @@ main h2 {
   line-height: 18px;
 }
 
-.nombre {
+.name {
   font-weight: 700;
   font-size: 24px;
   margin: 0;
 }
-.precio {
+.price {
   display: none;
   margin: 0;
 }
 
-.producto {
+.product {
   z-index: 10;
   margin: 10px 0px;
   line-height: 11px;
@@ -68,7 +68,7 @@ main h2 {
 
 .item-list img {
   width: 100%;
-  max-height: 240px;
+ /*  max-height: 240px; */
 }
 
 /*media Query*/
@@ -84,41 +84,41 @@ main h2 {
     justify-content: center;
     gap: 8px;
   }
-  .producto {
+  .product {
     width: 49%;
     margin: 2px 0px;
   }
 
-  .nombre {
+  .name {
     font-size: 18px;
   }
 }
 
 @media (min-width: 768px) {
-  .producto {
+  .product {
     width: 32%;
     transition: transform 0.05s;
   }
 
-  .producto:hover {
+  .product:hover {
     transform: scale(1.1);
     z-index: 100;
   }
 
-  .producto:hover .nombre-precio {
+  .product:hover .name-price {
     background-color: #ffde59;
   }
 
-  .nombre-precio {
+  .name-price {
     display: block;
     position: static;
     transition: all 1s;
   }
-  .precio {
+  .price {
     display: initial;
     font-size: 12px;
   }
-  .nombre {
+  .name {
     font-size: 12px;
   }
 }
@@ -127,7 +127,7 @@ main h2 {
   main {
     width: 100%;
   }
-  .producto {
+  .product {
     width: 24%;
   }
 }
