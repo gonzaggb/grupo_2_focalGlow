@@ -1,6 +1,10 @@
 const { name } = require('ejs')
 const { Product, Category, Image, Feature, File } = require('../../database/models')
-
+const fs = require('fs')
+const path = require('path')
+const resourcesPath = path.join(__dirname, '../../../public')
+const productImagePath = '/img/'
+const productFilePath = '/pdf/'
 
 const controller = {
 	list: async (req, res) => {
@@ -207,6 +211,7 @@ const controller = {
 			let response = {
 				meta: {
 					status: 200,
+					message: 'product deleted',
 					url: 'api/products/' + id
 				},
 				data: product
