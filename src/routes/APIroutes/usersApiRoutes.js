@@ -7,6 +7,7 @@ router.get('/', usersApiController.list)
 router.get('/email/:email', usersApiController.detailByEmail)
 router.get('/qty', usersApiController.qty)
 router.get('/last',usersApiController.lastUser)
+router.get('/page/:page', usersApiController.pagination)
 router.get('/:id', usersApiController.detail)
 
 

@@ -36,7 +36,7 @@ const controller = {
         }
         res.json(response)
     },
-    lastProduct: async (req,res)=>{
+    lastProduct: async (req, res) => {
         let products = await Product.findAll()
         let last = products[products.length - 1]
         let productToShow = await Product.findByPk(last.id,
@@ -65,25 +65,25 @@ const controller = {
         let totalProducts = products.length
         let response = {
 
-           data: totalProducts
+            data: totalProducts
         }
         res.json(response)
     },
-    filterByCategory: async(req,res)=>{
+    filterByCategory: async (req, res) => {
         let categoryToFind = req.params.category
         let category = await Category.findOne({
-            where : {name : categoryToFind}
+            where: { name: categoryToFind }
         })
         let products = await Product.findAll({
-            where :{
+            where: {
                 category_id: category.id
             }
         })
-        
+
         let response = {
-            data :{ products : products.length}
-            
-           
+            data: { products: products.length }
+
+
         }
         res.json(response)
 
@@ -92,7 +92,7 @@ const controller = {
     findByName: async (req, res) => {
         let productToFind = req.params.name
         let product = await Product.findOne({ where: { name: productToFind } });
-        
+
         if (product !== null) {
             let response = {
                 meta: {
@@ -100,13 +100,42 @@ const controller = {
                     url: 'api/products/byName/' + product
                 },
             }
-            console.log(response)
             res.json(response)
-            
         }
-        
-    }
 
+    },
+    pagination: async (req, res) => {
+        let allProducts = await Product.findAll()
+        let pageQty = Math.ceil(allProducts.length / 10)
+        let page = Number(req.params.page)
+        let products = await Product.findAll({
+            limit: 10,
+            offset: page >= 1 ? (page -1) * 10 : 0
+        })
+        if (page > 0 && page <= pageQty ) {
+            let response = {
+                meta: {
+                    total: products.length,
+                    url: `api/products/page/${page}`,
+                    next: page < pageQty ? `http://localhost:3000/api/products/page/${page+1}` : null,
+                    previous: page > 1 ? `http://localhost:3000/api/products/page/${page-1}` : null,
+
+                },
+                data: products
+
+            }
+            res.json(response)
+        } else {
+            let response = {
+                meta: {
+                    url: `api/products/page/${page}`,
+                    status: 204,
+
+                },
+            }
+            res.json(response)
+        }
+    }
 
 }
 

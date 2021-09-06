@@ -93,7 +93,39 @@ const controller = {
 			users: totalUSers
 		}
 		res.json(response)
-	}
+	},
+	pagination: async (req, res) => {
+        let allUsers = await User.findAll()
+        let pageQty = Math.ceil(allUsers.length / 10)
+        let page = Number(req.params.page)
+        let users = await User.findAll({
+            limit: 10,
+            offset: page >= 1 ? (page -1) * 10 : 0
+        })
+        if (page > 0 && page <= pageQty ) {
+            let response = {
+                meta: {
+                    total: users.length,
+                    url: `api/users/page/${page}`,
+                    next: page < pageQty ? `http://localhost:3000/api/users/page/${page+1}` : null,
+                    previous: page > 1 ? `http://localhost:3000/api/users/page/${page-1}` : null,
+
+                },
+                data: users
+
+            }
+            res.json(response)
+        } else {
+            let response = {
+                meta: {
+                    url: `api/users/page/${page}`,
+                    status: 204,
+
+                },
+            }
+            res.json(response)
+        }
+    }
 
 
 
