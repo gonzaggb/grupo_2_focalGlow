@@ -96,7 +96,41 @@ const controller = {
 			users: totalUSers
 		}
 		res.json(response)
-	}
+	},
+	
+	// API para el paginado de usuarios FEDE
+	pagination: async (req, res) => {
+        let allUsers = await User.findAll() //traigo todos los usuarios para tener la cantidad total
+        let pageQty = Math.ceil(allUsers.length / 10) // Calculo cantidad de paginas
+        let page = Number(req.params.page) // Capturo la pagina desde params
+        let users = await User.findAll({
+            limit: 10,
+            offset: page >= 1 ? (page -1) * 10 : 0 // Logica para que el offset dependa de la pagina en la que estoy
+        })
+        if (page > 0 && page <= pageQty ) {
+            let response = {
+                meta: {
+                    total: users.length, //cant de usuarios en la pagina
+                    url: `api/users/page/${page}`,
+                    next: page < pageQty ? `http://localhost:3000/api/users/page/${page+1}` : null,
+                    previous: page > 1 ? `http://localhost:3000/api/users/page/${page-1}` : null,
+
+                },
+                data: users
+
+            }
+            res.json(response)
+        } else {
+            let response = {
+                meta: {
+                    url: `api/users/page/${page}`,
+                    status: 204,
+
+                },
+            }
+            res.json(response)
+        }
+    }
 
 
 
