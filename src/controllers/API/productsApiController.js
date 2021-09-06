@@ -226,6 +226,8 @@ const controller = {
 		}
 
 	},
+
+    // API para el paginado de productos FEDE
     pagination: async (req, res) => {
         let allProducts = await Product.findAll()
         let pageQty = Math.ceil(allProducts.length / 10)
