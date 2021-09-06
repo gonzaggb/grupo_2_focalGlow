@@ -1,109 +1,231 @@
 const { name } = require('ejs')
-const { Product, Category } = require('../../database/models')
-
+const { Product, Category, Image, Feature, File } = require('../../database/models')
+const fs = require('fs')
+const path = require('path')
+const resourcesPath = path.join(__dirname, '../../../public')
+const productImagePath = '/img/'
+const productFilePath = '/pdf/'
 
 const controller = {
-    list: async (req, res) => {
-        let products = await Product.findAll()
-        let response = {
-            meta: {
-                status: 200,
-                total: products.length,
-                url: 'api/products'
+	list: async (req, res) => {
+		let products = await Product.findAll(
+			{
+				include: [
+					{ association: 'images' },
+					{ association: 'features' },
+					{ association: 'category', attributes: ['name'] }
+				],
 
-            },
-            data: products
+			})
+		let countByCategory = {}
 
-        }
-        res.json(response)
-    },
-    detail: async (req, res) => {
-        let id = req.params.id
-        let product = await Product.findByPk(id, {
-            include: [
-                { association: 'images' },
-                { association: 'features' },
-                { association: 'files' },
-                { association: 'category' }
-            ]
-        })
-        let response = {
-            meta: {
-                status: 200,
-                url: 'api/products/' + id
-            },
-            data: product
-        }
-        res.json(response)
-    },
-    lastProduct: async (req, res) => {
-        let products = await Product.findAll()
-        let last = products[products.length - 1]
-        let productToShow = await Product.findByPk(last.id,
-            {
-                include: [
-                    { association: 'images' },
-                    { association: 'features' },
-                    { association: 'files' },
-                    { association: 'category' }
-                ]
-            })
-        let response = {
-            meta: {
-                status: 200,
-                id: last.id,
-                url: 'api/products/last'
+		let categories = await Category.findAll({
+			include: [
+				{ association: 'products', attributes: ['id'] }
+			]
+		})
 
-            },
-            data: productToShow
+		categories.forEach(category => {
+			countByCategory[category.name] = category.products.length
 
-        }
-        res.json(response)
-    },
-    qty: async (req, res) => {
-        let products = await Product.findAll()
-        let totalProducts = products.length
-        let response = {
-
-            data: totalProducts
-        }
-        res.json(response)
-    },
-    filterByCategory: async (req, res) => {
-        let categoryToFind = req.params.category
-        let category = await Category.findOne({
-            where: { name: categoryToFind }
-        })
-        let products = await Product.findAll({
-            where: {
-                category_id: category.id
-            }
-        })
-
-        let response = {
-            data: { products: products.length }
+		});
 
 
-        }
-        res.json(response)
+		let url = 'http://localhost:3000/api/products/'
+		let productsToShow = products.map(e => {
+			e.setDataValue('detail', url + e.id)
 
-    },
-    //FEDE hice esto para llamarlo desde la validacion del nombre
-    findByName: async (req, res) => {
-        let productToFind = req.params.name
-        let product = await Product.findOne({ where: { name: productToFind } });
+			return e
+		})
+		let response = {
+			meta: {
+				status: 200,
+				total: products.length,
+				url: 'api/products'
 
-        if (product !== null) {
-            let response = {
-                meta: {
-                    status: 200,
-                    url: 'api/products/byName/' + product
-                },
-            }
-            res.json(response)
-        }
+			},
+			data: {
+				count: products.length,
+				countByCategory,
+				products: products
+			}
 
-    },
+		}
+		res.json(response)
+	},
+	detail: async (req, res) => {
+		let id = req.params.id
+		let product = await Product.findByPk(id, {
+			include: [
+				{ association: 'images', attributes: ['name', 'id', 'type'] },
+				{ association: 'features' },
+				{ association: 'files' },
+				{ association: 'category' }
+			]
+		})
+		let url = 'http://localhost:3000/img/'
+		if (product) {
+			product.setDataValue('image', url + product.images[0].name)
+			let response = {
+				meta: {
+					status: 200,
+					url: 'api/products/' + id
+				},
+				data: product
+			}
+			res.json(response)
+
+		} else {
+			let response = {
+				meta: {
+					status: 204,
+					detail: `El producto ${id} no existe `
+				}
+			}
+			res.json(response)
+		}
+
+
+	},
+	lastProduct: async (req, res) => {
+		let products = await Product.findAll()
+		let last = products[products.length - 1]
+		let productToShow = await Product.findByPk(last.id,
+			{
+				include: [
+					{ association: 'images' },
+					{ association: 'features' },
+					{ association: 'files' },
+					{ association: 'category' }
+				]
+			})
+		let response = {
+			meta: {
+				status: 200,
+				id: last.id,
+				url: 'api/products/last'
+
+			},
+			data: productToShow
+
+		}
+		res.json(response)
+	},
+	qty: async (req, res) => {
+		let products = await Product.findAll()
+		let totalProducts = products.length
+		let response = {
+
+			data: totalProducts
+		}
+		res.json(response)
+	},
+	filterByCategory: async (req, res) => {
+		let categoryToFind = req.params.category
+		let category = await Category.findOne({
+			where: { name: categoryToFind }
+		})
+		let products = await Product.findAll({
+			where: {
+				category_id: category.id
+			}
+		})
+
+		let response = {
+			data: { products: products.length }
+
+
+		}
+		res.json(response)
+
+	},
+	//FEDE hice esto para llamarlo desde la validacion del nombre
+	findByName: async (req, res) => {
+		let productToFind = req.params.name
+		let product = await Product.findOne({ where: { name: productToFind } });
+
+		if (product !== null) {
+			let response = {
+				meta: {
+					status: 200,
+					url: 'api/products/byName/' + product
+				},
+			}
+			console.log(response)
+			res.json(response)
+
+		}
+
+	},
+
+	//API by MARS para que desde el dashboard se pueda eliminar un producto
+	delete: async (req, res) => {
+		let id = req.params.id
+
+		let product = await Product.findByPk(id)
+
+		if (!product) {
+
+			let response = {
+				meta: {
+					status: 204,
+					message: `El producto ${id} no existe`
+				}
+			}
+			return res.json(response)
+
+		}
+
+		try {
+			let productToDelete = await Product.findByPk(id)
+			let featuresToDelete = await productToDelete.getFeatures()
+			let imagesToDelete = await productToDelete.getImages()
+			let filesToDelete = await productToDelete.getFiles()
+
+
+			//borro las relaciones de tablas intermedias
+			await productToDelete.removeFeature(featuresToDelete)
+
+			// borra las imagenes asociadas al producto
+			await Image.destroy({
+				where: { productId: id }
+			})
+			await File.destroy({
+				where: { productId: id }
+			})
+			// borra el producto
+			await Product.destroy(
+				{ where: { id } }
+			)
+			/*ELIMINO TODAS LOS ARCHIVOS ASOCIADOS*/
+
+			// borra todas las imagenes asociadas al producto del servidor
+			imagesToDelete.forEach(image => {
+				fs.unlinkSync(path.join(resourcesPath, '/img/', image.name))
+			})
+			// borra todoss los archivos asociados al producto del servidor
+			filesToDelete.forEach(file => {
+				fs.unlinkSync(path.join(resourcesPath, '/pdf/', file.name))
+			})
+
+			let response = {
+				meta: {
+					status: 200,
+					message: 'product deleted',
+					url: 'api/products/' + id
+				},
+				data: product
+			}
+			res.json(response)
+
+
+
+		} catch (error) {
+			console.log(error)
+			res.json(error)
+		}
+
+	},
     pagination: async (req, res) => {
         let allProducts = await Product.findAll()
         let pageQty = Math.ceil(allProducts.length / 10)

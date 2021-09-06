@@ -19,11 +19,14 @@
     <section class="item-list">
       
       <% products.forEach(product => {%>
-        <article class="producto">
-          <a href="/product/detail/<%=product.id%>"><img class="zoom" src="<%=product.images[0].name%>" alt=""></a>
-          <div class="nombre-precio">       
-            <p class ="nombre"><%=product.name%></p>
-            <p class ="precio">Desde: $ <%=product.price%></p>       
+        <article class="product">
+          <a href="/product/detail/<%=product.id%>">
+            <img src="<%=product.images[0].name%>" alt="">
+          </a>
+          <div class="name-price">       
+            <p class ="name"><%=product.name%></p>
+            <% const toThousand=(n)=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+            <p class ="price">Desde: $<%=toThousand(product.price)%></p>       
           </div>
         </article>
       <%}) %>

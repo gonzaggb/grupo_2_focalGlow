@@ -28,9 +28,12 @@ const controller = {
 			id,
 			firstName,
 			lastName,
-			lastName,
-			profileImg
+			email,
+
 		}
+		let url = 'http://localhost:3000/img/profile-pictures/'
+		user.image = url + profileImg
+		
 
 		let response = {
 			meta: {
