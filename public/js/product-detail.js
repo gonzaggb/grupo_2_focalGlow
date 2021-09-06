@@ -12,10 +12,14 @@ const opticSelect = document.querySelector('#optic-select')
 const cctSelect = document.querySelector('#cct-select')
 const dimSelect = document.querySelector('#dim-select')
 
+const selects = [powerSelect, opticSelect, cctSelect, dimSelect]
+
 const power = document.querySelectorAll('#power')
 const optic = document.querySelectorAll('#optic')
 const cct = document.querySelectorAll('#cct')
 const dim = document.querySelectorAll('#dim')
+
+const features = [power, optic, cct, dim]
 
 //captura precio web
 const pagePrice = document.querySelector('#product-price')
@@ -52,7 +56,6 @@ function toThousand(number) {
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.')
 }
 
-
 function calculateFullPrice(originalPrice, [...featurePrice]) {
     //se debe pasar un array con el precio de las features
     originalPrice += featurePrice.reduce((acum, element) => acum + element)
@@ -63,45 +66,43 @@ function calculateFullPrice(originalPrice, [...featurePrice]) {
 //Obtengo de la DB las features y sus respectivos precios
 getProducts(`${API_URL}${productId}`).then(product => {
     //simplifico la respuesta de la api para quedarme con las features
-    const features = product.data.features
-    //saco el precio original del producto
+    const productFeatures = product.data.features
+    //saco el precio base original del producto
     const productPrice = Number(product.data.price)
 
-    //obtengo la feature seleccionada
-    const powerFeature = getFeatures(power)
-    const dimFeature = getFeatures(dim)
-    const cctFeature = getFeatures(cct)
-    const opticFeature = getFeatures(optic)
+    //obtengo las features seleccionada
+    const selectedFeatures = []
+    features.forEach(feature => {
+        selectedFeatures.push(getFeatures(feature))
+    })
 
-    //obtengo el precio de la feature seleccionada
-    const powerPrice = Number(getFeaturePrice(features, powerFeature))
-    const dimPrice = Number(getFeaturePrice(features, dimFeature))
-    const cctPrice = Number(getFeaturePrice(features, cctFeature))
-    const opticPrice = Number(getFeaturePrice(features, opticFeature))
+    //obtengo el precio de la features seleccionadas
+    const pricesSelectedFeatures = []
+    selectedFeatures.forEach(selectedFeature => {
+        pricesSelectedFeatures.push(Number(getFeaturePrice(productFeatures, selectedFeature)))
+    })
 
     //calculo el precio completo del producto (original + features seleccionadas)
-    const fullPrice = toThousand(calculateFullPrice(productPrice, [powerPrice, dimPrice, cctPrice, opticPrice]))
+    const fullPrice = toThousand(calculateFullPrice(productPrice, pricesSelectedFeatures))
     //escribo el precio en la pagina
     pagePrice.innerText = `$ ${fullPrice}`
 
 
     //para cada select se hace un eventListener para ver si hay cambios y se re calcula el precio
 
-    const selects = [powerSelect, opticSelect, cctSelect, dimSelect]
+    selects.forEach(select => {
+        select.addEventListener('change', event => {
+            const selectedFeatures = []
+            features.forEach(feature => {
+                selectedFeatures.push(getFeatures(feature))
+            })
 
-    selects.forEach(element => {
-        element.addEventListener('change', event => {
-            const powerFeature = getFeatures(power)
-            const dimFeature = getFeatures(dim)
-            const cctFeature = getFeatures(cct)
-            const opticFeature = getFeatures(optic)
+            const pricesSelectedFeatures = []
+            selectedFeatures.forEach(selectedFeature => {
+                pricesSelectedFeatures.push(Number(getFeaturePrice(productFeatures, selectedFeature)))
+            })
 
-            const powerPrice = Number(getFeaturePrice(features, powerFeature))
-            const dimPrice = Number(getFeaturePrice(features, dimFeature))
-            const cctPrice = Number(getFeaturePrice(features, cctFeature))
-            const opticPrice = Number(getFeaturePrice(features, opticFeature))
-
-            const fullPrice = toThousand(calculateFullPrice(productPrice, [powerPrice, dimPrice, cctPrice, opticPrice]))
+            const fullPrice = toThousand(calculateFullPrice(productPrice, pricesSelectedFeatures))
             pagePrice.innerText = `$ ${fullPrice}`
         })
     })
