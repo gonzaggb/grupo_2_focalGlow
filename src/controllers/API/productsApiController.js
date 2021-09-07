@@ -227,39 +227,53 @@ const controller = {
 
 	},
 
-    // API para el paginado de productos FEDE
-    pagination: async (req, res) => {
-        let allProducts = await Product.findAll()
-        let pageQty = Math.ceil(allProducts.length / 10)
-        let page = Number(req.params.page)
-        let products = await Product.findAll({
-            limit: 10,
-            offset: page >= 1 ? (page -1) * 10 : 0
-        })
-        if (page > 0 && page <= pageQty ) {
-            let response = {
-                meta: {
-                    total: products.length,
-                    url: `api/products/page/${page}`,
-                    next: page < pageQty ? `http://localhost:3000/api/products/page/${page+1}` : null,
-                    previous: page > 1 ? `http://localhost:3000/api/products/page/${page-1}` : null,
+	// API para el paginado de productos FEDE
+	pagination: async (req, res) => {
 
-                },
-                data: products
 
-            }
-            res.json(response)
-        } else {
-            let response = {
-                meta: {
-                    url: `api/products/page/${page}`,
-                    status: 204,
+		let allProducts = await Product.findAll()
+		let pageQty = Math.ceil(allProducts.length / 5)
+		let page = Number(req.params.page)
+		let offset = Number(req.params.offset)
 
-                },
-            }
-            res.json(response)
-        }
-    }
+		console.log(page)
+		console.log(offset)
+
+		let products = await Product.findAll({
+			limit: limit,
+			offset: page >= 1 ? (page - 1) * 5 : 0,
+			include: [
+				{ association: 'images' },
+				{ association: 'features' },
+				{ association: 'category', attributes: ['name'] }
+			],
+
+		})
+
+		if (page > 0 && page <= pageQty) {
+			let response = {
+				meta: {
+					total: products.length,
+					url: `api/products/page/${page}`,
+					next: page < pageQty ? `http://localhost:3000/api/products/page/${page + 1}` : null,
+					previous: page > 1 ? `http://localhost:3000/api/products/page/${page - 1}` : null,
+
+				},
+				data: products
+
+			}
+			res.json(response)
+		} else {
+			let response = {
+				meta: {
+					url: `api/products/page/${page}`,
+					status: 204,
+
+				},
+			}
+			res.json(response)
+		}
+	}
 
 }
 
