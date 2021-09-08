@@ -11,9 +11,9 @@ const controller = {
 		let products = await Product.findAll(
 			{
 				include: [
-					{ association: 'images' },
-					{ association: 'features' },
-					{ association: 'category', attributes: ['name'] }
+					{ association: 'images', attributes: ['id', 'name', 'type'] },
+					{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
+					{ association: 'category', attributes: ['id', 'name'] }
 				],
 
 			})
@@ -58,9 +58,9 @@ const controller = {
 		let product = await Product.findByPk(id, {
 			include: [
 				{ association: 'images', attributes: ['name', 'id', 'type'] },
-				{ association: 'features' },
+				{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
 				{ association: 'files' },
-				{ association: 'category' }
+				{ association: 'category', attributes: ['id', 'name'] }
 			]
 		})
 		let url = 'http://localhost:3000/img/'
@@ -96,9 +96,9 @@ const controller = {
 			{
 				include: [
 					{ association: 'images', attributes: ['id', 'name', 'type'] },
-					{ association: 'features', attributes: ['id', 'name', 'type', 'price'] },
+					{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
 					{ association: 'files' },
-					{ association: 'category' }
+					{ association: 'category', attributes: ['id', 'name'] }
 				]
 			})
 		let response = {
@@ -247,9 +247,9 @@ const controller = {
 			limit: limit,
 			offset: page >= 1 ? (page - 1) * limit : 0,
 			include: [
-				{ association: 'images' },
-				{ association: 'features' },
-				{ association: 'category', attributes: ['name'] }
+				{ association: 'images', attributes: ['id', 'name', 'type'] },
+				{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
+				{ association: 'category', attributes: ['id', 'name'] }
 			],
 
 		})
