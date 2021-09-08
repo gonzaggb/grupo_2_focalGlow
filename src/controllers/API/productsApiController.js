@@ -13,6 +13,7 @@ const controller = {
 				include: [
 					{ association: 'images', attributes: ['id', 'name', 'type'] },
 					{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
+					{ association: 'files', attributes: ['id', 'name', 'type'] },
 					{ association: 'category', attributes: ['id', 'name'] }
 				],
 
@@ -59,7 +60,7 @@ const controller = {
 			include: [
 				{ association: 'images', attributes: ['name', 'id', 'type'] },
 				{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
-				{ association: 'files' },
+				{ association: 'files', attributes: ['id', 'name', 'type'] },
 				{ association: 'category', attributes: ['id', 'name'] }
 			]
 		})
