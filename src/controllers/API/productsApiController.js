@@ -232,16 +232,16 @@ const controller = {
 
 
 		let allProducts = await Product.findAll()
-		let pageQty = Math.ceil(allProducts.length / 5)
 		let page = Number(req.params.page)
-		let offset = Number(req.params.offset)
+		let limit = Number(req.params.limit)
+		let pageQty = Math.ceil(allProducts.length / limit)
 
 		console.log(page)
-		console.log(offset)
+		console.log(limit)
 
 		let products = await Product.findAll({
 			limit: limit,
-			offset: page >= 1 ? (page - 1) * 5 : 0,
+			offset: page >= 1 ? (page - 1) * limit : 0,
 			include: [
 				{ association: 'images' },
 				{ association: 'features' },
@@ -268,6 +268,7 @@ const controller = {
 				meta: {
 					url: `api/products/page/${page}`,
 					status: 204,
+					message: 'no content to show'
 
 				},
 			}
