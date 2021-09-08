@@ -103,9 +103,10 @@ const controller = {
         let allUsers = await User.findAll() //traigo todos los usuarios para tener la cantidad total
         let pageQty = Math.ceil(allUsers.length / 10) // Calculo cantidad de paginas
         let page = Number(req.params.page) // Capturo la pagina desde params
+		let limit = Number(req.params.limit)
         let users = await User.findAll({
-            limit: 10,
-            offset: page >= 1 ? (page -1) * 10 : 0 // Logica para que el offset dependa de la pagina en la que estoy
+            limit: limit,
+            offset: page >= 1 ? (page -1) * limit : 0 // Logica para que el offset dependa de la pagina en la que estoy
         })
         if (page > 0 && page <= pageQty ) {
             let response = {
