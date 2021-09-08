@@ -57,10 +57,10 @@
               <div class="options">
                 <div class="options-column">
                   <% if (product.features.some(feature=> feature.type == 'power')) { %>
-                    <select name="power" class="btn">
+                    <select name="power" id="power-select" class="btn">
                       <%product.features.forEach(feature=> {%>
                         <%if(feature.type=='power' ){%>
-                          <option value="<%=feature.id%>">
+                          <option id="power" value="<%=feature.id%>">
                             <%=feature.name%>
                           </option>
                           <%}})%>
@@ -69,10 +69,10 @@
 
 
                       <% if (product.features.some(feature=> feature.type == 'cct')) { %>
-                        <select name="cct" class="btn">
+                        <select id="cct-select" name="cct" class="btn">
                           <%product.features.forEach(feature=> {%>
                             <%if(feature.type=='cct' ){%>
-                              <option value="<%=feature.id%>">
+                              <option id="cct" value="<%=feature.id%>">
                                 <%=feature.name%>
                               </option>
                               <%}})%>
@@ -82,10 +82,10 @@
 
                 <div class="options-column">
                   <% if (product.features.some(feature=> feature.type == 'optic')) { %>
-                    <select name="optic" class="btn">
+                    <select  id="optic-select" name="optic" class="btn">
                       <%product.features.forEach(feature=> {%>
                         <%if(feature.type=='optic' ){%>
-                          <option value="<%=feature.id%>">
+                          <option id="optic" value="<%=feature.id%>">
                             <%=feature.name%>
                           </option>
                           <%}})%>
@@ -93,16 +93,16 @@
                     <% } %>
 
                       <% if (product.features.some(feature=> feature.type == 'dim')) { %>
-                        <select name="dim" class="btn">
+                        <select id="dim-select" name="dim" class="btn">
                           <%product.features.forEach(feature=> {%>
                             <%if(feature.type=='dim' && feature.name=='Switch' ){%>
-                              <option value="<%=feature.id%>">&#xf011; <%=feature.name%>
+                              <option id="dim" value="<%=feature.id%>">&#xf011; <%=feature.name%>
                               </option>
                               <%}else if (feature.type=='dim' && feature.name=='Bluetooth' ){%>
-                                <option value="<%=feature.id%>">&#xf293; <%=feature.name%>
+                                <option  id="dim" value="<%=feature.id%>">&#xf293; <%=feature.name%>
                                 </option>
                                 <%} else if (feature.type=='dim' ) {%>
-                                  <option value="<%=feature.id%>">
+                                  <option id="dim" value="<%=feature.id%>">
                                     <%=feature.name%>
                                   </option>
                                   <%}})%>
@@ -138,20 +138,20 @@
             </section>
 
             <section class="price">
-              <h3 class="price-title">$
+              <h3 class="price-title" id="product-price">$
                 <% const toThousand=(n)=> n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
                   <%=toThousand(product.price)%>
               </h3>
               <div class="qtyadd">
                 <input type="number" name='quantity' placeholder="1" min="1" value="1" />
                 <%if(locals.user){%>
-                <button class="add" type="submit">AÑADIR</button>
-                <%}else{%>
-                <a class="add" href="/users/login">Iniciar Sesión</a>
-                <%}%>
+                  <button class="add" type="submit">AÑADIR</button>
+                  <%}else{%>
+                    <a class="add" href="/users/login">Iniciar Sesión</a>
+                    <%}%>
               </div>
             </section>
-            
+
       </form>
       <div class="product-dimensions-info">
         <% product.images.forEach(image=> {%>
@@ -192,7 +192,7 @@
       </section>
 
 
-
+      <script src="/js/product-detail.js"></script>
       <!--FOOTER-->
       <%- include('../partials/footer') %>
   </body>
