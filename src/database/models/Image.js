@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     Image.associate = function (models) {
         Image.belongsTo(models.Product, {
             as: 'product',
-            foreignKey: 'productId'
+            foreignKey: 'product_id'
         });
     }
     return Image;

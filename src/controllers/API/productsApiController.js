@@ -47,7 +47,7 @@ const controller = {
 			data: {
 				count: products.length,
 				countByCategory,
-				products: products
+				products: productsToShow
 			}
 
 		}
@@ -64,6 +64,7 @@ const controller = {
 			]
 		})
 		let url = 'http://localhost:3000/img/'
+
 		if (product) {
 			product.setDataValue('image', url + product.images[0].name)
 			let response = {
@@ -87,14 +88,15 @@ const controller = {
 
 
 	},
+
 	lastProduct: async (req, res) => {
 		let products = await Product.findAll()
 		let last = products[products.length - 1]
 		let productToShow = await Product.findByPk(last.id,
 			{
 				include: [
-					{ association: 'images' },
-					{ association: 'features' },
+					{ association: 'images', attributes: ['id', 'name', 'type'] },
+					{ association: 'features', attributes: ['id', 'name', 'type', 'price'] },
 					{ association: 'files' },
 					{ association: 'category' }
 				]
@@ -102,7 +104,6 @@ const controller = {
 		let response = {
 			meta: {
 				status: 200,
-				id: last.id,
 				url: 'api/products/last'
 
 			},
@@ -111,6 +112,7 @@ const controller = {
 		}
 		res.json(response)
 	},
+
 	qty: async (req, res) => {
 		let products = await Product.findAll()
 		let totalProducts = products.length
@@ -120,6 +122,7 @@ const controller = {
 		}
 		res.json(response)
 	},
+
 	filterByCategory: async (req, res) => {
 		let categoryToFind = req.params.category
 		let category = await Category.findOne({
@@ -139,6 +142,7 @@ const controller = {
 		res.json(response)
 
 	},
+
 	//FEDE hice esto para llamarlo desde la validacion del nombre
 	findByName: async (req, res) => {
 		let productToFind = req.params.name
@@ -221,7 +225,7 @@ const controller = {
 
 
 		} catch (error) {
-			console.log(error)
+
 			res.json(error)
 		}
 

@@ -36,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     Product.associate = function (models) {
         Product.belongsTo(models.Category, {
             as: 'category',
-            foreignKey: 'categoryId'
+            foreignKey: 'category_id'
         })
         Product.hasMany(models.File, {
             as: 'files',
@@ -44,7 +44,7 @@ module.exports = (sequelize, DataTypes) => {
         })
         Product.hasMany(models.Image, {
             as: 'images',
-            foreignKey: 'productId'
+            foreignKey: 'product_id'
         })
         Product.belongsToMany(models.Feature, {
             as: 'features',
