@@ -15,25 +15,43 @@ const controller = {
         sortType == 1 ? order = 'DESC' : order = 'ASC'
         try {
             let checkout = await Item.findAll({
-                group: ['productName'],
+                group: ['product_name'],
                 //select productName, sum(quantity) as soldQuantity
-                attributes: ['productName', [sequelize.fn('sum', sequelize.col('quantity')), 'soldQuantity']],
+                attributes: [['product_name', 'Producto'], ['product_image', 'Imagen'], [sequelize.fn('sum', sequelize.col('quantity')), 'Cantidad']],
                 where: { orderId: { [Op.not]: null } },
-                include: [{ association: 'order' }],
+                include: [{ association: 'order' },
+
+                ],
                 order: [[sequelize.fn('sum', sequelize.col('quantity')), order]],
                 limit: limit
 
             })
+            let checkoutToShow = checkout.map(element => {                
+                element.setDataValue('fecha', element.order.dataValues.Fecha)
+                console.log(element)
+                const show = {
+                    Producto: element.dataValues.Producto,
+                    Imagen: element.dataValues.Imagen,
+                    Cantidad: element.dataValues.Cantidad
+                }
+                return show   
+                
+            })
+
+
+
+
             let response = {
                 meta: {
                     order: order,
                     status: 200,
                     soldProducts: checkout.length
                 },
-                data: checkout
+                data: checkoutToShow
             }
             res.json(response)
         } catch (error) {
+            console.log(error)
             let response = {
                 meta: {
                     status: 500,
@@ -56,10 +74,26 @@ const controller = {
                 where: {
                     orderId: { [Op.not]: null }
                 },
-                include: [{ association: 'order' }],
-                order: [['order', 'createdAt', order]],
+                attributes: [['product_name', 'Producto'], ['product_image', 'Imagen']],
+                include: [{ association: 'order', attributes: [['created_at', 'Fecha']] }],
+                order: [['order', 'created_at', order]],
                 limit: limit
             })
+            let checkoutToShow = checkout.map(element => {                
+                element.setDataValue('fecha', element.order.dataValues.Fecha)
+                console.log(element.Product)
+                const show = {
+                    Producto: element.dataValues.Producto,
+                    Imagen: element.dataValues.Imagen,
+                    Fecha: element.dataValues.fecha
+                }
+                return show   
+                
+            })
+            console.log(checkoutToShow)
+
+
+
             let response = {
                 meta: {
                     meta: {
@@ -68,11 +102,12 @@ const controller = {
                         soldProducts: checkout.length
                     }
                 },
-                data: checkout
+                data: checkoutToShow
             }
             res.json(response)
 
         } catch (error) {
+            console.log(error)
             let response = {
                 meta: {
                     status: 500,
