@@ -115,9 +115,15 @@ const controller = {
 	},
 
 	qty: async (req, res) => {
-		let products = await Product.findAll()
-		let totalProducts = products.length
+		let totalProducts = await Product.count()
+
 		let response = {
+
+			meta: {
+				status: 200,
+				url: 'api/products/qty',
+				message: 'total amount of products in DB'
+			},
 
 			data: totalProducts
 		}
