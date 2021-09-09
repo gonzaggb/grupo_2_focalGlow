@@ -6,7 +6,9 @@ const controller = {
     list: async (req, res) => {
         let categories = await Category.findAll()
         let response = {
-            count: {
+            meta: {
+                status: 200,
+                url: 'api/category',
                 total: categories.length
             },
             data: categories
@@ -38,8 +40,8 @@ const controller = {
             })
         });
 
-        
-        
+
+
         res.json(product)
     }
 

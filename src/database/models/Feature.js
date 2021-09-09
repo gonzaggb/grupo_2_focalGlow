@@ -30,8 +30,8 @@ module.exports = (sequelize, DataTypes) => {
         Feature.belongsToMany(models.Product, {
             as: 'products',
             through: 'product_feature',
-            foreignKey: 'feature_id',
-            otherKey: 'product_id',
+            foreignKey: 'featureId',
+            otherKey: 'productId',
             timestamps: false
         })
     }
