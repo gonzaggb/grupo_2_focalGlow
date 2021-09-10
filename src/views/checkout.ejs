@@ -56,10 +56,10 @@
                                         </div>
                                         <div class="item-right">
                                             <div class="left-side">
-                                                <span>Precio: $<%= productCheckout[i].subtotal %></span>
+                                                <span>Precio: $<%= productCheckout[i].subtotal%></span>
                                                 <br>
                                                 <span>Cantidad: <input type="text" name="quantity"
-                                                        value="<%= productCheckout[i].quantity === 0? productCheckout[i].quantity = 1 : productCheckout[i].quantity %>"></span>
+                                                        value="<%= productCheckout[i].quantity === 0 ? productCheckout[i].quantity = 1 : productCheckout[i].quantity %>"></span>
                                                 <br>
                                                 <span>Subtotal: $<%= productCheckout[i].subtotal *
                                                         productCheckout[i].quantity %></span>

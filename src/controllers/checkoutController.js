@@ -74,10 +74,6 @@ const controller = {
 		/**NO ME GUSTA EL MANEJO QUE HAGO ACÁ CON LOS VAR, PERO NO SE ME OCURRIO OTRA MANERA, DE MOMENTO */
 
 		if (userItem.length > 0) {
-
-			//tengo que recorrer los items del carrito con el mismo product ID, validar si las nuevas features
-			//son iguales y en caso de que si incrementar esa item
-			//caso contrario creo uno nuevo
 			/*Devuelve el item del carrito cuyo producto y features son iguales, en caso de existir, sino un array vacio */
 			const itemToUpdate = userItem.filter(item => {
 				let features = JSON.parse(item.productFeatures)
@@ -100,11 +96,11 @@ const controller = {
 				return sameItem === true ? itemId = item.id : ''
 			})
 
-			
+
 			if (itemToUpdate.length > 0) {
 				await Item.update({
 					quantity: Number(itemToUpdate[0].dataValues.quantity) + Number(req.body.quantity),
-					subtotal: quantity * (productPrice + featuresAcumulatedPrice)
+					subtotal: (productPrice + featuresAcumulatedPrice)
 
 				},
 					{
@@ -113,6 +109,8 @@ const controller = {
 							orderId: null
 						}
 					})
+					console.log(itemToUpdate[0].dataValues.quantity)
+					console.log(req.body.quantity)
 			} else {
 				const newItem = {
 					productName: product.name,
@@ -143,6 +141,7 @@ const controller = {
 				productId: product.id
 
 			}
+			console.log(productPrice)
 
 			await Item.create(newItem)
 		}
