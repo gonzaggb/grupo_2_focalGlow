@@ -93,6 +93,7 @@ const controller = {
 	lastProduct: async (req, res) => {
 		let products = await Product.findAll()
 		let last = products[products.length - 1]
+		let url = 'http://localhost:3000/img/'
 		let productToShow = await Product.findByPk(last.id,
 			{
 				include: [
@@ -102,6 +103,11 @@ const controller = {
 					{ association: 'category', attributes: ['id', 'name'] }
 				]
 			})
+
+		if (productToShow) {
+			productToShow.setDataValue('image', url + productToShow.images[0].name)
+		}
+
 		let response = {
 			meta: {
 				status: 200,
@@ -268,6 +274,7 @@ const controller = {
 					url: `api/products/page/${page}`,
 					next: page < pageQty ? `http://localhost:3000/api/products/page/${page + 1}` : null,
 					previous: page > 1 ? `http://localhost:3000/api/products/page/${page - 1}` : null,
+					pageQuantity: pageQty
 
 				},
 				data: products
