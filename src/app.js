@@ -66,10 +66,14 @@ app.use('/checkout', checkoutRoutes)
 const usersApiroutes = require('./routes/APIroutes/usersApiRoutes')
 const productsApiroutes = require('./routes/APIroutes/productsApiRoutes')
 const categoryApiroutes = require('./routes/APIroutes/categoryApiRoutes')
+const checkoutApiroutes = require('./routes/APIroutes/checkoutApiroutes')
+
 //Api routes
-app.use('/api/users', usersApiroutes)
 app.use('/api/products', productsApiroutes)
+app.use('/api/users', usersApiroutes)
 app.use('/api/category', categoryApiroutes)
+app.use('/api/checkout', checkoutApiroutes)
+
 
 //Ruta 500 por si falla la base de datos
 app.use('/500', (req, res, next) => {
@@ -77,5 +81,5 @@ app.use('/500', (req, res, next) => {
 })
 // Ruta 404
 app.use((req, res, next) => {
-  res.status(404).render('404.ejs')
+ res.status(404).render('404.ejs')
 })

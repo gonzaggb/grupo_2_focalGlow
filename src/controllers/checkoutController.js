@@ -15,11 +15,19 @@ function addProductImagePath(element) {
 	return element.dataValues.name = productImagePath + element.name
 }
 
+function isSame(featureCheckoutItem, newItem) {
+	let sameProduct = false
+	featureCheckoutItem[0] === newItem[0] && featureCheckoutItem[1] === newItem[1]
+		&& featureCheckoutItem[2] === newItem[2] && featureCheckoutItem[3] === newItem[3]
+		? sameProduct = true : ''
+	return sameProduct
+}
 
 const controller = {
 	add: async function (req, res) {
 		const product = await Product.findByPk(req.body.id)
 		const { cct, dim, optic, power } = req.body
+
 		const productImage = await product.getImages()
 		let mainImage = ''
 		productImage.forEach(e => {
@@ -28,13 +36,13 @@ const controller = {
 
 			}
 		});
+		//ARRAY CON LAS FEATURES QUE VIAJAN EN EL BODY
 		const productFeatureAux = await Feature.findAll({
-			attributes: ['name', 'price'],
+			attributes: ['name', 'price', 'id'],
 			where: {
 				id: [cct, dim, optic, power]
 			},
 		})
-
 		let productFeatures2 = []
 		let featuresAcumulatedPrice = 0
 		productFeatureAux.forEach(e => {
@@ -54,38 +62,87 @@ const controller = {
 		/* const productFeatures = [cct , dim , optic , power].toString() */
 		const userId = res.locals.user.id
 
-
+		//productFeatureAux es un array con las features que tiene el producto que está en el carrito, sino existe es un array vacio
+		//userItem busca si existe en el carrito el nuevo producto que se quiere guardar
 		const userItem = await Item.findAll({
 			where: {
 				productId: product.id,
 				orderId: null
 			}
 		})
-		const newItem = {
-			productName: product.name,
-			productPrice,
-			productDescription: product.description,
-			productFeatures: JSON.stringify(productFeatures),//aca paso el objeto a string para que lo tome la DB
-			productImage: mainImage,
-			quantity,
-			subtotal: quantity * (productPrice + featuresAcumulatedPrice),
-			userId,
-			productId: product.id
 
-		}
+		/**NO ME GUSTA EL MANEJO QUE HAGO ACÁ CON LOS VAR, PERO NO SE ME OCURRIO OTRA MANERA, DE MOMENTO */
+
 		if (userItem.length > 0) {
-			await Item.update({
-				quantity: Number(userItem[0].quantity) + Number(req.body.quantity),
-				subtotal: quantity * (productPrice + featuresAcumulatedPrice)
+			/*Devuelve el item del carrito cuyo producto y features son iguales, en caso de existir, sino un array vacio */
+			const itemToUpdate = userItem.filter(item => {
+				let features = JSON.parse(item.productFeatures)
+				let featureValues = []
+				var sameItem = true
 
-			},
-				{
-					where: {
-						id: userItem[0].id,
-						orderId: null
-					}
+				/*Armo un array con las features del item guardado, las mismas vienen como string, 
+				y de una forma medio pete, asi que hice este chino */
+				featureValues.push(features['CCT'].split(':')[1].trim())
+				featureValues.push(features['DIM'].split(':')[1].trim())
+				featureValues.push(features['OPTIC'].split(':')[1].trim())
+				featureValues.push(features['POWER'].split(':')[1].trim())
+
+				/*productFeatureAux trae las features que viajan del body, las recorre y valida si son las mismas
+				que tiene el producto del carrito, que arme previamente*/
+				productFeatureAux.forEach((element, index) => {
+					element.name != featureValues[index] ? sameItem = false : ''
 				})
+				let itemId = ''
+				return sameItem === true ? itemId = item.id : ''
+			})
+
+
+			if (itemToUpdate.length > 0) {
+				await Item.update({
+					quantity: Number(itemToUpdate[0].dataValues.quantity) + Number(req.body.quantity),
+					subtotal: (productPrice + featuresAcumulatedPrice)
+
+				},
+					{
+						where: {
+							id: itemToUpdate[0].id,
+							orderId: null
+						}
+					})
+					console.log(itemToUpdate[0].dataValues.quantity)
+					console.log(req.body.quantity)
+			} else {
+				const newItem = {
+					productName: product.name,
+					productPrice,
+					productDescription: product.description,
+					productFeatures: JSON.stringify(productFeatures),//aca paso el objeto a string para que lo tome la DB
+					productImage: mainImage,
+					quantity,
+					subtotal: quantity * (productPrice + featuresAcumulatedPrice),
+					userId,
+					productId: product.id
+
+				}
+
+				await Item.create(newItem)
+			}
 		} else {
+
+			const newItem = {
+				productName: product.name,
+				productPrice,
+				productDescription: product.description,
+				productFeatures: JSON.stringify(productFeatures),//aca paso el objeto a string para que lo tome la DB
+				productImage: mainImage,
+				quantity,
+				subtotal: quantity * (productPrice + featuresAcumulatedPrice),
+				userId,
+				productId: product.id
+
+			}
+			console.log(productPrice)
+
 			await Item.create(newItem)
 		}
 		res.redirect('/checkout')
