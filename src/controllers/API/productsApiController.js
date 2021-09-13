@@ -11,9 +11,10 @@ const controller = {
 		let products = await Product.findAll(
 			{
 				include: [
-					{ association: 'images' },
-					{ association: 'features' },
-					{ association: 'category', attributes: ['name'] }
+					{ association: 'images', attributes: ['id', 'name', 'type'] },
+					{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
+					{ association: 'files', attributes: ['id', 'name', 'type'] },
+					{ association: 'category', attributes: ['id', 'name'] }
 				],
 
 			})
@@ -47,7 +48,7 @@ const controller = {
 			data: {
 				count: products.length,
 				countByCategory,
-				products: products
+				products: productsToShow
 			}
 
 		}
@@ -58,12 +59,13 @@ const controller = {
 		let product = await Product.findByPk(id, {
 			include: [
 				{ association: 'images', attributes: ['name', 'id', 'type'] },
-				{ association: 'features' },
-				{ association: 'files' },
-				{ association: 'category' }
+				{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
+				{ association: 'files', attributes: ['id', 'name', 'type'] },
+				{ association: 'category', attributes: ['id', 'name'] }
 			]
 		})
 		let url = 'http://localhost:3000/img/'
+
 		if (product) {
 			product.setDataValue('image', url + product.images[0].name)
 			let response = {
@@ -87,22 +89,28 @@ const controller = {
 
 
 	},
+
 	lastProduct: async (req, res) => {
 		let products = await Product.findAll()
 		let last = products[products.length - 1]
+		let url = 'http://localhost:3000/img/'
 		let productToShow = await Product.findByPk(last.id,
 			{
 				include: [
-					{ association: 'images' },
-					{ association: 'features' },
+					{ association: 'images', attributes: ['id', 'name', 'type'] },
+					{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
 					{ association: 'files' },
-					{ association: 'category' }
+					{ association: 'category', attributes: ['id', 'name'] }
 				]
 			})
+
+		if (productToShow) {
+			productToShow.setDataValue('image', url + productToShow.images[0].name)
+		}
+
 		let response = {
 			meta: {
 				status: 200,
-				id: last.id,
 				url: 'api/products/last'
 
 			},
@@ -111,15 +119,23 @@ const controller = {
 		}
 		res.json(response)
 	},
+
 	qty: async (req, res) => {
-		let products = await Product.findAll()
-		let totalProducts = products.length
+		let totalProducts = await Product.count()
+
 		let response = {
+
+			meta: {
+				status: 200,
+				url: 'api/products/qty',
+				message: 'total amount of products in DB'
+			},
 
 			data: totalProducts
 		}
 		res.json(response)
 	},
+
 	filterByCategory: async (req, res) => {
 		let categoryToFind = req.params.category
 		let category = await Category.findOne({
@@ -139,6 +155,7 @@ const controller = {
 		res.json(response)
 
 	},
+
 	//FEDE hice esto para llamarlo desde la validacion del nombre
 	findByName: async (req, res) => {
 		let productToFind = req.params.name
@@ -221,46 +238,61 @@ const controller = {
 
 
 		} catch (error) {
-			console.log(error)
+
 			res.json(error)
 		}
 
 	},
 
-    // API para el paginado de productos FEDE
-    pagination: async (req, res) => {
-        let allProducts = await Product.findAll()
-        let pageQty = Math.ceil(allProducts.length / 10)
-        let page = Number(req.params.page)
-        let products = await Product.findAll({
-            limit: 10,
-            offset: page >= 1 ? (page -1) * 10 : 0
-        })
-        if (page > 0 && page <= pageQty ) {
-            let response = {
-                meta: {
-                    total: products.length,
-                    url: `api/products/page/${page}`,
-                    next: page < pageQty ? `http://localhost:3000/api/products/page/${page+1}` : null,
-                    previous: page > 1 ? `http://localhost:3000/api/products/page/${page-1}` : null,
+	// API para el paginado de productos FEDE
+	pagination: async (req, res) => {
 
-                },
-                data: products
 
-            }
-            res.json(response)
-        } else {
-            let response = {
-                meta: {
-                    url: `api/products/page/${page}`,
-                    status: 204,
+		let allProducts = await Product.findAll()
+		let page = Number(req.params.page)
+		let limit = Number(req.params.limit)
+		let pageQty = Math.ceil(allProducts.length / limit)
 
-                },
-            }
-            res.json(response)
-        }
-    },
-	
+		console.log(page)
+		console.log(limit)
+
+		let products = await Product.findAll({
+			limit: limit,
+			offset: page >= 1 ? (page - 1) * limit : 0,
+			include: [
+				{ association: 'images', attributes: ['id', 'name', 'type'] },
+				{ association: 'features', attributes: ['id', 'name', 'type', 'price'], through: { attributes: [] } },
+				{ association: 'category', attributes: ['id', 'name'] }
+			],
+
+		})
+
+		if (page > 0 && page <= pageQty) {
+			let response = {
+				meta: {
+					total: products.length,
+					url: `api/products/page/${page}`,
+					next: page < pageQty ? `http://localhost:3000/api/products/page/${page + 1}` : null,
+					previous: page > 1 ? `http://localhost:3000/api/products/page/${page - 1}` : null,
+					pageQuantity: pageQty
+
+				},
+				data: products
+
+			}
+			res.json(response)
+		} else {
+			let response = {
+				meta: {
+					url: `api/products/page/${page}`,
+					status: 204,
+					message: 'no content to show'
+
+				},
+			}
+			res.json(response)
+		}
+	}
 
 }
 
