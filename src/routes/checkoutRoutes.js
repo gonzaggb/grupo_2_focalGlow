@@ -7,6 +7,7 @@ const controller = require('../controllers/mainController')
 
 router.post('/add', checkoutController.add )
 router.get('/',checkoutController.list )
+router.get('/history', checkoutController.history)
 router.delete('/:id', checkoutController.destroy)
 router.post('/purchase', checkoutController.purchase)
 

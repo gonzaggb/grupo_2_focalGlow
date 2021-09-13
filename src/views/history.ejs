@@ -1,0 +1,72 @@
+<%- include('partials/head.ejs')%>
+    <link rel="stylesheet" href="/css/styles-checkout.css">
+    <link rel="stylesheet" href="/css/styles-product-list.css">
+    <title>Checkout | Focal Glow</title>
+
+    </head>
+
+    <body>
+        <!-- HEADER -->
+        <%- include('partials/header.ejs')%>
+            <!-- HEADER -->
+
+            <main class="checkout">
+                <h2>HISTORIAL DE COMPRAS</h2>
+                <br>
+                <table id="products">
+                    <tr>
+                            <th class="left">Nombre</th>
+                            <th class="center">CCT</th>
+                            <th class="center">DIM</th>
+                            <th class="center">OPTIC</th>
+                            <th class="center">POWER</th>
+                            <th class="left">Precio</th>
+                            <th class="center">Cantidad</th>
+                            <th class="center">Imagen</th>
+                            <th class="center">Fecha</th>
+
+                        </tr>
+                        
+                        <% userOrders.forEach((product, i)=> {%>
+                            <tr>
+                                  <td>
+                                    <%=userOrders[i].productName.split(":")%>
+                                </td>
+                                    <td>
+                                        <%=featuresMapped[i].CCT%>
+                                    </td>
+                                    <td>
+                                        <%=featuresMapped[i].DIM%>
+                                    </td>
+                                    <td>
+                                        <%=featuresMapped[i].OPTIC%>
+                                    </td>
+                                    <td>
+                                        <%=featuresMapped[i].POWER%>
+                                    </td>
+
+
+                                <td>
+                                    <% const toThousand=(n)=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+                                     $<%= toThousand(Number(product.subtotal))%>
+                                 </td>
+                                <td class="center">
+                                    <%=product.quantity%>
+                                </td>
+                                <td class="center">
+                                        <img class="img-redonda" src="/img/<%=product.productImage%>" width="20px">
+                                    </td>
+                                    <td class="center">
+                                        <%=new Date(product.order.createdAt).toLocaleString()%>
+                                    </td>
+
+                                </tr>
+                                <%})%>
+                            </table>
+            </main>
+            <!-- FOOTER -->
+            <%- include('partials/footer.ejs')%>
+                <!-- FOOTER -->
+    </body>
+
+    </html>

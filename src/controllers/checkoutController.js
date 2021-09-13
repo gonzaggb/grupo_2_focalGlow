@@ -67,7 +67,8 @@ const controller = {
 		const userItem = await Item.findAll({
 			where: {
 				productId: product.id,
-				orderId: null
+				orderId: null,
+				userId
 			}
 		})
 
@@ -158,6 +159,9 @@ const controller = {
 				orderId: null
 			}
 		})
+		if (productCheckout.length === 0) {
+			res.redirect('/checkout/history')
+		}
 
 		//ARMO ARRAY CON LOS ID PRODUCTO QUE ESTAN EN EL CARRITO
 		const productsToCheckout = []
@@ -268,6 +272,40 @@ const controller = {
 
 		)
 		res.render('succes-purchase.ejs')
+
+	},
+
+	history: async (req, res) => {
+
+		const userId = res.locals.user.id
+
+		//productFeatureAux es un array con las features que tiene el producto que está en el carrito, sino existe es un array vacio
+		//userItem busca si existe en el carrito el nuevo producto que se quiere guardar
+		const userOrders = await Item.findAll({
+			include:[{association: 'order'}],
+			where: {
+				orderId: { [Op.not]: null },
+				userId: userId
+			}
+		})
+		let features = []
+		userOrders.forEach(e => {
+			features.push(JSON.parse(e.productFeatures))//aca paso a objeto los strings de los features
+		})
+		featuresMapped = features.map(element =>{
+			return ({
+				CCT: element.CCT.split(':')[1].trim(),
+				DIM: element.DIM.split(':')[1].trim(),
+				OPTIC: element.OPTIC.split(':')[1].trim(),
+				POWER: element.POWER.split(':')[1].trim(),
+			}
+
+			)
+		})
+
+
+		res.render('history', { userOrders, featuresMapped })
+
 
 	}
 
