@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
 			allowNull: false
 		},
 		createdAt: {
-			type: DataTypes.INTEGER,
+			type: DataTypes.BIGINT,
 			allowNull: false
 		},
 		userId: {
