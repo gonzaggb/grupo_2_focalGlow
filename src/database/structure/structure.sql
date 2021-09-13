@@ -67,15 +67,15 @@ CREATE TABLE files (
     CONSTRAINT id PRIMARY KEY (id)
 	);
 
-CREATE TABLE orders (
+    CREATE TABLE orders (
 	id INT  AUTO_INCREMENT NOT NULL,
     total DECIMAL NOT NULL,
-    created_at INT NOT NULL,
+    created_at BIGINT NOT NULL,
     user_id INT NOT NULL,
     CONSTRAINT id PRIMARY KEY (id)
 	);
 
-CREATE TABLE items(
+    CREATE TABLE items(
 	id INT  AUTO_INCREMENT NOT NULL,
     product_name VARCHAR(50) NOT NULL,
     product_price INT NOT NULL,
@@ -90,4 +90,8 @@ CREATE TABLE items(
     CONSTRAINT id PRIMARY KEY (id),
     FOREIGN KEY (order_id) REFERENCES orders(id)
     )
+
+
+
+
     

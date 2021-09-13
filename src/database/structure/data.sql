@@ -1966,3 +1966,22 @@ INSERT INTO product_feature (id,product_id,feature_id) VALUES (7863,370,13);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (7864,370,26);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (7865,370,118);
 INSERT INTO product_feature (id,product_id,feature_id) VALUES (7866,370,9);
+
+insert  into `orders`(`id`,`total`,`created_at`,`user_id`) values 
+(31,13456,1631552329592,105),
+(32,104472,1631552364136,105),
+(33,20464,1631552411234,105),
+(34,46780,1631552833488,105);
+
+insert  into `items`(`id`,`product_name`,`product_price`,`product_description`,`product_features`,`product_image`,`quantity`,`subtotal`,`order_id`,`user_id`,`product_id`) values 
+(87,'Argo',11356,'Plafón de luz difusa.','{\"CCT\":\"CCT: 2700K\",\"DIM\":\"DIM: Bluetooth\",\"OPTIC\":\"OPTIC: Spot\",\"POWER\":\"POWER: 13W\"}','main-1627308995906.jpg',1,13456,31,105,307),
+(88,'Globo Bs As',2312,'Artefacto de aplicar para lámpara E27.\r\n\r\n','{\"CCT\":\"CCT: 2700K\",\"DIM\":\"DIM: Switch\",\"OPTIC\":\"OPTIC: Flood\",\"POWER\":\"POWER: 34W\"}','main-1627388860401.jpg',2,2612,32,105,324),
+(89,'Trípode Cine',11980,'Lampara de pie tipo proyector de cine. Mas que un artefacto de iluminación, esta lampara de pie es un objeto para decorar cualquier ambiente. Ideal para ese rincón que no sabes que poner !! . Puede usarse tanto con lampara de filamento decorativa como la ','{\"CCT\":\"CCT: 3000K\",\"DIM\":\"DIM: Switch\",\"OPTIC\":\"OPTIC: Flood\",\"POWER\":\"POWER: 8W\"}','main-1627849433008.JPG',5,11980,32,105,355),
+(90,'Old Port Industrial Vintage',5116,'Mezcla de diseño y funcionalidad, en una sola lampara estilo vintage','{\"CCT\":\"CCT: 2700K\",\"DIM\":\"DIM: Switch\",\"OPTIC\":\"OPTIC: Spot\",\"POWER\":\"POWER: 10W\"}','main-1627855335409.JPG',3,5116,32,105,369),
+(91,'Parscan',7500,'Luz en lugar de luces: la sencilla forma básica cilíndrica de Parscan obedece a esta idea directriz. La luminotecnia precisa y flexible permite implementar eficientemente diversas soluciones de iluminación. \r\nSi se orienta el proyector hacia abajo como si','{\"CCT\":\"CCT: 2700K\",\"DIM\":\"DIM: Dimeable\",\"OPTIC\":\"OPTIC: Spot\",\"POWER\":\"POWER: 6W\"}','main-1627259404719.jpg',3,8000,32,105,210),
+(92,'Old Port Industrial Vintage',5116,'Mezcla de diseño y funcionalidad, en una sola lampara estilo vintage','{\"CCT\":\"CCT: 2700K\",\"DIM\":\"DIM: Switch\",\"OPTIC\":\"OPTIC: Spot\",\"POWER\":\"POWER: 10W\"}','main-1627855335409.JPG',4,5116,33,105,369),
+(93,'Ball XXI',4774,'Excelente modelo Ball, que combina tanto diseño como funcionalidad.','{\"CCT\":\"CCT: 2700K\",\"DIM\":\"DIM: Switch\",\"OPTIC\":\"OPTIC: Spot\",\"POWER\":\"POWER: 10W\"}','main-1627852683238.JPG',1,4774,34,105,362),
+(94,'Site Bañador',20000,'Bañadores de pared de luz rasante para acentuar texturas\r\nen muros y fachadas Site acentúa la textura de los materiales de la arquitectura: el bañador de pared de luz tenue hace claramente visibles incluso las texturas más sutiles de la madera, el hormigó','{\"CCT\":\"CCT: 3000K\",\"DIM\":\"DIM: Dimeable\",\"OPTIC\":\"OPTIC: Ovalflood\",\"POWER\":\"POWER: 24W\"}','main-1627337421482.jpg',1,20700,34,105,224),
+(95,'Compact',7850,'Una combinación única de confort visual y profundidad de\r\nempotramiento. Compact abre un nuevo camino en la iluminación\r\nCompact, único\r\n','{\"CCT\":\"CCT: 3000K\",\"DIM\":\"DIM: Switch\",\"OPTIC\":\"OPTIC: Wideflood\",\"POWER\":\"POWER: 8W\"}','main-1627611019538.jpg',1,7850,34,105,347),
+(96,'Argo',11356,'Plafón de luz difusa.','{\"CCT\":\"CCT: 2700K\",\"DIM\":\"DIM: Bluetooth\",\"OPTIC\":\"OPTIC: Spot\",\"POWER\":\"POWER: 13W\"}','main-1627308995906.jpg',1,13456,34,105,307);
+

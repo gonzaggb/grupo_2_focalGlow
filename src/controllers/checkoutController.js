@@ -109,8 +109,7 @@ const controller = {
 							orderId: null
 						}
 					})
-				console.log(itemToUpdate[0].dataValues.quantity)
-				console.log(req.body.quantity)
+
 			} else {
 				const newItem = {
 					productName: product.name,
@@ -141,7 +140,6 @@ const controller = {
 				productId: product.id
 
 			}
-			console.log(productPrice)
 
 			await Item.create(newItem)
 		}
