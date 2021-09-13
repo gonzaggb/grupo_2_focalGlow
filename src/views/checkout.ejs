@@ -56,13 +56,14 @@
                                         </div>
                                         <div class="item-right">
                                             <div class="left-side">
-                                                <span>Precio: $<%= productCheckout[i].subtotal%></span>
+                                                <% const toThousand=(n)=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+                                                <span>Precio: $<%= toThousand(productCheckout[i].subtotal)%></span>
                                                 <br>
                                                 <span>Cantidad: <input type="text" name="quantity"
                                                         value="<%= productCheckout[i].quantity === 0 ? productCheckout[i].quantity = 1 : productCheckout[i].quantity %>"></span>
                                                 <br>
-                                                <span>Subtotal: $<%= productCheckout[i].subtotal *
-                                                        productCheckout[i].quantity %></span>
+                                                <span>Subtotal: $<%= toThousand(productCheckout[i].subtotal *
+                                                        productCheckout[i].quantity) %></span>
                                             </div>
 
                                         </div>
@@ -91,7 +92,9 @@
                                     productCheckout.forEach(product => {
                                         total += Number(product.subtotal) * product.quantity
                                     })%>
-                                    <%=total%>
+                                <% const toThousand=(n)=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
+
+                                    <%=toThousand(total)%>
                                     
                                 </span>
                                 <input name="total" type="number" value="<%=total%>" hidden>

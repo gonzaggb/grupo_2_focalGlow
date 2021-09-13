@@ -109,8 +109,8 @@ const controller = {
 							orderId: null
 						}
 					})
-					console.log(itemToUpdate[0].dataValues.quantity)
-					console.log(req.body.quantity)
+				console.log(itemToUpdate[0].dataValues.quantity)
+				console.log(req.body.quantity)
 			} else {
 				const newItem = {
 					productName: product.name,
@@ -119,7 +119,7 @@ const controller = {
 					productFeatures: JSON.stringify(productFeatures),//aca paso el objeto a string para que lo tome la DB
 					productImage: mainImage,
 					quantity,
-					subtotal: quantity * (productPrice + featuresAcumulatedPrice),
+					subtotal: (productPrice + featuresAcumulatedPrice),
 					userId,
 					productId: product.id
 
@@ -136,7 +136,7 @@ const controller = {
 				productFeatures: JSON.stringify(productFeatures),//aca paso el objeto a string para que lo tome la DB
 				productImage: mainImage,
 				quantity,
-				subtotal: quantity * (productPrice + featuresAcumulatedPrice),
+				subtotal: (productPrice + featuresAcumulatedPrice),
 				userId,
 				productId: product.id
 
@@ -238,8 +238,24 @@ const controller = {
 		//Crear el objeto ORDER en la tabla ORDER
 		//Modificar el objeto ITEM, la parte de ORDER ID, una vez creado ORDER
 
+		const productCheckout = await Item.findAll({
+			where: {
+				userId: res.locals.user.id,
+				orderId: null
+			}
+		})
+
+		const subTotalCheckout = productCheckout.map(element => {
+			console.log(element.dataValues.subtotal + '' + element.dataValues.quantity)
+			return (Number(element.dataValues.subtotal) * Number(element.dataValues.quantity))
+		})
+
+		const totalCheckout = subTotalCheckout.reduce((bef, aft) => bef + aft)
+		console.log(totalCheckout)
+		return
+
 		const order = {
-			total: req.body.total,
+			total: totalCheckout,
 			createdAt: Date.now(),
 			userId: res.locals.user.id
 		}
