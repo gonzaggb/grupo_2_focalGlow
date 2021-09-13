@@ -246,13 +246,10 @@ const controller = {
 		})
 
 		const subTotalCheckout = productCheckout.map(element => {
-			console.log(element.dataValues.subtotal + '' + element.dataValues.quantity)
 			return (Number(element.dataValues.subtotal) * Number(element.dataValues.quantity))
 		})
 
 		const totalCheckout = subTotalCheckout.reduce((bef, aft) => bef + aft)
-		console.log(totalCheckout)
-		return
 
 		const order = {
 			total: totalCheckout,
