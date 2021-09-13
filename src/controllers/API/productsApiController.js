@@ -259,7 +259,8 @@ const controller = {
             }
             res.json(response)
         }
-    }
+    },
+	
 
 }
 

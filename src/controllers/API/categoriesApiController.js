@@ -1,5 +1,5 @@
-const { Category } = require('../../database/models')
-const { Product } = require('../../database/models')
+
+const { Product, Feature, Category } = require('../../database/models')
 
 
 const controller = {
@@ -41,6 +41,24 @@ const controller = {
         
         
         res.json(product)
+    },
+    features: async (req, res) => {
+        let feature = req.params.feature
+        let allFeatures = await Feature.findAll({
+            /* where: {
+                type : feature
+            } */
+        })
+        
+        let response = {
+            meta: {
+                status: 200,
+                message: 'all features',
+                url: 'api/products/features'
+            },
+            data: allFeatures
+        }
+        res.json(response)
     }
 
 }
