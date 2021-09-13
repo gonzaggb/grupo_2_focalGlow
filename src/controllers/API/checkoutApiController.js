@@ -45,7 +45,9 @@ const controller = {
                 meta: {
                     order: order,
                     status: 200,
-                    soldProducts: checkout.length
+                    soldProducts: checkout.length,
+                    headers: ['Producto', 'Imagen', 'Cantidad'] 
+
                 },
                 data: checkoutToShow
             }
@@ -90,17 +92,15 @@ const controller = {
                 return show   
                 
             })
-            console.log(checkoutToShow)
 
 
 
             let response = {
                 meta: {
-                    meta: {
                         order: order,
                         status: 200,
-                        soldProducts: checkout.length
-                    }
+                        soldProducts: checkout.length,
+                        headers: ['Producto', 'Imagen', 'Fecha'] 
                 },
                 data: checkoutToShow
             }
