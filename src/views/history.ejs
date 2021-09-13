@@ -12,9 +12,14 @@
 
             <main class="checkout">
                 <h2>HISTORIAL DE COMPRAS</h2>
-                <br>
-                <table id="products">
-                    <tr>
+                <%if(userOrders.length===0){%>
+                    <div>
+                        <h3>Aun no compraste ningun producto</h3>
+                        <h3> <a href="/#main-categori">Visitá nuestra tienda</a></h3>
+                    </div>
+                    <%}else{%>
+                        <table id="products">
+                        <tr>
                             <th class="left">Nombre</th>
                             <th class="center">CCT</th>
                             <th class="center">DIM</th>
@@ -26,43 +31,45 @@
                             <th class="center">Fecha</th>
 
                         </tr>
-                        
+
                         <% userOrders.forEach((product, i)=> {%>
                             <tr>
-                                  <td>
+                                <td>
                                     <%=userOrders[i].productName.split(":")%>
                                 </td>
-                                    <td>
-                                        <%=featuresMapped[i].CCT%>
-                                    </td>
-                                    <td>
-                                        <%=featuresMapped[i].DIM%>
-                                    </td>
-                                    <td>
-                                        <%=featuresMapped[i].OPTIC%>
-                                    </td>
-                                    <td>
-                                        <%=featuresMapped[i].POWER%>
-                                    </td>
+                                <td>
+                                    <%=featuresMapped[i].CCT%>
+                                </td>
+                                <td>
+                                    <%=featuresMapped[i].DIM%>
+                                </td>
+                                <td>
+                                    <%=featuresMapped[i].OPTIC%>
+                                </td>
+                                <td>
+                                    <%=featuresMapped[i].POWER%>
+                                </td>
 
 
                                 <td>
                                     <% const toThousand=(n)=>n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') %>
-                                     $<%= toThousand(Number(product.subtotal))%>
-                                 </td>
+                                        $<%= toThousand(Number(product.subtotal))%>
+                                </td>
                                 <td class="center">
                                     <%=product.quantity%>
                                 </td>
                                 <td class="center">
-                                        <img class="img-redonda" src="/img/<%=product.productImage%>" width="20px">
-                                    </td>
-                                    <td class="center">
-                                        <%=new Date(product.order.createdAt).toLocaleString()%>
-                                    </td>
+                                    <img class="img-redonda" src="/img/<%=product.productImage%>" width="20px">
+                                </td>
+                                <td class="center">
+                                    <%=new Date(product.order.createdAt).toLocaleString()%>
+                                </td>
 
-                                </tr>
-                                <%})%>
-                            </table>
+                            </tr>
+                            <%})%>
+                                </table>
+                                <%}%>
+
             </main>
             <!-- FOOTER -->
             <%- include('partials/footer.ejs')%>

@@ -144,7 +144,7 @@ const controller = {
 
 			await Item.create(newItem)
 		}
-		res.redirect('/checkout')
+		return res.redirect('/checkout')
 
 
 	},
@@ -160,7 +160,7 @@ const controller = {
 			}
 		})
 		if (productCheckout.length === 0) {
-			res.redirect('/checkout/history')
+			return res.redirect('/checkout/history')
 		}
 
 		//ARMO ARRAY CON LOS ID PRODUCTO QUE ESTAN EN EL CARRITO
@@ -234,7 +234,7 @@ const controller = {
 		let { id } = req.params
 		const itemToDelete = await Item.findByPk(id)
 		itemToDelete.destroy()
-		res.redirect('/checkout')
+		return res.redirect('/checkout')
 	},
 	purchase: async (req, res) => {
 		//Crear el objeto ORDER en la tabla ORDER
