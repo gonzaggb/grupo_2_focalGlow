@@ -7,7 +7,7 @@ router.get('/listBySold/:sortType', checkoutApiController.listBySold)
 router.get('/listByDate/:sortType', checkoutApiController.listByDate)
 router.get('/listBySold/:sortType/limit/:limit', checkoutApiController.listBySold)
 router.get('/listByDate/:sortType/limit/:limit', checkoutApiController.listByDate)
-
+router.get('/SalesTotal', checkoutApiController.totalSold)
 
 
 

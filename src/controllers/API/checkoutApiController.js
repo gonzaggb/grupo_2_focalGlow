@@ -28,7 +28,6 @@ const controller = {
             })
             let checkoutToShow = checkout.map(element => {                
                 element.setDataValue('fecha', element.order.dataValues.Fecha)
-                console.log(element)
                 const show = {
                     Producto: element.dataValues.Producto,
                     Imagen: element.dataValues.Imagen,
@@ -83,7 +82,6 @@ const controller = {
             })
             let checkoutToShow = checkout.map(element => {                
                 element.setDataValue('fecha', element.order.dataValues.Fecha)
-                console.log(element.Product)
                 const show = {
                     Producto: element.dataValues.Producto,
                     Imagen: element.dataValues.Imagen,
@@ -116,9 +114,41 @@ const controller = {
             }
             res.json(response)
         }
-    }
+    },
+    //FEDE
+    totalSold: async (req,res) => {
+        let sum = 0
+        try {
+            let totals = await Order.findAll({
+                //group: ['id'],
+                attributes: ['id', 'total'],
+                include: [{ association: 'items', attributes: ['quantity']}]
+            })
+            let sum = totals.reduce((acum, element) => {
+                acum + element.total
+            })
+            console.log(sum)
+            let response = {
+                meta: {
+                    status: 200,
+                },
+                data: totals
+            }
+            res.json(response)
+        } catch (error) {
+            console.log(error)
+            let response = {
+                meta: {
+                    status: 500,
+                    msg: 'Ha ocurrido un error'
+                }
+            }
+            res.json(response)
+        }
 
-
+    },
 }
+
+
 
 module.exports = controller
