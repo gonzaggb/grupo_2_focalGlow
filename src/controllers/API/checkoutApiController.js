@@ -26,15 +26,15 @@ const controller = {
                 limit: limit
 
             })
-            let checkoutToShow = checkout.map(element => {                
+            let checkoutToShow = checkout.map(element => {
                 element.setDataValue('fecha', element.order.dataValues.Fecha)
                 const show = {
                     Producto: element.dataValues.Producto,
                     Imagen: element.dataValues.Imagen,
                     Cantidad: element.dataValues.Cantidad
                 }
-                return show   
-                
+                return show
+
             })
 
 
@@ -45,7 +45,7 @@ const controller = {
                     order: order,
                     status: 200,
                     soldProducts: checkout.length,
-                    headers: ['Producto', 'Imagen', 'Cantidad'] 
+                    headers: ['Producto', 'Imagen', 'Cantidad']
 
                 },
                 data: checkoutToShow
@@ -80,25 +80,25 @@ const controller = {
                 order: [['order', 'created_at', order]],
                 limit: limit
             })
-            let checkoutToShow = checkout.map(element => {                
+            let checkoutToShow = checkout.map(element => {
                 element.setDataValue('fecha', element.order.dataValues.Fecha)
                 const show = {
                     Producto: element.dataValues.Producto,
                     Imagen: element.dataValues.Imagen,
                     Fecha: element.dataValues.fecha
                 }
-                return show   
-                
+                return show
+
             })
 
 
 
             let response = {
                 meta: {
-                        order: order,
-                        status: 200,
-                        soldProducts: checkout.length,
-                        headers: ['Producto', 'Imagen', 'Fecha'] 
+                    order: order,
+                    status: 200,
+                    soldProducts: checkout.length,
+                    headers: ['Producto', 'Imagen', 'Fecha']
                 },
                 data: checkoutToShow
             }
@@ -116,23 +116,30 @@ const controller = {
         }
     },
     //FEDE
-    totalSold: async (req,res) => {
-        let sum = 0
+    totalSold: async (req, res) => {
+
         try {
-            let totals = await Order.findAll({
-                //group: ['id'],
-                attributes: ['id', 'total'],
-                include: [{ association: 'items', attributes: ['quantity']}]
+            let orders = await Order.findAll({
+
+                attributes: [[sequelize.fn('sum', sequelize.col('total')), 'totalSales'], [sequelize.fn('count', sequelize.col('id')), 'numberSales']],
             })
-            let sum = totals.reduce((acum, element) => {
-                acum + element.total
+
+            let items = await Item.findAll({
+                where: {
+                    orderId: { [Op.not]: null }
+                },
+                attributes: [[sequelize.fn('sum', sequelize.col('quantity')), 'totalItems']],
             })
-            console.log(sum)
+
+
             let response = {
                 meta: {
                     status: 200,
                 },
-                data: totals
+                data: {
+                    orders,
+                    items
+                }
             }
             res.json(response)
         } catch (error) {
