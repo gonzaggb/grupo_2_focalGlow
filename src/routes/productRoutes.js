@@ -1,9 +1,8 @@
 //Requiero express y ejecuto la propiedad Router()
 const express = require('express')
 const router = express.Router()
-//requiero el controlador de main
+//requiero el controlador de product
 const productController = require('../controllers/productController')
-//requerir multer
 
 //requerir express-validator
 const { validateCreateForm } = require('../middleware/validateCreateForm')
@@ -11,16 +10,12 @@ const { validateEditForm } = require('../middleware/validateEditForm')
 //authMiddleware
 const authMiddleware = require('../middleware/authMiddleware')
 const adminMiddleware = require('../middleware/adminMiddleware')
-//multer
+//requerir el middleware de multer
 const upload = require('../middleware/productsMulter')
-
-
-
 
 
 //Asigno a cada ruta la propiedad del controlador
 router.get('/', authMiddleware, adminMiddleware, productController.list)
-//View
 router.get('/detail/:id', productController.detail)
 
 //Create
@@ -39,7 +34,5 @@ router.delete('/:id', authMiddleware, adminMiddleware, productController.delete)
 
 //search
 router.get('/search', productController.result)
-
-
 
 module.exports = router

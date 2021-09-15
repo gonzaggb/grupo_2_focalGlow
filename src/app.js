@@ -1,34 +1,39 @@
 const express = require('express') // trae el modulo de express para poder montar el servidor
 const app = express() //declaramos la variable app que va utilizar todos los metodos de express.
+
 const categoriesMiddleware = require('./middleware/categoriesList')
 
-// Coonfiguracion de la ruta que contiene los recursos estaticos para consumir de manera sencilla
-const path = require('path') //requiere el modulo nativo path de node
+//Coonfiguracion de la ruta que contiene los recursos estaticos para consumir de manera sencilla//
+const path = require('path') //requiere el modulo nativo path de node//
 publicPath = path.join(__dirname, '../public')
 app.use(express.static(publicPath))
 
-//requerimos y usamos express-session
+//Requerimos y usamos express-session//
 const session = require('express-session')
 app.use(session({
   secret: 'shhhhh',
   resave: true,
   saveUninitialized: true
 }))
+
+//Requerimos y usamos cors para poder trabajar con APIs y que el navegador no bloquee el pedido//
 const cors = require('cors')
 app.use(cors())
-//requerimos  e implementamos  cookie-parser
+
+//Requerimos  e implementamos  cookie-parser//
 const cookieParser = require('cookie-parser')
 app.use(cookieParser('secreto'))
-// requerimos e implementamos cookiesessionMiddleware
+
+//Requerimos e implementamos cookiesessionMiddleware//
 const cookieSession = require('./middleware/cookieSessionMiddleware')
 app.use(cookieSession)
-//implementamos middleware de sessionToLocal
+
+//Implementamos middleware de sessionToLocal
 const sessionToLocal = require('./middleware/sessionToLocal')
 app.use(sessionToLocal)
 
 
-
-/*Configuracion del template engine*/
+//Configuracion del template engine//
 app.set('views', path.join(__dirname, 'views')) // indica al template engine donde buscar las vistas//
 app.set('view engine', 'ejs')
 
@@ -45,7 +50,6 @@ const port = process.env.PORT || 3000// use port 3000 unless there exists a prec
 app.listen(port, () =>
   console.log('Servidor corriendo en el puerto ' + port + '\n' + 'Focal Glow es el mejor grupo!!!')
 )
-
 
 // Requiriendo todos los routers
 app.use(categoriesMiddleware)
@@ -81,5 +85,5 @@ app.use('/500', (req, res, next) => {
 })
 // Ruta 404
 app.use((req, res, next) => {
- res.status(404).render('404.ejs')
+  res.status(404).render('404.ejs')
 })

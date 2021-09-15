@@ -127,7 +127,8 @@ const controller = {
                 ],
                 raw: true
             })
-
+            console.log('ORDERS')
+            console.log(orders)
             let items = await Item.findAll({
                 where: {
                     orderId: { [Op.not]: null }
@@ -135,6 +136,8 @@ const controller = {
                 attributes: [[sequelize.fn('sum', sequelize.col('quantity')), 'totalItems']],
                 raw: true
             })
+            console.log('ITEMS')
+            console.log(items)
 
             let response = {
                 meta: {
