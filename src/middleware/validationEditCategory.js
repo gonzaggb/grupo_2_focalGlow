@@ -1,3 +1,5 @@
+//MIDDLEWARE CON EXPRESS VALIDATOR PARA CHEQUEAR LOS DISTINTOS CAMPOS DEL FORMULARIO DE EDICION DE CATEGORIA
+
 const { body } = require('express-validator')
 const { Category } = require('../database/models')
 const { checkFieldImage } = require('../helpers/checkFilesForEdit')
@@ -6,7 +8,7 @@ const validations = [
 	body('name')
 		.notEmpty().withMessage('Debes ingresar el nombre de la categoría').bail()
 		.isLength({ min: 3 }).withMessage('El nombre debe ser más largo')
-
+		//CHEQUEAMOS QUE LA CATEGORIA NO EXISTA YA
 		.custom(async (val, { req }) => {
 			const categoryFound = await Category.findOne({ where: { name: val } })
 

@@ -1,5 +1,6 @@
+//MIDDLEWARE CON EXPRESS VALIDATOR PARA CHEQUEAR LOS DISTINTOS CAMPOS DEL FORMULARIO DE CAMBIO DE CONTRASEÑA
+
 const { body } = require('express-validator')
-const files = require('../helpers/files')
 const { User } = require('../database/models')
 const bcrypt = require('bcryptjs')
 
@@ -14,6 +15,7 @@ const validations = [
 			const { id } = req.params
 			let userFound = await User.findByPk(id)
 
+			//COMPARA LAS PASSWORD
 			let passwordMatch = bcrypt.compareSync(value, userFound.password)
 			if (passwordMatch) {
 				return true
@@ -25,7 +27,6 @@ const validations = [
 
 
 	body('password').notEmpty().withMessage(`Debes introducir una contraseña nueva`),
-
 	body('rePassword').notEmpty().withMessage('Debes confirmar la contraseña nueva'),
 
 	body('rePassword').custom((val, { req }) => {

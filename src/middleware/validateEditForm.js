@@ -1,3 +1,5 @@
+//MIDDLEWARE CON EXPRESS VALIDATOR PARA CHEQUEAR LOS DISTINTOS CAMPOS DEL FORMULARIO DE EDICION DE PRODUCTO
+
 const { body } = require('express-validator')
 const { checkFieldImage, checkFieldPdf } = require('../helpers/checkFiles')
 const { Product } = require('../database/models')
@@ -10,16 +12,16 @@ const validateEditForm = [
         .bail()
         .isLength({ min: 5 })
         .withMessage('Por favor un nombre más largo'),
-    body('name').custom(async (value, { req })=>{
+    body('name').custom(async (value, { req }) => {
         const product = await Product.findOne(
-            {where: {name: req.body.name}}
+            { where: { name: req.body.name } }
         )
-        
+
         const productName = await Product.findByPk(req.params.id)
-        if(product && product.name != productName.name){
-        return Promise.reject('El nombre del producto ya se encuentra en la lista')
+        if (product && product.name != productName.name) {
+            return Promise.reject('El nombre del producto ya se encuentra en la lista')
         }
-        
+
         return true
     }),
     body('quantity')

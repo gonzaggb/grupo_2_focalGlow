@@ -1,5 +1,6 @@
+//MIDDLEWARE CON EXPRESS VALIDATOR PARA CHEQUEAR LOS CMAPOS DEL FORMULAROI DE LA NUEVA CATEGORIA
+
 const { body } = require('express-validator')
-const files = require('../helpers/files')
 const { Category } = require('../database/models')
 const { checkFieldImage } = require('../helpers/checkFiles')
 

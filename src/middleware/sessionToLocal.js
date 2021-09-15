@@ -1,3 +1,5 @@
+//MIDDLEWARE QUE PASA SESSION TO LOCALS
+
 const { User } = require('../database/models')
 
 module.exports = async (req, res, next) => {

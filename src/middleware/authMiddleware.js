@@ -1,7 +1,9 @@
+//Validación para que si no hay session te lleve al login
+
 module.exports = (req, res, next) => {
     const userSession = req.session.logged
 
-    //valida que no exista sesion
+
     if (!userSession) {
 
         return res.redirect('/users/login')

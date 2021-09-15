@@ -1,3 +1,5 @@
+//MULTER para recibir las imagenes de profile
+
 const multer = require('multer')
 const path = require('path')
 const files = require('../helpers/files')

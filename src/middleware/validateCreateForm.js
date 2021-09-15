@@ -1,3 +1,5 @@
+//MIDDLEWARE CON EXPRESS VALIDATOR PARA CHEQUEAR LOS DISTINTOS CAMPOS DEL FORMULARIO DE CREACION DE PRODUCTOS
+
 const { body } = require('express-validator')
 const { checkFieldImage, checkFieldPdf } = require('../helpers/checkFiles')
 const { Product } = require('../database/models')

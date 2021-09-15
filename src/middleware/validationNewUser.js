@@ -1,3 +1,5 @@
+//MIDDLEWARE CON EXPRESS VALIDATOR PARA CHEQUEAR LOS CMAPOS DEL FORMULARIO DE NUEVA USUARIO
+
 const { body } = require('express-validator')
 const files = require('../helpers/files')
 const { User } = require('../database/models')

@@ -1,8 +1,11 @@
+//Validación que haya un usuario en session y en caso de existir que sea admin
+
 const { User } = require('../database/models')
 
 module.exports = async (req, res, next) => {
 
 	const userSession = req.session.logged
+
 	try {
 		const user = await User.findByPk(userSession)
 
@@ -18,5 +21,3 @@ module.exports = async (req, res, next) => {
 
 }
 
-
-	//valida que haya un usuario en session y en caso de existir que sea admin

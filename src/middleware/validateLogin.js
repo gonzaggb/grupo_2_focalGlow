@@ -1,4 +1,7 @@
+//MIDDLEWARE CON EXPRESS VALIDATOR PARA CHEQUEAR LOS DISTINTOS CAMPOS DEL FORMULARIO LOGIN
+
 const { body } = require('express-validator')
+//libreria que sirve para encriptar la contraseña
 const bcrypt = require('bcryptjs')
 const { User } = require('../database/models')
 
