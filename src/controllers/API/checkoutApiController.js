@@ -121,7 +121,11 @@ const controller = {
         try {
             let orders = await Order.findAll({
 
-                attributes: [[sequelize.fn('sum', sequelize.col('total')), 'totalSales'], [sequelize.fn('count', sequelize.col('id')), 'numberSales']],
+                attributes: [
+                    [sequelize.fn('sum', sequelize.col('total')), 'totalSales'],
+                    [sequelize.fn('count', sequelize.col('id')), 'numberSales']
+                ],
+                raw: true
             })
 
             let items = await Item.findAll({
@@ -129,16 +133,17 @@ const controller = {
                     orderId: { [Op.not]: null }
                 },
                 attributes: [[sequelize.fn('sum', sequelize.col('quantity')), 'totalItems']],
+                raw: true
             })
-
 
             let response = {
                 meta: {
                     status: 200,
                 },
                 data: {
-                    orders,
-                    items
+                    totalSales: orders[0].totalSales,
+                    numberSales: orders[0].numberSales,
+                    totalItems: items[0].totalItems
                 }
             }
             res.json(response)
