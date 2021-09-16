@@ -19,6 +19,7 @@ const optic = document.querySelectorAll('#optic')
 const cct = document.querySelectorAll('#cct')
 const dim = document.querySelectorAll('#dim')
 
+
 const features = [power, optic, cct, dim]
 
 //captura precio web
