@@ -3,8 +3,10 @@
   font-family: 'Roboto', sans-serif;
 }
 
-a {
+a,
+a p {
   text-decoration: none;
+  color:white
 }
 
 html{
@@ -25,16 +27,6 @@ body{
   position: relative;
   color:white;
 }
-
-/*
-.main-container{
-  text-align: center;
-  width:100%;
-  position:fixed;
-  left: 15%;
-  top: 25%;
-
-}*/
 
 main {
   display: flex;
@@ -67,6 +59,10 @@ main {
   text-align: center;
 }
 
+.registry-container p {
+  text-align: left;
+}
+
 .registry-container label{
   display: block;
   text-align: left;
@@ -74,6 +70,9 @@ main {
   font-weight: bold;
 }
 
+.profile-info {
+  margin-top: 20px;
+}
 
 label.subir{
   padding: 5px 5px;
