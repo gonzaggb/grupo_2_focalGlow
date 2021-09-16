@@ -81,7 +81,7 @@ label {
   transition: 0.3s;
 }
 #button-borrar {
-  width: 30%;
+  width: 20%;
   border-radius: 5px;
   transition: 0.3s;
 }
@@ -223,7 +223,7 @@ label {
     width: 30%;
   }
   #button-borrar {
-    width: 30%;
+    width: 20%;
   }
   .main-slider-mini{
     /*border: black solid 1px;
