@@ -407,7 +407,11 @@ header a{
     margin-right: 7px;
 }
 .logged{height: 0;} 
- 
+@media (max-width: 1024px){
+    .up-button{
+        top:35%
+    }
+} 
 @media (max-width: 952px){
     .banner {
     display: flex;
