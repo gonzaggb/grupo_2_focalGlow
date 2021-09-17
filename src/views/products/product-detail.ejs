@@ -61,7 +61,7 @@
                       <%product.features.forEach(feature=> {%>
                         <%if(feature.type=='power' ){%>
                           <option id="power" value="<%=feature.id%>">
-                            <%=Number(feature.price) === 0 ? `${feature.name}` : `${feature.name} - $ ${feature.price}`%>
+                            <%=feature.name%>
                           </option>
                           <%}})%>
                     </select>
@@ -73,7 +73,7 @@
                           <%product.features.forEach(feature=> {%>
                             <%if(feature.type=='cct' ){%>
                               <option id="cct" value="<%=feature.id%>">
-                                <%=Number(feature.price) === 0 ? `${feature.name}` : `${feature.name} - $ ${feature.price}`%>
+                                <%=feature.name%>
                               </option>
                               <%}})%>
                         </select>
@@ -86,7 +86,7 @@
                       <%product.features.forEach(feature=> {%>
                         <%if(feature.type=='optic' ){%>
                           <option id="optic" value="<%=feature.id%>">
-                            <%=Number(feature.price) === 0 ? `${feature.name}` : `${feature.name} - $ ${feature.price}`%>
+                            <%=feature.name%>
                           </option>
                           <%}})%>
                     </select>
@@ -96,14 +96,14 @@
                         <select id="dim-select" name="dim" class="btn">
                           <%product.features.forEach(feature=> {%>
                             <%if(feature.type=='dim' && feature.name=='Switch' ){%>
-                              <option id="dim" value="<%=feature.id%>">&#xf011; <%=Number(feature.price) === 0 ? `${feature.name}` : `${feature.name} - $ ${feature.price}`%>
+                              <option id="dim" value="<%=feature.id%>">&#xf011; <%=feature.name%>
                               </option>
                               <%}else if (feature.type=='dim' && feature.name=='Bluetooth' ){%>
-                                <option  id="dim" value="<%=feature.id%>">&#xf293; <%=Number(feature.price) === 0 ? `${feature.name}` : `${feature.name} - $ ${feature.price}`%>
+                                <option  id="dim" value="<%=feature.id%>">&#xf293; <%=feature.name%>
                                 </option>
                                 <%} else if (feature.type=='dim' ) {%>
                                   <option id="dim" value="<%=feature.id%>">
-                                    <%=`${feature.name} - $ ${feature.price}`%>
+                                    <%=feature.name%>
                                   </option>
                                   <%}})%>
                         </select>
