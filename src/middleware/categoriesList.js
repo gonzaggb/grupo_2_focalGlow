@@ -1,3 +1,5 @@
+//Comparte la lista de categoria a todo el proyecto para ser utilizado en el header (partials)
+
 const { Category } = require('../database/models')
 
 module.exports = async (req, res, next) => {
