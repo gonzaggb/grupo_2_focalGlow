@@ -1,6 +1,11 @@
 # Focal Glow
 
-SPRINT 5:
+Puden ver un teaser del proyecto (60'') en el siguiente link
+https://vimeo.com/617037278
+
+La presentación del proyecto entero (10') en el siguiente link
+https://vimeo.com/617047794
+
 USUARIOS ADMIN:
 
 pol@dh.com
